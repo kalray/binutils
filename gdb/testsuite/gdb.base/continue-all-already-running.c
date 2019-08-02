@@ -21,7 +21,11 @@ int
 main (void)
 {
   #ifdef K1_ISS
+  #ifdef __mppa_bare_runtime__
   usleep (20000);
+  #else
+  sleep(1);
+  #endif
   #else
   sleep (10);
   #endif
