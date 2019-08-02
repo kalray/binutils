@@ -43,9 +43,6 @@ struct k1_frame_cache
 };
 
 enum K1_ARCH k1_current_arch = K1_NUM_ARCHES;
-static struct op_list *sp_adjust_insns[K1_NUM_ARCHES];
-static struct op_list *sp_store_insns[K1_NUM_ARCHES];
-static struct op_list *prologue_helper_insns[K1_NUM_ARCHES];
 
 struct op_list *branch_insns[K1_NUM_ARCHES];
 struct op_list *pcrel_insn[K1_NUM_ARCHES];
@@ -126,87 +123,6 @@ k1_adjust_breakpoint_address (struct gdbarch *gdbarch, CORE_ADDR bpaddr)
   return adjusted;
 }
 
-static int
-k1_has_create_stack_frame (struct gdbarch *gdbarch, CORE_ADDR addr)
-{
-  gdb_byte syllab_buf[4];
-  uint32_t syllab;
-  enum bfd_endian order = gdbarch_byte_order_for_code (gdbarch);
-  k1bfield *add_reg_desc, *sbf_reg_desc;
-  int reg;
-  int i = 0, ops_idx, has_make = 0;
-  struct op_list *ops;
-  k1_bitfield_t *bfield;
-
-  #define NUM_INSN_LISTS 3
-
-  struct op_list_desc
-  {
-    struct op_list *ops;
-    int sp_idx;
-  };
-
-  typedef struct op_list_desc prologue_ops[NUM_INSN_LISTS];
-  prologue_ops prologue_insns_full[] =
-  {
-    [K1_K1C] =
-    {
-      { sp_adjust_insns[K1_K1C], 0 /* Dest register */},
-      { sp_store_insns[K1_K1C], 1 /* Base register */},
-      { prologue_helper_insns[K1_K1C], -1 /* unused */},
-    },
-  };
-
-  prologue_ops *prologue_insns = &prologue_insns_full [k1_arch ()];
-
-  do
-  {
-  next_addr:
-    if (target_read_memory (addr, syllab_buf, 4) != 0)
-      return 0;
-    syllab = extract_unsigned_integer (syllab_buf, 4, order);
-
-    for (ops_idx = 0; ops_idx < NUM_INSN_LISTS; ++ops_idx)
-    {
-      for (ops = (*prologue_insns)[ops_idx].ops; ops; ops = ops->next)
-      {
-        k1opc_t *op = ops->op;
-        if ((syllab & op->codewords[0].mask) != op->codewords[0].opcode)
-          continue;
-
-        if (strcmp (op->as_op, "make") == 0)
-        {
-          if (i == 0)
-            has_make = 1;
-          else
-            return 0;
-        }
-        else if (has_make && i == 1)
-        {
-          if (strcmp (op->as_op, "sbfd"))
-            return 0;
-        }
-        else if (has_make)
-          return 0;
-
-        if ((*prologue_insns)[ops_idx].sp_idx < 0)
-        {
-          addr += op->coding_size / 8;
-          ++i;
-          goto next_addr;
-        }
-
-        bfield = &op->format[(*prologue_insns)[ops_idx].sp_idx]->bfield[0];
-        reg = (syllab >> bfield->to_offset) & ((1 << bfield->size) - 1);
-        if (reg == gdbarch_sp_regnum (gdbarch))
-          return 1;
-      }
-    }
-  } while (0);
-
-  return 0;
-}
-
 /* Return PC of first real instruction.  */
 /* This function is nearly completely copied from symtab.c:skip_prologue_using_lineinfo
  * (expect the test in the loop at the end.
@@ -236,9 +152,6 @@ k1_skip_prologue (struct gdbarch *gdbarch, CORE_ADDR func_addr)
   /* Get the range for the function's PC values, or give up if we
      cannot, for some reason.  */
   if (!find_pc_partial_function (func_addr, NULL, &func_start, &func_end))
-    return func_addr;
-
-  if (!gcc_compiled && !k1_has_create_stack_frame (gdbarch, func_addr))
     return func_addr;
 
   /* Linetable entries are ordered by PC values, see the commentary in
@@ -526,30 +439,7 @@ k1_look_for_insns (void)
 
     while (op->as_op[0])
     {
-      if (strcmp ("addd", op->as_op) == 0)
-      {
-        add_op (&sp_adjust_insns[i], op);
-        add_op (&prologue_helper_insns[i], op);
-      }
-      else if (strcmp ("sbfd", op->as_op) == 0)
-        add_op (&sp_adjust_insns[i], op);
-      else if (strcmp ("sbfw", op->as_op) == 0)
-        add_op (&sp_adjust_insns[i], op);
-      else if (strcmp ("sw", op->as_op) == 0)
-        add_op (&sp_store_insns[i], op);
-      else if (strcmp ("sd", op->as_op) == 0)
-        add_op (&sp_store_insns[i], op);
-      else if (strcmp ("make", op->as_op) == 0)
-        add_op (&prologue_helper_insns[i], op);
-      else if (strcmp ("sxbd", op->as_op) == 0)
-        add_op (&prologue_helper_insns[i], op);
-      else if (strcmp ("sxhd", op->as_op) == 0)
-        add_op (&prologue_helper_insns[i], op);
-      else if (strcmp ("sxwd", op->as_op) == 0)
-        add_op (&prologue_helper_insns[i], op);
-      else if (strcmp ("extfz", op->as_op) == 0)
-        add_op (&prologue_helper_insns[i], op);
-      else if (strcmp ("call", op->as_op) == 0)
+      if (strcmp ("call", op->as_op) == 0)
         add_op (&branch_insns[i], op);
       else if (strcmp ("icall", op->as_op) == 0)
         add_op (&branch_insns[i], op);
