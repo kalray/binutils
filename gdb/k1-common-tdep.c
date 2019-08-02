@@ -78,7 +78,8 @@ k1_arch (void)
       error ("unable to find the current k1 architecture.");
   }
 
-  gdb_assert (k1_current_arch != K1_NUM_ARCHES);
+  if (k1_current_arch == K1_NUM_ARCHES)
+    return K1_K1C;
 
   return k1_current_arch;
 }
