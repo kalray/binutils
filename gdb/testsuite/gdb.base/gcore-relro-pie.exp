@@ -19,6 +19,12 @@
 
 standard_testfile
 
+# KVX: Elf Type not supported 3
+if [istarget kvx-*-*] then {
+  unsupported "gcore-relro-pie.exp"
+  return 1
+}
+
 if {[build_executable "failed to prepare" $testfile $srcfile \
 	 {debug pie "ldflags=-Wl,-z,relro"}]} {
     return -1

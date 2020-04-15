@@ -1,3 +1,43 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* config.in: Add kvx support.
+	* config/kvx/linux.mh: New file.
+	* configure.host: Add kvx support.
+	* configure.tgt: Likewise.
+	* defs.h: Likewise.
+	* features/kvx-linux-core.xml: New file.
+	* features/kvx-linux.c: New file.
+	* features/kvx-linux.xml: New file.
+	* gdbserver/linux-kvx-low.c: New file.
+	* infcall.c: Add kvx support.
+	* infrun.c (print_stop_event):
+	* kv3-mds-tdep.c: New file.
+	* kvx-common-tdep.c: New file.
+	* kvx-common-tdep.h: New file.
+	* kvx-dump-tlb.c: New file.
+	* kvx-dump-tlb.h: New file.
+	* kvx-exception-info.c: New file.
+	* kvx-exception-info.h: New file.
+	* kvx-linux-nat.c: New file.
+	* kvx-linux-nat.h: New file.
+	* kvx-linux-tdep.c: New file.
+	* kvx-target.c: New file.
+	* kvx-target.h: New file.
+	* kvx-tdep.c: New file.
+	* regformats/reg-kvx.dat: New file.
+	* remote-notif.c (handle_notification): Add kvx support.
+	* remote.c (remote_target::process_initial_stop_replies): Likewise.
+	* serial.c: Likewise.
+	* solib-kvx-bare.c: New file.
+	* solib-kvx-bare.h: New file.
+	* solib-svr4.c (svr4_exec_displacement): Add kvx support.
+	* stack.c: Likewise.
+	* target-descriptions.c (tdesc_register_type): Likewise.
+	* target.c (memory_xfer_check_region): Likewise.
+	* thread.c: Likewise.
+	* top.c (print_gdb_version): Likewise.
+	* xml-tdesc.c: Likewise.
+
 2021-07-06  Tom de Vries  <tdevries@suse.de>
 
 	* dwarf2/read.c (scan_partial_symbols): Skip top-level imports of

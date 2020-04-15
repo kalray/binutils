@@ -1,3 +1,15 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* Makefile.am: Add kvx support.
+	* Makefile.in: Likewise.
+	* configure: Likewise.
+	* configure.ac: Likewise.
+	* disassemble.c (disassembler): Likewise.
+	(disassembler_usage): Likewise.
+	* kv3-dis.c: New file.
+	* kv3-opc.c: New file.
+	* po/POTFILES.in: Add kvx support.
+
 2023-01-14  Nick Clifton  <nickc@redhat.com>
 
 	* 2.40 release point.

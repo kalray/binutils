@@ -1,3 +1,10 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* dis-asm.h: Add kvx support.
+	* elf/common.h: Likewise.
+	* elf/kv3.h: New file.
+	* opcode/kv3.h: New file.
+
 2022-12-31  Nick Clifton  <nickc@redhat.com>
 
 	* 2.40 branch created.

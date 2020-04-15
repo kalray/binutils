@@ -514,6 +514,10 @@ DESCRIPTION
 .  bfd_arch_lm32,      {* Lattice Mico32.  *}
 .#define bfd_mach_lm32		1
 .  bfd_arch_microblaze,{* Xilinx MicroBlaze.  *}
+.  bfd_arch_kvx,        {* Kalray VLIW core of the MPPA processor family *}
+.#define bfd_mach_kv3_1                0
+.#define bfd_mach_kv3_1_64             1
+.#define bfd_mach_kv3_1_usr            2
 .  bfd_arch_tilepro,   {* Tilera TILEPro.  *}
 .  bfd_arch_tilegx,    {* Tilera TILE-Gx.  *}
 .#define bfd_mach_tilepro	1
@@ -641,6 +645,7 @@ extern const bfd_arch_info_type bfd_iamcu_arch;
 extern const bfd_arch_info_type bfd_ia64_arch;
 extern const bfd_arch_info_type bfd_ip2k_arch;
 extern const bfd_arch_info_type bfd_iq2000_arch;
+extern const bfd_arch_info_type bfd_kvx_arch;
 extern const bfd_arch_info_type bfd_lm32_arch;
 extern const bfd_arch_info_type bfd_loongarch_arch;
 extern const bfd_arch_info_type bfd_m32c_arch;
@@ -729,6 +734,7 @@ static const bfd_arch_info_type * const bfd_archures_list[] =
     &bfd_ia64_arch,
     &bfd_ip2k_arch,
     &bfd_iq2000_arch,
+    &bfd_kvx_arch,
     &bfd_lm32_arch,
     &bfd_loongarch_arch,
     &bfd_m32c_arch,

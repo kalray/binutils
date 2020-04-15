@@ -1440,6 +1440,10 @@ print_gdb_version (struct ui_file *stream, bool interactive)
   std::string v_str = string_printf ("GNU gdb %s%s", PKGVERSION, version);
   gdb_printf (stream, "%ps\n",
 	      styled_string (version_style.style (), v_str.c_str ()));
+  std::string kalray_v_str = string_printf ("Kalray gdb %s", KALRAY_VERSION);
+  fprintf_filtered (stream, "%ps\n%ps\n",
+		    styled_string (version_style.style (), v_str.c_str ()),
+		    styled_string (version_style.style (), kalray_v_str.c_str ()));
 
   /* Second line is a copyright notice.  */
 

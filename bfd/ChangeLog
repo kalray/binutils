@@ -1,3 +1,24 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* Makefile.am: Add kvx support.
+	* Makefile.in: Likewise.
+	* archures.c: Likewise.
+	* bfd-in2.h (enum bfd_architecture): Likewise.
+	* config.bfd: Likewise.
+	* configure: Likewise.
+	* configure.ac: Likewise.
+	* cpu-kvx.c: New file.
+	* elf-bfd.h (enum elf_target_id): Add kvx support.
+	* elfnn-kvx.c: New file.
+	* elfxx-kv3-relocs.h: New file.
+	* elfxx-kvx.c: New file.
+	* elfxx-kvx.h: New file.
+	* libbfd.h: Add kvx support.
+	* po/BLD-POTFILES.in: Likewise.
+	* po/SRC-POTFILES.in: Likewise.
+	* reloc.c: Likewise.
+	* targets.c: Likewise.
+
 2023-01-14  Nick Clifton  <nickc@redhat.com>
 
 	* 2.40 release point.

@@ -1,3 +1,23 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* config.in: Add kvx support.
+	* configure: Likewise.
+	* configure.ac: Likewise.
+	* readelf.c (guess_is_rela): Likewise.
+	(dump_relocations): Likewise.
+	(get_machine_name): Likewise.
+	(get_machine_flags): Likewise.
+	(is_32bit_abs_reloc): Likewise.
+	(is_32bit_pcrel_reloc): Likewise.
+	(is_64bit_abs_reloc): Likewise.
+	(is_16bit_abs_reloc): Likewise.
+	(is_none_reloc): Likewise.
+	* testsuite/binutils-all/kvx/kvx.exp: New file.
+	* testsuite/binutils-all/kvx/pcrel_bundle.d: New test.
+	* testsuite/binutils-all/kvx/pcrel_bundle.s: New test.
+	* testsuite/binutils-all/kvx/pcrel_bundle32bits.d: New test.
+	* testsuite/binutils-all/kvx/pcrel_bundle32bits.s: New test.
+
 2023-01-31  Nick Clifton  <nickc@redhat.com>
 
 	* po/sv.po: Updated Swedish translation.

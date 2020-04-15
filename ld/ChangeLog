@@ -1,3 +1,52 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* Makefile.am: Add kvx support.
+	* Makefile.in: Likewise.
+	* config.in: Likewise.
+	* configure: Likewise.
+	* configure.ac: Likewise.
+	* configure.tgt: Likewise.
+	* emulparams/elf32kvx.sh: New file.
+	* emulparams/elf64kvx.sh: New file.
+	* emulparams/elf64kvx_linux.sh: New file.
+	* emultempl/kvxelf.em: New file.
+	* ldver.c (ldversion): Add kvx support.
+	* testsuite/ld-kvx/farcall-back.d: New test.
+	* testsuite/ld-kvx/farcall-back.s: New test.
+	* testsuite/ld-kvx/farcall-call-defsym.d: New test.
+	* testsuite/ld-kvx/farcall-call-defsym.s: New test.
+	* testsuite/ld-kvx/farcall-call-none-function.d: New test.
+	* testsuite/ld-kvx/farcall-call-none-function.s: New test.
+	* testsuite/ld-kvx/farcall-call-plt-32bits.d: New test.
+	* testsuite/ld-kvx/farcall-call-plt.d: New test.
+	* testsuite/ld-kvx/farcall-call-plt.s: New test.
+	* testsuite/ld-kvx/farcall-call-section.d: New test.
+	* testsuite/ld-kvx/farcall-call-section.s: New test.
+	* testsuite/ld-kvx/farcall-call.d: New test.
+	* testsuite/ld-kvx/farcall-call.s: New test.
+	* testsuite/ld-kvx/farcall-goto-defsym.d: New test.
+	* testsuite/ld-kvx/farcall-goto-defsym.s: New test.
+	* testsuite/ld-kvx/farcall-goto-gsym.d: New test.
+	* testsuite/ld-kvx/farcall-goto-gsym.s: New test.
+	* testsuite/ld-kvx/farcall-goto-none-function.d: New test.
+	* testsuite/ld-kvx/farcall-goto-none-function.s: New test.
+	* testsuite/ld-kvx/farcall-goto-plt-32bits.d: New test.
+	* testsuite/ld-kvx/farcall-goto-plt.d: New test.
+	* testsuite/ld-kvx/farcall-goto-plt.s: New test.
+	* testsuite/ld-kvx/farcall-goto-section.d: New test.
+	* testsuite/ld-kvx/farcall-goto-section.s: New test.
+	* testsuite/ld-kvx/farcall-goto.d: New test.
+	* testsuite/ld-kvx/farcall-goto.s: New test.
+	* testsuite/ld-kvx/kvx-elf.exp: New file.
+	* testsuite/ld-kvx/kvx.ld: New test.
+	* testsuite/ld-kvx/limit-call.d: New test.
+	* testsuite/ld-kvx/limit-call.s: New test.
+	* testsuite/ld-kvx/limit-goto.d: New test.
+	* testsuite/ld-kvx/limit-goto.s: New test.
+	* testsuite/ld-kvx/pcrel-reloc-32bits.d: New test.
+	* testsuite/ld-kvx/pcrel-reloc.d: New test.
+	* testsuite/ld-kvx/pcrel-reloc.s: New test.
+
 2023-01-14  Nick Clifton  <nickc@redhat.com>
 
 	* 2.40 release point.

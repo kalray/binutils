@@ -1229,6 +1229,9 @@ case "${target}" in
   i[[3456789]]86-*-rdos*)
     noconfigdirs="$noconfigdirs gdb"
     ;;
+  kvx)
+    noconfigdirs="$noconfigdirs gas"
+    ;;
   mmix-*-*)
     noconfigdirs="$noconfigdirs gdb"
     ;;

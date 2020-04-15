@@ -168,6 +168,9 @@
 /* Define to 1 if zstd is enabled. */
 #undef HAVE_ZSTD
 
+/* The Kalray tools version. */
+#undef KALRAY_VERSION
+
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */
 #undef LT_OBJDIR

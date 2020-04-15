@@ -1,3 +1,137 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* boards/kvx-iss-clang.exp: New file.
+	* boards/kvx-iss-cos.exp: New file.
+	* boards/kvx-iss-elf.exp: New file.
+	* boards/kvx-jtag-runner-elf.exp: New file.
+	* gdb.base/async-shell.exp: Add kvx support.
+	* gdb.base/attach-wait-input.exp: Likewise.
+	* gdb.base/bg-execution-repeat.c (main): Likewise.
+	* gdb.base/bp-permanent.exp: Likewise.
+	* gdb.base/break-main-file-remove-fail.exp: Likewise.
+	* gdb.base/break-unload-file.exp: Likewise.
+	* gdb.base/breakpoint-in-ro-region.exp: Likewise.
+	* gdb.base/catch-fork-kill.exp: Likewise.
+	* gdb.base/compare-sections.exp: Likewise.
+	* gdb.base/completion.exp: Likewise.
+	* gdb.base/condbreak.exp: Likewise.
+	* gdb.base/continue-all-already-running.c: Likewise.
+	* gdb.base/dcache-line-read-error.exp: Likewise.
+	* gdb.base/dprintf-detach.exp: Likewise.
+	* gdb.base/ending-run.exp: Likewise.
+	* gdb.base/execl-update-breakpoints.exp: Likewise.
+	* gdb.base/execution-termios.exp: Likewise.
+	* gdb.base/exprs.exp: Likewise.
+	* gdb.base/fork-running-state.exp: Likewise.
+	* gdb.base/func-ptrs.exp: Likewise.
+	* gdb.base/gcore-relro-pie.exp: Likewise.
+	* gdb.base/gdb-sigterm.exp: Likewise.
+	* gdb.base/hook-stop.exp: Likewise.
+	* gdb.base/infcall-exec.exp: Likewise.
+	* gdb.base/interrupt-noterm.c: Likewise.
+	* gdb.base/interrupt-noterm.exp: Likewise.
+	* gdb.base/killed-outside.exp: Likewise.
+	* gdb.base/longest-types.exp: Likewise.
+	* gdb.base/morestack.exp: Likewise.
+	* gdb.base/nostdlib.exp: Likewise.
+	* gdb.base/paginate-after-ctrl-c-running.exp: Likewise.
+	* gdb.base/paginate-bg-execution.c: Likewise.
+	* gdb.base/paginate-bg-execution.exp: Likewise.
+	* gdb.base/paginate-inferior-exit.c: Likewise.
+	* gdb.base/paginate-inferior-exit.exp: Likewise.
+	* gdb.base/permissions.exp: Likewise.
+	* gdb.base/save-bp.exp: Likewise.
+	* gdb.base/sss-bp-on-user-bp-2.exp: Likewise.
+	* gdb.base/sss-bp-on-user-bp.exp: Likewise.
+	* gdb.base/stack-checking.exp: Likewise.
+	* gdb.base/stap-probe.exp: Likewise.
+	* gdb.base/step-over-no-symbols.exp: Likewise.
+	* gdb.base/step-sw-breakpoint-adjust-pc.c: Likewise.
+	* gdb.base/step-sw-breakpoint-adjust-pc.exp: Likewise.
+	* gdb.base/vla-stub.exp: Likewise.
+	* gdb.base/watch-vfork.exp: Likewise.
+	* gdb.base/watchpoint.c: Likewise.
+	* gdb.base/watchpoint.exp: Likewise.
+	* gdb.base/watchpoints.exp: Likewise.
+	* gdb.kalray/Makefile.in: New test.
+	* gdb.kalray/abi.exp: New file.
+	* gdb.kalray/abi/aggregates_small/small_struct.c: New test.
+	* gdb.kalray/abi/aggregates_small/small_struct_asm.S: New test.
+	* gdb.kalray/abi/basic/only_regs.c: New test.
+	* gdb.kalray/abi/basic/only_regs_asm.S: New test.
+	* gdb.kalray/abi/basic/regs_and_stack.c: New test.
+	* gdb.kalray/abi/basic/regs_and_stack_asm.S: New test.
+	* gdb.kalray/abi/complex/double.c: New test.
+	* gdb.kalray/abi/complex/double_asm.S: New test.
+	* gdb.kalray/abi/complex/single.c: New test.
+	* gdb.kalray/abi/complex/single_asm.S: New test.
+	* gdb.kalray/abi/gdb/ret_struct_3ull.c: New test.
+	* gdb.kalray/abi/gdb/ret_struct_5ull.c: New test.
+	* gdb.kalray/abi/int128/int128_gap_regs.c: New test.
+	* gdb.kalray/abi/int128/int128_gap_regs_asm.S: New test.
+	* gdb.kalray/abi/int128/int128_in_struct_misaligned.c: New test.
+	* gdb.kalray/abi/int128/int128_in_struct_misaligned_asm.S: New test.
+	* gdb.kalray/abi/int128/int128_regs_stack.c: New test.
+	* gdb.kalray/abi/int128/int128_regs_stack_2.c: New test.
+	* gdb.kalray/abi/int128/int128_regs_stack_2_asm.S: New test.
+	* gdb.kalray/abi/int128/int128_regs_stack_asm.S: New test.
+	* gdb.kalray/abi/int128/vaarg_int128_aligned.c: New test.
+	* gdb.kalray/abi/kvx-abi.exp: New file.
+	* gdb.kalray/abi/struct/big_struct_mixed_regs_stack.c: New test.
+	* gdb.kalray/abi/struct/big_struct_mixed_regs_stack_asm.S: New test.
+	* gdb.kalray/abi/struct/big_struct_odd_regs.c: New test.
+	* gdb.kalray/abi/struct/big_struct_odd_regs_asm.S: New test.
+	* gdb.kalray/abi/struct/big_struct_regs.c: New test.
+	* gdb.kalray/abi/struct/big_struct_regs_asm.S: New test.
+	* gdb.kalray/abi/struct/big_struct_stack.c: New test.
+	* gdb.kalray/abi/struct/big_struct_stack_asm.S: New test.
+	* gdb.kalray/abi/struct/int128_in_struct_aligned.c: New test.
+	* gdb.kalray/abi/struct/int128_in_struct_aligned_asm.S: New test.
+	* gdb.kalray/abi/struct/return_in_r15.c: New test.
+	* gdb.kalray/abi/struct/return_in_r15_asm.S: New test.
+	* gdb.kalray/abi/struct/return_in_r15_limit.c: New test.
+	* gdb.kalray/abi/struct/return_in_r15_limit_asm.S: New test.
+	* gdb.kalray/abi/struct/return_in_registers.c: New test.
+	* gdb.kalray/abi/struct/return_in_registers_asm.S: New test.
+	* gdb.kalray/abi/struct/small_struct_regs.c: New test.
+	* gdb.kalray/abi/struct/small_struct_regs_asm.S: New test.
+	* gdb.kalray/abi/struct/vaarg_struct_basic.c: New test.
+	* gdb.kalray/abi/vararg/vaarg_basic_int.c: New test.
+	* gdb.kalray/abi/vararg/vaarg_struct_basic.c: New test.
+	* gdb.kalray/abi/vector/v4di_aligned.c: New test.
+	* gdb.kalray/abi/vector/v4di_aligned_asm.S: New test.
+	* gdb.kalray/abi/vector/v4di_misaligned.c: New test.
+	* gdb.kalray/abi/vector/v4di_misaligned_asm.S: New test.
+	* gdb.kalray/abi/vector/v4si_regs_aligned.c: New test.
+	* gdb.kalray/abi/vector/v4si_regs_aligned_asm.S: New test.
+	* gdb.kalray/abi/vector/v4si_regs_misaligned.c: New test.
+	* gdb.kalray/abi/vector/v4si_regs_misaligned_asm.S: New test.
+	* gdb.kalray/bcu.S: New test.
+	* gdb.kalray/bcu.c: New test.
+	* gdb.kalray/bcu.exp: New file.
+	* gdb.kalray/displaced.S: New test.
+	* gdb.kalray/displaced.exp: New file.
+	* gdb.kalray/displaced.ld: New test.
+	* gdb.kalray/displaced_pl1.S: New test.
+	* gdb.kalray/dump_tlb.c: New test.
+	* gdb.kalray/dump_tlb.exp: New file.
+	* gdb.mi/dw2-ref-missing-frame.exp: Add kvx support.
+	* gdb.mi/mi-cli.exp: Likewise.
+	* gdb.mi/mi-condbreak-call-thr-state.exp: Likewise.
+	* gdb.mi/mi-console.exp: Likewise.
+	* gdb.mi/mi-detach.exp: Likewise.
+	* gdb.mi/mi-disassemble.exp: Likewise.
+	* gdb.mi/mi-file-transfer.exp: Likewise.
+	* gdb.mi/mi-logging.exp: Likewise.
+	* gdb.mi/mi-threads-interrupt.exp: Likewise.
+	* gdb.mi/mi-var-display.exp: Likewise.
+	* gdb.mi/mi-var-list-children-invalid-grandchild.exp: Likewise.
+	* gdb.mi/var-cmd.c: Likewise.
+	* lib/future.exp: Likewise.
+	* lib/gdb.exp: Likewise.
+	* lib/mi-support.exp: Likewise.
+	* site.exp: New file.
+
 2021-07-06  Tom de Vries  <tdevries@suse.de>
 
 	* gdb.base/info-macros.exp: Replace use of

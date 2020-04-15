@@ -1,3 +1,10 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* configure: Add kvx support.
+	* configure.ac: Likewise.
+	* gconfig.in: Likewise.
+	* gprof.c: Likewise.
+
 2023-01-14  Nick Clifton  <nickc@redhat.com>
 
 	* 2.40 release point.
