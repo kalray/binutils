@@ -1,5 +1,12 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	Fix relocation description
+	PCREL relocation not intended for jump insn are not scaled.
+
+	* elfxx-kv3-relocs.h (elf_kvx_howto_table): Fix pcrel relocations.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* Makefile.am: Add kvx support.
 	* Makefile.in: Likewise.
 	* archures.c: Likewise.
