@@ -2997,6 +2997,12 @@ fi
 AM_BACKSLASH='\'
 
 
+
+cat >>confdefs.h <<_ACEOF
+#define KALRAY_VERSION "$KALRAY_VERSION"
+_ACEOF
+
+
 ac_config_headers="$ac_config_headers gconfig.h:gconfig.in"
 
 
