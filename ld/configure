@@ -11661,7 +11661,7 @@ else
   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<_LT_EOF
-#line 11659 "configure"
+#line 11664 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -11767,7 +11767,11 @@ else
   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<_LT_EOF
+<<<<<<< HEAD
 #line 11765 "configure"
+=======
+#line 11739 "configure"
+>>>>>>> 279b284b87a (Update to binutils 2.35)
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H

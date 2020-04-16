@@ -262,12 +262,9 @@ elfxx-aarch64.c
 elfxx-aarch64.h
 elfxx-ia64.c
 elfxx-ia64.h
-<<<<<<< HEAD
+elfxx-kvx.c
 elfxx-loongarch.c
 elfxx-loongarch.h
-=======
-elfxx-kvx.c
->>>>>>> b6de7e0f4a7 (Add kvx support)
 elfxx-mips.c
 elfxx-mips.h
 elfxx-riscv.c

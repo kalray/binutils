@@ -165,6 +165,54 @@ startswith (const char *str, const char *prefix)
 {
   return strncmp (str, prefix, strlen (prefix)) == 0;
 }
+/* Extracted from init.c.  */
+unsigned int bfd_init (void);
+
+
+/* Value returned by bfd_init.  */
+
+#define BFD_INIT_MAGIC (sizeof (struct bfd_section))
+/* Extracted from opncls.c.  */
+/* Set to N to open the next N BFDs using an alternate id space.  */
+extern unsigned int bfd_use_reserved_id;
+bfd *bfd_fopen (const char *filename, const char *target,
+    const char *mode, int fd);
+
+bfd *bfd_openr (const char *filename, const char *target);
+
+bfd *bfd_fdopenr (const char *filename, const char *target, int fd);
+
+bfd *bfd_fdopenw (const char *filename, const char *target, int fd);
+
+bfd *bfd_openstreamr (const char * filename, const char * target,
+    void * stream);
+
+bfd *bfd_openr_iovec (const char *filename, const char *target,
+    void *(*open_func) (struct bfd *nbfd,
+    void *open_closure),
+    void *open_closure,
+    file_ptr (*pread_func) (struct bfd *nbfd,
+    void *stream,
+    void *buf,
+    file_ptr nbytes,
+    file_ptr offset),
+    int (*close_func) (struct bfd *nbfd,
+    void *stream),
+    int (*stat_func) (struct bfd *abfd,
+    void *stream,
+    struct stat *sb));
+
+bfd *bfd_openw (const char *filename, const char *target);
+
+bool bfd_close (bfd *abfd);
+
+bool bfd_close_all_done (bfd *);
+
+bfd *bfd_create (const char *filename, bfd *templ);
+
+bool bfd_make_writable (bfd *abfd);
+
+bool bfd_make_readable (bfd *abfd);
 
 /* Extracted from libbfd.c.  */
 void *bfd_alloc (bfd *abfd, bfd_size_type wanted);

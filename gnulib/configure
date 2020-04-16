@@ -10916,6 +10916,9 @@ $as_echo "#define STRERROR_R_CHAR_P 1" >>confdefs.h
 fi
 
 
+  XGETTEXT_EXTRA_OPTIONS=
+
+
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether ctype.h defines __header_inline" >&5
 $as_echo_n "checking whether ctype.h defines __header_inline... " >&6; }
 if ${gl_cv_have___header_inline+:} false; then :
@@ -13813,8 +13816,8 @@ rm -f core conftest.err conftest.$ac_objext \
         LIBS=$save_LIBS
         test $gl_pthread_api = yes && break
       done
-      echo "$as_me:13816: gl_pthread_api=$gl_pthread_api" >&5
-      echo "$as_me:13817: LIBPTHREAD=$LIBPTHREAD" >&5
+      echo "$as_me:13819: gl_pthread_api=$gl_pthread_api" >&5
+      echo "$as_me:13820: LIBPTHREAD=$LIBPTHREAD" >&5
 
       gl_pthread_in_glibc=no
       # On Linux with glibc >= 2.34, libc contains the fully functional
@@ -13839,7 +13842,7 @@ rm -f conftest*
 
           ;;
       esac
-      echo "$as_me:13842: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
+      echo "$as_me:13845: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
 
       # Test for libpthread by looking for pthread_kill. (Not pthread_self,
       # since it is defined as a macro on OSF/1.)
@@ -13993,7 +13996,7 @@ fi
 
         fi
       fi
-      echo "$as_me:13996: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
+      echo "$as_me:13999: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
     fi
     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether POSIX threads API is available" >&5
 $as_echo_n "checking whether POSIX threads API is available... " >&6; }
@@ -17070,8 +17073,8 @@ rm -f core conftest.err conftest.$ac_objext \
         LIBS=$save_LIBS
         test $gl_pthread_api = yes && break
       done
-      echo "$as_me:17073: gl_pthread_api=$gl_pthread_api" >&5
-      echo "$as_me:17074: LIBPTHREAD=$LIBPTHREAD" >&5
+      echo "$as_me:17076: gl_pthread_api=$gl_pthread_api" >&5
+      echo "$as_me:17077: LIBPTHREAD=$LIBPTHREAD" >&5
 
       gl_pthread_in_glibc=no
       # On Linux with glibc >= 2.34, libc contains the fully functional
@@ -17096,7 +17099,7 @@ rm -f conftest*
 
           ;;
       esac
-      echo "$as_me:17099: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
+      echo "$as_me:17102: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
 
       # Test for libpthread by looking for pthread_kill. (Not pthread_self,
       # since it is defined as a macro on OSF/1.)
@@ -17250,7 +17253,7 @@ fi
 
         fi
       fi
-      echo "$as_me:17253: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
+      echo "$as_me:17256: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
     fi
     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether POSIX threads API is available" >&5
 $as_echo_n "checking whether POSIX threads API is available... " >&6; }
@@ -17476,8 +17479,8 @@ rm -f core conftest.err conftest.$ac_objext \
         LIBS=$save_LIBS
         test $gl_pthread_api = yes && break
       done
-      echo "$as_me:17479: gl_pthread_api=$gl_pthread_api" >&5
-      echo "$as_me:17480: LIBPTHREAD=$LIBPTHREAD" >&5
+      echo "$as_me:17482: gl_pthread_api=$gl_pthread_api" >&5
+      echo "$as_me:17483: LIBPTHREAD=$LIBPTHREAD" >&5
 
       gl_pthread_in_glibc=no
       # On Linux with glibc >= 2.34, libc contains the fully functional
@@ -17502,7 +17505,7 @@ rm -f conftest*
 
           ;;
       esac
-      echo "$as_me:17505: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
+      echo "$as_me:17508: gl_pthread_in_glibc=$gl_pthread_in_glibc" >&5
 
       # Test for libpthread by looking for pthread_kill. (Not pthread_self,
       # since it is defined as a macro on OSF/1.)
@@ -17656,7 +17659,7 @@ fi
 
         fi
       fi
-      echo "$as_me:17659: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
+      echo "$as_me:17662: LIBPMULTITHREAD=$LIBPMULTITHREAD" >&5
     fi
     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether POSIX threads API is available" >&5
 $as_echo_n "checking whether POSIX threads API is available... " >&6; }
@@ -23980,6 +23983,13 @@ fi
 
 
 fi
+
+
+  XGETTEXT_EXTRA_OPTIONS="$XGETTEXT_EXTRA_OPTIONS --flag=error:3:c-format"
+
+
+
+  XGETTEXT_EXTRA_OPTIONS="$XGETTEXT_EXTRA_OPTIONS --flag=error_at_line:5:c-format"
 
 
 
