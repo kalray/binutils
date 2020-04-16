@@ -1,5 +1,66 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* cpu-kvx.c (scan): Add extra field init.
+	* elfnn-kvx.c (elfNN_kvx_long_branch_stub): Use uint32_t.
+	(elfNN_kvx_bfd_reloc_from_type): Update interface, refresh code
+	from upstream.
+	(elfNN_kvx_howto_from_type): Likewise.
+	(elfNN_kvx_info_to_howto): Likewise.
+	(elfNN_kvx_link_hash_newfunc): Likewise.
+	(elfNN_kvx_copy_indirect_symbol): Likewise.
+	(elfNN_kvx_link_hash_table_create): Likewise.
+	(kvx_relocate): Likewise.
+	(kvx_type_of_stub): Likewise.
+	(elfnn_kvx_stub_name): Likewise.
+	(elfNN_kvx_get_stub_entry): Likewise.
+	(_bfd_kvx_create_stub_section): Likewise.
+	(_bfd_kvx_get_stub_for_link_section) Likewise.
+	(_bfd_kvx_add_ßtub_entry_in_group): Likewise.
+	(elfNN_kvx_size_stubs): Likewise.
+	(kvx_tls_transition): Likewise.
+	(elfNN_kvx_final_link_relocate): Likewise.
+	(elfNN_kvx_relocate_section): Likewise.
+	(elfNN_kvx_merge_private_bfd_data): Likewise.
+	(elfNN_kvx_adjust_dynamic_symbol): Likewise.
+	(kvx_elf_create_got_section): Likewise.
+	(elfNN_kvx_check_relocs): Likewise.
+	(elfNN_kvx_allocate_dynrelocs): Likewise.
+	(elfNN_kvx_size_dynamic_sections): Likewise.
+	(elfNN_kvx_finish_dynamic_symbol): Likewise.
+	(elfNN_kvx_init_small_plt0_entry): Likewise.
+	(kvx_signed_overflow): Likewise.
+	(_bfd_kvx_elf_resolve_relocation): Likewise.
+	(_bfd_kvx_elf_add_symbol_hook): Remove.
+	(elf_backend_gc_sweep_hook): Remove.
+	(elf_backend_post_process_headers): Remove.
+	(elf_backend_init_file_header): Add.
+	(elf_backend_init_process_headers): Add.
+	(elf_backend_hash_symbol): Add.
+	(elfNN_kvx_gc_sweep_hook): Remove.
+	(elf_kvx_link_hash_entry): Remove unused field dyn_relocs.
+	(elfNN_kvx_symbol_got_type): Remove, unused.
+	(kvx_build_one_stub): Change malloc by bfd_put.
+	(elfNN_kvx_section_map_add): Remove.
+	(group_sections): Put stubs after.
+	(elf_kvx_link_hash_table): Add field plt_entry, update interface,
+	remove afterp field.
+	(elfNN_kvx_get_local_sym_hash): Remove.
+	(_bfd_kvx_add_stub_entry_after): Remove.
+	(elf_kvx_hash_symbol): Add.
+	* elfxx-kvx.h (elf64_kvx_setup_section_lists): Add prototype.
+	(elf64_kvx_setup_section_lists) : Likewise.
+	(elf64_kvx_next_input_section): Likewise.
+	(elf64_kvx_size_stubs): Likewise.
+	(elf64_kvx_build_stubs): Likewise.
+	(elf32_kvx_setup_section_lists): Likewise.
+	(elf32_kvx_next_input_section): Likewise.
+	(elf32_kvx_size_stubs): Likewise.
+	(elf32_kvx_build_stubs): Likewise.
+	(elf_backend_add_symbol_hook): Remove.
+	* reloc.c: Add missing ENUM for KVX.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* elfnn-kvx.c (PLT_SMALL_ENTRY_SIZE): Set to correct size.
 	(kvx_build_one_stub): Do not force each stub to be 64-bits aligned.
 	(kvx_size_one_stub): Likewise.

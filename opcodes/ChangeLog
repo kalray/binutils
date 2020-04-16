@@ -1,5 +1,10 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* dissassemble.c (dissassembler_usage): Add missing #endif.
+	* dissassemble.h (print_insn_kvx): Add prototype.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* kv3-dis.c (print_insn_kvx): Add fallthrough comment.
 
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>

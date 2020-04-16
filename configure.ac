@@ -935,6 +935,15 @@ case "${target}" in
   cris-*-* | crisv32-*-*)
     libgloss_dir=cris
     ;;
+  kvx-*-elf)
+    libgloss_dir=kvx-elf
+    ;;
+  kvx-*-mbr)
+    libgloss_dir=kvx-mbr
+    ;;
+  kvx-*-cos)
+    libgloss_dir=kvx-cos
+    ;;
   hppa*-*-*)
     libgloss_dir=pa
     ;;
@@ -1228,9 +1237,6 @@ case "${target}" in
     ;;
   i[[3456789]]86-*-rdos*)
     noconfigdirs="$noconfigdirs gdb"
-    ;;
-  kvx)
-    noconfigdirs="$noconfigdirs gas"
     ;;
   mmix-*-*)
     noconfigdirs="$noconfigdirs gdb"

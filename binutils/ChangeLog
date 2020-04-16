@@ -1,3 +1,8 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* testsuite/lib/binutils-common.exp (is_elf_format): Add correct
+	KVX pattern.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* readelf.c (get_machine_flags): Print machine flags depending on ELF ID

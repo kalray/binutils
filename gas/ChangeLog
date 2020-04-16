@@ -1,5 +1,28 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* tc-kvx.c (kvx_noop): Remove unused.
+	(kvx_noop_stop_bit): Remove unused.
+	(is_code_section): Update interface.
+	(md_parse_option): Likewise.
+	(kvx_get_pseudo_func2): Indent.
+	(has_relocation_of_size): Add missing case in switch.
+	(match_operands): Add fallthrough comment. Change bit logic to
+	avoid warnings/UB.
+	(insert_operand): Add ugly cast to silence GCC warning. We are
+	abusing the enum by adding a handling a value outside of the type
+	range.
+	(insn_syntax): Add pragma for stack usage (will be dealt in later
+	commit). Add const for string litterals.
+	(md_begin): Add pragma for stack usage (will be dealt in later
+	commit). Update interfaces. Comment-out tprel pseudo func until it
+	is re-added.
+	(kvx_cons_fix_new): Reindent, update interfaces.
+	(md_atof): Update interfaces.
+	(kvx_default): Remove.
+	(kvx_unwind): Replace call by as_warn.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* config/tc-kvx.c (md_pseudo_table): Remove (ie. do not override
 	default behavior) all ignored fields.
 	(kvx_ignore): Remove.
