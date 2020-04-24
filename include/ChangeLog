@@ -1,3 +1,13 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	Use common kv3_elfids.h
+	This file is shared on all tools and avoid duplications
+
+include/
+	* elf/kv3.h: Replace content with #include "kv3_elfids.h".
+	* elf/kv3_elfids.h: New file.
+	(ELF IDs): =defines of ELF_KVX_CORE_KV3_1.
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* dis-asm.h: Add kvx support.
