@@ -1,5 +1,17 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	Rename -mcore to -march
+
+	* config/tc-kvx.c (mcore): Renamed into...
+	(march): New.
+	(OPTION_MCORE): Renamed into...
+	(OPTION_MARCH): New.
+	(md_longopts): Renamed mcore into march.
+	(md_parse_option): Likewise.
+	(md_show_usage): Likewise.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* Makefile.am: Add kvx support.
 	* Makefile.in: Likewise.
 	* as.c (print_version_id): Likewise.
