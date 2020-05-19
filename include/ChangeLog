@@ -1,3 +1,7 @@
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* opcode/kv3.h: Sync with processor.
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	Use newly attributed MPPA KVX ELF id
