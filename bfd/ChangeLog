@@ -1,5 +1,9 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* elfnn-kvx.c (kvx_elf_create_got_section): Increment correct section.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	Fix relocation description
 	PCREL relocation not intended for jump insn are not scaled.
 
