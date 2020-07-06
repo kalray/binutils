@@ -1,3 +1,8 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* elfnn-kvx.c (kvx_build_one_stub): correctly check return status
+	for kvx_relocate invocations.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* archures.c: Defines 32/64/usr variants for V1 and V2. Default 0 architecture must be unknown.
