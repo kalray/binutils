@@ -84,12 +84,6 @@ proc test_disassembly_with_opcodes {} {
     # -data-disassembly -f basics.c -l $line_main_body -- 2
 
     mi_gdb_test "print/x \$pc" "" ""
-<<<<<<< HEAD
-=======
-    mi_gdb_test "111-data-disassemble -s \$pc -e \"\$pc + 40\" -- 2" \
-           "111\\^done,asm_insns=\\\[\{address=\"$hex\",func-name=\"main\",offset=\"$decimal\",opcodes=\".*\",inst=\".*\"\},\{address=\"$hex\",func-name=\"main\",offset=\"$decimal\",opcodes=\".*\",inst=\".*\"\}.*\]" \
-             "data-disassemble from pc to pc+40 assembly with opcodes"
->>>>>>> b6de7e0f4a7 (Add kvx support)
 
     foreach { test_name option_string} [list "mode 2" "-- 2" \
 					    "mode 0 and --opcodes bytes" "--opcodes bytes -- 0" \

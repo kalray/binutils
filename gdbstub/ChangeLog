@@ -1,4 +1,8 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* regs_ofs.c: Remove.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* gdbstub/regs_ofs.c: New file.
 

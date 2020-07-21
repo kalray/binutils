@@ -1,5 +1,43 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* config.in: Remove gdb support for kvx.
+	* config/kvx/linux.mh: Remove.
+	* configure.host: Likewise.
+	* configure.tgt: Likewise.
+	* defs.h: Likewise.
+	* features/kvx-linux-core.xml: Remove.
+	* features/kvx-linux.c: Remove.
+	* features/kvx-linux.xml: Remove.
+	* gdbserver/linux-kvx-low.c: Remove.
+	* infcall.c: Remove gdb support for kvx.
+	* infrun.c (print_stop_event): Likewise.
+	* kv3-mds-tdep.c: Remove.
+	* kvx-common-tdep.c: Remove.
+	* kvx-common-tdep.h: Remove.
+	* kvx-dump-tlb.c: Remove.
+	* kvx-dump-tlb.h: Remove.
+	* kvx-exception-info.c: Remove.
+	* kvx-exception-info.h: Remove.
+	* kvx-linux-nat.c: Remove.
+	* kvx-linux-nat.h: Remove.
+	* kvx-linux-tdep.c: Remove.
+	* kvx-target.c: Remove.
+	* kvx-target.h: Remove.
+	* kvx-tdep.c: Remove.
+	* regformats/reg-kvx.dat: Remove.
+	* remote-notif.c (handle_notification): Remove gdb support for kvx.
+	* remote.c (remote_target::process_initial_stop_replies): Likewise.
+	* serial.c: Likewise.
+	* solib-kvx-bare.c: Remove.
+	* solib-kvx-bare.h: Remove.
+	* stack.c: Remove gdb support for kvx.
+	* target-descriptions.c (tdesc_register_type): Remove gdb support for kvx.
+	* target.c (memory_xfer_check_region): Likewise.
+	* thread.c: Likewise.
+	* xml-tdesc.c: Likewise.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* config.in: Add kvx support.
 	* config/kvx/linux.mh: New file.
 	* configure.host: Add kvx support.

@@ -1,5 +1,10 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* server.cc (handle_qxfer): Remove gdb support for kvx.
+	(process_serial_event): Likewise.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* server.cc (handle_qxfer): Add kvx support.
 	(process_serial_event): Likewise.
 
