@@ -1,5 +1,9 @@
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* kv3-opc.c: Fix processor documentation.
+
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* kv3-opc.c: Add missing formats for ACSWAPW and ACSWAPD.
 
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
