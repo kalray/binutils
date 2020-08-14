@@ -1,3 +1,8 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* kv3-dis.c (int print_insn_kvx): Selects right architecture description depending on ELF ID.
+	* kv3-opc.c: Updating dual archs Coolidge V1/V2.
+
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* kv3-opc.c: Enable alternate register names.

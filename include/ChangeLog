@@ -1,3 +1,8 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* elf/kv3_elfids.h: Adding ELF_KVX_CORE_KV3_2.
+	* opcode/kv3.h: Updating dual archs Coolidge V1/V2.
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	Fix const correctness wrt string litterals

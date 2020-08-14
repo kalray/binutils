@@ -1,3 +1,15 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* archures.c: Defines 32/64/usr variants for V1 and V2. Default 0 architecture must be unknown.
+	* bfd-in2.h (enum bfd_architecture): generated file from archures.c (make
+	headers).
+	* cpu-kvx.c (kvx_compatible): kvx_compatible must return default info_type to enable call of merge_private_bfd_data.
+	* elfnn-kvx.c (elfNN_kvx_object_p): Select right bfd_mach and print private
+	data depending on ELF ID (-p option of ld).
+	(elfNN_kvx_merge_private_bfd_data): Likewise.
+	(elfNN_kvx_print_private_bfd_data): Likewise.
+	* elfxx-kv3-relocs.h: KV3_V1_V2 flags.
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* elfnn-kvx.c (kvx_elf_create_got_section): Increment correct section.

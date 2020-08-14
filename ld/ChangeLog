@@ -1,3 +1,8 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* emulparams/elf32kvx.sh: MACHINE is no more fixed (v1 or v2)
+	* emulparams/elf64kvx.sh: Likewise.
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* Makefile.am: Add kvx support.

@@ -1,3 +1,7 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* readelf.c (get_machine_flags): Print machine flags depending on ELF ID
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* config.in: Add kvx support.
