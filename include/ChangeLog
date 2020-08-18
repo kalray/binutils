@@ -1,3 +1,10 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	Fix const correctness wrt string litterals
+	String litterals are 'const char*'.  Omiting the const raises a warning.
+
+	* opcode/kv3.h: (bundling_names): add missing const.
+
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* opcode/kv3.h: Rename Inverse to Reciprocal.
