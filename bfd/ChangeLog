@@ -1,5 +1,9 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* cpu-kvx.c (kvx_compatible): Fix indentation.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* elfnn-kvx.c (kvx_build_one_stub): correctly check return status
 	for kvx_relocate invocations.
 

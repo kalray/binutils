@@ -1,3 +1,7 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* kv3-dis.c (print_insn_kvx): Add fallthrough comment.
+
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* kv3-opc.c: Use ANDW in ZXHD and ZXDW Synthetic instructions.
