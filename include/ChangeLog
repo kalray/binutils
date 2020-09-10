@@ -1,3 +1,7 @@
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* opcode/kv3.h: Use ANDW in ZXHD and ZXDW Synthetic instructions.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* elf/kv3_elfids.h: Adding ELF_KVX_CORE_KV3_2.

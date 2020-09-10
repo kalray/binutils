@@ -1,3 +1,7 @@
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* kv3-opc.c: Use ANDW in ZXHD and ZXDW Synthetic instructions.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* kv3-dis.c (int print_insn_kvx): Selects right architecture description depending on ELF ID.
