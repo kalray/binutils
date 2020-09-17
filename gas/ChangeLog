@@ -1,3 +1,9 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* config/tc-kvx.c (md_pseudo_table): Remove (ie. do not override
+	default behavior) all ignored fields.
+	(kvx_ignore): Remove.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* config/tc-kvx.c (int md_parse_option): Replaces option -mcore with -march
