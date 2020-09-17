@@ -1,5 +1,12 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* config/tc-kvx.c (ASM_CHARS_MAX): Add.
+	(kv3_print_insn): Fix stack usage and minor reindent.
+	(md_assemble): Use heap allocation instead of stack allocation and
+	reindent.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* config/tc-kvx.c (kvx_set_cpu): Remove useless call. Factor
 	switch/case.
 
