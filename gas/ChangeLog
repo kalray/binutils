@@ -1,5 +1,10 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* config/tc-kvx.c (kvx_set_cpu): Remove useless call. Factor
+	switch/case.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* tc-kvx.c (kvx_noop): Remove unused.
 	(kvx_noop_stop_bit): Remove unused.
 	(is_code_section): Update interface.
