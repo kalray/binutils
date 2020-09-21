@@ -1,5 +1,11 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* elfnn-kvx.c (PLT_SMALL_ENTRY_SIZE): Set to correct size.
+	(kvx_build_one_stub): Do not force each stub to be 64-bits aligned.
+	(kvx_size_one_stub): Likewise.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* cpu-kvx.c (kvx_compatible): Fix indentation.
 
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
