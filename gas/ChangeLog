@@ -1,5 +1,22 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* config/tc-kvx.c (emit_all_relocs): Remove.
+	(OPTION_EMITALLRELOCS): Remove.
+	(md_longopts): Remove --emit-all-relocs option.
+	(md_parse_option): Likewise.
+	(md_show_usage): Likewise.
+	(tc_gen_reloc): Likewise.
+	(kvx_proc): Likewise.
+	(kvx_force_reloc): Likewise.
+	(kvx_force_reloc_sub_same): Likewise.
+	(kvx_fix_adjustable): Remove.
+	(kvx_md_start_line_hook): Remove useless test.
+	* config/tc-kvx.h (emit_all_relocs): Remove.
+	(EXTERN_FORCE_RELOC): Define to 1.
+	(tc_fix_adjustable): Change to constant 1.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* config/tc-kvx.c (ASM_CHARS_MAX): Add.
 	(kv3_print_insn): Fix stack usage and minor reindent.
 	(md_assemble): Use heap allocation instead of stack allocation and
