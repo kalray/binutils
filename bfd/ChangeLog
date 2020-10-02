@@ -1,5 +1,28 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* elfnn-kvx.c (KVX_DISABLE_IFUNC): Remove.
+	(elf_kvx_link_hash_table): Remove ifunc related fields.
+	(elfNN_kvx_local_htab_hash): Remove.
+	(elfNN_kvx_local_htab_eq): Remove.
+	(elfNN_kvx_link_hash_table_free): Remove.
+	(elfNN_kvx_link_hash_table_create): Remove.
+	(elfNN_kvx_final_link_relocate): Remove IFUNC related code.
+	(elfNN_kvx_relocate_section): Likewise.
+	(elfNN_kvx_adjust_dynamic_symbol): Likewise.
+	(elfNN_kvx_check_relocs): Likewise.
+	(elfNN_kvx_allocate_dynrelocs). Likewise.
+	(elfNN_kvx_size_dynamic_sections): Likewise.
+	(elfNN_kvx_create_small_pltn_entry): Likewise.
+	(elfNN_kvx_finish_dynamic_symbol): Likewise.
+	(elfNN_kvx_finish_dynamic_sections): Likewise.
+	(elfNN_kvx_finish_local_dynamic_symbol): Remove.
+	(elfNN_kvx_allocate_ifunc_dynrelocs): Remove.
+	(elfNN_kvx_allocate_local_dynrelocs): Remove.
+	(elfNN_kvx_allocate_local_ifunc_dynrelocs): Remove.
+	(kvx_readonly_dynrelocs): Remove comments.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* cpu-kvx.c (scan): Add extra field init.
 	* elfnn-kvx.c (elfNN_kvx_long_branch_stub): Use uint32_t.
 	(elfNN_kvx_bfd_reloc_from_type): Update interface, refresh code
