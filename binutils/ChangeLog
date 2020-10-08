@@ -1,5 +1,10 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* testsuite/lib/binutils-common.exp (check_pie_support): Filter
+	out kvx-*-cos.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* testsuite/lib/binutils-common.exp (is_elf_format): Add correct
 	KVX pattern.
 
