@@ -1,5 +1,9 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* elfNN-kvx.c (elfNN_kvx_final_link_relocate): Fix format string.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* elfnn-kvx.c (KVX_DISABLE_IFUNC): Remove.
 	(elf_kvx_link_hash_table): Remove ifunc related fields.
 	(elfNN_kvx_local_htab_hash): Remove.
