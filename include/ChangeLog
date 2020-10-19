@@ -1,3 +1,7 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* opcode/kv3.h: Update of Coolidge V2 architecture
+
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* opcode/kv3.h: Use ANDW in ZXHD and ZXDW Synthetic instructions.

@@ -1,3 +1,7 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* config/tc-kvx.c: Add Coolidge V2 register classes in match_operands
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* config/tc-kvx.c (emit_all_relocs): Remove.

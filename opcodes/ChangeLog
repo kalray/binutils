@@ -1,3 +1,8 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* kv3-dis.c:  Add Coolidge V2 register classes in print_insn_kvx
+	* kv3-opc.c: Update of Coolidge V2 architecture
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* dissassemble.c (dissassembler_usage): Add missing #endif.
