@@ -1,3 +1,9 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* config/tc-kvx.c (nop_insertion_allowed): Remove.
+	(md_pseudo_table): Remove nopinsertion entries.
+	(kvx_nop_insertion): Remove.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* config/tc-kvx.c: Add Coolidge V2 register classes in match_operands
