@@ -1,5 +1,23 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* config/tc-kvx.c (is_code_section): Remove.
+	(kvx_align): Remove.
+	(kvx_align_bytes): Remove.
+	(kvx_align_ptwo): Remove.
+	(kvx_skip): Remove.
+	(kvx_comm): Remove.
+	(kvx_cons): Remove.
+	(kvx_set_rta_flags): Remove.
+	(kvx_set_assume_flags): Remove.
+	(kvx_nop_insertion): Remove.
+	(kvx_float_cons): Remove.
+	(kvx_stringer): Remove.
+	(kvx_pic_ptr): Remove.
+	(md_pseudo_table): Remove some overloaded directive and let them
+	use default. Change some custom hook by generic ones.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* config/tc-kvx.c (nop_insertion_allowed): Remove.
 	(md_pseudo_table): Remove nopinsertion entries.
 	(kvx_nop_insertion): Remove.
