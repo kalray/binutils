@@ -1,5 +1,9 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* testsuite/ld-elf/shared.exp: Enable more test.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* testsuite/lib/binutils-common.exp (check_pie_support): Filter
 	out kvx-*-cos.
 
