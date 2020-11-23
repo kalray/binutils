@@ -1,5 +1,19 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* config/tc-kvx.c (PARALLEL_BIT): New.
+	(emit_insn): Use PARALLEL_BIT instead of hardcoded value.
+	(md_pseudo_table): Add comment.
+	(kvx_make_nops): New.
+	(kvx_handle_align): New.
+	(kvx_make_nops): New.
+	* config/tc-kvx.h (HANDLE_ALIGN): New.
+	(kvx_handle_align): New.
+	* testsuite/gas/kvx/kvx.exp: New file.
+	* testsuite/gas/kvx/nop-align.d: New test.
+	* testsuite/gas/kvx/nop-align.s: New test.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* config/tc-kvx.c (is_code_section): Remove.
 	(kvx_align): Remove.
 	(kvx_align_bytes): Remove.
