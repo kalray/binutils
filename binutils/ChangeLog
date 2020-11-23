@@ -1,5 +1,10 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* testsuite/binutils-all/objcopy.exp (copy_setup): Make kvx
+	similar to linux & gnu.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* testsuite/lib/binutils-common.exp (check_pie_support): Filter
 	out kvx-*-cos.
 
