@@ -1,3 +1,8 @@
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
+	* kv3-dis.c : Rearrange headers.
+	(kv3_reassemble_bundle): Clean empty space.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* kv3-dis.c:  Add Coolidge V2 register classes in print_insn_kvx
