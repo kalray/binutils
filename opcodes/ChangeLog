@@ -1,5 +1,15 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* kv3-dis.c (opt_pretty): New.
+	(opt_compact_assembly): New.
+	(parse_kvx_dis_option): New.
+	(parse_kvx_dis_options): New.
+	(print_insn_kvx): Support visualize jump by filling needed insn
+	info. Refactor option parsing.
+	(print_kvx_disassembler_options): Refresh.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* kv3-dis.c : Rearrange headers.
 	(kv3_reassemble_bundle): Clean empty space.
 
