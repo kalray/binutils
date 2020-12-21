@@ -1,3 +1,7 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* kv3-opc.c: Import of Coolidge V2 updates
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* kv3-dis.c (opt_pretty): New.
