@@ -1,5 +1,9 @@
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* kv3-opc.c: Remove immediate operands for MAU/FPU.
+
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* kv3-opc.c: Add FMULHO, FADDHO, FSBFHO.
 
 2022-07-07  Julien Villette <jvillette@kalray.eu>
