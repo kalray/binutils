@@ -1,5 +1,12 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* config/tc-kvx.c (md_operand): use as_fatal instead of as_bad and
+	clean old comments.
+	(kvx_cons_fix_new): Likewise.
+	(kvx_type): Likewise.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* config/tc-kvx.c (PARALLEL_BIT): New.
 	(emit_insn): Use PARALLEL_BIT instead of hardcoded value.
 	(md_pseudo_table): Add comment.
