@@ -1,5 +1,9 @@
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* kv3-opc.c: Alias .t and .c modifiers for matrix and complex FP instructions.
+
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* opcode/kv3.h: Remove immediate operands for MAU/FPU.
 
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
