@@ -1,3 +1,11 @@
+2022-07-07  Marius Gligor <mgligor@kalray.eu>
+
+	* elfxx-kvx.c (_bfd_kvx_elf_grok_prstatus): New function which interprets the
+	NT_PRSTATUS note entry produced by kvx native Linux for the coredump files
+	(_bfd_kvx_elf_grok_psinfo): New function which interprets the NT_PSINFO note
+	entry produced by kvx native Linux for the coredump files * elfxx-kvx.h:
+	Declare the _bfd_kvx_elf_grok_prstatus and _bfd_kvx_elf_grok_psinfo functions
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* elfnn-kvx.c (elfNN_kvx_size_dynamic_sections): Fix GOT size for
