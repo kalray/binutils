@@ -1,5 +1,10 @@
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
+	* config/tc-kvx.c (signed_overflow): New
+	(md_apply_fix): Add overflow checks.
+
+2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
+
 	* config/tc-kvx.c (md_operand): use as_fatal instead of as_bad and
 	clean old comments.
 	(kvx_cons_fix_new): Likewise.
