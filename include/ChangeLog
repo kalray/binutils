@@ -1,5 +1,9 @@
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* opcode/kv3.h (enum Method_kv3_enum): Add FDMDA related instructions as specified for ClusterIP
+
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* kv3-opc.c: Remove immediate operands for MAU/FPU.
 
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
