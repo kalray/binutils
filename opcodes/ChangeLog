@@ -1,3 +1,7 @@
+2022-07-07  Marius Gligor <mgligor@kalray.eu>
+
+	* kv3-opc.c: Update for V2 hardware watchpoints/breakpoints
+
 2022-07-07  Luc Michel <lmichel@kalray.eu>
 
 	* kv3-dis.c (int print_insn_kvx): declare some fields as const char * in generated code
