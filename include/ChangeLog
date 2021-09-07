@@ -1,3 +1,8 @@
+2022-07-07  Luc Michel <lmichel@kalray.eu>
+
+	* opcode/kv3.h (struct kvx_operand): declare some fields as const char * in generated code
+	(struct kv3opc_s): Likewise.
+
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* opcode/kv3.h (enum Method_kv3_enum): Add FDMDA related instructions as specified for ClusterIP
