@@ -1,5 +1,9 @@
 2022-07-07  Arnaud Odinot <aodinot@kalray.eu>
 
+	* kv3-opc.c: Update generated files after adding 3 new SFR to configure the Trace PC IP
+
+2022-07-07  Arnaud Odinot <aodinot@kalray.eu>
+
 	* kv3-opc.c: Update generated files after adding a second System Register SFR
 
 2022-07-07  Julien Villette <jvillette@kalray.eu>
