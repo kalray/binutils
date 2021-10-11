@@ -1,3 +1,8 @@
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* config/tc-kvx.c (match_operands): Add support for IALIGN*
+	instructions.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* config/tc-kvx.c (struct kvx_pseudo_relocs): Add signed32 pseudo reloc.
