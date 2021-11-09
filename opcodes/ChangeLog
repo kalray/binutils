@@ -2,6 +2,10 @@
 
 	* kv3-opc.c: Sync with architecture.
 
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* kv3-opc.c: Sync with architecture.
+
 2022-07-07  Arnaud Odinot <aodinot@kalray.eu>
 
 	* kv3-opc.c: Update generated files after refactoring Trace PC IP SFRs configuration
