@@ -1,3 +1,7 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* elfnn-kvx.c (elfNN_kvx_setup_section_lists): Add cast.
+
 2022-07-07  Marius Gligor <mgligor@kalray.eu>
 
 	* elfxx-kvx.c (_bfd_kvx_elf_grok_prstatus): New function which interprets the

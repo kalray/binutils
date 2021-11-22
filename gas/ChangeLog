@@ -1,3 +1,11 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* config/tc-kvx.c (match_operands): Add const.
+	(find_format): Likewise.
+	(print_hash): Likewise.
+	(insn_syntax): Change signature.
+	(md_begin): Change error message.
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* config/tc-kvx.c (signed_overflow): New
