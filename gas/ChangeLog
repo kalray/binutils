@@ -1,5 +1,13 @@
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
+	* config/tc-kvx.c (kvx_parse_name): Change operand parsing (same as arc)
+	(md_assemble): Likewise.
+	(declare_register): Adjust symbol_create parameter order.
+	(md_begin): Likewise.
+	* config/tc-kvx.h: Define (md_parse_name) hook.
+
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
 	* config/tc-kvx.c (match_operands): Add const.
 	(find_format): Likewise.
 	(print_hash): Likewise.
