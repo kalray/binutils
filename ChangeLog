@@ -1,3 +1,7 @@
+2022-07-07 Julien Villette <jvillette@kalray.eu>
+
+	* config.sub: add cos and mbr support
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* config.sub: Add kvx support.
