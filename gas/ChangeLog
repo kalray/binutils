@@ -1,5 +1,10 @@
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
+	* config/tc-kvx.c: (kvx_emit_single_noop): New.
+	* config/tc-kvx.h: Define md_emit_single_noop hook.
+
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
 	* config/tc-kvx.c (kvx_parse_name): Change operand parsing (same as arc)
 	(md_assemble): Likewise.
 	(declare_register): Adjust symbol_create parameter order.
