@@ -361,9 +361,6 @@
 #define EM_TACHYUM	261	/* Tachyum */
 #define EM_56800EF	262	/* NXP 56800EF Digital Signal Controller (DSC) */
 
-/* The number has been attributed officially but we are still waiting for publication */
-#define EM_KVX          256     /* Kalray VLIW core of the MPPA processor family */
-
 /* If it is necessary to assign new unofficial EM_* values, please pick large
    random numbers (0x8523, 0xa7f2, etc.) to minimize the chances of collision
    with official or non-GNU unofficial values.
