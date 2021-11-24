@@ -1,3 +1,7 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* elf/common.h: Remove EM_KVX
+
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* opcode/kv3.h: Sync with architecture.
