@@ -1,5 +1,12 @@
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
+	* config/tc-kvx.c (struct kvx_pseudo_relocs): Add signed32 pseudo reloc.
+	(match_operands): Likewise.
+	(insert_operand): Likewise.
+	(md_begin): Likewise.
+
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
 	* config/tc-kvx.c (md_atof): Support for floating point literals.
 	* po/gas.pot: Regenerate.
 
