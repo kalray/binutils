@@ -1,5 +1,12 @@
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
+	* config/tc-kvx.c (md_apply_fix): Support of BFD_RELOC_8 relocation.
+	(kvx_validate_sub_fix): Likewise.
+	(kvx_cons_fix_new): Likewise.
+	* po/gas.pot: Regenerated.
+
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
 	* config/tc-kvx.c: (kvx_emit_single_noop): New.
 	* config/tc-kvx.h: Define md_emit_single_noop hook.
 

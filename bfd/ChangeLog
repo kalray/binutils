@@ -1,5 +1,14 @@
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
+	* bfd-in2.h: Regenerated.
+	* elfnn-kvx.c: Support of BFD_RELOC_8 relocation.
+	* elfxx-kv3-relocs.h: Likewise.
+	* libbfd.h: Likewise.
+	* po/bfd.pot: Regenerated.
+	* reloc.c: Support of BFD_RELOC_8 relocation.
+
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
 	* elfnn-kvx.c (elfNN_kvx_setup_section_lists): Add cast.
 
 2022-07-07  Marius Gligor <mgligor@kalray.eu>

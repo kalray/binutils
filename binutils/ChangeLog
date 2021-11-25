@@ -1,3 +1,7 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* po/binutils.pot: Regenerated.
+
 2022-07-07  Marc Poulhiès <marc.poulhies@kalray.eu>
 
 	* testsuite/binutils-all/objcopy.exp (copy_setup): Make kvx
