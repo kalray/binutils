@@ -1,3 +1,7 @@
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* opcode/kv3.h: Sync with architecture.
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* elf/kv3.h (START_RELOC_NUMBERS): Support of BFD_RELOC_8 relocation.
