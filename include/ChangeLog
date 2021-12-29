@@ -1,5 +1,10 @@
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* opcode/kv3.h (enum Method_kv3_enum): Sync with architecture.
+	(static const char *bundling_names): Likewise
+
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* opcode/kv3.h: Sync with architecture (COMPWD and COMPUDW).
 
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
