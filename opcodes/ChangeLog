@@ -1,3 +1,7 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* kv3-opc.c: Sync after rebase.
+
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* kv3-dis.c (int print_insn_kvx): Add support for IALIGN*
