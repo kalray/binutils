@@ -1,3 +1,8 @@
+2022-07-07  Julien Villette <jvillette@kalray.eu>
+
+	* configure: Desactivate sim for kvx.
+	* configure.ac: Likewise.
+
 2022-07-07 Julien Villette <jvillette@kalray.eu>
 
 	* config.sub: add cos and mbr support
