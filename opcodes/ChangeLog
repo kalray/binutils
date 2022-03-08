@@ -2,6 +2,10 @@
 
 	* kv3-opc.c: Sync with architecture.
 
+2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* kv3-opc.c: Sync with architecture.
+
 2022-07-08  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* kv3-opc.c: Sync with architecture.
