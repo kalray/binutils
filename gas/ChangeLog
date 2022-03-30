@@ -1,3 +1,7 @@
+2022-07-07  Diogo Sampaio <dsampaio@kalrayinc.com>
+
+	* config/tc-kvx.c (kv3_print_insn): Fix debug string LITE for TINY.
+
 2022-07-07  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* config/tc-kvx.c (match_operands): Add support for IALIGN*
