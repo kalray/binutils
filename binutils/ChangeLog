@@ -1,3 +1,8 @@
+2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
+
+	* testsuite/binutils-all/dw2-decodedline-2.S: New test.
+	* testsuite/binutils-all/objdump.exp: Add dw2-decodedline-2.S
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* po/binutils.pot: Regenerated.
