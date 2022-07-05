@@ -626,7 +626,7 @@ int print_insn_kvx (bfd_vma memaddr, struct disassemble_info *info){
 
                   case Immediate_kv3_brknumber:
                   case Immediate_kv3_sysnumber:
-                  case Immediate_kv3_signed6:
+                  case Immediate_kv3_wrapped8:
                   case Immediate_kv3_signed10:
                   case Immediate_kv3_signed16:
                   case Immediate_kv3_signed27:

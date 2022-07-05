@@ -1,3 +1,9 @@
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* config/tc-kvx.c (match_operands): Replace unused signed6 by
+	  wrapped8 immediate.
+	(insn_syntax): Likewise.
+
 2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
 
 	* config/tc-kvx.c (kvx_end): Emit a warning if EOF happens
