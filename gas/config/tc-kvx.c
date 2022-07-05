@@ -1263,7 +1263,7 @@ match_operands(const kv3opc_t * op, const expressionS * tok,
 
             case Immediate_kv3_pcrel17:
             case Immediate_kv3_pcrel27:
-            case Immediate_kv3_signed6:
+            case Immediate_kv3_wrapped8:
             case Immediate_kv3_signed10:
             case Immediate_kv3_signed16:
             case Immediate_kv3_signed27:
@@ -2026,7 +2026,7 @@ insn_syntax(kv3opc_t *op, char *buf, int buf_size)
       break;
     case Immediate_kv3_pcrel17:
     case Immediate_kv3_pcrel27:
-    case Immediate_kv3_signed6:
+    case Immediate_kv3_wrapped8:
     case Immediate_kv3_signed10:
     case Immediate_kv3_signed16:
     case Immediate_kv3_signed27:
