@@ -1,3 +1,8 @@
+2023-02-15  Vincent Ray <vray@kalray.eu>
+
+	* opcode/kv3.h (enum Modifier_kv3_accesses_enum): sync with
+	architecture [FENCE.WA].
+
 2022-07-07  Julien Villette <jvillette@kalray.eu>
 
 	* opcode/kv3.h (static const char *bundling_names): CV2 ALU scheduling

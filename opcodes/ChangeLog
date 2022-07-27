@@ -1,3 +1,7 @@
+2023-02-15  Vincent Ray <vray@kalray.eu>
+
+	* kv3-opc.c: sync with architecture [FENCE.WA].
+
 2023-02-15  Laurent Faniel  <lfaniel@kalray.eu>
 
 	* kv3-opc.c: SFRs, FRCC, and SRHPC are no longer wfx-able.
