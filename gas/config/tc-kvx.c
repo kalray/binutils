@@ -964,7 +964,7 @@ static int
 tokenize_arguments(char *str, expressionS tok[], char *tok_begins[], int ntok) {
     expressionS *end_tok = tok + ntok;
     char *old_input_line_pointer;
-    int saw_comma = 0, saw_arg = 0;
+    int saw_delimiter = 0, saw_arg = 0, saw_comma = 0;
     int tokcnt = 0;
     int debug = 0;
     
@@ -988,19 +988,26 @@ tokenize_arguments(char *str, expressionS tok[], char *tok_begins[], int ntok) {
             case ',':
             case '=':
             case '?':
+	        if(*input_line_pointer == ',') {
+		  saw_comma = 1;
+		}
                 ++input_line_pointer;
-                if (saw_comma || !saw_arg)
+                if (saw_delimiter || !saw_arg)
                     goto err;
-                saw_comma = 1;
+                saw_delimiter = 1;
                 break;
             case '[': {
-              /* clarkes: for ldwl/stwl, we allow comma separator
-               * before the [, so I have removed this test.
-               * if (saw_comma)
-               * goto err; */
+	      if(kvx_core_info->elf_cores[subcore_id] == ELF_KVX_CORE_KV3_1) {
+		/* acswap instructions do not support ', [' in syntaxes.
+		 * This is not the case for Coolidge V2 with implicit 0 offset
+		 */
+		if (saw_comma) {
+                  goto err;
+		}
+	      }
               expression(tok);
               if (tok->X_op == O_register) {
-                saw_comma = 0;
+                saw_delimiter = 0;
                 saw_arg = 1;
                 ++tok;
                 ++tokcnt;
@@ -1013,7 +1020,7 @@ tokenize_arguments(char *str, expressionS tok[], char *tok_begins[], int ntok) {
               }
             }
             default: {
-              if (saw_arg && !saw_comma) {
+              if (saw_arg && !saw_delimiter) {
                 goto err;
               }
               expression(tok);
@@ -1021,6 +1028,7 @@ tokenize_arguments(char *str, expressionS tok[], char *tok_begins[], int ntok) {
                 goto err;
               }
               
+              saw_delimiter = 0;
               saw_comma = 0;
               saw_arg = 1;
               ++tok;
@@ -1031,7 +1039,7 @@ tokenize_arguments(char *str, expressionS tok[], char *tok_begins[], int ntok) {
     }
 
     fini:
-    if (saw_comma) {
+    if (saw_delimiter) {
       goto err;
     }
     if (tok_begins) {
