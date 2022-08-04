@@ -1,3 +1,8 @@
+2023-02-15  Julien Villette <jvillette@kalray.eu>
+
+	* config/tc-kvx.c (tokenize_arguments): Fix ambigious syntax
+	  between Coolidge V1 and V2 on acswap instructions.
+
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* config/tc-kvx.c (match_operands): Replace unused signed6 by
