@@ -1,3 +1,7 @@
+2023-02-15  Julien Villette <jvillette@kalray.eu>
+
+	* kv3-opc.c: New Coolidge V2 instructions
+
 2023-02-15  Vincent Ray <vray@kalray.eu>
 
 	* kv3-opc.c: sync with architecture [FENCE.WA].

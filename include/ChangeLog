@@ -1,3 +1,8 @@
+2023-02-15  Julien Villette <jvillette@kalray.eu>
+
+	* opcode/kv3.h (enum Method_kv3_enum): New Coolidge V2 instructions
+	(static const char *bundling_names): Likewise
+
 2023-02-15  Vincent Ray <vray@kalray.eu>
 
 	* opcode/kv3.h (enum Modifier_kv3_accesses_enum): sync with
