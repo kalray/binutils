@@ -1,3 +1,8 @@
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* opcode/kv3.h: Sync with "Add Absolute Difference Unsigned (ABDU*)
+	instructions.
+
 2023-02-15  Julien Villette <jvillette@kalray.eu>
 
 	* opcode/kv3.h (enum Method_kv3_enum): New Coolidge V2 instructions
