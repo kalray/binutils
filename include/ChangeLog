@@ -1,5 +1,9 @@
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* opcode/kv3.h: Sync [Add magic immediates to ABDU*...].
+
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* opcode/kv3.h: Sync [Remove silent and rounding modifiers from
 	  XFMINHX and XFMAXHX].
 
