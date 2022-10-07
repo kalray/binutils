@@ -1,3 +1,9 @@
+2023-02-15  Julien Villette <jvillette@kalray.eu>
+
+	* kv3-opc.c: Removing gnu asm aliases: Get complete complex
+	  instruction set including add/sbf based on floating point
+	  pair/quad instructions.
+
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* kv3-opc.c: Sync [Add magic immediates to kv3-2 AVGWP, AVGRWP, AVGUWP, AVGRUWP.]
