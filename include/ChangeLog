@@ -1,3 +1,7 @@
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* opcode/kv3.h: Sync [Implement integer SIMD reduce instructions.]
+
 2023-02-15  Vincent Ray <vray@kalray.eu>
 
 	* opcode/kv3.h: architecture auto-generated products update :
