@@ -1,3 +1,15 @@
+2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
+
+	* config/tc-kvx.c (struct option): Support for detailed
+	  diagnostics.
+	(int md_parse_option): Likewise.
+	(match_operands): Likewise.
+	(find_format): Likewise.
+	(assemble_tokens): Likewise.
+	(md_assemble): Likewise.
+	* testsuite/gas/kvx/kvx.exp: Keep the short form of diagnostics
+	  during the testsuite.
+
 2023-02-15  Julien Villette <jvillette@kalray.eu>
 
 	* config/tc-kvx.c (tokenize_arguments): Fix ambigious syntax
