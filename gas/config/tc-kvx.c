@@ -62,6 +62,8 @@ static int generate_illegal_code = 0;
 static int dump_table = 0;
 /* Dump instructions: for documentation */
 static int dump_insn = 0;
+/* Enable multiline diagnostics */
+static int diagnostics = 1;
 /* arch string passed as argument with -march option */
 char *march= NULL;
 
@@ -718,6 +720,8 @@ const char *md_shortopts = "hV";	/* catted to std short options */
 #define OPTION_32 (OPTION_MD_BASE + 13)
 #define OPTION_DUMPINSN (OPTION_MD_BASE + 15)
 #define OPTION_ALL_SFR (OPTION_MD_BASE + 16)
+#define OPTION_DIAGNOSTICS (OPTION_MD_BASE + 17)
+#define OPTION_NO_DIAGNOSTICS (OPTION_MD_BASE + 18)
 
 struct option md_longopts[] =
 {
@@ -732,6 +736,8 @@ struct option md_longopts[] =
      {"m32", no_argument,    NULL, OPTION_32},
      {"dump-insn", no_argument,    NULL, OPTION_DUMPINSN},
      {"all-sfr", no_argument, NULL, OPTION_ALL_SFR},
+     {"diagnostics", no_argument, NULL, OPTION_DIAGNOSTICS},
+     {"no-diagnostics", no_argument, NULL, OPTION_NO_DIAGNOSTICS},
      {NULL, no_argument, NULL, 0}
 };
 
@@ -826,6 +832,12 @@ int md_parse_option(int c, const char *arg ATTRIBUTE_UNUSED) {
     break;
   case OPTION_ALL_SFR:
     allow_all_sfr = 1;
+    break;
+  case OPTION_DIAGNOSTICS:
+    diagnostics = 1;
+    break;
+  case OPTION_NO_DIAGNOSTICS:
+    diagnostics = 0;
     break;
   case OPTION_PIC:
   /* fallthrough, for now the same on KVX */
@@ -1110,7 +1122,7 @@ has_relocation_of_size(const kvxbfield *opnd) {
 
 static match_operands_code
 match_operands(const kv3opc_t * op, const expressionS * tok,
-        int ntok)
+        int ntok, const char * s)
 {
     int ii;
     int jj;
@@ -1321,7 +1333,11 @@ match_operands(const kv3opc_t * op, const expressionS * tok,
                     }
 
                     if(opdef->bias != 0) {
-                      as_bad("[match_operands] : cannot use bias for encoding operand type %s \n", operand_type_name);
+		      if (diagnostics) {
+			as_bad("[match_operands] : cannot use bias for encoding operand type %s.\n\t%s", operand_type_name, s);
+		      } else {
+			as_bad("[match_operands] : cannot use bias for encoding operand type %s.", operand_type_name);
+		      }
                     }
 
                     match_signed = (((signed_value >> opdef->shift) >= min) && ((signed_value >> opdef->shift) <= max));
@@ -1337,7 +1353,11 @@ match_operands(const kv3opc_t * op, const expressionS * tok,
 
                 return MATCH_NOT_FOUND;
             default:
-                as_bad("[match_operands] : couldn't find operand type %s \n", operand_type_name);
+		if (diagnostics) {
+		  as_bad("[match_operands] : couldn't find operand type %s\n\t%s", operand_type_name, s);
+		} else {
+		  as_bad("[match_operands] : couldn't find operand type %s.", operand_type_name);
+		}
                 return MATCH_NOT_FOUND;
         }
     }
@@ -1372,13 +1392,13 @@ match_operands(const kv3opc_t * op, const expressionS * tok,
 static const kv3opc_t *
 find_format(const kv3opc_t * opcode,
         const expressionS * tok,
-        int ntok)
+        int ntok, const char *s)
 {
     const char *name = opcode->as_op;
     const kv3opc_t *t = opcode;
 
     while (STREQ(name, t->as_op)){
-        if (match_operands(t, tok, ntok) == MATCH_FOUND){
+        if (match_operands(t, tok, ntok, s) == MATCH_FOUND){
             return t;
         }
         t++;
@@ -1925,13 +1945,14 @@ static int find_reservation(const kvxinsn_t *insn)
 static void
 assemble_tokens(const char *opname,
                 const expressionS * tok,
-                int ntok) {
+                int ntok,
+                const char * s) {
   const kv3opc_t *opcode;
   kvxinsn_t *insn;
   
   /* make sure there is room in instruction buffer */
   if (insncnt >= KVXMAXBUNDLEWORDS) { /* Was KVXMAXBUNDLEISSUE, changed because of NOPs */
-    as_fatal("too many instructions in bundle ");
+    as_fatal("too many instructions in bundle.");
   }
 
   insn = insbuf + insncnt;
@@ -1939,8 +1960,13 @@ assemble_tokens(const char *opname,
   /* find the instruction in the opcode table */
   opcode = (kv3opc_t *) str_hash_find(kvx_opcode_hash, opname);
   if (opcode) {
-    if (!(opcode = find_format(opcode, tok, ntok))) {
-      as_bad("[assemble_tokens] : couldn't find format %s \n", opname);
+    if (!(opcode = find_format(opcode, tok, ntok, s))) {
+      if (diagnostics) {
+	as_bad("[assemble_tokens] : couldn't find format for operand `%s':\n\t%s",
+	    opname, s);
+      } else {
+	as_bad("[assemble_tokens] : couldn't find format for operand `%s'.", opname);
+      }
     }
     else {
       assemble_insn(opcode, tok, ntok, insn);
@@ -1948,7 +1974,11 @@ assemble_tokens(const char *opname,
     }
   }
   else {
-    as_bad("[assemble_tokens] : couldn't find op %s\n", opname);
+    if (diagnostics) {
+      as_bad("[assemble_tokens] : couldn't find op `%s'\n\t%s", opname, s);
+    } else {
+      as_bad("[assemble_tokens] : couldn't find op `%s'.", opname);
+    }
   }
 }
 
@@ -2446,7 +2476,7 @@ md_assemble(char *s)
 
     inside_bundle = 1;
     /* build an instruction record */
-    assemble_tokens(opname, tok, ntok);
+    assemble_tokens(opname, tok, ntok, s);
     assembling_insn = false;
 }
 

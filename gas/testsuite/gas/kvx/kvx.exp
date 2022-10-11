@@ -17,5 +17,6 @@
 # KVX base instruction set
 
 if [istarget kvx-*-*] then {
+     set ASFLAGS "-no-diagnostics"
      run_dump_tests [lsort [glob -nocomplain $srcdir/$subdir/*.d]]
 }
