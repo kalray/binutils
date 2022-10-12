@@ -1,5 +1,10 @@
 2023-02-15  Julien Villette <jvillette@kalray.eu>
 
+	* opcode/kv3.h: Adding aliases on Coolidge V1 to support ISA
+	  like Coolidge V2.
+
+2023-02-15  Julien Villette <jvillette@kalray.eu>
+
 	* opcode/kv3.h: Removing gnu asm aliases: Get complete complex
 	  instruction set including add/sbf based on floating point
 	  pair/quad instructions.
