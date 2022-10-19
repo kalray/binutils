@@ -1,3 +1,7 @@
+2023-02-15  Arnaud Odinot <aodinot@kalray.eu>
+
+	* kv3-opc.c: Remove XSO column from cv2
+
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* kv3-opc.c: Sync [Add magic immediates to ABDU*...].
