@@ -1,3 +1,8 @@
+2023-02-15  Vincent Ray <vray@kalray.eu>
+
+	* kv3-opc.c: architecture auto-generated products update : Add
+	  quad integer multiply-add instructions.
+
 2023-02-15  Arnaud Odinot <aodinot@kalray.eu>
 
 	* kv3-opc.c: Remove XSO column from cv2
