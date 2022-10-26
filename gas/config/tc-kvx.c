@@ -193,35 +193,11 @@ static htab_t kvx_reg_hash;
 /*  others are KVX specific                          */
 /****************************************************/
 
-enum unwrecord
-{
-    UNW_HEADER,
-    UNW_PROLOGUE,
-    UNW_BODY,
-    UNW_MEM_STACK_F,
-    UNW_MEM_STACK_V,
-    UNW_PSP_GR,
-    UNW_PSP_SPREL,
-    UNW_RP_WHEN,
-    UNW_RP_GR,
-    UNW_RP_PSPREL,
-    UNW_RP_SPREL,
-    UNW_GR_MEM_S,
-    UNW_GR_MEM_L,
-    UNW_SPILL_BASE,
-    UNW_SPILL_MASK,
-    UNW_EPILOGUE,
-    UNW_LABEL_STATE,
-    UNW_COPY_STATE,
-    UNW_SPILL_PSREL,
-    UNW_SPILL_SPREL
-};
-static int get_regnum_by_name(char *name);
-static void kvx_check_resources(int);
-static void kvx_proc(int start);
-static void kvx_endp(int start);
-static void kvx_type(int start);
-static void kvx_unwind(int r);
+static int get_regnum_by_name (char *name);
+static void kvx_check_resources (int);
+static void kvx_proc (int start);
+static void kvx_endp (int start);
+static void kvx_type (int start);
 
 const pseudo_typeS md_pseudo_table[] =
 {
@@ -235,48 +211,17 @@ const pseudo_typeS md_pseudo_table[] =
         power of two as in p2align)*/
      {"align", s_align_bytes, 0},
 
-     /* KVX specific, should be deprecated */
-     {"data1", cons, 1},
-     {"data2", cons, 2},
-     {"data4", cons, 4},
-     {"real4", cons, 4},
-     {"data8", cons, 8},	/* uncertain syntax */
-     {"real8", cons, 8},	/* uncertain syntax */
-
      {"checkresources", kvx_check_resources, 1},
      {"nocheckresources", kvx_check_resources, 0},
 
-     /* unwind descriptor directives */
+    {"proc", kvx_proc, 1},
+    {"endp", kvx_endp, 0},
 
-     {"header", kvx_unwind, (int) UNW_HEADER},
-     {"prologue", kvx_unwind, (int) UNW_PROLOGUE},
-     {"body", kvx_unwind, (int) UNW_BODY},
-     {"mem_stack_f", kvx_unwind, (int) UNW_MEM_STACK_F},
-     {"mem_stack_v", kvx_unwind, (int) UNW_MEM_STACK_V},
-     {"psp_gr", kvx_unwind, (int) UNW_PSP_GR},
-     {"psp_sprel", kvx_unwind, (int) UNW_PSP_SPREL},
-     {"rp_when", kvx_unwind, (int) UNW_RP_WHEN},
-     {"rp_gr", kvx_unwind, (int) UNW_RP_GR},
-     {"rp_psrel", kvx_unwind, (int) UNW_RP_PSPREL},
-     {"rp_sprel", kvx_unwind, (int) UNW_RP_SPREL},
-     {"gr_mem_s", kvx_unwind, (int) UNW_GR_MEM_S},
-     {"gr_mem_l", kvx_unwind, (int) UNW_GR_MEM_L},
-     {"spill_base", kvx_unwind, (int) UNW_SPILL_BASE},
-     {"spill_mask", kvx_unwind, (int) UNW_SPILL_MASK},
-     {"epilogue", kvx_unwind, (int) UNW_EPILOGUE},
-     {"label_state", kvx_unwind, (int) UNW_LABEL_STATE},
-     {"copy_state", kvx_unwind, UNW_COPY_STATE},
-     {"spill_psrel", kvx_unwind, (int) UNW_SPILL_PSREL},
-     {"spill_sprel", kvx_unwind, (int) UNW_SPILL_SPREL},
-
-     {"endp", kvx_endp, 0},
-
-     {"proc", kvx_proc, 1},
-     {"type", kvx_type, 0},
+    {"type", kvx_type, 0},
 
 #ifdef OBJ_ELF
-     { "file", (void (*) (int)) dwarf2_directive_file, 0},
-     { "loc", dwarf2_directive_loc, 0},
+    {"file", dwarf2_directive_file, 0},
+    {"loc", dwarf2_directive_loc, 0},
 #endif
      {NULL, 0, 0}
 };
@@ -3415,127 +3360,131 @@ kvx_type(int start ATTRIBUTE_UNUSED)
 static int proc_endp_status = 0;
 
 static void
-kvx_endp(int start ATTRIBUTE_UNUSED)
+kvx_endp (int start ATTRIBUTE_UNUSED)
 {
-    char c;
-    char *name;
+  char c;
+  char *name;
 
-    if(inside_bundle){
-      as_warn(".endp directive inside a bundle.");
-    }
-    /* function name is optionnal and is ignored */
-    /* there may be several names separated by commas... */
-    while (1)
+  if (inside_bundle)
     {
-        SKIP_WHITESPACE();
-        c = get_symbol_name(&name);
-        (void)restore_line_pointer(c);
-        /* c = get_symbol_end(); */
-        /* *input_line_pointer = c; */
-        SKIP_WHITESPACE();
-        if (*input_line_pointer != ',')
-            break;
-        ++input_line_pointer;
+      as_warn (".endp directive inside a bundle.");
     }
-    demand_empty_rest_of_line();
-
-    if (!proc_endp_status)
+  /* function name is optionnal and is ignored */
+  /* there may be several names separated by commas... */
+  while (1)
     {
-        as_warn(".endp directive doesn't follow .proc -- ignoring ");
-        return;
+      SKIP_WHITESPACE ();
+      c = get_symbol_name (&name);
+      (void) restore_line_pointer (c);
+      /* c = get_symbol_end(); */
+      /* *input_line_pointer = c; */
+      SKIP_WHITESPACE ();
+      if (*input_line_pointer != ',')
+	break;
+      ++input_line_pointer;
+    }
+  demand_empty_rest_of_line ();
+
+  if (!proc_endp_status)
+    {
+      as_warn (".endp directive doesn't follow .proc -- ignoring ");
+      return;
     }
 
-    proc_endp_status = 0;
+  proc_endp_status = 0;
 
-    /* TB begin : add BSF_FUNCTION attribute to last_proc_sym symbol */
-    if (size_type_function) {
-        if (!last_proc_sym) {
-            as_bad("Cannot set function attributes (bad symbol)");
-            return;
-        }
+  /* TB begin : add BSF_FUNCTION attribute to last_proc_sym symbol */
+  if (size_type_function)
+    {
+      if (!last_proc_sym)
+	{
+	  as_bad ("Cannot set function attributes (bad symbol)");
+	  return;
+	}
 
-        /*    last_proc_sym->symbol.flags |= BSF_FUNCTION; */
-        symbol_get_bfdsym(last_proc_sym)->flags |= BSF_FUNCTION;
-        /* Add .size funcname,.-funcname in order to add size
-         * attribute to the current function */
-        {
-            const int newdirective_sz = strlen(S_GET_NAME(last_proc_sym)) + strlen(MINUSEXPR) + 1;
-            char *newdirective = malloc(newdirective_sz);
-            char *savep = input_line_pointer;
-            expressionS exp;
+      /*    last_proc_sym->symbol.flags |= BSF_FUNCTION; */
+      symbol_get_bfdsym (last_proc_sym)->flags |= BSF_FUNCTION;
+      /* Add .size funcname,.-funcname in order to add size
+       * attribute to the current function */
+      {
+	const int newdirective_sz =
+	  strlen (S_GET_NAME (last_proc_sym)) + strlen (MINUSEXPR) + 1;
+	char *newdirective = malloc (newdirective_sz);
+	char *savep = input_line_pointer;
+	expressionS exp;
 
-            memset(newdirective, 0, newdirective_sz);
+	memset (newdirective, 0, newdirective_sz);
 
-            /* BUILD :".-funcname" expression */
-            strcat(newdirective, MINUSEXPR);
-            strcat(newdirective, S_GET_NAME(last_proc_sym));
-            input_line_pointer = newdirective;
-            expression(&exp);
+	/* BUILD :".-funcname" expression */
+	strcat (newdirective, MINUSEXPR);
+	strcat (newdirective, S_GET_NAME (last_proc_sym));
+	input_line_pointer = newdirective;
+	expression (&exp);
 
-            if (exp.X_op == O_constant)
-            {
-                S_SET_SIZE(last_proc_sym, exp.X_add_number);
-                if (symbol_get_obj(last_proc_sym)->size)
-                {
-                    xfree(symbol_get_obj(last_proc_sym)->size);
-                    symbol_get_obj(last_proc_sym)->size = NULL;
-                }
-            }
-            else
-            {
-                symbol_get_obj(last_proc_sym)->size =
-                        (expressionS *) xmalloc(sizeof (expressionS));
-                *symbol_get_obj(last_proc_sym)->size = exp;
-            }
+	if (exp.X_op == O_constant)
+	  {
+	    S_SET_SIZE (last_proc_sym, exp.X_add_number);
+	    if (symbol_get_obj (last_proc_sym)->size)
+	      {
+		xfree (symbol_get_obj (last_proc_sym)->size);
+		symbol_get_obj (last_proc_sym)->size = NULL;
+	      }
+	  }
+	else
+	  {
+	    symbol_get_obj (last_proc_sym)->size =
+	      (expressionS *) xmalloc (sizeof (expressionS));
+	    *symbol_get_obj (last_proc_sym)->size = exp;
+	  }
 
-            /* just restore the real input pointer */
-            input_line_pointer = savep;
-            free (newdirective);
-        }
+	/* just restore the real input pointer */
+	input_line_pointer = savep;
+	free (newdirective);
+      }
     }
-    /* TB end */
+  /* TB end */
 
-    last_proc_sym = NULL;
+  last_proc_sym = NULL;
 }
 
 static void
-kvx_proc(int start ATTRIBUTE_UNUSED)
+kvx_proc (int start ATTRIBUTE_UNUSED)
 {
-    char c;
-    char *name;
-    /* there may be several names separated by commas... */
-    while (1)
+  char c;
+  char *name;
+  /* there may be several names separated by commas... */
+  while (1)
     {
-        SKIP_WHITESPACE();
-        c = get_symbol_name(&name);
-        (void)restore_line_pointer(c);
+      SKIP_WHITESPACE ();
+      c = get_symbol_name (&name);
+      (void) restore_line_pointer (c);
 
-        /* c = get_symbol_end(); */
-        /* *input_line_pointer = c; */
-        SKIP_WHITESPACE();
-        if (*input_line_pointer != ',')
-            break;
-        ++input_line_pointer;
+      /* c = get_symbol_end(); */
+      /* *input_line_pointer = c; */
+      SKIP_WHITESPACE ();
+      if (*input_line_pointer != ',')
+	break;
+      ++input_line_pointer;
     }
-    demand_empty_rest_of_line();
+  demand_empty_rest_of_line ();
 
-    if (proc_endp_status)
+  if (proc_endp_status)
     {
-        as_warn(".proc follows .proc -- ignoring");
-        return;
+      as_warn (".proc follows .proc -- ignoring");
+      return;
     }
 
-    proc_endp_status = 1;
+  proc_endp_status = 1;
 
-    /* this code emit a global symbol to mark the end of each function    */
-    /* the symbol emitted has a name formed by the original function name */
-    /* concatenated with $endproc so if _foo is a function name the symbol */
-    /* marking the end of it is _foo$endproc                              */
-    /* It is also required for generation of .size directive in kvx_endp() */
+  /* this code emit a global symbol to mark the end of each function    */
+  /* the symbol emitted has a name formed by the original function name */
+  /* concatenated with $endproc so if _foo is a function name the symbol */
+  /* marking the end of it is _foo$endproc                              */
+  /* It is also required for generation of .size directive in kvx_endp() */
 
-    if (size_type_function)
+  if (size_type_function)
     {
-        update_last_proc_sym = 1;
+      update_last_proc_sym = 1;
     }
 }
 
@@ -3640,38 +3589,6 @@ kvx_force_reloc_sub_same(fixS * fixP, segT sec)
     return 1;
 }
 
-/*
- *    Support for unwind descriptors
- */
-
-#define KVXMAXUNWINDARGS 4
-
-static int
-kvx_get_constant(const expressionS arg)
-{
-    if (arg.X_op && !arg.X_add_symbol)
-    {
-        return arg.X_add_number;
-    }
-    else
-    {
-        as_warn("expected constant argument");
-        return 0;
-    }
-}
-
-static void
-kvx_emit_uleb128(int i)
-{
-    do
-    {
-        int tmp = i & 127;
-        i = (i & 0x1fffffff) >> 7;
-        FRAG_APPEND_1_CHAR((i != 0) ? (tmp + 1) : tmp);
-    }
-    while (i != 0);
-}
-
 /* Implement HANDLE_ALIGN.  */
 
 static void
@@ -3741,190 +3658,12 @@ kvx_handle_align (fragS *fragP)
     }
 }
 
-static void
-kvx_unwind(int r)
-{
-    int ntok;
-    expressionS tok[KVXMAXUNWINDARGS];
-    char *f;
-
-    int tmp;
-
-    if (strcmp(segment_name(now_seg), ".KVX.unwind_info") != 0)
-    {
-        as_warn("unwind directive not in .KVX.unwind_info segment\n");
-        return;
-    }
-
-    ntok = tokenize_arguments(input_line_pointer, tok, NULL, KVXMAXUNWINDARGS);
-    while (input_line_pointer && (input_line_pointer[0] != '\n'))
-        input_line_pointer++;
-
-#define KVXGETCONST(i) (((i)<ntok) ? \
-                        kvx_get_constant(tok[(i)]) :  \
-                        (as_warn("too few operands"), 0))
-
-    switch ((enum unwrecord) r)
-    {
-        case UNW_HEADER:		/* postpone fixup work for now */
-            tmp = (KVXGETCONST(0) << 8);
-            tmp += (KVXGETCONST(1) & 1);
-            tmp += ((KVXGETCONST(2) & 1) << 1);
-            emit_expr(tok + 3, 2);
-            f = frag_more(2);
-            md_number_to_chars(f, tmp, 2);
-            break;
-
-        case UNW_PROLOGUE:
-            tmp = KVXGETCONST(0);
-            if (tmp < 32)
-            {
-                FRAG_APPEND_1_CHAR(tmp);
-            }
-            else
-            {
-                FRAG_APPEND_1_CHAR(0x40);
-                kvx_emit_uleb128(tmp);
-            }
-            break;
-
-        case UNW_BODY:
-            tmp = KVXGETCONST(0);
-            if (tmp < 32)
-            {
-                FRAG_APPEND_1_CHAR(tmp + 0x20);
-            }
-            else
-            {
-                FRAG_APPEND_1_CHAR(0x41);
-                kvx_emit_uleb128(tmp);
-            }
-            break;
-
-        case UNW_MEM_STACK_F:
-            FRAG_APPEND_1_CHAR(0xe0);
-            kvx_emit_uleb128(KVXGETCONST(0));
-            kvx_emit_uleb128(KVXGETCONST(1));
-            break;
-
-        case UNW_MEM_STACK_V:
-            FRAG_APPEND_1_CHAR(0xe1);
-            kvx_emit_uleb128(KVXGETCONST(0));
-            break;
-
-        case UNW_PSP_SPREL:
-            FRAG_APPEND_1_CHAR(0xe2);
-            kvx_emit_uleb128(KVXGETCONST(0));
-            break;
-
-        case UNW_RP_WHEN:
-            FRAG_APPEND_1_CHAR(0xe3);
-            kvx_emit_uleb128(KVXGETCONST(0));
-            break;
-
-        case UNW_RP_PSPREL:
-            FRAG_APPEND_1_CHAR(0xe4);
-            kvx_emit_uleb128(KVXGETCONST(0));
-            break;
-
-        case UNW_RP_SPREL:
-            FRAG_APPEND_1_CHAR(0xe5);
-            kvx_emit_uleb128(KVXGETCONST(0));
-            break;
-
-        case UNW_SPILL_BASE:
-            FRAG_APPEND_1_CHAR(0xe6);
-            kvx_emit_uleb128(KVXGETCONST(0));
-            break;
-
-        case UNW_PSP_GR:
-            tmp = KVXGETCONST(0);
-            FRAG_APPEND_1_CHAR(0xb0);
-            FRAG_APPEND_1_CHAR(tmp & 0x3f);
-            break;
-
-        case UNW_RP_GR:
-            tmp = KVXGETCONST(0);
-            FRAG_APPEND_1_CHAR(0xb1);
-            FRAG_APPEND_1_CHAR(tmp & 0x3f);
-            break;
-
-        case UNW_GR_MEM_S:
-            tmp = KVXGETCONST(0);
-            FRAG_APPEND_1_CHAR(0xc0 + (tmp & 0x0f));
-            break;
-
-        case UNW_GR_MEM_L:
-            tmp = KVXGETCONST(0);
-            FRAG_APPEND_1_CHAR(0x90 + (tmp & 7));
-            kvx_emit_uleb128(KVXGETCONST(1));
-            break;
-
-        case UNW_SPILL_MASK:
-            as_warn("unwind spill mask not interpreted yet \n");
-            break;
-
-        case UNW_EPILOGUE:
-            tmp = KVXGETCONST(1);
-            if (tmp < 32)
-            {
-                FRAG_APPEND_1_CHAR(0xc0 + tmp);
-                kvx_emit_uleb128(KVXGETCONST(0));
-            }
-            else
-            {
-                FRAG_APPEND_1_CHAR(0xe0);
-                kvx_emit_uleb128(KVXGETCONST(0));
-                kvx_emit_uleb128(tmp);
-            }
-            break;
-
-        case UNW_LABEL_STATE:
-            tmp = KVXGETCONST(0);
-            if (tmp > 32)
-            {
-                FRAG_APPEND_1_CHAR(0xe1);
-                kvx_emit_uleb128(tmp);
-            }
-            else
-            {
-                FRAG_APPEND_1_CHAR(0x80 + tmp);
-            }
-            break;
-
-        case UNW_COPY_STATE:
-            tmp = KVXGETCONST(0);
-            if (tmp > 32)
-            {
-                FRAG_APPEND_1_CHAR(0xe9);
-                kvx_emit_uleb128(tmp);
-            }
-            else
-            {
-                FRAG_APPEND_1_CHAR(0xa0 + tmp);
-            }
-            break;
-
-        case UNW_SPILL_PSREL:
-            as_warn("unw_spill_psrel unimplemented\n");
-            break;
-        case UNW_SPILL_SPREL:
-            as_warn("unw_spill_sprel unimplemented\n");
-            break;
-        default:
-            as_warn("unrecognized unwind descriptor\n");
-    }
-}
-
-static void
-print_operand(expressionS * e, FILE * out) ATTRIBUTE_UNUSED;
-
 /*
  * This is just used for debugging
  */
-
+ATTRIBUTE_UNUSED
 static void
-print_operand(expressionS * e, FILE * out)
+print_operand (expressionS * e, FILE * out)
 {
     if (e)
     {
