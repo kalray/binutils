@@ -3652,7 +3652,6 @@ kvx_handle_align (fragS * fragP)
       break;
     }
 }
-
 /*
  * This is just used for debugging
  */
