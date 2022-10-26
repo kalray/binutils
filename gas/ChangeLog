@@ -1,5 +1,10 @@
 2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
 
+	* config/tc-kvx.c: Reindent the whole file with `indent' and add
+	  some comments.
+
+2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
+
 	* config/tc-kvx.c (enum unwrecord): Remove deprecated pseudo
 	  functions: data1, data2, data4, real4, data8, real8.  Remove
 	  deprecated unwind pseudo-functions.
