@@ -1,5 +1,16 @@
 2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
 
+	* config/tc-kvx.c (enum unwrecord): Remove deprecated pseudo
+	  functions: data1, data2, data4, real4, data8, real8.  Remove
+	  deprecated unwind pseudo-functions.
+	(kvx_endp): Likewise.
+	(kvx_proc): Likewise.
+	(kvx_get_constant): Likewise.
+	(kvx_emit_uleb128): Likewise.
+	(kvx_unwind): Likewise.
+
+2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
+
 	* config/tc-kvx.c (struct option): Support for detailed
 	  diagnostics.
 	(int md_parse_option): Likewise.
