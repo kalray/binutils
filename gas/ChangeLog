@@ -1,5 +1,23 @@
 2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
 
+	* config/tc-kvx.c (kvx_frob_label): correctly forwards the call to
+	"dwarf2_emit_label" after we have fixed labels which were
+	wrongly in-between to bundles.
+	(kvx_type): Improve support for the ".type" pseudo-op:
+	  - catch and report wrong syntax the same way as the generic
+	    backend.
+	  - add support for STT_COMMON.
+	* config/tc-kvx.h (tc_frob_symbol): deleted.  Some symbols were wrongly
+	not exposed, leading to many unexpected failures in the test
+	suite.
+	* testsuite/gas/elf/bad-bss.d: Add kvx*-*-* as a valid target
+	* testsuite/gas/elf/bss.d: Likewise
+	* testsuite/gas/lns/lns-common-1-kvx.s: ...
+	* testsuite/gas/lns/lns/exp.exp: Write the test so that it takes our bundle into
+	account.
+
+2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
+
 	* config/tc-kvx.c: Reindent the whole file with `indent' and add
 	  some comments.
 
