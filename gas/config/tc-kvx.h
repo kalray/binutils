@@ -33,7 +33,7 @@ extern const char * kvx_target_format (void);
 
 /* default little endian */
 
-#define TARGET_BYTES_BIG_ENDIAN 0    
+#define TARGET_BYTES_BIG_ENDIAN 0
 
 /* for now we have no BFD target */
 
@@ -67,18 +67,20 @@ int is_constant_expression(expressionS*);
  *  Make sure that absolute symbols and imported symbols
  *  that are never used do not get written to .o file
  */
-
+/*
 #ifdef OBJ_ELF
-#define tc_frob_symbol(sym,punt) \
-  { \
-    if ((S_GET_SEGMENT (sym) == undefined_section \
-        && ! symbol_used_p (sym)\
-        && ELF_ST_VISIBILITY (S_GET_OTHER (sym)) == STV_DEFAULT) \
-        || (S_GET_SEGMENT (sym) == absolute_section \
-            && ! S_IS_EXTERNAL (sym))) \
-      punt = 1; \
+#define tc_frob_symbol(sym,punt)                                      \
+  {                                                                   \
+    if ( ! (symbol_get_bfdsym (sym)->flags & (BSF_GLOBAL | BSF_FILE)) \
+	&& ((S_GET_SEGMENT (sym) == undefined_section                 \
+	     && ! symbol_used_p (sym)                                 \
+	     && ELF_ST_VISIBILITY (S_GET_OTHER (sym)) == STV_DEFAULT) \
+	     || (S_GET_SEGMENT (sym) == absolute_section              \
+		 && ! S_IS_EXTERNAL (sym))))                          \
+      punt = 1;                                                       \
   }
 #endif
+*/
 
 
 #define LISTING_HEADER "KVX GAS LISTING"

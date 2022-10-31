@@ -3374,6 +3374,8 @@ kvx_frob_label (symbolS * sym)
       fix->sym = sym;
       label_fixes = fix;
     }
+
+  dwarf2_emit_label (sym);
 }
 
 /* Emit single bundle nop. This is needed by .nop asm directive
@@ -3534,9 +3536,13 @@ kvx_type (int start ATTRIBUTE_UNUSED)
   elfsym = (elf_symbol_type *) symbol_get_bfdsym (sym);
   *input_line_pointer = c;
 
+  if (!*S_GET_NAME (sym))
+    as_bad (_("Missing symbol name in directive"));
+
   SKIP_WHITESPACE ();
   if (*input_line_pointer == ',')
     ++input_line_pointer;
+
 
   SKIP_WHITESPACE ();
   if (*input_line_pointer == '#'
@@ -3558,6 +3564,9 @@ kvx_type (int start ATTRIBUTE_UNUSED)
   else if (strcmp (typename, "tls_object") == 0
 	   || strcmp (typename, "STT_TLS") == 0)
     type = BSF_OBJECT | BSF_THREAD_LOCAL;
+  else if (strcmp (typename, "common") == 0
+	   || strcmp (typename, "STT_COMMON") == 0)
+    type = BSF_ELF_COMMON;
   else if (strcmp (typename, "notype") == 0
 	   || strcmp (typename, "STT_NOTYPE") == 0)
     ;
