@@ -1,3 +1,7 @@
+2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
+
+	* kv3-opc.c: Add missing onlyfxreg RegClass to TPCC registers
+
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
 	* kv3-opc.c: Sync [Implement integer SIMD reduce instructions.]
