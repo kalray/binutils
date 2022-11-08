@@ -1,5 +1,10 @@
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* kv3-opc.c: Sync [Add 4x SIMD SBMM8 and SBMM8T operations in
+	  the coprocessor.]
+
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* kv3-opc.c: Sync [Add bitwise operations to the coprocessor.]
 
 2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
