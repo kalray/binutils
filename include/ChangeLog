@@ -1,5 +1,10 @@
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* opcode/kv3.h (enum Modifier_kv3_shuffleX_enum): Sync [Add word
+	  shuffle modifiers for XCOPYX and XSPLATOX.]
+
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* opcode/kv3.h: Sync [Add 4x SIMD SBMM8 and SBMM8T operations in
 	  the coprocessor.]
 
