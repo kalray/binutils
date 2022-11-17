@@ -1,5 +1,10 @@
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* kv3-dis.c (int print_insn_kvx): Rename XWR to XTR and wideReg
+	  to tileReg.
+
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* kv3-opc.c: Sync [Rename XWR to XTR and wideReg to tileReg.]
 
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>

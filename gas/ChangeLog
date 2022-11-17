@@ -1,3 +1,9 @@
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* config/tc-kvx.c (match_operands): Rename XWR to XTR and
+	  wideReg to tileReg.
+	(insn_syntax): Likewise.
+
 2023-02-15  Paul Iannetta  <piannetta@kalray.eu>
 
 	* config/tc-kvx.c (kvx_frob_label): correctly forwards the call to
