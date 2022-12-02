@@ -1,5 +1,9 @@
 2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
 
+	* opcode/kv3.h: Sync [Add magic immediates to kv3-2 AVGWP, AVGRWP, AVGUWP, AVGRUWP.]
+
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
 	* opcode/kv3.h (enum Method_kv3_enum): Sync [Rename XWR to XTR
 	  and wideReg to tileReg.]
 
