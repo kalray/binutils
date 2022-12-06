@@ -1,5 +1,10 @@
 2023-02-15  Julien Villette <jvillette@kalray.eu>
 
+	* kv3-opc.c: Replacing Coolidge V1 column modifier with Coolidge
+	  V2 qindex one.
+
+2023-02-15  Julien Villette <jvillette@kalray.eu>
+
 	* kv3-opc.c:  CV1/CV2 instruction renamings to be consistent
 	  between the two architectures (old gnu assembly aliases removal.)
 
