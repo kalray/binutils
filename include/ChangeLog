@@ -1,3 +1,7 @@
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* opcode/kv3.h: Sync with [Add magic immediates for SIMD compare ...]
+
 2023-02-15  Julien Villette <jvillette@kalray.eu>
 
 	* opcode/kv3.h: Replacing Coolidge V1 column modifier with
