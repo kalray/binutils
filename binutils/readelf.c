@@ -121,7 +121,7 @@
 #include "elf/i960.h"
 #include "elf/ia64.h"
 #include "elf/ip2k.h"
-#include "elf/kv3.h"
+#include "elf/kvx.h"
 #include "elf/lm32.h"
 #include "elf/iq2000.h"
 #include "elf/m32c.h"
