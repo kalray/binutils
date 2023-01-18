@@ -26,7 +26,7 @@
 fragment <<EOF
 
 #include "ldctor.h"
-#include "elf/kv3.h"
+#include "elf/kvx.h"
 #include "elfxx-kvx.h"
 
 

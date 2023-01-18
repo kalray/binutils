@@ -27,7 +27,7 @@
 #include "elf-bfd.h"
 #include "bfdlink.h"
 #include "objalloc.h"
-#include "elf/kv3.h"
+#include "elf/kvx.h"
 #include "elfxx-kvx.h"
 
 #define ARCH_SIZE	NN
@@ -131,9 +131,9 @@ static const uint32_t elfNN_kvx_long_branch_stub[] =
    Therefore, the table needs to be synced with BFD_RELOC_KVX_*
    in reloc.c.   */
 
-#define KV3_V1_V2
-#include "elfxx-kv3-relocs.h"
-#undef KV3_V1_V2
+#define KVX_KV3_V1_KV3_V2_KV4_V1
+#include "elfxx-kvx-relocs.h"
+#undef KVX_KV3_V1_KV3_V2_KV4_V1
 
 /* Given HOWTO, return the bfd internal relocation enumerator.  */
 
@@ -1308,7 +1308,7 @@ elfNN_kvx_size_stubs (bfd *output_bfd,
   if (stub_group_size == 1)
     {
       /* Default values.  */
-      /* KV3 branch range is +-256MB. The value used is 1MB less.  */
+      /* KVX branch range is +-256MB. The value used is 1MB less.  */
       stub_group_size = 255 * 1024 * 1024;
     }
 

@@ -20,8 +20,8 @@
 #define TC_KVX
 #define TARGET_ARCH bfd_arch_kvx
 
-#define KV3_RA_REGNO (67)
-#define KV3_SP_REGNO (12)
+#define KVX_RA_REGNO (67)
+#define KVX_SP_REGNO (12)
 
 extern const char * kvx_target_format (void);
 #define TARGET_FORMAT kvx_target_format ()
@@ -183,6 +183,6 @@ extern int kvx_regname_to_dw2regnum (const char *regname);
 
 /* All KVX instructions are multiples of 32 bits.  */
 #define DWARF2_LINE_MIN_INSN_LENGTH 1
-#define DWARF2_DEFAULT_RETURN_COLUMN (KV3_RA_REGNO)
+#define DWARF2_DEFAULT_RETURN_COLUMN (KVX_RA_REGNO)
 #define DWARF2_CIE_DATA_ALIGNMENT -4
 #endif
