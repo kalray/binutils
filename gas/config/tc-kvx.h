@@ -153,8 +153,10 @@ extern bool kvx_parse_name (const char *, struct expressionS *);
 #define md_parse_name(name, exp, m, c) kvx_parse_name (name, exp)
 
 
+/* FIXME: Is this really needed?
 extern void kvx_validate_fix (struct fix *);
 #define TC_VALIDATE_FIX(fix,seg,skip)	kvx_validate_fix (fix)
+*/
 
 /* Force this to avoid -g to fail because of dwarf2 expression .L0 - .L0 */
 extern int kvx_validate_sub_fix (struct fix *fix);
