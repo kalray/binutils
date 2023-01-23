@@ -36,7 +36,7 @@
 #include "dw2gencfi.h"
 #endif
 
-#define D(args...) do { if(debug) fprintf(args); }while(0)
+#define D(args...) do { if(debug) fprintf(args); } while(0)
 
 static void supported_cores (char buf[], size_t buflen);
 
@@ -167,9 +167,7 @@ incr_immxcnt (void)
 {
   immxcnt++;
   if (immxcnt >= KVXMAXBUNDLEWORDS)
-    {
-      as_bad ("Max immx number exceeded: %d", immxcnt);
-    }
+    as_bad ("Max immx number exceeded: %d", immxcnt);
 }
 
 static void set_byte_counter (asection * sec, int value);
@@ -218,28 +216,28 @@ static void kvx_type (int start);
 
 const pseudo_typeS md_pseudo_table[] = {
   /* override default 2-bytes */
-  {"word", cons, 4},
+  { "word",             cons,                  4 },
 
   /* KVX specific */
-  {"dword", cons, 8},
+  { "dword",            cons,                  8 },
 
   /* Override align directives to have a boundary as argument (and not the
      power of two as in p2align) */
-  {"align", s_align_bytes, 0},
+  { "align",            s_align_bytes,         0 },
 
-  {"checkresources", kvx_check_resources, 1},
-  {"nocheckresources", kvx_check_resources, 0},
+  { "checkresources",   kvx_check_resources,   1 },
+  { "nocheckresources", kvx_check_resources,   0 },
 
-  {"proc", kvx_proc, 1},
-  {"endp", kvx_endp, 0},
+  { "proc",             kvx_proc,              1 },
+  { "endp",             kvx_endp,              0 },
 
-  {"type", kvx_type, 0},
+  { "type",             kvx_type,              0 },
 
 #ifdef OBJ_ELF
-  {"file", dwarf2_directive_file, 0},
-  {"loc", dwarf2_directive_loc, 0},
+  { "file",             dwarf2_directive_file, 0 },
+  { "loc",              dwarf2_directive_loc,  0 },
 #endif
-  {NULL, 0, 0}
+  { NULL,               0,                     0 }
 };
 
 /* Pseudo functions used to indicate relocation types (these functions
@@ -289,259 +287,259 @@ struct pseudo_func_s
 static struct pseudo_func_s pseudo_func[] = {
   // reloc pseudo functions:
   {
-   .name = "signed32",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 32,
-		     .reloc_type = S32_LO5_UP27,
-		     .reloc_lo5 = BFD_RELOC_KVX_S32_LO5,
-		     .reloc_up27 = BFD_RELOC_KVX_S32_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_signed32_reloc,
-		     }
-   },
+    .name = "signed32",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 32,
+      .reloc_type = S32_LO5_UP27,
+      .reloc_lo5 = BFD_RELOC_KVX_S32_LO5,
+      .reloc_up27 = BFD_RELOC_KVX_S32_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_signed32_reloc,
+    }
+  },
   {
-   .name = "gotoff",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 37,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_GOTOFF_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_GOTOFF_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_gotoff_signed37_reloc,
-		     }
-   },
+    .name = "gotoff",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 37,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_GOTOFF_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_GOTOFF_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_gotoff_signed37_reloc,
+    }
+  },
   {
-   .name = "gotoff",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_32_ONLY,
-		     .bitsize = 32,
-		     .reloc_type = S32,
-		     .single = BFD_RELOC_KVX_32_GOTOFF,
-		     .kreloc = &kvx_gotoff_32_reloc,
-		     }
-   },
+    .name = "gotoff",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_32_ONLY,
+      .bitsize = 32,
+      .reloc_type = S32,
+      .single = BFD_RELOC_KVX_32_GOTOFF,
+      .kreloc = &kvx_gotoff_32_reloc,
+    }
+  },
   {
-   .name = "got",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 37,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_GOT_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_GOT_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_got_signed37_reloc,
-		     }
-   },
+    .name = "got",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 37,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_GOT_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_GOT_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_got_signed37_reloc,
+    }
+  },
   {
-   .name = "got",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_32_ONLY,
-		     .bitsize = 32,
-		     .reloc_type = S32,
-		     .single = BFD_RELOC_KVX_32_GOT,
-		     .kreloc = &kvx_got_32_reloc,
-		     }
-   },
+    .name = "got",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_32_ONLY,
+      .bitsize = 32,
+      .reloc_type = S32,
+      .single = BFD_RELOC_KVX_32_GOT,
+      .kreloc = &kvx_got_32_reloc,
+    }
+  },
   {
-   .name = "tlsgd",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 37,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_GD_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_TLS_GD_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_tlsgd_signed37_reloc,
-		     }
-   },
+    .name = "tlsgd",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 37,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_GD_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_TLS_GD_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_tlsgd_signed37_reloc,
+    }
+  },
   {
-   .name = "tlsgd",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 43,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_GD_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_TLS_GD_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_TLS_GD_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_tlsgd_signed43_reloc,
-		     }
-   },
+    .name = "tlsgd",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 43,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_GD_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_TLS_GD_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_TLS_GD_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_tlsgd_signed43_reloc,
+    }
+  },
   {
-   .name = "tlsle",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 37,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_LE_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_TLS_LE_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_tlsle_signed37_reloc,
-		     }
-   },
+    .name = "tlsle",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 37,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_LE_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_TLS_LE_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_tlsle_signed37_reloc,
+    }
+  },
   {
-   .name = "tlsle",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 43,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_LE_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_TLS_LE_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_TLS_LE_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_tlsle_signed43_reloc,
-		     }
-   },
+    .name = "tlsle",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 43,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_LE_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_TLS_LE_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_TLS_LE_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_tlsle_signed43_reloc,
+    }
+  },
   {
-   .name = "tlsld",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 37,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_LD_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_TLS_LD_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_tlsld_signed37_reloc,
-		     }
-   },
+    .name = "tlsld",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 37,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_LD_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_TLS_LD_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_tlsld_signed37_reloc,
+    }
+  },
   {
-   .name = "tlsld",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 43,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_LD_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_TLS_LD_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_TLS_LD_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_tlsld_signed43_reloc,
-		     }
-   },
+    .name = "tlsld",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 43,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_LD_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_TLS_LD_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_TLS_LD_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_tlsld_signed43_reloc,
+    }
+  },
   {
-   .name = "dtpoff",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 37,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_DTPOFF_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_TLS_DTPOFF_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_dtpoff_signed37_reloc,
-		     }
-   },
+    .name = "dtpoff",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 37,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_DTPOFF_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_TLS_DTPOFF_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_dtpoff_signed37_reloc,
+    }
+  },
   {
-   .name = "dtpoff",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 43,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_DTPOFF_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_TLS_DTPOFF_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_TLS_DTPOFF_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_dtpoff_signed43_reloc,
-		     }
-   },
+    .name = "dtpoff",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 43,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_DTPOFF_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_TLS_DTPOFF_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_TLS_DTPOFF_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_dtpoff_signed43_reloc,
+    }
+  },
   {
-   .name = "tlsie",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 37,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_IE_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_TLS_IE_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_tlsie_signed37_reloc,
-		     }
-   },
+    .name = "tlsie",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 37,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_TLS_IE_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_TLS_IE_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_tlsie_signed37_reloc,
+    }
+  },
   {
-   .name = "tlsie",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 43,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_IE_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_TLS_IE_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_TLS_IE_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_tlsie_signed43_reloc,
-		     }
-   },
+    .name = "tlsie",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 43,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_TLS_IE_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_TLS_IE_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_TLS_IE_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_tlsie_signed43_reloc,
+    }
+  },
   {
-   .name = "gotoff",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 43,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_GOTOFF_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_GOTOFF_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_GOTOFF_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_gotoff_signed43_reloc,
-		     }
-   },
+    .name = "gotoff",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 43,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_GOTOFF_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_GOTOFF_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_GOTOFF_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_gotoff_signed43_reloc,
+    }
+  },
   {
-   .name = "gotoff",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_64_ONLY,
-		     .bitsize = 64,
-		     .reloc_type = S64,
-		     .single = BFD_RELOC_KVX_64_GOTOFF,
-		     .kreloc = &kvx_gotoff_64_reloc,
-		     }
-   },
+    .name = "gotoff",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_64_ONLY,
+      .bitsize = 64,
+      .reloc_type = S64,
+      .single = BFD_RELOC_KVX_64_GOTOFF,
+      .kreloc = &kvx_gotoff_64_reloc,
+    }
+  },
   {
-   .name = "got",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 43,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_GOT_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_GOT_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_GOT_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_got_signed43_reloc,
-		     }
-   },
+    .name = "got",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 43,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_GOT_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_GOT_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_GOT_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_got_signed43_reloc,
+    }
+  },
   {
-   .name = "got",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_64_ONLY,
-		     .bitsize = 64,
-		     .reloc_type = S64,
-		     .single = BFD_RELOC_KVX_64_GOT,
-		     .kreloc = &kvx_got_64_reloc,
-		     }
-   },
+    .name = "got",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_64_ONLY,
+      .bitsize = 64,
+      .reloc_type = S64,
+      .single = BFD_RELOC_KVX_64_GOT,
+      .kreloc = &kvx_got_64_reloc,
+    }
+  },
   {
-   .name = "gotaddr",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_32_ONLY,
-		     .bitsize = 37,
-		     .has_no_arg = 1,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_GOTADDR_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_GOTADDR_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_gotaddr_signed37_reloc,
-		     }
-   },
+    .name = "gotaddr",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_32_ONLY,
+      .bitsize = 37,
+      .has_no_arg = 1,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_GOTADDR_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_GOTADDR_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_gotaddr_signed37_reloc,
+    }
+  },
   {
-   .name = "gotaddr",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_32_ONLY,
-		     .bitsize = 43,
-		     .has_no_arg = 1,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_GOTADDR_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_GOTADDR_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_GOTADDR_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_gotaddr_signed43_reloc,
-		     }
-   },
+    .name = "gotaddr",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_32_ONLY,
+      .bitsize = 43,
+      .has_no_arg = 1,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_GOTADDR_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_GOTADDR_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_GOTADDR_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_gotaddr_signed43_reloc,
+    }
+  },
   {
     .name = "gotaddr",
     .pseudo_relocs = {
@@ -555,75 +553,59 @@ static struct pseudo_func_s pseudo_func[] = {
       .single = BFD_RELOC_UNUSED,
       .kreloc = &kvx_gotaddr_signed64_reloc,
     }
-
-
+  },
   // @pcrel()
   {
-   // use pcrel16 to force the use of 16bits. This would normally not
-   // be selected as symbol would not fit.
-   .name = "pcrel16",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_ALL,
-		     .bitsize = 16,
-		     .single = BFD_RELOC_KVX_S16_PCREL,
-		     .reloc_type = S16,
-		     .kreloc = &kvx_pcrel_signed16_reloc,
-		     }
-   },
+    // use pcrel16 to force the use of 16bits. This would normally not
+    // be selected as symbol would not fit.
+    .name = "pcrel16",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_ALL,
+      .bitsize = 16,
+      .single = BFD_RELOC_KVX_S16_PCREL,
+      .reloc_type = S16,
+      .kreloc = &kvx_pcrel_signed16_reloc,
+    }
+  },
   {
-   .name = "pcrel",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_32_ONLY,
-		     .bitsize = 37,
-		     .reloc_type = S37_LO10_UP27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S37_PCREL_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S37_PCREL_UP27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_pcrel_signed37_reloc,
-		     }
-   },
+    .name = "pcrel",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_32_ONLY,
+      .bitsize = 37,
+      .reloc_type = S37_LO10_UP27,
+      .reloc_lo10 = BFD_RELOC_KVX_S37_PCREL_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S37_PCREL_UP27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_pcrel_signed37_reloc,
+    }
+  },
   {
-   .name = "pcrel",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_32_ONLY,
-		     .bitsize = 43,
-		     .reloc_type = S43_LO10_UP27_EX6,
-		     .reloc_lo10 = BFD_RELOC_KVX_S43_PCREL_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S43_PCREL_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S43_PCREL_EX6,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_pcrel_signed43_reloc,
-		     }
-   },
+    .name = "pcrel",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_32_ONLY,
+      .bitsize = 43,
+      .reloc_type = S43_LO10_UP27_EX6,
+      .reloc_lo10 = BFD_RELOC_KVX_S43_PCREL_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S43_PCREL_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S43_PCREL_EX6,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_pcrel_signed43_reloc,
+    }
+  },
   {
-   .name = "pcrel",
-   .pseudo_relocs = {
-		     .avail_modes = PSEUDO_64_ONLY,
-		     .bitsize = 64,
-		     .reloc_type = S64_LO10_UP27_EX27,
-		     .reloc_lo10 = BFD_RELOC_KVX_S64_PCREL_LO10,
-		     .reloc_up27 = BFD_RELOC_KVX_S64_PCREL_UP27,
-		     .reloc_ex = BFD_RELOC_KVX_S64_PCREL_EX27,
-		     .single = BFD_RELOC_UNUSED,
-		     .kreloc = &kvx_pcrel_signed64_reloc,
-		     }
-   },
+    .name = "pcrel",
+    .pseudo_relocs = {
+      .avail_modes = PSEUDO_64_ONLY,
+      .bitsize = 64,
+      .reloc_type = S64_LO10_UP27_EX27,
+      .reloc_lo10 = BFD_RELOC_KVX_S64_PCREL_LO10,
+      .reloc_up27 = BFD_RELOC_KVX_S64_PCREL_UP27,
+      .reloc_ex = BFD_RELOC_KVX_S64_PCREL_EX27,
+      .single = BFD_RELOC_UNUSED,
+      .kreloc = &kvx_pcrel_signed64_reloc,
+    }
+  },
 };
-
-/*****************************************************/
-/*          Unwind information                       */
-/*                                                   */
-/*     unwind_proc_symbol -- frag address            */
-/*                           following proc          */
-/*     unwind_info_symbol -- frag address of         */
-/*                           unwind info block       */
-/*     unwind_bundle_count -- bundles seen since proc */
-/*                                                   */
-/*****************************************************/
-
-#define UNWIND_HEADER_SECTION_NAME ".unwindh"
-#define UNWIND_INFO_SECTION_NAME   ".unwindi"
-#define UNWIND_VERSION             1
 
 static int unwind_bundle_count = 0;
 
@@ -645,20 +627,20 @@ const char *md_shortopts = "hV";	/* catted to std short options */
 
 /* added to std long options */
 
-#define OPTION_HEXFILE	(OPTION_MD_BASE + 0)
-#define OPTION_MARCH (OPTION_MD_BASE + 4)
-#define OPTION_CHECK_RESOURCES (OPTION_MD_BASE + 5)
-#define OPTION_NO_CHECK_RESOURCES (OPTION_MD_BASE + 6)
+#define OPTION_HEXFILE               (OPTION_MD_BASE + 0)
+#define OPTION_MARCH                 (OPTION_MD_BASE + 4)
+#define OPTION_CHECK_RESOURCES       (OPTION_MD_BASE + 5)
+#define OPTION_NO_CHECK_RESOURCES    (OPTION_MD_BASE + 6)
 #define OPTION_GENERATE_ILLEGAL_CODE (OPTION_MD_BASE + 7)
-#define OPTION_DUMP_TABLE (OPTION_MD_BASE + 8)
-#define OPTION_PIC	(OPTION_MD_BASE + 9)
-#define OPTION_BIGPIC	(OPTION_MD_BASE + 10)
-#define OPTION_NOPIC    (OPTION_MD_BASE + 12)
-#define OPTION_32 (OPTION_MD_BASE + 13)
-#define OPTION_DUMPINSN (OPTION_MD_BASE + 15)
-#define OPTION_ALL_SFR (OPTION_MD_BASE + 16)
-#define OPTION_DIAGNOSTICS (OPTION_MD_BASE + 17)
-#define OPTION_NO_DIAGNOSTICS (OPTION_MD_BASE + 18)
+#define OPTION_DUMP_TABLE            (OPTION_MD_BASE + 8)
+#define OPTION_PIC                   (OPTION_MD_BASE + 9)
+#define OPTION_BIGPIC                (OPTION_MD_BASE + 10)
+#define OPTION_NOPIC                 (OPTION_MD_BASE + 12)
+#define OPTION_32                    (OPTION_MD_BASE + 13)
+#define OPTION_DUMPINSN              (OPTION_MD_BASE + 15)
+#define OPTION_ALL_SFR               (OPTION_MD_BASE + 16)
+#define OPTION_DIAGNOSTICS           (OPTION_MD_BASE + 17)
+#define OPTION_NO_DIAGNOSTICS        (OPTION_MD_BASE + 18)
 
 struct option md_longopts[] = {
   { "march",                 required_argument, NULL, OPTION_MARCH                 },
@@ -690,14 +672,10 @@ kvx_parse_name (const char *name, struct expressionS *e)
   struct symbol *sym;
 
   if (!assembling_insn)
-    {
-      return false;
-    }
+    return false;
 
   if (e->X_op == O_symbol && e->X_md == O_absent)
-    {
-      return false;
-    }
+    return false;
 
   sym = str_hash_find (kvx_reg_hash, name);
   if (sym)
@@ -713,7 +691,6 @@ kvx_parse_name (const char *name, struct expressionS *e)
 int
 md_parse_option (int c, const char *arg ATTRIBUTE_UNUSED)
 {
-  int i;
   int find_core = 0;
 
   switch (c)
@@ -729,36 +706,24 @@ md_parse_option (int c, const char *arg ATTRIBUTE_UNUSED)
       break;
     case OPTION_MARCH:
       march = strdup (arg);
-      i = 0;
-      while (i < KVXNUMCORES && !find_core)
-	{
-	  subcore_id = 0;
-	  while (kvx_core_info_table[i]->elf_cores[subcore_id] != -1
-		 && !find_core)
-	    {
-	      if (strcasecmp
-		  (march, kvx_core_info_table[i]->names[subcore_id]) == 0
-		  && kvx_core_info_table[i]->supported)
-		{
+      for (int i = 0; i < KVXNUMCORES && !find_core; ++i)
+	for (subcore_id = 0;
+	    kvx_core_info_table[i]->elf_cores[subcore_id] != -1;
+	    ++subcore_id)
+	  {
+	    if (strcasecmp
+		(march, kvx_core_info_table[i]->names[subcore_id]) == 0
+		&& kvx_core_info_table[i]->supported)
+	      {
+		kvx_core_info = kvx_core_info_table[i];
+		kvx_registers = kvx_registers_table[i];
+		kvx_regfiles = kvx_regfiles_table[i];
 
-		  kvx_core_info = kvx_core_info_table[i];
-		  kvx_registers = kvx_registers_table[i];
-		  kvx_regfiles = kvx_regfiles_table[i];
-
-		  find_core = 1;
-		}
-	      else
-		{
-		  subcore_id++;
-		}
-	    }
-	  if (find_core)
-	    {
-	      break;
-	    }
-	  i++;
+		find_core = 1;
+		break;
+	      }
 	}
-      if (i == KVXNUMCORES)
+      if (!find_core)
 	{
 	  char buf[100];
 	  supported_cores (buf, sizeof (buf));
@@ -813,12 +778,13 @@ md_show_usage (FILE * stream)
   char buf[100];
   supported_cores (buf, sizeof (buf));
 
-  fprintf (stream, "\nThe options -M, --mri and -f");
-  fprintf (stream, " are not supported in this assembler.\n");
-  fprintf (stream,
-	   "--check-resources \t perform minimal resource checking\n");
-  fprintf (stream, "--march [%s] \t select architecture\n", buf);
-  fprintf (stream, "-V \t\t\t print assembler version number\n");
+  fprintf (stream, "\n\
+KVX specific options:\n\n\
+  --check-resources \t perform minimal resource checking\n\
+  --march [%s] \t select architecture\n\
+  -V \t\t\t print assembler version number\n\
+\n\
+  The options -M, --mri and -f are not supported in this assembler.\n", buf);
 }
 
 /**************************************************/
@@ -852,14 +818,10 @@ md_chars_to_number (char *buf, int n)
 static struct pseudo_func_s *
 kvx_get_pseudo_func_data_scn (symbolS * sym)
 {
-  int i;
-
-  for (i = 0; i < NELEMS (pseudo_func); i++)
+  for (int i = 0; i < NELEMS (pseudo_func); i++)
     if (sym == pseudo_func[i].sym
 	&& pseudo_func[i].pseudo_relocs.single != BFD_RELOC_UNUSED)
-      {
 	return &pseudo_func[i];
-      }
   return NULL;
 }
 
@@ -868,24 +830,13 @@ kvx_get_pseudo_func_data_scn (symbolS * sym)
 static struct pseudo_func_s *
 kvx_get_pseudo_func2 (symbolS * sym, kvxbfield * opnd)
 {
-  int i;
-
-  for (i = 0; i < NELEMS (pseudo_func); i++)
+  for (int i = 0; i < NELEMS (pseudo_func); i++)
     if (sym == pseudo_func[i].sym)
-      {
-	int relidx;
-	for (relidx = 0; relidx < opnd->reloc_nb; relidx++)
-	  {
-	    if (opnd->relocs[relidx] == pseudo_func[i].pseudo_relocs.kreloc
-		&& (kvx_arch_size ==
-		    (int) pseudo_func[i].pseudo_relocs.avail_modes
-		    || pseudo_func[i].pseudo_relocs.avail_modes ==
-		    PSEUDO_ALL))
-	      {
-		return &pseudo_func[i];
-	      }
-	  }
-      }
+      for (int relidx = 0; relidx < opnd->reloc_nb; relidx++)
+	if (opnd->relocs[relidx] == pseudo_func[i].pseudo_relocs.kreloc
+	    && (kvx_arch_size == (int) pseudo_func[i].pseudo_relocs.avail_modes
+	      || pseudo_func[i].pseudo_relocs.avail_modes == PSEUDO_ALL))
+	  return &pseudo_func[i];
 
   return NULL;
 }
@@ -893,46 +844,30 @@ kvx_get_pseudo_func2 (symbolS * sym, kvxbfield * opnd)
 static void
 supported_cores (char buf[], size_t buflen)
 {
-  int i, j;
   buf[0] = '\0';
-  for (i = 0; i < KVXNUMCORES; i++)
-    {
-      j = 0;
-      while (kvx_core_info_table[i]->elf_cores[j] != -1)
+  for (int i = 0; i < KVXNUMCORES; i++)
+    for (int j = 0; kvx_core_info_table[i]->elf_cores[j] != -1; ++j)
+      if (kvx_core_info_table[i]->supported)
 	{
-	  if (kvx_core_info_table[i]->supported)
+	  if (buf[0] == '\0')
+	    strcpy (buf, kvx_core_info_table[i]->names[j]);
+	  else
 	    {
-	      if (buf[0] == '\0')
+	      if ((strlen (buf) + 1 + strlen (kvx_core_info_table[i]->names[j]) + 1) < buflen)
 		{
-		  strcpy (buf, kvx_core_info_table[i]->names[j]);
-		}
-	      else
-		{
-		  int l = strlen (buf);
-		  if ((l + 1 + strlen (kvx_core_info_table[i]->names[j]) +
-		       1) < buflen)
-		    {
-		      strcat (buf, "|");
-		      strcat (buf, kvx_core_info_table[i]->names[j]);
-		    }
+		  strcat (buf, "|");
+		  strcat (buf, kvx_core_info_table[i]->names[j]);
 		}
 	    }
-	  j++;
 	}
-    }
 }
 
 __attribute__ ((unused))
 int get_regnum_by_name (char *name)
 {
-  int i;
-  for (i = 0; i < kvx_regfiles[KVX_REGFILE_REGISTERS]; i++)
-    {
-      if (STREQ (kvx_registers[i].name, name))
-	{
-	  return kvx_registers[i].id;
-	}
-    }
+  for (int i = 0; i < kvx_regfiles[KVX_REGFILE_REGISTERS]; i++)
+    if (STREQ (kvx_registers[i].name, name))
+      return kvx_registers[i].id;
   return -1;
 }
 
@@ -979,9 +914,7 @@ tokenize_arguments (char *str, expressionS tok[], char *tok_begins[],
 	case '=':
 	case '?':
 	  if (*input_line_pointer == ',')
-	    {
-	      saw_comma = 1;
-	    }
+	    saw_comma = 1;
 	  ++input_line_pointer;
 	  if (saw_delimiter || !saw_arg)
 	    goto err;
@@ -995,9 +928,7 @@ tokenize_arguments (char *str, expressionS tok[], char *tok_begins[],
 		 * This is not the case for Coolidge V2 with implicit 0 offset
 		 */
 		if (saw_comma)
-		  {
-		    goto err;
-		  }
+		  goto err;
 	      }
 	    expression (tok);
 	    if (tok->X_op == O_register)
@@ -1018,14 +949,10 @@ tokenize_arguments (char *str, expressionS tok[], char *tok_begins[],
 	default:
 	  {
 	    if (saw_arg && !saw_delimiter)
-	      {
 		goto err;
-	      }
 	    expression (tok);
 	    if (tok->X_op == O_illegal || tok->X_op == O_absent)
-	      {
 		goto err;
-	      }
 
 	    saw_delimiter = 0;
 	    saw_comma = 0;
@@ -1039,13 +966,9 @@ tokenize_arguments (char *str, expressionS tok[], char *tok_begins[],
 
 fini:
   if (saw_delimiter)
-    {
       goto err;
-    }
   if (tok_begins)
-    {
       tok_begins[tokcnt] = input_line_pointer;
-    }
   input_line_pointer = old_input_line_pointer;
   return ntok - (end_tok - tok);
 
@@ -1059,8 +982,6 @@ err:
 static int
 has_relocation_of_size (const kvxbfield * opnd)
 {
-  int i;
-
   const int symbol_size = kvx_arch_size;
 
   /*
@@ -1068,7 +989,7 @@ has_relocation_of_size (const kvxbfield * opnd)
    * trying to fit a symbol in the insn, not a pseudo function
    * (eg. @gotaddr, ...).
    * We don't want to use a GOTADDR (pcrel) in any insn that tries to fit a symbol.
-   * One way to filter out these is to use the following asumption:
+   * One way to filter out these is to use the following assumption:
    * - Any insn that accepts a pcrel immediate has only one immediate variant.
    * Example:
    * - call accepts only a pcrel27 -> allow pcrel reloc here
@@ -1079,33 +1000,29 @@ has_relocation_of_size (const kvxbfield * opnd)
    * symbol in a 37bits variant of any ALU insn (that would match with
    * the GOTADDR 37bits reloc switch case below)
    */
-  for (i = 0; i < opnd->reloc_nb; i++)
-    {
-      switch (opnd->relocs[i]->relative)
-	{
-	  /* An absolute reloc needs a full size symbol reloc */
-	case KVX_REL_ABS:
-	  if (opnd->relocs[i]->bitsize >= symbol_size)
-	    {
-	      return 1;
-	    }
-	  break;
+  for (int i = 0; i < opnd->reloc_nb; i++)
+    switch (opnd->relocs[i]->relative)
+      {
+	/* An absolute reloc needs a full size symbol reloc */
+      case KVX_REL_ABS:
+	if (opnd->relocs[i]->bitsize >= symbol_size)
+	  return 1;
+	break;
 
-	  /* Most likely relative jumps. Let something else check size is
-	     OK. We don't currently have several relocations for such insns */
-	case KVX_REL_PC:
-	  if (opnd->reloc_nb == 1)
-	    return 1;
-	  break;
+	/* Most likely relative jumps. Let something else check size is
+	   OK. We don't currently have several relocations for such insns */
+      case KVX_REL_PC:
+	if (opnd->reloc_nb == 1)
+	  return 1;
+	break;
 
-	  /* These relocations should be handled elsewhere with pseudo functions */
-	case KVX_REL_GP:
-	case KVX_REL_TP:
-	case KVX_REL_GOT:
-	case KVX_REL_BASE:
-	  break;
-	}
-    }
+	/* These relocations should be handled elsewhere with pseudo functions */
+      case KVX_REL_GP:
+      case KVX_REL_TP:
+      case KVX_REL_GOT:
+      case KVX_REL_BASE:
+	break;
+      }
   return 0;
 }
 
@@ -1117,8 +1034,6 @@ static match_operands_code
 match_operands (const kvxopc_t * op, const expressionS * tok,
 		int ntok, const char *s)
 {
-  int ii;
-  int jj;
   int nop;
   kvxbfield *opdef;
   volatile long long min, max;
@@ -1127,19 +1042,15 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
   /* First check that number of operands are the same. */
   for (nop = 0; op && op->format[nop]; nop++);
   if (ntok != nop)
-    {
-      return MATCH_NOT_FOUND;
-    }
+    return MATCH_NOT_FOUND;
 
   /* Check enconding space */
   int encoding_space_flags =
     kvx_arch_size == 32 ? kvxOPCODE_FLAG_MODE32 : kvxOPCODE_FLAG_MODE64;
 
-  for (ii = 0; ii < op->wordcount; ii++)
-    {
-      if (!(op->codewords[ii].flags & encoding_space_flags))
-	return MATCH_NOT_FOUND;
-    }
+  for (int ii = 0; ii < op->wordcount; ii++)
+    if (!(op->codewords[ii].flags & encoding_space_flags))
+      return MATCH_NOT_FOUND;
 
 #define IS_KVX_REGFILE_GPR(tok) ((((tok).X_add_number) >= kvx_regfiles[KVX_REGFILE_FIRST_GPR]) \
                                 && (((tok).X_add_number) <= kvx_regfiles[KVX_REGFILE_LAST_GPR]))
@@ -1181,7 +1092,7 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
     }
 
   /* Now check for compatiblility of each operand. */
-  for (jj = 0; jj < ntok; jj++)
+  for (int jj = 0; jj < ntok; jj++)
     {
       int operand_type = op->format[jj]->type;
       const char *operand_type_name = op->format[jj]->tname;
@@ -1192,30 +1103,19 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
       int *valid_regs = op->format[jj]->regs;
 
       /* When operand is a register, check if it is valid. */
-      if ((tok[jj].X_op == O_register) &&
-	  (valid_regs == NULL
-	   || !valid_regs[kvx_registers[tok[jj].X_add_number].id]))
-	{
-	  return MATCH_NOT_FOUND;
-	}
+      if ((tok[jj].X_op == O_register)
+	  && (valid_regs == NULL
+	    || !valid_regs[kvx_registers[tok[jj].X_add_number].id]))
+	return MATCH_NOT_FOUND;
 
       if (is_immediate)
 	{
 	  if (tok[jj].X_op == O_symbol)
-	    {
-	      if (!has_relocation_of_size (op->format[jj]))
-		{
-		  return MATCH_NOT_FOUND;
-		}
-	    }
+	    if (!has_relocation_of_size (op->format[jj]))
+	      return MATCH_NOT_FOUND;
 	  if (tok[jj].X_op == O_pseudo_fixup)
-	    {
-	      if (kvx_get_pseudo_func2 (tok[jj].X_op_symbol, op->format[jj])
-		  == NULL)
-		{
-		  return MATCH_NOT_FOUND;
-		}
-	    }
+	    if (kvx_get_pseudo_func2 (tok[jj].X_op_symbol, op->format[jj]) == NULL)
+	      return MATCH_NOT_FOUND;
 	}
 
       switch (operand_type)
@@ -1243,19 +1143,22 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
 	case RegClass_kv3_v2_onlysetReg:
 	case RegClass_kvx_onlyswapReg:
 	case RegClass_kv3_v2_onlyswapReg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_SFR) case RegClass_kvx_coproReg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_SFR)
+	case RegClass_kvx_coproReg:
 	case RegClass_kvx_coproReg0M4:
 	case RegClass_kvx_coproReg1M4:
 	case RegClass_kvx_coproReg2M4:
 	case RegClass_kvx_coproReg3M4:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XCR) case RegClass_kvx_blockReg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XCR)
+	case RegClass_kvx_blockReg:
 	case RegClass_kvx_blockRegE:
 	case RegClass_kvx_blockRegO:
 	case RegClass_kvx_blockReg0M4:
 	case RegClass_kvx_blockReg1M4:
 	case RegClass_kvx_blockReg2M4:
 	case RegClass_kvx_blockReg3M4:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XBR) case RegClass_kvx_vectorReg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XBR)
+	case RegClass_kvx_vectorReg:
 	case RegClass_kvx_vectorRegE:
 	case RegClass_kvx_vectorRegO:
 	case RegClass_kvx_tileReg_0:
@@ -1264,15 +1167,24 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
 	case RegClass_kvx_matrixReg_1:
 	case RegClass_kvx_matrixReg_2:
 	case RegClass_kvx_matrixReg_3:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XVR) case RegClass_kvx_tileReg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XTR) case RegClass_kvx_matrixReg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XMR) case RegClass_kvx_buffer2Reg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X2R) case RegClass_kvx_buffer4Reg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X4R) case RegClass_kvx_buffer8Reg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X8R) case RegClass_kvx_buffer16Reg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X16R) case RegClass_kvx_buffer32Reg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X32R) case RegClass_kvx_buffer64Reg:
-	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X64R) case Immediate_kvx_pcrel17:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XVR)
+	case RegClass_kvx_tileReg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XTR)
+	case RegClass_kvx_matrixReg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_XMR)
+	case RegClass_kvx_buffer2Reg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X2R)
+	case RegClass_kvx_buffer4Reg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X4R)
+	case RegClass_kvx_buffer8Reg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X8R)
+	case RegClass_kvx_buffer16Reg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X16R)
+	case RegClass_kvx_buffer32Reg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X32R)
+	case RegClass_kvx_buffer64Reg:
+	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_X64R)
+	case Immediate_kvx_pcrel17:
 	case Immediate_kvx_pcrel27:
 	case Immediate_kvx_wrapped8:
 	case Immediate_kvx_signed10:
@@ -1287,9 +1199,7 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
 	case Immediate_kvx_sysnumber:
 	case Immediate_kvx_unsigned6:
 	  if (tok[jj].X_op == O_symbol || tok[jj].X_op == O_pseudo_fixup)
-	    {
-	      break;
-	    }
+	    break;
 	  if (tok[jj].X_op == O_constant)
 	    {
 	      long long signed_value = tok[jj].X_add_number;
@@ -1300,9 +1210,7 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
 	      // Operand is not signed, but the token is.
 	      if (!((opdef->flags & kvxSIGNED) || (opdef->flags & kvxWRAPPED))
 		  && (tok[jj].X_unsigned == 0))
-		{
-		  return MATCH_NOT_FOUND;
-		}
+		return MATCH_NOT_FOUND;
 
 	      // [JV] Special case of both signed and unsigned ranges are accepted because
 	      // this immediate;
@@ -1330,24 +1238,18 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
 	      min = (~0ULL << (opdef->width - 1));
 	      mask = ~(~0ULL << opdef->width);
 	      if (opdef->width == 64)
-		{
-		  mask = ~0ULL;
-		}
+		mask = ~0ULL;
 
 	      if (opdef->bias != 0)
 		{
 		  if (diagnostics)
-		    {
-		      as_bad
-			("[match_operands] : cannot use bias for encoding operand type %s.\n\t%s",
-			 operand_type_name, s);
-		    }
+		    as_bad ("[match_operands]: "
+			    "cannot use bias for encoding operand type %s.\n\t%s",
+			    operand_type_name, s);
 		  else
-		    {
-		      as_bad
-			("[match_operands] : cannot use bias for encoding operand type %s.",
-			 operand_type_name);
-		    }
+		    as_bad ("[match_operands]: "
+			    "cannot use bias for encoding operand type %s.",
+			    operand_type_name);
 		}
 
 	      match_signed = (((signed_value >> opdef->shift) >= min)
@@ -1369,16 +1271,11 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
 	  return MATCH_NOT_FOUND;
 	default:
 	  if (diagnostics)
-	    {
-	      as_bad
-		("[match_operands] : couldn't find operand type %s\n\t%s",
-		 operand_type_name, s);
-	    }
+	      as_bad ("[match_operands]: couldn't find operand type %s\n\t%s",
+		      operand_type_name, s);
 	  else
-	    {
-	      as_bad ("[match_operands] : couldn't find operand type %s.",
+	      as_bad ("[match_operands]: couldn't find operand type %s.",
 		      operand_type_name);
-	    }
 	  return MATCH_NOT_FOUND;
 	}
     }
@@ -1420,9 +1317,7 @@ find_format (const kvxopc_t * opcode,
   while (STREQ (name, t->as_op))
     {
       if (match_operands (t, tok, ntok, s) == MATCH_FOUND)
-	{
-	  return t;
-	}
+	return t;
       t++;
     }
 
@@ -1441,7 +1336,6 @@ insert_operand (kvxinsn_t * insn, kvxbfield * opdef, const expressionS * arg)
   unsigned long long op = 0;
   kvx_bitfield_t *bfields = opdef->bfield;
   int bf_nb = opdef->bitfields;
-  int bf_idx;
   int immx_ready = 0;
 
   if (opdef->width == 0)
@@ -1522,9 +1416,7 @@ insert_operand (kvxinsn_t * insn, kvxbfield * opdef, const expressionS * arg)
 	      insn->nfixups++;
 	    }
 	  else
-	    {
-	      as_fatal ("Unexpected fixup");
-	    }
+	    as_fatal ("Unexpected fixup");
 
 	  if (pf->pseudo_relocs.reloc_type == S64_LO10_UP27_EX27)
 	    {
@@ -1549,21 +1441,15 @@ insert_operand (kvxinsn_t * insn, kvxbfield * opdef, const expressionS * arg)
 
 	}
       else
-	{
-	  as_fatal ("No room for fixup ");
-	}
+	as_fatal ("No room for fixup ");
       break;
     case O_constant:		/* we had better generate a fixup if > max */
       if (!(arg->X_add_symbol))
 	{
 	  if (opdef->flags & kvxSIGNED)
-	    {
-	      op = ((signed long long) arg->X_add_number >> opdef->shift);
-	    }
+	    op = ((signed long long) arg->X_add_number >> opdef->shift);
 	  else
-	    {
-	      op = ((unsigned long long) arg->X_add_number >> opdef->shift);
-	    }
+	    op = ((unsigned long long) arg->X_add_number >> opdef->shift);
 	  break;
 	}
       /* fallthrough */
@@ -1697,13 +1583,11 @@ insert_operand (kvxinsn_t * insn, kvxbfield * opdef, const expressionS * arg)
 	    return immx_ready;
 	  }
 	else
-	  {
-	    as_fatal ("No room for fixup ");
-	  }
+	  as_fatal ("No room for fixup ");
       }
     }
 
-  for (bf_idx = 0; bf_idx < bf_nb; bf_idx++)
+  for (int bf_idx = 0; bf_idx < bf_nb; bf_idx++)
     {
       unsigned long long value =
 	((unsigned long long) op >> bfields[bf_idx].from_offset);
@@ -1727,20 +1611,18 @@ static void
 assemble_insn (const kvxopc_t * opcode,
 	       const expressionS * tok, int ntok, kvxinsn_t * insn)
 {
-  int argidx;
-  int i;
   unsigned immx_ready = 0;
 
   memset (insn, 0, sizeof (*insn));
   insn->opdef = opcode;
-  for (i = 0; i < opcode->wordcount; i++)
+  for (int i = 0; i < opcode->wordcount; i++)
     {
       insn->words[i] = opcode->codewords[i].opcode;
       insn->len += 1;
     }
   insn->immx0 = NOIMMX;
   insn->immx1 = NOIMMX;
-  for (argidx = 0; argidx < ntok; argidx++)
+  for (int argidx = 0; argidx < ntok; argidx++)
     {
       int ret = insert_operand (insn, opcode->format[argidx], &tok[argidx]);
       immx_ready |= ret;
@@ -1749,7 +1631,7 @@ assemble_insn (const kvxopc_t * opcode,
   // Handle immx if insert_operand did not already take care of that
   if (!immx_ready)
     {
-      for (i = 0; i < opcode->wordcount; i++)
+      for (int i = 0; i < opcode->wordcount; i++)
 	{
 	  if (opcode->codewords[i].flags & kvxOPCODE_FLAG_IMMX0)
 	    {
@@ -1786,14 +1668,11 @@ static void
 emit_insn (kvxinsn_t * insn, int insn_pos, int stopflag)
 {
   char *f;
-  int i;
   unsigned int image;
 
   /* if we are listing, attach frag to previous line */
   if (listing)
-    {
-      listing_prev_line ();
-    }
+    listing_prev_line ();
 
   /* Update text size for lane parity checking */
   set_byte_counter (now_seg, (get_byte_counter (now_seg) + (insn->len * 4)));
@@ -1802,19 +1681,15 @@ emit_insn (kvxinsn_t * insn, int insn_pos, int stopflag)
   f = frag_more (insn->len * 4);
 
   /* spit out bits          */
-  for (i = 0; i < insn->len; i++)
+  for (int i = 0; i < insn->len; i++)
     {
       image = insn->words[i];
 
       /* Handle bundle parallel bit. */ ;
       if ((i == insn->len - 1) && stopflag)
-	{
-	  image &= ~PARALLEL_BIT;
-	}
+	image &= ~PARALLEL_BIT;
       else
-	{
-	  image |= PARALLEL_BIT;
-	}
+	image |= PARALLEL_BIT;
 
       /* Emit the instruction image. */
       md_number_to_chars (f + (i * 4), image, 4);
@@ -1822,7 +1697,7 @@ emit_insn (kvxinsn_t * insn, int insn_pos, int stopflag)
 
   /* generate fixup records */
 
-  for (i = 0; i < insn->nfixups; i++)
+  for (int i = 0; i < insn->nfixups; i++)
     {
       int size, pcrel;
       reloc_howto_type *reloc_howto =
@@ -1868,39 +1743,24 @@ is_constant_expression (expressionS * exp)
   if (exp != NULL)
     {
       if (exp->X_op == O_constant)
-	{
-	  retval = true;
-	}
+	retval = true;
       else if (!(exp->X_add_symbol))
-	{
-	  retval = true;
-	}
+	retval = true;
       else if (!symbol_resolved_p (exp->X_add_symbol))
+	retval = false;
+      else if (exp->X_add_symbol)
 	{
-	  retval = false;
-	}
-      else
-	{
-	  if (exp->X_add_symbol)
+	  if (bfd_is_abs_section (S_GET_SEGMENT (exp->X_add_symbol)))
+	    retval = true;
+	  /* FIXME (lc) rather bad to test if we need another symbol */
+	  if (exp->X_op >= O_logical_not)
 	    {
-	      if (bfd_is_abs_section (S_GET_SEGMENT (exp->X_add_symbol)))
-		{
-		  retval = true;
-		}
-	      /* FIXME (lc) rather bad to test if we need another symbol */
-	      if (exp->X_op >= O_logical_not)
-		{
-		  if (bfd_is_abs_section (S_GET_SEGMENT (exp->X_op_symbol)))
-		    {
-		      retval = true;
-		    }
-		  else
-		    {
-		      retval = false;
-		    }
-		}		/* if (exp->X_op_symbol) */
-	    }			/* if ( exp->X_add_symbol && ...sy_resolved) */
-	}			/* else if ( !(exp->X_add_symbol) && !(exp->X_op_symbol) ) */
+	      if (bfd_is_abs_section (S_GET_SEGMENT (exp->X_op_symbol)))
+		retval = true;
+	      else
+		retval = false;
+	    }
+	}
     }
 
   return retval;
@@ -1909,7 +1769,7 @@ is_constant_expression (expressionS * exp)
 /* Called for any expression that can not be recognized.  When the
  * function is called, `input_line_pointer' will point to the start of
  * the expression.  */
-
+/* FIXME: Should be done by the parser */
 void
 md_operand (expressionS * e)
 {
@@ -1945,9 +1805,7 @@ md_operand (expressionS * e)
       /* Skip '('.  */
       ++input_line_pointer;
       if (!pseudo_func[i].pseudo_relocs.has_no_arg)
-	{
-	  expression (e);
-	}
+	expression (e);
       if (*input_line_pointer++ != ')')
 	{
 	  as_bad ("Missing ')'");
@@ -1963,6 +1821,7 @@ md_operand (expressionS * e)
       e->X_op = O_pseudo_fixup;
       e->X_op_symbol = pseudo_func[i].sym;
       break;
+
     default:
       break;
     }
@@ -1998,35 +1857,30 @@ static void
 assemble_tokens (const char *opname,
 		 const expressionS * tok, int ntok, const char *s)
 {
-  const kvxopc_t *opcode;
-  kvxinsn_t *insn;
 
   /* make sure there is room in instruction buffer */
+  /* Was KVXMAXBUNDLEISSUE, changed because of NOPs */
   if (insncnt >= KVXMAXBUNDLEWORDS)
-    {				/* Was KVXMAXBUNDLEISSUE, changed because of NOPs */
-      as_fatal ("too many instructions in bundle.");
-    }
+    as_fatal ("[assemble_tokens]: too many instructions in bundle.");
 
+  /* TODO: Merge */
+  kvxinsn_t *insn;
   insn = insbuf + insncnt;
 
   /* find the instruction in the opcode table */
-  opcode = (kvxopc_t *) str_hash_find (kvx_opcode_hash, opname);
+  const kvxopc_t *opcode = str_hash_find (kvx_opcode_hash, opname);
   if (opcode)
     {
       if (!(opcode = find_format (opcode, tok, ntok, s)))
 	{
 	  if (diagnostics)
-	    {
-	      as_bad
-		("[assemble_tokens] : couldn't find format for operand `%s':\n\t%s",
-		 opname, s);
-	    }
+	    as_bad ("[assemble_tokens]: "
+		    "couldn't find format for operand `%s':\n\t%s",
+		    opname, s);
 	  else
-	    {
-	      as_bad
-		("[assemble_tokens] : couldn't find format for operand `%s'.",
-		 opname);
-	    }
+	    as_bad ("[assemble_tokens]: "
+		    "couldn't find format for operand `%s'.",
+		    opname);
 	}
       else
 	{
@@ -2037,14 +1891,11 @@ assemble_tokens (const char *opname,
   else
     {
       if (diagnostics)
-	{
-	  as_bad ("[assemble_tokens] : couldn't find op `%s'\n\t%s", opname,
-		  s);
-	}
+	as_bad ("[assemble_tokens]: couldn't find op `%s'\n\t%s",
+		opname, s);
       else
-	{
-	  as_bad ("[assemble_tokens] : couldn't find op `%s'.", opname);
-	}
+	as_bad ("[assemble_tokens]: couldn't find op `%s'.",
+		opname);
     }
 }
 
@@ -2057,11 +1908,10 @@ static int
 insn_syntax (kvxopc_t * op, char *buf, int buf_size)
 {
   int chars = snprintf (buf, buf_size, "%s ", op->as_op);
-  int i;
   const char *fmtp = op->fmtstring;
   char ch = 0;
 
-  for (i = 0; op->format[i]; i++)
+  for (int i = 0; op->format[i]; i++)
     {
       int type = op->format[i]->type;
       const char *type_name = op->format[i]->tname;
@@ -2089,6 +1939,9 @@ insn_syntax (kvxopc_t * op, char *buf, int buf_size)
 	  break;
 	case RegClass_kvx_pairedReg:
 	  chars += snprintf (&buf[chars], buf_size - chars, "prf");
+	  break;
+	case RegClass_kvx_quadReg:
+	  chars += snprintf (&buf[chars], buf_size - chars, "qrf");
 	  break;
 	case RegClass_kvx_systemReg:
 	case RegClass_kv3_v2_systemReg:
@@ -2124,13 +1977,33 @@ insn_syntax (kvxopc_t * op, char *buf, int buf_size)
 	case RegClass_kvx_vectorReg:
 	case RegClass_kvx_vectorRegE:
 	case RegClass_kvx_vectorRegO:
+	case RegClass_kvx_tileReg:
 	case RegClass_kvx_tileReg_0:
 	case RegClass_kvx_tileReg_1:
+	case RegClass_kvx_matrixReg:
 	case RegClass_kvx_matrixReg_0:
 	case RegClass_kvx_matrixReg_1:
 	case RegClass_kvx_matrixReg_2:
 	case RegClass_kvx_matrixReg_3:
 	  chars += snprintf (&buf[chars], buf_size - chars, "arf");
+	  break;
+	case RegClass_kvx_buffer2Reg:
+	  chars += snprintf (&buf[chars], buf_size - chars, "x2rf");
+	  break;
+	case RegClass_kvx_buffer4Reg:
+	  chars += snprintf (&buf[chars], buf_size - chars, "x4rf");
+	  break;
+	case RegClass_kvx_buffer8Reg:
+	  chars += snprintf (&buf[chars], buf_size - chars, "x8rf");
+	  break;
+	case RegClass_kvx_buffer16Reg:
+	  chars += snprintf (&buf[chars], buf_size - chars, "x16rf");
+	  break;
+	case RegClass_kvx_buffer32Reg:
+	  chars += snprintf (&buf[chars], buf_size - chars, "x32rf");
+	  break;
+	case RegClass_kvx_buffer64Reg:
+	  chars += snprintf (&buf[chars], buf_size - chars, "x64rf");
 	  break;
 	case Immediate_kvx_pcrel17:
 	case Immediate_kvx_pcrel27:
@@ -2141,18 +2014,15 @@ insn_syntax (kvxopc_t * op, char *buf, int buf_size)
 	case Immediate_kvx_wrapped32:
 	case Immediate_kvx_signed37:
 	case Immediate_kvx_signed43:
+	case Immediate_kvx_signed54:
 	case Immediate_kvx_wrapped64:
 	case Immediate_kvx_brknumber:
 	case Immediate_kvx_sysnumber:
 	case Immediate_kvx_unsigned6:
 	  if (flags & kvxSIGNED)
-	    {
-	      chars += snprintf (&buf[chars], buf_size - chars, "s%d", width);
-	    }
+	    chars += snprintf (&buf[chars], buf_size - chars, "s%d", width);
 	  else
-	    {
-	      chars += snprintf (&buf[chars], buf_size - chars, "u%d", width);
-	    }
+	    chars += snprintf (&buf[chars], buf_size - chars, "u%d", width);
 	  break;
 	default:
 	  fprintf (stderr, "error: unexpected operand type (%s)\n",
@@ -2169,13 +2039,9 @@ insn_syntax (kvxopc_t * op, char *buf, int buf_size)
     }
 
   if (chars < buf_size)
-    {
-      buf[chars++] = '\0';
-    }
+    buf[chars++] = '\0';
   else
-    {
-      buf[buf_size - 1] = '\0';
-    }
+    buf[buf_size - 1] = '\0';
 
   return chars;
 }
@@ -2187,11 +2053,10 @@ kvx_print_insn (kvxopc_t * op)
 {
   char asm_str[ASM_CHARS_MAX];
   int chars = insn_syntax (op, asm_str, ASM_CHARS_MAX);
-  int i;
   const char *insn_type = "UNKNOWN";
   const char *insn_mode = "";
 
-  for (i = chars - 1; i < ASM_CHARS_MAX - 1; i++)
+  for (int i = chars - 1; i < ASM_CHARS_MAX - 1; i++)
     asm_str[i] = '-';
 
   switch (op->bundling)
@@ -2251,6 +2116,8 @@ kvx_print_insn (kvxopc_t * op)
 	  op->wordcount, insn_type, insn_mode);
 }
 
+/* Comparison function compatible with qsort.  This is used to sort the issues
+   into the right order.  */
 static int
 kvxinsn_compare (const void *a, const void *b)
 {
@@ -2271,13 +2138,13 @@ kvx_reorder_bundle (kvxinsn_t * bundle_insn[], int bundle_insncnt)
   enum
   { EXU_BCU, EXU_TCA, EXU_ALU0, EXU_ALU1, EXU_MAU, EXU_LSU, EXU__ };
   kvxinsn_t *issued[EXU__];
-  int i, tag, exu;
+  int tag, exu;
 
   /* Sort the bundle_insn in order of bundling. */
   qsort (bundle_insn, bundle_insncnt, sizeof (kvxinsn_t *), kvxinsn_compare);
 
   memset (issued, 0, sizeof (issued));
-  for (i = 0; i < bundle_insncnt; i++)
+  for (int i = 0; i < bundle_insncnt; i++)
     {
       kvxinsn_t *kvxinsn = bundle_insn[i];
       tag = -1, exu = -1;
@@ -2290,17 +2157,13 @@ kvx_reorder_bundle (kvxinsn_t * bundle_insn[], int bundle_insncnt)
 	  break;
 	case Bundling_kvx_BCU:
 	  if (!issued[EXU_BCU])
-	    {
-	      issued[EXU_BCU] = kvxinsn;
-	    }
+	    issued[EXU_BCU] = kvxinsn;
 	  else
 	    as_fatal ("More than one BCU instruction in bundle");
 	  break;
 	case Bundling_kvx_TCA:
 	  if (!issued[EXU_TCA])
-	    {
-	      issued[EXU_TCA] = kvxinsn;
-	    }
+	    issued[EXU_TCA] = kvxinsn;
 	  else
 	    as_fatal ("More than one TCA instruction in bundle");
 	  break;
@@ -2395,22 +2258,17 @@ kvx_reorder_bundle (kvxinsn_t * bundle_insn[], int bundle_insncnt)
       if (tag >= 0)
 	{
 	  if (issued[exu]->immx0 != NOIMMX)
-	    {
-	      immxbuf[issued[exu]->immx0].words[0] |= (tag << 27);
-	    }
+	    immxbuf[issued[exu]->immx0].words[0] |= (tag << 27);
 	  if (issued[exu]->immx1 != NOIMMX)
-	    {
-	      immxbuf[issued[exu]->immx1].words[0] |= (tag << 27);
-	    }
+	    immxbuf[issued[exu]->immx1].words[0] |= (tag << 27);
 	}
     }
 
+  int i;
   for (i = 0, exu = 0; exu < EXU__; exu++)
     {
       if (issued[exu])
-	{
-	  bundle_insn[i++] = issued[exu];
-	}
+	bundle_insn[i++] = issued[exu];
     }
   if (i != bundle_insncnt)
     as_fatal ("Mismatch between bundle and issued instructions");
@@ -2444,13 +2302,12 @@ md_assemble (char *s)
   /* check for bundle end */
   if (strncmp (t, "be", 2) == 0)
     {
-      int j;
       inside_bundle = 0;
       unwind_bundle_count++;	/* count of bundles in current proc */
       //int sec_align = bfd_get_section_alignment(stdoutput, now_seg);
-
       {
-	kvxinsn_t *bundle_insn[KVXMAXBUNDLEWORDS];	/* Was KVXMAXBUNDLEISSUE, changed because of NOPs */
+	/* Was KVXMAXBUNDLEISSUE, changed because of NOPs */
+	kvxinsn_t *bundle_insn[KVXMAXBUNDLEWORDS];
 	int bundle_insncnt = 0;
 	int syllables = 0;
 	int entry;
@@ -2462,7 +2319,7 @@ md_assemble (char *s)
 	/* Emit Dwarf debug line information */
 	dwarf2_emit_insn (0);
 #endif
-	for (j = 0; j < insncnt; j++)
+	for (int j = 0; j < insncnt; j++)
 	  {
 	    insbuf[j].order = j;
 	    bundle_insn[bundle_insncnt++] = &insbuf[j];
@@ -2470,10 +2327,8 @@ md_assemble (char *s)
 	  }
 
 	if (syllables + immxcnt > KVXMAXBUNDLEWORDS)
-	  {
 	    as_fatal ("Bundle has too many syllables : %d instead of %d",
 		      syllables + immxcnt, KVXMAXBUNDLEWORDS);
-	  }
 
 	/* Check that resources are not oversubscribed.
 	 * We check only for a single bundle, so resources that are used
@@ -2494,13 +2349,13 @@ md_assemble (char *s)
 		int reservation = insn_reservation & 0xff;
 		const int *reservation_table =
 		  kvx_reservation_table_table[reservation];
-		for (j = 0; j < reservation_table_len; j++)
+		for (int j = 0; j < reservation_table_len; j++)
 		  resources_used[j] += reservation_table[j];
 	      }
 
 	    for (i = 0; i < kvx_reservation_table_lines; i++)
 	      {
-		for (j = 0; j < kvx_resource_max; j++)
+		for (int j = 0; j < kvx_resource_max; j++)
 		  if (resources_used[(i * kvx_resource_max) + j] >
 		      resources[j])
 		    {
@@ -2514,11 +2369,9 @@ md_assemble (char *s)
 	    free (resources_used);
 	  }
 
+	// reorder and check the bundle
 	if (!generate_illegal_code)
-	  {
-	    // reorder and check the bundle
-	    kvx_reorder_bundle (bundle_insn, bundle_insncnt);
-	  }
+	  kvx_reorder_bundle (bundle_insn, bundle_insncnt);
 
 	/* The ordering of the insns has been set correctly in bundle_insn. */
 	for (entry = 0; entry < bundle_insncnt; entry++)
@@ -2532,23 +2385,20 @@ md_assemble (char *s)
 	entry = 0;
 	for (tag = 0; tag < 4; tag++)
 	  {
-	    for (j = 0; j < immxcnt; j++)
+	    for (int j = 0; j < immxcnt; j++)
 	      {
 		if (kvx_exunum2_fld (immxbuf[j].words[0]) == tag)
 		  {
 		    assert (immxbuf[j].written == 0);
 		    int insn_pos = bundle_insncnt + entry;
-		    emit_insn (&(immxbuf[j]), insn_pos,
-			       (entry == (immxcnt - 1)));
+		    emit_insn (&(immxbuf[j]), insn_pos, entry == immxcnt - 1);
 		    immxbuf[j].written = 1;
 		    entry++;
 		  }
 	      }
 	  }
 	if (entry != immxcnt)
-	  {
-	    as_fatal ("%d IMMX produced, only %d emitted.", immxcnt, entry);
-	  }
+	  as_fatal ("%d IMMX produced, only %d emitted.", immxcnt, entry);
       }
 
       {
@@ -2557,8 +2407,8 @@ md_assemble (char *s)
 	   bundle. This is because usually these labels point to
 	   the first instruction where some condition is met. If
 	   the label isn't handled this way it will be attached to
-	   the current bundle which is wrong as the conresponding
-	   instruction isn't executed yet. */
+	   the current bundle which is wrong as the corresponding
+	   instruction wasn't executed yet. */
 	while (label_fixes)
 	  {
 	    struct label_fix *fix = label_fixes;
@@ -2588,7 +2438,7 @@ md_assemble (char *s)
 
   assembling_insn = true;
 
-  /* parse arguments             */
+  /* parse arguments */
   if ((ntok = tokenize_arguments (t, tok, tok_begins, KVXMAXOPERANDS)) < 0)
     {
       if (error_str != NULL)
@@ -2597,9 +2447,7 @@ md_assemble (char *s)
 	  error_str = NULL;
 	}
       else
-	{
-	  as_bad ("syntax error");
-	}
+	as_bad ("syntax error");
     }
 
   inside_bundle = 1;
@@ -2660,7 +2508,7 @@ print_hash (void **slot, void *arg ATTRIBUTE_UNUSED)
 {
   string_tuple_t *tuple = *((string_tuple_t **) slot);
   printf ("%s\n", tuple->key);
-  return 0;
+  return 1;
 }
 
 static void
@@ -2676,9 +2524,7 @@ declare_register (const char *name, int number)
 void
 md_begin ()
 {
-  int i;
   kvx_set_cpu ();
-
 
   /*
    * Declare register names with symbols
@@ -2686,15 +2532,14 @@ md_begin ()
 
   kvx_reg_hash = str_htab_create ();
 
-  for (i = 0; i < kvx_regfiles[KVX_REGFILE_REGISTERS]; i++)
-    {
-      declare_register (kvx_registers[i].name, i);
-    }
+  for (int i = 0; i < kvx_regfiles[KVX_REGFILE_REGISTERS]; i++)
+    declare_register (kvx_registers[i].name, i);
 
   /* Sort optab, so that identical mnemonics appear consecutively */
   {
     int nel;
-    for (nel = 0; !STREQ ("", kvx_core_info->optab[nel].as_op); nel++);
+    for (nel = 0; !STREQ ("", kvx_core_info->optab[nel].as_op); nel++)
+      ;
     qsort (kvx_core_info->optab, nel, sizeof (kvx_core_info->optab[0]),
 	   kvxop_compar);
   }
@@ -2712,14 +2557,11 @@ md_begin ()
     for (op = kvx_core_info->optab; !(STREQ ("", op->as_op)); op++)
       {
 	/* enter in hash table if this is a new name */
-
 	if (!(STREQ (name, op->as_op)))
 	  {
 	    name = op->as_op;
 	    if (str_hash_insert (kvx_opcode_hash, name, (PTR) op, 0))
-	      {
-		as_fatal ("internal error: can't hash opcode `%s'", name);
-	      }
+	      as_fatal ("internal error: can't hash opcode `%s'", name);
 	  }
       }
   }
@@ -2732,11 +2574,8 @@ md_begin ()
 
   if (dump_insn)
     {
-      kvxopc_t *op;
-      for (op = kvx_core_info->optab; !(STREQ ("", op->as_op)); op++)
-	{
-	  print_insn (op);
-	}
+      for (kvxopc_t *op = kvx_core_info->optab; !(STREQ ("", op->as_op)); op++)
+	print_insn (op);
       exit (0);
     }
 
@@ -2751,118 +2590,56 @@ md_begin ()
   bfd_set_section_alignment (bss_section, 2);	/* -- 4 bytes */
   subseg_set (text_section, 0);
 
-  symbolS *gotoff_sym = symbol_create (".<gotoff>", undefined_section,
-				       &zero_address_frag, 0);
-  symbolS *got_sym = symbol_create (".<got>", undefined_section,
-				    &zero_address_frag, 0);
-  symbolS *plt_sym = symbol_create (".<plt>", undefined_section,
-				    &zero_address_frag, 0);
-  /* symbolS *tprel_sym = symbol_create (".<tprel>", undefined_section, 0, */
-  /*                                     &zero_address_frag); */
-  symbolS *tlsgd_sym = symbol_create (".<tlsgd>", undefined_section,
-				      &zero_address_frag, 0);
-  symbolS *tlsie_sym = symbol_create (".<tlsie>", undefined_section,
-				      &zero_address_frag, 0);
-  symbolS *tlsle_sym = symbol_create (".<tlsle>", undefined_section,
-				      &zero_address_frag, 0);
-  symbolS *tlsld_sym = symbol_create (".<tlsld>", undefined_section,
-				      &zero_address_frag, 0);
-  symbolS *dtpoff_sym = symbol_create (".<dtpoff>", undefined_section,
-				       &zero_address_frag, 0);
-  symbolS *plt64_sym = symbol_create (".<plt64>", undefined_section,
-				      &zero_address_frag, 0);
-  symbolS *gotaddr_sym = symbol_create (".<gotaddr>", undefined_section,
-					&zero_address_frag, 0);
-  symbolS *pcrel16_sym = symbol_create (".<pcrel16>", undefined_section,
-					&zero_address_frag, 0);
-  symbolS *pcrel_sym = symbol_create (".<pcrel>", undefined_section,
-				      &zero_address_frag, 0);
-  symbolS *signed32_sym = symbol_create (".<signed32>", undefined_section,
-					 &zero_address_frag, 0);
+  symbolS *gotoff_sym   = symbol_create (".<gotoff>",   undefined_section, &zero_address_frag, 0);
+  symbolS *got_sym      = symbol_create (".<got>",      undefined_section, &zero_address_frag, 0);
+  symbolS *plt_sym      = symbol_create (".<plt>",      undefined_section, &zero_address_frag, 0);
+  /* symbolS *tprel_sym = symbol_create (".<tprel>",    undefined_section, &zero_address_frag, 0); */
+  symbolS *tlsgd_sym    = symbol_create (".<tlsgd>",    undefined_section, &zero_address_frag, 0);
+  symbolS *tlsie_sym    = symbol_create (".<tlsie>",    undefined_section, &zero_address_frag, 0);
+  symbolS *tlsle_sym    = symbol_create (".<tlsle>",    undefined_section, &zero_address_frag, 0);
+  symbolS *tlsld_sym    = symbol_create (".<tlsld>",    undefined_section, &zero_address_frag, 0);
+  symbolS *dtpoff_sym   = symbol_create (".<dtpoff>",   undefined_section, &zero_address_frag, 0);
+  symbolS *plt64_sym    = symbol_create (".<plt64>",    undefined_section, &zero_address_frag, 0);
+  symbolS *gotaddr_sym  = symbol_create (".<gotaddr>",  undefined_section, &zero_address_frag, 0);
+  symbolS *pcrel16_sym  = symbol_create (".<pcrel16>",  undefined_section, &zero_address_frag, 0);
+  symbolS *pcrel_sym    = symbol_create (".<pcrel>",    undefined_section, &zero_address_frag, 0);
+  symbolS *signed32_sym = symbol_create (".<signed32>", undefined_section, &zero_address_frag, 0);
 
-  for (i = 0; i < NELEMS (pseudo_func); ++i)
+  for (int i = 0; i < NELEMS (pseudo_func); ++i)
     {
       symbolS *sym;
       if (!strcmp (pseudo_func[i].name, "gotoff"))
-	{
-	  sym = gotoff_sym;
-	}
+	sym = gotoff_sym;
       else if (!strcmp (pseudo_func[i].name, "got"))
-	{
-	  sym = got_sym;
-	}
+	sym = got_sym;
       else if (!strcmp (pseudo_func[i].name, "plt"))
-	{
-	  sym = plt_sym;
-	}
+	sym = plt_sym;
       else if (!strcmp (pseudo_func[i].name, "tlsgd"))
-	{
-	  sym = tlsgd_sym;
-	}
+	sym = tlsgd_sym;
       else if (!strcmp (pseudo_func[i].name, "tlsle"))
-	{
-	  sym = tlsle_sym;
-	}
+	sym = tlsle_sym;
       else if (!strcmp (pseudo_func[i].name, "tlsld"))
-	{
-	  sym = tlsld_sym;
-	}
+	sym = tlsld_sym;
       else if (!strcmp (pseudo_func[i].name, "dtpoff"))
-	{
-	  sym = dtpoff_sym;
-	}
+	sym = dtpoff_sym;
       else if (!strcmp (pseudo_func[i].name, "tlsie"))
-	{
-	  sym = tlsie_sym;
-	}
+	sym = tlsie_sym;
       else if (!strcmp (pseudo_func[i].name, "plt64"))
-	{
-	  sym = plt64_sym;
-	}
+	sym = plt64_sym;
       else if (!strcmp (pseudo_func[i].name, "pcrel16"))
-	{
-	  sym = pcrel16_sym;
-	}
+	sym = pcrel16_sym;
       else if (!strcmp (pseudo_func[i].name, "pcrel"))
-	{
-	  sym = pcrel_sym;
-	}
+	sym = pcrel_sym;
       else if (!strcmp (pseudo_func[i].name, "gotaddr"))
-	{
-	  sym = gotaddr_sym;
-	}
+	sym = gotaddr_sym;
       else if (!strcmp (pseudo_func[i].name, "signed32"))
-	{
-	  sym = signed32_sym;
-	}
+	sym = signed32_sym;
       else
-	{
-	  as_fatal ("internal error: Unknown pseudo func `%s'",
-		    pseudo_func[i].name);
-	}
+	as_fatal ("internal error: Unknown pseudo func `%s'",
+	    pseudo_func[i].name);
 
       pseudo_func[i].sym = sym;
     }
-
-  /* pseudo_func[FUNC_GOTOFF_RELATIVE].u.sym = */
-  /*   symbol_create (".<gotoff>", undefined_section, FUNC_GOTOFF_RELATIVE, */
-  /*                      &zero_address_frag); */
-  /* pseudo_func[FUNC_GOTOFF64_RELATIVE].u.sym = */
-  /*   symbol_create (".<gotoff64>", undefined_section, FUNC_GOTOFF64_RELATIVE, */
-  /*                      &zero_address_frag); */
-  /* pseudo_func[FUNC_GOT_RELATIVE].u.sym = */
-  /*   symbol_create (".<got>", undefined_section, FUNC_GOT_RELATIVE, */
-  /*                      &zero_address_frag); */
-  /* pseudo_func[FUNC_PLT_RELATIVE].u.sym = */
-  /*   symbol_create (".<plt>", undefined_section, FUNC_PLT_RELATIVE, */
-  /*                      &zero_address_frag); */
-  /* pseudo_func[FUNC_TP_RELATIVE].u.sym = */
-  /*   symbol_create (".<tprel>", undefined_section, FUNC_TP_RELATIVE, */
-  /*                      &zero_address_frag); */
-  /* pseudo_func[FUNC_TP64_RELATIVE].u.sym = */
-  /*   symbol_create (".<tprel64>", undefined_section, FUNC_TP64_RELATIVE, */
-  /*                      &zero_address_frag); */
-  /*  bfd_set_private_flags(stdoutput, 0); *//* default flags */
 }
 
 /***************************************************/
@@ -3081,13 +2858,14 @@ md_apply_fix (fixS * fixP, valueT * valueP, segT segmentP ATTRIBUTE_UNUSED)
 	case BFD_RELOC_KVX_S37_GOT_LO10:
 
 	default:
-	  as_fatal
-	    ("[md_apply_fix] unsupported relocation type (type not handled : %d)",
-	     fixP->fx_r_type);
+	  as_fatal ("[md_apply_fix]:"
+		    "unsupported relocation type (type not handled : %d)",
+		    fixP->fx_r_type);
 	}
     }
 }
 
+/* FIXME: Is this really needed (see tc-kvx.h)?
 void
 kvx_validate_fix (fixS * fix)
 {
@@ -3106,6 +2884,7 @@ kvx_validate_fix (fixS * fix)
 
   return;
 }
+*/
 
 /*
  * Warning: Can be called only in fixup_segment() after fx_addsy field
@@ -3426,9 +3205,7 @@ kvx_md_start_line_hook (void)
       bool newline_seen = false;
 
       if (t[2] == ';')
-	{
-	  as_fatal ("Syntax error: Illegal ;;; token");
-	}
+	as_fatal ("Syntax error: Illegal ;;; token");
 
       tmp_t = t + 2;
 
@@ -3438,9 +3215,7 @@ kvx_md_start_line_hook (void)
 		 ((tmp_t[0] == ' ') || (tmp_t[0] == '\n')))
 	    {
 	      if (tmp_t[0] == '\n')
-		{
-		  newline_seen = true;
-		}
+		newline_seen = true;
 	      tmp_t++;
 	    }
 	  if (tmp_t[0] == ';' && tmp_t[1] == ';')
@@ -3450,15 +3225,10 @@ kvx_md_start_line_hook (void)
 	       * message from read.c will be raised: "junk at end of line..."
 	       */
 	      if (tmp_t[2] == ';')
-		{
-		  as_fatal ("Syntax error: Illegal ;;; token");
-		}
+		as_fatal ("Syntax error: Illegal ;;; token");
 
 	      if (!newline_seen)
-		{
-		  as_fatal
-		    ("Syntax error: More than one bundle stop on a line");
-		}
+		  as_fatal ("Syntax error: More than one bundle stop on a line");
 	      newline_seen = false;	/* reset */
 
 	      /* this is an empty bundle, transform it into an
@@ -3469,9 +3239,7 @@ kvx_md_start_line_hook (void)
 	      tmp_t += 2;
 	    }
 	  else
-	    {
-	      break;
-	    }
+	    break;
 	}
     }
 
@@ -3506,9 +3274,7 @@ kvx_end (void)
   newflags = kvx_core | kvx_abi | kvx_pic_flags;
 
   if (kvx_arch_size == 64)
-    {
-      newflags |= ELF_KVX_ABI_64B_ADDR_BIT;
-    }
+    newflags |= ELF_KVX_ABI_64B_ADDR_BIT;
 
   bfd_set_private_flags (stdoutput, newflags);
 
@@ -3531,8 +3297,6 @@ kvx_type (int start ATTRIBUTE_UNUSED)
   symbolS *sym;
   elf_symbol_type *elfsym;
 
-  /* name = input_line_pointer; */
-  /* c = get_symbol_end(); */
   c = get_symbol_name (&name);
   sym = symbol_find_or_make (name);
   elfsym = (elf_symbol_type *) symbol_get_bfdsym (sym);
@@ -3587,28 +3351,6 @@ kvx_type (int start ATTRIBUTE_UNUSED)
   elfsym->symbol.flags |= type;
   symbol_get_bfdsym (sym)->flags |= type;
 
-/* FIXME: do we need that? */
-/*
-    while (*input_line_pointer == ',') {
-        ++input_line_pointer;
-
-        SKIP_WHITESPACE();
-
-        typename = input_line_pointer;
-        c = get_symbol_end();
-        if (strcmp(typename, "moveable") == 0) {
-            if (emit_all_relocs) {
-                S_SET_OTHER(sym, S_GET_OTHER(sym) | STO_MOVEABLE);
-            }
-        } else if (strcmp(typename, "used") == 0) {
-            if (emit_all_relocs) {
-                S_SET_OTHER(sym, S_GET_OTHER(sym) | STO_USED);
-            }
-        } else
-            as_bad(_("unrecognized symbol type \"%s\""), typename);
-        *input_line_pointer = c;
-    }
-*/
   demand_empty_rest_of_line ();
 }
 
@@ -3624,9 +3366,7 @@ kvx_endp (int start ATTRIBUTE_UNUSED)
   char *name;
 
   if (inside_bundle)
-    {
-      as_warn (".endp directive inside a bundle.");
-    }
+    as_warn (".endp directive inside a bundle.");
   /* function name is optionnal and is ignored */
   /* there may be several names separated by commas... */
   while (1)
@@ -3634,8 +3374,6 @@ kvx_endp (int start ATTRIBUTE_UNUSED)
       SKIP_WHITESPACE ();
       c = get_symbol_name (&name);
       (void) restore_line_pointer (c);
-      /* c = get_symbol_end(); */
-      /* *input_line_pointer = c; */
       SKIP_WHITESPACE ();
       if (*input_line_pointer != ',')
 	break;
@@ -3717,8 +3455,6 @@ kvx_proc (int start ATTRIBUTE_UNUSED)
       c = get_symbol_name (&name);
       (void) restore_line_pointer (c);
 
-      /* c = get_symbol_end(); */
-      /* *input_line_pointer = c; */
       SKIP_WHITESPACE ();
       if (*input_line_pointer != ',')
 	break;
@@ -3741,9 +3477,7 @@ kvx_proc (int start ATTRIBUTE_UNUSED)
   /* It is also required for generation of .size directive in kvx_endp() */
 
   if (size_type_function)
-    {
-      update_last_proc_sym = 1;
-    }
+    update_last_proc_sym = 1;
 }
 
 int
@@ -3840,7 +3574,7 @@ kvx_force_reloc_sub_same (fixS * fixP, segT sec)
       sec_name = segment_name (sec);
       if ((strcmp (sec_name, ".eh_frame") == 0) ||
 	  (strcmp (sec_name, ".except_table") == 0) ||
-	  (strncmp (sec_name, ".debug_", strlen (".debug_")) == 0))
+	  (strncmp (sec_name, ".debug_", sizeof (".debug_")) == 0))
 	{
 	  return 0;
 	}
