@@ -1,3 +1,8 @@
+2023-02-15  Benoit Dinechin <benoit.dinechin@kalray.eu>
+
+	* opcode/kv3.h: Sync [Add magic immediates for the kv3-2 AVG*HQ
+	  instructions.]
+
 2023-02-15  Julien Villette <jvillette@kalray.eu>
 
 	* opcode/kv3.h: Forgot some conjugate instructions: FMULCWDC ->
