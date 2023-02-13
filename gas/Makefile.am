@@ -290,6 +290,9 @@ TARGET_EXTRA_FILES = \
 	config/xtensa-relax.c \
 	config/xtensa-relax.h
 
+extra_objects = \
+	config/kvx-parse.@OBJEXT@
+
 # OBJ files in config
 
 OBJ_FORMAT_CFILES = \

@@ -23,6 +23,7 @@
 #include "tc-kvx.h"
 #include "opcode/kvx.h"
 #include "libiberty.h"
+// #include "kvx-parse.h"
 
 #include <assert.h>
 #include <stdio.h>
@@ -35,6 +36,26 @@
 #include "dwarf2dbg.h"
 #include "dw2gencfi.h"
 #endif
+
+struct token_s {
+  char *insn;
+  int begin, end;
+  int class_id, val;
+};
+
+struct token_list
+{
+  char *tok;
+  int val;
+  int class_id;
+  struct token_list *next;
+  int len;
+};
+
+void free_token_list (struct token_list *tok_list);
+struct token_list* parse (struct token_s tok);
+void setup (int version, int allow_all_sfr);
+void cleanup (void);
 
 #define D(args...) do { if(debug) fprintf(args); } while(0)
 
@@ -65,6 +86,8 @@ static int dump_table = 0;
 static int dump_insn = 0;
 /* Enable multiline diagnostics */
 static int diagnostics = 1;
+/* Enable more helpful error messages */
+static int more = 1;
 /* arch string passed as argument with -march option */
 char *march = NULL;
 
@@ -641,6 +664,8 @@ const char *md_shortopts = "hV";	/* catted to std short options */
 #define OPTION_ALL_SFR               (OPTION_MD_BASE + 16)
 #define OPTION_DIAGNOSTICS           (OPTION_MD_BASE + 17)
 #define OPTION_NO_DIAGNOSTICS        (OPTION_MD_BASE + 18)
+#define OPTION_MORE                  (OPTION_MD_BASE + 19)
+#define OPTION_NO_MORE               (OPTION_MD_BASE + 20)
 
 struct option md_longopts[] = {
   { "march",                 required_argument, NULL, OPTION_MARCH                 },
@@ -656,6 +681,8 @@ struct option md_longopts[] = {
   { "all-sfr",               no_argument,       NULL, OPTION_ALL_SFR               },
   { "diagnostics",           no_argument,       NULL, OPTION_DIAGNOSTICS           },
   { "no-diagnostics",        no_argument,       NULL, OPTION_NO_DIAGNOSTICS        },
+  { "more",                  no_argument,       NULL, OPTION_MORE                  },
+  { "no-more",               no_argument,       NULL, OPTION_NO_MORE               },
   { NULL,                    no_argument,       NULL, 0                            }
 };
 
@@ -753,6 +780,12 @@ md_parse_option (int c, const char *arg ATTRIBUTE_UNUSED)
       break;
     case OPTION_NO_DIAGNOSTICS:
       diagnostics = 0;
+      break;
+    case OPTION_MORE:
+      more = 1;
+      break;
+    case OPTION_NO_MORE:
+      more = 0;
       break;
     case OPTION_PIC:
       /* fallthrough, for now the same on KVX */
@@ -1848,6 +1881,29 @@ find_reservation (const kvxinsn_t * insn)
   return insn_reservation;
 }
 
+// static void
+// new_assemble_tokens (const struct token_list *tok_list) __attribute__((unused));
+// static void
+// new_assemble_tokens (const struct token_list *tok_list)
+// {
+//   assert (tok_list != NULL);
+// 
+//   /* The formats table registers the modifier into the opcode, therefore we need
+//      to fuse both before looking up the opcodes hashtable.  */
+//   char *opcode = NULL;
+//   if (tok_list->next && env.is_mod (tok_list->next->class_id))
+//     {
+//       int len = tok_list->len + tok_list->next->len + 1;
+//       opcode = malloc (len * sizeof (*opcode));
+//       stpcpy (stpcpy (opcode, tok_list->tok), tok_list->next->tok);
+//     }
+// 
+//   /* Find the format requested by the instruction.  */
+//   kv3opc_t *format = str_hash_find (kvx_opcode_hash, opname);
+// 
+// 
+// }
+
 /*
  * Given an opcode name and a pre-tokenized
  * set of arguments, take the
@@ -2133,7 +2189,7 @@ kvxinsn_compare (const void *a, const void *b)
 }
 
 static void
-kvx_reorder_bundle (kvxinsn_t * bundle_insn[], int bundle_insncnt)
+kvx_reorder_bundle (kvxinsn_t *bundle_insn[], int bundle_insncnt)
 {
   enum
   { EXU_BCU, EXU_TCA, EXU_ALU0, EXU_ALU1, EXU_MAU, EXU_LSU, EXU__ };
@@ -2387,7 +2443,8 @@ md_assemble (char *s)
 	  {
 	    for (int j = 0; j < immxcnt; j++)
 	      {
-		if (kvx_exunum2_fld (immxbuf[j].words[0]) == tag)
+#define kv3_exunum2_fld(x) (int)(((unsigned int)(x) >> 27) & 0x3)
+		if (kv3_exunum2_fld (immxbuf[j].words[0]) == tag)
 		  {
 		    assert (immxbuf[j].written == 0);
 		    int insn_pos = bundle_insncnt + entry;
@@ -2395,6 +2452,7 @@ md_assemble (char *s)
 		    immxbuf[j].written = 1;
 		    entry++;
 		  }
+#undef kv3_exunum2_fld
 	      }
 	  }
 	if (entry != immxcnt)
@@ -2424,6 +2482,19 @@ md_assemble (char *s)
       memset (immxbuf, 0, sizeof (immxbuf));
 
       return;
+    }
+
+  if (more && diagnostics)
+    {
+      char buf[512] = { 0 };
+      sscanf (s, "%511[^\n]", buf);
+      struct token_s my_tok = { .insn = buf, .begin = 0, .end = 0, .class_id = -1 , .val = 0 };
+      struct token_list *tok_lst = parse (my_tok);
+      if (!tok_lst)
+	{
+	  as_warn ("Use --no-more to silence those errors and get the old behavior.");
+	  as_warn ("The --no-more option may disappear anytime soon and you should not rely on it.");
+	}
     }
 
   /* get opcode info    */
@@ -2475,9 +2546,11 @@ kvx_set_cpu (void)
     {
     case ELF_KVX_CORE_KV3_1:
       kvx_bfd_mach = kvx_arch_size == 32 ? bfd_mach_kv3_1 : bfd_mach_kv3_1_64;
+      setup (1, allow_all_sfr);
       break;
     case ELF_KVX_CORE_KV3_2:
       kvx_bfd_mach = kvx_arch_size == 32 ? bfd_mach_kv3_2 : bfd_mach_kv3_2_64;
+      setup (2, allow_all_sfr);
       break;
     case ELF_KVX_CORE_KV4_1:
       kvx_bfd_mach = kvx_arch_size == 32 ? bfd_mach_kv4_1 : bfd_mach_kv4_1_64;
@@ -3282,6 +3355,8 @@ kvx_end (void)
   i_ehdrp->e_ident[EI_ABIVERSION] = kvx_abi;
   i_ehdrp->e_ident[EI_OSABI] = kvx_osabi;
 
+  cleanup ();
+
   if (inside_bundle && insncnt != 0)
     as_bad ("unexpected end-of-file while processing a bundle."
 	    "  Please check that ;; is on its own line.");
@@ -3575,9 +3650,7 @@ kvx_force_reloc_sub_same (fixS * fixP, segT sec)
       if ((strcmp (sec_name, ".eh_frame") == 0) ||
 	  (strcmp (sec_name, ".except_table") == 0) ||
 	  (strncmp (sec_name, ".debug_", sizeof (".debug_")) == 0))
-	{
-	  return 0;
-	}
+	return 0;
     }
   return 1;
 }
@@ -3629,7 +3702,7 @@ kvx_make_nops (char *buf, bfd_vma bytes)
 
 /* Pads code section with bundle of nops when possible, 0 if not. */
 void
-kvx_handle_align (fragS * fragP)
+kvx_handle_align (fragS *fragP)
 {
   switch (fragP->fr_type)
     {
