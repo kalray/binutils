@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2023-01-14 13:51+0000\n"
+"POT-Creation-Date: 2023-02-17 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +26,7 @@ msgid "specified register cannot be written to"
 msgstr ""
 
 #. Invalid option.
-#: aarch64-dis.c:103 arc-dis.c:807 arm-dis.c:12303
+#: aarch64-dis.c:103 arc-dis.c:807 arm-dis.c:12303 kv3-dis.c:330
 #, c-format
 msgid "unrecognised disassembler option: %s"
 msgstr ""
@@ -84,8 +85,8 @@ msgid ""
 msgstr ""
 
 #: aarch64-dis.c:4021 arc-dis.c:1607 arc-dis.c:1630 arc-dis.c:1633
-#: loongarch-dis.c:306 mips-dis.c:2897 mips-dis.c:2909 mips-dis.c:2912
-#: nfp-dis.c:2993 riscv-dis.c:1282 riscv-dis.c:1285
+#: kv3-dis.c:731 loongarch-dis.c:306 mips-dis.c:2897 mips-dis.c:2909
+#: mips-dis.c:2912 nfp-dis.c:2993 riscv-dis.c:1282 riscv-dis.c:1285
 #, c-format
 msgid "\n"
 msgstr ""
@@ -724,13 +725,13 @@ msgstr ""
 #: fr30-asm.c:502 fr30-asm.c:591 fr30-asm.c:698 frv-asm.c:1451 frv-asm.c:1455
 #: frv-asm.c:1544 frv-asm.c:1651 ip2k-asm.c:699 ip2k-asm.c:703 ip2k-asm.c:792
 #: ip2k-asm.c:899 iq2000-asm.c:647 iq2000-asm.c:651 iq2000-asm.c:740
-#: iq2000-asm.c:847 lm32-asm.c:537 lm32-asm.c:541 lm32-asm.c:630
-#: lm32-asm.c:737 m32c-asm.c:1772 m32c-asm.c:1776 m32c-asm.c:1865
-#: m32c-asm.c:1972 m32r-asm.c:516 m32r-asm.c:520 m32r-asm.c:609 m32r-asm.c:716
-#: mep-asm.c:1474 mep-asm.c:1478 mep-asm.c:1567 mep-asm.c:1674 mt-asm.c:783
-#: mt-asm.c:787 mt-asm.c:876 mt-asm.c:983 or1k-asm.c:763 or1k-asm.c:767
-#: or1k-asm.c:856 or1k-asm.c:963 xstormy16-asm.c:464 xstormy16-asm.c:468
-#: xstormy16-asm.c:557 xstormy16-asm.c:664
+#: iq2000-asm.c:847 lm32-asm.c:537 lm32-asm.c:541 lm32-asm.c:630 lm32-asm.c:737
+#: m32c-asm.c:1772 m32c-asm.c:1776 m32c-asm.c:1865 m32c-asm.c:1972
+#: m32r-asm.c:516 m32r-asm.c:520 m32r-asm.c:609 m32r-asm.c:716 mep-asm.c:1474
+#: mep-asm.c:1478 mep-asm.c:1567 mep-asm.c:1674 mt-asm.c:783 mt-asm.c:787
+#: mt-asm.c:876 mt-asm.c:983 or1k-asm.c:763 or1k-asm.c:767 or1k-asm.c:856
+#: or1k-asm.c:963 xstormy16-asm.c:464 xstormy16-asm.c:468 xstormy16-asm.c:557
+#: xstormy16-asm.c:664
 msgid "unrecognized instruction"
 msgstr ""
 
@@ -804,10 +805,9 @@ msgstr ""
 msgid "*unknown*"
 msgstr ""
 
-#: bpf-dis.c:203 epiphany-dis.c:279 fr30-dis.c:300 frv-dis.c:397
-#: ip2k-dis.c:289 iq2000-dis.c:190 lm32-dis.c:148 m32c-dis.c:892
-#: m32r-dis.c:280 mep-dis.c:1188 mt-dis.c:288 or1k-dis.c:175
-#: xstormy16-dis.c:169
+#: bpf-dis.c:203 epiphany-dis.c:279 fr30-dis.c:300 frv-dis.c:397 ip2k-dis.c:289
+#: iq2000-dis.c:190 lm32-dis.c:148 m32c-dis.c:892 m32r-dis.c:280 mep-dis.c:1188
+#: mt-dis.c:288 or1k-dis.c:175 xstormy16-dis.c:169
 #, c-format
 msgid "internal error: unrecognized field %d while printing insn"
 msgstr ""
@@ -830,8 +830,8 @@ msgstr ""
 
 #: bpf-ibld.c:203 cgen-asm.c:351 epiphany-ibld.c:203 fr30-ibld.c:203
 #: frv-ibld.c:203 ip2k-ibld.c:203 iq2000-ibld.c:203 lm32-ibld.c:203
-#: m32c-ibld.c:203 m32r-ibld.c:203 mep-ibld.c:203 mt-ibld.c:203
-#: or1k-ibld.c:203 xstormy16-ibld.c:203
+#: m32c-ibld.c:203 m32r-ibld.c:203 mep-ibld.c:203 mt-ibld.c:203 or1k-ibld.c:203
+#: xstormy16-ibld.c:203
 #, c-format
 msgid "operand out of range (%ld not between %ld and %ld)"
 msgstr ""
@@ -927,12 +927,12 @@ msgstr ""
 msgid "Address 0x%<PRIx64> is out of bounds.\n"
 msgstr ""
 
-#: disassemble.c:876
+#: disassemble.c:885
 #, c-format
 msgid "assertion fail %s:%d"
 msgstr ""
 
-#: disassemble.c:877
+#: disassemble.c:886
 msgid "Please report this bug"
 msgstr ""
 
@@ -1477,6 +1477,37 @@ msgstr ""
 #: iq2000-desc.c:2128
 #, c-format
 msgid "internal error: iq2000_cgen_cpu_open: no endianness specified"
+msgstr ""
+
+#: kv3-dis.c:718
+#, c-format
+msgid ""
+"\n"
+"The following KVX specific disassembler options are supported for use\n"
+"with the -M switch (multiple options should be separated by commas):\n"
+msgstr ""
+
+#: kv3-dis.c:722
+#, c-format
+msgid ""
+"\n"
+"  pretty               Print 32-bit words in natural order corresponding to "
+"re-ordered instruction.\n"
+msgstr ""
+
+#: kv3-dis.c:725
+#, c-format
+msgid ""
+"\n"
+"  compact-assembly     Do not emit a new line between bundles of "
+"instructions.\n"
+msgstr ""
+
+#: kv3-dis.c:728
+#, c-format
+msgid ""
+"\n"
+"  no-compact-assembly  Emit a new line between bundles of instructions.\n"
 msgstr ""
 
 #: lm32-asm.c:166

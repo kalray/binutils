@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gprof 2.39.90\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2022-12-31 12:22+0000\n"
+"POT-Creation-Date: 2023-02-17 13:45+0100\n"
 "PO-Revision-Date: 2023-01-04 20:55+0200\n"
 "Last-Translator: Roumen Petrov <transl@roumenpetrov.info>\n"
 "Language-Team: Bulgarian <dict@ludost.net>\n"
@@ -45,7 +45,9 @@ msgstr "%s: %s: неочакван край на файл\n"
 #: basic_blocks.c:196
 #, c-format
 msgid "%s: warning: ignoring basic-block exec counts (use -l or --line)\n"
-msgstr "%s: предупреждение: пренебрегнато броене на основни блокове (да се използва -l или --line)\n"
+msgstr ""
+"%s: предупреждение: пренебрегнато броене на основни блокове (да се използва -"
+"l или --line)\n"
 
 #. FIXME: This only works if bfd_vma is unsigned long.
 #: basic_blocks.c:289 basic_blocks.c:299
@@ -314,7 +316,8 @@ msgstr "%s: %s: открит неправилна отметка %d (повре�
 #: gmon_io.c:416
 #, c-format
 msgid "%s: profiling rate incompatible with first gmon file\n"
-msgstr "%s: честотата на диагностика е несъвместима с първия файл на \"gmon\"\n"
+msgstr ""
+"%s: честотата на диагностика е несъвместима с първия файл на \"gmon\"\n"
 
 #: gmon_io.c:467
 #, c-format
@@ -390,10 +393,12 @@ msgid ""
 "\t[--no-static] [--print-path] [--separate-files]\n"
 "\t[--static-call-graph] [--sum] [--table-length=len] [--traditional]\n"
 "\t[--version] [--width=n] [--ignore-non-functions]\n"
-"\t[--demangle[=STYLE]] [--no-demangle] [--external-symbol-table=name] [@FILE]\n"
+"\t[--demangle[=STYLE]] [--no-demangle] [--external-symbol-table=name] "
+"[@FILE]\n"
 "\t[image-file] [profile-file...]\n"
 msgstr ""
-"Употреба: %s [-[abcDhilLrsTvwxyz]] [-[ABCeEfFJnNOpPqQRStZ][име]] [-I директории]\n"
+"Употреба: %s [-[abcDhilLrsTvwxyz]] [-[ABCeEfFJnNOpPqQRStZ][име]] [-I "
+"директории]\n"
 "\t[-d[число]] [-k от/до] [-m мин-брой] [-t таблица-размер]\n"
 "\t[--[no-]annotated-source[=име]] [--[no-]exec-counts[=име]]\n"
 "\t[--[no-]flat-profile[=име]] [--[no-]graph[=име]]\n"
@@ -404,7 +409,8 @@ msgstr ""
 "\t[--no-static] [--print-path] [--separate-files]\n"
 "\t[--static-call-graph] [--sum] [--table-length=размер] [--traditional]\n"
 "\t[--version] [--width=число] [--ignore-non-functions]\n"
-"\t[--demangle[=ДЕКОРАЦИЯ]] [--no-demangle] [--external-symbol-table=име] [@ФАЙЛ]\n"
+"\t[--demangle[=ДЕКОРАЦИЯ]] [--no-demangle] [--external-symbol-table=име] "
+"[@ФАЙЛ]\n"
 "\t[файл-образ] [диагностичен-файл...]\n"
 
 #: gprof.c:178
@@ -430,35 +436,47 @@ msgstr "ГНУ gprof %s\n"
 
 #: gprof.c:427
 #, c-format
-msgid "Based on BSD gprof, copyright 1983 Regents of the University of California.\n"
-msgstr "На базата на BSD gprof, авторско право 1983 Regents of the University of California.\n"
+msgid "Kalray gprof version %s\n"
+msgstr ""
 
 #: gprof.c:428
 #, c-format
-msgid "This program is free software.  This program has absolutely no warranty.\n"
+msgid ""
+"Based on BSD gprof, copyright 1983 Regents of the University of California.\n"
+msgstr ""
+"На базата на BSD gprof, авторско право 1983 Regents of the University of "
+"California.\n"
+
+#: gprof.c:429
+#, c-format
+msgid ""
+"This program is free software.  This program has absolutely no warranty.\n"
 msgstr "Тази програма е свободен софтуер.  Тази програма е без гаранции.\n"
 
-#: gprof.c:469
+#: gprof.c:470
 #, c-format
 msgid "%s: unknown demangling style `%s'\n"
 msgstr "%s: непознато разкориране на имена '%s'\n"
 
-#: gprof.c:492
+#: gprof.c:493
 #, c-format
-msgid "%s: Only one of --function-ordering and --file-ordering may be specified.\n"
-msgstr "%s: Само една между --function-ordering и --file-ordering може да се зададе.\n"
+msgid ""
+"%s: Only one of --function-ordering and --file-ordering may be specified.\n"
+msgstr ""
+"%s: Само една между --function-ordering и --file-ordering може да се "
+"зададе.\n"
 
-#: gprof.c:544
+#: gprof.c:545
 #, c-format
 msgid "%s: sorry, file format `prof' is not yet supported\n"
 msgstr "%s: за съжаление, файловият формат 'prof', все още не се поддържа\n"
 
-#: gprof.c:598
+#: gprof.c:599
 #, c-format
 msgid "%s: gmon.out file is missing histogram\n"
 msgstr "%s: gmon.out файл без хистограма\n"
 
-#: gprof.c:605
+#: gprof.c:606
 #, c-format
 msgid "%s: gmon.out file is missing call-graph data\n"
 msgstr "%s: gmon.out файл без граф за извикванията\n"

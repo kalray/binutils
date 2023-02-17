@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gprof 2.39.90\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2022-12-31 12:22+0000\n"
+"POT-Creation-Date: 2023-02-17 13:45+0100\n"
 "PO-Revision-Date: 2023-01-05 09:38+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <gnu@d07.ru>\n"
@@ -16,7 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "X-Generator: Lokalize 20.12.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: alpha.c:102 mips.c:54
 msgid "<indirect child>"
@@ -45,7 +46,9 @@ msgstr "%s: %s: неожиданный конец файла\n"
 #: basic_blocks.c:196
 #, c-format
 msgid "%s: warning: ignoring basic-block exec counts (use -l or --line)\n"
-msgstr "%s: предупреждение: игнорируется счётчик выполнений простого блока (используйте -l или --line)\n"
+msgstr ""
+"%s: предупреждение: игнорируется счётчик выполнений простого блока "
+"(используйте -l или --line)\n"
 
 #. FIXME: This only works if bfd_vma is unsigned long.
 #: basic_blocks.c:289 basic_blocks.c:299
@@ -389,10 +392,12 @@ msgid ""
 "\t[--no-static] [--print-path] [--separate-files]\n"
 "\t[--static-call-graph] [--sum] [--table-length=len] [--traditional]\n"
 "\t[--version] [--width=n] [--ignore-non-functions]\n"
-"\t[--demangle[=STYLE]] [--no-demangle] [--external-symbol-table=name] [@FILE]\n"
+"\t[--demangle[=STYLE]] [--no-demangle] [--external-symbol-table=name] "
+"[@FILE]\n"
 "\t[image-file] [profile-file...]\n"
 msgstr ""
-"Использование: %s [-[abcDhilLrsTvwxyz]] [-[ABCeEfFJnNOpPqQRStZ][имя]] [-I каталоги]\n"
+"Использование: %s [-[abcDhilLrsTvwxyz]] [-[ABCeEfFJnNOpPqQRStZ][имя]] [-I "
+"каталоги]\n"
 "\t[-d[кол-во]] [-k с/на] [-m мин-счётчик] [-t длина-таблицы]\n"
 "\t[--[no-]annotated-source[=имя]] [--[no-]exec-counts[=имя]]\n"
 "\t[--[no-]flat-profile[=имя]] [--[no-]graph[=имя]]\n"
@@ -403,7 +408,8 @@ msgstr ""
 "\t[--no-static] [--print-path] [--separate-files]\n"
 "\t[--static-call-graph] [--sum] [--table-length=длина] [--traditional]\n"
 "\t[--version] [--width=n] [--ignore-non-functions]\n"
-"\t[--demangle[=СТИЛЬ]] [--no-demangle] [--external-symbol-table=имя] [@ФАЙЛ]\n"
+"\t[--demangle[=СТИЛЬ]] [--no-demangle] [--external-symbol-table=имя] "
+"[@ФАЙЛ]\n"
 "\t[файл-образа] [файл-профиля…]\n"
 
 #: gprof.c:178
@@ -429,35 +435,48 @@ msgstr "GNU gprof %s\n"
 
 #: gprof.c:427
 #, c-format
-msgid "Based on BSD gprof, copyright 1983 Regents of the University of California.\n"
-msgstr "На основе BSD gprof, copyright 1983 Regents of the University of California.\n"
+msgid "Kalray gprof version %s\n"
+msgstr ""
 
 #: gprof.c:428
 #, c-format
-msgid "This program is free software.  This program has absolutely no warranty.\n"
-msgstr "Эта программа является открытым программным обеспечением. Эта программа не имеет абсолютно никаких гарантий.\n"
+msgid ""
+"Based on BSD gprof, copyright 1983 Regents of the University of California.\n"
+msgstr ""
+"На основе BSD gprof, copyright 1983 Regents of the University of "
+"California.\n"
 
-#: gprof.c:469
+#: gprof.c:429
+#, c-format
+msgid ""
+"This program is free software.  This program has absolutely no warranty.\n"
+msgstr ""
+"Эта программа является открытым программным обеспечением. Эта программа не "
+"имеет абсолютно никаких гарантий.\n"
+
+#: gprof.c:470
 #, c-format
 msgid "%s: unknown demangling style `%s'\n"
 msgstr "%s: неизвестный стиль декодирования «%s»\n"
 
-#: gprof.c:492
+#: gprof.c:493
 #, c-format
-msgid "%s: Only one of --function-ordering and --file-ordering may be specified.\n"
-msgstr "%s: можно указать что-то одно: --function-ordering или --file-ordering.\n"
+msgid ""
+"%s: Only one of --function-ordering and --file-ordering may be specified.\n"
+msgstr ""
+"%s: можно указать что-то одно: --function-ordering или --file-ordering.\n"
 
-#: gprof.c:544
+#: gprof.c:545
 #, c-format
 msgid "%s: sorry, file format `prof' is not yet supported\n"
 msgstr "%s: файл в формате «prof» пока не поддерживается\n"
 
-#: gprof.c:598
+#: gprof.c:599
 #, c-format
 msgid "%s: gmon.out file is missing histogram\n"
 msgstr "%s: в файле gmon.out нет гистограммы\n"
 
-#: gprof.c:605
+#: gprof.c:606
 #, c-format
 msgid "%s: gmon.out file is missing call-graph data\n"
 msgstr "%s: в файле gmon.out нет данных по графу вызовов\n"
@@ -572,7 +591,8 @@ msgstr "Плоский профиль:\n"
 #: hist.c:711
 #, c-format
 msgid "%s: found a symbol that covers several histogram records"
-msgstr "%s: найден символ, который присутствует в нескольких записях гистограммы"
+msgstr ""
+"%s: найден символ, который присутствует в нескольких записях гистограммы"
 
 #: mips.c:71
 #, c-format

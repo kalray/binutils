@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opcodes 2.39.90\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2022-12-31 12:18+0000\n"
+"POT-Creation-Date: 2023-02-17 13:46+0100\n"
 "PO-Revision-Date: 2023-01-02 00:21+0100\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
@@ -30,7 +30,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "X-Generator: Poedit 3.2.2\n"
 
@@ -43,7 +44,7 @@ msgid "specified register cannot be written to"
 msgstr "nu se poate scrie în registrul specificat"
 
 #. Invalid option.
-#: aarch64-dis.c:103 arc-dis.c:807 arm-dis.c:12303
+#: aarch64-dis.c:103 arc-dis.c:807 arm-dis.c:12303 kv3-dis.c:330
 #, c-format
 msgid "unrecognised disassembler option: %s"
 msgstr "opțiune de dezasamblare nerecunoscută: %s"
@@ -115,8 +116,8 @@ msgstr ""
 "  debug_dump         Comutare temporară pentru urmărirea depanării.\n"
 
 #: aarch64-dis.c:4021 arc-dis.c:1607 arc-dis.c:1630 arc-dis.c:1633
-#: loongarch-dis.c:306 mips-dis.c:2897 mips-dis.c:2909 mips-dis.c:2912
-#: nfp-dis.c:2993 riscv-dis.c:1282 riscv-dis.c:1285
+#: kv3-dis.c:731 loongarch-dis.c:306 mips-dis.c:2897 mips-dis.c:2909
+#: mips-dis.c:2912 nfp-dis.c:2993 riscv-dis.c:1282 riscv-dis.c:1285
 #, c-format
 msgid "\n"
 msgstr "\n"
@@ -270,7 +271,8 @@ msgstr "se aștepta valoare directă(immediate) în virgulă mobilă"
 
 #: aarch64-opc.c:2447
 msgid "no shift amount allowed for 8-bit constants"
-msgstr "nu este permisă nicio valoare de schimbare pentru constantele de 8 biți"
+msgstr ""
+"nu este permisă nicio valoare de schimbare pentru constantele de 8 biți"
 
 #: aarch64-opc.c:2457
 msgid "shift amount must be 0 or 8"
@@ -350,7 +352,9 @@ msgstr "dimensiunea registrului este diferită față de instrucțiunea preceden
 
 #: aarch64-opc.c:5771
 msgid "instruction opens new dependency sequence without ending previous one"
-msgstr "instrucțiunea deschide o nouă secvență de dependență fără a o termina pe cea anterioară"
+msgstr ""
+"instrucțiunea deschide o nouă secvență de dependență fără a o termina pe cea "
+"anterioară"
 
 #: aarch64-opc.c:5800
 msgid "previous `movprfx' sequence not closed"
@@ -370,27 +374,38 @@ msgstr "se aștepta instrucțiunea prezisă după „movprfx”"
 
 #: aarch64-opc.c:5932
 msgid "merging predicate expected due to preceding `movprfx'"
-msgstr "se aștepta instrucțiunea de fuzionare prezisă de către instrucțiunea anterioară „movprfx”"
+msgstr ""
+"se aștepta instrucțiunea de fuzionare prezisă de către instrucțiunea "
+"anterioară „movprfx”"
 
 #: aarch64-opc.c:5944
 msgid "predicate register differs from that in preceding `movprfx'"
-msgstr "registrul prezis este diferit față de cel din instrucțiunea anterioară „movprfx”"
+msgstr ""
+"registrul prezis este diferit față de cel din instrucțiunea anterioară "
+"„movprfx”"
 
 #: aarch64-opc.c:5963
 msgid "output register of preceding `movprfx' not used in current instruction"
-msgstr "registrul de ieșire al instrucțiunii „movprfx” precedente nu este utilizat în instrucțiunea curentă"
+msgstr ""
+"registrul de ieșire al instrucțiunii „movprfx” precedente nu este utilizat "
+"în instrucțiunea curentă"
 
 #: aarch64-opc.c:5976
 msgid "output register of preceding `movprfx' expected as output"
-msgstr "registrul de ieșire al instrucțiunii „movprfx” precedente era așteptat ca ieștre"
+msgstr ""
+"registrul de ieșire al instrucțiunii „movprfx” precedente era așteptat ca "
+"ieștre"
 
 #: aarch64-opc.c:5988
 msgid "output register of preceding `movprfx' used as input"
-msgstr "registrul de ieșire al instrucțiunii „movprfx” precedente utilizat ca intrare"
+msgstr ""
+"registrul de ieșire al instrucțiunii „movprfx” precedente utilizat ca intrare"
 
 #: aarch64-opc.c:6004
 msgid "register size not compatible with previous `movprfx'"
-msgstr "dimensiunea registrului nu este compatibilă cu instrucțiunea „movprfx” anterioară"
+msgstr ""
+"dimensiunea registrului nu este compatibilă cu instrucțiunea „movprfx” "
+"anterioară"
 
 #: alpha-opc.c:154
 msgid "branch operand unaligned"
@@ -408,8 +423,10 @@ msgid ""
 "\t\t\t\t"
 msgstr ""
 "\n"
-"Avertisment: dezasamblarea poate fi greșită din cauza alegerii clasei de cod operațional ghicite.\n"
-"Utilizați -M<clasa[,clasa]> pentru a selecta clasa (clasele) de cod operațional corectă(e).\n"
+"Avertisment: dezasamblarea poate fi greșită din cauza alegerii clasei de cod "
+"operațional ghicite.\n"
+"Utilizați -M<clasa[,clasa]> pentru a selecta clasa (clasele) de cod "
+"operațional corectă(e).\n"
 "\t\t\t\t"
 
 #: arc-dis.c:442
@@ -467,7 +484,9 @@ msgstr "Recunoaște instrucțiunile NPS400."
 
 #: arc-dis.c:1507
 msgid "Use only hexadecimal number to print immediates."
-msgstr "Utilizează numai numere hexazecimale pentru a afișa valorile directe(immediate)."
+msgstr ""
+"Utilizează numai numere hexazecimale pentru a afișa valorile "
+"directe(immediate)."
 
 #: arc-dis.c:1582
 #, c-format
@@ -478,7 +497,8 @@ msgid ""
 msgstr ""
 "\n"
 "Următoarele opțiuni de dezasamblare specifice ARC sunt acceptate pentru\n"
-"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin virgule):\n"
+"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin "
+"virgule):\n"
 
 #: arc-dis.c:1616 mips-dis.c:2904 riscv-dis.c:1277
 #, c-format
@@ -488,7 +508,8 @@ msgid ""
 "   "
 msgstr ""
 "\n"
-"  Pentru opțiunile de mai sus, următoarele valori sunt acceptate pentru „%s”:\n"
+"  Pentru opțiunile de mai sus, următoarele valori sunt acceptate pentru "
+"„%s”:\n"
 "   "
 
 #: arc-dis.c:1626
@@ -679,7 +700,8 @@ msgstr "Se presupune că toate instrucțiunile sunt instrucțiuni Thumb"
 
 #: arm-dis.c:5211
 msgid "Examine preceding label to determine an insn's type"
-msgstr "Examinează eticheta anterioară pentru a determina tipul unei instrucțiui"
+msgstr ""
+"Examinează eticheta anterioară pentru a determina tipul unei instrucțiui"
 
 #: arm-dis.c:5212
 msgid "Select register names used in the APCS"
@@ -719,7 +741,8 @@ msgstr "«coproc» trebuie să aibă un argument: %s"
 #: arm-dis.c:12297
 #, c-format
 msgid "coprocN argument takes options \"generic\", \"cde\", or \"CDE\": %s"
-msgstr "argumentul „coprocN” acceptă numai valorile „generic”, „cde” sau „CDE”: %s"
+msgstr ""
+"argumentul „coprocN” acceptă numai valorile „generic”, „cde” sau „CDE”: %s"
 
 #: arm-dis.c:13009
 #, c-format
@@ -772,13 +795,13 @@ msgstr "mnemonică lipsă în sintaxă"
 #: fr30-asm.c:502 fr30-asm.c:591 fr30-asm.c:698 frv-asm.c:1451 frv-asm.c:1455
 #: frv-asm.c:1544 frv-asm.c:1651 ip2k-asm.c:699 ip2k-asm.c:703 ip2k-asm.c:792
 #: ip2k-asm.c:899 iq2000-asm.c:647 iq2000-asm.c:651 iq2000-asm.c:740
-#: iq2000-asm.c:847 lm32-asm.c:537 lm32-asm.c:541 lm32-asm.c:630
-#: lm32-asm.c:737 m32c-asm.c:1772 m32c-asm.c:1776 m32c-asm.c:1865
-#: m32c-asm.c:1972 m32r-asm.c:516 m32r-asm.c:520 m32r-asm.c:609 m32r-asm.c:716
-#: mep-asm.c:1474 mep-asm.c:1478 mep-asm.c:1567 mep-asm.c:1674 mt-asm.c:783
-#: mt-asm.c:787 mt-asm.c:876 mt-asm.c:983 or1k-asm.c:763 or1k-asm.c:767
-#: or1k-asm.c:856 or1k-asm.c:963 xstormy16-asm.c:464 xstormy16-asm.c:468
-#: xstormy16-asm.c:557 xstormy16-asm.c:664
+#: iq2000-asm.c:847 lm32-asm.c:537 lm32-asm.c:541 lm32-asm.c:630 lm32-asm.c:737
+#: m32c-asm.c:1772 m32c-asm.c:1776 m32c-asm.c:1865 m32c-asm.c:1972
+#: m32r-asm.c:516 m32r-asm.c:520 m32r-asm.c:609 m32r-asm.c:716 mep-asm.c:1474
+#: mep-asm.c:1478 mep-asm.c:1567 mep-asm.c:1674 mt-asm.c:783 mt-asm.c:787
+#: mt-asm.c:876 mt-asm.c:983 or1k-asm.c:763 or1k-asm.c:767 or1k-asm.c:856
+#: or1k-asm.c:963 xstormy16-asm.c:464 xstormy16-asm.c:468 xstormy16-asm.c:557
+#: xstormy16-asm.c:664
 msgid "unrecognized instruction"
 msgstr "instrucțiune nerecunoscută"
 
@@ -796,7 +819,8 @@ msgstr "eroare de sintaxă ( se aștepta „%c”, s-a găsit „%c”)"
 #: xstormy16-asm.c:521
 #, c-format
 msgid "syntax error (expected char `%c', found end of instruction)"
-msgstr "eroare de sintaxă (se aștepta char „%c”, s-a găsit sfârșit de instrucțiune)"
+msgstr ""
+"eroare de sintaxă (se aștepta char „%c”, s-a găsit sfârșit de instrucțiune)"
 
 #: bpf-asm.c:455 epiphany-asm.c:730 fr30-asm.c:585 frv-asm.c:1538
 #: ip2k-asm.c:786 iq2000-asm.c:734 lm32-asm.c:624 m32c-asm.c:1859
@@ -830,8 +854,12 @@ msgstr "instrucțiune greșită „%.50s”"
 
 #: bpf-desc.c:1768
 #, c-format
-msgid "internal error: bpf_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: bpf_cgen_rebuild_tables: valori conflictuale insn-chunk-bitsize: „%d” și „%d”"
+msgid ""
+"internal error: bpf_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: bpf_cgen_rebuild_tables: valori conflictuale insn-chunk-"
+"bitsize: „%d” și „%d”"
 
 #: bpf-desc.c:1856
 #, c-format
@@ -850,10 +878,9 @@ msgstr "eroare internă: bpf_cgen_cpu_open: endianness nedefinit"
 msgid "*unknown*"
 msgstr "*necunoscută*"
 
-#: bpf-dis.c:203 epiphany-dis.c:279 fr30-dis.c:300 frv-dis.c:397
-#: ip2k-dis.c:289 iq2000-dis.c:190 lm32-dis.c:148 m32c-dis.c:892
-#: m32r-dis.c:280 mep-dis.c:1188 mt-dis.c:288 or1k-dis.c:175
-#: xstormy16-dis.c:169
+#: bpf-dis.c:203 epiphany-dis.c:279 fr30-dis.c:300 frv-dis.c:397 ip2k-dis.c:289
+#: iq2000-dis.c:190 lm32-dis.c:148 m32c-dis.c:892 m32r-dis.c:280 mep-dis.c:1188
+#: mt-dis.c:288 or1k-dis.c:175 xstormy16-dis.c:169
 #, c-format
 msgid "internal error: unrecognized field %d while printing insn"
 msgstr "eroare internă: câmpnerecunoscut %d la scrierea instrucțiunii"
@@ -876,8 +903,8 @@ msgstr "operand în afara intervalului (0x%lx nu este între 0 și 0x%lx)"
 
 #: bpf-ibld.c:203 cgen-asm.c:351 epiphany-ibld.c:203 fr30-ibld.c:203
 #: frv-ibld.c:203 ip2k-ibld.c:203 iq2000-ibld.c:203 lm32-ibld.c:203
-#: m32c-ibld.c:203 m32r-ibld.c:203 mep-ibld.c:203 mt-ibld.c:203
-#: or1k-ibld.c:203 xstormy16-ibld.c:203
+#: m32c-ibld.c:203 m32r-ibld.c:203 mep-ibld.c:203 mt-ibld.c:203 or1k-ibld.c:203
+#: xstormy16-ibld.c:203
 #, c-format
 msgid "operand out of range (%ld not between %ld and %ld)"
 msgstr "operand în afara intervalului (%ld nu este între %ld și %ld)"
@@ -888,7 +915,8 @@ msgstr "operand în afara intervalului (%ld nu este între %ld și %ld)"
 #: xstormy16-ibld.c:688
 #, c-format
 msgid "internal error: unrecognized field %d while building insn"
-msgstr "eroare internă: câmp nerecunoscut %d în timpul construirii instrucțiunii"
+msgstr ""
+"eroare internă: câmp nerecunoscut %d în timpul construirii instrucțiunii"
 
 #: bpf-ibld.c:714 epiphany-ibld.c:1180 fr30-ibld.c:946 frv-ibld.c:1184
 #: ip2k-ibld.c:693 iq2000-ibld.c:899 lm32-ibld.c:749 m32c-ibld.c:2903
@@ -904,7 +932,9 @@ msgstr "eroare internă: câmp nerecunoscut %d în timpul decodării instrucțiu
 #: xstormy16-ibld.c:946
 #, c-format
 msgid "internal error: unrecognized field %d while getting int operand"
-msgstr "eroare internă: câmp nerecunoscut %d în timp ce se obține operandul int(număr întreg)"
+msgstr ""
+"eroare internă: câmp nerecunoscut %d în timp ce se obține operandul "
+"int(număr întreg)"
 
 #: bpf-ibld.c:834 epiphany-ibld.c:1450 fr30-ibld.c:1222 frv-ibld.c:1724
 #: ip2k-ibld.c:825 iq2000-ibld.c:1145 lm32-ibld.c:911 m32c-ibld.c:4121
@@ -912,7 +942,8 @@ msgstr "eroare internă: câmp nerecunoscut %d în timp ce se obține operandul 
 #: xstormy16-ibld.c:1039
 #, c-format
 msgid "internal error: unrecognized field %d while getting vma operand"
-msgstr "eroare internă: câmp nerecunoscut %d în timp ce se obține operandul vma"
+msgstr ""
+"eroare internă: câmp nerecunoscut %d în timp ce se obține operandul vma"
 
 #: bpf-ibld.c:892 epiphany-ibld.c:1583 fr30-ibld.c:1354 frv-ibld.c:1992
 #: ip2k-ibld.c:885 iq2000-ibld.c:1266 lm32-ibld.c:990 m32c-ibld.c:4709
@@ -920,7 +951,9 @@ msgstr "eroare internă: câmp nerecunoscut %d în timp ce se obține operandul 
 #: xstormy16-ibld.c:1139
 #, c-format
 msgid "internal error: unrecognized field %d while setting int operand"
-msgstr "eroare internă: câmp nerecunoscut %d în timpul definirii operandului int(număr întreg)"
+msgstr ""
+"eroare internă: câmp nerecunoscut %d în timpul definirii operandului "
+"int(număr întreg)"
 
 #: bpf-ibld.c:940 epiphany-ibld.c:1706 fr30-ibld.c:1476 frv-ibld.c:2250
 #: ip2k-ibld.c:935 iq2000-ibld.c:1377 lm32-ibld.c:1059 m32c-ibld.c:5287
@@ -928,7 +961,8 @@ msgstr "eroare internă: câmp nerecunoscut %d în timpul definirii operandului 
 #: xstormy16-ibld.c:1229
 #, c-format
 msgid "internal error: unrecognized field %d while setting vma operand"
-msgstr "eroare internă: câmp nerecunoscut %d în timpul definirii operandului vma"
+msgstr ""
+"eroare internă: câmp nerecunoscut %d în timpul definirii operandului vma"
 
 #: cgen-asm.c:373
 #, c-format
@@ -937,8 +971,12 @@ msgstr "operand în afara intervalului (%lu nu este între %lu și %lu)"
 
 #: cris-desc.c:2622
 #, c-format
-msgid "internal error: cris_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: cris_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: cris_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: cris_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: cris-desc.c:2710
 #, c-format
@@ -971,12 +1009,12 @@ msgstr "Eroare necunoscută %d\n"
 msgid "Address 0x%<PRIx64> is out of bounds.\n"
 msgstr "Adresa 0x%<PRIx64> este în afara limitelor.\n"
 
-#: disassemble.c:876
+#: disassemble.c:885
 #, c-format
 msgid "assertion fail %s:%d"
 msgstr "aserțiune eșuată %s:%d"
 
-#: disassemble.c:877
+#: disassemble.c:886
 msgid "Please report this bug"
 msgstr "Raportați această eroare"
 
@@ -1017,8 +1055,12 @@ msgstr "Nu este o adresă relativă la calculator."
 
 #: epiphany-desc.c:2110
 #, c-format
-msgid "internal error: epiphany_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: epiphany_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: epiphany_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: epiphany_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: epiphany-desc.c:2198
 #, c-format
@@ -1048,8 +1090,12 @@ msgstr "Lista de registre nu este validă"
 
 #: fr30-desc.c:1587
 #, c-format
-msgid "internal error: fr30_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: fr30_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: fr30_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: fr30_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: fr30-desc.c:1675
 #, c-format
@@ -1079,8 +1125,12 @@ msgstr "numărul registrului trebuie să fie par"
 
 #: frv-desc.c:6327
 #, c-format
-msgid "internal error: frv_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: frv_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: frv_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: frv_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: frv-desc.c:6415
 #, c-format
@@ -1125,12 +1175,15 @@ msgstr "<eroare internă de dezasamblor>"
 #, c-format
 msgid ""
 "\n"
-"The following i386/x86-64 specific disassembler options are supported for use\n"
+"The following i386/x86-64 specific disassembler options are supported for "
+"use\n"
 "with the -M switch (multiple options should be separated by commas):\n"
 msgstr ""
 "\n"
-"Următoarele opțiuni de dezasamblare specifice i386/x86-64 sunt acceptate pentru\n"
-"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin virgule):\n"
+"Următoarele opțiuni de dezasamblare specifice i386/x86-64 sunt acceptate "
+"pentru\n"
+"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin "
+"virgule):\n"
 
 #: i386-dis.c:9069
 #, c-format
@@ -1203,7 +1256,8 @@ msgstr "  data16      Presupune că dimensiunea datelor este de 16 de biți\n"
 #: i386-dis.c:9083
 #, c-format
 msgid "  suffix      Always display instruction suffix in AT&T syntax\n"
-msgstr "  suffix      Afișează întotdeauna sufixul instrucțiunilor în sintaxa AT&T\n"
+msgstr ""
+"  suffix      Afișează întotdeauna sufixul instrucțiunilor în sintaxa AT&T\n"
 
 # R-GC, scrie:
 # ISA = „Industry Standard Architecture”
@@ -1267,7 +1321,8 @@ msgstr "%s:%d: Specificații de spațiu pentru codul operațional în conflict\n
 #: i386-gen.c:1017
 #, c-format
 msgid "%s:%d: Warning: redundant opcode space specification\n"
-msgstr "%s:%d: Avertisment: specificație redundantă a spațiului de cod operațional\n"
+msgstr ""
+"%s:%d: Avertisment: specificație redundantă a spațiului de cod operațional\n"
 
 #: i386-gen.c:1026
 #, c-format
@@ -1425,12 +1480,16 @@ msgstr "registrul sursă „rsrc” %s (%s) nu are regs\n"
 #: ia64-gen.c:2455
 #, c-format
 msgid "IC note %d in opcode %s (IC:%s) conflicts with resource %s note %d\n"
-msgstr "Nota IC %d din codul operațional %s (IC:%s) este în conflict cu resursa %s nota %d\n"
+msgstr ""
+"Nota IC %d din codul operațional %s (IC:%s) este în conflict cu resursa %s "
+"nota %d\n"
 
 #: ia64-gen.c:2483
 #, c-format
 msgid "IC note %d for opcode %s (IC:%s) conflicts with resource %s note %d\n"
-msgstr "Nota IC %d pentru codul operațional %s (IC:%s) este în conflict cu resursa %s nota %d\n"
+msgstr ""
+"Nota IC %d pentru codul operațional %s (IC:%s) este în conflict cu resursa "
+"%s nota %d\n"
 
 #: ia64-gen.c:2497
 #, c-format
@@ -1491,8 +1550,12 @@ msgstr "Se încearcă găsirea indicelui de biți 0"
 
 #: ip2k-desc.c:1016
 #, c-format
-msgid "internal error: ip2k_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: ip2k_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: ip2k_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: ip2k_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: ip2k-desc.c:1104
 #, c-format
@@ -1518,8 +1581,12 @@ msgstr "deplasare del 21 biți în afara intervalului"
 
 #: iq2000-desc.c:2021
 #, c-format
-msgid "internal error: iq2000_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: iq2000_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: iq2000_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: iq2000_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: iq2000-desc.c:2109
 #, c-format
@@ -1530,6 +1597,41 @@ msgstr "eroare internă: iq2000_cgen_cpu_open: argument neacceptat „%d”"
 #, c-format
 msgid "internal error: iq2000_cgen_cpu_open: no endianness specified"
 msgstr "eroare internă: iq2000_cgen_cpu_open: endianness nedefinit"
+
+#: kv3-dis.c:718
+#, fuzzy, c-format
+msgid ""
+"\n"
+"The following KVX specific disassembler options are supported for use\n"
+"with the -M switch (multiple options should be separated by commas):\n"
+msgstr ""
+"\n"
+"Următoarele opțiuni de dezasamblare specifice NFP sunt acceptate pentru\n"
+"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin "
+"virgule):\n"
+
+#: kv3-dis.c:722
+#, c-format
+msgid ""
+"\n"
+"  pretty               Print 32-bit words in natural order corresponding to "
+"re-ordered instruction.\n"
+msgstr ""
+
+#: kv3-dis.c:725
+#, c-format
+msgid ""
+"\n"
+"  compact-assembly     Do not emit a new line between bundles of "
+"instructions.\n"
+msgstr ""
+
+#: kv3-dis.c:728
+#, c-format
+msgid ""
+"\n"
+"  no-compact-assembly  Emit a new line between bundles of instructions.\n"
+msgstr ""
 
 #: lm32-asm.c:166
 msgid "expecting gp relative address: gp(symbol)"
@@ -1549,8 +1651,12 @@ msgstr "se aștepta adresa relativă a got: gotofflo16(simbol)"
 
 #: lm32-desc.c:1003
 #, c-format
-msgid "internal error: lm32_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: lm32_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: lm32_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: lm32_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: lm32-desc.c:1091
 #, c-format
@@ -1570,8 +1676,10 @@ msgid ""
 "with the -M switch (multiple options should be separated by commas):\n"
 msgstr ""
 "\n"
-"Următoarele opțiuni de dezasamblare specifice LoongArch sunt acceptate pentru\n"
-"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin virgule):\n"
+"Următoarele opțiuni de dezasamblare specifice LoongArch sunt acceptate "
+"pentru\n"
+"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin "
+"virgule):\n"
 
 #: loongarch-dis.c:304
 #, c-format
@@ -1580,7 +1688,8 @@ msgid ""
 "    numeric       Print numeric register names, rather than ABI names.\n"
 msgstr ""
 "\n"
-"    numeric       Afișează nume de registre numerice, mai degrabă decât nume ABI.\n"
+"    numeric       Afișează nume de registre numerice, mai degrabă decât nume "
+"ABI.\n"
 
 #: m10200-dis.c:151 m10300-dis.c:574
 #, c-format
@@ -1648,7 +1757,9 @@ msgstr "valoarea directă(immediate) este în afara intervalului 2-9"
 
 #: m32c-asm.c:568
 msgid "Bit number for indexing general register is out of range 0-15"
-msgstr "Numărul de biți pentru indexarea registrului general este în afara intervalului 0-15"
+msgstr ""
+"Numărul de biți pentru indexarea registrului general este în afara "
+"intervalului 0-15"
 
 #: m32c-asm.c:606 m32c-asm.c:662
 msgid "bit,base is out of range"
@@ -1668,8 +1779,12 @@ msgstr "Specificator de mărime nevalid"
 
 #: m32c-desc.c:63034
 #, c-format
-msgid "internal error: m32c_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: m32c_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: m32c_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: m32c_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: m32c-desc.c:63122
 #, c-format
@@ -1683,8 +1798,12 @@ msgstr "eroare internă: m32c_cgen_cpu_open: endianness nedefinit"
 
 #: m32r-desc.c:1366
 #, c-format
-msgid "internal error: m32r_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: m32r_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: m32r_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: m32r_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: m32r-desc.c:1454
 #, c-format
@@ -1721,7 +1840,8 @@ msgstr "%function() nu este validă aici"
 
 #: mep-asm.c:336
 msgid "Immediate is out of range -32768 to 32767"
-msgstr "Valoare directă(immediate) în afara intervalului (de la -32768 la 32767)"
+msgstr ""
+"Valoare directă(immediate) în afara intervalului (de la -32768 la 32767)"
 
 #: mep-asm.c:356
 msgid "Immediate is out of range 0 to 65535"
@@ -1741,8 +1861,12 @@ msgstr "Valoarea nu este aliniată suficient"
 
 #: mep-desc.c:6227
 #, c-format
-msgid "internal error: mep_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: mep_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: mep_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: mep_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: mep-desc.c:6315
 #, c-format
@@ -1784,8 +1908,12 @@ msgid "Recognize the Global INValidate (GINV) ASE instructions.\n"
 msgstr "Recunoaște instrucțiunile ASE Global INValidate (GINV).\n"
 
 #: mips-dis.c:2752
-msgid "Recognize the Loongson MultiMedia extensions Instructions (MMI) ASE instructions.\n"
-msgstr "Recunoaște instrucțiunile ASE Loongson MultiMedia Extensions Instructions (MMI).\n"
+msgid ""
+"Recognize the Loongson MultiMedia extensions Instructions (MMI) ASE "
+"instructions.\n"
+msgstr ""
+"Recunoaște instrucțiunile ASE Loongson MultiMedia Extensions Instructions "
+"(MMI).\n"
 
 #: mips-dis.c:2756
 msgid "Recognize the Loongson Content Address Memory (CAM)  instructions.\n"
@@ -1853,7 +1981,8 @@ msgid ""
 msgstr ""
 "\n"
 "Următoarele opțiuni de dezasamblare specifice MIPS sunt acceptate pentru\n"
-"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin virgule):\n"
+"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin "
+"virgule):\n"
 
 #: mmix-dis.c:33
 #, c-format
@@ -1881,12 +2010,15 @@ msgstr "*tip necunoscut de operanzi: %d*"
 #: msp430-decode.opc:145 rl78-decode.opc:106
 #, c-format
 msgid "internal error: immediate() called with invalid byte count %d"
-msgstr "eroare internă: funcția immediate() apelată cu un număr de octeți nevalid %d"
+msgstr ""
+"eroare internă: funcția immediate() apelată cu un număr de octeți nevalid %d"
 
 #: msp430-dis.c:59
 #, c-format
 msgid "Warning: disassembly unreliable - not enough bytes available"
-msgstr "Avertisment: dezasamblarea nu este fiabilă - nu sunt suficienți octeți disponibili"
+msgstr ""
+"Avertisment: dezasamblarea nu este fiabilă - nu sunt suficienți octeți "
+"disponibili"
 
 #: msp430-dis.c:65
 #, c-format
@@ -1909,7 +2041,8 @@ msgstr "Avertisment: mod de adresare CALLA nerecunoscut"
 #: msp430-dis.c:1303 msp430-dis.c:1324 msp430-dis.c:1345
 #, c-format
 msgid "Warning: reserved use of A/L and B/W bits detected"
-msgstr "Avertisment: a fost detectată utilizarea rezervată a biților A/L și B/W"
+msgstr ""
+"Avertisment: a fost detectată utilizarea rezervată a biților A/L și B/W"
 
 #: mt-asm.c:110 mt-asm.c:190
 msgid "Operand out of range. Must be between -32768 and 32767."
@@ -1929,8 +2062,12 @@ msgstr "operand nevalid; tipul poate avea doar valorile 0, 1, 2."
 
 #: mt-desc.c:1147
 #, c-format
-msgid "internal error: mt_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: mt_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: mt_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: mt_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: mt-desc.c:1235
 #, c-format
@@ -2010,7 +2147,8 @@ msgid ""
 msgstr ""
 "\n"
 "Următoarele opțiuni de dezasamblare specifice NFP sunt acceptate pentru\n"
-"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin virgule):\n"
+"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin "
+"virgule):\n"
 
 #: nfp-dis.c:2988
 #, c-format
@@ -2033,7 +2171,8 @@ msgstr "fără memorie"
 #: nios2-dis.c:263
 #, c-format
 msgid "internal error: broken opcode descriptor for `%s %s'"
-msgstr "eroare internă: descriptor deteriorat al codului operațional pentru „%s %s”"
+msgstr ""
+"eroare internă: descriptor deteriorat al codului operațional pentru „%s %s”"
 
 #. I and Z are output operands and can`t be immediate
 #. A is an address and we can`t have the address of
@@ -2055,8 +2194,12 @@ msgstr "tip de repoziționare internă nevalid"
 
 #: or1k-desc.c:2041
 #, c-format
-msgid "internal error: or1k_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: or1k_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: or1k_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: or1k_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: or1k-desc.c:2129
 #, c-format
@@ -2098,19 +2241,26 @@ msgstr "acces la contor nevalid"
 
 #: ppc-opc.c:464
 msgid "BO value implies no branch hint, when using + or - modifier"
-msgstr "Valoarea BO nu implică nicio indicație de ramificare, când se utilizează modificatorul + sau -"
+msgstr ""
+"Valoarea BO nu implică nicio indicație de ramificare, când se utilizează "
+"modificatorul + sau -"
 
 #: ppc-opc.c:469
 msgid "attempt to set y bit when using + or - modifier"
-msgstr "se încearcă inițializarea bitului y când se utilizează modificatorul + sau -"
+msgstr ""
+"se încearcă inițializarea bitului y când se utilizează modificatorul + sau -"
 
 #: ppc-opc.c:471
 msgid "attempt to set 'at' bits when using + or - modifier"
-msgstr "se încearcă inițializarea biților „at” când se utilizează modificatorul + sau -"
+msgstr ""
+"se încearcă inițializarea biților „at” când se utilizează modificatorul + "
+"sau -"
 
 #: ppc-opc.c:575
 msgid "invalid offset: must be in the range [-512, -8] and be a multiple of 8"
-msgstr "poziție nevalidă: trebuie să fie în intervalul [-512, -8] și să fie un multiplu de 8"
+msgstr ""
+"poziție nevalidă: trebuie să fie în intervalul [-512, -8] și să fie un "
+"multiplu de 8"
 
 #: ppc-opc.c:706
 msgid "invalid R operand"
@@ -2232,8 +2382,11 @@ msgstr "specificație de privilegiu necunoscută stabilită de %s=%s"
 
 #: riscv-dis.c:146
 #, c-format
-msgid "mis-matched privilege spec set by %s=%s, the elf privilege attribute is %s"
-msgstr "specificație de privilegiu nepotrivită stabilită de %s=%s, atributul de privilegiu elf este %s"
+msgid ""
+"mis-matched privilege spec set by %s=%s, the elf privilege attribute is %s"
+msgstr ""
+"specificație de privilegiu nepotrivită stabilită de %s=%s, atributul de "
+"privilegiu elf este %s"
 
 #: riscv-dis.c:631
 #, c-format
@@ -2261,7 +2414,8 @@ msgid ""
 msgstr ""
 "\n"
 "Următoarele opțiuni de dezasamblare specifice RISC-V sunt acceptate pentru\n"
-"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin virgule):\n"
+"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin "
+"virgule):\n"
 
 #: rx-dis.c:139 rx-dis.c:163 rx-dis.c:171 rx-dis.c:179 rx-dis.c:187
 msgid "<invalid register number>"
@@ -2305,7 +2459,8 @@ msgstr "Dezasamblează în modul z/Architecture"
 
 #: s390-dis.c:44
 msgid "Print unknown instructions according to length from first two bits"
-msgstr "Afișează instrucțiuni necunoscute în funcție de lungimea primilor doi biți"
+msgstr ""
+"Afișează instrucțiuni necunoscute în funcție de lungimea primilor doi biți"
 
 #: s390-dis.c:76
 #, c-format
@@ -2321,7 +2476,8 @@ msgid ""
 msgstr ""
 "\n"
 "Următoarele opțiuni de dezasamblare specifice S/390 sunt acceptate pentru\n"
-"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin virgule):\n"
+"utilizare cu opțiunea -M (opțiunile multiple trebuie să fie separate prin "
+"virgule):\n"
 
 #: score-dis.c:653 score-dis.c:871 score-dis.c:1032 score-dis.c:1138
 #: score-dis.c:1146 score-dis.c:1153 score7-dis.c:691 score7-dis.c:854
@@ -2461,10 +2617,12 @@ msgstr "Nume globale binecunoscute"
 #: wasm32-dis.c:549
 #, c-format
 msgid ""
-"The following WebAssembly-specific disassembler options are supported for use\n"
+"The following WebAssembly-specific disassembler options are supported for "
+"use\n"
 "with the -M switch:\n"
 msgstr ""
-"Următoarele opțiuni de dezasamblare specifice WebAssembly sunt acceptate pentru \n"
+"Următoarele opțiuni de dezasamblare specifice WebAssembly sunt acceptate "
+"pentru \n"
 "utilizarea cu opțiunea -M:\n"
 
 #: xstormy16-asm.c:71
@@ -2509,8 +2667,12 @@ msgstr "Eroare de sintaxă: fără „)” la final"
 
 #: xstormy16-desc.c:1318
 #, c-format
-msgid "internal error: xstormy16_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "eroare internă: xstormy16_cgen_rebuild_tables: valori insn-chunk-bitsize conflictuale: „%d” și „%d”"
+msgid ""
+"internal error: xstormy16_cgen_rebuild_tables: conflicting insn-chunk-"
+"bitsize values: `%d' vs. `%d'"
+msgstr ""
+"eroare internă: xstormy16_cgen_rebuild_tables: valori insn-chunk-bitsize "
+"conflictuale: „%d” și „%d”"
 
 #: xstormy16-desc.c:1406
 #, c-format

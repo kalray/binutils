@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: opcodes 2.39.90\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2022-12-31 12:18+0000\n"
+"POT-Creation-Date: 2023-02-17 13:46+0100\n"
 "PO-Revision-Date: 2023-01-01 20:16+0100\n"
 "Last-Translator: Roland Illig <roland.illig@gmx.de>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
@@ -30,7 +30,7 @@ msgid "specified register cannot be written to"
 msgstr "In das angegebene Register kann nicht geschrieben werden"
 
 #. Invalid option.
-#: aarch64-dis.c:103 arc-dis.c:807 arm-dis.c:12303
+#: aarch64-dis.c:103 arc-dis.c:807 arm-dis.c:12303 kv3-dis.c:330
 #, c-format
 msgid "unrecognised disassembler option: %s"
 msgstr "Unbekannte Disassembler-Option: %s"
@@ -103,8 +103,8 @@ msgstr ""
 "  debug_dump         Temporärer Schalter für Debugspuren.\n"
 
 #: aarch64-dis.c:4021 arc-dis.c:1607 arc-dis.c:1630 arc-dis.c:1633
-#: loongarch-dis.c:306 mips-dis.c:2897 mips-dis.c:2909 mips-dis.c:2912
-#: nfp-dis.c:2993 riscv-dis.c:1282 riscv-dis.c:1285
+#: kv3-dis.c:731 loongarch-dis.c:306 mips-dis.c:2897 mips-dis.c:2909
+#: mips-dis.c:2912 nfp-dis.c:2993 riscv-dis.c:1282 riscv-dis.c:1285
 #, c-format
 msgid "\n"
 msgstr "\n"
@@ -338,7 +338,9 @@ msgstr "Größenregister unterscheidet sich von dem im vorangehenden Befehl"
 
 #: aarch64-opc.c:5771
 msgid "instruction opens new dependency sequence without ending previous one"
-msgstr "Der Befehl beginnt eine neue Abhängigkeitsfolge, ohne die vorherige zu beenden"
+msgstr ""
+"Der Befehl beginnt eine neue Abhängigkeitsfolge, ohne die vorherige zu "
+"beenden"
 
 #: aarch64-opc.c:5800
 msgid "previous `movprfx' sequence not closed"
@@ -358,19 +360,24 @@ msgstr "Bedingter Befehl nach »movprfx« erwartet"
 
 #: aarch64-opc.c:5932
 msgid "merging predicate expected due to preceding `movprfx'"
-msgstr "Zusammenführende Bedingung erwartet, aufgrund des vorangehenden »movprfx«"
+msgstr ""
+"Zusammenführende Bedingung erwartet, aufgrund des vorangehenden »movprfx«"
 
 #: aarch64-opc.c:5944
 msgid "predicate register differs from that in preceding `movprfx'"
-msgstr "Bedingungsregister unterscheidet sich von dem im vorangehenden »movprfx«"
+msgstr ""
+"Bedingungsregister unterscheidet sich von dem im vorangehenden »movprfx«"
 
 #: aarch64-opc.c:5963
 msgid "output register of preceding `movprfx' not used in current instruction"
-msgstr "Ausgaberegister des vorangehenden »movprfx« wird in aktuellem Befehl nicht verwendet"
+msgstr ""
+"Ausgaberegister des vorangehenden »movprfx« wird in aktuellem Befehl nicht "
+"verwendet"
 
 #: aarch64-opc.c:5976
 msgid "output register of preceding `movprfx' expected as output"
-msgstr "Ausgaberegister des vorangehenden »movprfx« auch hier als Ausgabe erwartet"
+msgstr ""
+"Ausgaberegister des vorangehenden »movprfx« auch hier als Ausgabe erwartet"
 
 #: aarch64-opc.c:5988
 msgid "output register of preceding `movprfx' used as input"
@@ -403,7 +410,9 @@ msgstr ""
 
 #: arc-dis.c:442
 msgid "An error occurred while generating the extension instruction operations"
-msgstr "Beim Generieren der Erweiterungsoperationen für die Befehle ist ein Fehler aufgetreten"
+msgstr ""
+"Beim Generieren der Erweiterungsoperationen für die Befehle ist ein Fehler "
+"aufgetreten"
 
 #: arc-dis.c:850
 #, c-format
@@ -709,7 +718,9 @@ msgstr "»coproc« erfordert ein Argument: %s"
 #: arm-dis.c:12297
 #, c-format
 msgid "coprocN argument takes options \"generic\", \"cde\", or \"CDE\": %s"
-msgstr "Das Argument für »coprocN« akzeptiert nur die Werte »generic«, »cde« oder »CDE«: %s"
+msgstr ""
+"Das Argument für »coprocN« akzeptiert nur die Werte »generic«, »cde« oder "
+"»CDE«: %s"
 
 #: arm-dis.c:13009
 #, c-format
@@ -763,13 +774,13 @@ msgstr "Fehlender Mnemonic im Syntaxstring"
 #: fr30-asm.c:502 fr30-asm.c:591 fr30-asm.c:698 frv-asm.c:1451 frv-asm.c:1455
 #: frv-asm.c:1544 frv-asm.c:1651 ip2k-asm.c:699 ip2k-asm.c:703 ip2k-asm.c:792
 #: ip2k-asm.c:899 iq2000-asm.c:647 iq2000-asm.c:651 iq2000-asm.c:740
-#: iq2000-asm.c:847 lm32-asm.c:537 lm32-asm.c:541 lm32-asm.c:630
-#: lm32-asm.c:737 m32c-asm.c:1772 m32c-asm.c:1776 m32c-asm.c:1865
-#: m32c-asm.c:1972 m32r-asm.c:516 m32r-asm.c:520 m32r-asm.c:609 m32r-asm.c:716
-#: mep-asm.c:1474 mep-asm.c:1478 mep-asm.c:1567 mep-asm.c:1674 mt-asm.c:783
-#: mt-asm.c:787 mt-asm.c:876 mt-asm.c:983 or1k-asm.c:763 or1k-asm.c:767
-#: or1k-asm.c:856 or1k-asm.c:963 xstormy16-asm.c:464 xstormy16-asm.c:468
-#: xstormy16-asm.c:557 xstormy16-asm.c:664
+#: iq2000-asm.c:847 lm32-asm.c:537 lm32-asm.c:541 lm32-asm.c:630 lm32-asm.c:737
+#: m32c-asm.c:1772 m32c-asm.c:1776 m32c-asm.c:1865 m32c-asm.c:1972
+#: m32r-asm.c:516 m32r-asm.c:520 m32r-asm.c:609 m32r-asm.c:716 mep-asm.c:1474
+#: mep-asm.c:1478 mep-asm.c:1567 mep-asm.c:1674 mt-asm.c:783 mt-asm.c:787
+#: mt-asm.c:876 mt-asm.c:983 or1k-asm.c:763 or1k-asm.c:767 or1k-asm.c:856
+#: or1k-asm.c:963 xstormy16-asm.c:464 xstormy16-asm.c:468 xstormy16-asm.c:557
+#: xstormy16-asm.c:664
 msgid "unrecognized instruction"
 msgstr "Unbekannter Befehl"
 
@@ -821,8 +832,12 @@ msgstr "Falscher Befehl »%.50s«"
 
 #: bpf-desc.c:1768
 #, c-format
-msgid "internal error: bpf_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: bpf_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: bpf_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: bpf_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: bpf-desc.c:1856
 #, c-format
@@ -842,10 +857,9 @@ msgstr "internal error: bpf_cgen_cpu_open: no endianness specified"
 msgid "*unknown*"
 msgstr "*unbekannt*"
 
-#: bpf-dis.c:203 epiphany-dis.c:279 fr30-dis.c:300 frv-dis.c:397
-#: ip2k-dis.c:289 iq2000-dis.c:190 lm32-dis.c:148 m32c-dis.c:892
-#: m32r-dis.c:280 mep-dis.c:1188 mt-dis.c:288 or1k-dis.c:175
-#: xstormy16-dis.c:169
+#: bpf-dis.c:203 epiphany-dis.c:279 fr30-dis.c:300 frv-dis.c:397 ip2k-dis.c:289
+#: iq2000-dis.c:190 lm32-dis.c:148 m32c-dis.c:892 m32r-dis.c:280 mep-dis.c:1188
+#: mt-dis.c:288 or1k-dis.c:175 xstormy16-dis.c:169
 #, c-format
 msgid "internal error: unrecognized field %d while printing insn"
 msgstr "internal error: unrecognized field %d while printing insn"
@@ -856,7 +870,8 @@ msgstr "internal error: unrecognized field %d while printing insn"
 #: xstormy16-ibld.c:166
 #, c-format
 msgid "operand out of range (%ld not between %ld and %lu)"
-msgstr "Operand außerhalb des gültigen Bereichs (%ld ist nicht zwischen %ld und %lu)"
+msgstr ""
+"Operand außerhalb des gültigen Bereichs (%ld ist nicht zwischen %ld und %lu)"
 
 #: bpf-ibld.c:187 epiphany-ibld.c:187 fr30-ibld.c:187 frv-ibld.c:187
 #: ip2k-ibld.c:187 iq2000-ibld.c:187 lm32-ibld.c:187 m32c-ibld.c:187
@@ -864,15 +879,18 @@ msgstr "Operand außerhalb des gültigen Bereichs (%ld ist nicht zwischen %ld un
 #: xstormy16-ibld.c:187
 #, c-format
 msgid "operand out of range (0x%lx not between 0 and 0x%lx)"
-msgstr "Operand außerhalb des gültigen Bereichs (0x%lx ist nicht zwischen 0 und 0x%lx)."
+msgstr ""
+"Operand außerhalb des gültigen Bereichs (0x%lx ist nicht zwischen 0 und 0x"
+"%lx)."
 
 #: bpf-ibld.c:203 cgen-asm.c:351 epiphany-ibld.c:203 fr30-ibld.c:203
 #: frv-ibld.c:203 ip2k-ibld.c:203 iq2000-ibld.c:203 lm32-ibld.c:203
-#: m32c-ibld.c:203 m32r-ibld.c:203 mep-ibld.c:203 mt-ibld.c:203
-#: or1k-ibld.c:203 xstormy16-ibld.c:203
+#: m32c-ibld.c:203 m32r-ibld.c:203 mep-ibld.c:203 mt-ibld.c:203 or1k-ibld.c:203
+#: xstormy16-ibld.c:203
 #, c-format
 msgid "operand out of range (%ld not between %ld and %ld)"
-msgstr "Operand außerhalb des gültigen Bereichs (%ld ist nicht zwischen %ld und %ld)"
+msgstr ""
+"Operand außerhalb des gültigen Bereichs (%ld ist nicht zwischen %ld und %ld)"
 
 #: bpf-ibld.c:630 epiphany-ibld.c:885 fr30-ibld.c:740 frv-ibld.c:866
 #: ip2k-ibld.c:617 iq2000-ibld.c:723 lm32-ibld.c:644 m32c-ibld.c:1741
@@ -925,12 +943,17 @@ msgstr "internal error: unrecognized field %d while setting vma operand"
 #: cgen-asm.c:373
 #, c-format
 msgid "operand out of range (%lu not between %lu and %lu)"
-msgstr "Operand außerhalb des gültigen Bereichs (%lu ist nicht zwischen %lu und %lu)"
+msgstr ""
+"Operand außerhalb des gültigen Bereichs (%lu ist nicht zwischen %lu und %lu)"
 
 #: cris-desc.c:2622
 #, c-format
-msgid "internal error: cris_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: cris_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: cris_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: cris_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: cris-desc.c:2710
 #, c-format
@@ -964,14 +987,16 @@ msgstr "Unbekannter Fehler %d\n"
 msgid "Address 0x%<PRIx64> is out of bounds.\n"
 msgstr "Adresse 0x%<PRIx64> ist außerhalb des gültigen Bereichs.\n"
 
-#: disassemble.c:876
+#: disassemble.c:885
 #, c-format
 msgid "assertion fail %s:%d"
 msgstr "Assertion fehlgeschlagen: %s:%d"
 
-#: disassemble.c:877
+#: disassemble.c:886
 msgid "Please report this bug"
-msgstr "Bitte melden Sie diesen Fehler (auf Englisch, an https://www.sourceware.org/bugzilla/)"
+msgstr ""
+"Bitte melden Sie diesen Fehler (auf Englisch, an https://www.sourceware.org/"
+"bugzilla/)"
 
 #: epiphany-asm.c:68
 msgid "register unavailable for short instructions"
@@ -1010,8 +1035,12 @@ msgstr "Das ist keine PC-relative Adresse."
 
 #: epiphany-desc.c:2110
 #, c-format
-msgid "internal error: epiphany_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: epiphany_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: epiphany_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: epiphany_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: epiphany-desc.c:2198
 #, c-format
@@ -1041,8 +1070,12 @@ msgstr "Registerliste ist ungültig"
 
 #: fr30-desc.c:1587
 #, c-format
-msgid "internal error: fr30_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: fr30_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: fr30_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: fr30_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: fr30-desc.c:1675
 #, c-format
@@ -1072,8 +1105,12 @@ msgstr "Die Registernummer muss gerade sein"
 
 #: frv-desc.c:6327
 #, c-format
-msgid "internal error: frv_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: frv_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: frv_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: frv_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: frv-desc.c:6415
 #, c-format
@@ -1118,7 +1155,8 @@ msgstr "<interner Disassemblerfehler>"
 #, c-format
 msgid ""
 "\n"
-"The following i386/x86-64 specific disassembler options are supported for use\n"
+"The following i386/x86-64 specific disassembler options are supported for "
+"use\n"
 "with the -M switch (multiple options should be separated by commas):\n"
 msgstr ""
 "\n"
@@ -1407,12 +1445,16 @@ msgstr "Die Ressource »%s (%s)« hat keine Register\n"
 #: ia64-gen.c:2455
 #, c-format
 msgid "IC note %d in opcode %s (IC:%s) conflicts with resource %s note %d\n"
-msgstr "IC Bemerkung %d in Opcode »%s (IC:%s)« verträgt sich nicht mit Ressource %s Bemerkung %d.\n"
+msgstr ""
+"IC Bemerkung %d in Opcode »%s (IC:%s)« verträgt sich nicht mit Ressource %s "
+"Bemerkung %d.\n"
 
 #: ia64-gen.c:2483
 #, c-format
 msgid "IC note %d for opcode %s (IC:%s) conflicts with resource %s note %d\n"
-msgstr "IC Bemerkung %d für Opcode »%s (IC:%s)« verträgt sich nicht mit Ressource %s Bemerkung %d.\n"
+msgstr ""
+"IC Bemerkung %d für Opcode »%s (IC:%s)« verträgt sich nicht mit Ressource %s "
+"Bemerkung %d.\n"
 
 #: ia64-gen.c:2497
 #, c-format
@@ -1469,7 +1511,8 @@ msgstr "Byteadresse benötigt -- muss gerade sein."
 
 #: ip2k-asm.c:305
 msgid "cgen_parse_address returned a symbol. Literal required."
-msgstr "cgen_parse_address hat Symbol zurückgegeben, muss jedoch ein Literal sein."
+msgstr ""
+"cgen_parse_address hat Symbol zurückgegeben, muss jedoch ein Literal sein."
 
 #: ip2k-asm.c:360
 msgid "percent-operator operand is not a symbol"
@@ -1481,8 +1524,12 @@ msgstr "Versuch, ein gesetztes Bit von 0 zu bestimmen"
 
 #: ip2k-desc.c:1016
 #, c-format
-msgid "internal error: ip2k_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: ip2k_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: ip2k_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: ip2k_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: ip2k-desc.c:1104
 #, c-format
@@ -1508,8 +1555,12 @@ msgstr "21-Bit-Offset außerhalb des gültigen Bereichs"
 
 #: iq2000-desc.c:2021
 #, c-format
-msgid "internal error: iq2000_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: iq2000_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: iq2000_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: iq2000_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: iq2000-desc.c:2109
 #, c-format
@@ -1520,6 +1571,41 @@ msgstr "internal error: iq2000_cgen_cpu_open: unsupported argument `%d'"
 #, c-format
 msgid "internal error: iq2000_cgen_cpu_open: no endianness specified"
 msgstr "internal error: iq2000_cgen_cpu_open: no endianness specified"
+
+#: kv3-dis.c:718
+#, fuzzy, c-format
+msgid ""
+"\n"
+"The following KVX specific disassembler options are supported for use\n"
+"with the -M switch (multiple options should be separated by commas):\n"
+msgstr ""
+"\n"
+"Die folgenden NFP-spezifischen Disassembleroptionen werden zusammen\n"
+"mit dem Schalter »-M« unterstützt (mehrere Optionen sollten durch\n"
+"Kommata getrennt werden):\n"
+
+#: kv3-dis.c:722
+#, c-format
+msgid ""
+"\n"
+"  pretty               Print 32-bit words in natural order corresponding to "
+"re-ordered instruction.\n"
+msgstr ""
+
+#: kv3-dis.c:725
+#, c-format
+msgid ""
+"\n"
+"  compact-assembly     Do not emit a new line between bundles of "
+"instructions.\n"
+msgstr ""
+
+#: kv3-dis.c:728
+#, c-format
+msgid ""
+"\n"
+"  no-compact-assembly  Emit a new line between bundles of instructions.\n"
+msgstr ""
 
 #: lm32-asm.c:166
 msgid "expecting gp relative address: gp(symbol)"
@@ -1539,8 +1625,12 @@ msgstr "Adresse relativ zu got erwartet: gotofflo16(Symbol)"
 
 #: lm32-desc.c:1003
 #, c-format
-msgid "internal error: lm32_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: lm32_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: lm32_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: lm32_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: lm32-desc.c:1091
 #, c-format
@@ -1639,7 +1729,9 @@ msgstr "Direktwert liegt außerhalb des gültigen Bereichs 2 bis 9"
 
 #: m32c-asm.c:568
 msgid "Bit number for indexing general register is out of range 0-15"
-msgstr "Die Bitnummer, um das allgemeine Register zu indizieren, ist außerhalb des gültigen Bereichs 0-15"
+msgstr ""
+"Die Bitnummer, um das allgemeine Register zu indizieren, ist außerhalb des "
+"gültigen Bereichs 0-15"
 
 #: m32c-asm.c:606 m32c-asm.c:662
 msgid "bit,base is out of range"
@@ -1659,8 +1751,12 @@ msgstr "Ungültige Größenangabe"
 
 #: m32c-desc.c:63034
 #, c-format
-msgid "internal error: m32c_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: m32c_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: m32c_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: m32c_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: m32c-desc.c:63122
 #, c-format
@@ -1674,8 +1770,12 @@ msgstr "internal error: m32c_cgen_cpu_open: no endianness specified"
 
 #: m32r-desc.c:1366
 #, c-format
-msgid "internal error: m32r_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: m32r_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: m32r_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: m32r_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: m32r-desc.c:1454
 #, c-format
@@ -1732,8 +1832,12 @@ msgstr "Der Wert ist nicht ausreichend ausgerichtet"
 
 #: mep-desc.c:6227
 #, c-format
-msgid "internal error: mep_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: mep_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: mep_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: mep_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: mep-desc.c:6315
 #, c-format
@@ -1776,8 +1880,12 @@ msgid "Recognize the Global INValidate (GINV) ASE instructions.\n"
 msgstr "Befehle für Global INValidate (GINV) Adressraumerweiterung erkennen.\n"
 
 #: mips-dis.c:2752
-msgid "Recognize the Loongson MultiMedia extensions Instructions (MMI) ASE instructions.\n"
-msgstr "Die Loongson-ASE-Befehle für MultiMedia extensions Instructions (MMI) erkennen.\n"
+msgid ""
+"Recognize the Loongson MultiMedia extensions Instructions (MMI) ASE "
+"instructions.\n"
+msgstr ""
+"Die Loongson-ASE-Befehle für MultiMedia extensions Instructions (MMI) "
+"erkennen.\n"
 
 #: mips-dis.c:2756
 msgid "Recognize the Loongson Content Address Memory (CAM)  instructions.\n"
@@ -1813,7 +1921,8 @@ msgid ""
 "                  Default: based on binary being disassembled.\n"
 msgstr ""
 "CP0-Registernamen entsprechend der angegebenen Architektur ausgeben.\n"
-"                  Vorgabe: abhängig von der Binärdatei, die disassembliert wird.\n"
+"                  Vorgabe: abhängig von der Binärdatei, die disassembliert "
+"wird.\n"
 
 #: mips-dis.c:2777
 msgid ""
@@ -1821,7 +1930,8 @@ msgid ""
 "                  Default: based on binary being disassembled.\n"
 msgstr ""
 "HWR-Namen entsprechend der angegebenen Architektur ausgeben.\n"
-"                  Vorgabe: abhängig von der Binärdatei, die disassembliert wird.\n"
+"                  Vorgabe: abhängig von der Binärdatei, die disassembliert "
+"wird.\n"
 
 #: mips-dis.c:2780
 msgid "Print GPR and FPR names according to specified ABI.\n"
@@ -1831,7 +1941,8 @@ msgstr "GPR- und FPR-Namen entsprechend des angegebenen ABI ausgeben.\n"
 msgid ""
 "Print CP0 register and HWR names according to specified\n"
 "                  architecture."
-msgstr "CP0-Register und HWR-Namen entsprechend der angegebenen Architektur ausgeben."
+msgstr ""
+"CP0-Register und HWR-Namen entsprechend der angegebenen Architektur ausgeben."
 
 #: mips-dis.c:2868
 #, c-format
@@ -1921,8 +2032,12 @@ msgstr "Ungültiger Operand. Die Art kann nur 0, 1 oder 2 sein."
 
 #: mt-desc.c:1147
 #, c-format
-msgid "internal error: mt_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: mt_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: mt_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: mt_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: mt-desc.c:1235
 #, c-format
@@ -2053,8 +2168,12 @@ msgstr "Interne Verlagerungsart ungültig"
 
 #: or1k-desc.c:2041
 #, c-format
-msgid "internal error: or1k_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: or1k_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: or1k_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
+msgstr ""
+"internal error: or1k_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+"values: `%d' vs. `%d'"
 
 #: or1k-desc.c:2129
 #, c-format
@@ -2096,7 +2215,9 @@ msgstr "Ungültiger Zugriff auf Zähler"
 
 #: ppc-opc.c:464
 msgid "BO value implies no branch hint, when using + or - modifier"
-msgstr "BO-Wert führt nicht zu Sprungvorhersage, bei Verwendung der Modifikatoren »+« oder »-«"
+msgstr ""
+"BO-Wert führt nicht zu Sprungvorhersage, bei Verwendung der Modifikatoren "
+"»+« oder »-«"
 
 #: ppc-opc.c:469
 msgid "attempt to set y bit when using + or - modifier"
@@ -2104,11 +2225,14 @@ msgstr "Versuch, das y-Bit zusammen mit dem Modifikator »+« oder »-« zu setz
 
 #: ppc-opc.c:471
 msgid "attempt to set 'at' bits when using + or - modifier"
-msgstr "Versuch, die at-Bits zusammen mit dem Modifikator »+« oder »-« zu setzen"
+msgstr ""
+"Versuch, die at-Bits zusammen mit dem Modifikator »+« oder »-« zu setzen"
 
 #: ppc-opc.c:575
 msgid "invalid offset: must be in the range [-512, -8] and be a multiple of 8"
-msgstr "Ungültiger Offset: Muss im Bereich [-512, -8] liegen und ein Vielfaches von 8 sein"
+msgstr ""
+"Ungültiger Offset: Muss im Bereich [-512, -8] liegen und ein Vielfaches von "
+"8 sein"
 
 #: ppc-opc.c:706
 msgid "invalid R operand"
@@ -2230,8 +2354,11 @@ msgstr "Unbekannte Privilegien-Angabe durch %s=%s"
 
 #: riscv-dis.c:146
 #, c-format
-msgid "mis-matched privilege spec set by %s=%s, the elf privilege attribute is %s"
-msgstr "unpassende Berechtigungsangabe %s=%s, das Berechtigungsattribut von ELF ist %s"
+msgid ""
+"mis-matched privilege spec set by %s=%s, the elf privilege attribute is %s"
+msgstr ""
+"unpassende Berechtigungsangabe %s=%s, das Berechtigungsattribut von ELF ist "
+"%s"
 
 #: riscv-dis.c:631
 #, c-format
@@ -2304,7 +2431,8 @@ msgstr "Im z/-Architektur-Modus disassemblieren"
 
 #: s390-dis.c:44
 msgid "Print unknown instructions according to length from first two bits"
-msgstr "Unbekannte Befehle anhand ihrer Länge aus den ersten beiden Bits ausgeben"
+msgstr ""
+"Unbekannte Befehle anhand ihrer Länge aus den ersten beiden Bits ausgeben"
 
 #: s390-dis.c:76
 #, c-format
@@ -2394,7 +2522,8 @@ msgstr "Unbekanntes Register: %d"
 #. specific command line option is given to GAS.
 #: v850-opc.c:53
 msgid "displacement value is not in range and is not aligned"
-msgstr "Der Abstandswert ist außerhalb des gültigen Bereichs und nicht ausgerichtet"
+msgstr ""
+"Der Abstandswert ist außerhalb des gültigen Bereichs und nicht ausgerichtet"
 
 #: v850-opc.c:54
 msgid "displacement value is out of range"
@@ -2414,7 +2543,9 @@ msgstr "Verzweigungswert außerhalb des gültigen Bereichs"
 
 #: v850-opc.c:59
 msgid "branch value not in range and to odd offset"
-msgstr "Verzweigungswert außerhalb des gültigen Bereichs und zu einem ungeraden Offset"
+msgstr ""
+"Verzweigungswert außerhalb des gültigen Bereichs und zu einem ungeraden "
+"Offset"
 
 #: v850-opc.c:60
 msgid "branch to odd offset"
@@ -2467,7 +2598,8 @@ msgstr "Wohlbekannte globale Namen benennen"
 #: wasm32-dis.c:549
 #, c-format
 msgid ""
-"The following WebAssembly-specific disassembler options are supported for use\n"
+"The following WebAssembly-specific disassembler options are supported for "
+"use\n"
 "with the -M switch:\n"
 msgstr ""
 "Die folgenden WebAssembly-spezifischen Disassembleroptionen werden in\n"
@@ -2515,8 +2647,12 @@ msgstr "Syntaxfehler: Kein abschließendes »)«"
 
 #: xstormy16-desc.c:1318
 #, c-format
-msgid "internal error: xstormy16_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-msgstr "internal error: xstormy16_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+msgid ""
+"internal error: xstormy16_cgen_rebuild_tables: conflicting insn-chunk-"
+"bitsize values: `%d' vs. `%d'"
+msgstr ""
+"internal error: xstormy16_cgen_rebuild_tables: conflicting insn-chunk-"
+"bitsize values: `%d' vs. `%d'"
 
 #: xstormy16-desc.c:1406
 #, c-format
@@ -2549,8 +2685,12 @@ msgstr "internal error: xstormy16_cgen_cpu_open: no endianness specified"
 #~ msgid "Missing 'seg:' prefix"
 #~ msgstr "Das »seg:«-Präfix fehlt"
 
-#~ msgid "internal error: xc16x_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
-#~ msgstr "internal error: xc16x_cgen_rebuild_tables: conflicting insn-chunk-bitsize values: `%d' vs. `%d'"
+#~ msgid ""
+#~ "internal error: xc16x_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+#~ "values: `%d' vs. `%d'"
+#~ msgstr ""
+#~ "internal error: xc16x_cgen_rebuild_tables: conflicting insn-chunk-bitsize "
+#~ "values: `%d' vs. `%d'"
 
 #~ msgid "internal error: xc16x_cgen_cpu_open: unsupported argument `%d'"
 #~ msgstr "internal error: xc16x_cgen_cpu_open: unsupported argument `%d'"
@@ -2618,11 +2758,13 @@ msgstr "internal error: xstormy16_cgen_cpu_open: no endianness specified"
 
 #~ msgid ""
 #~ "\n"
-#~ "  For the options above, The following values are supported for \"ARCH\":\n"
+#~ "  For the options above, The following values are supported for \"ARCH"
+#~ "\":\n"
 #~ "   "
 #~ msgstr ""
 #~ "\n"
-#~ "  Für die obigen Optionen werden die folgenden Werte für »ARCH« unterstützt:\n"
+#~ "  Für die obigen Optionen werden die folgenden Werte für »ARCH« "
+#~ "unterstützt:\n"
 #~ "   "
 
 #~ msgid "Internal disassembler error"
@@ -2645,7 +2787,9 @@ msgstr "internal error: xstormy16_cgen_cpu_open: no endianness specified"
 #~ msgstr "Ungültige limm-Referenz in der letzten Anweisung!\n"
 
 #~ msgid "unable to fit different valued constants into instruction"
-#~ msgstr "Kann Konstanten mit verschiedenen Werten nicht in einen Maschinenbefehl einsetzen"
+#~ msgstr ""
+#~ "Kann Konstanten mit verschiedenen Werten nicht in einen Maschinenbefehl "
+#~ "einsetzen"
 
 #~ msgid "auxiliary register not allowed here"
 #~ msgstr "Hilfsregister ist an dieser Stelle nicht erlaubt"
@@ -2690,7 +2834,8 @@ msgstr "internal error: xstormy16_cgen_cpu_open: no endianness specified"
 #~ msgstr "Sprungadresse nicht an 4-Byte-Grenze"
 
 #~ msgid "must specify .jd or no nullify suffix"
-#~ msgstr "Entweder muss .jd angegeben werden oder das Suffix ausgenullt werden."
+#~ msgstr ""
+#~ "Entweder muss .jd angegeben werden oder das Suffix ausgenullt werden."
 
 #~ msgid "# internal error, incomplete extension sequence (+)"
 #~ msgstr "# Interner Fehler, unvollständige Erweiterungsfolge (+)"
@@ -2744,7 +2889,9 @@ msgstr "internal error: xstormy16_cgen_cpu_open: no endianness specified"
 #~ msgstr "Der Quellregisteroperand muss gerade sein"
 
 #~ msgid "branch value not in range and to an odd offset"
-#~ msgstr "Verzweigungswert außerhalb des gültigen Bereichs und zu einem ungeraden Offset."
+#~ msgstr ""
+#~ "Verzweigungswert außerhalb des gültigen Bereichs und zu einem ungeraden "
+#~ "Offset."
 
 #~ msgid "immediate value not in range and not even"
 #~ msgstr "Direktwert außerhalb des gültigen Bereichs und nicht gerade"

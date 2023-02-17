@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gprof 2.39.90\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2022-12-31 12:22+0000\n"
+"POT-Creation-Date: 2023-02-17 13:45+0100\n"
 "PO-Revision-Date: 2023-01-08 15:44-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
@@ -45,7 +45,9 @@ msgstr "%s: %s: ne atendita dosierfino\n"
 #: basic_blocks.c:196
 #, c-format
 msgid "%s: warning: ignoring basic-block exec counts (use -l or --line)\n"
-msgstr "%s: averto: ni preteratentas nombradon de baz-blokaj lanĉoj (uzu -l aŭ --line)\n"
+msgstr ""
+"%s: averto: ni preteratentas nombradon de baz-blokaj lanĉoj (uzu -l aŭ --"
+"line)\n"
 
 #. FIXME: This only works if bfd_vma is unsigned long.
 #: basic_blocks.c:289 basic_blocks.c:299
@@ -389,10 +391,12 @@ msgid ""
 "\t[--no-static] [--print-path] [--separate-files]\n"
 "\t[--static-call-graph] [--sum] [--table-length=len] [--traditional]\n"
 "\t[--version] [--width=n] [--ignore-non-functions]\n"
-"\t[--demangle[=STYLE]] [--no-demangle] [--external-symbol-table=name] [@FILE]\n"
+"\t[--demangle[=STYLE]] [--no-demangle] [--external-symbol-table=name] "
+"[@FILE]\n"
 "\t[image-file] [profile-file...]\n"
 msgstr ""
-"Uzmaniero: %s [-[abcDhilLrsTvwxyz]] [-[ABCeEfFJnNOpPqQRStZ][nomo]] [-I ujoj]\n"
+"Uzmaniero: %s [-[abcDhilLrsTvwxyz]] [-[ABCeEfFJnNOpPqQRStZ][nomo]] [-I "
+"ujoj]\n"
 "\t[-d[num]] [-k de/al] [-m min-num] [-t tabelo-longo]\n"
 "\t[--[no-]annotated-source[=nomo]] [--[no-]exec-counts[=nomo]]\n"
 "\t[--[no-]flat-profile[=nomo]] [--[no-]graph[=nomo]]\n"
@@ -403,7 +407,8 @@ msgstr ""
 "\t[--no-static] [--print-path] [--separate-files]\n"
 "\t[--static-call-graph] [--sum] [--table-length=longo] [--traditional]\n"
 "\t[--version] [--width=n] [--ignore-non-functions]\n"
-"\t[--demangle[=STILO]] [--no-demangle] [--external-symbol-table=nomo] [@DOSIERO]\n"
+"\t[--demangle[=STILO]] [--no-demangle] [--external-symbol-table=nomo] "
+"[@DOSIERO]\n"
 "\t[bildo-dosiero] [profilo-dosiero...]\n"
 
 #: gprof.c:178
@@ -429,35 +434,48 @@ msgstr "GNU gprof %s\n"
 
 #: gprof.c:427
 #, c-format
-msgid "Based on BSD gprof, copyright 1983 Regents of the University of California.\n"
-msgstr "Surbaze de BSD gprof, kopirajto 1983 Regents of the University of California.\n"
+msgid "Kalray gprof version %s\n"
+msgstr ""
 
 #: gprof.c:428
 #, c-format
-msgid "This program is free software.  This program has absolutely no warranty.\n"
-msgstr "Tiu ĉi programo estas libera programaro. Tiu ĉi programo havas absolute neniun garantion.\n"
+msgid ""
+"Based on BSD gprof, copyright 1983 Regents of the University of California.\n"
+msgstr ""
+"Surbaze de BSD gprof, kopirajto 1983 Regents of the University of "
+"California.\n"
 
-#: gprof.c:469
+#: gprof.c:429
+#, c-format
+msgid ""
+"This program is free software.  This program has absolutely no warranty.\n"
+msgstr ""
+"Tiu ĉi programo estas libera programaro. Tiu ĉi programo havas absolute "
+"neniun garantion.\n"
+
+#: gprof.c:470
 #, c-format
 msgid "%s: unknown demangling style `%s'\n"
 msgstr "%s: nekonata maladorniga stilo '%s'\n"
 
-#: gprof.c:492
+#: gprof.c:493
 #, c-format
-msgid "%s: Only one of --function-ordering and --file-ordering may be specified.\n"
-msgstr "%s: Nur unu el --function-ordering kaj --file-ordering povas esti indikata.\n"
+msgid ""
+"%s: Only one of --function-ordering and --file-ordering may be specified.\n"
+msgstr ""
+"%s: Nur unu el --function-ordering kaj --file-ordering povas esti indikata.\n"
 
-#: gprof.c:544
+#: gprof.c:545
 #, c-format
 msgid "%s: sorry, file format `prof' is not yet supported\n"
 msgstr "%s: pardonu, dosier-formato 'prof' ankoraŭ ne estas subtenata\n"
 
-#: gprof.c:598
+#: gprof.c:599
 #, c-format
 msgid "%s: gmon.out file is missing histogram\n"
 msgstr "%s: dosiero gmon.out malhavas histogramon\n"
 
-#: gprof.c:605
+#: gprof.c:606
 #, c-format
 msgid "%s: gmon.out file is missing call-graph data\n"
 msgstr "%s: dosiero gmon.out malhavas vok-grafikaĵan datumaron\n"

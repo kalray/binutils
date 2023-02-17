@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gprof 2.39.90\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2022-12-31 12:22+0000\n"
+"POT-Creation-Date: 2023-02-17 13:45+0100\n"
 "PO-Revision-Date: 2023-01-01 13:02+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -47,7 +47,9 @@ msgstr "%s: %s: oväntat filslut\n"
 #: basic_blocks.c:196
 #, c-format
 msgid "%s: warning: ignoring basic-block exec counts (use -l or --line)\n"
-msgstr "%s: varning: ignorerar exekveringsräkning för grundblock (använd -l eller --line)\n"
+msgstr ""
+"%s: varning: ignorerar exekveringsräkning för grundblock (använd -l eller --"
+"line)\n"
 
 #. FIXME: This only works if bfd_vma is unsigned long.
 #: basic_blocks.c:289 basic_blocks.c:299
@@ -393,10 +395,12 @@ msgid ""
 "\t[--no-static] [--print-path] [--separate-files]\n"
 "\t[--static-call-graph] [--sum] [--table-length=len] [--traditional]\n"
 "\t[--version] [--width=n] [--ignore-non-functions]\n"
-"\t[--demangle[=STYLE]] [--no-demangle] [--external-symbol-table=name] [@FILE]\n"
+"\t[--demangle[=STYLE]] [--no-demangle] [--external-symbol-table=name] "
+"[@FILE]\n"
 "\t[image-file] [profile-file...]\n"
 msgstr ""
-"Användning: %s [-[abcDhilLrsTvwxyz]] [-[ABCeEfFJnNOpPqQRStZ][name]] [-I kataloger]\n"
+"Användning: %s [-[abcDhilLrsTvwxyz]] [-[ABCeEfFJnNOpPqQRStZ][name]] [-I "
+"kataloger]\n"
 "\t[-d[num]] [-k från/till] [-m min_antal] [-t tabellängd]\n"
 "\t[--[no-]annotated-source[=namn]] [--[no-]exec-counts[=namn]]\n"
 "\t[--[no-]flat-profile[=namn]] [--[no-]graph[=namn]]\n"
@@ -407,7 +411,8 @@ msgstr ""
 "\t[--no-static] [--print-path] [--separate-files]\n"
 "\t[--static-call-graph] [--sum] [--table-length=längd] [--traditional]\n"
 "\t[--version] [--width=n] [--ignore-non-functions]\n"
-"\t[--demangle[=STIL]] [--no-demangle] [--external-symbol-table=namn] [@FILE]\n"
+"\t[--demangle[=STIL]] [--no-demangle] [--external-symbol-table=namn] "
+"[@FILE]\n"
 "\t[bildfil] [profilfil...]\n"
 
 #: gprof.c:178
@@ -435,35 +440,47 @@ msgstr "GNU gprof %s\n"
 
 #: gprof.c:427
 #, c-format
-msgid "Based on BSD gprof, copyright 1983 Regents of the University of California.\n"
-msgstr "Baserat på BSD gprof, copyright 1983 Regents of the University of California.\n"
+msgid "Kalray gprof version %s\n"
+msgstr ""
 
 #: gprof.c:428
 #, c-format
-msgid "This program is free software.  This program has absolutely no warranty.\n"
-msgstr "Detta program är fri programvara. Detta program har ingen som helst garanti.\n"
+msgid ""
+"Based on BSD gprof, copyright 1983 Regents of the University of California.\n"
+msgstr ""
+"Baserat på BSD gprof, copyright 1983 Regents of the University of "
+"California.\n"
 
-#: gprof.c:469
+#: gprof.c:429
+#, c-format
+msgid ""
+"This program is free software.  This program has absolutely no warranty.\n"
+msgstr ""
+"Detta program är fri programvara. Detta program har ingen som helst "
+"garanti.\n"
+
+#: gprof.c:470
 #, c-format
 msgid "%s: unknown demangling style `%s'\n"
 msgstr "%s: okänd avmanglingsstil ”%s”\n"
 
-#: gprof.c:492
+#: gprof.c:493
 #, c-format
-msgid "%s: Only one of --function-ordering and --file-ordering may be specified.\n"
+msgid ""
+"%s: Only one of --function-ordering and --file-ordering may be specified.\n"
 msgstr "%s: Endast en av --function-ordering och --file-ordering kan anges.\n"
 
-#: gprof.c:544
+#: gprof.c:545
 #, c-format
 msgid "%s: sorry, file format `prof' is not yet supported\n"
 msgstr "%s: tyvärr, filformatet ”prof” stöds inte än\n"
 
-#: gprof.c:598
+#: gprof.c:599
 #, c-format
 msgid "%s: gmon.out file is missing histogram\n"
 msgstr "%s: gmon.out-filen saknar histogram\n"
 
-#: gprof.c:605
+#: gprof.c:606
 #, c-format
 msgid "%s: gmon.out file is missing call-graph data\n"
 msgstr "%s: gmon.out-filen saknar anropsgrafdata\n"

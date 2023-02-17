@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bfd 2.39.90\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2022-12-31 12:18+0000\n"
+"POT-Creation-Date: 2023-02-17 13:41+0100\n"
 "PO-Revision-Date: 2023-01-13 01:02+0100\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
@@ -30,7 +30,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "X-Generator: Poedit 3.2.2\n"
 
@@ -52,12 +53,16 @@ msgstr "%pB: înregistrare de realocare greșită importată: %d"
 #: aoutx.h:1265 aoutx.h:1612 pdp11.c:1238 pdp11.c:1511
 #, c-format
 msgid "%pB: can not represent section `%pA' in a.out object file format"
-msgstr "%pB: nu poate reprezenta secțiunea „%pA” în format de fișier obiect a.out"
+msgstr ""
+"%pB: nu poate reprezenta secțiunea „%pA” în format de fișier obiect a.out"
 
 #: aoutx.h:1576 pdp11.c:1483
 #, c-format
-msgid "%pB: can not represent section for symbol `%s' in a.out object file format"
-msgstr "%pB: nu se poate reprezenta secțiunea pentru simbolul „%s” în formatul de fișier obiect a.out"
+msgid ""
+"%pB: can not represent section for symbol `%s' in a.out object file format"
+msgstr ""
+"%pB: nu se poate reprezenta secțiunea pentru simbolul „%s” în formatul de "
+"fișier obiect a.out"
 
 #: aoutx.h:1579 vms-alpha.c:8429
 msgid "*unknown*"
@@ -112,9 +117,9 @@ msgstr "%pB: tip de realocare neacceptat"
 #: elf64-nfp.c:151 elf64-ppc.c:1026 elf64-ppc.c:1380 elf64-ppc.c:1389
 #: elf64-s390.c:328 elf64-s390.c:378 elf64-x86-64.c:269 elfn32-mips.c:3792
 #: elfxx-ia64.c:324 elfxx-loongarch.c:1382 elfxx-riscv.c:943 elfxx-sparc.c:589
-#: elfxx-sparc.c:639 elfxx-tilegx.c:907 elfxx-tilegx.c:947
-#: elfnn-aarch64.c:2215 elfnn-aarch64.c:2313 elfnn-ia64.c:214
-#: elfnn-ia64.c:3820
+#: elfxx-sparc.c:639 elfxx-tilegx.c:907 elfxx-tilegx.c:947 elfnn-aarch64.c:2215
+#: elfnn-aarch64.c:2313 elfnn-ia64.c:214 elfnn-ia64.c:3820
+#: ../../bfd/elfnn-kvx.c:176 ../../bfd/elfnn-kvx.c:268
 #, c-format
 msgid "%pB: unsupported relocation type %#x"
 msgstr "%pB: tip de realocare neacceptat %#x"
@@ -131,11 +136,13 @@ msgstr "%pB: nu se poate aloca memorie pentru intrările GOT locale"
 
 #: archive.c:733
 msgid "%F%P: %pB(%s): error opening thin archive member: %E\n"
-msgstr "%F%P: %pB(%s): eroare la deschiderea membrului subțire al arhivei: %E\n"
+msgstr ""
+"%F%P: %pB(%s): eroare la deschiderea membrului subțire al arhivei: %E\n"
 
 #: archive.c:2262
 msgid "warning: writing archive was slow: rewriting timestamp"
-msgstr "avertisment: scrierea arhivei a fost lentă: se rescrie marcajul de timp"
+msgstr ""
+"avertisment: scrierea arhivei a fost lentă: se rescrie marcajul de timp"
 
 #: archive.c:2329 archive.c:2390 elflink.c:4760 linker.c:1431
 #, c-format
@@ -275,7 +282,9 @@ msgstr "nu se cartografiază: variabila env nu este definită\n"
 #: binary.c:277
 #, c-format
 msgid "warning: writing section `%pA' at huge (ie negative) file offset"
-msgstr "avertisment: scrierea secțiunii „%pA” la un decalaj uriaș (adică negativ) în fișier"
+msgstr ""
+"avertisment: scrierea secțiunii „%pA” la un decalaj uriaș (adică negativ) în "
+"fișier"
 
 #: cache.c:275
 #, c-format
@@ -284,8 +293,13 @@ msgstr "se redeschide %pB: %s"
 
 #: coff-alpha.c:450
 #, c-format
-msgid "%pB: cannot handle compressed Alpha binaries; use compiler flags, or objZ, to generate uncompressed binaries"
-msgstr "%pB: nu se pot gestiona fișierele binare Alpha comprimate; utilizați opțiunile compilatorului, sau objZ, pentru a genera fișiere binare necomprimate"
+msgid ""
+"%pB: cannot handle compressed Alpha binaries; use compiler flags, or objZ, "
+"to generate uncompressed binaries"
+msgstr ""
+"%pB: nu se pot gestiona fișierele binare Alpha comprimate; utilizați "
+"opțiunile compilatorului, sau objZ, pentru a genera fișiere binare "
+"necomprimate"
 
 #: coff-alpha.c:857 coff-alpha.c:894 coff-alpha.c:1963 coff-mips.c:959
 msgid "GP relative relocation used when GP not defined"
@@ -324,7 +338,8 @@ msgstr "%pB: swap_aux_out neacceptat pentru clasa de stocare %#x"
 #: coff-rs6000.c:3045
 #, c-format
 msgid "%pB: TOC reloc at %#<PRIx64> to symbol `%s' with no TOC entry"
-msgstr "%pB: realocare TOC la %#<PRIx64> pentru simbolul „%s” fără nicio intrare TOC"
+msgstr ""
+"%pB: realocare TOC la %#<PRIx64> pentru simbolul „%s” fără nicio intrare TOC"
 
 #: coff-rs6000.c:3169 coff64-rs6000.c:848
 #, c-format
@@ -359,7 +374,8 @@ msgstr "%pB: %#<PRIx64>: avertisment: decalaj R_SH_USES incorect"
 #: coff-sh.c:790
 #, c-format
 msgid "%pB: %#<PRIx64>: warning: R_SH_USES points to unrecognized insn %#x"
-msgstr "%pB: %#<PRIx64>: avertisment: R_SH_USES indică un insn nerecunoscut %#x"
+msgstr ""
+"%pB: %#<PRIx64>: avertisment: R_SH_USES indică un insn nerecunoscut %#x"
 
 #: coff-sh.c:808 elf32-sh.c:551
 #, c-format
@@ -379,7 +395,9 @@ msgstr "%pB: %#<PRIx64>: avertisment: simbol în secțiune neașteptată"
 #: coff-sh.c:976 elf32-sh.c:726
 #, c-format
 msgid "%pB: %#<PRIx64>: warning: could not find expected COUNT reloc"
-msgstr "%pB: %#<PRIx64>: avertisment: nu s-a putut găsi realocarea COUNT(NUMĂRUL)  așteptată"
+msgstr ""
+"%pB: %#<PRIx64>: avertisment: nu s-a putut găsi realocarea COUNT(NUMĂRUL)  "
+"așteptată"
 
 #: coff-sh.c:986 elf32-sh.c:737
 #, c-format
@@ -437,7 +455,9 @@ msgstr "%pB: eroare: simbol neașteptat „%s” în secțiunea COMDAT"
 #: coffcode.h:1037
 #, c-format
 msgid "%pB: warning: COMDAT symbol '%s' does not match section name '%s'"
-msgstr "%pB: avertisment: simbolul COMDAT „%s” nu se potrivește cu numele secțiunii „%s”"
+msgstr ""
+"%pB: avertisment: simbolul COMDAT „%s” nu se potrivește cu numele secțiunii "
+"„%s”"
 
 #: coffcode.h:1047
 #, c-format
@@ -500,7 +520,9 @@ msgstr "%pB: avertisment: citirea tabelului cu numere de linie a eșuat"
 #: coffcode.h:4461 coffcode.h:4475
 #, c-format
 msgid "%pB: warning: illegal symbol index 0x%lx in line number entry %d"
-msgstr "%pB: avertisment: index de simbol ilegal 0x%lx în intrarea cu numărul de linie %d"
+msgstr ""
+"%pB: avertisment: index de simbol ilegal 0x%lx în intrarea cu numărul de "
+"linie %d"
 
 #: coffcode.h:4489
 #, c-format
@@ -510,7 +532,8 @@ msgstr "%pB: avertisment: simbol ilegal în intrarea cu numărul de linie %d"
 #: coffcode.h:4502
 #, c-format
 msgid "%pB: warning: duplicate line number information for `%s'"
-msgstr "%pB: avertisment: informații despre numărul liniei duplicate pentru „%s”"
+msgstr ""
+"%pB: avertisment: informații despre numărul liniei duplicate pentru „%s”"
 
 #: coffcode.h:4921
 #, c-format
@@ -582,8 +605,12 @@ msgstr "%pB: realocări in sectiunea „%pA”, dar aceasta nu are conținut"
 
 #: cofflink.c:2371 elflink.c:11510
 #, c-format
-msgid "%X`%s' referenced in section `%pA' of %pB: defined in discarded section `%pA' of %pB\n"
-msgstr "%X„%s” la care se face referire în secțiunea „%pA” din %pB: este definit în secțiunea eliminată „%pA” din %pB\n"
+msgid ""
+"%X`%s' referenced in section `%pA' of %pB: defined in discarded section `"
+"%pA' of %pB\n"
+msgstr ""
+"%X„%s” la care se face referire în secțiunea „%pA” din %pB: este definit în "
+"secțiunea eliminată „%pA” din %pB\n"
 
 #: cofflink.c:2566
 #, c-format
@@ -617,8 +644,11 @@ msgstr "eroare: %pB(%pA) este prea mare (%#<PRIx64> octeți)"
 
 #: cpu-arm.c:320 cpu-arm.c:332
 #, c-format
-msgid "error: %pB is compiled for the EP9312, whereas %pB is compiled for XScale"
-msgstr "eroare: %pB este compilat pentru EP9312, pe când %pB este compilat pentru XScale"
+msgid ""
+"error: %pB is compiled for the EP9312, whereas %pB is compiled for XScale"
+msgstr ""
+"eroare: %pB este compilat pentru EP9312, pe când %pB este compilat pentru "
+"XScale"
 
 #: cpu-arm.c:468
 #, c-format
@@ -638,12 +668,17 @@ msgstr "eroare DWARF: secțiunea %s este prea mare"
 
 #: dwarf2.c:746
 #, c-format
-msgid "DWARF error: offset (%<PRIu64>) greater than or equal to %s size (%<PRIu64>)"
-msgstr "eroare DWARF: decalaj (%<PRIu64>) mai mare sau egal cu dimensiunea %s (%<PRIu64>)"
+msgid ""
+"DWARF error: offset (%<PRIu64>) greater than or equal to %s size (%<PRIu64>)"
+msgstr ""
+"eroare DWARF: decalaj (%<PRIu64>) mai mare sau egal cu dimensiunea %s "
+"(%<PRIu64>)"
 
 #: dwarf2.c:1493
 msgid "DWARF error: info pointer extends beyond end of attributes"
-msgstr "eroare DWARF: indicatorul de informații se extinde dincolo de sfârșitul atributelor"
+msgstr ""
+"eroare DWARF: indicatorul de informații se extinde dincolo de sfârșitul "
+"atributelor"
 
 #: dwarf2.c:1685
 #, c-format
@@ -652,7 +687,9 @@ msgstr "eroare DWARF: valoare FORM nevalidă sau neprocesabilă: %#x"
 
 #: dwarf2.c:2032
 msgid "DWARF error: mangled line number section (bad file number)"
-msgstr "eroare DWARF: secțiune a numărului de linie deteriorată (număr de fișier greșit)"
+msgstr ""
+"eroare DWARF: secțiune a numărului de linie deteriorată (număr de fișier "
+"greșit)"
 
 #: dwarf2.c:2576
 msgid "DWARF error: zero format count"
@@ -661,7 +698,9 @@ msgstr "eroare DWARF: număr(contor) de format zero"
 #: dwarf2.c:2586
 #, c-format
 msgid "DWARF error: data count (%<PRIx64>) larger than buffer size"
-msgstr "eroare DWARF: cantitatea de date (%<PRIx64>) mai mare decât dimensiunea memoriei tampon"
+msgstr ""
+"eroare DWARF: cantitatea de date (%<PRIx64>) mai mare decât dimensiunea "
+"memoriei tampon"
 
 #: dwarf2.c:2625
 #, c-format
@@ -671,12 +710,17 @@ msgstr "eroare DWARF: tip de conținut în format necunoscut %<PRIu64>"
 #: dwarf2.c:2698
 #, c-format
 msgid "DWARF error: line info section is too small (%<PRId64>)"
-msgstr "eroare DWARF: secțiunea de informații despre linie este prea mică (%<PRId64>)"
+msgstr ""
+"eroare DWARF: secțiunea de informații despre linie este prea mică (%<PRId64>)"
 
 #: dwarf2.c:2725
 #, c-format
-msgid "DWARF error: line info data is bigger (%#<PRIx64>) than the space remaining in the section (%#lx)"
-msgstr "eroare DWARF: datele de informații despre linie sunt mai mari (%#<PRIx64>) decât spațiul rămas în secțiune (%#lx)"
+msgid ""
+"DWARF error: line info data is bigger (%#<PRIx64>) than the space remaining "
+"in the section (%#lx)"
+msgstr ""
+"eroare DWARF: datele de informații despre linie sunt mai mari (%#<PRIx64>) "
+"decât spațiul rămas în secțiune (%#lx)"
 
 #: dwarf2.c:2738
 #, c-format
@@ -690,7 +734,9 @@ msgstr "eroare DWARF: s-a rămas fără spațiu citind prologul"
 #: dwarf2.c:2763
 #, c-format
 msgid "DWARF error: line info unsupported segment selector size %u"
-msgstr "eroare DWARF: dimensiunea selectorului de segmente %u, nu este acceptată pentru informațiile de linie"
+msgstr ""
+"eroare DWARF: dimensiunea selectorului de segmente %u, nu este acceptată "
+"pentru informațiile de linie"
 
 #: dwarf2.c:2785
 msgid "DWARF error: invalid maximum operations per instruction"
@@ -720,7 +766,9 @@ msgstr "eroare DWARF: nu se poate citi referința alternativă %<PRIu64>"
 #: dwarf2.c:3548
 #, c-format
 msgid "DWARF error: unable to locate abstract instance DIE ref %<PRIu64>"
-msgstr "eroare DWARF: nu se poate localiza referința la instanța abstractă DIE %<PRIu64>"
+msgstr ""
+"eroare DWARF: nu se poate localiza referința la instanța abstractă DIE "
+"%<PRIu64>"
 
 #: dwarf2.c:3585 dwarf2.c:3901 dwarf2.c:4471
 #, c-format
@@ -730,21 +778,32 @@ msgstr "eroare DWARF: nu s-a putut găsi numărul abreviat %u"
 #: dwarf2.c:4171
 #, c-format
 msgid "DWARF error: could not find variable specification at offset 0x%lx"
-msgstr "eroare DWARF: nu s-a putut găsi specificația variabilei la poziția 0x%lx"
+msgstr ""
+"eroare DWARF: nu s-a putut găsi specificația variabilei la poziția 0x%lx"
 
 #: dwarf2.c:4317 dwarf2.c:4571
-msgid "DWARF error: DW_AT_comp_dir attribute encountered with a non-string form"
-msgstr "eroare DWARF: atributul DW_AT_comp_dir a fost găsit cu o formă fără șir"
+msgid ""
+"DWARF error: DW_AT_comp_dir attribute encountered with a non-string form"
+msgstr ""
+"eroare DWARF: atributul DW_AT_comp_dir a fost găsit cu o formă fără șir"
 
 #: dwarf2.c:4388
 #, c-format
-msgid "DWARF error: found dwarf version '%u', this reader only handles version 2, 3, 4 and 5 information"
-msgstr "eroare DWARF: a fost găsit «dwarf» versiunea „%u”, acest cititor gestionează doar informațiile despre versiunile 2, 3, 4 și 5"
+msgid ""
+"DWARF error: found dwarf version '%u', this reader only handles version 2, "
+"3, 4 and 5 information"
+msgstr ""
+"eroare DWARF: a fost găsit «dwarf» versiunea „%u”, acest cititor gestionează "
+"doar informațiile despre versiunile 2, 3, 4 și 5"
 
 #: dwarf2.c:4435
 #, c-format
-msgid "DWARF error: found address size '%u', this reader can not handle sizes greater than '%u'"
-msgstr "eroare DWARF: s-a găsit adresa cu dimensiunea „%u”, acest cititor nu poate gestiona dimensiuni mai mari de „%u”"
+msgid ""
+"DWARF error: found address size '%u', this reader can not handle sizes "
+"greater than '%u'"
+msgstr ""
+"eroare DWARF: s-a găsit adresa cu dimensiunea „%u”, acest cititor nu poate "
+"gestiona dimensiuni mai mari de „%u”"
 
 #: ecoff.c:940
 #, c-format
@@ -840,13 +899,19 @@ msgstr "%pB: eroare: lungimea secțiunii de atribut prea mică: %ld"
 
 #: elf-attrs.c:644
 #, c-format
-msgid "error: %pB: object has vendor-specific contents that must be processed by the '%s' toolchain"
-msgstr "eroare: %pB: obiectul are conținut specific furnizorului care trebuie procesat de lanțul de instrumente „%s”"
+msgid ""
+"error: %pB: object has vendor-specific contents that must be processed by "
+"the '%s' toolchain"
+msgstr ""
+"eroare: %pB: obiectul are conținut specific furnizorului care trebuie "
+"procesat de lanțul de instrumente „%s”"
 
 #: elf-attrs.c:654
 #, c-format
 msgid "error: %pB: object tag '%d, %s' is incompatible with tag '%d, %s'"
-msgstr "eroare: %pB: eticheta obiectului „%d, %s” este incompatibilă cu eticheta „%d, %s”"
+msgstr ""
+"eroare: %pB: eticheta obiectului „%d, %s” este incompatibilă cu eticheta "
+"„%d, %s”"
 
 #: elf-eh-frame.c:944
 #, c-format
@@ -864,8 +929,12 @@ msgid "FDE encoding in %pB(%pA) prevents .eh_frame_hdr table being created"
 msgstr "codificarea FDE în %pB(%pA) împiedică crearea tabelului .eh_frame_hdr"
 
 #: elf-eh-frame.c:1548
-msgid "further warnings about FDE encoding preventing .eh_frame_hdr generation dropped"
-msgstr "avertismentele suplimentare despre codificarea FDE care împiedică generarea .eh_frame_hdr au fost omise"
+msgid ""
+"further warnings about FDE encoding preventing .eh_frame_hdr generation "
+"dropped"
+msgstr ""
+"avertismentele suplimentare despre codificarea FDE care împiedică generarea ."
+"eh_frame_hdr au fost omise"
 
 #: elf-eh-frame.c:1867
 #, c-format
@@ -907,8 +976,14 @@ msgstr ".eh_frame_hdr se referă la FDE-uri suprapuse"
 #. xgettext:c-format.
 #: elf-ifunc.c:144 elfnn-loongarch.c:1278
 #, c-format
-msgid "%F%P: dynamic STT_GNU_IFUNC symbol `%s' with pointer equality in `%pB' can not be used when making an executable; recompile with -fPIE and relink with -pie\n"
-msgstr "%F%P: simbolul STT_GNU_IFUNC dinamic „%s” cu egalitatea indicatorului în „%pB” nu poate fi folosit când se creează un executabil; recompilați cu „-fPIE” și reeditați legăturile cu „-pie”\n"
+msgid ""
+"%F%P: dynamic STT_GNU_IFUNC symbol `%s' with pointer equality in `%pB' can "
+"not be used when making an executable; recompile with -fPIE and relink with -"
+"pie\n"
+msgstr ""
+"%F%P: simbolul STT_GNU_IFUNC dinamic „%s” cu egalitatea indicatorului în "
+"„%pB” nu poate fi folosit când se creează un executabil; recompilați cu „-"
+"fPIE” și reeditați legăturile cu „-pie”\n"
 
 #: elf-m10200.c:434 elf-m10300.c:2146 elf32-bfin.c:3133 elf32-cr16.c:1429
 #: elf32-cris.c:2034 elf32-crx.c:922 elf32-d10v.c:510 elf32-epiphany.c:562
@@ -926,12 +1001,11 @@ msgstr "eroare internă: eroare în afara intervalului"
 #: elf32-cris.c:2038 elf32-crx.c:926 elf32-d10v.c:514 elf32-fr30.c:598
 #: elf32-frv.c:4053 elf32-ft32.c:496 elf32-h8300.c:527 elf32-iq2000.c:695
 #: elf32-lm32.c:1074 elf32-m32c.c:628 elf32-m32r.c:2841 elf32-m68hc1x.c:1275
-#: elf32-mep.c:526 elf32-metag.c:1988 elf32-microblaze.c:1668
-#: elf32-moxie.c:292 elf32-msp430.c:1510 elf32-nds32.c:6097 elf32-or1k.c:1893
-#: elf32-score.c:2738 elf32-score7.c:2549 elf32-spu.c:5089
-#: elf32-tilepro.c:3376 elf32-v850.c:2298 elf32-visium.c:684
-#: elf32-xstormy16.c:934 elf64-mmix.c:1545 elfxx-mips.c:10628
-#: elfxx-tilegx.c:3746
+#: elf32-mep.c:526 elf32-metag.c:1988 elf32-microblaze.c:1668 elf32-moxie.c:292
+#: elf32-msp430.c:1510 elf32-nds32.c:6097 elf32-or1k.c:1893 elf32-score.c:2738
+#: elf32-score7.c:2549 elf32-spu.c:5089 elf32-tilepro.c:3376 elf32-v850.c:2298
+#: elf32-visium.c:684 elf32-xstormy16.c:934 elf64-mmix.c:1545
+#: elfxx-mips.c:10628 elfxx-tilegx.c:3746
 msgid "internal error: unsupported relocation error"
 msgstr "eroare internă: eroare de realocare neacceptată"
 
@@ -947,11 +1021,10 @@ msgstr "eroare internă: eroare periculoasă"
 #: elf32-fr30.c:606 elf32-frv.c:4061 elf32-ft32.c:504 elf32-h8300.c:535
 #: elf32-ip2k.c:1492 elf32-iq2000.c:703 elf32-lm32.c:1082 elf32-m32c.c:636
 #: elf32-m32r.c:2849 elf32-m68hc1x.c:1283 elf32-mep.c:534 elf32-metag.c:1996
-#: elf32-microblaze.c:1676 elf32-moxie.c:300 elf32-msp430.c:1518
-#: elf32-mt.c:410 elf32-nds32.c:6105 elf32-or1k.c:1901 elf32-score.c:2751
-#: elf32-score7.c:2557 elf32-spu.c:5097 elf32-tilepro.c:3384 elf32-v850.c:2318
-#: elf32-visium.c:692 elf32-xstormy16.c:942 elf64-bpf.c:565 elf64-mmix.c:1553
-#: elfxx-tilegx.c:3754
+#: elf32-microblaze.c:1676 elf32-moxie.c:300 elf32-msp430.c:1518 elf32-mt.c:410
+#: elf32-nds32.c:6105 elf32-or1k.c:1901 elf32-score.c:2751 elf32-score7.c:2557
+#: elf32-spu.c:5097 elf32-tilepro.c:3384 elf32-v850.c:2318 elf32-visium.c:692
+#: elf32-xstormy16.c:942 elf64-bpf.c:565 elf64-mmix.c:1553 elfxx-tilegx.c:3754
 msgid "internal error: unknown error"
 msgstr "eroare internă: eroare necunoscută"
 
@@ -963,32 +1036,43 @@ msgstr "%pB: tranziție neacceptată de la %s la %s"
 #: elf-m10300.c:1197
 #, c-format
 msgid "%pB: %s' accessed both as normal and thread local symbol"
-msgstr "%pB: %s a fost accesat atât ca simbol local normal, cât și ca simbol local al firului de execuție"
+msgstr ""
+"%pB: %s a fost accesat atât ca simbol local normal, cât și ca simbol local "
+"al firului de execuție"
 
 #: elf-m10300.c:2093 elf32-arm.c:13392 elf32-i386.c:3459 elf32-m32r.c:2331
 #: elf32-m68k.c:3929 elf32-s390.c:3080 elf32-sh.c:3671 elf32-tilepro.c:3275
-#: elf32-xtensa.c:3023 elf64-s390.c:3042 elf64-x86-64.c:4182
-#: elfxx-sparc.c:2917 elfxx-sparc.c:3814 elfxx-tilegx.c:3665
-#: elfnn-aarch64.c:5515 elfnn-aarch64.c:7120
+#: elf32-xtensa.c:3023 elf64-s390.c:3042 elf64-x86-64.c:4182 elfxx-sparc.c:2917
+#: elfxx-sparc.c:3814 elfxx-tilegx.c:3665 elfnn-aarch64.c:5515
+#: elfnn-aarch64.c:7120 ../../bfd/elfnn-kvx.c:2801
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): unresolvable %s relocation against symbol `%s'"
 msgstr "%pB(%pA+%#<PRIx64>): realocare %s nerezolvată față de simbolul „%s”"
 
 #: elf-m10300.c:2155
-msgid "error: inappropriate relocation type for shared library (did you forget -fpic?)"
-msgstr "eroare: tip de realocare neadecvat pentru biblioteca partajată (ați uitat să adăugați opțiunea „-fpic”?)"
+msgid ""
+"error: inappropriate relocation type for shared library (did you forget -"
+"fpic?)"
+msgstr ""
+"eroare: tip de realocare neadecvat pentru biblioteca partajată (ați uitat să "
+"adăugați opțiunea „-fpic”?)"
 
 #: elf-m10300.c:2159
 #, c-format
-msgid "%pB: taking the address of protected function '%s' cannot be done when making a shared library"
-msgstr "%pB: obținerea adresei funcției protejate „%s” nu poate fi făcută atunci când se creează o bibliotecă partajată"
+msgid ""
+"%pB: taking the address of protected function '%s' cannot be done when "
+"making a shared library"
+msgstr ""
+"%pB: obținerea adresei funcției protejate „%s” nu poate fi făcută atunci "
+"când se creează o bibliotecă partajată"
 
 #: elf-m10300.c:2162
 msgid "internal error: suspicious relocation type used in shared library"
-msgstr "eroare internă: tip de realocare suspect utilizat în biblioteca partajată"
+msgstr ""
+"eroare internă: tip de realocare suspect utilizat în biblioteca partajată"
 
 #: elf-m10300.c:2650 elf32-avr.c:2488 elf32-frv.c:5621 elf64-ia64-vms.c:365
-#: elfxx-sparc.c:2684 reloc.c:8424 reloc16.c:155 elfnn-ia64.c:365
+#: elfxx-sparc.c:2684 reloc.c:8608 reloc16.c:155 elfnn-ia64.c:365
 msgid "%P%F: --relax and -r may not be used together\n"
 msgstr "%P%F: opțiunile „--relax” și „-r” nu pot fi folosite împreună\n"
 
@@ -1000,12 +1084,15 @@ msgstr "%pB: memorie insuficientă în _bfd_elf_get_property"
 #: elf-properties.c:91
 #, c-format
 msgid "warning: %pB: corrupt GNU_PROPERTY_TYPE (%ld) size: %#lx"
-msgstr "avertisment: %pB: dimensiunea GNU_PROPERTY_TYPE (%ld) este coruptă: %#lx"
+msgstr ""
+"avertisment: %pB: dimensiunea GNU_PROPERTY_TYPE (%ld) este coruptă: %#lx"
 
 #: elf-properties.c:112
 #, c-format
 msgid "warning: %pB: corrupt GNU_PROPERTY_TYPE (%ld) type (0x%x) datasz: 0x%x"
-msgstr "avertisment: %pB: GNU_PROPERTY_TYPE corupt (%ld), tip (0x%x), dimensiunea datelor: 0x%x"
+msgstr ""
+"avertisment: %pB: GNU_PROPERTY_TYPE corupt (%ld), tip (0x%x), dimensiunea "
+"datelor: 0x%x"
 
 #: elf-properties.c:151
 #, c-format
@@ -1015,7 +1102,8 @@ msgstr "avertisment: %pB: dimensiunea stivei corupte: 0x%x"
 #: elf-properties.c:169
 #, c-format
 msgid "warning: %pB: corrupt no copy on protected size: 0x%x"
-msgstr "avertisment: %pB: corupt,  „nu este protejat la copiere”, dimensiune: 0x%x"
+msgstr ""
+"avertisment: %pB: corupt,  „nu este protejat la copiere”, dimensiune: 0x%x"
 
 #: elf-properties.c:189
 #, c-format
@@ -1029,11 +1117,14 @@ msgstr "avertisment: %pB: tip GNU_PROPERTY_TYPE (%ld) neacceptat: 0x%x"
 
 #: elf-properties.c:400
 msgid "Removed property %W to merge %pB (0x%v) and %pB (0x%v)\n"
-msgstr "Proprietatea %W a fost eliminată pentru a fuziona %pB (0x%v) și %pB (0x%v)\n"
+msgstr ""
+"Proprietatea %W a fost eliminată pentru a fuziona %pB (0x%v) și %pB (0x%v)\n"
 
 #: elf-properties.c:406
 msgid "Removed property %W to merge %pB (0x%v) and %pB (not found)\n"
-msgstr "Proprietatea %W a fost eliminată pentru a fuziona %pB (0x%v) și %pB (nu a fost găsită)\n"
+msgstr ""
+"Proprietatea %W a fost eliminată pentru a fuziona %pB (0x%v) și %pB (nu a "
+"fost găsită)\n"
 
 #: elf-properties.c:415 elf-properties.c:493
 msgid "Removed property %W to merge %pB and %pB\n"
@@ -1041,19 +1132,27 @@ msgstr "Proprietatea %W a fost eliminată pentru a fuziona %pB și %pB\n"
 
 #: elf-properties.c:419
 msgid "Removed property %W to merge %pB and %pB (not found)\n"
-msgstr "Proprietatea %W a fost eliminată pentru a fuziona %pB și %pB (nu a fost găsită)\n"
+msgstr ""
+"Proprietatea %W a fost eliminată pentru a fuziona %pB și %pB (nu a fost "
+"găsită)\n"
 
 #: elf-properties.c:436
 msgid "Updated property %W (0x%v) to merge %pB (0x%v) and %pB (0x%v)\n"
-msgstr "S-a actualizat proprietatea %W (0x%v) pentru a fuziona %pB (0x%v) și %pB (0x%v)\n"
+msgstr ""
+"S-a actualizat proprietatea %W (0x%v) pentru a fuziona %pB (0x%v) și %pB (0x"
+"%v)\n"
 
 #: elf-properties.c:445
 msgid "Updated property %W (%v) to merge %pB (0x%v) and %pB (not found)\n"
-msgstr "S-a actualizat proprietatea %W (%v) pentru a fuziona %pB (0x%v) și %pB (nu a fost găsită)\n"
+msgstr ""
+"S-a actualizat proprietatea %W (%v) pentru a fuziona %pB (0x%v) și %pB (nu a "
+"fost găsită)\n"
 
 #: elf-properties.c:487
 msgid "Removed property %W to merge %pB (not found) and %pB (0x%v)\n"
-msgstr "Proprietatea %W a fost eliminată pentru a fuziona %pB (negăsită) și %pB (0x%v)\n"
+msgstr ""
+"Proprietatea %W a fost eliminată pentru a fuziona %pB (negăsită) și %pB (0x"
+"%v)\n"
 
 #: elf-properties.c:668 elfxx-aarch64.c:758 elfxx-x86.c:4087
 msgid "%F%P: failed to create GNU property section\n"
@@ -1080,28 +1179,33 @@ msgstr "eroare în %pB(%pA); nu va fi creat niciun .sframe"
 
 #: elf-sframe.c:397
 msgid "input SFrame sections with different abi prevent .sframe generation"
-msgstr "secțiunile de intrare SFrame cu abi diferite împiedică generarea .sframe"
+msgstr ""
+"secțiunile de intrare SFrame cu abi diferite împiedică generarea .sframe"
 
 #. PR 17512: file: f057ec89.
 #: elf.c:337
 #, c-format
 msgid "%pB: attempt to load strings from a non-string section (number %d)"
-msgstr "%pB: încercare de-a încărca șiruri dintr-o secțiune fără șiruri (numărul %d)"
+msgstr ""
+"%pB: încercare de-a încărca șiruri dintr-o secțiune fără șiruri (numărul %d)"
 
 #: elf.c:362
 #, c-format
 msgid "%pB: invalid string offset %u >= %<PRIu64> for section `%s'"
 msgstr "%pB: decalaj de șir nevalid %u >= %<PRIu64> pentru secțiunea „%s”"
 
-#: elf.c:515 elfnn-aarch64.c:8120 elfnn-loongarch.c:3919
+#: elf.c:515 elf32-arm.c:17713 elfnn-aarch64.c:8120 elfnn-loongarch.c:3919
 #, c-format
 msgid "%pB symbol number %lu references nonexistent SHT_SYMTAB_SHNDX section"
-msgstr "%pB numărul simbol %lu face referire la secțiunea SHT_SYMTAB_SHNDX inexistentă"
+msgstr ""
+"%pB numărul simbol %lu face referire la secțiunea SHT_SYMTAB_SHNDX "
+"inexistentă"
 
 #: elf.c:677
 #, c-format
 msgid "%pB: invalid size field in group section header: %#<PRIx64>"
-msgstr "%pB: câmp de dimensiune nevalid din antetul secțiunii de grup: %#<PRIx64>"
+msgstr ""
+"%pB: câmp de dimensiune nevalid din antetul secțiunii de grup: %#<PRIx64>"
 
 #: elf.c:722
 #, c-format
@@ -1146,8 +1250,12 @@ msgstr "%pB: tip necunoscut [%#x] de secțiune „%s” în grupul [%pA]"
 
 #: elf.c:1242
 #, c-format
-msgid "%pB: section %s is compressed with zstd, but BFD is not built with zstd support"
-msgstr "%pB: secțiunea %s este comprimată cu zstd, dar BFD nu este construit cu suport pentru zstd"
+msgid ""
+"%pB: section %s is compressed with zstd, but BFD is not built with zstd "
+"support"
+msgstr ""
+"%pB: secțiunea %s este comprimată cu zstd, dar BFD nu este construit cu "
+"suport pentru zstd"
 
 #: elf.c:1438
 #, c-format
@@ -1212,13 +1320,21 @@ msgstr "%pB: avertisment: buclă în dependențe de secțiune detectată"
 
 #: elf.c:2167
 #, c-format
-msgid "%pB: warning: multiple symbol tables detected - ignoring the table in section %u"
-msgstr "%pB: avertisment: multiple tabele de simboluri detectate - se ignoră tabelul din secțiunea %u"
+msgid ""
+"%pB: warning: multiple symbol tables detected - ignoring the table in "
+"section %u"
+msgstr ""
+"%pB: avertisment: multiple tabele de simboluri detectate - se ignoră tabelul "
+"din secțiunea %u"
 
 #: elf.c:2252
 #, c-format
-msgid "%pB: warning: multiple dynamic symbol tables detected - ignoring the table in section %u"
-msgstr "%pB: avertisment: multiple tabele de simboluri dinamice detectate - se ignoră tabelul din secțiunea %u"
+msgid ""
+"%pB: warning: multiple dynamic symbol tables detected - ignoring the table "
+"in section %u"
+msgstr ""
+"%pB: avertisment: multiple tabele de simboluri dinamice detectate - se "
+"ignoră tabelul din secțiunea %u"
 
 #: elf.c:2371
 #, c-format
@@ -1227,8 +1343,12 @@ msgstr "%pB: legătură nevalidă %u pentru secțiunea de realocare %s (index %u
 
 #: elf.c:2427
 #, c-format
-msgid "%pB: warning: secondary relocation section '%s' for section %pA found - ignoring"
-msgstr "%pB: avertisment: secțiunea secundară de realocare „%s” pentru secțiunea %pA, a fost găsită - se ignoră"
+msgid ""
+"%pB: warning: secondary relocation section '%s' for section %pA found - "
+"ignoring"
+msgstr ""
+"%pB: avertisment: secțiunea secundară de realocare „%s” pentru secțiunea "
+"%pA, a fost găsită - se ignoră"
 
 #: elf.c:2515 elf.c:2529 elf.c:2540 elf.c:2553
 #, c-format
@@ -1252,13 +1372,18 @@ msgstr "%pB: prea multe secțiuni: %u"
 
 #: elf.c:3840
 #, c-format
-msgid "%pB: sh_link of section `%pA' points to discarded section `%pA' of `%pB'"
-msgstr "%pB: sh_link a secțiunii „%pA” indică către secțiunea înlăturată „%pA” din „%pB”"
+msgid ""
+"%pB: sh_link of section `%pA' points to discarded section `%pA' of `%pB'"
+msgstr ""
+"%pB: sh_link a secțiunii „%pA” indică către secțiunea înlăturată „%pA” din "
+"„%pB”"
 
 #: elf.c:3858
 #, c-format
 msgid "%pB: sh_link of section `%pA' points to removed section `%pA' of `%pB'"
-msgstr "%pB: sh_link a secțiunii „%pA” indică către secțiunea eliminată „%pA” din „%pB”"
+msgstr ""
+"%pB: sh_link a secțiunii „%pA” indică către secțiunea eliminată „%pA” din "
+"„%pB”"
 
 #: elf.c:4446
 #, c-format
@@ -1286,13 +1411,17 @@ msgstr "\tnon-TLS: %pA"
 
 #: elf.c:5709
 #, c-format
-msgid "%pB: The first section in the PT_DYNAMIC segment is not the .dynamic section"
-msgstr "%pB: prima secțiune din segmentul PT_DYNAMIC nu este secțiunea .dynamic"
+msgid ""
+"%pB: The first section in the PT_DYNAMIC segment is not the .dynamic section"
+msgstr ""
+"%pB: prima secțiune din segmentul PT_DYNAMIC nu este secțiunea .dynamic"
 
 #: elf.c:5735
 #, c-format
 msgid "%pB: not enough room for program headers, try linking with -N"
-msgstr "%pB: nu este suficient spațiu pentru antetele programului, încercați să faceți editarea legăturilor cu opțiunea „-N”"
+msgstr ""
+"%pB: nu este suficient spațiu pentru antetele programului, încercați să "
+"faceți editarea legăturilor cu opțiunea „-N”"
 
 #: elf.c:5852
 #, c-format
@@ -1320,12 +1449,16 @@ msgstr "%pB: avertisment: secțiunea alocată „%s” nu este în segment"
 #: elf.c:6306
 #, c-format
 msgid "%pB: warning: unable to allocate any sections to PT_GNU_RELRO segment"
-msgstr "%pB: avertisment: nu se poate aloca nicio secțiune segmentului PT_GNU_RELRO"
+msgstr ""
+"%pB: avertisment: nu se poate aloca nicio secțiune segmentului PT_GNU_RELRO"
 
 #: elf.c:6337
 #, c-format
-msgid "%pB: error: non-load segment %d includes file header and/or program header"
-msgstr "%pB: eroare: segmentul neîncărcat %d include antetul fișierului și/sau antetul programului"
+msgid ""
+"%pB: error: non-load segment %d includes file header and/or program header"
+msgstr ""
+"%pB: eroare: segmentul neîncărcat %d include antetul fișierului și/sau "
+"antetul programului"
 
 #: elf.c:6477
 #, c-format
@@ -1335,7 +1468,9 @@ msgstr "avertisment: %pB are un segment TLS cu permisiune de execuție"
 #: elf.c:6483
 #, c-format
 msgid "warning: %pB has a LOAD segment with RWX permissions"
-msgstr "avertisment: %pB are un segment LOAD cu permisiuni RWX(de citire-scriere-execuție)"
+msgstr ""
+"avertisment: %pB are un segment LOAD cu permisiuni RWX(de citire-scriere-"
+"execuție)"
 
 #: elf.c:6864
 #, c-format
@@ -1344,8 +1479,12 @@ msgstr "%pB: simbolul „%s” este necesar, dar nu este prezent"
 
 #: elf.c:7239
 #, c-format
-msgid "%pB: warning: empty loadable segment detected at vaddr=%#<PRIx64>, is this intentional?"
-msgstr "%pB: avertisment: s-a detectat segment încărcabil gol la vaddr=%#<PRIx64>, este aceasta intenționat ?"
+msgid ""
+"%pB: warning: empty loadable segment detected at vaddr=%#<PRIx64>, is this "
+"intentional?"
+msgstr ""
+"%pB: avertisment: s-a detectat segment încărcabil gol la vaddr=%#<PRIx64>, "
+"este aceasta intenționat ?"
 
 #: elf.c:7899
 #, c-format
@@ -1354,13 +1493,19 @@ msgstr "%pB: avertisment: alinierea segmentului de %#<PRIx64> este prea mare"
 
 #: elf.c:8407
 #, c-format
-msgid "%pB: Unable to handle section index %x in ELF symbol.  Using ABS instead."
-msgstr "%pB: Nu se poate gestiona indexul secțiunii %x în simbolul ELF.  Se utilizează ABS în locul acestuia."
+msgid ""
+"%pB: Unable to handle section index %x in ELF symbol.  Using ABS instead."
+msgstr ""
+"%pB: Nu se poate gestiona indexul secțiunii %x în simbolul ELF.  Se "
+"utilizează ABS în locul acestuia."
 
 #: elf.c:8437
 #, c-format
-msgid "unable to find equivalent output section for symbol '%s' from section '%s'"
-msgstr "nu se poate găsi secțiunea de ieșire echivalentă pentru simbolul „%s” din secțiunea „%s”"
+msgid ""
+"unable to find equivalent output section for symbol '%s' from section '%s'"
+msgstr ""
+"nu se poate găsi secțiunea de ieșire echivalentă pentru simbolul „%s” din "
+"secțiunea „%s”"
 
 #: elf.c:8851
 #, c-format
@@ -1380,17 +1525,24 @@ msgstr "%pB:%pA: eroare: încercare de a scrie dincolo de sfârșitul secțiunii
 #: elf.c:9476
 #, c-format
 msgid "%pB:%pA: error: attempting to write section into an empty buffer"
-msgstr "%pB:%pA: eroare: încercare de a scrie secțiunea într-un fișier de memorie tampon gol"
+msgstr ""
+"%pB:%pA: eroare: încercare de a scrie secțiunea într-un fișier de memorie "
+"tampon gol"
 
 #: elf.c:10381
 #, c-format
 msgid "%pB: warning: win32pstatus %s of size %lu bytes is too small"
-msgstr "%pB: avertisment: win32pstatus %s cu dimensiunea de %lu octeți este prea mic"
+msgstr ""
+"%pB: avertisment: win32pstatus %s cu dimensiunea de %lu octeți este prea mic"
 
 #: elf.c:10460
 #, c-format
-msgid "%pB: win32pstatus NOTE_INFO_MODULE of size %lu is too small to contain a name of size %u"
-msgstr "%pB: win32pstatus NOTE_INFO_MODULE cu dimensiunea de %lu este prea mic pentru a conține un nume de dimensiunea %u"
+msgid ""
+"%pB: win32pstatus NOTE_INFO_MODULE of size %lu is too small to contain a "
+"name of size %u"
+msgstr ""
+"%pB: win32pstatus NOTE_INFO_MODULE cu dimensiunea de %lu este prea mic "
+"pentru a conține un nume de dimensiunea %u"
 
 #: elf.c:13054
 msgid "GNU_MBIND section is supported only by GNU and FreeBSD targets"
@@ -1398,11 +1550,15 @@ msgstr "secțiunea GNU_MBIND este acceptată doar de țintele GNU și FreeBSD"
 
 #: elf.c:13057
 msgid "symbol type STT_GNU_IFUNC is supported only by GNU and FreeBSD targets"
-msgstr "tipul de simbol STT_GNU_IFUNC este acceptat doar de țintele GNU și FreeBSD"
+msgstr ""
+"tipul de simbol STT_GNU_IFUNC este acceptat doar de țintele GNU și FreeBSD"
 
 #: elf.c:13060
-msgid "symbol binding STB_GNU_UNIQUE is supported only by GNU and FreeBSD targets"
-msgstr "asocierea simbolurilor STB_GNU_UNIQUE este acceptată numai de țintele GNU și FreeBSD"
+msgid ""
+"symbol binding STB_GNU_UNIQUE is supported only by GNU and FreeBSD targets"
+msgstr ""
+"asocierea simbolurilor STB_GNU_UNIQUE este acceptată numai de țintele GNU și "
+"FreeBSD"
 
 #: elf.c:13063
 msgid "GNU_RETAIN section is supported only by GNU and FreeBSD targets"
@@ -1415,8 +1571,12 @@ msgstr "%pB(%pA): realocarea %zu are indexul de simbol nevalid %lu"
 
 #: elf.c:13358
 #, c-format
-msgid "%pB(%pA): link section cannot be set because the output file does not have a symbol table"
-msgstr "%pB(%pA): secțiunea de legătură nu poate fi definită deoarece fișierul de ieșire nu are un tabel de simboluri"
+msgid ""
+"%pB(%pA): link section cannot be set because the output file does not have a "
+"symbol table"
+msgstr ""
+"%pB(%pA): secțiunea de legătură nu poate fi definită deoarece fișierul de "
+"ieșire nu are un tabel de simboluri"
 
 #: elf.c:13372
 #, c-format
@@ -1425,23 +1585,33 @@ msgstr "%pB(%pA): indexul secțiunii de informații este nevalid"
 
 #: elf.c:13386
 #, c-format
-msgid "%pB(%pA): info section index cannot be set because the section is not in the output"
-msgstr "%pB(%pA): indexul secțiunii de informații nu poate fi definit deoarece secțiunea nu se află în ieșire"
+msgid ""
+"%pB(%pA): info section index cannot be set because the section is not in the "
+"output"
+msgstr ""
+"%pB(%pA): indexul secțiunii de informații nu poate fi definit deoarece "
+"secțiunea nu se află în ieșire"
 
 #: elf.c:13462
 #, c-format
 msgid "%pB(%pA): error: secondary reloc section processed twice"
-msgstr "%pB(%pA): eroare: secțiunea de realocare secundară a fost procesată de două ori"
+msgstr ""
+"%pB(%pA): eroare: secțiunea de realocare secundară a fost procesată de două "
+"ori"
 
 #: elf.c:13474
 #, c-format
 msgid "%pB(%pA): error: secondary reloc section has zero sized entries"
-msgstr "%pB(%pA): eroare: secțiunea de realocare secundară are intrări de dimensiune zero"
+msgstr ""
+"%pB(%pA): eroare: secțiunea de realocare secundară are intrări de dimensiune "
+"zero"
 
 #: elf.c:13486
 #, c-format
 msgid "%pB(%pA): error: secondary reloc section has non-standard sized entries"
-msgstr "%pB(%pA): eroare: secțiunea de realocare secundară are intrări de dimensiune nestandard"
+msgstr ""
+"%pB(%pA): eroare: secțiunea de realocare secundară are intrări de dimensiune "
+"nestandard"
 
 #: elf.c:13500
 #, c-format
@@ -1451,7 +1621,9 @@ msgstr "%pB(%pA): eroare: secțiunea de realocare secundară este goală!"
 #: elf.c:13523
 #, c-format
 msgid "%pB(%pA): error: internal relocs missing for secondary reloc section"
-msgstr "%pB(%pA): eroare: lipsesc realocările interne pentru secțiunea de realocare secundară"
+msgstr ""
+"%pB(%pA): eroare: lipsesc realocările interne pentru secțiunea de realocare "
+"secundară"
 
 #: elf.c:13543
 #, c-format
@@ -1461,20 +1633,20 @@ msgstr "%pB(%pA): eroare: intrarea din tabelul de realocare %zu este goală"
 #: elf.c:13568
 #, c-format
 msgid "%pB(%pA): error: secondary reloc %zu references a missing symbol"
-msgstr "%pB(%pA): eroare: realocarea secundară %zu face referire la un simbol lipsă"
+msgstr ""
+"%pB(%pA): eroare: realocarea secundară %zu face referire la un simbol lipsă"
 
 #: elf.c:13586
 #, c-format
 msgid "%pB(%pA): error: secondary reloc %zu references a deleted symbol"
-msgstr "%pB(%pA): eroare: realocarea secundară %zu face referire la un simbol șters"
+msgstr ""
+"%pB(%pA): eroare: realocarea secundară %zu face referire la un simbol șters"
 
 #: elf.c:13600
 #, c-format
 msgid "%pB(%pA): error: secondary reloc %zu is of an unknown type"
 msgstr "%pB(%pA): eroare: realocarea secundară %zu este de un tip necunoscut"
 
-#. Ignore init flag - it may not be set, despite the flags field
-#. containing valid data.
 #. Ignore init flag - it may not be set, despite the flags field
 #. containing valid data.
 #: elf32-arc.c:455 elf32-arm.c:15118 elf32-frv.c:6612 elf32-iq2000.c:868
@@ -1492,7 +1664,8 @@ msgstr "avertisment: %pB: configurația platformei %s în conflict cu %s"
 #: elf32-arc.c:661
 #, c-format
 msgid "error: %pB: unable to merge CPU base attributes %s with %s"
-msgstr "eroare: %pB: nu se pot fuziona atributele de bază ale procesorului %s cu %s"
+msgstr ""
+"eroare: %pB: nu se pot fuziona atributele de bază ale procesorului %s cu %s"
 
 #: elf32-arc.c:698
 #, c-format
@@ -1507,7 +1680,8 @@ msgstr "eroare: %pB: atributele extensiei ISA în conflict %s cu %s"
 #: elf32-arc.c:762
 #, c-format
 msgid "error: %pB: cannot mix rf16 with full register set %pB"
-msgstr "eroare: %pB: nu se poate amesteca rf16 cu setul de registru complet %pB"
+msgstr ""
+"eroare: %pB: nu se poate amesteca rf16 cu setul de registru complet %pB"
 
 #: elf32-arc.c:790
 #, c-format
@@ -1521,14 +1695,18 @@ msgstr "eroare: %pB: atribute aflate în conflict %s"
 
 #: elf32-arc.c:922
 #, c-format
-msgid "error: attempting to link %pB with a binary %pB of different architecture"
-msgstr "eroare: încercare de a vincula %pB cu un %pB binar de arhitectură diferită"
+msgid ""
+"error: attempting to link %pB with a binary %pB of different architecture"
+msgstr ""
+"eroare: încercare de a vincula %pB cu un %pB binar de arhitectură diferită"
 
 #: elf32-arc.c:938 elf32-iq2000.c:844 elf32-m32c.c:889 elf32-m68hc1x.c:1390
 #: elf32-ppc.c:3860 elf64-sparc.c:737 elfxx-mips.c:15659
 #, c-format
 msgid "%pB: uses different e_flags (%#x) fields than previous modules (%#x)"
-msgstr "%pB: folosește câmpuri e_flags (%#x) diferite față de modulele anterioare (%#x)"
+msgstr ""
+"%pB: folosește câmpuri e_flags (%#x) diferite față de modulele anterioare "
+"(%#x)"
 
 #: elf32-arc.c:1027
 msgid "error: the ARC4 architecture is no longer supported"
@@ -1536,26 +1714,40 @@ msgstr "eroare: arhitectura ARC4 nu mai este demult acceptată"
 
 #: elf32-arc.c:1033
 msgid "warning: unset or old architecture flags; use default machine"
-msgstr "avertisment: fanioane de arhitectură nedefinite sau vechi; se utilizează mașina implicită"
+msgstr ""
+"avertisment: fanioane de arhitectură nedefinite sau vechi; se utilizează "
+"mașina implicită"
 
 #: elf32-arc.c:1159
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): CMEM relocation to `%s' is invalid, 16 MSB should be %#x (value is %#<PRIx64>)"
-msgstr "%pB(%pA+%#<PRIx64>): realocarea CMEM la „%s” este nevalidă, 16 MSB trebuie să fie %#x (valoarea este %#<PRIx64>)"
+msgid ""
+"%pB(%pA+%#<PRIx64>): CMEM relocation to `%s' is invalid, 16 MSB should be "
+"%#x (value is %#<PRIx64>)"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): realocarea CMEM la „%s” este nevalidă, 16 MSB trebuie "
+"să fie %#x (valoarea este %#<PRIx64>)"
 
 #: elf32-arc.c:1170
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): CMEM relocation to `%s+%#<PRIx64>' is invalid, 16 MSB should be %#x (value is %#<PRIx64>)"
-msgstr "%pB(%pA+%#<PRIx64>): realocarea CMEM la „%s+%#<PRIx64>” este nevalidă, 16 MSB trebuie să fie %#x (valoarea este %#<PRIx64>)"
+msgid ""
+"%pB(%pA+%#<PRIx64>): CMEM relocation to `%s+%#<PRIx64>' is invalid, 16 MSB "
+"should be %#x (value is %#<PRIx64>)"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): realocarea CMEM la „%s+%#<PRIx64>” este nevalidă, 16 "
+"MSB trebuie să fie %#x (valoarea este %#<PRIx64>)"
 
 #: elf32-arc.c:1885
 msgid "GOT and PLT relocations cannot be fixed with a non dynamic linker"
-msgstr "realocările GOT și PLT nu pot fi remediate cu un editor de legături non-dinamic"
+msgstr ""
+"realocările GOT și PLT nu pot fi remediate cu un editor de legături non-"
+"dinamic"
 
 #: elf32-arc.c:1909 elf32-rx.c:1486
 #, c-format
-msgid "%pB(%pA): warning: unaligned access to symbol '%s' in the small data area"
-msgstr "%pB(%pA): avertisment: acces nealiniat la simbolul „%s” din zona de date mică"
+msgid ""
+"%pB(%pA): warning: unaligned access to symbol '%s' in the small data area"
+msgstr ""
+"%pB(%pA): avertisment: acces nealiniat la simbolul „%s” din zona de date mică"
 
 #: elf32-arc.c:1914 elf32-rx.c:1491
 #, c-format
@@ -1580,8 +1772,12 @@ msgstr "%pB(%pA): eroare internă: eroare necunoscută"
 #: elf32-arc.c:2023 elf32-arc.c:2091 elf32-arm.c:15573 elf32-metag.c:2251
 #: elf32-nds32.c:5543 elfnn-aarch64.c:7757 elfnn-riscv.c:617
 #, c-format
-msgid "%pB: relocation %s against `%s' can not be used when making a shared object; recompile with -fPIC"
-msgstr "%pB: realocarea %s față de „%s” nu poate fi utilizată când se creează un obiect partajat; recompilați cu „-fPIC”"
+msgid ""
+"%pB: relocation %s against `%s' can not be used when making a shared object; "
+"recompile with -fPIC"
+msgstr ""
+"%pB: realocarea %s față de „%s” nu poate fi utilizată când se creează un "
+"obiect partajat; recompilați cu „-fPIC”"
 
 #: elf32-arc.c:2910
 #, c-format
@@ -1595,18 +1791,32 @@ msgstr "avertisment: %pB: atribut al obiectului ARC necunoscut %d"
 
 #: elf32-arm.c:4346 elf32-arm.c:4380 elf32-arm.c:4399 elf32-arm.c:4451
 #, fuzzy, c-format
-msgid "%pB(%pA): warning: long branch veneers used in section with SHF_ARM_PURECODE section attribute is only supported for M-profile targets that implement the movw instruction"
-msgstr "%pB(%pA): avertisment: furnirurile de ramuri lungi utilizate în secțiunea cu atributul secțiunii SHF_ARM_PURECODE sunt acceptate numai pentru ținte cu profil M care implementează instrucțiunea movw"
+msgid ""
+"%pB(%pA): warning: long branch veneers used in section with SHF_ARM_PURECODE "
+"section attribute is only supported for M-profile targets that implement the "
+"movw instruction"
+msgstr ""
+"%pB(%pA): avertisment: furnirurile de ramuri lungi utilizate în secțiunea cu "
+"atributul secțiunii SHF_ARM_PURECODE sunt acceptate numai pentru ținte cu "
+"profil M care implementează instrucțiunea movw"
 
 #: elf32-arm.c:4411 elf32-arm.c:4465 elf32-arm.c:9157 elf32-arm.c:9247
 #, c-format
-msgid "%pB(%s): warning: interworking not enabled; first occurrence: %pB: %s call to %s"
-msgstr "%pB(%s): avertisment: interfuncționarea nu este activată; prima apariție: %pB: apel %s către %s"
+msgid ""
+"%pB(%s): warning: interworking not enabled; first occurrence: %pB: %s call "
+"to %s"
+msgstr ""
+"%pB(%s): avertisment: interfuncționarea nu este activată; prima apariție: "
+"%pB: apel %s către %s"
 
 #: elf32-arm.c:4591
 #, c-format
-msgid "ERROR: CMSE stub (%s section) too far (%#<PRIx64>) from destination (%#<PRIx64>)"
-msgstr "EROARE: ciot(stub) CMSE (secțiunea %s) prea departe (%#<PRIx64>) față de destinație (%#<PRIx64>)"
+msgid ""
+"ERROR: CMSE stub (%s section) too far (%#<PRIx64>) from destination "
+"(%#<PRIx64>)"
+msgstr ""
+"EROARE: ciot(stub) CMSE (secțiunea %s) prea departe (%#<PRIx64>) față de "
+"destinație (%#<PRIx64>)"
 
 #: elf32-arm.c:4760
 #, fuzzy, c-format
@@ -1615,7 +1825,7 @@ msgstr "nicio adresă nu este atribuită secțiunii de ieșire a furnirurilor %s
 
 #: elf32-arm.c:4835 elf32-arm.c:6984 elf32-csky.c:3400 elf32-hppa.c:582
 #: elf32-m68hc1x.c:164 elf32-metag.c:1180 elf32-nios2.c:2201 elf64-ppc.c:3906
-#: elf64-ppc.c:14122 elfnn-aarch64.c:3198
+#: elf64-ppc.c:14122 elfnn-aarch64.c:3198 ../../bfd/elfnn-kvx.c:908
 #, c-format
 msgid "%pB: cannot create stub entry %s"
 msgstr "%pB: nu se poate crea intrarea ciot(stub) %s"
@@ -1624,23 +1834,36 @@ msgstr "%pB: nu se poate crea intrarea ciot(stub) %s"
 #: elf32-hppa.c:842 elf32-m68hc11.c:422 elf32-m68hc12.c:542 elf32-metag.c:3345
 #: elf32-nios2.c:2494 elf64-ppc.c:12238 elf64-ppc.c:12246 xcofflink.c:4693
 #: elfnn-aarch64.c:3267
-msgid "%F%P: Could not assign `%pA' to an output section. Retry without --enable-non-contiguous-regions.\n"
-msgstr "%F%P: Nu s-a putut atribui „%pA” unei secțiuni de ieșire. Reîncercați fără opțiunea „--enable-non-contiguous-regions”.\n"
+msgid ""
+"%F%P: Could not assign `%pA' to an output section. Retry without --enable-"
+"non-contiguous-regions.\n"
+msgstr ""
+"%F%P: Nu s-a putut atribui „%pA” unei secțiuni de ieșire. Reîncercați fără "
+"opțiunea „--enable-non-contiguous-regions”.\n"
 
 #: elf32-arm.c:6027
 #, c-format
 msgid "%pB: special symbol `%s' only allowed for ARMv8-M architecture or later"
-msgstr "%pB: simbolul special „%s” este permis doar pentru arhitectura ARMv8-M sau mai recentă"
+msgstr ""
+"%pB: simbolul special „%s” este permis doar pentru arhitectura ARMv8-M sau "
+"mai recentă"
 
 #: elf32-arm.c:6036
 #, c-format
-msgid "%pB: invalid special symbol `%s'; it must be a global or weak function symbol"
-msgstr "%pB: simbol special nevalid „%s”; trebuie să fie un simbol de funcție globală sau slabă"
+msgid ""
+"%pB: invalid special symbol `%s'; it must be a global or weak function symbol"
+msgstr ""
+"%pB: simbol special nevalid „%s”; trebuie să fie un simbol de funcție "
+"globală sau slabă"
 
 #: elf32-arm.c:6075
 #, c-format
-msgid "%pB: invalid standard symbol `%s'; it must be a global or weak function symbol"
-msgstr "%pB: simbol standard nevalid „%s”; trebuie să fie un simbol de funcție globală sau slabă"
+msgid ""
+"%pB: invalid standard symbol `%s'; it must be a global or weak function "
+"symbol"
+msgstr ""
+"%pB: simbol standard nevalid „%s”; trebuie să fie un simbol de funcție "
+"globală sau slabă"
 
 #: elf32-arm.c:6081
 #, c-format
@@ -1665,12 +1888,18 @@ msgstr "%pB: funcția de intrare „%s” este goală"
 #: elf32-arm.c:6241
 #, c-format
 msgid "%pB: --in-implib only supported for Secure Gateway import libraries"
-msgstr "%pB: „--in-implib” este acceptată numai pentru bibliotecile de import Secure Gateway"
+msgstr ""
+"%pB: „--in-implib” este acceptată numai pentru bibliotecile de import Secure "
+"Gateway"
 
 #: elf32-arm.c:6290
 #, c-format
-msgid "%pB: invalid import library entry: `%s'; symbol should be absolute, global and refer to Thumb functions"
-msgstr "%pB: intrare in bibliotecă de import nevalidă: „%s”; simbolul trebuie să fie absolut, global și să se refere la funcțiile Thumb"
+msgid ""
+"%pB: invalid import library entry: `%s'; symbol should be absolute, global "
+"and refer to Thumb functions"
+msgstr ""
+"%pB: intrare in bibliotecă de import nevalidă: „%s”; simbolul trebuie să fie "
+"absolut, global și să se refere la funcțiile Thumb"
 
 #: elf32-arm.c:6312
 #, c-format
@@ -1695,11 +1924,16 @@ msgstr "%pB: dimensiune incorectă pentru simbolul „%s”"
 #: elf32-arm.c:6379
 #, fuzzy, c-format
 msgid "offset of veneer for entry function `%s' not a multiple of its size"
-msgstr "decalajul furnirului pentru funcția de intrare „%s” nu este un multiplu al mărimii sale"
+msgstr ""
+"decalajul furnirului pentru funcția de intrare „%s” nu este un multiplu al "
+"mărimii sale"
 
 #: elf32-arm.c:6399
-msgid "new entry function(s) introduced but no output import library specified:"
-msgstr "au fost introduse funcții de intrare noi, dar nu a fost specificată nicio bibliotecă de import de ieșire:"
+msgid ""
+"new entry function(s) introduced but no output import library specified:"
+msgstr ""
+"au fost introduse funcții de intrare noi, dar nu a fost specificată nicio "
+"bibliotecă de import de ieșire:"
 
 #: elf32-arm.c:6407
 #, c-format
@@ -1719,13 +1953,21 @@ msgstr "%pB: imaginile BE8 sunt valabile numai în modul big-endian"
 #. Give a warning, but do as the user requests anyway.
 #: elf32-arm.c:8090
 #, c-format
-msgid "%pB: warning: selected VFP11 erratum workaround is not necessary for target architecture"
-msgstr "%pB: avertisment: soluția de eroare VFP11 selectată nu este necesară pentru arhitectura țintă"
+msgid ""
+"%pB: warning: selected VFP11 erratum workaround is not necessary for target "
+"architecture"
+msgstr ""
+"%pB: avertisment: soluția de eroare VFP11 selectată nu este necesară pentru "
+"arhitectura țintă"
 
 #: elf32-arm.c:8117
 #, c-format
-msgid "%pB: warning: selected STM32L4XX erratum workaround is not necessary for target architecture"
-msgstr "%pB: avertisment: soluția de eroare STM32L4XX selectată nu este necesară pentru arhitectura țintă"
+msgid ""
+"%pB: warning: selected STM32L4XX erratum workaround is not necessary for "
+"target architecture"
+msgstr ""
+"%pB: avertisment: soluția de eroare STM32L4XX selectată nu este necesară "
+"pentru arhitectura țintă"
 
 #: elf32-arm.c:8653 elf32-arm.c:8673 elf32-arm.c:8740 elf32-arm.c:8759
 #, fuzzy, c-format
@@ -1734,8 +1976,15 @@ msgstr "%pB: nu s-a putut găsi %s furnir „%s”"
 
 #: elf32-arm.c:8966
 #, fuzzy, c-format
-msgid "%pB(%pA+%#x): error: multiple load detected in non-last IT block instruction: STM32L4XX veneer cannot be generated; use gcc option -mrestrict-it to generate only one instruction per IT block"
-msgstr "%pB(%pA+%#x): eroare: încărcare multiplă detectată în blocul de instrucțiuni IT ce nu este ultimul: furnirul STM32L4XX nu poate fi generat; utilizați opțiunea „gcc -mrestrict-it” pentru a genera o singură instrucțiune per bloc IT"
+msgid ""
+"%pB(%pA+%#x): error: multiple load detected in non-last IT block "
+"instruction: STM32L4XX veneer cannot be generated; use gcc option -mrestrict-"
+"it to generate only one instruction per IT block"
+msgstr ""
+"%pB(%pA+%#x): eroare: încărcare multiplă detectată în blocul de instrucțiuni "
+"IT ce nu este ultimul: furnirul STM32L4XX nu poate fi generat; utilizați "
+"opțiunea „gcc -mrestrict-it” pentru a genera o singură instrucțiune per bloc "
+"IT"
 
 #: elf32-arm.c:9064
 #, c-format
@@ -1747,12 +1996,14 @@ msgstr "tip de realocare TARGET2 nevalid „%s”"
 #: elf32-arm.c:9834
 #, c-format
 msgid "%pB: warning: thumb-1 mode PLT generation not currently supported"
-msgstr "%pB: avertisment: generarea PLT în modul thumb-1 nu este acceptată în prezent"
+msgstr ""
+"%pB: avertisment: generarea PLT în modul thumb-1 nu este acceptată în prezent"
 
 #: elf32-arm.c:10143 elf32-arm.c:10185
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): unexpected %s instruction '%#lx' in TLS trampoline"
-msgstr "%pB(%pA+%#<PRIx64>): instrucțiune %s neașteptată „%#lx” în trambulina TLS"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): instrucțiune %s neașteptată „%#lx” în trambulina TLS"
 
 #: elf32-arm.c:10535
 msgid "shared object"
@@ -1764,44 +2015,60 @@ msgstr "executabil PIE"
 
 #: elf32-arm.c:10541
 #, c-format
-msgid "%pB: relocation %s against external or undefined symbol `%s' can not be used when making a %s; recompile with -fPIC"
-msgstr "%pB: realocarea %s față de simbolul extern sau nedefinit „%s” nu poate fi folosită la crearea unui %s; recompilați cu „-fPIC”"
+msgid ""
+"%pB: relocation %s against external or undefined symbol `%s' can not be used "
+"when making a %s; recompile with -fPIC"
+msgstr ""
+"%pB: realocarea %s față de simbolul extern sau nedefinit „%s” nu poate fi "
+"folosită la crearea unui %s; recompilați cu „-fPIC”"
 
-#: elf32-arm.c:10643
-#, c-format
-msgid "\\%pB: warning: %s BLX instruction targets %s function '%s'"
-msgstr "\\%pB: avertisment: instrucțiunea %s BLX vizează funcția %s „%s”"
-
-#: elf32-arm.c:11060
+#: elf32-arm.c:10643 elf32-arm.c:11060
 #, c-format
 msgid "%pB: warning: %s BLX instruction targets %s function '%s'"
 msgstr "%pB: avertisment: instrucțiunea %s BLX vizează funcția %s „%s”"
 
 #: elf32-arm.c:11694
 #, c-format
-msgid "%pB: expected symbol index in range 0..%lu but found local symbol with index %lu"
-msgstr "%pB: indicele de simbol așteptat în intervalul 0..%lu, dar a fost găsit un simbol local cu indicele %lu"
+msgid ""
+"%pB: expected symbol index in range 0..%lu but found local symbol with index "
+"%lu"
+msgstr ""
+"%pB: indicele de simbol așteptat în intervalul 0..%lu, dar a fost găsit un "
+"simbol local cu indicele %lu"
 
 #: elf32-arm.c:11969 elf32-arm.c:11995
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): unexpected %s instruction '%#lx' referenced by TLS_GOTDESC"
-msgstr "%pB(%pA+%#<PRIx64>): instrucțiune %s neașteptată „%#lx” la care face referire TLS_GOTDESC"
+msgid ""
+"%pB(%pA+%#<PRIx64>): unexpected %s instruction '%#lx' referenced by "
+"TLS_GOTDESC"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): instrucțiune %s neașteptată „%#lx” la care face "
+"referire TLS_GOTDESC"
 
 #: elf32-arm.c:12041 elf32-csky.c:4970 elf32-m68k.c:3733 elf32-metag.c:1913
 #: elf32-nios2.c:4382
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): %s relocation not permitted in shared object"
-msgstr "%pB(%pA+%#<PRIx64>): realocarea %s nu este permisă în obiectul partajat"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): realocarea %s nu este permisă în obiectul partajat"
 
 #: elf32-arm.c:12255
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): only ADD or SUB instructions are allowed for ALU group relocations"
-msgstr "%pB(%pA+%#<PRIx64>): numai instrucțiunile ADD sau SUB sunt permise pentru realocări ale grupului ALU"
+msgid ""
+"%pB(%pA+%#<PRIx64>): only ADD or SUB instructions are allowed for ALU group "
+"relocations"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): numai instrucțiunile ADD sau SUB sunt permise pentru "
+"realocări ale grupului ALU"
 
 #: elf32-arm.c:12296 elf32-arm.c:12388 elf32-arm.c:12476 elf32-arm.c:12566
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): overflow whilst splitting %#<PRIx64> for group relocation %s"
-msgstr "%pB(%pA+%#<PRIx64>): depășire în timp ce se împarte %#<PRIx64> pentru realocarea grupului %s"
+msgid ""
+"%pB(%pA+%#<PRIx64>): overflow whilst splitting %#<PRIx64> for group "
+"relocation %s"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): depășire în timp ce se împarte %#<PRIx64> pentru "
+"realocarea grupului %s"
 
 #: elf32-arm.c:12624 elf32-arm.c:12783
 msgid "local symbol index too big"
@@ -1824,46 +2091,57 @@ msgstr "informațiile despre indexul dinamic nu sunt disponibile"
 msgid "%pB(%pA+%#<PRIx64>): %s relocation against SEC_MERGE section"
 msgstr "%pB(%pA+%#<PRIx64>): %s realocare față de secțiunea SEC_MERGE"
 
-#: elf32-arm.c:13337 elf32-m68k.c:3966 elf32-xtensa.c:2761
-#: elfnn-aarch64.c:6847
+#: elf32-arm.c:13337 elf32-m68k.c:3966 elf32-xtensa.c:2761 elfnn-aarch64.c:6847
+#: ../../bfd/elfnn-kvx.c:2597
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): %s used with TLS symbol %s"
 msgstr "%pB(%pA+%#<PRIx64>): %s utilizat cu simbolul TLS %s"
 
-#: elf32-arm.c:13339 elf32-m68k.c:3968 elf32-xtensa.c:2763
-#: elfnn-aarch64.c:6849
+#: elf32-arm.c:13339 elf32-m68k.c:3968 elf32-xtensa.c:2763 elfnn-aarch64.c:6849
+#: ../../bfd/elfnn-kvx.c:2599
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): %s used with non-TLS symbol %s"
 msgstr "%pB(%pA+%#<PRIx64>): %s utilizat cu simbolul non-TLS %s"
 
 #: elf32-arm.c:13422 elf32-tic6x.c:2649 elfnn-aarch64.c:7184
+#: ../../bfd/elfnn-kvx.c:2826
 msgid "out of range"
 msgstr "în afara intervalului"
 
 #: elf32-arm.c:13426 elf32-nios2.c:4516 elf32-pru.c:936 elf32-tic6x.c:2653
-#: elfnn-aarch64.c:7188
+#: elfnn-aarch64.c:7188 ../../bfd/elfnn-kvx.c:2830
 msgid "unsupported relocation"
 msgstr "realocare neacceptată"
 
 #: elf32-arm.c:13434 elf32-nios2.c:4526 elf32-pru.c:946 elf32-tic6x.c:2661
-#: elfnn-aarch64.c:7196
+#: elfnn-aarch64.c:7196 ../../bfd/elfnn-kvx.c:2838
 msgid "unknown error"
 msgstr "eroare necunoscută"
 
 #: elf32-arm.c:13916
 #, c-format
-msgid "warning: not setting interworking flag of %pB since it has already been specified as non-interworking"
-msgstr "avertisment: nu se stabilește indicatorul de interfuncționare pentru %pB, deoarece a fost deja specificat ca neinterfuncționare"
+msgid ""
+"warning: not setting interworking flag of %pB since it has already been "
+"specified as non-interworking"
+msgstr ""
+"avertisment: nu se stabilește indicatorul de interfuncționare pentru %pB, "
+"deoarece a fost deja specificat ca neinterfuncționare"
 
 #: elf32-arm.c:13920
 #, c-format
 msgid "warning: clearing the interworking flag of %pB due to outside request"
-msgstr "avertisment: se șterge indicatorul de interfuncționare din %pB din cauza solicitării externe"
+msgstr ""
+"avertisment: se șterge indicatorul de interfuncționare din %pB din cauza "
+"solicitării externe"
 
 #: elf32-arm.c:13965
 #, c-format
-msgid "warning: clearing the interworking flag of %pB because non-interworking code in %pB has been linked with it"
-msgstr "avertisment: se șterge indicatorul de interfuncționare din %pB, deoarece codul care nu interfuncționează în %pB a fost vinculat cu acesta"
+msgid ""
+"warning: clearing the interworking flag of %pB because non-interworking code "
+"in %pB has been linked with it"
+msgstr ""
+"avertisment: se șterge indicatorul de interfuncționare din %pB, deoarece "
+"codul care nu interfuncționează în %pB a fost vinculat cu acesta"
 
 #: elf32-arm.c:14052
 #, c-format
@@ -1887,8 +2165,11 @@ msgstr "eroare: %pB: arhitecturi CPU aflate în conflict %d/%d"
 
 #: elf32-arm.c:14530
 #, c-format
-msgid "Error: %pB has both the current and legacy Tag_MPextension_use attributes"
-msgstr "Eroare: %pB are atât atributele Tag_MPextension_use actuale, cât și pe cele vechi"
+msgid ""
+"Error: %pB has both the current and legacy Tag_MPextension_use attributes"
+msgstr ""
+"Eroare: %pB are atât atributele Tag_MPextension_use actuale, cât și pe cele "
+"vechi"
 
 #: elf32-arm.c:14567
 #, c-format
@@ -1918,17 +2199,27 @@ msgstr "eroare: %pB: utilizare conflictuală a R9"
 #: elf32-arm.c:14922
 #, c-format
 msgid "error: %pB: SB relative addressing conflicts with use of R9"
-msgstr "eroare: %pB: adresarea relativă SB intră în conflict cu utilizarea lui R9"
+msgstr ""
+"eroare: %pB: adresarea relativă SB intră în conflict cu utilizarea lui R9"
 
 #: elf32-arm.c:14935
 #, c-format
-msgid "warning: %pB uses %u-byte wchar_t yet the output is to use %u-byte wchar_t; use of wchar_t values across objects may fail"
-msgstr "avertisment: %pB folosește %u-byte wchar_t, dar rezultatul este să folosească %u-byte wchar_t; folosirea valorilor wchar_t între obiecte poate eșua"
+msgid ""
+"warning: %pB uses %u-byte wchar_t yet the output is to use %u-byte wchar_t; "
+"use of wchar_t values across objects may fail"
+msgstr ""
+"avertisment: %pB folosește %u-byte wchar_t, dar rezultatul este să "
+"folosească %u-byte wchar_t; folosirea valorilor wchar_t între obiecte poate "
+"eșua"
 
 #: elf32-arm.c:14966
 #, c-format
-msgid "warning: %pB uses %s enums yet the output is to use %s enums; use of enum values across objects may fail"
-msgstr "avertisment: %pB folosește %s enumerări, dar rezultatul este să folosească %s enumerări; utilizarea valorilor enumerate între obiecte poate eșua"
+msgid ""
+"warning: %pB uses %s enums yet the output is to use %s enums; use of enum "
+"values across objects may fail"
+msgstr ""
+"avertisment: %pB folosește %s enumerări, dar rezultatul este să folosească "
+"%s enumerări; utilizarea valorilor enumerate între obiecte poate eșua"
 
 #: elf32-arm.c:14978
 #, c-format
@@ -1968,7 +2259,8 @@ msgstr " [format float FPA]"
 #: elf32-arm.c:15142
 #, c-format
 msgid " [floats passed in float registers]"
-msgstr " [valori în virgulă mobilă trecute în registrele de valori în virgulă mobilă]"
+msgstr ""
+" [valori în virgulă mobilă trecute în registrele de valori în virgulă mobilă]"
 
 #: elf32-arm.c:15145 elf32-arm.c:15231
 #, c-format
@@ -2076,9 +2368,9 @@ msgid " <Unrecognised flag bits set>"
 msgstr " <set de biți de fanion nerecunoscut>"
 
 #: elf32-arm.c:15356 elf32-arm.c:15490 elf32-i386.c:1511 elf32-s390.c:923
-#: elf32-tic6x.c:2724 elf32-tilepro.c:1435 elf32-xtensa.c:1090
-#: elf64-s390.c:845 elf64-x86-64.c:1963 elfxx-sparc.c:1386 elfxx-tilegx.c:1662
-#: elfxx-x86.c:970 elfnn-aarch64.c:7624 elfnn-loongarch.c:632
+#: elf32-tic6x.c:2724 elf32-tilepro.c:1435 elf32-xtensa.c:1090 elf64-s390.c:845
+#: elf64-x86-64.c:1963 elfxx-sparc.c:1386 elfxx-tilegx.c:1662 elfxx-x86.c:970
+#: elfnn-aarch64.c:7624 ../../bfd/elfnn-kvx.c:3272 elfnn-loongarch.c:632
 #: elfnn-riscv.c:660
 #, c-format
 msgid "%pB: bad symbol index: %d"
@@ -2086,8 +2378,11 @@ msgstr "%pB: index de simboluri incorect: %d"
 
 #: elf32-arm.c:15746
 #, c-format
-msgid "FDPIC does not yet support %s relocation to become dynamic for executable"
-msgstr "FDPIC nu acceptă încă realocarea %s pentru a deveni dinamică pentru executabil"
+msgid ""
+"FDPIC does not yet support %s relocation to become dynamic for executable"
+msgstr ""
+"FDPIC nu acceptă încă realocarea %s pentru a deveni dinamică pentru "
+"executabil"
 
 #: elf32-arm.c:17009
 #, c-format
@@ -2099,104 +2394,133 @@ msgstr "erori întâlnite la procesarea fișierului %pB"
 msgid "could not find section %s"
 msgstr "nu s-a putut găsi secțiunea %s"
 
-#: elf32-arm.c:18308
+#: elf32-arm.c:18337
 #, c-format
 msgid "%pB: Number of symbols in input file has increased from %lu to %u\n"
-msgstr "%pB: Numărul de simboluri din fișierul de intrare a crescut de la %lu la %u\n"
+msgstr ""
+"%pB: Numărul de simboluri din fișierul de intrare a crescut de la %lu la %u\n"
 
-#: elf32-arm.c:18572
+#: elf32-arm.c:18601
 #, c-format
 msgid "%pB: error: Cortex-A8 erratum stub is allocated in unsafe location"
-msgstr "%pB: eroare: ciotul(stub) de eroare Cortex-A8 este alocat într-o locație nesigură"
+msgstr ""
+"%pB: eroare: ciotul(stub) de eroare Cortex-A8 este alocat într-o locație "
+"nesigură"
 
 #. There's not much we can do apart from complain if this
 #. happens.
-#: elf32-arm.c:18599
+#: elf32-arm.c:18628
 #, c-format
 msgid "%pB: error: Cortex-A8 erratum stub out of range (input file too large)"
-msgstr "%pB: eroare: ciotul(stub) de eroare Cortex-A8 în afara intervalului (fișierul de intrare este prea mare)"
+msgstr ""
+"%pB: eroare: ciotul(stub) de eroare Cortex-A8 în afara intervalului "
+"(fișierul de intrare este prea mare)"
 
-#: elf32-arm.c:19426 elf32-arm.c:19448
+#: elf32-arm.c:19455 elf32-arm.c:19477
 #, fuzzy, c-format
 msgid "%pB: error: VFP11 veneer out of range"
 msgstr "%pB: eroare: furnir VFP11 în afara intervalului"
 
-#: elf32-arm.c:19499
+#: elf32-arm.c:19528
 #, fuzzy, c-format
-msgid "%pB(%#<PRIx64>): error: cannot create STM32L4XX veneer; jump out of range by %<PRId64> bytes; cannot encode branch instruction"
-msgstr "%pB(%#<PRIx64>): eroare: nu se poate crea furnir STM32L4XX; se iese din interval cu %<PRId64> octeți; nu se poate codifica instrucțiunile de ramură"
+msgid ""
+"%pB(%#<PRIx64>): error: cannot create STM32L4XX veneer; jump out of range by "
+"%<PRId64> bytes; cannot encode branch instruction"
+msgstr ""
+"%pB(%#<PRIx64>): eroare: nu se poate crea furnir STM32L4XX; se iese din "
+"interval cu %<PRId64> octeți; nu se poate codifica instrucțiunile de ramură"
 
-#: elf32-arm.c:19538
+#: elf32-arm.c:19567
 #, fuzzy, c-format
 msgid "%pB: error: cannot create STM32L4XX veneer"
 msgstr "%pB: eroare: nu se poate crea furnir STM32L4XX"
 
-#: elf32-arm.c:20622
+#: elf32-arm.c:20647
 #, c-format
 msgid "error: %pB is already in final BE8 format"
 msgstr "eroare: %pB este deja în format BE8 final"
 
-#: elf32-arm.c:20698
-#, c-format
-msgid "error: source object %pB has EABI version %d, but target %pB has EABI version %d"
-msgstr "eroare: obiectul sursă %pB are versiunea EABI %d, dar ținta %pB are versiunea EABI %d"
-
-#: elf32-arm.c:20713
-#, c-format
-msgid "error: %pB is compiled for APCS-%d, whereas target %pB uses APCS-%d"
-msgstr "eroare: %pB este compilat pentru APCS-%d, în timp ce ținta %pB folosește APCS-%d"
-
 #: elf32-arm.c:20723
 #, c-format
-msgid "error: %pB passes floats in float registers, whereas %pB passes them in integer registers"
-msgstr "eroare: %pB trece valorile în virgulă mobilă în registrele de virgulă mobilă, în timp ce %pB le trece în registrele întregi"
+msgid ""
+"error: source object %pB has EABI version %d, but target %pB has EABI "
+"version %d"
+msgstr ""
+"eroare: obiectul sursă %pB are versiunea EABI %d, dar ținta %pB are "
+"versiunea EABI %d"
 
-#: elf32-arm.c:20727
+#: elf32-arm.c:20738
 #, c-format
-msgid "error: %pB passes floats in integer registers, whereas %pB passes them in float registers"
-msgstr "eroare: %pB trece valorile în virgulă mobilă în registrele întregi, în timp ce %pB le trece în registrele de virgulă mobilă"
+msgid "error: %pB is compiled for APCS-%d, whereas target %pB uses APCS-%d"
+msgstr ""
+"eroare: %pB este compilat pentru APCS-%d, în timp ce ținta %pB folosește "
+"APCS-%d"
 
-#: elf32-arm.c:20737 elf32-arm.c:20741 elf32-arm.c:20751
+#: elf32-arm.c:20748
+#, c-format
+msgid ""
+"error: %pB passes floats in float registers, whereas %pB passes them in "
+"integer registers"
+msgstr ""
+"eroare: %pB trece valorile în virgulă mobilă în registrele de virgulă "
+"mobilă, în timp ce %pB le trece în registrele întregi"
+
+#: elf32-arm.c:20752
+#, c-format
+msgid ""
+"error: %pB passes floats in integer registers, whereas %pB passes them in "
+"float registers"
+msgstr ""
+"eroare: %pB trece valorile în virgulă mobilă în registrele întregi, în timp "
+"ce %pB le trece în registrele de virgulă mobilă"
+
+#: elf32-arm.c:20762 elf32-arm.c:20766 elf32-arm.c:20776
 #, c-format
 msgid "error: %pB uses %s instructions, whereas %pB does not"
 msgstr "eroare: %pB folosește instrucțiuni %s, în timp ce %pB nu le folosește"
 
-#: elf32-arm.c:20755
+#: elf32-arm.c:20780
 #, c-format
 msgid "error: %pB does not use %s instructions, whereas %pB does"
 msgstr "eroare: %pB nu folosește instrucțiuni %s, în timp ce %pB le folosește"
 
-#: elf32-arm.c:20774
+#: elf32-arm.c:20799
 #, c-format
 msgid "error: %pB uses software FP, whereas %pB uses hardware FP"
-msgstr "eroare: %pB folosește software FP, în timp ce %pB folosește hardware FP"
+msgstr ""
+"eroare: %pB folosește software FP, în timp ce %pB folosește hardware FP"
 
-#: elf32-arm.c:20778
+#: elf32-arm.c:20803
 #, c-format
 msgid "error: %pB uses hardware FP, whereas %pB uses software FP"
-msgstr "eroare: %pB folosește FP hardware, în timp ce %pB folosește FP software"
+msgstr ""
+"eroare: %pB folosește FP hardware, în timp ce %pB folosește FP software"
 
-#: elf32-arm.c:20792
+#: elf32-arm.c:20817
 #, c-format
 msgid "warning: %pB supports interworking, whereas %pB does not"
 msgstr "avertisment: %pB acceptă interfuncționarea, în timp ce %pB nu o face"
 
-#: elf32-arm.c:20798
+#: elf32-arm.c:20823
 #, c-format
 msgid "warning: %pB does not support interworking, whereas %pB does"
-msgstr "avertisment: %pB nu acceptă interfuncționarea, în timp ce %pB o acceptă"
+msgstr ""
+"avertisment: %pB nu acceptă interfuncționarea, în timp ce %pB o acceptă"
 
 #: elf32-avr.c:1508
 msgid "%X%H: %s against `%s': error: relocation applies outside section\n"
-msgstr "%X%H: %s față de „%s”: eroare: realocarea se aplică în afara secțiunii\n"
+msgstr ""
+"%X%H: %s față de „%s”: eroare: realocarea se aplică în afara secțiunii\n"
 
 #: elf32-avr.c:1516
 msgid "%X%H: %s against `%s': error: relocation target address is odd\n"
 msgstr "%X%H: %s față de „%s”: eroare: adresa țintă de realocare este impară\n"
 
 #: elf32-avr.c:1524
-msgid "%X%H: %s against `%s': internal error: unexpected relocation result %d\n"
-msgstr "%X%H: %s față de „%s”: eroare internă: rezultat neașteptat al realocării %d\n"
+msgid ""
+"%X%H: %s against `%s': internal error: unexpected relocation result %d\n"
+msgstr ""
+"%X%H: %s față de „%s”: eroare internă: rezultat neașteptat al realocării %d\n"
 
 #: elf32-avr.c:3339 elfnn-aarch64.c:3229
 #, c-format
@@ -2220,8 +2544,12 @@ msgstr "%pB(%pA+%#<PRIx64>): realocare față de „%s”: eroare %d"
 
 #: elf32-bfin.c:2647
 #, c-format
-msgid "%pB: relocation at `%pA+%#<PRIx64>' references symbol `%s' with nonzero addend"
-msgstr "%pB: realocarea la „%pA+%#<PRIx64>” face referire la simbolul „%s” cu adaos diferit de zero"
+msgid ""
+"%pB: relocation at `%pA+%#<PRIx64>' references symbol `%s' with nonzero "
+"addend"
+msgstr ""
+"%pB: realocarea la „%pA+%#<PRIx64>” face referire la simbolul „%s” cu adaos "
+"diferit de zero"
 
 #: elf32-bfin.c:2664
 msgid "relocation references symbol not defined in the module"
@@ -2229,7 +2557,8 @@ msgstr "simbolul referințelor de realocare nu este definit în modul"
 
 #: elf32-bfin.c:2762
 msgid "R_BFIN_FUNCDESC references dynamic symbol with nonzero addend"
-msgstr "R_BFIN_FUNCDESC face referire la simbolul dinamic cu adaos diferit de zero"
+msgstr ""
+"R_BFIN_FUNCDESC face referire la simbolul dinamic cu adaos diferit de zero"
 
 #: elf32-bfin.c:2802 elf32-bfin.c:2923
 msgid "cannot emit fixups in read-only section"
@@ -2241,7 +2570,9 @@ msgstr "nu se pot emite realocări dinamice în secțiunea de numai-citire"
 
 #: elf32-bfin.c:2882
 msgid "R_BFIN_FUNCDESC_VALUE references dynamic symbol with nonzero addend"
-msgstr "R_BFIN_FUNCDESC_VALUE face referire la simbolul dinamic cu adaos diferit de zero"
+msgstr ""
+"R_BFIN_FUNCDESC_VALUE face referire la simbolul dinamic cu adaos diferit de "
+"zero"
 
 #: elf32-bfin.c:3045
 msgid "relocations between different segments are not supported"
@@ -2271,7 +2602,8 @@ msgstr "fanioane private = %lx:"
 #: elf32-bfin.c:4779 elf32-frv.c:6585
 #, c-format
 msgid "%pB: cannot link non-fdpic object file into fdpic executable"
-msgstr "%pB: nu se poate vincula fișierul obiect non-fdpic la executabilul fdpic"
+msgstr ""
+"%pB: nu se poate vincula fișierul obiect non-fdpic la executabilul fdpic"
 
 #: elf32-bfin.c:4783 elf32-frv.c:6589
 #, c-format
@@ -2284,7 +2616,8 @@ msgid "*** check this relocation %s"
 msgstr "*** verificați această realocare %s"
 
 #: elf32-bfin.c:5036
-msgid "the bfin target does not currently support the generation of copy relocations"
+msgid ""
+"the bfin target does not currently support the generation of copy relocations"
 msgstr "ținta bfin nu acceptă în prezent generarea de realocări de copiere"
 
 #: elf32-bfin.c:5330 elf32-cr16.c:2719 elf32-m68k.c:4420
@@ -2299,12 +2632,15 @@ msgstr "%pB, secțiunea %pA: realocare nerezolvabilă %s față de simbolul „%
 #: elf32-cris.c:1185
 #, c-format
 msgid "%pB, section %pA: no PLT nor GOT for relocation %s against symbol `%s'"
-msgstr "%pB, secțiunea %pA: fără PLT sau GOT pentru realocarea %s față de simbolul „%s”"
+msgstr ""
+"%pB, secțiunea %pA: fără PLT sau GOT pentru realocarea %s față de simbolul "
+"„%s”"
 
 #: elf32-cris.c:1188
 #, c-format
 msgid "%pB, section %pA: no PLT for relocation %s against symbol `%s'"
-msgstr "%pB, secțiunea %pA: fără PLT pentru realocarea %s față de simbolul „%s”"
+msgstr ""
+"%pB, secțiunea %pA: fără PLT pentru realocarea %s față de simbolul „%s”"
 
 #: elf32-cris.c:1194 elf32-cris.c:1327 elf32-cris.c:1592 elf32-cris.c:1675
 #: elf32-cris.c:1828 elf32-tic6x.c:2560
@@ -2313,18 +2649,28 @@ msgstr "[al cărui nume s-a pierdut]"
 
 #: elf32-cris.c:1312 elf32-tic6x.c:2544
 #, c-format
-msgid "%pB, section %pA: relocation %s with non-zero addend %<PRId64> against local symbol"
-msgstr "%pB, secțiunea %pA: realocare %s cu adăugarea diferită de zero %<PRId64> față de simbolul local"
+msgid ""
+"%pB, section %pA: relocation %s with non-zero addend %<PRId64> against local "
+"symbol"
+msgstr ""
+"%pB, secțiunea %pA: realocare %s cu adăugarea diferită de zero %<PRId64> "
+"față de simbolul local"
 
 #: elf32-cris.c:1321 elf32-cris.c:1669 elf32-cris.c:1822 elf32-tic6x.c:2553
 #, c-format
-msgid "%pB, section %pA: relocation %s with non-zero addend %<PRId64> against symbol `%s'"
-msgstr "%pB, secțiunea %pA: realocare %s cu adăugarea diferită de zero %<PRId64> față de simbolul „%s”"
+msgid ""
+"%pB, section %pA: relocation %s with non-zero addend %<PRId64> against "
+"symbol `%s'"
+msgstr ""
+"%pB, secțiunea %pA: realocare %s cu adăugarea diferită de zero %<PRId64> "
+"față de simbolul „%s”"
 
 #: elf32-cris.c:1348
 #, c-format
 msgid "%pB, section %pA: relocation %s is not allowed for global symbol: `%s'"
-msgstr "%pB, secțiunea %pA: realocarea %s nu este permisă pentru simbolul global: „%s”"
+msgstr ""
+"%pB, secțiunea %pA: realocarea %s nu este permisă pentru simbolul global: "
+"„%s”"
 
 #: elf32-cris.c:1365
 #, c-format
@@ -2334,50 +2680,79 @@ msgstr "%pB, secțiunea %pA: relaocare %s fără GOT creat"
 #. We shouldn't get here for GCC-emitted code.
 #: elf32-cris.c:1582
 #, c-format
-msgid "%pB, section %pA: relocation %s has an undefined reference to `%s', perhaps a declaration mixup?"
-msgstr "%pB, secțiunea %pA: realocarea %s are o referință nedefinită la „%s”, poate o confuzie în declarații?"
+msgid ""
+"%pB, section %pA: relocation %s has an undefined reference to `%s', perhaps "
+"a declaration mixup?"
+msgstr ""
+"%pB, secțiunea %pA: realocarea %s are o referință nedefinită la „%s”, poate "
+"o confuzie în declarații?"
 
 #: elf32-cris.c:1585
 #, c-format
-msgid "%pB, section %pA: relocation %s is not allowed for `%s', a global symbol with default visibility, perhaps a declaration mixup?"
-msgstr "%pB, secțiunea %pA: realocarea %s nu este permisă pentru „%s”, un simbol global cu vizibilitate implicită, poate o confuzie în declarații?"
+msgid ""
+"%pB, section %pA: relocation %s is not allowed for `%s', a global symbol "
+"with default visibility, perhaps a declaration mixup?"
+msgstr ""
+"%pB, secțiunea %pA: realocarea %s nu este permisă pentru „%s”, un simbol "
+"global cu vizibilitate implicită, poate o confuzie în declarații?"
 
 #: elf32-cris.c:1956
 #, c-format
-msgid "%pB, section %pA: relocation %s is not allowed for symbol: `%s' which is defined outside the program, perhaps a declaration mixup?"
-msgstr "%pB, secțiunea %pA: realocarea %s nu este permisă pentru simbolul: „%s” care este definit în afara programului, poate o confuzie în declarații?"
+msgid ""
+"%pB, section %pA: relocation %s is not allowed for symbol: `%s' which is "
+"defined outside the program, perhaps a declaration mixup?"
+msgstr ""
+"%pB, secțiunea %pA: realocarea %s nu este permisă pentru simbolul: „%s” care "
+"este definit în afara programului, poate o confuzie în declarații?"
 
 #: elf32-cris.c:2009
 msgid "(too many global variables for -fpic: recompile with -fPIC)"
 msgstr "(prea multe variabile globale pentru „-fpic”: recompilați cu „-fPIC”)"
 
 #: elf32-cris.c:2016
-msgid "(thread-local data too big for -fpic or -msmall-tls: recompile with -fPIC or -mno-small-tls)"
-msgstr "(datele de fire de execuție locale sunt prea mari pentru „-fpic” sau „-msmall-tls”: recompilați cu „-fPIC” sau „-mno-small-tls”)"
+msgid ""
+"(thread-local data too big for -fpic or -msmall-tls: recompile with -fPIC or "
+"-mno-small-tls)"
+msgstr ""
+"(datele de fire de execuție locale sunt prea mari pentru „-fpic” sau „-"
+"msmall-tls”: recompilați cu „-fPIC” sau „-mno-small-tls”)"
 
 #: elf32-cris.c:3051
 #, c-format
-msgid "%pB, section %pA: v10/v32 compatible object must not contain a PIC relocation"
-msgstr "%pB, secțiunea %pA: obiectul compatibil v10/v32 nu trebuie să conțină o realocare PIC"
+msgid ""
+"%pB, section %pA: v10/v32 compatible object must not contain a PIC relocation"
+msgstr ""
+"%pB, secțiunea %pA: obiectul compatibil v10/v32 nu trebuie să conțină o "
+"realocare PIC"
 
 #: elf32-cris.c:3105
 #, c-format
 msgid ""
 "%pB, section %pA:\n"
-"  relocation %s not valid in a shared object; typically an option mixup, recompile with -fPIC"
+"  relocation %s not valid in a shared object; typically an option mixup, "
+"recompile with -fPIC"
 msgstr ""
 "%pB, secțiunea %pA:\n"
-"  realocarea %s nu este validă într-un obiect partajat; de obicei, o confuzie de opțiuni, recompilați cu „-fPIC”"
+"  realocarea %s nu este validă într-un obiect partajat; de obicei, o "
+"confuzie de opțiuni, recompilați cu „-fPIC”"
 
 #: elf32-cris.c:3323
 #, c-format
-msgid "%pB, section %pA: relocation %s should not be used in a shared object; recompile with -fPIC"
-msgstr "%pB, secțiunea %pA: realocarea %s nu trebuie utilizată într-un obiect partajat; recompilați cu „-fPIC”"
+msgid ""
+"%pB, section %pA: relocation %s should not be used in a shared object; "
+"recompile with -fPIC"
+msgstr ""
+"%pB, secțiunea %pA: realocarea %s nu trebuie utilizată într-un obiect "
+"partajat; recompilați cu „-fPIC”"
 
 #: elf32-cris.c:3701
 #, c-format
-msgid "%pB, section `%pA', to symbol `%s': relocation %s should not be used in a shared object; recompile with -fPIC"
-msgstr "%pB, secțiunea „%pA”, la simbolul „%s”: realocarea %s nu trebuie utilizată într-un obiect partajat; recompilați cu „-fPIC”"
+msgid ""
+"%pB, section `%pA', to symbol `%s': relocation %s should not be used in a "
+"shared object; recompile with -fPIC"
+msgstr ""
+"%pB, secțiunea „%pA”, la simbolul „%s”: realocarea %s nu trebuie utilizată "
+"într-un obiect partajat; recompilați cu „-fPIC”"
 
 #: elf32-cris.c:3813
 msgid "unexpected machine number"
@@ -2400,13 +2775,19 @@ msgstr " [v32]"
 
 #: elf32-cris.c:3915
 #, c-format
-msgid "%pB: uses _-prefixed symbols, but writing file with non-prefixed symbols"
-msgstr "%pB: utilizează simboluri prefixate cu „_”, dar scrie fișierul cu simboluri fără prefix"
+msgid ""
+"%pB: uses _-prefixed symbols, but writing file with non-prefixed symbols"
+msgstr ""
+"%pB: utilizează simboluri prefixate cu „_”, dar scrie fișierul cu simboluri "
+"fără prefix"
 
 #: elf32-cris.c:3916
 #, c-format
-msgid "%pB: uses non-prefixed symbols, but writing file with _-prefixed symbols"
-msgstr "%pB: utilizează simboluri fără prefix, dar se scrie fișierul cu simboluri prefixate cu „_”"
+msgid ""
+"%pB: uses non-prefixed symbols, but writing file with _-prefixed symbols"
+msgstr ""
+"%pB: utilizează simboluri fără prefix, dar se scrie fișierul cu simboluri "
+"prefixate cu „_”"
 
 #: elf32-cris.c:3935
 #, c-format
@@ -2439,8 +2820,12 @@ msgstr "%pB: fanionul de mașină în conflict cu ținta"
 
 #: elf32-csky.c:2941
 #, c-format
-msgid "warning: file %pB's arch flag %s conflict with target %s,set target arch flag to %s"
-msgstr "avertisment: fanionul arhitecturii „%2$s” al fișierului „%1$pB” intră în conflict cu ținta „%3$s”, definiți fanionul arhitecturii țintă la „%4$s”"
+msgid ""
+"warning: file %pB's arch flag %s conflict with target %s,set target arch "
+"flag to %s"
+msgstr ""
+"avertisment: fanionul arhitecturii „%2$s” al fișierului „%1$pB” intră în "
+"conflict cu ținta „%3$s”, definiți fanionul arhitecturii țintă la „%4$s”"
 
 #: elf32-csky.c:2970
 #, c-format
@@ -2460,7 +2845,9 @@ msgstr "Eroare: %pB și %pB au ABI FPU diferit"
 #: elf32-csky.c:3100
 #, c-format
 msgid "warning: file %pB's arch flag %s conflicts with target ck%s, using %s"
-msgstr "avertisment: fanionul arhitecturii %2$s al fișierului %1$pB intră în conflict cu ținta ck%3$s, folosind %4$s"
+msgstr ""
+"avertisment: fanionul arhitecturii %2$s al fișierului %1$pB intră în "
+"conflict cu ținta ck%3$s, folosind %4$s"
 
 #. The r_type is error, not support it.
 #: elf32-csky.c:4342 elf32-i386.c:344
@@ -2510,7 +2897,8 @@ msgstr "%H: R_FRV_GOTTLSDESCHI nu este aplicat unei instrucțiuni sethi\n"
 
 #: elf32-frv.c:3075
 msgid "%H: R_FRV_GOTTLSDESCLO not applied to a setlo or setlos instruction\n"
-msgstr "%H: R_FRV_GOTTLSDESCLO nu este aplicat unei instrucțiuni setlo sau setlos\n"
+msgstr ""
+"%H: R_FRV_GOTTLSDESCLO nu este aplicat unei instrucțiuni setlo sau setlos\n"
 
 #: elf32-frv.c:3122
 msgid "%H: R_FRV_TLSDESC_RELAX not applied to an ldd instruction\n"
@@ -2530,7 +2918,8 @@ msgstr "%H: R_FRV_GOTTLSOFFHI nu este aplicat unei instrucțiuni sethi\n"
 
 #: elf32-frv.c:3319
 msgid "%H: R_FRV_GOTTLSOFFLO not applied to a setlo or setlos instruction\n"
-msgstr "%H: R_FRV_GOTTLSOFFLO nu este aplicat unei instrucțiuni setlo sau setlos\n"
+msgstr ""
+"%H: R_FRV_GOTTLSOFFLO nu este aplicat unei instrucțiuni setlo sau setlos\n"
 
 #: elf32-frv.c:3349
 msgid "%H: R_FRV_TLSOFF_RELAX not applied to an ld instruction\n"
@@ -2554,7 +2943,8 @@ msgstr "%H: nu se pot emite remedieri în secțiunea numai-pentru-citire\n"
 
 #: elf32-frv.c:3613 elf32-frv.c:3746
 msgid "%H: cannot emit dynamic relocations in read-only section\n"
-msgstr "%H: nu se pot emite realocări dinamice în secțiunea numai-pentru-citire\n"
+msgstr ""
+"%H: nu se pot emite realocări dinamice în secțiunea numai-pentru-citire\n"
 
 #: elf32-frv.c:3918
 #, c-format
@@ -2568,8 +2958,10 @@ msgstr "%H: realocare față de „%s”: %s\n"
 
 #: elf32-frv.c:6496
 #, c-format
-msgid "%pB: compiled with %s and linked with modules that use non-pic relocations"
-msgstr "%pB: compilat cu %s și vinculat cu module care folosesc realocări non-pic"
+msgid ""
+"%pB: compiled with %s and linked with modules that use non-pic relocations"
+msgstr ""
+"%pB: compilat cu %s și vinculat cu module care folosesc realocări non-pic"
 
 #: elf32-frv.c:6550 elf32-iq2000.c:830 elf32-m32c.c:876
 #, c-format
@@ -2578,8 +2970,11 @@ msgstr "%pB: compilat cu %s și vinculat cu module compilate cu %s"
 
 #: elf32-frv.c:6563
 #, c-format
-msgid "%pB: uses different unknown e_flags (%#x) fields than previous modules (%#x)"
-msgstr "%pB: folosește câmpuri e_flags necunoscute (%#x) diferite față de modulele anterioare (%#x)"
+msgid ""
+"%pB: uses different unknown e_flags (%#x) fields than previous modules (%#x)"
+msgstr ""
+"%pB: folosește câmpuri e_flags necunoscute (%#x) diferite față de modulele "
+"anterioare (%#x)"
 
 #: elf32-gen.c:71
 #, c-format
@@ -2588,13 +2983,20 @@ msgstr "%pB: realocări în ELF generic (EM: %d)"
 
 #: elf32-hppa.c:863 elf32-hppa.c:3403
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): cannot reach %s, recompile with -ffunction-sections"
-msgstr "%pB(%pA+%#<PRIx64>): nu se poate ajunge la %s, recompilați cu „-ffunction-sections”"
+msgid ""
+"%pB(%pA+%#<PRIx64>): cannot reach %s, recompile with -ffunction-sections"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): nu se poate ajunge la %s, recompilați cu „-ffunction-"
+"sections”"
 
 #: elf32-hppa.c:1241
 #, c-format
-msgid "%pB: relocation %s can not be used when making a shared object; recompile with -fPIC"
-msgstr "%pB: realocarea %s nu poate fi folosită atunci când se creează un obiect partajat; recompilați cu „-fPIC”"
+msgid ""
+"%pB: relocation %s can not be used when making a shared object; recompile "
+"with -fPIC"
+msgstr ""
+"%pB: realocarea %s nu poate fi folosită atunci când se creează un obiect "
+"partajat; recompilați cu „-fPIC”"
 
 #: elf32-hppa.c:2580
 #, c-format
@@ -2603,8 +3005,12 @@ msgstr "%pB: ciot(stub) de exportare duplicat %s"
 
 #: elf32-hppa.c:3236
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): %s fixup for insn %#x is not supported in a non-shared link"
-msgstr "%pB(%pA+%#<PRIx64>): remedierea %s pentru insn %#x nu este acceptată într-o legătură nepartajată"
+msgid ""
+"%pB(%pA+%#<PRIx64>): %s fixup for insn %#x is not supported in a non-shared "
+"link"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): remedierea %s pentru insn %#x nu este acceptată într-o "
+"legătură nepartajată"
 
 #: elf32-hppa.c:4032
 #, c-format
@@ -2627,20 +3033,30 @@ msgstr "secțiunea .got nu urmează imediat după secțiunea .plt"
 
 #: elf32-i386.c:1163 elf64-x86-64.c:1450
 #, c-format
-msgid "%pB: TLS transition from %s to %s against `%s' at %#<PRIx64> in section `%pA' failed"
-msgstr "%pB: tranziția TLS de la %s la %s față de „%s” la %#<PRIx64> din secțiunea „%pA” a eșuat"
+msgid ""
+"%pB: TLS transition from %s to %s against `%s' at %#<PRIx64> in section `"
+"%pA' failed"
+msgstr ""
+"%pB: tranziția TLS de la %s la %s față de „%s” la %#<PRIx64> din secțiunea "
+"„%pA” a eșuat"
 
 #: elf32-i386.c:1266
 #, c-format
-msgid "%pB: direct GOT relocation R_386_GOT32X against `%s' without base register can not be used when making a shared object"
-msgstr "%pB: realocarea GOT directă, R_386_GOT32X față de „%s” fără registru de bază nu poate fi utilizată atunci când se creează un obiect partajat"
+msgid ""
+"%pB: direct GOT relocation R_386_GOT32X against `%s' without base register "
+"can not be used when making a shared object"
+msgstr ""
+"%pB: realocarea GOT directă, R_386_GOT32X față de „%s” fără registru de bază "
+"nu poate fi utilizată atunci când se creează un obiect partajat"
 
 #: elf32-i386.c:1695 elf32-s390.c:1151 elf32-sh.c:5497 elf32-tilepro.c:1548
-#: elf32-xtensa.c:1263 elf64-s390.c:1083 elfxx-sparc.c:1556
-#: elfxx-tilegx.c:1767 elfnn-loongarch.c:586 elfnn-riscv.c:568
+#: elf32-xtensa.c:1263 elf64-s390.c:1083 elfxx-sparc.c:1556 elfxx-tilegx.c:1767
+#: elfnn-loongarch.c:586 elfnn-riscv.c:568
 #, c-format
 msgid "%pB: `%s' accessed both as normal and thread local symbol"
-msgstr "%pB: %s a fost accesat atât ca simbol local normal, cât și ca simbol local al firului de execuție"
+msgstr ""
+"%pB: %s a fost accesat atât ca simbol local normal, cât și ca simbol local "
+"al firului de execuție"
 
 #: elf32-i386.c:1767
 #, c-format
@@ -2649,13 +3065,15 @@ msgstr "%pB: apel non-PIC neacceptat către IFUNC „%s”"
 
 #: elf32-i386.c:1822 elf64-x86-64.c:2343
 #, c-format
-msgid "%pB: non-canonical reference to canonical protected function `%s' in %pB"
+msgid ""
+"%pB: non-canonical reference to canonical protected function `%s' in %pB"
 msgstr "%pB: referință necanonică la funcția protejată canonică „%s” în %pB"
 
 #: elf32-i386.c:2385 elf64-x86-64.c:2806 elfnn-riscv.c:2271
 #, c-format
 msgid "%pB: relocation %s against STT_GNU_IFUNC symbol `%s' isn't supported"
-msgstr "%pB: realocarea %s față de simbolul STT_GNU_IFUNC „%s” nu este acceptată"
+msgstr ""
+"%pB: realocarea %s față de simbolul STT_GNU_IFUNC „%s” nu este acceptată"
 
 #: elf32-i386.c:2418 elf32-i386.c:3710 elf32-i386.c:3858 elf64-x86-64.c:2863
 #: elf64-x86-64.c:4410 elf64-x86-64.c:4573 elfnn-riscv.c:2144
@@ -2666,8 +3084,12 @@ msgstr "Funcția IFUNC locală „%s” în %pB\n"
 
 #: elf32-i386.c:2596
 #, c-format
-msgid "%pB: direct GOT relocation %s against `%s' without base register can not be used when making a shared object"
-msgstr "%pB: realocarea GOT directă %s față de „%s” fără registrul de bază nu poate fi utilizată când se creează un obiect partajat"
+msgid ""
+"%pB: direct GOT relocation %s against `%s' without base register can not be "
+"used when making a shared object"
+msgstr ""
+"%pB: realocarea GOT directă %s față de „%s” fără registrul de bază nu poate "
+"fi utilizată când se creează un obiect partajat"
 
 #: elf32-i386.c:2631 elf64-x86-64.c:3077
 msgid "hidden symbol"
@@ -2687,21 +3109,32 @@ msgstr "simbol"
 
 #: elf32-i386.c:2646
 #, c-format
-msgid "%pB: relocation R_386_GOTOFF against undefined %s `%s' can not be used when making a shared object"
-msgstr "%pB: realocarea R_386_GOTOFF față de %s nedefinit „%s” nu poate fi folosită atunci când se creează un obiect partajat"
+msgid ""
+"%pB: relocation R_386_GOTOFF against undefined %s `%s' can not be used when "
+"making a shared object"
+msgstr ""
+"%pB: realocarea R_386_GOTOFF față de %s nedefinit „%s” nu poate fi folosită "
+"atunci când se creează un obiect partajat"
 
 #: elf32-i386.c:2659
 #, c-format
-msgid "%pB: relocation R_386_GOTOFF against protected %s `%s' can not be used when making a shared object"
-msgstr "%pB: realocarea R_386_GOTOFF față de %s protejat „%s” nu poate fi folosită atunci când se creează un obiect partajat"
+msgid ""
+"%pB: relocation R_386_GOTOFF against protected %s `%s' can not be used when "
+"making a shared object"
+msgstr ""
+"%pB: realocarea R_386_GOTOFF față de %s protejat „%s” nu poate fi folosită "
+"atunci când se creează un obiect partajat"
 
 #: elf32-i386.c:4061 elf64-x86-64.c:4784
 msgid "%F%P: discarded output section: `%pA'\n"
 msgstr "%F%P: secțiune de ieșire înlăturată: „%pA”\n"
 
 #: elf32-ip2k.c:855 elf32-ip2k.c:861 elf32-ip2k.c:928 elf32-ip2k.c:934
-msgid "ip2k relaxer: switch table without complete matching relocation information."
-msgstr "relaxer ip2k: tabel de comutare fără potrivire completă a informațiilor de realocare."
+msgid ""
+"ip2k relaxer: switch table without complete matching relocation information."
+msgstr ""
+"relaxer ip2k: tabel de comutare fără potrivire completă a informațiilor de "
+"realocare."
 
 #: elf32-ip2k.c:878 elf32-ip2k.c:961
 msgid "ip2k relaxer: switch table header corrupt."
@@ -2710,16 +3143,22 @@ msgstr "relaxer ip2k: antetul tabelului de comutare corupt."
 #: elf32-ip2k.c:1297
 #, c-format
 msgid "ip2k linker: missing page instruction at %#<PRIx64> (dest = %#<PRIx64>)"
-msgstr "editor de legăturii ip2k: lipsește instrucțiunea de pagină la %#<PRIx64> (dest = %#<PRIx64>)"
+msgstr ""
+"editor de legăturii ip2k: lipsește instrucțiunea de pagină la %#<PRIx64> "
+"(dest = %#<PRIx64>)"
 
 #: elf32-ip2k.c:1316
 #, c-format
-msgid "ip2k linker: redundant page instruction at %#<PRIx64> (dest = %#<PRIx64>)"
-msgstr "editor de legăturii ip2k: instrucțiune redundantă de pagină la %#<PRIx64> (dest = %#<PRIx64>)"
+msgid ""
+"ip2k linker: redundant page instruction at %#<PRIx64> (dest = %#<PRIx64>)"
+msgstr ""
+"editor de legăturii ip2k: instrucțiune redundantă de pagină la %#<PRIx64> "
+"(dest = %#<PRIx64>)"
 
 #: elf32-lm32.c:609 elf32-nios2.c:3145
 msgid "global pointer relative relocation when _gp not defined"
-msgstr "realocare relativă a indicatorului global atunci când _gp nu este definit"
+msgstr ""
+"realocare relativă a indicatorului global atunci când _gp nu este definit"
 
 #: elf32-lm32.c:664 elf32-nios2.c:3582
 msgid "global pointer relative address out of range"
@@ -2766,43 +3205,74 @@ msgstr ": instrucțiuni m32r2"
 
 #: elf32-m68hc1x.c:1135
 #, c-format
-msgid "reference to the far symbol `%s' using a wrong relocation may result in incorrect execution"
-msgstr "referirea la simbolul îndepărtat „%s” folosind o realocare greșită poate avea ca rezultat o execuție incorectă"
+msgid ""
+"reference to the far symbol `%s' using a wrong relocation may result in "
+"incorrect execution"
+msgstr ""
+"referirea la simbolul îndepărtat „%s” folosind o realocare greșită poate "
+"avea ca rezultat o execuție incorectă"
 
 #: elf32-m68hc1x.c:1166
 #, c-format
-msgid "XGATE address (%lx) is not within shared RAM(0xE000-0xFFFF), therefore you must manually offset the address, and possibly manage the page, in your code."
-msgstr "adresa XGATE (%lx) nu se află în memoria RAM partajată (0xE000-0xFFFF), prin urmare trebuie să poziționați manual adresa și, eventual, să gestionați pagina, în codul dvs."
+msgid ""
+"XGATE address (%lx) is not within shared RAM(0xE000-0xFFFF), therefore you "
+"must manually offset the address, and possibly manage the page, in your code."
+msgstr ""
+"adresa XGATE (%lx) nu se află în memoria RAM partajată (0xE000-0xFFFF), prin "
+"urmare trebuie să poziționați manual adresa și, eventual, să gestionați "
+"pagina, în codul dvs."
 
 #: elf32-m68hc1x.c:1182
 #, c-format
-msgid "banked address [%lx:%04lx] (%lx) is not in the same bank as current banked address [%lx:%04lx] (%lx)"
-msgstr "adresa grupată [%lx:%04lx] (%lx) nu este în același grup cu adresa curentă grupată [%lx:%04lx] (%lx)"
+msgid ""
+"banked address [%lx:%04lx] (%lx) is not in the same bank as current banked "
+"address [%lx:%04lx] (%lx)"
+msgstr ""
+"adresa grupată [%lx:%04lx] (%lx) nu este în același grup cu adresa curentă "
+"grupată [%lx:%04lx] (%lx)"
 
 #: elf32-m68hc1x.c:1197
 #, c-format
-msgid "reference to a banked address [%lx:%04lx] in the normal address space at %04lx"
-msgstr "referință la o adresă grupată [%lx:%04lx] în spațiul de adrese normal la %04lx"
+msgid ""
+"reference to a banked address [%lx:%04lx] in the normal address space at "
+"%04lx"
+msgstr ""
+"referință la o adresă grupată [%lx:%04lx] în spațiul de adrese normal la "
+"%04lx"
 
 #: elf32-m68hc1x.c:1233
 #, c-format
-msgid "S12 address (%lx) is not within shared RAM(0x2000-0x4000), therefore you must manually offset the address in your code"
-msgstr "adresa S12 (%lx) nu se află în memoria RAM partajată (0x2000-0x4000), prin urmare trebuie să poziționați manual adresa în codul dvs."
+msgid ""
+"S12 address (%lx) is not within shared RAM(0x2000-0x4000), therefore you "
+"must manually offset the address in your code"
+msgstr ""
+"adresa S12 (%lx) nu se află în memoria RAM partajată (0x2000-0x4000), prin "
+"urmare trebuie să poziționați manual adresa în codul dvs."
 
 #: elf32-m68hc1x.c:1357
 #, c-format
-msgid "%pB: linking files compiled for 16-bit integers (-mshort) and others for 32-bit integers"
-msgstr "%pB: se vinculează fișiere compilate pentru numere întregi pe 16 biți (-mshort) și altele pentru numere întregi pe 32 de biți"
+msgid ""
+"%pB: linking files compiled for 16-bit integers (-mshort) and others for 32-"
+"bit integers"
+msgstr ""
+"%pB: se vinculează fișiere compilate pentru numere întregi pe 16 biți (-"
+"mshort) și altele pentru numere întregi pe 32 de biți"
 
 #: elf32-m68hc1x.c:1364
 #, c-format
-msgid "%pB: linking files compiled for 32-bit double (-fshort-double) and others for 64-bit double"
-msgstr "%pB: se vinculează fișiere compilate pentru double pe 32-biți (-fshort-double) și altele pentru double pe 64-biți"
+msgid ""
+"%pB: linking files compiled for 32-bit double (-fshort-double) and others "
+"for 64-bit double"
+msgstr ""
+"%pB: se vinculează fișiere compilate pentru double pe 32-biți (-fshort-"
+"double) și altele pentru double pe 64-biți"
 
 #: elf32-m68hc1x.c:1373
 #, c-format
 msgid "%pB: linking files compiled for HCS12 with others compiled for HC12"
-msgstr "%pB: se vinculează fișiere compilate pentru HCS12 cu altele compilate pentru HC12"
+msgstr ""
+"%pB: se vinculează fișiere compilate pentru HCS12 cu altele compilate pentru "
+"HC12"
 
 #: elf32-m68hc1x.c:1418 elf32-xgate.c:497
 #, c-format
@@ -2857,7 +3327,8 @@ msgstr " [poziționare RAM XGATE]"
 #: elf32-m68k.c:1157 elf32-m68k.c:1165 elf32-ppc.c:3576 elf32-ppc.c:3584
 #, c-format
 msgid "%pB uses hard float, %pB uses soft float"
-msgstr "%pB folosește virgulă mobilă hardware, %pB folosește virgulă mobilă software"
+msgstr ""
+"%pB folosește virgulă mobilă hardware, %pB folosește virgulă mobilă software"
 
 #: elf32-m68k.c:1280 elf32-m68k.c:1281 vms-alpha.c:8053 vms-alpha.c:8069
 msgid "unknown"
@@ -2906,8 +3377,12 @@ msgstr "%pB(%pA): nu sunt acceptate multiple modele TLS"
 
 #: elf32-metag.c:1860
 #, c-format
-msgid "%pB(%pA): shared library symbol %s encountered whilst performing a static link"
-msgstr "%pB(%pA): simbolul bibliotecii partajate %s întâlnit în timpul efectuării unei vinculări statice"
+msgid ""
+"%pB(%pA): shared library symbol %s encountered whilst performing a static "
+"link"
+msgstr ""
+"%pB(%pA): simbolul bibliotecii partajate %s întâlnit în timpul efectuării "
+"unei vinculări statice"
 
 #: elf32-microblaze.c:1577 elf32-tilepro.c:3021 elfxx-sparc.c:3446
 #: elfxx-tilegx.c:3415
@@ -2926,7 +3401,9 @@ msgstr "realocarea relativă gp 32bits are loc pe un simbol extern"
 
 #: elf32-msp430.c:914
 #, c-format
-msgid "error: final size of uleb128 value at offset 0x%lx in %pA from %pB exceeds available space"
+msgid ""
+"error: final size of uleb128 value at offset 0x%lx in %pA from %pB exceeds "
+"available space"
 msgstr ""
 
 #: elf32-msp430.c:983 elf32-msp430.c:1297
@@ -2974,7 +3451,9 @@ msgstr ""
 
 #: elf32-msp430.c:2858
 #, c-format
-msgid "error: %pB can use the upper region for data, but %pB assumes data is exclusively in lower memory"
+msgid ""
+"error: %pB can use the upper region for data, but %pB assumes data is "
+"exclusively in lower memory"
 msgstr ""
 
 #: elf32-nds32.c:3674
@@ -3004,17 +3483,24 @@ msgstr ""
 
 #: elf32-nds32.c:6688
 #, c-format
-msgid "%pB: ISR vector size mismatch with previous modules, previous %u-byte, current %u-byte"
-msgstr "%pB: dimensiunea vectorului ISR nu se potrivește cu modulele anterioare, %u-octeți cel anterior, %u-octeți cel actual"
+msgid ""
+"%pB: ISR vector size mismatch with previous modules, previous %u-byte, "
+"current %u-byte"
+msgstr ""
+"%pB: dimensiunea vectorului ISR nu se potrivește cu modulele anterioare, %u-"
+"octeți cel anterior, %u-octeți cel actual"
 
 #: elf32-nds32.c:6736
 #, c-format
 msgid "%pB: warning: endian mismatch with previous modules"
-msgstr "%pB: avertisment: tipul de endianess nu se potrivește cu modulele anterioare"
+msgstr ""
+"%pB: avertisment: tipul de endianess nu se potrivește cu modulele anterioare"
 
 #: elf32-nds32.c:6750
 #, c-format
-msgid "%pB: warning: older version of object file encountered, please recompile with current tool chain"
+msgid ""
+"%pB: warning: older version of object file encountered, please recompile "
+"with current tool chain"
 msgstr ""
 
 #: elf32-nds32.c:6838
@@ -3025,7 +3511,8 @@ msgstr "%pB: eroare: ABI nu se potrivește cu modulele anterioare"
 #: elf32-nds32.c:6848
 #, c-format
 msgid "%pB: error: instruction set mismatch with previous modules"
-msgstr "%pB: eroare: setul de instrucțiuni nu se potrivește cu modulele anterioare"
+msgstr ""
+"%pB: eroare: setul de instrucțiuni nu se potrivește cu modulele anterioare"
 
 #: elf32-nds32.c:6875
 #, c-format
@@ -3062,7 +3549,7 @@ msgstr "%pB: OMIT_FP imbricat în %pA"
 msgid "%pB: unmatched OMIT_FP in %pA"
 msgstr "%pB: OMIT_FP fără pereche în %pA"
 
-#: elf32-nds32.c:13189 elfxx-mips.c:13501 reloc.c:8651
+#: elf32-nds32.c:13189 elfxx-mips.c:13501 reloc.c:8835
 #, c-format
 msgid "%X%P: %pB(%pA): relocation \"%pR\" goes out of range\n"
 msgstr "%X%P: %pB(%pA): realocarea „%pR” iese în afara intervalului\n"
@@ -3074,12 +3561,18 @@ msgstr "eroare: %pB: R2 big-endian nu este acceptat"
 
 #: elf32-nios2.c:3826
 #, c-format
-msgid "global pointer relative relocation at address %#<PRIx64> when _gp not defined\n"
-msgstr "realocare relativă a indicatorului global la adresa %#<PRIx64> atunci când _gp nu este definit\n"
+msgid ""
+"global pointer relative relocation at address %#<PRIx64> when _gp not "
+"defined\n"
+msgstr ""
+"realocare relativă a indicatorului global la adresa %#<PRIx64> atunci când "
+"_gp nu este definit\n"
 
 #: elf32-nios2.c:3856
 #, c-format
-msgid "unable to reach %s (at %#<PRIx64>) from the global pointer (at %#<PRIx64>) because the offset (%<PRId64>) is out of the allowed range, -32678 to 32767\n"
+msgid ""
+"unable to reach %s (at %#<PRIx64>) from the global pointer (at %#<PRIx64>) "
+"because the offset (%<PRId64>) is out of the allowed range, -32678 to 32767\n"
 msgstr ""
 
 #: elf32-nios2.c:4511 elf32-pru.c:931
@@ -3185,17 +3678,23 @@ msgstr "nu s-a putut instala noua secțiune APUinfo"
 #: elf32-ppc.c:2873
 #, c-format
 msgid "%pB: relocation %s cannot be used when making a shared object"
-msgstr "%pB: realocarea %s nu poate fi folosită când se creează un obiect partajat"
+msgstr ""
+"%pB: realocarea %s nu poate fi folosită când se creează un obiect partajat"
 
 #: elf32-ppc.c:3592 elf32-ppc.c:3600
 #, c-format
-msgid "%pB uses double-precision hard float, %pB uses single-precision hard float"
-msgstr "%pB folosește virgulă mobilă hardware cu precizie dublă, %pB folosește virgulă mobilă hardware cu precizie simplă"
+msgid ""
+"%pB uses double-precision hard float, %pB uses single-precision hard float"
+msgstr ""
+"%pB folosește virgulă mobilă hardware cu precizie dublă, %pB folosește "
+"virgulă mobilă hardware cu precizie simplă"
 
 #: elf32-ppc.c:3622 elf32-ppc.c:3630
 #, c-format
 msgid "%pB uses 64-bit long double, %pB uses 128-bit long double"
-msgstr "%pB folosește numere întregi lungi cu precizie dublă de 64 de biți, %pB folosește numere întregi lungi cu precizie dublă de 128 de biți"
+msgstr ""
+"%pB folosește numere întregi lungi cu precizie dublă de 64 de biți, %pB "
+"folosește numere întregi lungi cu precizie dublă de 128 de biți"
 
 #: elf32-ppc.c:3638 elf32-ppc.c:3646
 #, c-format
@@ -3214,13 +3713,17 @@ msgstr ""
 
 #: elf32-ppc.c:3824
 #, c-format
-msgid "%pB: compiled with -mrelocatable and linked with modules compiled normally"
-msgstr "%pB: compilat cu „-mrelocatable” și vinculat cu module compilate normal"
+msgid ""
+"%pB: compiled with -mrelocatable and linked with modules compiled normally"
+msgstr ""
+"%pB: compilat cu „-mrelocatable” și vinculat cu module compilate normal"
 
 #: elf32-ppc.c:3832
 #, c-format
-msgid "%pB: compiled normally and linked with modules compiled with -mrelocatable"
-msgstr "%pB: compilat normal și vinculat cu module compilate cu „-mrelocatable”"
+msgid ""
+"%pB: compiled normally and linked with modules compiled with -mrelocatable"
+msgstr ""
+"%pB: compilat normal și vinculat cu module compilate cu „-mrelocatable”"
 
 #: elf32-ppc.c:3903
 #, c-format
@@ -3308,8 +3811,10 @@ msgstr "%H: realocarea %s pentru funcția indirectă %s nu este acceptată\n"
 
 #: elf32-ppc.c:8493 elf32-ppc.c:8524 elf32-ppc.c:8627 elf32-ppc.c:8727
 #, c-format
-msgid "%pB: the target (%s) of a %s relocation is in the wrong output section (%s)"
-msgstr "%pB: ținta (%s) a unei realocări %s este în secțiunea de ieșire greșită (%s)"
+msgid ""
+"%pB: the target (%s) of a %s relocation is in the wrong output section (%s)"
+msgstr ""
+"%pB: ținta (%s) a unei realocări %s este în secțiunea de ieșire greșită (%s)"
 
 #: elf32-ppc.c:8905 elf32-ppc.c:8926
 msgid "%X%P: %H: %s relocation unsupported for bss-plt\n"
@@ -3331,11 +3836,15 @@ msgid "%H: %s reloc against `%s': error %d\n"
 msgstr "%H: %s realocarea față de „%s”: eroare %d\n"
 
 #: elf32-ppc.c:10000
-msgid "%X%P: text relocations and GNU indirect functions will result in a segfault at runtime\n"
+msgid ""
+"%X%P: text relocations and GNU indirect functions will result in a segfault "
+"at runtime\n"
 msgstr ""
 
 #: elf32-ppc.c:10004 elf64-ppc.c:18281
-msgid "%P: warning: text relocations and GNU indirect functions may result in a segfault at runtime\n"
+msgid ""
+"%P: warning: text relocations and GNU indirect functions may result in a "
+"segfault at runtime\n"
 msgstr ""
 
 #: elf32-ppc.c:10049
@@ -3503,12 +4012,16 @@ msgstr "%pB: avertisment: se vinculează fișierele PIC cu fișiere non-PIC"
 #: elf32-sh.c:532
 #, c-format
 msgid "%pB: %#<PRIx64>: warning: R_SH_USES points to unrecognized insn 0x%x"
-msgstr "%pB: %#<PRIx64>: avertisment: R_SH_USES indică către insn nerecunoscut 0x%x"
+msgstr ""
+"%pB: %#<PRIx64>: avertisment: R_SH_USES indică către insn nerecunoscut 0x%x"
 
 #: elf32-sh.c:3752
 #, c-format
-msgid "%pB: %#<PRIx64>: fatal: unaligned branch target for relax-support relocation"
-msgstr "%pB: %#<PRIx64>: fatal: țintă de ramură nealiniată pentru realocarea suportului-relax"
+msgid ""
+"%pB: %#<PRIx64>: fatal: unaligned branch target for relax-support relocation"
+msgstr ""
+"%pB: %#<PRIx64>: fatal: țintă de ramură nealiniată pentru realocarea "
+"suportului-relax"
 
 #: elf32-sh.c:3782 elf32-sh.c:3798
 #, c-format
@@ -3517,18 +4030,26 @@ msgstr "%pB: %#<PRIx64>: fatal: realocare %s nealiniată %#<PRIx64>"
 
 #: elf32-sh.c:3814
 #, c-format
-msgid "%pB: %#<PRIx64>: fatal: R_SH_PSHA relocation %<PRId64> not in range -32..32"
-msgstr "%pB: %#<PRIx64>: fatal: realocarea R_SH_PSHA %<PRId64> nu se află în intervalul -32..32"
+msgid ""
+"%pB: %#<PRIx64>: fatal: R_SH_PSHA relocation %<PRId64> not in range -32..32"
+msgstr ""
+"%pB: %#<PRIx64>: fatal: realocarea R_SH_PSHA %<PRId64> nu se află în "
+"intervalul -32..32"
 
 #: elf32-sh.c:3830
 #, c-format
-msgid "%pB: %#<PRIx64>: fatal: R_SH_PSHL relocation %<PRId64> not in range -32..32"
-msgstr "%pB: %#<PRIx64>: fatal: realocarea R_SH_PSHL %<PRId64> nu se află în intervalul -32..32"
+msgid ""
+"%pB: %#<PRIx64>: fatal: R_SH_PSHL relocation %<PRId64> not in range -32..32"
+msgstr ""
+"%pB: %#<PRIx64>: fatal: realocarea R_SH_PSHL %<PRId64> nu se află în "
+"intervalul -32..32"
 
 #: elf32-sh.c:3960 elf32-sh.c:4355
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): cannot emit fixup to `%s' in read-only section"
-msgstr "%pB(%pA+%#<PRIx64>): nu poate emite remediere la „%s” în secțiunea numai-pentru-citire"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): nu poate emite remediere la „%s” în secțiunea numai-"
+"pentru-citire"
 
 #: elf32-sh.c:4458
 #, c-format
@@ -3537,7 +4058,9 @@ msgstr "%pB(%pA+%#<PRIx64>): realocare %s față de simbolul extern „%s”"
 
 #: elf32-sh.c:4577
 #, c-format
-msgid "%pB(%pA): offset in relocation for GD->LE translation is too small: %#<PRIx64>"
+msgid ""
+"%pB(%pA): offset in relocation for GD->LE translation is too small: "
+"%#<PRIx64>"
 msgstr ""
 
 #. The backslash is to prevent bogus trigraph detection.
@@ -3573,32 +4096,41 @@ msgstr ""
 
 #: elf32-sh.c:4666
 #, c-format
-msgid "%pB(%pA): offset in relocation for IE->LE translation is too small: %#<PRIx64>"
+msgid ""
+"%pB(%pA): offset in relocation for IE->LE translation is too small: "
+"%#<PRIx64>"
 msgstr ""
 
 #: elf32-sh.c:4684
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): unexpected instruction %#04X (expected 0xd0??: mov.l)"
+msgid ""
+"%pB(%pA+%#<PRIx64>): unexpected instruction %#04X (expected 0xd0??: mov.l)"
 msgstr ""
 
 #: elf32-sh.c:4693
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): unexpected instruction %#04X (expected 0x0?12: stc)"
+msgid ""
+"%pB(%pA+%#<PRIx64>): unexpected instruction %#04X (expected 0x0?12: stc)"
 msgstr ""
 
 #: elf32-sh.c:4700
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): unexpected instruction %#04X (expected 0x0?ce: mov.l)"
+msgid ""
+"%pB(%pA+%#<PRIx64>): unexpected instruction %#04X (expected 0x0?ce: mov.l)"
 msgstr ""
 
 #: elf32-sh.c:4815
 #, c-format
-msgid "%pB(%pA): offset in relocation for GD->IE translation is too small: %#<PRIx64>"
+msgid ""
+"%pB(%pA): offset in relocation for GD->IE translation is too small: "
+"%#<PRIx64>"
 msgstr ""
 
 #: elf32-sh.c:4883
 #, c-format
-msgid "%pB(%pA): offset in relocation for LD->LE translation is too small: %#<PRIx64>"
+msgid ""
+"%pB(%pA): offset in relocation for LD->LE translation is too small: "
+"%#<PRIx64>"
 msgstr ""
 
 #: elf32-sh.c:5011
@@ -3609,7 +4141,8 @@ msgstr "%X%C: realocarea din „%s” face referire la un segment diferit\n"
 #: elf32-sh.c:5018
 #, c-format
 msgid "%C: warning: relocation to \"%s\" references a different segment\n"
-msgstr "%C: avertisment: realocarea din „%s” face referire la un segment diferit\n"
+msgstr ""
+"%C: avertisment: realocarea din „%s” face referire la un segment diferit\n"
 
 #: elf32-sh.c:5486 elf32-sh.c:5568
 #, c-format
@@ -3619,7 +4152,9 @@ msgstr "%pB: „%s” accesat atât ca simbol normal, cât și ca simbol FDPIC"
 #: elf32-sh.c:5492 elf32-sh.c:5573
 #, c-format
 msgid "%pB: `%s' accessed both as FDPIC and thread local symbol"
-msgstr "%pB: „%s” a fost accesat atât ca simbol FDPIC, cât și ca simbol local al firului de execuție"
+msgstr ""
+"%pB: „%s” a fost accesat atât ca simbol FDPIC, cât și ca simbol local al "
+"firului de execuție"
 
 #: elf32-sh.c:5523
 #, c-format
@@ -3629,7 +4164,8 @@ msgstr "%pB: Realocarea descriptorului de funcție cu adaos non-zero"
 #: elf32-sh.c:5730 elf64-alpha.c:4663
 #, c-format
 msgid "%pB: TLS local exec code cannot be linked into shared objects"
-msgstr "%pB: Codul executabil local TLS nu poate fi vinculat în obiecte partajate"
+msgstr ""
+"%pB: Codul executabil local TLS nu poate fi vinculat în obiecte partajate"
 
 #: elf32-sh.c:5845
 #, c-format
@@ -3638,13 +4174,19 @@ msgstr ""
 
 #: elf32-sh.c:5857
 #, c-format
-msgid "internal error: merge of architecture '%s' with architecture '%s' produced unknown architecture"
+msgid ""
+"internal error: merge of architecture '%s' with architecture '%s' produced "
+"unknown architecture"
 msgstr ""
 
 #: elf32-sh.c:5898
 #, c-format
-msgid "%pB: uses instructions which are incompatible with instructions used in previous modules"
-msgstr "%pB: utilizează instrucțiuni care sunt incompatibile cu instrucțiunile utilizate în modulele anterioare"
+msgid ""
+"%pB: uses instructions which are incompatible with instructions used in "
+"previous modules"
+msgstr ""
+"%pB: utilizează instrucțiuni care sunt incompatibile cu instrucțiunile "
+"utilizate în modulele anterioare"
 
 #: elf32-sh.c:5911
 #, c-format
@@ -3654,7 +4196,8 @@ msgstr "%pB: încercare de a amesteca obiecte FDPIC și non-FDPIC"
 #: elf32-sparc.c:89
 #, c-format
 msgid "%pB: compiled for a 64 bit system and target is 32 bit"
-msgstr "%pB: compilat pentru un sistem pe 64 de biți și ținta este pe 32 de biți"
+msgstr ""
+"%pB: compilat pentru un sistem pe 64 de biți și ținta este pe 32 de biți"
 
 #: elf32-sparc.c:102
 #, c-format
@@ -3663,8 +4206,11 @@ msgstr "%pB: se vinculează fișiere little-endian cu fișiere big-endian"
 
 #: elf32-sparc.c:157
 #, c-format
-msgid "%pB: unhandled sparc machine value '%lu' detected during write processing"
-msgstr "%pB: valoarea mașinii sparc negestionată „%lu” a fost detectată în timpul procesării de scriere"
+msgid ""
+"%pB: unhandled sparc machine value '%lu' detected during write processing"
+msgstr ""
+"%pB: valoarea mașinii sparc negestionată „%lu” a fost detectată în timpul "
+"procesării de scriere"
 
 #: elf32-spu.c:737
 msgid "%X%P: overlay section %pA does not start on a cache line\n"
@@ -3757,11 +4303,15 @@ msgstr "%s duplicat\n"
 
 #: elf32-spu.c:4353
 msgid "sorry, no support for duplicate object files in auto-overlay script\n"
-msgstr "scuze, nu există suport pentru fișierele obiect duplicate în scriptul de suprapunere automată\n"
+msgstr ""
+"scuze, nu există suport pentru fișierele obiect duplicate în scriptul de "
+"suprapunere automată\n"
 
 #: elf32-spu.c:4395
 #, c-format
-msgid "non-overlay size of 0x%v plus maximum overlay size of 0x%v exceeds local store\n"
+msgid ""
+"non-overlay size of 0x%v plus maximum overlay size of 0x%v exceeds local "
+"store\n"
 msgstr ""
 
 #: elf32-spu.c:4551
@@ -3806,11 +4356,13 @@ msgstr "%pB(%s+%#<PRIx64>): realocare %s nerezolvabilă față de simbolul „%s
 
 #: elf32-tic6x.c:1588
 msgid "warning: generating a shared library containing non-PIC code"
-msgstr "avertisment: se generează o bibliotecă partajată care conține cod non-PIC"
+msgstr ""
+"avertisment: se generează o bibliotecă partajată care conține cod non-PIC"
 
 #: elf32-tic6x.c:1593
 msgid "warning: generating a shared library containing non-PID code"
-msgstr "avertisment: se generează o bibliotecă partajată care conține cod non-PID"
+msgstr ""
+"avertisment: se generează o bibliotecă partajată care conține cod non-PID"
 
 #: elf32-tic6x.c:2434
 #, c-format
@@ -3861,7 +4413,8 @@ msgid "warning: %pB and %pB differ in whether code is compiled for DSBT"
 msgstr "avertisment: %pB și %pB diferă dacă codul este compilat pentru DSBT"
 
 #: elf32-tilepro.c:3627 elfxx-tilegx.c:4017 elfxx-x86.c:2694
-#: elfnn-aarch64.c:9831 elfnn-loongarch.c:3845 elfnn-riscv.c:3264
+#: elfnn-aarch64.c:9831 ../../bfd/elfnn-kvx.c:4658 elfnn-loongarch.c:3845
+#: elfnn-riscv.c:3264
 #, c-format
 msgid "discarded output section: `%pA'"
 msgstr "secțiune de ieșire înlăturată: „%pA”"
@@ -3873,23 +4426,35 @@ msgstr "variabila „%s” nu poate ocupa regiuni multiple de date mici"
 
 #: elf32-v850.c:155
 #, c-format
-msgid "variable `%s' can only be in one of the small, zero, and tiny data regions"
-msgstr "variabila „%s” poate fi doar într-una dintre regiunile de date mici, zero și minuscule"
+msgid ""
+"variable `%s' can only be in one of the small, zero, and tiny data regions"
+msgstr ""
+"variabila „%s” poate fi doar într-una dintre regiunile de date mici, zero și "
+"minuscule"
 
 #: elf32-v850.c:158
 #, c-format
-msgid "variable `%s' cannot be in both small and zero data regions simultaneously"
-msgstr "variabila „%s” nu poate fi simultan și în regiunea de date mici și în cea de date zero"
+msgid ""
+"variable `%s' cannot be in both small and zero data regions simultaneously"
+msgstr ""
+"variabila „%s” nu poate fi simultan și în regiunea de date mici și în cea de "
+"date zero"
 
 #: elf32-v850.c:161
 #, c-format
-msgid "variable `%s' cannot be in both small and tiny data regions simultaneously"
-msgstr "variabila „%s” nu poate fi simultan și în regiunea de date mici și în cea de date minuscule"
+msgid ""
+"variable `%s' cannot be in both small and tiny data regions simultaneously"
+msgstr ""
+"variabila „%s” nu poate fi simultan și în regiunea de date mici și în cea de "
+"date minuscule"
 
 #: elf32-v850.c:164
 #, c-format
-msgid "variable `%s' cannot be in both zero and tiny data regions simultaneously"
-msgstr "variabila „%s” nu poate fi simultan și în regiunea de date zero și în cea de date minuscule"
+msgid ""
+"variable `%s' cannot be in both zero and tiny data regions simultaneously"
+msgstr ""
+"variabila „%s” nu poate fi simultan și în regiunea de date zero și în cea de "
+"date minuscule"
 
 #: elf32-v850.c:466
 msgid "failed to find previous HI16 reloc"
@@ -4077,7 +4642,9 @@ msgstr "%pB: %#<PRIx64>: avertisment: %s indică către realocare nerecunoscută
 #: elf32-v850.c:3687
 #, c-format
 msgid "%pB: %#<PRIx64>: warning: %s points to unrecognized reloc %#<PRIx64>"
-msgstr "%pB: %#<PRIx64>: avertisment: %s indică către realocare nerecunoscută %#<PRIx64>"
+msgstr ""
+"%pB: %#<PRIx64>: avertisment: %s indică către realocare nerecunoscută "
+"%#<PRIx64>"
 
 #: elf32-vax.c:539
 #, c-format
@@ -4096,18 +4663,25 @@ msgstr " [g-float]"
 
 #: elf32-vax.c:631
 #, c-format
-msgid "%pB: warning: GOT addend of %<PRId64> to `%s' does not match previous GOT addend of %<PRId64>"
-msgstr "%pB: avertisment: adăugarea GOT de %<PRId64> la „%s” nu se potrivește cu adăugarea GOT anterioară de %<PRId64>"
+msgid ""
+"%pB: warning: GOT addend of %<PRId64> to `%s' does not match previous GOT "
+"addend of %<PRId64>"
+msgstr ""
+"%pB: avertisment: adăugarea GOT de %<PRId64> la „%s” nu se potrivește cu "
+"adăugarea GOT anterioară de %<PRId64>"
 
 #: elf32-vax.c:1388
 #, c-format
 msgid "%pB: warning: PLT addend of %<PRId64> to `%s' from %pA section ignored"
-msgstr "%pB: avertisment: adăugarea PLT de %<PRId64> la „%s” din secțiunea %pA a fost ignorată"
+msgstr ""
+"%pB: avertisment: adăugarea PLT de %<PRId64> la „%s” din secțiunea %pA a "
+"fost ignorată"
 
 #: elf32-vax.c:1514
 #, c-format
 msgid "%pB: warning: %s relocation against symbol `%s' from %pA section"
-msgstr "%pB: avertisment: realocarea %s față de simbolul „%s” din secțiunea %pA"
+msgstr ""
+"%pB: avertisment: realocarea %s față de simbolul „%s” din secțiunea %pA"
 
 #: elf32-vax.c:1521
 #, c-format
@@ -4116,8 +4690,10 @@ msgstr "%pB: avertisment: realocarea %s în %#<PRIx64> din secțiunea %pA"
 
 #: elf32-visium.c:824
 #, c-format
-msgid "%pB: compiled %s -mtune=%s and linked with modules compiled %s -mtune=%s"
-msgstr "%pB: compilat %s -mtune=%s și vinculat cu modulele compilate %s -mtune=%s"
+msgid ""
+"%pB: compiled %s -mtune=%s and linked with modules compiled %s -mtune=%s"
+msgstr ""
+"%pB: compilat %s -mtune=%s și vinculat cu modulele compilate %s -mtune=%s"
 
 #: elf32-xgate.c:506
 #, c-format
@@ -4141,7 +4717,9 @@ msgstr "%pB(%pA): tabel de proprietăți nevalid"
 #: elf32-xtensa.c:2733
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): relocation offset out of range (size=%#<PRIx64>)"
-msgstr "%pB(%pA+%#<PRIx64>): decalaj de realocare în afara intervalului (dimensiune=%#<PRIx64>)"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): decalaj de realocare în afara intervalului (dimensiune="
+"%#<PRIx64>)"
 
 #: elf32-xtensa.c:2816 elf32-xtensa.c:2939
 msgid "dynamic relocation in read-only section"
@@ -4166,12 +4744,16 @@ msgstr "încercarea de a converti L32R/CALLX în CALL a eșuat"
 
 #: elf32-xtensa.c:6567 elf32-xtensa.c:6646 elf32-xtensa.c:8072
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): could not decode instruction; possible configuration mismatch"
+msgid ""
+"%pB(%pA+%#<PRIx64>): could not decode instruction; possible configuration "
+"mismatch"
 msgstr ""
 
 #: elf32-xtensa.c:7813
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): could not decode instruction for XTENSA_ASM_SIMPLIFY relocation; possible configuration mismatch"
+msgid ""
+"%pB(%pA+%#<PRIx64>): could not decode instruction for XTENSA_ASM_SIMPLIFY "
+"relocation; possible configuration mismatch"
 msgstr ""
 
 #: elf32-xtensa.c:9671
@@ -4206,11 +4788,12 @@ msgstr "%pB: arhitectură neacceptată %#x"
 msgid "GPDISP relocation did not find ldah and lda instructions"
 msgstr "relocarea GPDISP nu a găsit instrucțiuni ldah și lda"
 
-#: elf64-alpha.c:2002 elf64-alpha.c:2697 elflink.c:15391
-#: elfnn-loongarch.c:1566
+#: elf64-alpha.c:2002 elf64-alpha.c:2697 elflink.c:15391 elfnn-loongarch.c:1566
 #, c-format
 msgid "%pB: dynamic relocation against `%pT' in read-only section `%pA'\n"
-msgstr "%pB: realocare dinamică față de „%pT” în secțiunea numai-pentru-citire „%pA”\n"
+msgstr ""
+"%pB: realocare dinamică față de „%pT” în secțiunea numai-pentru-citire "
+"„%pA”\n"
 
 #: elf64-alpha.c:2454
 #, c-format
@@ -4220,7 +4803,8 @@ msgstr "%pB: subsegmentul .got depășește 64K (dimensiunea %d)"
 #: elf64-alpha.c:2992 elf64-alpha.c:3187
 #, c-format
 msgid "%pB: %pA+%#<PRIx64>: warning: %s relocation against unexpected insn"
-msgstr "%pB: %pA+%#<PRIx64>: avertisment: realocare %s față de insn neașteptată"
+msgstr ""
+"%pB: %pA+%#<PRIx64>: avertisment: realocare %s față de insn neașteptată"
 
 #: elf64-alpha.c:4387 elf64-alpha.c:4400
 #, c-format
@@ -4274,7 +4858,8 @@ msgstr "%pB: Realocări în ELF generic (EM: %d)"
 #: elf64-hppa.c:2032
 #, c-format
 msgid "stub entry for %s cannot load .plt, dp offset = %<PRId64>"
-msgstr "intrarea ciot(stub) pentru %s nu poate încărca .plt, decalaj dp = %<PRId64>"
+msgstr ""
+"intrarea ciot(stub) pentru %s nu poate încărca .plt, decalaj dp = %<PRId64>"
 
 #: elf64-hppa.c:3236
 #, c-format
@@ -4283,7 +4868,9 @@ msgstr "%pB(%pA+%#<PRIx64>): nu se poate atinge %s"
 
 #: elf64-ia64-vms.c:599 elfnn-ia64.c:640
 #, c-format
-msgid "%pB: can't relax br at %#<PRIx64> in section `%pA'; please use brl or indirect branch"
+msgid ""
+"%pB: can't relax br at %#<PRIx64> in section `%pA'; please use brl or "
+"indirect branch"
 msgstr ""
 
 #: elf64-ia64-vms.c:2031 elfnn-ia64.c:2293
@@ -4313,7 +4900,8 @@ msgstr "%pB: realocare @gprel față de simbolul dinamic %s"
 #: elf64-ia64-vms.c:3680 elfnn-ia64.c:4084
 #, c-format
 msgid "%pB: linking non-pic code in a position independent executable"
-msgstr "%pB: se vinculează codul non-pic într-un executabil independent de poziție"
+msgstr ""
+"%pB: se vinculează codul non-pic într-un executabil independent de poziție"
 
 #: elf64-ia64-vms.c:3782 elfnn-ia64.c:4222
 #, c-format
@@ -4336,12 +4924,18 @@ msgstr "realocare neacceptată"
 
 #: elf64-ia64-vms.c:3949 elfnn-ia64.c:4463
 #, c-format
-msgid "%pB: missing TLS section for relocation %s against `%s' at %#<PRIx64> in section `%pA'."
-msgstr "%pB: lipsește secțiunea TLS pentru realocarea %s față de „%s” la %#<PRIx64> în secțiunea „%pA”."
+msgid ""
+"%pB: missing TLS section for relocation %s against `%s' at %#<PRIx64> in "
+"section `%pA'."
+msgstr ""
+"%pB: lipsește secțiunea TLS pentru realocarea %s față de „%s” la %#<PRIx64> "
+"în secțiunea „%pA”."
 
 #: elf64-ia64-vms.c:3966 elfnn-ia64.c:4480
 #, c-format
-msgid "%pB: Can't relax br (%s) to `%s' at %#<PRIx64> in section `%pA' with size %#<PRIx64> (> 0x1000000)."
+msgid ""
+"%pB: Can't relax br (%s) to `%s' at %#<PRIx64> in section `%pA' with size "
+"%#<PRIx64> (> 0x1000000)."
 msgstr ""
 
 #: elf64-ia64-vms.c:4262 elfnn-ia64.c:4741
@@ -4371,18 +4965,28 @@ msgstr "%pB: vinculare fișiere auto-pic cu fișiere non-auto-pic"
 
 #: elf64-ia64-vms.c:5146 elflink.c:5298
 #, c-format
-msgid "warning: alignment %u of common symbol `%s' in %pB is greater than the alignment (%u) of its section %pA"
-msgstr "avertisment: alinierea %u a simbolului comun „%s” în %pB este mai mare decât alinierea (%u) a secțiunii sale %pA"
+msgid ""
+"warning: alignment %u of common symbol `%s' in %pB is greater than the "
+"alignment (%u) of its section %pA"
+msgstr ""
+"avertisment: alinierea %u a simbolului comun „%s” în %pB este mai mare decât "
+"alinierea (%u) a secțiunii sale %pA"
 
 #: elf64-ia64-vms.c:5153 elflink.c:5305
 #, c-format
 msgid "warning: alignment %u of symbol `%s' in %pB is smaller than %u in %pB"
-msgstr "avertisment: alinierea %u a simbolului „%s” în %pB este mai mică decât %u în %pBs"
+msgstr ""
+"avertisment: alinierea %u a simbolului „%s” în %pB este mai mică decât %u în "
+"%pBs"
 
 #: elf64-ia64-vms.c:5169 elflink.c:5322
 #, c-format
-msgid "warning: size of symbol `%s' changed from %<PRIu64> in %pB to %<PRIu64> in %pB"
-msgstr "avertisment: dimensiunea simbolului „%s” s-a schimbat de la %<PRIu64> în %pB la %<PRIu64> în %pB"
+msgid ""
+"warning: size of symbol `%s' changed from %<PRIu64> in %pB to %<PRIu64> in "
+"%pB"
+msgstr ""
+"avertisment: dimensiunea simbolului „%s” s-a schimbat de la %<PRIu64> în %pB "
+"la %<PRIu64> în %pB"
 
 #: elf64-mips.c:4099
 #, c-format
@@ -4390,11 +4994,17 @@ msgid "%pB(%pA): relocation %<PRIu64> has invalid symbol index %ld"
 msgstr "%pB(%pA): realocarea %<PRIu64> are index de simbol nevalid %ld"
 
 #: elf64-mmix.c:984
-msgid "invalid input relocation when producing non-ELF, non-mmo format output; please use the objcopy program to convert from ELF or mmo, or assemble using \"-no-expand\" (for gcc, \"-Wa,-no-expand\""
+msgid ""
+"invalid input relocation when producing non-ELF, non-mmo format output; "
+"please use the objcopy program to convert from ELF or mmo, or assemble using "
+"\"-no-expand\" (for gcc, \"-Wa,-no-expand\""
 msgstr ""
 
 #: elf64-mmix.c:1168
-msgid "invalid input relocation when producing non-ELF, non-mmo format output; please use the objcopy program to convert from ELF or mmo, or compile using the gcc-option \"-mno-base-addresses\"."
+msgid ""
+"invalid input relocation when producing non-ELF, non-mmo format output; "
+"please use the objcopy program to convert from ELF or mmo, or compile using "
+"the gcc-option \"-mno-base-addresses\"."
 msgstr ""
 
 #: elf64-mmix.c:1195
@@ -4403,23 +5013,29 @@ msgid ""
 "%pB: Internal inconsistency error for value for\n"
 " linker-allocated global register: linked: %#<PRIx64> != relaxed: %#<PRIx64>"
 msgstr ""
-"%pB: Eroare internă de inconsistență pentru valoarea pentru registrul global\n"
+"%pB: Eroare internă de inconsistență pentru valoarea pentru registrul "
+"global\n"
 "alocat editorului de legături: vinculat: %#<PRIx64> != relaxat: %#<PRIx64>"
 
 #: elf64-mmix.c:1619
 #, c-format
-msgid "%pB: base-plus-offset relocation against register symbol: (unknown) in %pA"
-msgstr "%pB: realocare base-plus-offset față de simbolul de registru: (necunoscut) în %pA"
+msgid ""
+"%pB: base-plus-offset relocation against register symbol: (unknown) in %pA"
+msgstr ""
+"%pB: realocare base-plus-offset față de simbolul de registru: (necunoscut) "
+"în %pA"
 
 #: elf64-mmix.c:1625
 #, c-format
 msgid "%pB: base-plus-offset relocation against register symbol: %s in %pA"
-msgstr "%pB: realocare base-plus-offset față de simbolul de registru: %s în %pA"
+msgstr ""
+"%pB: realocare base-plus-offset față de simbolul de registru: %s în %pA"
 
 #: elf64-mmix.c:1670
 #, c-format
 msgid "%pB: register relocation against non-register symbol: (unknown) in %pA"
-msgstr "%pB: realocare de registru față de simbolul non-registru: (necunoscut) în %pA"
+msgstr ""
+"%pB: realocare de registru față de simbolul non-registru: (necunoscut) în %pA"
 
 #: elf64-mmix.c:1676
 #, c-format
@@ -4429,17 +5045,26 @@ msgstr "%pB:realocare de registru pentru simbolul non-registru: %s în %pA"
 #: elf64-mmix.c:1713
 #, c-format
 msgid "%pB: directive LOCAL valid only with a register or absolute value"
-msgstr "%pB: directiva LOCAL este validă doar cu un registru sau o valoare absolută"
+msgstr ""
+"%pB: directiva LOCAL este validă doar cu un registru sau o valoare absolută"
 
 #: elf64-mmix.c:1742
 #, c-format
-msgid "%pB: LOCAL directive: register $%<PRId64> is not a local register; first global register is $%<PRId64>"
-msgstr "%pB: directiva LOCAL: registrul $%<PRId64> nu este un registru local; primul registru global este $%<PRId64>"
+msgid ""
+"%pB: LOCAL directive: register $%<PRId64> is not a local register; first "
+"global register is $%<PRId64>"
+msgstr ""
+"%pB: directiva LOCAL: registrul $%<PRId64> nu este un registru local; primul "
+"registru global este $%<PRId64>"
 
 #: elf64-mmix.c:2157
 #, c-format
-msgid "%pB: error: multiple definition of `%s'; start of %s is set in a earlier linked file"
-msgstr "%pB: eroare: multiple definiții pentru „%s”; începutul lui %s este stabilit într-un fișier vinculat anterior"
+msgid ""
+"%pB: error: multiple definition of `%s'; start of %s is set in a earlier "
+"linked file"
+msgstr ""
+"%pB: eroare: multiple definiții pentru „%s”; începutul lui %s este stabilit "
+"într-un fișier vinculat anterior"
 
 #: elf64-mmix.c:2212
 msgid "register section has contents\n"
@@ -4447,8 +5072,10 @@ msgstr "secțiunea de registru are conținut\n"
 
 #: elf64-mmix.c:2402
 #, c-format
-msgid "internal inconsistency: remaining %lu != max %lu; please report this bug"
-msgstr "inconsistență internă: rămâne %lu ! = max %lu\\; raportați această eroare"
+msgid ""
+"internal inconsistency: remaining %lu != max %lu; please report this bug"
+msgstr ""
+"inconsistență internă: rămâne %lu ! = max %lu\\; raportați această eroare"
 
 #: elf64-ppc.c:1356
 #, c-format
@@ -4478,7 +5105,8 @@ msgstr "%pB utilizează e_flags necunoscut 0x%lx"
 #: elf64-ppc.c:5480
 #, c-format
 msgid "%pB: ABI version %ld is not compatible with ABI version %ld output"
-msgstr "%pB: versiunea ABI %ld nu este compatibilă cu versiunea ABI %ld de ieșire"
+msgstr ""
+"%pB: versiunea ABI %ld nu este compatibilă cu versiunea ABI %ld de ieșire"
 
 #: elf64-ppc.c:5507
 #, c-format
@@ -4486,7 +5114,9 @@ msgid " [abiv%ld]"
 msgstr " [abiv%ld]"
 
 #: elf64-ppc.c:6804
-msgid "%P: copy reloc against `%pT' requires lazy plt linking; avoid setting LD_BIND_NOW=1 or upgrade gcc\n"
+msgid ""
+"%P: copy reloc against `%pT' requires lazy plt linking; avoid setting "
+"LD_BIND_NOW=1 or upgrade gcc\n"
 msgstr ""
 
 #: elf64-ppc.c:7071
@@ -4526,7 +5156,9 @@ msgid "warning: --plt-localentry is incompatible with power10 pc-relative code"
 msgstr ""
 
 #: elf64-ppc.c:7956
-msgid "warning: --plt-localentry is especially dangerous without ld.so support to detect ABI violations"
+msgid ""
+"warning: --plt-localentry is especially dangerous without ld.so support to "
+"detect ABI violations"
 msgstr ""
 
 #: elf64-ppc.c:8272
@@ -4625,7 +5257,8 @@ msgstr ""
 
 #: elf64-ppc.c:16497
 #, c-format
-msgid "%H: call to `%pT' lacks nop, can't restore toc; (toc save/adjust stub)\n"
+msgid ""
+"%H: call to `%pT' lacks nop, can't restore toc; (toc save/adjust stub)\n"
 msgstr ""
 
 #: elf64-ppc.c:17154
@@ -4640,7 +5273,8 @@ msgstr ""
 
 #: elf64-ppc.c:17522
 #, c-format
-msgid "%X%P: %pB: %s against %pT is not supported by glibc as a dynamic relocation\n"
+msgid ""
+"%X%P: %pB: %s against %pT is not supported by glibc as a dynamic relocation\n"
 msgstr ""
 
 #: elf64-ppc.c:17577
@@ -4665,13 +5299,20 @@ msgstr "%H: %s față de „%pT”: eroare %d\n"
 
 #: elf64-s390.c:2457
 #, c-format
-msgid "%pB: `%s' non-PLT reloc for symbol defined in shared library and accessed from executable (rebuild file with -fPIC ?)"
-msgstr "%pB: realocare non-PLT „%s” pentru simbolul definit în biblioteca partajată și accesat din executabil (reconstruiți fișierul cu „-fPIC”?)"
+msgid ""
+"%pB: `%s' non-PLT reloc for symbol defined in shared library and accessed "
+"from executable (rebuild file with -fPIC ?)"
+msgstr ""
+"%pB: realocare non-PLT „%s” pentru simbolul definit în biblioteca partajată "
+"și accesat din executabil (reconstruiți fișierul cu „-fPIC”?)"
 
 #: elf64-s390.c:3066
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): misaligned symbol `%s' (%#<PRIx64>) for relocation %s"
-msgstr "%pB(%pA+%#<PRIx64>): simbol incorect aliniat „%s” (%#<PRIx64>) pentru realocarea %s"
+msgid ""
+"%pB(%pA+%#<PRIx64>): misaligned symbol `%s' (%#<PRIx64>) for relocation %s"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): simbol incorect aliniat „%s” (%#<PRIx64>) pentru "
+"realocarea %s"
 
 #: elf64-sparc.c:134 elfcode.h:1525
 #, c-format
@@ -4681,12 +5322,15 @@ msgstr "%pB(%pA): realocarea %d are indexul de simbol nevalid %ld"
 #: elf64-sparc.c:493
 #, c-format
 msgid "%pB: only registers %%g[2367] can be declared using STT_REGISTER"
-msgstr "%pB: numai registrele %%g[2367] pot fi declarate utilizând STT_REGISTER"
+msgstr ""
+"%pB: numai registrele %%g[2367] pot fi declarate utilizând STT_REGISTER"
 
 #: elf64-sparc.c:514
 #, c-format
 msgid "register %%g%d used incompatibly: %s in %pB, previously %s in %pB"
-msgstr "registrul %%g%d utilizat de formă incompatibilă: %s în %pB, anterior %s în %pB"
+msgstr ""
+"registrul %%g%d utilizat de formă incompatibilă: %s în %pB, anterior %s în "
+"%pB"
 
 #: elf64-sparc.c:538
 #, c-format
@@ -4746,37 +5390,58 @@ msgstr "; recompilați cu „-fPIE”"
 #: elf64-x86-64.c:1524
 #, c-format
 msgid "%pB: relocation %s against %s%s`%s' can not be used when making %s%s"
-msgstr "%pB: realocarea %s față de %s%s„%s” nu poate fi folosită atunci când se creează %s%s"
+msgstr ""
+"%pB: realocarea %s față de %s%s„%s” nu poate fi folosită atunci când se "
+"creează %s%s"
 
 #: elf64-x86-64.c:2029
 #, c-format
 msgid "%pB: relocation %s against symbol `%s' isn't supported in x32 mode"
-msgstr "%pB: realocarea %s față de simbolul „%s” nu este acceptată în modul x32"
+msgstr ""
+"%pB: realocarea %s față de simbolul „%s” nu este acceptată în modul x32"
 
 #: elf64-x86-64.c:2173
 #, c-format
 msgid "%pB: '%s' accessed both as normal and thread local symbol"
-msgstr "%pB: „%s” a fost accesat atât ca simbol local normal, cât și ca simbol local al firului de execuție"
+msgstr ""
+"%pB: „%s” a fost accesat atât ca simbol local normal, cât și ca simbol local "
+"al firului de execuție"
 
 #: elf64-x86-64.c:2832 elfnn-aarch64.c:5556 elfnn-riscv.c:2111
 #, c-format
-msgid "%pB: relocation %s against STT_GNU_IFUNC symbol `%s' has non-zero addend: %<PRId64>"
-msgstr "%pB: realocarea %s față de simbolul STT_GNU_IFUNC „%s” are o adăugare non-zero: %<PRId64>"
+msgid ""
+"%pB: relocation %s against STT_GNU_IFUNC symbol `%s' has non-zero addend: "
+"%<PRId64>"
+msgstr ""
+"%pB: realocarea %s față de simbolul STT_GNU_IFUNC „%s” are o adăugare non-"
+"zero: %<PRId64>"
 
 #: elf64-x86-64.c:3092
 #, c-format
-msgid "%pB: relocation R_X86_64_GOTOFF64 against undefined %s `%s' can not be used when making a shared object"
-msgstr "%pB: realocarea R_X86_64_GOTOFF64 față de %s nedefinit „%s” nu poate fi folosită când se creează un obiect partajat"
+msgid ""
+"%pB: relocation R_X86_64_GOTOFF64 against undefined %s `%s' can not be used "
+"when making a shared object"
+msgstr ""
+"%pB: realocarea R_X86_64_GOTOFF64 față de %s nedefinit „%s” nu poate fi "
+"folosită când se creează un obiect partajat"
 
 #: elf64-x86-64.c:3106
 #, c-format
-msgid "%pB: relocation R_X86_64_GOTOFF64 against protected %s `%s' can not be used when making a shared object"
-msgstr "%pB: realocarea R_X86_64_GOTOFF64 față de %s protejait „%s” nu poate fi folosită când se creează un obiect partajat"
+msgid ""
+"%pB: relocation R_X86_64_GOTOFF64 against protected %s `%s' can not be used "
+"when making a shared object"
+msgstr ""
+"%pB: realocarea R_X86_64_GOTOFF64 față de %s protejait „%s” nu poate fi "
+"folosită când se creează un obiect partajat"
 
 #: elf64-x86-64.c:3396
 #, c-format
-msgid "%pB: addend %s%#x in relocation %s against symbol `%s' at %#<PRIx64> in section `%pA' is out of range"
-msgstr "%pB: adăugarea %s%#x în realocarea %s față de simbolul „%s” la %#<PRIx64> din secțiunea „%pA” este în afara intervalului"
+msgid ""
+"%pB: addend %s%#x in relocation %s against symbol `%s' at %#<PRIx64> in "
+"section `%pA' is out of range"
+msgstr ""
+"%pB: adăugarea %s%#x în realocarea %s față de simbolul „%s” la %#<PRIx64> "
+"din secțiunea „%pA” este în afara intervalului"
 
 #: elf64-x86-64.c:3539 elflink.c:13706
 msgid "%F%P: corrupt input: %pB\n"
@@ -4784,8 +5449,11 @@ msgstr "%F%P: intrare coruptă: %pB\n"
 
 #: elf64-x86-64.c:4223
 #, c-format
-msgid " failed to convert GOTPCREL relocation against '%s'; relink with --no-relax\n"
-msgstr " nu s-a putut converti realocarea GOTPCREL față de „%s”; editați din nou legăturile cu „--no-relax”\n"
+msgid ""
+" failed to convert GOTPCREL relocation against '%s'; relink with --no-relax\n"
+msgstr ""
+" nu s-a putut converti realocarea GOTPCREL față de „%s”; editați din nou "
+"legăturile cu „--no-relax”\n"
 
 #: elf64-x86-64.c:4384
 #, c-format
@@ -4805,7 +5473,9 @@ msgstr ""
 #: elfcode.h:329
 #, c-format
 msgid "warning: %pB has a section extending past end of file"
-msgstr "avertisment: %pB are o secțiune care se extinde dincolo de sfârșitul fișierului"
+msgstr ""
+"avertisment: %pB are o secțiune care se extinde dincolo de sfârșitul "
+"fișierului"
 
 #: elfcode.h:777
 #, c-format
@@ -4825,32 +5495,47 @@ msgstr "%pB: %pA+%<PRIx64>: adaos de realocare %<PRIx64> prea mare"
 #: elfcode.h:1265
 #, c-format
 msgid "%pB: version count (%<PRId64>) does not match symbol count (%ld)"
-msgstr "%pB: numărul de versiuni (%<PRId64>) nu se potrivește cu numărul de simboluri (%ld)"
+msgstr ""
+"%pB: numărul de versiuni (%<PRId64>) nu se potrivește cu numărul de "
+"simboluri (%ld)"
 
 #: elfcore.h:280
 #, c-format
 msgid "warning: %pB has a segment extending past end of file"
-msgstr "avertisment: %pB are un segment care se extinde dincolo de sfârșitul fișierului"
+msgstr ""
+"avertisment: %pB are un segment care se extinde dincolo de sfârșitul "
+"fișierului"
 
 #: elflink.c:1410
 #, c-format
-msgid "%s: TLS definition in %pB section %pA mismatches non-TLS definition in %pB section %pA"
-msgstr "%s: definiția TLS din secțiunea %pB %pA nu se potrivește cu definiția non-TLS din secțiunea %pB %pA"
+msgid ""
+"%s: TLS definition in %pB section %pA mismatches non-TLS definition in %pB "
+"section %pA"
+msgstr ""
+"%s: definiția TLS din secțiunea %pB %pA nu se potrivește cu definiția non-"
+"TLS din secțiunea %pB %pA"
 
 #: elflink.c:1416
 #, c-format
 msgid "%s: TLS reference in %pB mismatches non-TLS reference in %pB"
-msgstr "%s: referința TLS din %pB nu se potrivește cu referința non-TLS din %pB"
+msgstr ""
+"%s: referința TLS din %pB nu se potrivește cu referința non-TLS din %pB"
 
 #: elflink.c:1422
 #, c-format
-msgid "%s: TLS definition in %pB section %pA mismatches non-TLS reference in %pB"
-msgstr "%s: definiția TLS din secțiunea %pB %pA nu se potrivește cu referința non-TLS din %pB"
+msgid ""
+"%s: TLS definition in %pB section %pA mismatches non-TLS reference in %pB"
+msgstr ""
+"%s: definiția TLS din secțiunea %pB %pA nu se potrivește cu referința non-"
+"TLS din %pB"
 
 #: elflink.c:1428
 #, c-format
-msgid "%s: TLS reference in %pB mismatches non-TLS definition in %pB section %pA"
-msgstr "%s: referința TLS din %pB nu se potrivește cu definiția non-TLS din secțiunea %pB %pA"
+msgid ""
+"%s: TLS reference in %pB mismatches non-TLS definition in %pB section %pA"
+msgstr ""
+"%s: referința TLS din %pB nu se potrivește cu definiția non-TLS din "
+"secțiunea %pB %pA"
 
 #: elflink.c:2140
 #, c-format
@@ -4864,13 +5549,21 @@ msgstr "%pB: nodul de versiune nu a fost găsit pentru simbolul %s"
 
 #: elflink.c:2692
 #, c-format
-msgid "%pB: bad reloc symbol index (%#<PRIx64> >= %#lx) for offset %#<PRIx64> in section `%pA'"
-msgstr "%pB: index de simbol al realocării incorect (%#<PRIx64> >= %#lx) pentru poziția %#<PRIx64> din secțiunea „%pA”"
+msgid ""
+"%pB: bad reloc symbol index (%#<PRIx64> >= %#lx) for offset %#<PRIx64> in "
+"section `%pA'"
+msgstr ""
+"%pB: index de simbol al realocării incorect (%#<PRIx64> >= %#lx) pentru "
+"poziția %#<PRIx64> din secțiunea „%pA”"
 
 #: elflink.c:2704
 #, c-format
-msgid "%pB: non-zero symbol index (%#<PRIx64>) for offset %#<PRIx64> in section `%pA' when the object file has no symbol table"
-msgstr "%pB: index de simbol diferit de zero (%#<PRIx64>) pentru poziția %#<PRIx64> din secțiunea „%pA” când fișierul obiect nu are tabel de simboluri"
+msgid ""
+"%pB: non-zero symbol index (%#<PRIx64>) for offset %#<PRIx64> in section `"
+"%pA' when the object file has no symbol table"
+msgstr ""
+"%pB: index de simbol diferit de zero (%#<PRIx64>) pentru poziția %#<PRIx64> "
+"din secțiunea „%pA” când fișierul obiect nu are tabel de simboluri"
 
 #: elflink.c:2915
 #, c-format
@@ -4880,7 +5573,8 @@ msgstr "%pB: nepotrivire a dimensiunii realocării din %pB secțiunea %pA"
 #: elflink.c:3244
 #, c-format
 msgid "warning: type and size of dynamic symbol `%s' are not defined"
-msgstr "avertisment: tipul și dimensiunea simbolului dinamic „%s” nu sunt definite"
+msgstr ""
+"avertisment: tipul și dimensiunea simbolului dinamic „%s” nu sunt definite"
 
 #: elflink.c:3304
 msgid "%P: copy reloc against protected `%pT' is dangerous\n"
@@ -4937,12 +5631,16 @@ msgid "%s: undefined version: %s"
 msgstr "%s: versiune nedefinită: %s"
 
 #: elflink.c:7124
-msgid "warning: enabling an executable stack because of -z execstack command line option"
+msgid ""
+"warning: enabling an executable stack because of -z execstack command line "
+"option"
 msgstr ""
 
 #: elflink.c:7181
 #, c-format
-msgid "warning: %s: requires executable stack (because the .note.GNU-stack section is executable)"
+msgid ""
+"warning: %s: requires executable stack (because the .note.GNU-stack section "
+"is executable)"
 msgstr ""
 
 #: elflink.c:7186
@@ -4951,7 +5649,9 @@ msgid "warning: %s: missing .note.GNU-stack section implies executable stack"
 msgstr ""
 
 #: elflink.c:7189
-msgid "NOTE: This behaviour is deprecated and will be removed in a future version of the linker"
+msgid ""
+"NOTE: This behaviour is deprecated and will be removed in a future version "
+"of the linker"
 msgstr ""
 
 #: elflink.c:7343
@@ -4976,13 +5676,17 @@ msgstr "operator necunoscut „%c” în simbolul complex"
 #. PR 21524: Let the user know if a symbol was removed by garbage collection.
 #: elflink.c:9455
 #, c-format
-msgid "%pB:%pA: error: relocation references symbol %s which was removed by garbage collection"
+msgid ""
+"%pB:%pA: error: relocation references symbol %s which was removed by garbage "
+"collection"
 msgstr ""
 
 #: elflink.c:9458
 #, c-format
 msgid "%pB:%pA: error: try relinking with --gc-keep-exported enabled"
-msgstr "%pB:%pA: eroare: încercați să reeditați legăturile cu „--gc-keep-exported” activat"
+msgstr ""
+"%pB:%pA: eroare: încercați să reeditați legăturile cu „--gc-keep-exported” "
+"activat"
 
 #: elflink.c:9709 elflink.c:9727 elflink.c:9766 elflink.c:9784
 #, c-format
@@ -5023,7 +5727,9 @@ msgstr "%pB: simbolul local „%s” din %pB este referit de către DSO"
 #: elflink.c:10558
 #, c-format
 msgid "%pB: could not find output section %pA for input section %pA"
-msgstr "%pB: nu s-a putut găsi secțiunea de ieșire %pA pentru secțiunea de intrare %pA"
+msgstr ""
+"%pB: nu s-a putut găsi secțiunea de ieșire %pA pentru secțiunea de intrare "
+"%pA"
 
 #: elflink.c:10712
 #, c-format
@@ -5043,17 +5749,25 @@ msgstr "%pB: simbolul ascuns „%s” nu este definit"
 #: elflink.c:10750
 #, c-format
 msgid "%pB: no symbol version section for versioned symbol `%s'"
-msgstr "%pB: nicio secțiune de versiune a simbolului pentru simbolul cu versiunea „%s”"
+msgstr ""
+"%pB: nicio secțiune de versiune a simbolului pentru simbolul cu versiunea "
+"„%s”"
 
 #: elflink.c:11424
 #, c-format
-msgid "error: %pB contains a reloc (%#<PRIx64>) for section %pA that references a non-existent global symbol"
-msgstr "eroare: %pB conține o realocare (%#<PRIx64>) pentru secțiunea %pA care face referire la un simbol global inexistent"
+msgid ""
+"error: %pB contains a reloc (%#<PRIx64>) for section %pA that references a "
+"non-existent global symbol"
+msgstr ""
+"eroare: %pB conține o realocare (%#<PRIx64>) pentru secțiunea %pA care face "
+"referire la un simbol global inexistent"
 
 #: elflink.c:11894
 #, c-format
 msgid "error: %pB: size of section %pA is not multiple of address size"
-msgstr "eroare: %pB: dimensiunea secțiunii %pA nu este multiplu al dimensiunii adresei"
+msgstr ""
+"eroare: %pB: dimensiunea secțiunii %pA nu este multiplu al dimensiunii "
+"adresei"
 
 #: elflink.c:12171
 #, c-format
@@ -5106,7 +5820,9 @@ msgstr "%P%X: nu se poate citi simbolurile: %E\n"
 
 #: elflink.c:13952
 msgid "%F%P: %pB(%pA): error: need linked-to section for --gc-sections\n"
-msgstr "%F%P: %pB(%pA): eroare: opțiunea „--gc-sections” necesită o secțiune atașată ca argument\n"
+msgstr ""
+"%F%P: %pB(%pA): eroare: opțiunea „--gc-sections” necesită o secțiune atașată "
+"ca argument\n"
 
 #: elflink.c:14430
 #, c-format
@@ -5126,20 +5842,27 @@ msgstr "INPUT_SECTION_FLAG nerecunoscut %s\n"
 #: elflink.c:15397
 #, c-format
 msgid "%P: %pB: warning: relocation against `%s' in read-only section `%pA'\n"
-msgstr "%P: %pB: avertisment: realocare față de „%s” în secțiunea numai-pentru-citire „%pA”\n"
+msgstr ""
+"%P: %pB: avertisment: realocare față de „%s” în secțiunea numai-pentru-"
+"citire „%pA”\n"
 
 #: elflink.c:15486
-msgid "%P: warning: GNU indirect functions with DT_TEXTREL may result in a segfault at runtime; recompile with %s\n"
+msgid ""
+"%P: warning: GNU indirect functions with DT_TEXTREL may result in a segfault "
+"at runtime; recompile with %s\n"
 msgstr ""
 
 #: elfxx-aarch64.c:477
 #, c-format
-msgid "%pB: warning: Weak TLS is implementation defined and may not work as expected"
+msgid ""
+"%pB: warning: Weak TLS is implementation defined and may not work as expected"
 msgstr ""
 
 #: elfxx-aarch64.c:738 elfnn-aarch64.c:10031 elfnn-aarch64.c:10038
 #, c-format
-msgid "%pB: warning: BTI turned on by -z force-bti when all inputs do not have BTI in NOTE section."
+msgid ""
+"%pB: warning: BTI turned on by -z force-bti when all inputs do not have BTI "
+"in NOTE section."
 msgstr ""
 
 #: elfxx-aarch64.c:812
@@ -5175,11 +5898,15 @@ msgid "%X%H: unsupported JALX to the same ISA mode\n"
 msgstr ""
 
 #: elfxx-mips.c:6635
-msgid "%X%H: unsupported jump between ISA modes; consider recompiling with interlinking enabled\n"
+msgid ""
+"%X%H: unsupported jump between ISA modes; consider recompiling with "
+"interlinking enabled\n"
 msgstr ""
 
 #: elfxx-mips.c:6680
-msgid "%X%H: cannot convert branch between ISA modes to JALX: relocation out of range\n"
+msgid ""
+"%X%H: cannot convert branch between ISA modes to JALX: relocation out of "
+"range\n"
 msgstr ""
 
 #: elfxx-mips.c:6692
@@ -5188,13 +5915,16 @@ msgstr ""
 
 #: elfxx-mips.c:7321
 #, c-format
-msgid "%pB: incorrect `.reginfo' section size; expected %<PRIu64>, got %<PRIu64>"
+msgid ""
+"%pB: incorrect `.reginfo' section size; expected %<PRIu64>, got %<PRIu64>"
 msgstr ""
 
 #: elfxx-mips.c:7365
 #, c-format
 msgid "%pB: warning: bad `%s' option size %u smaller than its header"
-msgstr "%pB: avertisment: opțiunea „%s” greșită, dimensiunea %u mai mică decât antetul său"
+msgstr ""
+"%pB: avertisment: opțiunea „%s” greșită, dimensiunea %u mai mică decât "
+"antetul său"
 
 #: elfxx-mips.c:7601
 #, c-format
@@ -5203,8 +5933,11 @@ msgstr "%pB: avertisment: opțiunea „%s” este trunchiată"
 
 #: elfxx-mips.c:8424 elfxx-mips.c:8550
 #, c-format
-msgid "%pB: warning: cannot determine the target function for stub section `%s'"
-msgstr "%pB: avertisment: nu se poate determina funcția țintă pentru secțiunea ciot(stub) „%s”"
+msgid ""
+"%pB: warning: cannot determine the target function for stub section `%s'"
+msgstr ""
+"%pB: avertisment: nu se poate determina funcția țintă pentru secțiunea "
+"ciot(stub) „%s”"
 
 #: elfxx-mips.c:8682
 #, c-format
@@ -5223,8 +5956,12 @@ msgstr "%pB: realocarea CALL16 la %#<PRIx64> nu este față de simbol global"
 
 #: elfxx-mips.c:9225
 #, c-format
-msgid "%X%H: relocation %s against `%s' cannot be used when making a shared object; recompile with -fPIC\n"
-msgstr "%X%H: realocarea %s față de „%s” nu poate fi folosită când se creează un obiect partajat; recompilați cu „-fPIC”\n"
+msgid ""
+"%X%H: relocation %s against `%s' cannot be used when making a shared object; "
+"recompile with -fPIC\n"
+msgstr ""
+"%X%H: realocarea %s față de „%s” nu poate fi folosită când se creează un "
+"obiect partajat; recompilați cu „-fPIC”\n"
 
 #: elfxx-mips.c:9351
 #, c-format
@@ -5243,11 +5980,14 @@ msgstr "realocări non-dinamice se referă la simbolul dinamic %s"
 
 #: elfxx-mips.c:10509
 #, c-format
-msgid "%pB: can't find matching LO16 reloc against `%s' for %s at %#<PRIx64> in section `%pA'"
+msgid ""
+"%pB: can't find matching LO16 reloc against `%s' for %s at %#<PRIx64> in "
+"section `%pA'"
 msgstr ""
 
 #: elfxx-mips.c:10649
-msgid "small-data section exceeds 64KB; lower small-data size limit (see option -G)"
+msgid ""
+"small-data section exceeds 64KB; lower small-data size limit (see option -G)"
 msgstr ""
 
 #: elfxx-mips.c:10668
@@ -5276,7 +6016,9 @@ msgstr ""
 
 #: elfxx-mips.c:10979
 #, c-format
-msgid "%pB: `%pA' entry VMA of %#<PRIx64> outside the 32-bit range supported; consider using `-Ttext-segment=...'"
+msgid ""
+"%pB: `%pA' entry VMA of %#<PRIx64> outside the 32-bit range supported; "
+"consider using `-Ttext-segment=...'"
 msgstr ""
 
 #: elfxx-mips.c:11094 elfxx-mips.c:11681
@@ -5286,23 +6028,26 @@ msgstr ""
 
 #: elfxx-mips.c:11653
 #, c-format
-msgid "%pB: `%pA' start VMA of %#<PRIx64> outside the 32-bit range supported; consider using `-Ttext-segment=...'"
+msgid ""
+"%pB: `%pA' start VMA of %#<PRIx64> outside the 32-bit range supported; "
+"consider using `-Ttext-segment=...'"
 msgstr ""
 
-#: elfxx-mips.c:13410 reloc.c:8573
+#: elfxx-mips.c:13410 reloc.c:8757
 #, c-format
 msgid "%X%P: %pB(%pA): error: relocation for offset %V has no value\n"
 msgstr ""
 
-#: elfxx-mips.c:13511 reloc.c:8661
+#: elfxx-mips.c:13511 reloc.c:8845
 #, c-format
 msgid "%X%P: %pB(%pA): relocation \"%pR\" is not supported\n"
 msgstr "%X%P: %pB(%pA): realocarea „%pR” nu este acceptată\n"
 
-#: elfxx-mips.c:13520 reloc.c:8670
+#: elfxx-mips.c:13520 reloc.c:8854
 #, c-format
 msgid "%X%P: %pB(%pA): relocation \"%pR\" returns an unrecognized value %x\n"
-msgstr "%X%P: %pB(%pA): relocarea „%pR” returnează o valoare nerecunoscută %x\n"
+msgstr ""
+"%X%P: %pB(%pA): relocarea „%pR” returnează o valoare nerecunoscută %x\n"
 
 #: elfxx-mips.c:14702
 #, c-format
@@ -5332,27 +6077,39 @@ msgstr "%pB: se vinculează modulul %s cu modulele %s anterioare"
 #: elfxx-mips.c:15586
 #, c-format
 msgid "%pB: ABI mismatch: linking %s module with previous %s modules"
-msgstr "%pB: nepotrivire ABI: se vinculează modulul %s cu modulele %s anterioare"
+msgstr ""
+"%pB: nepotrivire ABI: se vinculează modulul %s cu modulele %s anterioare"
 
 #: elfxx-mips.c:15611
 #, c-format
 msgid "%pB: ASE mismatch: linking %s module with previous %s modules"
-msgstr "%pB: nepotrivire ASE: se vinculează modulul %s cu modulele %s anterioare"
+msgstr ""
+"%pB: nepotrivire ASE: se vinculează modulul %s cu modulele %s anterioare"
 
 #: elfxx-mips.c:15745
 #, c-format
-msgid "warning: %pB uses unknown floating point ABI %d (set by %pB), %pB uses unknown floating point ABI %d"
-msgstr "avertisment: %pB folosește ABI în virgulă mobilă necunoscută %d (definită de %pB), %pB utilizează ABI în virgulă mobilă necunoscută %d"
+msgid ""
+"warning: %pB uses unknown floating point ABI %d (set by %pB), %pB uses "
+"unknown floating point ABI %d"
+msgstr ""
+"avertisment: %pB folosește ABI în virgulă mobilă necunoscută %d (definită de "
+"%pB), %pB utilizează ABI în virgulă mobilă necunoscută %d"
 
 #: elfxx-mips.c:15751
 #, c-format
-msgid "warning: %pB uses unknown floating point ABI %d (set by %pB), %pB uses %s"
-msgstr "avertisment: %pB folosește ABI în virgulă mobilă necunoscută %d (definită de %pB), %pB folosește %s"
+msgid ""
+"warning: %pB uses unknown floating point ABI %d (set by %pB), %pB uses %s"
+msgstr ""
+"avertisment: %pB folosește ABI în virgulă mobilă necunoscută %d (definită de "
+"%pB), %pB folosește %s"
 
 #: elfxx-mips.c:15757
 #, c-format
-msgid "warning: %pB uses %s (set by %pB), %pB uses unknown floating point ABI %d"
-msgstr "avertisment: %pB folosește %s (definită de %pB), %pB folosește ABI în virgulă mobilă necunoscută %d"
+msgid ""
+"warning: %pB uses %s (set by %pB), %pB uses unknown floating point ABI %d"
+msgstr ""
+"avertisment: %pB folosește %s (definită de %pB), %pB folosește ABI în "
+"virgulă mobilă necunoscută %d"
 
 #: elfxx-mips.c:15771
 #, c-format
@@ -5362,17 +6119,25 @@ msgstr "avertisment: %pB folosește %s (definită de %pB), %pB folosește %s"
 #: elfxx-mips.c:15790
 #, c-format
 msgid "warning: %pB uses %s (set by %pB), %pB uses unknown MSA ABI %d"
-msgstr "avertisment: %pB folosește %s (definit de %pB), %pB folosește ABI MSA necunoscut %d"
+msgstr ""
+"avertisment: %pB folosește %s (definit de %pB), %pB folosește ABI MSA "
+"necunoscut %d"
 
 #: elfxx-mips.c:15802
 #, c-format
 msgid "warning: %pB uses unknown MSA ABI %d (set by %pB), %pB uses %s"
-msgstr "avertisment: %pB folosește ABI MSA necunoscut %d (definit de %pB), %pB folosește %s"
+msgstr ""
+"avertisment: %pB folosește ABI MSA necunoscut %d (definit de %pB), %pB "
+"folosește %s"
 
 #: elfxx-mips.c:15811
 #, c-format
-msgid "warning: %pB uses unknown MSA ABI %d (set by %pB), %pB uses unknown MSA ABI %d"
-msgstr "avertisment: %pB folosește ABI MSA necunoscut %d (definit de %pB) și %pB folosește ABI MSA necunoscut %d"
+msgid ""
+"warning: %pB uses unknown MSA ABI %d (set by %pB), %pB uses unknown MSA ABI "
+"%d"
+msgstr ""
+"avertisment: %pB folosește ABI MSA necunoscut %d (definit de %pB) și %pB "
+"folosește ABI MSA necunoscut %d"
 
 #: elfxx-mips.c:15873
 #, c-format
@@ -5391,7 +6156,8 @@ msgstr ""
 
 #: elfxx-mips.c:15945
 #, c-format
-msgid "%pB: warning: inconsistent FP ABI between .gnu.attributes and .MIPS.abiflags"
+msgid ""
+"%pB: warning: inconsistent FP ABI between .gnu.attributes and .MIPS.abiflags"
 msgstr ""
 
 #: elfxx-mips.c:15949
@@ -5401,12 +6167,14 @@ msgstr ""
 
 #: elfxx-mips.c:15956
 #, c-format
-msgid "%pB: warning: inconsistent ISA extensions between e_flags and .MIPS.abiflags"
+msgid ""
+"%pB: warning: inconsistent ISA extensions between e_flags and .MIPS.abiflags"
 msgstr ""
 
 #: elfxx-mips.c:15960
 #, c-format
-msgid "%pB: warning: unexpected flag in the flags2 field of .MIPS.abiflags (0x%lx)"
+msgid ""
+"%pB: warning: unexpected flag in the flags2 field of .MIPS.abiflags (0x%lx)"
 msgstr ""
 
 #: elfxx-mips.c:16151
@@ -5444,7 +6212,8 @@ msgstr "Virgulă mobilă software\n"
 #: elfxx-mips.c:16307
 #, c-format
 msgid "Hard float (MIPS32r2 64-bit FPU 12 callee-saved)\n"
-msgstr "Virgulă mobilă hardware (MIPS32r2 pe 64 de biți, FPU 12 callee-saved)\n"
+msgstr ""
+"Virgulă mobilă hardware (MIPS32r2 pe 64 de biți, FPU 12 callee-saved)\n"
 
 #: elfxx-mips.c:16310
 #, c-format
@@ -5459,7 +6228,9 @@ msgstr "Virgulă mobilă hardware (procesor pe 32 de biți, FPU pe 64 biți)\n"
 #: elfxx-mips.c:16316
 #, c-format
 msgid "Hard float compat (32-bit CPU, 64-bit FPU)\n"
-msgstr "Virgulă mobilă de compatibilitate hardware (procesor pe 32 de biți, FPU pe 64 biți)\n"
+msgstr ""
+"Virgulă mobilă de compatibilitate hardware (procesor pe 32 de biți, FPU pe "
+"64 biți)\n"
 
 #: elfxx-mips.c:16348
 #, c-format
@@ -5577,7 +6348,8 @@ msgstr "%s: șirul ISA trebuie să înceapă cu rv32 sau rv64"
 #: elfxx-riscv.c:2180
 #, c-format
 msgid "invalid ISA extension ends with <number>p in .option arch `%s'"
-msgstr "extensia ISA nevalidă se termină cu <număr>p în .option arhitectura „%s”"
+msgstr ""
+"extensia ISA nevalidă se termină cu <număr>p în .option arhitectura „%s”"
 
 #: elfxx-riscv.c:2203
 #, c-format
@@ -5659,8 +6431,11 @@ msgstr "h"
 
 #: elfxx-sparc.c:3021 elfnn-aarch64.c:5540
 #, c-format
-msgid "%pB: relocation %s against STT_GNU_IFUNC symbol `%s' isn't handled by %s"
-msgstr "%pB: realocarea %s față de simbolul STT_GNU_IFUNC „%s” nu este gestionată de %s"
+msgid ""
+"%pB: relocation %s against STT_GNU_IFUNC symbol `%s' isn't handled by %s"
+msgstr ""
+"%pB: realocarea %s față de simbolul STT_GNU_IFUNC „%s” nu este gestionată de "
+"%s"
 
 #: elfxx-tilegx.c:4126
 #, c-format
@@ -5669,8 +6444,12 @@ msgstr "%pB: nu se pot vincula împreună obiectele %s și %s"
 
 #: elfxx-x86.c:536 elfxx-x86.c:3385
 #, c-format
-msgid "%F%P: %pB: copy relocation against non-copyable protected symbol `%s' in %pB\n"
-msgstr "%F%P: %pB: realocare copiere față de simbolul protejat necopiabil „%s” din %pB\n"
+msgid ""
+"%F%P: %pB: copy relocation against non-copyable protected symbol `%s' in "
+"%pB\n"
+msgstr ""
+"%F%P: %pB: realocare copiere față de simbolul protejat necopiabil „%s” din "
+"%pB\n"
 
 #: elfxx-x86.c:1043
 #, c-format
@@ -5694,8 +6473,12 @@ msgstr "%F%P: %pB: a eșuat alocarea memoriei pentru secțiunea „%pA”\n"
 
 #: elfxx-x86.c:1747
 #, c-format
-msgid "%F%P: %pB: size of compact relative reloc section is changed: new (%lu) != old (%lu)\n"
-msgstr "%F%P: %pB: dimensiunea secțiunii de realocare relativă compactă este schimbată: nouă (%lu) != veche (%lu)\n"
+msgid ""
+"%F%P: %pB: size of compact relative reloc section is changed: new (%lu) != "
+"old (%lu)\n"
+msgstr ""
+"%F%P: %pB: dimensiunea secțiunii de realocare relativă compactă este "
+"schimbată: nouă (%lu) != veche (%lu)\n"
 
 #: elfxx-x86.c:1769
 #, c-format
@@ -5704,20 +6487,32 @@ msgstr "%F%P: %pB: a eșuat alocarea secțiunii de realocare relativă compactă
 
 #: elfxx-x86.c:2214
 #, c-format
-msgid "%F%P: %pB: relocation %s against absolute symbol `%s' in section `%pA' is disallowed\n"
-msgstr "%F%P: %pB: realocarea %s față de simbolul absolut „%s” din secțiunea „%pA” este interzisă\n"
+msgid ""
+"%F%P: %pB: relocation %s against absolute symbol `%s' in section `%pA' is "
+"disallowed\n"
+msgstr ""
+"%F%P: %pB: realocarea %s față de simbolul absolut „%s” din secțiunea „%pA” "
+"este interzisă\n"
 
 #: elfxx-x86.c:2296
 msgid "%P: %pB: warning: relocation in read-only section `%pA'\n"
-msgstr "%P: %pB: avertisment: realocare în secțiunea numai-pentru-citire „%pA”\n"
+msgstr ""
+"%P: %pB: avertisment: realocare în secțiunea numai-pentru-citire „%pA”\n"
 
 #: elfxx-x86.c:3138
-msgid "%pB: %s (offset: 0x%v, info: 0x%v, addend: 0x%v) against '%s' for section '%pA' in %pB\n"
-msgstr "%pB: %s (pozițoe: 0x%v, informații: 0x%v, adăugare: 0x%v) față de „%s” pentru secțiunea „%pA” în %pB\n"
+msgid ""
+"%pB: %s (offset: 0x%v, info: 0x%v, addend: 0x%v) against '%s' for section "
+"'%pA' in %pB\n"
+msgstr ""
+"%pB: %s (pozițoe: 0x%v, informații: 0x%v, adăugare: 0x%v) față de „%s” "
+"pentru secțiunea „%pA” în %pB\n"
 
 #: elfxx-x86.c:3144
-msgid "%pB: %s (offset: 0x%v, info: 0x%v) against '%s' for section '%pA' in %pB\n"
-msgstr "%pB: %s (poziție: 0x%v, informații: 0x%v) față de „%s” pentru secțiunea „%pA” în %pB\n"
+msgid ""
+"%pB: %s (offset: 0x%v, info: 0x%v) against '%s' for section '%pA' in %pB\n"
+msgstr ""
+"%pB: %s (poziție: 0x%v, informații: 0x%v) față de „%s” pentru secțiunea "
+"„%pA” în %pB\n"
 
 #: elfxx-x86.c:3759
 #, c-format
@@ -5804,27 +6599,36 @@ msgstr "%pB:%d: caracter neașteptat „%s” în fișierul Intel Hex"
 #: ihex.c:338
 #, c-format
 msgid "%pB:%u: bad checksum in Intel Hex file (expected %u, found %u)"
-msgstr "%pB:%u: sumă de verificare greșită în fișierul Intel Hex (se aștepta %u, s-a găsit %u)"
+msgstr ""
+"%pB:%u: sumă de verificare greșită în fișierul Intel Hex (se aștepta %u, s-a "
+"găsit %u)"
 
 #: ihex.c:393
 #, c-format
 msgid "%pB:%u: bad extended address record length in Intel Hex file"
-msgstr "%pB:%u: lungime incorectă a înregistrării adresei extinse în fișierul Intel Hex"
+msgstr ""
+"%pB:%u: lungime incorectă a înregistrării adresei extinse în fișierul Intel "
+"Hex"
 
 #: ihex.c:411
 #, c-format
 msgid "%pB:%u: bad extended start address length in Intel Hex file"
-msgstr "%pB:%u: lungime incorectă a adresei de început extinse în fișierul Intel Hex"
+msgstr ""
+"%pB:%u: lungime incorectă a adresei de început extinse în fișierul Intel Hex"
 
 #: ihex.c:429
 #, c-format
 msgid "%pB:%u: bad extended linear address record length in Intel Hex file"
-msgstr "%pB:%u: lungime incorectă a înregistrării adresei liniare extinse în fișierul Intel Hex"
+msgstr ""
+"%pB:%u: lungime incorectă a înregistrării adresei liniare extinse în "
+"fișierul Intel Hex"
 
 #: ihex.c:447
 #, c-format
 msgid "%pB:%u: bad extended linear start address length in Intel Hex file"
-msgstr "%pB:%u: lungime incorectă a adresei de început liniară extinsă în fișierul Intel Hex"
+msgstr ""
+"%pB:%u: lungime incorectă a adresei de început liniară extinsă în fișierul "
+"Intel Hex"
 
 #: ihex.c:465
 #, c-format
@@ -5844,7 +6648,9 @@ msgstr "%pB: lungime incorectă a secțiunii în ihex_read_section"
 #: ihex.c:785
 #, c-format
 msgid "%pB 64-bit address %#<PRIx64> out of range for Intel Hex file"
-msgstr "%pB adresa pe 64 de biți %#<PRIx64> este în afara intervalului pentru fișierul Intel Hex"
+msgstr ""
+"%pB adresa pe 64 de biți %#<PRIx64> este în afara intervalului pentru "
+"fișierul Intel Hex"
 
 #: ihex.c:843
 #, c-format
@@ -5874,7 +6680,8 @@ msgstr "%pB: simbolul indirect „%s” pentru „%s” este o buclă"
 #: linker.c:2580
 #, c-format
 msgid "attempt to do relocatable link with %s input and %s output"
-msgstr "încercare de a crea o legătură realocabilă cu intrarea %s și ieșirea %s"
+msgstr ""
+"încercare de a crea o legătură realocabilă cu intrarea %s și ieșirea %s"
 
 #: linker.c:2859
 #, c-format
@@ -5908,7 +6715,9 @@ msgstr "%pB: compilat pentru un sistem little-endian iar ținta este big-endian"
 
 #: mach-o-arm.c:169 mach-o-arm.c:301
 msgid "malformed mach-o ARM reloc pair: reloc is first reloc"
-msgstr "pereche de realocare ARM mach-o incorect formată: realocarea este prima realocare"
+msgstr ""
+"pereche de realocare ARM mach-o incorect formată: realocarea este prima "
+"realocare"
 
 #: mach-o-arm.c:185
 #, c-format
@@ -6010,12 +6819,19 @@ msgid "bfd_mach_o_canonicalize_symtab: unable to load symbols"
 msgstr "bfd_mach_o_canonicalize_symtab: nu se pot încărca simboluri"
 
 #: mach-o.c:1504
-msgid "malformed mach-o reloc: section index is greater than the number of sections"
-msgstr "realocare mach-o incorect formată: indexul secțiunii este mai mare decât numărul de secțiuni"
+msgid ""
+"malformed mach-o reloc: section index is greater than the number of sections"
+msgstr ""
+"realocare mach-o incorect formată: indexul secțiunii este mai mare decât "
+"numărul de secțiuni"
 
 #: mach-o.c:2141
-msgid "sorry: modtab, toc and extrefsyms are not yet implemented for dysymtab commands."
-msgstr "scuze: modtab, toc și extrefsyms nu sunt încă implementate pentru comenzile dysymtab."
+msgid ""
+"sorry: modtab, toc and extrefsyms are not yet implemented for dysymtab "
+"commands."
+msgstr ""
+"scuze: modtab, toc și extrefsyms nu sunt încă implementate pentru comenzile "
+"dysymtab."
 
 #: mach-o.c:2589
 #, c-format
@@ -6050,7 +6866,8 @@ msgstr ""
 #: mach-o.c:3690
 #, c-format
 msgid "bfd_mach_o_read_section_64: overlarge alignment value: %#lx"
-msgstr "bfd_mach_o_read_section_64: valoare de aliniere peste măsură de mare: %#lx"
+msgstr ""
+"bfd_mach_o_read_section_64: valoare de aliniere peste măsură de mare: %#lx"
 
 #: mach-o.c:3741
 #, c-format
@@ -6064,13 +6881,21 @@ msgstr "bfd_mach_o_read_symtab_symbol: nume în afara intervalului (%lu >= %u)"
 
 #: mach-o.c:3843
 #, c-format
-msgid "bfd_mach_o_read_symtab_symbol: symbol \"%s\" specified invalid section %d (max %lu): setting to undefined"
-msgstr "bfd_mach_o_read_symtab_symbol: simbolul „%s” specifică secțiunea nevalidă %d (max. %lu): se lasă nedefinit"
+msgid ""
+"bfd_mach_o_read_symtab_symbol: symbol \"%s\" specified invalid section %d "
+"(max %lu): setting to undefined"
+msgstr ""
+"bfd_mach_o_read_symtab_symbol: simbolul „%s” specifică secțiunea nevalidă %d "
+"(max. %lu): se lasă nedefinit"
 
 #: mach-o.c:3862
 #, c-format
-msgid "bfd_mach_o_read_symtab_symbol: symbol \"%s\" specified invalid type field 0x%x: setting to undefined"
-msgstr "bfd_mach_o_read_symtab_symbol: simbolul „%s” specifică câmpul de tip invalid 0x%x: se lasă nedefinit"
+msgid ""
+"bfd_mach_o_read_symtab_symbol: symbol \"%s\" specified invalid type field 0x"
+"%x: setting to undefined"
+msgstr ""
+"bfd_mach_o_read_symtab_symbol: simbolul „%s” specifică câmpul de tip invalid "
+"0x%x: se lasă nedefinit"
 
 #: mach-o.c:5061
 #, c-format
@@ -6100,17 +6925,25 @@ msgstr "%pB: nu există un nucleu pentru a aloca un simbol lungime %d octeți"
 #: mmo.c:958
 #, c-format
 msgid "%pB: attempt to emit contents at non-multiple-of-4 address %#<PRIx64>"
-msgstr "%pB: încercare de a emite conținut la o adresă ce nu este multiplu de 4 %#<PRIx64>"
+msgstr ""
+"%pB: încercare de a emite conținut la o adresă ce nu este multiplu de 4 "
+"%#<PRIx64>"
 
 #: mmo.c:1253
 #, c-format
 msgid "%pB: invalid mmo file: initialization value for $255 is not `Main'\n"
-msgstr "%pB: fișier mmo nevalid: valoarea de inițializare pentru $255 nu este „Main”\n"
+msgstr ""
+"%pB: fișier mmo nevalid: valoarea de inițializare pentru $255 nu este "
+"„Main”\n"
 
 #: mmo.c:1400
 #, c-format
-msgid "%pB: unsupported wide character sequence 0x%02X 0x%02X after symbol name starting with `%s'\n"
-msgstr "%pB: secvență de caractere largă neacceptată 0x%02X 0x%02X după numele simbolului care începe cu „%s”\n"
+msgid ""
+"%pB: unsupported wide character sequence 0x%02X 0x%02X after symbol name "
+"starting with `%s'\n"
+msgstr ""
+"%pB: secvență de caractere largă neacceptată 0x%02X 0x%02X după numele "
+"simbolului care începe cu „%s”\n"
 
 #: mmo.c:1416
 #, c-format
@@ -6125,52 +6958,79 @@ msgstr "%pB: fișier mmo nevalid: lopcode neacceptat „%d”\n"
 #: mmo.c:1656
 #, c-format
 msgid "%pB: invalid mmo file: expected YZ = 1 got YZ = %d for lop_quote\n"
-msgstr "%pB: fișier mmo nevalid: pentru lop_quote se aștepta YZ = 1 s-a primit YZ= %d\n"
+msgstr ""
+"%pB: fișier mmo nevalid: pentru lop_quote se aștepta YZ = 1 s-a primit YZ= "
+"%d\n"
 
 #: mmo.c:1700
 #, c-format
-msgid "%pB: invalid mmo file: expected z = 1 or z = 2, got z = %d for lop_loc\n"
-msgstr "%pB: fișier mmo nevalid: pentru lop_loc se aștepta z =1 sau z = 2, s-a primit z = %d\n"
+msgid ""
+"%pB: invalid mmo file: expected z = 1 or z = 2, got z = %d for lop_loc\n"
+msgstr ""
+"%pB: fișier mmo nevalid: pentru lop_loc se aștepta z =1 sau z = 2, s-a "
+"primit z = %d\n"
 
 #: mmo.c:1751
 #, c-format
-msgid "%pB: invalid mmo file: expected z = 1 or z = 2, got z = %d for lop_fixo\n"
-msgstr "%pB: fișier mmo nevalid: pentru lop_fixo se aștepta z =1 sau z = 2, s-a primit z = %d\n"
+msgid ""
+"%pB: invalid mmo file: expected z = 1 or z = 2, got z = %d for lop_fixo\n"
+msgstr ""
+"%pB: fișier mmo nevalid: pentru lop_fixo se aștepta z =1 sau z = 2, s-a "
+"primit z = %d\n"
 
 #: mmo.c:1800
 #, c-format
 msgid "%pB: invalid mmo file: expected y = 0, got y = %d for lop_fixrx\n"
-msgstr "%pB: fișier mmo nevalid: pentru lop_fixrx se aștepta y =0, s-a primit y = %d\n"
+msgstr ""
+"%pB: fișier mmo nevalid: pentru lop_fixrx se aștepta y =0, s-a primit y = "
+"%d\n"
 
 #: mmo.c:1811
 #, c-format
-msgid "%pB: invalid mmo file: expected z = 16 or z = 24, got z = %d for lop_fixrx\n"
-msgstr "%pB: fișier mmo nevalid: pentru lop_fixrx se aștepta z =16 sau z = 24, s-a primit z = %d\n"
+msgid ""
+"%pB: invalid mmo file: expected z = 16 or z = 24, got z = %d for lop_fixrx\n"
+msgstr ""
+"%pB: fișier mmo nevalid: pentru lop_fixrx se aștepta z =16 sau z = 24, s-a "
+"primit z = %d\n"
 
 #: mmo.c:1836
 #, c-format
-msgid "%pB: invalid mmo file: leading byte of operand word must be 0 or 1, got %d for lop_fixrx\n"
-msgstr "%pB: fișier mmo nevalid: pentru lop_fixrx octetul de început al operandului word trebuie să fie 0 sau 1, s-a primit %d\n"
+msgid ""
+"%pB: invalid mmo file: leading byte of operand word must be 0 or 1, got %d "
+"for lop_fixrx\n"
+msgstr ""
+"%pB: fișier mmo nevalid: pentru lop_fixrx octetul de început al operandului "
+"word trebuie să fie 0 sau 1, s-a primit %d\n"
 
 #: mmo.c:1865
 #, c-format
 msgid "%pB: cannot allocate file name for file number %d, %d bytes\n"
-msgstr "%pB: nu se poate aloca nume de fișier pentru fișierul numărul %d, %d octeți\n"
+msgstr ""
+"%pB: nu se poate aloca nume de fișier pentru fișierul numărul %d, %d octeți\n"
 
 #: mmo.c:1887
 #, c-format
-msgid "%pB: invalid mmo file: file number %d `%s', was already entered as `%s'\n"
-msgstr "%pB: fișier mmo nevalid: numărul fișierului %d „%s”, a fost deja introdus ca „%s”\n"
+msgid ""
+"%pB: invalid mmo file: file number %d `%s', was already entered as `%s'\n"
+msgstr ""
+"%pB: fișier mmo nevalid: numărul fișierului %d „%s”, a fost deja introdus ca "
+"„%s”\n"
 
 #: mmo.c:1901
 #, c-format
-msgid "%pB: invalid mmo file: file name for number %d was not specified before use\n"
-msgstr "%pB: fișier mmo nevalid: numele de fișier pentru numărul %d nu a fost specificat înainte de folosire\n"
+msgid ""
+"%pB: invalid mmo file: file name for number %d was not specified before use\n"
+msgstr ""
+"%pB: fișier mmo nevalid: numele de fișier pentru numărul %d nu a fost "
+"specificat înainte de folosire\n"
 
 #: mmo.c:2013
 #, c-format
-msgid "%pB: invalid mmo file: fields y and z of lop_stab non-zero, y: %d, z: %d\n"
-msgstr "%pB: fișier mmo nevalid: câmpurile y și z ale lop_stab sunt non-zero: y: %d, z: %d\n"
+msgid ""
+"%pB: invalid mmo file: fields y and z of lop_stab non-zero, y: %d, z: %d\n"
+msgstr ""
+"%pB: fișier mmo nevalid: câmpurile y și z ale lop_stab sunt non-zero: y: %d, "
+"z: %d\n"
 
 #: mmo.c:2050
 #, c-format
@@ -6179,8 +7039,12 @@ msgstr "%pB: fișier mmo nevalid: lop_end nu este ultimul element din fișier\n"
 
 #: mmo.c:2064
 #, c-format
-msgid "%pB: invalid mmo file: YZ of lop_end (%ld) not equal to the number of tetras to the preceding lop_stab (%ld)\n"
-msgstr "%pB: fișier mmo nevalid: YZ al lop_end (%ld) nu este egal cu numărul de tetras ale lop_stab precedent (%ld)\n"
+msgid ""
+"%pB: invalid mmo file: YZ of lop_end (%ld) not equal to the number of tetras "
+"to the preceding lop_stab (%ld)\n"
+msgstr ""
+"%pB: fișier mmo nevalid: YZ al lop_end (%ld) nu este egal cu numărul de "
+"tetras ale lop_stab precedent (%ld)\n"
 
 #: mmo.c:2777
 #, c-format
@@ -6189,23 +7053,34 @@ msgstr "%pB: tabel de simboluri nevalid: simbol duplicat „%s”\n"
 
 #: mmo.c:3016
 #, c-format
-msgid "%pB: bad symbol definition: `Main' set to %<PRIx64> rather than the start address %<PRIx64>\n"
-msgstr "%pB: definiție greșită a simbolului: „Main” inițializat la %<PRIx64> în loc de adresa de pornire %<PRIx64>\n"
+msgid ""
+"%pB: bad symbol definition: `Main' set to %<PRIx64> rather than the start "
+"address %<PRIx64>\n"
+msgstr ""
+"%pB: definiție greșită a simbolului: „Main” inițializat la %<PRIx64> în loc "
+"de adresa de pornire %<PRIx64>\n"
 
 #: mmo.c:3115
 #, c-format
-msgid "%pB: warning: symbol table too large for mmo, larger than 65535 32-bit words: %d.  Only `Main' will be emitted.\n"
-msgstr "%pB: avertisment: tabelul de simboluri este prea mare pentru mmo, mai mare de 65535 de cuvinte pe 32 de biți: %d.  Doar „Main” va fi emis.\n"
+msgid ""
+"%pB: warning: symbol table too large for mmo, larger than 65535 32-bit "
+"words: %d.  Only `Main' will be emitted.\n"
+msgstr ""
+"%pB: avertisment: tabelul de simboluri este prea mare pentru mmo, mai mare "
+"de 65535 de cuvinte pe 32 de biți: %d.  Doar „Main” va fi emis.\n"
 
 #: mmo.c:3161
 #, c-format
 msgid "%pB: internal error, symbol table changed size from %d to %d words\n"
-msgstr "%pB: eroare internă, tabelul de simboluri și-a schimbat dimensiunea de la %d la %d cuvinte\n"
+msgstr ""
+"%pB: eroare internă, tabelul de simboluri și-a schimbat dimensiunea de la %d "
+"la %d cuvinte\n"
 
 #: mmo.c:3214
 #, c-format
 msgid "%pB: internal error, internal register section %pA had contents\n"
-msgstr "%pB: eroare internă, secțiunea de registru internă %pA nu are conținut\n"
+msgstr ""
+"%pB: eroare internă, secțiunea de registru internă %pA nu are conținut\n"
 
 #: mmo.c:3265
 #, c-format
@@ -6219,8 +7094,12 @@ msgstr "%pB: prea multe registre inițializate; lungimea secțiunii %<PRId64>"
 
 #: mmo.c:3277
 #, c-format
-msgid "%pB: invalid start address for initialized registers of length %<PRId64>: %#<PRIx64>"
-msgstr "%pB: adresă de pornire nevalidă pentru registrele inițializate de lungime %<PRId64>: %#<PRIx64>"
+msgid ""
+"%pB: invalid start address for initialized registers of length %<PRId64>: "
+"%#<PRIx64>"
+msgstr ""
+"%pB: adresă de pornire nevalidă pentru registrele inițializate de lungime "
+"%<PRId64>: %#<PRIx64>"
 
 #: osf-core.c:127
 #, c-format
@@ -6273,7 +7152,9 @@ msgstr "Avertisment: dimensiunea secțiunii %s este zero\n"
 #: pei-x86_64.c:588
 #, c-format
 msgid "Warning: %s section size (%ld) is smaller than virtual size (%ld)\n"
-msgstr "Avertisment: dimensiunea secțiunii %s (%ld) este mai mică decât dimensiunea virtuală (%ld)\n"
+msgstr ""
+"Avertisment: dimensiunea secțiunii %s (%ld) este mai mică decât dimensiunea "
+"virtuală (%ld)\n"
 
 #: pei-x86_64.c:597
 #, c-format
@@ -6317,17 +7198,24 @@ msgstr "%pB: tip de nume de import nerecunoscut; %x"
 #: peicode.h:1260
 #, c-format
 msgid "%pB: unrecognised machine type (0x%x) in Import Library Format archive"
-msgstr "%pB: tip de mașină nerecunoscut (0x%x) în arhiva Format de bibliotecă de import"
+msgstr ""
+"%pB: tip de mașină nerecunoscut (0x%x) în arhiva Format de bibliotecă de "
+"import"
 
 #: peicode.h:1273
 #, c-format
-msgid "%pB: recognised but unhandled machine type (0x%x) in Import Library Format archive"
-msgstr "%pB: tip de mașină recunoscut, dar negestionat (0x%x) în arhiva Format de bibliotecă de import"
+msgid ""
+"%pB: recognised but unhandled machine type (0x%x) in Import Library Format "
+"archive"
+msgstr ""
+"%pB: tip de mașină recunoscut, dar negestionat (0x%x) în arhiva Format de "
+"bibliotecă de import"
 
 #: peicode.h:1291
 #, c-format
 msgid "%pB: size field is zero in Import Library Format header"
-msgstr "%pB: câmpul de dimensiune este zero în antetul Format de bibliotecă de import"
+msgstr ""
+"%pB: câmpul de dimensiune este zero în antetul Format de bibliotecă de import"
 
 #: peicode.h:1317
 #, c-format
@@ -6337,7 +7225,9 @@ msgstr "%pB: șirul nu este terminat cu nul în fișierul obiect ILF"
 #: peicode.h:1373
 #, c-format
 msgid "%pB: error: debug data ends beyond end of debug directory"
-msgstr "%pB: eroare: datele de depanare se termină dincolo de sfârșitul directorului de depanare"
+msgstr ""
+"%pB: eroare: datele de depanare se termină dincolo de sfârșitul directorului "
+"de depanare"
 
 #: peicode.h:1530
 #, c-format
@@ -6355,8 +7245,11 @@ msgid "%pB: invalid NumberOfRvaAndSizes"
 msgstr "%pB: NumberOfRvaAndSizes nevalid"
 
 #: plugin.c:247
-msgid "plugin framework: out of file descriptors. Try using fewer objects/archives\n"
-msgstr "spațiu de lucru pentru modul: nu mai sunt descriptori de fișiere. Încercați să utilizați mai puține obiecte/arhive\n"
+msgid ""
+"plugin framework: out of file descriptors. Try using fewer objects/archives\n"
+msgstr ""
+"spațiu de lucru pentru modul: nu mai sunt descriptori de fișiere. Încercați "
+"să utilizați mai puține obiecte/arhive\n"
 
 #: ppcboot.c:393
 #, c-format
@@ -6411,17 +7304,17 @@ msgstr "Sector Partiție[%d]  = 0x%.8lx (%ld)\n"
 msgid "Partition[%d] length = 0x%.8lx (%ld)\n"
 msgstr "Lungime Partiție[%d] = 0x%.8lx (%ld)\n"
 
-#: reloc.c:8471
+#: reloc.c:8655
 msgid "INPUT_SECTION_FLAGS are not supported"
 msgstr "INPUT_SECTION_FLAGS nu sunt acceptată"
 
-#: reloc.c:8738
+#: reloc.c:8922
 #, c-format
 msgid "%pB: unrecognized relocation type %#x in section `%pA'"
 msgstr "%pB: tip de realocare nerecunoscut %#x în secțiunea „%pA”"
 
 #. PR 21803: Suggest the most likely cause of this error.
-#: reloc.c:8742
+#: reloc.c:8926
 #, c-format
 msgid "is this version of the linker - %s - out of date ?"
 msgstr "este această versiune a editorului de legături - %s - depășită?"
@@ -6434,7 +7327,8 @@ msgstr "%pB: avertisment: fișierul core a fost trunchiat"
 #: som.c:3002
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): %s relocation offset out of order"
-msgstr "%pB(%pA+%#<PRIx64>): decalajul realocării %s nu este în ordinea corectă"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): decalajul realocării %s nu este în ordinea corectă"
 
 #: som.c:3015
 #, c-format
@@ -6504,8 +7398,11 @@ msgstr "înregistrare EGSD coruptă: dimensiunea acesteia (%#x) este prea mică"
 
 #: vms-alpha.c:1214
 #, c-format
-msgid "corrupt EGSD record type %d: size (%#x) is larger than remaining space (%#x)"
-msgstr "tip de înregistrare EGSD coruptă %d: dimensiunea (%#x) este mai mare decât spațiul rămas (%#x)"
+msgid ""
+"corrupt EGSD record type %d: size (%#x) is larger than remaining space (%#x)"
+msgstr ""
+"tip de înregistrare EGSD coruptă %d: dimensiunea (%#x) este mai mare decât "
+"spațiul rămas (%#x)"
 
 #: vms-alpha.c:1224
 #, c-format
@@ -6678,12 +7575,16 @@ msgstr "  EMH %u (lung=%u): "
 #: vms-alpha.c:6077
 #, c-format
 msgid "   Error: The length is less than the length of an EMH record\n"
-msgstr "   Eroare: lungimea este mai mică decât lungimea unei înregistrări EMH\n"
+msgstr ""
+"   Eroare: lungimea este mai mică decât lungimea unei înregistrări EMH\n"
 
 #: vms-alpha.c:6094
 #, c-format
-msgid "   Error: The record length is less than the size of an EMH_MHD record\n"
-msgstr "   Eroare: lungimea înregistrării este mai mică decât dimensiunea unei înregistrări EMH_MHD\n"
+msgid ""
+"   Error: The record length is less than the size of an EMH_MHD record\n"
+msgstr ""
+"   Eroare: lungimea înregistrării este mai mică decât dimensiunea unei "
+"înregistrări EMH_MHD\n"
 
 #: vms-alpha.c:6097
 #, c-format
@@ -6793,7 +7694,8 @@ msgstr "  EEOM (lung=%u):\n"
 #: vms-alpha.c:6172
 #, c-format
 msgid "   Error: The length is less than the length of an EEOM record\n"
-msgstr "   Eroare: lungimea este mai mică decât lungimea unei înregistrări EEOM\n"
+msgstr ""
+"   Eroare: lungimea este mai mică decât lungimea unei înregistrări EEOM\n"
 
 #: vms-alpha.c:6176
 #, c-format
@@ -8281,7 +9183,8 @@ msgstr "nu se poate citi EISD\n"
 
 #: vms-alpha.c:8354
 #, c-format
-msgid "Image section descriptor: (major: %u, minor: %u, size: %u, offset: %u)\n"
+msgid ""
+"Image section descriptor: (major: %u, minor: %u, size: %u, offset: %u)\n"
 msgstr ""
 
 #: vms-alpha.c:8362
@@ -8554,7 +9457,8 @@ msgstr "%pB: simbolul XMC_TC0 „%s” este clasa %d scnlen %<PRId64>"
 #: xcofflink.c:1755
 #, c-format
 msgid "%pB: TOC entry `%s' has a R_TLSMLrelocation not targeting itself"
-msgstr "%pB: intrarea TOC „%s” are o realocare R_TLSML care nu țintește spre sine"
+msgstr ""
+"%pB: intrarea TOC „%s” are o realocare R_TLSML care nu țintește spre sine"
 
 #: xcofflink.c:1789
 #, c-format
@@ -8592,8 +9496,12 @@ msgstr "eroare: simbol __rtinit nedefinit"
 
 #: xcofflink.c:4872
 #, c-format
-msgid "%pB: Unable to find a stub csect in rangeof relocation at %#<PRIx64> targeting'%s'"
-msgstr "%pB: Nu s-a putut găsi un ciot(stub) csect în intervalul de realocare de la %#<PRIx64> care țintește „%s”"
+msgid ""
+"%pB: Unable to find a stub csect in rangeof relocation at %#<PRIx64> "
+"targeting'%s'"
+msgstr ""
+"%pB: Nu s-a putut găsi un ciot(stub) csect în intervalul de realocare de la "
+"%#<PRIx64> care țintește „%s”"
 
 #: xcofflink.c:4901
 #, c-format
@@ -8602,7 +9510,9 @@ msgstr "%pB: Nu se poate crea intrarea ciot(stub) „%s”"
 
 #: xcofflink.c:5021
 msgid "TOC overflow during stub generation; try -mminimal-toc when compiling"
-msgstr "Debordare a tabelului de intrări(TOC) în timpul generării ciotului(stub); încercați „-mminimal-toc” la compilare"
+msgstr ""
+"Debordare a tabelului de intrări(TOC) în timpul generării ciotului(stub); "
+"încercați „-mminimal-toc” la compilare"
 
 #: xcofflink.c:5089
 #, c-format
@@ -8612,7 +9522,8 @@ msgstr "%pB: realocarea încărcătorului în secțiunea nerecunoscută „%s”
 #: xcofflink.c:5101
 #, c-format
 msgid "%pB: `%s' in loader reloc but not loader sym"
-msgstr "%pB: „%s” în realocarea încărcătorului, dar nu în simbolul încărcătorului"
+msgstr ""
+"%pB: „%s” în realocarea încărcătorului, dar nu în simbolul încărcătorului"
 
 #: xcofflink.c:5118
 #, c-format
@@ -8622,7 +9533,9 @@ msgstr "%pB: realocarea încărcătorului în secțiunea numai-pentru-citire %pA
 #: xcofflink.c:6191
 #, c-format
 msgid "TOC overflow: %#<PRIx64> > 0x10000; try -mminimal-toc when compiling"
-msgstr "Debordare a tabelului de intrări(TOC): %#<PRIx64> > 0x10000; încercați „-mminimal-toc” la compilare"
+msgstr ""
+"Debordare a tabelului de intrări(TOC): %#<PRIx64> > 0x10000; încercați „-"
+"mminimal-toc” la compilare"
 
 #: xcofflink.c:7305
 #, c-format
@@ -8657,22 +9570,38 @@ msgstr "atribut necunoscut pentru simbolul „%s”: 0x%02x"
 #: elfnn-aarch64.c:5258
 #, c-format
 msgid "%pB: error: erratum 835769 stub out of range (input file too large)"
-msgstr "%pB: eroare: «erratum 835769» ciot(stub) în afara intervalului (fișierul de intrare este prea mare)"
+msgstr ""
+"%pB: eroare: «erratum 835769» ciot(stub) în afara intervalului (fișierul de "
+"intrare este prea mare)"
 
 #: elfnn-aarch64.c:5350
 #, c-format
 msgid "%pB: error: erratum 843419 stub out of range (input file too large)"
-msgstr "%pB: eroare: «erratum 843419» ciot(stub) în afara intervalului (fișierul de intrare este prea mare)"
+msgstr ""
+"%pB: eroare: «erratum 843419» ciot(stub) în afara intervalului (fișierul de "
+"intrare este prea mare)"
 
 #: elfnn-aarch64.c:5363
 #, c-format
-msgid "%pB: error: erratum 843419 immediate 0x%<PRIx64> out of range for ADR (input file too large) and --fix-cortex-a53-843419=adr used.  Run the linker with --fix-cortex-a53-843419=full instead"
-msgstr "%pB: eroare: «erratum 843419» imediat 0x%<PRIx64> în afara intervalului pentru ADR (fișier de intrare prea mare) și „--fix-cortex-a53-843419=adr”, utilizată.  Rulați editorul de legături cu „--fix-cortex-a53-843419=full” în loc"
+msgid ""
+"%pB: error: erratum 843419 immediate 0x%<PRIx64> out of range for ADR (input "
+"file too large) and --fix-cortex-a53-843419=adr used.  Run the linker with --"
+"fix-cortex-a53-843419=full instead"
+msgstr ""
+"%pB: eroare: «erratum 843419» imediat 0x%<PRIx64> în afara intervalului "
+"pentru ADR (fișier de intrare prea mare) și „--fix-cortex-a53-843419=adr”, "
+"utilizată.  Rulați editorul de legături cu „--fix-cortex-a53-843419=full” în "
+"loc"
 
 #: elfnn-aarch64.c:5898
 #, c-format
-msgid "%pB: relocation %s against symbol `%s' which may bind externally can not be used when making a shared object; recompile with -fPIC"
-msgstr "%pB: realocarea %s față de simbolul „%s” care se poate asocia extern nu poate fi folosită atunci când se creează un obiect partajat; recompilați cu „-fPIC”"
+msgid ""
+"%pB: relocation %s against symbol `%s' which may bind externally can not be "
+"used when making a shared object; recompile with -fPIC"
+msgstr ""
+"%pB: realocarea %s față de simbolul „%s” care se poate asocia extern nu "
+"poate fi folosită atunci când se creează un obiect partajat; recompilați cu "
+"„-fPIC”"
 
 #: elfnn-aarch64.c:5918
 #, c-format
@@ -8684,10 +9613,14 @@ msgstr "%pB: ramura condiționată la simbolul nedefinit „%s” nu este permis
 # „... poate fi/poate să fie...”
 # „... trebuie să fie...”
 # „... este ...”
-#: elfnn-aarch64.c:6006
+#: elfnn-aarch64.c:6006 ../../bfd/elfnn-kvx.c:2407
 #, c-format
-msgid "%pB: local symbol descriptor table be NULL when applying relocation %s against local symbol"
-msgstr "%pB: tabelul de descriptori de simbol local poate să fie NULL atunci când se aplică realocarea %s față de simbolul local"
+msgid ""
+"%pB: local symbol descriptor table be NULL when applying relocation %s "
+"against local symbol"
+msgstr ""
+"%pB: tabelul de descriptori de simbol local poate să fie NULL atunci când se "
+"aplică realocarea %s față de simbolul local"
 
 #: elfnn-aarch64.c:6119 elfnn-aarch64.c:6156
 #, c-format
@@ -8699,18 +9632,96 @@ msgid "too many GOT entries for -fpic, please recompile with -fPIC"
 msgstr "prea multe intrări GOT pentru „-fpic”, recompilați cu „-fPIC”"
 
 #: elfnn-aarch64.c:7171
-msgid "one possible cause of this error is that the symbol is being referenced in the indicated code as if it had a larger alignment than was declared where it was defined"
-msgstr "o posibilă cauză a acestei erori este că simbolul este referit în codul indicat ca și cum ar avea o aliniere mai mare decât a fost declarată acolo unde a fost definit"
+msgid ""
+"one possible cause of this error is that the symbol is being referenced in "
+"the indicated code as if it had a larger alignment than was declared where "
+"it was defined"
+msgstr ""
+"o posibilă cauză a acestei erori este că simbolul este referit în codul "
+"indicat ca și cum ar avea o aliniere mai mare decât a fost declarată acolo "
+"unde a fost definit"
 
 #: elfnn-aarch64.c:7738
 #, c-format
-msgid "%pB: relocation %s against `%s' can not be used when making a shared object"
-msgstr "%pB: relocarea %s față de „%s” nu poate fi folosită când se creează un obiect partajat"
+msgid ""
+"%pB: relocation %s against `%s' can not be used when making a shared object"
+msgstr ""
+"%pB: relocarea %s față de „%s” nu poate fi folosită când se creează un "
+"obiect partajat"
 
 #: elfnn-aarch64.c:8814
 #, c-format
 msgid "%F%P: %pB: copy relocation against non-copyable protected symbol `%s'\n"
-msgstr "%F%P: %pB: copiere realocare față de simbolul protejat necopiabil „%s”\n"
+msgstr ""
+"%F%P: %pB: copiere realocare față de simbolul protejat necopiabil „%s”\n"
+
+#: ../../bfd/elfnn-kvx.c:943
+#, fuzzy
+msgid ""
+"%F%P: Could not assign '%pA' to an output section. Retry without --enable-"
+"non-contiguous-regions.\n"
+msgstr ""
+"%F%P: Nu s-a putut atribui „%pA” unei secțiuni de ieșire. Reîncercați fără "
+"opțiunea „--enable-non-contiguous-regions”.\n"
+
+#: ../../bfd/elfnn-kvx.c:2144
+#, fuzzy, c-format
+msgid "%pB(%pA+%#<PRIx64>): unresolvable %s relocation in section `%s'"
+msgstr "%pB(%pA+%#<PRIx64>): realocare %s nerezolvată față de simbolul „%s”"
+
+#: ../../bfd/elfnn-kvx.c:2877
+#, c-format
+msgid "%s: Bad ELF id: `%d'"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:2933
+#, fuzzy, c-format
+msgid "%s: compiled as 32-bit object and %s is 64-bit"
+msgstr ""
+"%pB: compilat pentru un sistem pe 64 de biți și ținta este pe 32 de biți"
+
+#: ../../bfd/elfnn-kvx.c:2936
+#, fuzzy, c-format
+msgid "%s: compiled as 64-bit object and %s is 32-bit"
+msgstr ""
+"%pB: compilat pentru un sistem pe 64 de biți și ținta este pe 32 de biți"
+
+#: ../../bfd/elfnn-kvx.c:2938
+#, c-format
+msgid "%s: object size does not match that of target %s"
+msgstr ""
+
+#. Ignore init flag - it may not be set, despite the flags field
+#. containing valid data.
+#: ../../bfd/elfnn-kvx.c:3026
+#, fuzzy, c-format
+msgid "Private flags = 0x%lx : "
+msgstr "fanioane private = 0x%lx:"
+
+#: ../../bfd/elfnn-kvx.c:3030
+#, c-format
+msgid "Coolidge (kv3) V1 64 bits"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3032
+#, c-format
+msgid "Coolidge (kv3) V2 64 bits"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3037
+#, c-format
+msgid "Coolidge (kv3) V1 32 bits"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3039
+#, c-format
+msgid "Coolidge (kv3) V2 32 bits"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3878
+#, c-format
+msgid "relocation against `%s' has faulty GOT type "
+msgstr ""
 
 # R-Gc, scrie:
 # dezvoltatori, typo!!!
@@ -8754,7 +9765,9 @@ msgstr "%pcrel_lo cu adaos nu este permis pentru R_RISCV_GOT_HI20"
 
 #: elfnn-riscv.c:1908
 #, c-format
-msgid "%%pcrel_lo overflow with an addend, the value of %%pcrel_hi is 0x%<PRIx64> without any addend, but may be 0x%<PRIx64> after adding the %%pcrel_lo addend"
+msgid ""
+"%%pcrel_lo overflow with an addend, the value of %%pcrel_hi is 0x%<PRIx64> "
+"without any addend, but may be 0x%<PRIx64> after adding the %%pcrel_lo addend"
 msgstr ""
 
 #: elfnn-riscv.c:1915
@@ -8768,8 +9781,12 @@ msgstr ""
 
 #: elfnn-riscv.c:2498
 #, c-format
-msgid "%%X%%P: relocation %s against `%s' which may bind externally can not be used when making a shared object; recompile with -fPIC\n"
-msgstr "%%X%%P: realocarea %s față de „%s” care se poate asocia extern nu poate fi folosită atunci când se creează un obiect partajat; recompilați cu „-fPIC”\n"
+msgid ""
+"%%X%%P: relocation %s against `%s' which may bind externally can not be used "
+"when making a shared object; recompile with -fPIC\n"
+msgstr ""
+"%%X%%P: realocarea %s față de „%s” care se poate asocia extern nu poate fi "
+"folosită atunci când se creează un obiect partajat; recompilați cu „-fPIC”\n"
 
 #: elfnn-riscv.c:2581
 #, c-format
@@ -8799,8 +9816,12 @@ msgstr "%X%P: eroare internă: eroare necunoscută\n"
 
 #: elfnn-riscv.c:3403
 #, c-format
-msgid "error: %pB: corrupted ISA string '%s'.  First letter should be 'i' or 'e' but got '%s'"
-msgstr "eroare: %pB: șir ISA corupt „%s”.  Prima litera ar trebui să fie „i” sau „e”, dar a primit „%s”"
+msgid ""
+"error: %pB: corrupted ISA string '%s'.  First letter should be 'i' or 'e' "
+"but got '%s'"
+msgstr ""
+"eroare: %pB: șir ISA corupt „%s”.  Prima litera ar trebui să fie „i” sau "
+"„e”, dar a primit „%s”"
 
 #: elfnn-riscv.c:3446
 #, c-format
@@ -8810,7 +9831,8 @@ msgstr "eroare: %pB: șir ISA nepotrivit pentru a fuziona „%s” și „%s”"
 #: elfnn-riscv.c:3583
 #, c-format
 msgid "error: %pB: ISA string of input (%s) doesn't match output (%s)"
-msgstr "eroare: %pB: șirul ISA de intrare (%s) nu se potrivește cu ieșirea (%s)"
+msgstr ""
+"eroare: %pB: șirul ISA de intrare (%s) nu se potrivește cu ieșirea (%s)"
 
 #: elfnn-riscv.c:3603
 #, c-format
@@ -8820,21 +9842,34 @@ msgstr "eroare: %pB: XLEN de intrare (%u) nu se potrivește cu ieșirea (%u)"
 #: elfnn-riscv.c:3611
 #, c-format
 msgid "error: %pB: unsupported XLEN (%u), you might be using wrong emulation"
-msgstr "eroare: %pB: XLEN neacceptat (%u), este posibil să utilizați o emulare greșită"
+msgstr ""
+"eroare: %pB: XLEN neacceptat (%u), este posibil să utilizați o emulare "
+"greșită"
 
 #: elfnn-riscv.c:3725
 #, c-format
-msgid "warning: %pB use privileged spec version %u.%u.%u but the output use version %u.%u.%u"
-msgstr "avertisment: %pB folosește versiunea cu specificații privilegiate %u.%u.%u, dar rezultatul folosește versiunea %u.%u.%u"
+msgid ""
+"warning: %pB use privileged spec version %u.%u.%u but the output use version "
+"%u.%u.%u"
+msgstr ""
+"avertisment: %pB folosește versiunea cu specificații privilegiate %u.%u.%u, "
+"dar rezultatul folosește versiunea %u.%u.%u"
 
 #: elfnn-riscv.c:3742
-msgid "warning: privileged spec version 1.9.1 can not be linked with other spec versions"
-msgstr "avertisment: versiunea cu specificații privilegiate 1.9.1 nu poate fi conectată cu alte versiuni cu specificații"
+msgid ""
+"warning: privileged spec version 1.9.1 can not be linked with other spec "
+"versions"
+msgstr ""
+"avertisment: versiunea cu specificații privilegiate 1.9.1 nu poate fi "
+"conectată cu alte versiuni cu specificații"
 
 #: elfnn-riscv.c:3770
 #, c-format
-msgid "error: %pB use %u-byte stack aligned but the output use %u-byte stack aligned"
-msgstr "eroare: %pB folosește stiva aliniată la %u-octeți, dar ieșirea folosește stiva aliniată la %u-octeți"
+msgid ""
+"error: %pB use %u-byte stack aligned but the output use %u-byte stack aligned"
+msgstr ""
+"eroare: %pB folosește stiva aliniată la %u-octeți, dar ieșirea folosește "
+"stiva aliniată la %u-octeți"
 
 #: elfnn-riscv.c:3867
 #, c-format
@@ -8848,8 +9883,12 @@ msgstr "%pB: nu se poate vincula RVE cu altă țintă"
 
 #: elfnn-riscv.c:4562
 #, c-format
-msgid "%pB(%pA+%#<PRIx64>): %<PRId64> bytes required for alignment to %<PRId64>-byte boundary, but only %<PRId64> present"
-msgstr "%pB(%pA+%#<PRIx64>): %<PRId64> octeți sunt necesari pentru alinierea la limita %<PRId64>-octeți, dar numai %<PRId64> sunt prezenți"
+msgid ""
+"%pB(%pA+%#<PRIx64>): %<PRId64> bytes required for alignment to %<PRId64>-"
+"byte boundary, but only %<PRId64> present"
+msgstr ""
+"%pB(%pA+%#<PRIx64>): %<PRId64> octeți sunt necesari pentru alinierea la "
+"limita %<PRId64>-octeți, dar numai %<PRId64> sunt prezenți"
 
 #: peXXigen.c:159
 #, c-format
@@ -8859,7 +9898,8 @@ msgstr "%pB: nu se poate găsi numele pentru secțiunea goală"
 #: peXXigen.c:186
 #, c-format
 msgid "%pB: out of memory creating name for empty section"
-msgstr "%pB: memorie insuficientă pentru crearea numelui pentru secțiunea goală"
+msgstr ""
+"%pB: memorie insuficientă pentru crearea numelui pentru secțiunea goală"
 
 #: peXXigen.c:196
 #, c-format
@@ -8952,7 +9992,8 @@ msgid ""
 "There is an import table, but the section containing it could not be found\n"
 msgstr ""
 "\n"
-"Există un tabel de importare, dar secțiunea care îl conține n-a putut fi găsită\n"
+"Există un tabel de importare, dar secțiunea care îl conține n-a putut fi "
+"găsită\n"
 
 #: peXXigen.c:1300
 #, c-format
@@ -9019,7 +10060,8 @@ msgid ""
 "There is a first thunk, but the section containing it could not be found\n"
 msgstr ""
 "\n"
-"Există o primă subrutină( thunk), dar secțiunea care o conține nu poate fi găsită\n"
+"Există o primă subrutină( thunk), dar secțiunea care o conține nu poate fi "
+"găsită\n"
 
 #: peXXigen.c:1450 peXXigen.c:1489
 #, c-format
@@ -9154,7 +10196,8 @@ msgstr ""
 #: peXXigen.c:1718
 #, c-format
 msgid "\tInvalid Export Address Table rva (0x%lx) or entry count (0x%lx)\n"
-msgstr "Tabel de adrese de export rva (0x%lx) sau număr de intrări (0x%lx), nevalid\n"
+msgstr ""
+"Tabel de adrese de export rva (0x%lx) sau număr de intrări (0x%lx), nevalid\n"
 
 #: peXXigen.c:1737
 msgid "Forwarder RVA"
@@ -9176,7 +10219,9 @@ msgstr ""
 #: peXXigen.c:1764
 #, c-format
 msgid "\tInvalid Name Pointer Table rva (0x%lx) or entry count (0x%lx)\n"
-msgstr "\tTabel cu indicatori de nume rva (0x%lx) sau număr de intrări (0x%lx), nevalid\n"
+msgstr ""
+"\tTabel cu indicatori de nume rva (0x%lx) sau număr de intrări (0x%lx), "
+"nevalid\n"
 
 #: peXXigen.c:1771
 #, c-format
@@ -9191,7 +10236,8 @@ msgstr "\t[%4ld] <decalaj corupt: %lx>\n"
 #: peXXigen.c:1839 peXXigen.c:2008
 #, c-format
 msgid "warning, .pdata section size (%ld) is not a multiple of %d\n"
-msgstr "avertisment, dimensiunea secțiunii .pdata (%ld) nu este un multiplu de %d\n"
+msgstr ""
+"avertisment, dimensiunea secțiunii .pdata (%ld) nu este un multiplu de %d\n"
 
 #: peXXigen.c:1843 peXXigen.c:2012
 #, c-format
@@ -9219,7 +10265,9 @@ msgstr ""
 #: peXXigen.c:1861
 #, c-format
 msgid "Virtual size of .pdata section (%ld) larger than real size (%ld)\n"
-msgstr "Dimensiunea virtuală a secțiunii .pdata (%ld) mai mare decât dimensiunea reală (%ld)\n"
+msgstr ""
+"Dimensiunea virtuală a secțiunii .pdata (%ld) mai mare decât dimensiunea "
+"reală (%ld)\n"
 
 #: peXXigen.c:2014
 #, c-format
@@ -9246,7 +10294,8 @@ msgid ""
 "Virtual Address: %08lx Chunk size %ld (0x%lx) Number of fixups %ld\n"
 msgstr ""
 "\n"
-"Adresă virtuală: %08lx Dimensiunea fragmentului %ld (0x%lx) Numărul de remedieri %ld\n"
+"Adresă virtuală: %08lx Dimensiunea fragmentului %ld (0x%lx) Numărul de "
+"remedieri %ld\n"
 
 #: peXXigen.c:2184
 #, c-format
@@ -9324,10 +10373,12 @@ msgstr " Resursele încep de la poziția: %#03x\n"
 #, c-format
 msgid ""
 "\n"
-"There is a debug directory, but the section containing it could not be found\n"
+"There is a debug directory, but the section containing it could not be "
+"found\n"
 msgstr ""
 "\n"
-"Există un director de depanare, dar secțiunea care îl conține nu a putut fi găsită\n"
+"Există un director de depanare, dar secțiunea care îl conține nu a putut fi "
+"găsită\n"
 
 #: peXXigen.c:2563
 #, c-format
@@ -9342,10 +10393,12 @@ msgstr ""
 #, c-format
 msgid ""
 "\n"
-"Error: section %s contains the debug data starting address but it is too small\n"
+"Error: section %s contains the debug data starting address but it is too "
+"small\n"
 msgstr ""
 "\n"
-"Eroare: secțiunea %s conține adresa de pornire a datelor de depanare, dar este prea mică\n"
+"Eroare: secțiunea %s conține adresa de pornire a datelor de depanare, dar "
+"este prea mică\n"
 
 #: peXXigen.c:2575
 #, c-format
@@ -9359,8 +10412,11 @@ msgstr ""
 
 #: peXXigen.c:2582
 #, c-format
-msgid "The debug data size field in the data directory is too big for the section"
-msgstr "Câmpul pentru dimensiunea datelor de depanare din directorul de date este prea mare pentru secțiune"
+msgid ""
+"The debug data size field in the data directory is too big for the section"
+msgstr ""
+"Câmpul pentru dimensiunea datelor de depanare din directorul de date este "
+"prea mare pentru secțiune"
 
 #: peXXigen.c:2587
 #, c-format
@@ -9374,8 +10430,12 @@ msgstr ""
 
 #: peXXigen.c:2647
 #, c-format
-msgid "The debug directory size is not a multiple of the debug directory entry size\n"
-msgstr "Dimensiunea directorului de depanare nu este un multiplu al dimensiunii intrării directorului de depanare\n"
+msgid ""
+"The debug directory size is not a multiple of the debug directory entry "
+"size\n"
+msgstr ""
+"Dimensiunea directorului de depanare nu este un multiplu al dimensiunii "
+"intrării directorului de depanare\n"
 
 #. The MS dumpbin program reportedly ands with 0xff0f before
 #. printing the characteristics field.  Not sure why.  No reason to
@@ -9391,12 +10451,15 @@ msgstr ""
 
 #: peXXigen.c:3016
 #, c-format
-msgid "%pB: Data Directory (%lx bytes at %<PRIx64>) extends across section boundary at %<PRIx64>"
+msgid ""
+"%pB: Data Directory (%lx bytes at %<PRIx64>) extends across section boundary "
+"at %<PRIx64>"
 msgstr ""
 
 #: peXXigen.c:3056
 msgid "failed to update file offsets in debug directory"
-msgstr "nu s-a reușit actualizarea decalajelor fișierelor din directorul de depanare"
+msgstr ""
+"nu s-a reușit actualizarea decalajelor fișierelor din directorul de depanare"
 
 #: peXXigen.c:3065
 #, c-format
@@ -9461,39 +10524,66 @@ msgstr "%pB: nu se poate completa DataDictionary[12] deoarece .data$5 lipsește"
 
 #: peXXigen.c:4465
 #, c-format
-msgid "%pB: unable to fill in DataDictionary[PE_IMPORT_ADDRESS_TABLE (12)] because .idata$6 is missing"
-msgstr "%pB: nu se poate completa DataDictionary[PE_IMPORT_ADDRESS_TABLE (12)] deoarece .idata$6 lipsește"
+msgid ""
+"%pB: unable to fill in DataDictionary[PE_IMPORT_ADDRESS_TABLE (12)] because ."
+"idata$6 is missing"
+msgstr ""
+"%pB: nu se poate completa DataDictionary[PE_IMPORT_ADDRESS_TABLE (12)] "
+"deoarece .idata$6 lipsește"
 
 #: peXXigen.c:4507
 #, c-format
-msgid "%pB: unable to fill in DataDictionary[PE_IMPORT_ADDRESS_TABLE(12)] because .idata$6 is missing"
-msgstr "%pB: nu se poate completa DataDictionary[PE_IMPORT_ADDRESS_TABLE(12)] deoarece .idata$6 lipsește"
+msgid ""
+"%pB: unable to fill in DataDictionary[PE_IMPORT_ADDRESS_TABLE(12)] because ."
+"idata$6 is missing"
+msgstr ""
+"%pB: nu se poate completa DataDictionary[PE_IMPORT_ADDRESS_TABLE(12)] "
+"deoarece .idata$6 lipsește"
 
 #: peXXigen.c:4532
 #, c-format
 msgid "%pB: unable to fill in DataDictionary[9] because __tls_used is missing"
-msgstr "%pB: nu se poate completa DataDictionary[9] deoarece __tls_used lipsește"
+msgstr ""
+"%pB: nu se poate completa DataDictionary[9] deoarece __tls_used lipsește"
+
+#~ msgid "\\%pB: warning: %s BLX instruction targets %s function '%s'"
+#~ msgstr "\\%pB: avertisment: instrucțiunea %s BLX vizează funcția %s „%s”"
 
 #~ msgid "%pB: relocation (%d) at (0x%"
 #~ msgstr "%pB: realocare (%d) la (0x%"
 
 #~ msgid "%pB: unable to initialize compress status for section %s"
-#~ msgstr "%pB: nu se poate inițializa starea de comprimare pentru secțiunea %s"
+#~ msgstr ""
+#~ "%pB: nu se poate inițializa starea de comprimare pentru secțiunea %s"
 
 #~ msgid "%pB: unable to initialize decompress status for section %s"
-#~ msgstr "%pB: nu se poate inițializa starea de decomprimare pentru secțiunea %s"
+#~ msgstr ""
+#~ "%pB: nu se poate inițializa starea de decomprimare pentru secțiunea %s"
 
-#~ msgid "error: %pB(%pA) section size (%#<PRIx64> bytes) is larger than file size (%#<PRIx64> bytes)"
-#~ msgstr "eroare: dimensiunea secțiunii %pB(%pA) (%#<PRIx64> octeți) este mai mare decât dimensiunea fișierului (%#<PRIx64> octeți)"
+#~ msgid ""
+#~ "error: %pB(%pA) section size (%#<PRIx64> bytes) is larger than file size "
+#~ "(%#<PRIx64> bytes)"
+#~ msgstr ""
+#~ "eroare: dimensiunea secțiunii %pB(%pA) (%#<PRIx64> octeți) este mai mare "
+#~ "decât dimensiunea fișierului (%#<PRIx64> octeți)"
 
-#~ msgid "DWARF error: section %s is larger than 10x its filesize! (0x%lx vs 0x%lx)"
-#~ msgstr "eroare DWARF: secțiunea %s este mai mare de 10 ori decât dimensiunea fișierului său! (0x%lx vs 0x%lx)"
+#~ msgid ""
+#~ "DWARF error: section %s is larger than 10x its filesize! (0x%lx vs 0x%lx)"
+#~ msgstr ""
+#~ "eroare DWARF: secțiunea %s este mai mare de 10 ori decât dimensiunea "
+#~ "fișierului său! (0x%lx vs 0x%lx)"
 
-#~ msgid "%pB:%pA: error: attempting to write into an unallocated compressed section"
-#~ msgstr "%pB:%pA: eroare: încercare de a scrie într-o secțiune comprimată nealocată"
+#~ msgid ""
+#~ "%pB:%pA: error: attempting to write into an unallocated compressed section"
+#~ msgstr ""
+#~ "%pB:%pA: eroare: încercare de a scrie într-o secțiune comprimată nealocată"
 
-#~ msgid "%F%P: Could not assign %pA to an output section. Retry without --enable-non-contiguous-regions.\n"
-#~ msgstr "%F%P: Nu s-a putut atribui %pA unei secțiuni de ieșire. Reîncercați fără opțiunea „--enable-non-contiguous-regions”.\n"
+#~ msgid ""
+#~ "%F%P: Could not assign %pA to an output section. Retry without --enable-"
+#~ "non-contiguous-regions.\n"
+#~ msgstr ""
+#~ "%F%P: Nu s-a putut atribui %pA unei secțiuni de ieșire. Reîncercați fără "
+#~ "opțiunea „--enable-non-contiguous-regions”.\n"
 
 #, fuzzy
 #~ msgid "%F%P: failed to create BND PLT section\n"
@@ -9504,8 +10594,12 @@ msgstr "%pB: nu se poate completa DataDictionary[9] deoarece __tls_used lipseșt
 #~ msgstr "%s:Nu există nucleu(core) pentru a aloca numele de secțiune %s\n"
 
 #, fuzzy
-#~ msgid "%%X%%P: relocation %s against `%s' can not be used when making a shared object; recompile with -fPIC\n"
-#~ msgstr "%s: relocarea %s nu poate fi utilizată când se face un shared object, recompilațicu -fPIC"
+#~ msgid ""
+#~ "%%X%%P: relocation %s against `%s' can not be used when making a shared "
+#~ "object; recompile with -fPIC\n"
+#~ msgstr ""
+#~ "%s: relocarea %s nu poate fi utilizată când se face un shared object, "
+#~ "recompilațicu -fPIC"
 
 #, fuzzy
 #~ msgid "%s: duplicate prefixed ISA extension `%s'"

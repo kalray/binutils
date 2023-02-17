@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://sourceware.org/bugzilla/\n"
-"POT-Creation-Date: 2023-01-14 13:48+0000\n"
+"POT-Creation-Date: 2023-02-17 13:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -96,9 +97,9 @@ msgstr ""
 #: elf64-nfp.c:151 elf64-ppc.c:1026 elf64-ppc.c:1380 elf64-ppc.c:1389
 #: elf64-s390.c:328 elf64-s390.c:378 elf64-x86-64.c:269 elfn32-mips.c:3792
 #: elfxx-ia64.c:324 elfxx-loongarch.c:1382 elfxx-riscv.c:943 elfxx-sparc.c:589
-#: elfxx-sparc.c:639 elfxx-tilegx.c:907 elfxx-tilegx.c:947
-#: elfnn-aarch64.c:2215 elfnn-aarch64.c:2313 elfnn-ia64.c:214
-#: elfnn-ia64.c:3820
+#: elfxx-sparc.c:639 elfxx-tilegx.c:907 elfxx-tilegx.c:947 elfnn-aarch64.c:2215
+#: elfnn-aarch64.c:2313 elfnn-ia64.c:214 elfnn-ia64.c:3820
+#: ../../bfd/elfnn-kvx.c:176 ../../bfd/elfnn-kvx.c:268
 #, c-format
 msgid "%pB: unsupported relocation type %#x"
 msgstr ""
@@ -569,8 +570,8 @@ msgstr ""
 #: cofflink.c:2371 elflink.c:11510
 #, c-format
 msgid ""
-"%X`%s' referenced in section `%pA' of %pB: defined in discarded section `%"
-"pA' of %pB\n"
+"%X`%s' referenced in section `%pA' of %pB: defined in discarded section `"
+"%pA' of %pB\n"
 msgstr ""
 
 #: cofflink.c:2566
@@ -914,12 +915,11 @@ msgstr ""
 #: elf32-cris.c:2038 elf32-crx.c:926 elf32-d10v.c:514 elf32-fr30.c:598
 #: elf32-frv.c:4053 elf32-ft32.c:496 elf32-h8300.c:527 elf32-iq2000.c:695
 #: elf32-lm32.c:1074 elf32-m32c.c:628 elf32-m32r.c:2841 elf32-m68hc1x.c:1275
-#: elf32-mep.c:526 elf32-metag.c:1988 elf32-microblaze.c:1668
-#: elf32-moxie.c:292 elf32-msp430.c:1510 elf32-nds32.c:6097 elf32-or1k.c:1893
-#: elf32-score.c:2738 elf32-score7.c:2549 elf32-spu.c:5089
-#: elf32-tilepro.c:3376 elf32-v850.c:2298 elf32-visium.c:684
-#: elf32-xstormy16.c:934 elf64-mmix.c:1545 elfxx-mips.c:10628
-#: elfxx-tilegx.c:3746
+#: elf32-mep.c:526 elf32-metag.c:1988 elf32-microblaze.c:1668 elf32-moxie.c:292
+#: elf32-msp430.c:1510 elf32-nds32.c:6097 elf32-or1k.c:1893 elf32-score.c:2738
+#: elf32-score7.c:2549 elf32-spu.c:5089 elf32-tilepro.c:3376 elf32-v850.c:2298
+#: elf32-visium.c:684 elf32-xstormy16.c:934 elf64-mmix.c:1545
+#: elfxx-mips.c:10628 elfxx-tilegx.c:3746
 msgid "internal error: unsupported relocation error"
 msgstr ""
 
@@ -935,11 +935,10 @@ msgstr ""
 #: elf32-fr30.c:606 elf32-frv.c:4061 elf32-ft32.c:504 elf32-h8300.c:535
 #: elf32-ip2k.c:1492 elf32-iq2000.c:703 elf32-lm32.c:1082 elf32-m32c.c:636
 #: elf32-m32r.c:2849 elf32-m68hc1x.c:1283 elf32-mep.c:534 elf32-metag.c:1996
-#: elf32-microblaze.c:1676 elf32-moxie.c:300 elf32-msp430.c:1518
-#: elf32-mt.c:410 elf32-nds32.c:6105 elf32-or1k.c:1901 elf32-score.c:2751
-#: elf32-score7.c:2557 elf32-spu.c:5097 elf32-tilepro.c:3384 elf32-v850.c:2318
-#: elf32-visium.c:692 elf32-xstormy16.c:942 elf64-bpf.c:565 elf64-mmix.c:1553
-#: elfxx-tilegx.c:3754
+#: elf32-microblaze.c:1676 elf32-moxie.c:300 elf32-msp430.c:1518 elf32-mt.c:410
+#: elf32-nds32.c:6105 elf32-or1k.c:1901 elf32-score.c:2751 elf32-score7.c:2557
+#: elf32-spu.c:5097 elf32-tilepro.c:3384 elf32-v850.c:2318 elf32-visium.c:692
+#: elf32-xstormy16.c:942 elf64-bpf.c:565 elf64-mmix.c:1553 elfxx-tilegx.c:3754
 msgid "internal error: unknown error"
 msgstr ""
 
@@ -955,9 +954,9 @@ msgstr ""
 
 #: elf-m10300.c:2093 elf32-arm.c:13392 elf32-i386.c:3459 elf32-m32r.c:2331
 #: elf32-m68k.c:3929 elf32-s390.c:3080 elf32-sh.c:3671 elf32-tilepro.c:3275
-#: elf32-xtensa.c:3023 elf64-s390.c:3042 elf64-x86-64.c:4182
-#: elfxx-sparc.c:2917 elfxx-sparc.c:3814 elfxx-tilegx.c:3665
-#: elfnn-aarch64.c:5515 elfnn-aarch64.c:7120
+#: elf32-xtensa.c:3023 elf64-s390.c:3042 elf64-x86-64.c:4182 elfxx-sparc.c:2917
+#: elfxx-sparc.c:3814 elfxx-tilegx.c:3665 elfnn-aarch64.c:5515
+#: elfnn-aarch64.c:7120 ../../bfd/elfnn-kvx.c:2801
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): unresolvable %s relocation against symbol `%s'"
 msgstr ""
@@ -980,7 +979,7 @@ msgid "internal error: suspicious relocation type used in shared library"
 msgstr ""
 
 #: elf-m10300.c:2650 elf32-avr.c:2488 elf32-frv.c:5621 elf64-ia64-vms.c:365
-#: elfxx-sparc.c:2684 reloc.c:8424 reloc16.c:155 elfnn-ia64.c:365
+#: elfxx-sparc.c:2684 reloc.c:8608 reloc16.c:155 elfnn-ia64.c:365
 msgid "%P%F: --relax and -r may not be used together\n"
 msgstr ""
 
@@ -1481,8 +1480,6 @@ msgstr ""
 
 #. Ignore init flag - it may not be set, despite the flags field
 #. containing valid data.
-#. Ignore init flag - it may not be set, despite the flags field
-#. containing valid data.
 #: elf32-arc.c:455 elf32-arm.c:15118 elf32-frv.c:6612 elf32-iq2000.c:868
 #: elf32-m32c.c:914 elf32-mt.c:560 elf32-rl78.c:1275 elf32-rx.c:3217
 #: elf32-visium.c:844 elf64-ppc.c:5503 elfnn-aarch64.c:7350
@@ -1548,8 +1545,8 @@ msgstr ""
 #: elf32-arc.c:1159
 #, c-format
 msgid ""
-"%pB(%pA+%#<PRIx64>): CMEM relocation to `%s' is invalid, 16 MSB should be %"
-"#x (value is %#<PRIx64>)"
+"%pB(%pA+%#<PRIx64>): CMEM relocation to `%s' is invalid, 16 MSB should be "
+"%#x (value is %#<PRIx64>)"
 msgstr ""
 
 #: elf32-arc.c:1170
@@ -1625,8 +1622,8 @@ msgstr ""
 #: elf32-arm.c:4591
 #, c-format
 msgid ""
-"ERROR: CMSE stub (%s section) too far (%#<PRIx64>) from destination (%"
-"#<PRIx64>)"
+"ERROR: CMSE stub (%s section) too far (%#<PRIx64>) from destination "
+"(%#<PRIx64>)"
 msgstr ""
 
 #: elf32-arm.c:4760
@@ -1636,7 +1633,7 @@ msgstr ""
 
 #: elf32-arm.c:4835 elf32-arm.c:6984 elf32-csky.c:3400 elf32-hppa.c:582
 #: elf32-m68hc1x.c:164 elf32-metag.c:1180 elf32-nios2.c:2201 elf64-ppc.c:3906
-#: elf64-ppc.c:14122 elfnn-aarch64.c:3198
+#: elf64-ppc.c:14122 elfnn-aarch64.c:3198 ../../bfd/elfnn-kvx.c:908
 #, c-format
 msgid "%pB: cannot create stub entry %s"
 msgstr ""
@@ -1805,12 +1802,7 @@ msgid ""
 "when making a %s; recompile with -fPIC"
 msgstr ""
 
-#: elf32-arm.c:10643
-#, c-format
-msgid "\\%pB: warning: %s BLX instruction targets %s function '%s'"
-msgstr ""
-
-#: elf32-arm.c:11060
+#: elf32-arm.c:10643 elf32-arm.c:11060
 #, c-format
 msgid "%pB: warning: %s BLX instruction targets %s function '%s'"
 msgstr ""
@@ -1870,29 +1862,30 @@ msgstr ""
 msgid "%pB(%pA+%#<PRIx64>): %s relocation against SEC_MERGE section"
 msgstr ""
 
-#: elf32-arm.c:13337 elf32-m68k.c:3966 elf32-xtensa.c:2761
-#: elfnn-aarch64.c:6847
+#: elf32-arm.c:13337 elf32-m68k.c:3966 elf32-xtensa.c:2761 elfnn-aarch64.c:6847
+#: ../../bfd/elfnn-kvx.c:2597
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): %s used with TLS symbol %s"
 msgstr ""
 
-#: elf32-arm.c:13339 elf32-m68k.c:3968 elf32-xtensa.c:2763
-#: elfnn-aarch64.c:6849
+#: elf32-arm.c:13339 elf32-m68k.c:3968 elf32-xtensa.c:2763 elfnn-aarch64.c:6849
+#: ../../bfd/elfnn-kvx.c:2599
 #, c-format
 msgid "%pB(%pA+%#<PRIx64>): %s used with non-TLS symbol %s"
 msgstr ""
 
 #: elf32-arm.c:13422 elf32-tic6x.c:2649 elfnn-aarch64.c:7184
+#: ../../bfd/elfnn-kvx.c:2826
 msgid "out of range"
 msgstr ""
 
 #: elf32-arm.c:13426 elf32-nios2.c:4516 elf32-pru.c:936 elf32-tic6x.c:2653
-#: elfnn-aarch64.c:7188
+#: elfnn-aarch64.c:7188 ../../bfd/elfnn-kvx.c:2830
 msgid "unsupported relocation"
 msgstr ""
 
 #: elf32-arm.c:13434 elf32-nios2.c:4526 elf32-pru.c:946 elf32-tic6x.c:2661
-#: elfnn-aarch64.c:7196
+#: elfnn-aarch64.c:7196 ../../bfd/elfnn-kvx.c:2838
 msgid "unknown error"
 msgstr ""
 
@@ -2131,9 +2124,9 @@ msgid " <Unrecognised flag bits set>"
 msgstr ""
 
 #: elf32-arm.c:15356 elf32-arm.c:15490 elf32-i386.c:1511 elf32-s390.c:923
-#: elf32-tic6x.c:2724 elf32-tilepro.c:1435 elf32-xtensa.c:1090
-#: elf64-s390.c:845 elf64-x86-64.c:1963 elfxx-sparc.c:1386 elfxx-tilegx.c:1662
-#: elfxx-x86.c:970 elfnn-aarch64.c:7624 elfnn-loongarch.c:632
+#: elf32-tic6x.c:2724 elf32-tilepro.c:1435 elf32-xtensa.c:1090 elf64-s390.c:845
+#: elf64-x86-64.c:1963 elfxx-sparc.c:1386 elfxx-tilegx.c:1662 elfxx-x86.c:970
+#: elfnn-aarch64.c:7624 ../../bfd/elfnn-kvx.c:3272 elfnn-loongarch.c:632
 #: elfnn-riscv.c:660
 #, c-format
 msgid "%pB: bad symbol index: %d"
@@ -2723,8 +2716,8 @@ msgstr ""
 #: elf32-i386.c:1163 elf64-x86-64.c:1450
 #, c-format
 msgid ""
-"%pB: TLS transition from %s to %s against `%s' at %#<PRIx64> in section `%"
-"pA' failed"
+"%pB: TLS transition from %s to %s against `%s' at %#<PRIx64> in section `"
+"%pA' failed"
 msgstr ""
 
 #: elf32-i386.c:1266
@@ -2735,8 +2728,8 @@ msgid ""
 msgstr ""
 
 #: elf32-i386.c:1695 elf32-s390.c:1151 elf32-sh.c:5497 elf32-tilepro.c:1548
-#: elf32-xtensa.c:1263 elf64-s390.c:1083 elfxx-sparc.c:1556
-#: elfxx-tilegx.c:1767 elfnn-loongarch.c:586 elfnn-riscv.c:568
+#: elf32-xtensa.c:1263 elf64-s390.c:1083 elfxx-sparc.c:1556 elfxx-tilegx.c:1767
+#: elfnn-loongarch.c:586 elfnn-riscv.c:568
 #, c-format
 msgid "%pB: `%s' accessed both as normal and thread local symbol"
 msgstr ""
@@ -2896,8 +2889,8 @@ msgstr ""
 #: elf32-m68hc1x.c:1197
 #, c-format
 msgid ""
-"reference to a banked address [%lx:%04lx] in the normal address space at %"
-"04lx"
+"reference to a banked address [%lx:%04lx] in the normal address space at "
+"%04lx"
 msgstr ""
 
 #: elf32-m68hc1x.c:1233
@@ -3194,7 +3187,7 @@ msgstr ""
 msgid "%pB: unmatched OMIT_FP in %pA"
 msgstr ""
 
-#: elf32-nds32.c:13189 elfxx-mips.c:13501 reloc.c:8651
+#: elf32-nds32.c:13189 elfxx-mips.c:13501 reloc.c:8835
 #, c-format
 msgid "%X%P: %pB(%pA): relocation \"%pR\" goes out of range\n"
 msgstr ""
@@ -3677,8 +3670,8 @@ msgstr ""
 #: elf32-sh.c:4577
 #, c-format
 msgid ""
-"%pB(%pA): offset in relocation for GD->LE translation is too small: %"
-"#<PRIx64>"
+"%pB(%pA): offset in relocation for GD->LE translation is too small: "
+"%#<PRIx64>"
 msgstr ""
 
 #. The backslash is to prevent bogus trigraph detection.
@@ -3715,8 +3708,8 @@ msgstr ""
 #: elf32-sh.c:4666
 #, c-format
 msgid ""
-"%pB(%pA): offset in relocation for IE->LE translation is too small: %"
-"#<PRIx64>"
+"%pB(%pA): offset in relocation for IE->LE translation is too small: "
+"%#<PRIx64>"
 msgstr ""
 
 #: elf32-sh.c:4684
@@ -3740,15 +3733,15 @@ msgstr ""
 #: elf32-sh.c:4815
 #, c-format
 msgid ""
-"%pB(%pA): offset in relocation for GD->IE translation is too small: %"
-"#<PRIx64>"
+"%pB(%pA): offset in relocation for GD->IE translation is too small: "
+"%#<PRIx64>"
 msgstr ""
 
 #: elf32-sh.c:4883
 #, c-format
 msgid ""
-"%pB(%pA): offset in relocation for LD->LE translation is too small: %"
-"#<PRIx64>"
+"%pB(%pA): offset in relocation for LD->LE translation is too small: "
+"%#<PRIx64>"
 msgstr ""
 
 #: elf32-sh.c:5011
@@ -4015,7 +4008,8 @@ msgid "warning: %pB and %pB differ in whether code is compiled for DSBT"
 msgstr ""
 
 #: elf32-tilepro.c:3627 elfxx-tilegx.c:4017 elfxx-x86.c:2694
-#: elfnn-aarch64.c:9831 elfnn-loongarch.c:3845 elfnn-riscv.c:3264
+#: elfnn-aarch64.c:9831 ../../bfd/elfnn-kvx.c:4658 elfnn-loongarch.c:3845
+#: elfnn-riscv.c:3264
 #, c-format
 msgid "discarded output section: `%pA'"
 msgstr ""
@@ -4371,8 +4365,7 @@ msgstr ""
 msgid "GPDISP relocation did not find ldah and lda instructions"
 msgstr ""
 
-#: elf64-alpha.c:2002 elf64-alpha.c:2697 elflink.c:15391
-#: elfnn-loongarch.c:1566
+#: elf64-alpha.c:2002 elf64-alpha.c:2697 elflink.c:15391 elfnn-loongarch.c:1566
 #, c-format
 msgid "%pB: dynamic relocation against `%pT' in read-only section `%pA'\n"
 msgstr ""
@@ -4511,8 +4504,8 @@ msgstr ""
 #: elf64-ia64-vms.c:3966 elfnn-ia64.c:4480
 #, c-format
 msgid ""
-"%pB: Can't relax br (%s) to `%s' at %#<PRIx64> in section `%pA' with size %"
-"#<PRIx64> (> 0x1000000)."
+"%pB: Can't relax br (%s) to `%s' at %#<PRIx64> in section `%pA' with size "
+"%#<PRIx64> (> 0x1000000)."
 msgstr ""
 
 #: elf64-ia64-vms.c:4262 elfnn-ia64.c:4741
@@ -4555,8 +4548,8 @@ msgstr ""
 #: elf64-ia64-vms.c:5169 elflink.c:5322
 #, c-format
 msgid ""
-"warning: size of symbol `%s' changed from %<PRIu64> in %pB to %<PRIu64> in %"
-"pB"
+"warning: size of symbol `%s' changed from %<PRIu64> in %pB to %<PRIu64> in "
+"%pB"
 msgstr ""
 
 #: elf64-mips.c:4099
@@ -4954,8 +4947,8 @@ msgstr ""
 #: elf64-x86-64.c:2832 elfnn-aarch64.c:5556 elfnn-riscv.c:2111
 #, c-format
 msgid ""
-"%pB: relocation %s against STT_GNU_IFUNC symbol `%s' has non-zero addend: %"
-"<PRId64>"
+"%pB: relocation %s against STT_GNU_IFUNC symbol `%s' has non-zero addend: "
+"%<PRId64>"
 msgstr ""
 
 #: elf64-x86-64.c:3092
@@ -5078,8 +5071,8 @@ msgstr ""
 #: elflink.c:2704
 #, c-format
 msgid ""
-"%pB: non-zero symbol index (%#<PRIx64>) for offset %#<PRIx64> in section `%"
-"pA' when the object file has no symbol table"
+"%pB: non-zero symbol index (%#<PRIx64>) for offset %#<PRIx64> in section `"
+"%pA' when the object file has no symbol table"
 msgstr ""
 
 #: elflink.c:2915
@@ -5529,17 +5522,17 @@ msgid ""
 "consider using `-Ttext-segment=...'"
 msgstr ""
 
-#: elfxx-mips.c:13410 reloc.c:8573
+#: elfxx-mips.c:13410 reloc.c:8757
 #, c-format
 msgid "%X%P: %pB(%pA): error: relocation for offset %V has no value\n"
 msgstr ""
 
-#: elfxx-mips.c:13511 reloc.c:8661
+#: elfxx-mips.c:13511 reloc.c:8845
 #, c-format
 msgid "%X%P: %pB(%pA): relocation \"%pR\" is not supported\n"
 msgstr ""
 
-#: elfxx-mips.c:13520 reloc.c:8670
+#: elfxx-mips.c:13520 reloc.c:8854
 #, c-format
 msgid "%X%P: %pB(%pA): relocation \"%pR\" returns an unrecognized value %x\n"
 msgstr ""
@@ -5616,8 +5609,8 @@ msgstr ""
 #: elfxx-mips.c:15811
 #, c-format
 msgid ""
-"warning: %pB uses unknown MSA ABI %d (set by %pB), %pB uses unknown MSA ABI %"
-"d"
+"warning: %pB uses unknown MSA ABI %d (set by %pB), %pB uses unknown MSA ABI "
+"%d"
 msgstr ""
 
 #: elfxx-mips.c:15873
@@ -5920,8 +5913,8 @@ msgstr ""
 #: elfxx-x86.c:536 elfxx-x86.c:3385
 #, c-format
 msgid ""
-"%F%P: %pB: copy relocation against non-copyable protected symbol `%s' in %"
-"pB\n"
+"%F%P: %pB: copy relocation against non-copyable protected symbol `%s' in "
+"%pB\n"
 msgstr ""
 
 #: elfxx-x86.c:1043
@@ -5969,8 +5962,8 @@ msgstr ""
 
 #: elfxx-x86.c:3138
 msgid ""
-"%pB: %s (offset: 0x%v, info: 0x%v, addend: 0x%v) against '%s' for section '%"
-"pA' in %pB\n"
+"%pB: %s (offset: 0x%v, info: 0x%v, addend: 0x%v) against '%s' for section "
+"'%pA' in %pB\n"
 msgstr ""
 
 #: elfxx-x86.c:3144
@@ -6329,8 +6322,8 @@ msgstr ""
 #: mach-o.c:3862
 #, c-format
 msgid ""
-"bfd_mach_o_read_symtab_symbol: symbol \"%s\" specified invalid type field 0x%"
-"x: setting to undefined"
+"bfd_mach_o_read_symtab_symbol: symbol \"%s\" specified invalid type field 0x"
+"%x: setting to undefined"
 msgstr ""
 
 #: mach-o.c:5061
@@ -6497,8 +6490,8 @@ msgstr ""
 #: mmo.c:3277
 #, c-format
 msgid ""
-"%pB: invalid start address for initialized registers of length %<PRId64>: %"
-"#<PRIx64>"
+"%pB: invalid start address for initialized registers of length %<PRId64>: "
+"%#<PRIx64>"
 msgstr ""
 
 #: osf-core.c:127
@@ -6685,17 +6678,17 @@ msgstr ""
 msgid "Partition[%d] length = 0x%.8lx (%ld)\n"
 msgstr ""
 
-#: reloc.c:8471
+#: reloc.c:8655
 msgid "INPUT_SECTION_FLAGS are not supported"
 msgstr ""
 
-#: reloc.c:8738
+#: reloc.c:8922
 #, c-format
 msgid "%pB: unrecognized relocation type %#x in section `%pA'"
 msgstr ""
 
 #. PR 21803: Suggest the most likely cause of this error.
-#: reloc.c:8742
+#: reloc.c:8926
 #, c-format
 msgid "is this version of the linker - %s - out of date ?"
 msgstr ""
@@ -8961,7 +8954,7 @@ msgstr ""
 msgid "%pB: conditional branch to undefined symbol `%s' not allowed"
 msgstr ""
 
-#: elfnn-aarch64.c:6006
+#: elfnn-aarch64.c:6006 ../../bfd/elfnn-kvx.c:2407
 #, c-format
 msgid ""
 "%pB: local symbol descriptor table be NULL when applying relocation %s "
@@ -8993,6 +8986,69 @@ msgstr ""
 #: elfnn-aarch64.c:8814
 #, c-format
 msgid "%F%P: %pB: copy relocation against non-copyable protected symbol `%s'\n"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:943
+msgid ""
+"%F%P: Could not assign '%pA' to an output section. Retry without --enable-"
+"non-contiguous-regions.\n"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:2144
+#, c-format
+msgid "%pB(%pA+%#<PRIx64>): unresolvable %s relocation in section `%s'"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:2877
+#, c-format
+msgid "%s: Bad ELF id: `%d'"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:2933
+#, c-format
+msgid "%s: compiled as 32-bit object and %s is 64-bit"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:2936
+#, c-format
+msgid "%s: compiled as 64-bit object and %s is 32-bit"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:2938
+#, c-format
+msgid "%s: object size does not match that of target %s"
+msgstr ""
+
+#. Ignore init flag - it may not be set, despite the flags field
+#. containing valid data.
+#: ../../bfd/elfnn-kvx.c:3026
+#, c-format
+msgid "Private flags = 0x%lx : "
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3030
+#, c-format
+msgid "Coolidge (kv3) V1 64 bits"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3032
+#, c-format
+msgid "Coolidge (kv3) V2 64 bits"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3037
+#, c-format
+msgid "Coolidge (kv3) V1 32 bits"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3039
+#, c-format
+msgid "Coolidge (kv3) V2 32 bits"
+msgstr ""
+
+#: ../../bfd/elfnn-kvx.c:3878
+#, c-format
+msgid "relocation against `%s' has faulty GOT type "
 msgstr ""
 
 #: elfnn-loongarch.c:148 elfnn-loongarch.c:200
