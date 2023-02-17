@@ -43,7 +43,7 @@ extern const char * kvx_target_format (void);
 #define LEX_DOLLAR (LEX_BEGIN_NAME | LEX_NAME)
 #define WORKING_DOT_WORD
 
-#define md_end kvx_end
+#define md_finish kvx_end
 extern void kvx_end (void);
 
 extern void kvx_handle_align (fragS *);

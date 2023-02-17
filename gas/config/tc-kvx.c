@@ -2633,7 +2633,7 @@ md_begin ()
 	if (!(STREQ (name, op->as_op)))
 	  {
 	    name = op->as_op;
-	    if (str_hash_insert (kvx_opcode_hash, name, (PTR) op, 0))
+	    if (str_hash_insert (kvx_opcode_hash, name, op, 0))
 	      as_fatal ("internal error: can't hash opcode `%s'", name);
 	  }
       }
