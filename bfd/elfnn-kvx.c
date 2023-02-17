@@ -746,7 +746,7 @@ elfNN_kvx_stub_name (const asection *input_section,
       len = 8 + 1 + strlen (hash->root.root.root.string) + 1 + 16 + 1;
       stub_name = bfd_malloc (len);
       if (stub_name != NULL)
-	snprintf (stub_name, len, "%08x_%s+%" BFD_VMA_FMT "x",
+	snprintf (stub_name, len, "%08x_%s+%" PRIx64 "x",
 		  (unsigned int) input_section->id,
 		  hash->root.root.root.string,
 		  rel->r_addend);
@@ -756,7 +756,7 @@ elfNN_kvx_stub_name (const asection *input_section,
       len = 8 + 1 + 8 + 1 + 8 + 1 + 16 + 1;
       stub_name = bfd_malloc (len);
       if (stub_name != NULL)
-	snprintf (stub_name, len, "%08x_%x:%x+%" BFD_VMA_FMT "x",
+	snprintf (stub_name, len, "%08x_%x:%x+%" PRIx64 "x",
 		  (unsigned int) input_section->id,
 		  (unsigned int) sym_sec->id,
 		  (unsigned int) ELFNN_R_SYM (rel->r_info),
