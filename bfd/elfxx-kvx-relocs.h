@@ -18,7 +18,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pcrel_offset */
   HOWTO (R_KVX_16,			/* type */
 	 0,				/* rightshift */
-	 1,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 16,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -31,7 +31,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_32,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 32,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -44,7 +44,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_64,			/* type */
 	 0,				/* rightshift */
-	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 8,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 64,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -57,7 +57,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S16_PCREL,			/* type */
 	 0,				/* rightshift */
-	 1,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 16,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -70,7 +70,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_PCREL17,			/* type */
 	 2,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 3,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 17,				/* bitsize */
 	 true,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -83,7 +83,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_PCREL27,			/* type */
 	 2,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -96,7 +96,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_32_PCREL,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 32,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -109,7 +109,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S37_PCREL_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 true,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -122,7 +122,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S37_PCREL_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -135,7 +135,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S43_PCREL_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 true,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -148,7 +148,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S43_PCREL_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -161,7 +161,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S43_PCREL_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -174,7 +174,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S64_PCREL_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 true,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -187,7 +187,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S64_PCREL_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -200,7 +200,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S64_PCREL_EX27,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -213,7 +213,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_64_PCREL,			/* type */
 	 0,				/* rightshift */
-	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 8,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 64,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -226,7 +226,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S16,			/* type */
 	 0,				/* rightshift */
-	 1,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 16,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -239,7 +239,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S32_LO5,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 5,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -252,7 +252,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S32_UP27,			/* type */
 	 5,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -265,7 +265,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -278,7 +278,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -291,7 +291,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_GOTOFF_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -304,7 +304,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_GOTOFF_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -317,7 +317,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_GOTOFF_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -330,7 +330,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_GOTOFF_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -343,7 +343,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_GOTOFF_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -356,7 +356,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_32_GOTOFF,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 32,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -369,7 +369,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_64_GOTOFF,			/* type */
 	 0,				/* rightshift */
-	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 8,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 64,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -382,7 +382,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_32_GOT,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 32,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -395,7 +395,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_GOT_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -408,7 +408,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_GOT_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -421,7 +421,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_GOT_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -434,7 +434,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_GOT_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -447,7 +447,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_GOT_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -460,7 +460,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_64_GOT,			/* type */
 	 0,				/* rightshift */
-	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 8,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 64,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -473,7 +473,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_GLOB_DAT,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 32,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -486,7 +486,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_COPY,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 32,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -499,7 +499,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_JMP_SLOT,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 32,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -512,7 +512,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_RELATIVE,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 32,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -525,7 +525,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -538,7 +538,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -551,7 +551,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -564,7 +564,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S64_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -577,7 +577,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S64_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -590,7 +590,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S64_EX27,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -603,7 +603,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_GOTADDR_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 true,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -616,7 +616,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S37_GOTADDR_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -629,7 +629,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S43_GOTADDR_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 true,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -642,7 +642,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S43_GOTADDR_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -655,7 +655,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S43_GOTADDR_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -668,7 +668,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S64_GOTADDR_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 true,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -681,7 +681,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S64_GOTADDR_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -694,7 +694,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_S64_GOTADDR_EX27,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 true,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -707,7 +707,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 true),			/* pc_offset */
   HOWTO (R_KVX_64_DTPMOD,			/* type */
 	 0,				/* rightshift */
-	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 8,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 64,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -720,7 +720,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_64_DTPOFF,			/* type */
 	 0,				/* rightshift */
-	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 8,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 64,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -733,7 +733,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_DTPOFF_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -746,7 +746,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_DTPOFF_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -759,7 +759,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_DTPOFF_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -772,7 +772,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_DTPOFF_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -785,7 +785,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_DTPOFF_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -798,7 +798,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_GD_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -811,7 +811,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_GD_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -824,7 +824,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_GD_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -837,7 +837,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_GD_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -850,7 +850,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_GD_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -863,7 +863,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_LD_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -876,7 +876,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_LD_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -889,7 +889,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_LD_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -902,7 +902,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_LD_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -915,7 +915,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_LD_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -928,7 +928,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_64_TPOFF,			/* type */
 	 0,				/* rightshift */
-	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 8,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 64,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -941,7 +941,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_IE_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -954,7 +954,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_IE_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -967,7 +967,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_IE_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -980,7 +980,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_IE_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -993,7 +993,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_IE_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -1006,7 +1006,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_LE_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -1019,7 +1019,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S37_TLS_LE_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -1032,7 +1032,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_LE_LO10,			/* type */
 	 0,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 10,				/* bitsize */
 	 false,				/* pc_relative */
 	 6,				/* bitpos (bit field offset) */
@@ -1045,7 +1045,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_LE_UP27,			/* type */
 	 10,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 27,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -1058,7 +1058,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_S43_TLS_LE_EX6,			/* type */
 	 37,				/* rightshift */
-	 2,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 4,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 6,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
@@ -1071,7 +1071,7 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 false),			/* pc_offset */
   HOWTO (R_KVX_8,			/* type */
 	 0,				/* rightshift */
-	 0,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
+	 1,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
 	 8,				/* bitsize */
 	 false,				/* pc_relative */
 	 0,				/* bitpos (bit field offset) */
