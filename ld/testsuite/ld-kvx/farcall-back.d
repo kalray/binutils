@@ -28,16 +28,15 @@ Disassembly of section .text:
 .* <_back>:
     .*:	00 00 d0 0f                                     	ret ;;
 
-.* <__bar2_veneer>:
-    .*:	00 .. 40 e0 08 00 20 00                         	make \$r16 = .* \(0x.*\);;
-
-    .*:	10 00 d8 0f                                     	igoto \$r16;;
-
 .* <__bar3_veneer>:
     .*:	00 .. 40 e0 0c 00 20 00                         	make \$r16 = .* \(0x.*\);;
 
     .*:	10 00 d8 0f                                     	igoto \$r16;;
 
+.* <__bar2_veneer>:
+    .*:	00 .. 40 e0 08 00 20 00                         	make \$r16 = .* \(0x.*\);;
+
+    .*:	10 00 d8 0f                                     	igoto \$r16;;
 
 .* <__bar1_veneer>:
     .*:	00 .. 40 e0 04 00 20 00                         	make \$r16 = .* \(0x.*\);;

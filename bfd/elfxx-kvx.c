@@ -73,8 +73,6 @@ _bfd_kvx_elf_put_addend (bfd *abfd,
   size = bfd_get_reloc_size (howto);
   switch (size)
     {
-    case 0:
-      return status;
     case 2:
       contents = bfd_get_16 (abfd, address);
       break;

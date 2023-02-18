@@ -3206,9 +3206,9 @@ static symbolS *last_proc_sym = NULL;
 static int update_last_proc_sym = 0;
 
 void
-kvx_frob_label (symbolS * sym)
+kvx_check_label (symbolS * sym)
 {
-  if (input_line_pointer[1] == ':')	/* second colon => global symbol */
+  if (*input_line_pointer == ':')	/* second colon => global symbol */
     {
       S_SET_EXTERNAL (sym);
       input_line_pointer++;

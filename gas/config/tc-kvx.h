@@ -56,8 +56,8 @@ extern void kvx_handle_align (fragS *);
 #define REPEAT_CONS_EXPRESSIONS
 #define TC_INIT_FIX_DATA(FIXP) ((FIXP)->tc_fix_data = NULL)
 
-#define tc_frob_label(sym) kvx_frob_label(sym)
-extern void kvx_frob_label (struct symbol *);
+#define tc_check_label(sym) kvx_check_label(sym)
+extern void kvx_check_label (struct symbol *);
 /* listings */
 
 

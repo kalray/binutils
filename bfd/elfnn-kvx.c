@@ -154,7 +154,7 @@ elfNN_kvx_bfd_reloc_from_howto (reloc_howto_type *howto)
 /* Given R_TYPE, return the bfd internal relocation enumerator.  */
 
 static bfd_reloc_code_real_type
-elfNN_kvx_bfd_reloc_from_type (bfd *abfd, unsigned int r_type)
+elfNN_kvx_bfd_reloc_from_type (bfd *abfd ATTRIBUTE_UNUSED, unsigned int r_type)
 {
   static bool initialized_p = false;
   /* Indexed by R_TYPE, values are offsets in the howto_table.  */
@@ -173,10 +173,8 @@ elfNN_kvx_bfd_reloc_from_type (bfd *abfd, unsigned int r_type)
   /* PR 17512: file: b371e70a.  */
   if (r_type >= R_KVX_end)
     {
-      _bfd_error_handler (_("%pB: unsupported relocation type %#x"),
-			  abfd, r_type);
       bfd_set_error (bfd_error_bad_value);
-      return BFD_RELOC_KVX_NONE;
+      return BFD_RELOC_KVX_RELOC_END;
     }
 
   return BFD_RELOC_KVX_RELOC_START + offsets[r_type];
