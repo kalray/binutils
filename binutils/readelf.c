@@ -4349,6 +4349,8 @@ get_machine_flags (Filedata * filedata, unsigned e_flags, unsigned e_machine)
 	    strcat (buf, ", Kalray VLIW kv3-1");
 	  else if ((e_flags & (ELF_KVX_CORE_MAJOR_MASK | ELF_KVX_CORE_MINOR_MASK)) == ELF_KVX_CORE_KV3_2)
 	    strcat (buf, ", Kalray VLIW kv3-2");
+	  else if ((e_flags & (ELF_KVX_CORE_MAJOR_MASK | ELF_KVX_CORE_MINOR_MASK)) == ELF_KVX_CORE_KV4_1)
+	    strcat (buf, ", Kalray VLIW kv4-1");
 	  else
 	    strcat (buf, ", unknown KVX MPPA");
 	  break;
