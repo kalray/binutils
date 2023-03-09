@@ -75,20 +75,30 @@ scan (const struct bfd_arch_info *info, const char *string)
           0                                            \
 }
 
+
+const bfd_arch_info_type bfd_kv4_1_usr_arch =
+  N (64 , bfd_mach_kv4_1_usr , "kvx:kv4-1:usr" , false , NULL);
+
 const bfd_arch_info_type bfd_kv3_2_usr_arch =
-  N (64, bfd_mach_kv3_2_usr,  "kvx:kv3-2:usr", false, NULL);
+  N (64 , bfd_mach_kv3_2_usr , "kvx:kv3-2:usr" , false , &bfd_kv4_1_usr_arch);
 
 const bfd_arch_info_type bfd_kv3_1_usr_arch =
-  N (64, bfd_mach_kv3_1_usr,  "kvx:kv3-1:usr", false, & bfd_kv3_2_usr_arch);
+  N (64 , bfd_mach_kv3_1_usr , "kvx:kv3-1:usr" , false , &bfd_kv3_2_usr_arch);
+
+const bfd_arch_info_type bfd_kv4_1_64_arch =
+  N (64 , bfd_mach_kv4_1_64  , "kvx:kv4-1:64"  , false , &bfd_kv3_1_usr_arch);
 
 const bfd_arch_info_type bfd_kv3_2_64_arch =
-  N (64, bfd_mach_kv3_2_64,   "kvx:kv3-2:64",  false, & bfd_kv3_1_usr_arch);
+  N (64 , bfd_mach_kv3_2_64  , "kvx:kv3-2:64"  , false , &bfd_kv4_1_64_arch);
 
 const bfd_arch_info_type bfd_kv3_1_64_arch =
-  N (64, bfd_mach_kv3_1_64,   "kvx:kv3-1:64",  false, & bfd_kv3_2_64_arch);
+  N (64 , bfd_mach_kv3_1_64  , "kvx:kv3-1:64"  , false , &bfd_kv3_2_64_arch);
+
+const bfd_arch_info_type bfd_kv4_1_arch =
+  N (32 , bfd_mach_kv4_1     , "kvx:kv4-1"     , false , &bfd_kv3_1_64_arch);
 
 const bfd_arch_info_type bfd_kv3_2_arch =
-  N (32, bfd_mach_kv3_2,      "kvx:kv3-2",     false, & bfd_kv3_1_64_arch);
+  N (32 , bfd_mach_kv3_2     , "kvx:kv3-2"     , false , &bfd_kv4_1_arch);
 
 const bfd_arch_info_type bfd_kvx_arch =
-  N (32, bfd_mach_kv3_1,      "kvx:kv3-1",     true, & bfd_kv3_2_arch);
+  N (32 , bfd_mach_kv3_1     , "kvx:kv3-1"     , true  , &bfd_kv3_2_arch);

@@ -54,7 +54,7 @@ struct token_list
 
 void free_token_list (struct token_list *tok_list);
 struct token_list* parse (struct token_s tok);
-void setup (int version, int allow_all_sfr);
+void setup (int core, int allow_all_sfr);
 void cleanup (void);
 
 #define D(args...) do { if(debug) fprintf(args); } while(0)
@@ -2546,14 +2546,15 @@ kvx_set_cpu (void)
     {
     case ELF_KVX_CORE_KV3_1:
       kvx_bfd_mach = kvx_arch_size == 32 ? bfd_mach_kv3_1 : bfd_mach_kv3_1_64;
-      setup (1, allow_all_sfr);
+      setup (ELF_KVX_CORE_KV3_1, allow_all_sfr);
       break;
     case ELF_KVX_CORE_KV3_2:
       kvx_bfd_mach = kvx_arch_size == 32 ? bfd_mach_kv3_2 : bfd_mach_kv3_2_64;
-      setup (2, allow_all_sfr);
+      setup (ELF_KVX_CORE_KV3_2, allow_all_sfr);
       break;
     case ELF_KVX_CORE_KV4_1:
       kvx_bfd_mach = kvx_arch_size == 32 ? bfd_mach_kv4_1 : bfd_mach_kv4_1_64;
+      setup (ELF_KVX_CORE_KV4_1, allow_all_sfr);
       break;
     default:
       as_fatal ("Unknown elf core: 0x%x",

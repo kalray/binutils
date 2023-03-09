@@ -4,6 +4,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdarg.h>
+#include <elf/kvx_elfids.h>
 #include "kvx-parse.h"
 
 /* This is bad! */
@@ -805,14 +806,23 @@ parse (struct token_s tok)
 }
 
 void
-setup (int version, int allow_all_sfr)
+setup (int core, int allow_all_sfr)
 {
-  if (version == 1)
+  switch (core)
+  {
+  case ELF_KVX_CORE_KV3_1:
     setup_kv3_v1 (allow_all_sfr);
-  else if (version == 2)
+    break;
+  case ELF_KVX_CORE_KV3_2:
     setup_kv3_v2 (allow_all_sfr);
-  else
+    break;
+  case ELF_KVX_CORE_KV4_1:
+    setup_kv4_v1 (allow_all_sfr);
+    break;
+  default:
+    as_bad ("Unknown architecture");
     abort ();
+  }
 
   for (int i = 0; env.token_classes->insn_classes[i].class_values ; ++i)
     env.insns =

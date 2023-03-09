@@ -2867,9 +2867,11 @@ elfNN_kvx_object_p (bfd *abfd)
 #if ARCH_SIZE == 64
 	case ELF_KVX_CORE_KV3_1 : e_set = bfd_mach_kv3_1_64; break;
 	case ELF_KVX_CORE_KV3_2 : e_set = bfd_mach_kv3_2_64; break;
+	case ELF_KVX_CORE_KV4_1 : e_set = bfd_mach_kv4_1_64; break;
 #else
 	case ELF_KVX_CORE_KV3_1 : e_set = bfd_mach_kv3_1; break;
 	case ELF_KVX_CORE_KV3_2 : e_set = bfd_mach_kv3_2; break;
+	case ELF_KVX_CORE_KV4_1 : e_set = bfd_mach_kv4_1; break;
 #endif
 	default:
 	  (*_bfd_error_handler)(_("%s: Bad ELF id: `%d'"),
