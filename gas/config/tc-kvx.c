@@ -3207,14 +3207,8 @@ static symbolS *last_proc_sym = NULL;
 static int update_last_proc_sym = 0;
 
 void
-kvx_check_label (symbolS * sym)
+kvx_frob_label (symbolS *sym)
 {
-  if (*input_line_pointer == ':')	/* second colon => global symbol */
-    {
-      S_SET_EXTERNAL (sym);
-      input_line_pointer++;
-    }
-
   if (update_last_proc_sym)
     {
       last_proc_sym = sym;
@@ -3231,6 +3225,16 @@ kvx_check_label (symbolS * sym)
     }
 
   dwarf2_emit_label (sym);
+}
+
+void
+kvx_check_label (symbolS *sym)
+{
+  if (*input_line_pointer == ':')	/* second colon => global symbol */
+    {
+      S_SET_EXTERNAL (sym);
+      input_line_pointer++;
+    }
 }
 
 /* Emit single bundle nop. This is needed by .nop asm directive
