@@ -1159,6 +1159,7 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
 	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_PGR) case RegClass_kvx_quadReg:
 	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_QGR) case RegClass_kvx_systemReg:
 	case RegClass_kv3_v2_systemReg:
+	case RegClass_kv4_v1_systemReg:
 	  if (!allow_all_sfr)
 	    {
 	      /* If option all-sfr not set, doest not match systemReg for SET/GET/WFX: used only for HW validation. */
@@ -1167,15 +1168,20 @@ match_operands (const kvxopc_t * op, const expressionS * tok,
 	  /* fallthrough */
 	case RegClass_kvx_aloneReg:
 	case RegClass_kv3_v2_aloneReg:
+	case RegClass_kv4_v1_aloneReg:
 	case RegClass_kvx_onlyraReg:
 	case RegClass_kvx_onlyfxReg:
 	case RegClass_kv3_v2_onlyfxReg:
+	case RegClass_kv4_v1_onlyfxReg:
 	case RegClass_kvx_onlygetReg:
 	case RegClass_kv3_v2_onlygetReg:
+	case RegClass_kv4_v1_onlygetReg:
 	case RegClass_kvx_onlysetReg:
 	case RegClass_kv3_v2_onlysetReg:
+	case RegClass_kv4_v1_onlysetReg:
 	case RegClass_kvx_onlyswapReg:
 	case RegClass_kv3_v2_onlyswapReg:
+	case RegClass_kv4_v1_onlyswapReg:
 	MATCH_KVX_REGFILE (tok[jj], IS_KVX_REGFILE_SFR)
 	case RegClass_kvx_coproReg:
 	case RegClass_kvx_coproReg0M4:
@@ -2001,17 +2007,23 @@ insn_syntax (kvxopc_t * op, char *buf, int buf_size)
 	  break;
 	case RegClass_kvx_systemReg:
 	case RegClass_kv3_v2_systemReg:
+	case RegClass_kv4_v1_systemReg:
 	case RegClass_kvx_aloneReg:
 	case RegClass_kv3_v2_aloneReg:
+	case RegClass_kv4_v1_aloneReg:
 	case RegClass_kvx_onlyraReg:
 	case RegClass_kvx_onlyfxReg:
 	case RegClass_kv3_v2_onlyfxReg:
+	case RegClass_kv4_v1_onlyfxReg:
 	case RegClass_kvx_onlygetReg:
 	case RegClass_kv3_v2_onlygetReg:
+	case RegClass_kv4_v1_onlygetReg:
 	case RegClass_kvx_onlysetReg:
 	case RegClass_kv3_v2_onlysetReg:
+	case RegClass_kv4_v1_onlysetReg:
 	case RegClass_kvx_onlyswapReg:
 	case RegClass_kv3_v2_onlyswapReg:
+	case RegClass_kv4_v1_onlyswapReg:
 	  chars += snprintf (&buf[chars], buf_size - chars, "srf");
 	  break;
 	case RegClass_kvx_coproReg:
