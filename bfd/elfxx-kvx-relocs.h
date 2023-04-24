@@ -2,7 +2,6 @@
 #ifdef KVX_KV3_V1_KV3_V2_KV4_V1
 static reloc_howto_type elf_kvx_howto_table[] =
 {
-  EMPTY_HOWTO(0),
   HOWTO (R_KVX_NONE,			/* type */
 	 0,				/* rightshift */
 	 0,				/* size (0 = byte, 1 = short, 2 = long, 3 = invalid, 4 = 64bits, 8 = 128bits) */
@@ -1082,7 +1081,6 @@ static reloc_howto_type elf_kvx_howto_table[] =
 	 0x0,				/* src_mask */
 	 0xff,			/* dst_mask */
 	 false),			/* pc_offset */
-  EMPTY_HOWTO(0),
 };
 
 #endif /* KVX_KV3_V1_KV3_V2_KV4_V1 */
