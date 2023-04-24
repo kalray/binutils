@@ -3,7 +3,7 @@
    Contributed by ARM Ltd.
 
    Copyright (C) 2019 Kalray
-   
+
    This file is part of BFD, the Binary File Descriptor library.
 
    This program is free software; you can redistribute it and/or modify
@@ -68,8 +68,7 @@
    || (R_TYPE) == BFD_RELOC_KVX_S43_TLS_LD_EX6	\
    )
 
-#define IS_KVX_TLS_RELAX_RELOC(R_TYPE)			\
-  0
+#define IS_KVX_TLS_RELAX_RELOC(R_TYPE) 0
 
 #define ELIMINATE_COPY_RELOCS 0
 
@@ -140,15 +139,13 @@ static const uint32_t elfNN_kvx_long_branch_stub[] =
 static bfd_reloc_code_real_type
 elfNN_kvx_bfd_reloc_from_howto (reloc_howto_type *howto)
 {
-  const int size
-    = (int) ARRAY_SIZE (elf_kvx_howto_table);
-  const ptrdiff_t offset
-    = howto - elf_kvx_howto_table;
+  const int size = (int) ARRAY_SIZE (elf_kvx_howto_table);
+  const ptrdiff_t offset = howto - elf_kvx_howto_table;
 
-  if (offset > 0 && offset < size - 1)
-    return BFD_RELOC_KVX_RELOC_START + offset;
+  if (offset >= 0 && offset < size)
+    return BFD_RELOC_KVX_RELOC_START + offset + 1;
 
-  return BFD_RELOC_KVX_RELOC_START;
+  return BFD_RELOC_KVX_RELOC_START + 1;
 }
 
 /* Given R_TYPE, return the bfd internal relocation enumerator.  */
@@ -164,7 +161,7 @@ elfNN_kvx_bfd_reloc_from_type (bfd *abfd ATTRIBUTE_UNUSED, unsigned int r_type)
     {
       unsigned int i;
 
-      for (i = 1; i < ARRAY_SIZE (elf_kvx_howto_table) - 1; ++i)
+      for (i = 0; i < ARRAY_SIZE (elf_kvx_howto_table); ++i)
         offsets[elf_kvx_howto_table[i].type] = i;
 
       initialized_p = true;
@@ -177,7 +174,7 @@ elfNN_kvx_bfd_reloc_from_type (bfd *abfd ATTRIBUTE_UNUSED, unsigned int r_type)
       return BFD_RELOC_KVX_RELOC_END;
     }
 
-  return BFD_RELOC_KVX_RELOC_START + offsets[r_type];
+  return (BFD_RELOC_KVX_RELOC_START + 1) + offsets[r_type];
 }
 
 struct elf_kvx_reloc_map
@@ -211,18 +208,16 @@ elfNN_kvx_howto_from_bfd_reloc (bfd_reloc_code_real_type code)
   unsigned int i;
 
   /* Convert bfd generic reloc to KVX-specific reloc.  */
-  if (code < BFD_RELOC_KVX_RELOC_START
-      || code > BFD_RELOC_KVX_RELOC_END)
-    for (i = 0; i < ARRAY_SIZE (elf_kvx_reloc_map); i++)
+  if (code < BFD_RELOC_KVX_RELOC_START || code > BFD_RELOC_KVX_RELOC_END)
+    for (i = 0; i < ARRAY_SIZE (elf_kvx_reloc_map) ; i++)
       if (elf_kvx_reloc_map[i].from == code)
 	{
 	  code = elf_kvx_reloc_map[i].to;
 	  break;
 	}
 
-  if (code > BFD_RELOC_KVX_RELOC_START
-      && code < BFD_RELOC_KVX_RELOC_END)
-      return &elf_kvx_howto_table[code - BFD_RELOC_KVX_RELOC_START];
+  if (code > BFD_RELOC_KVX_RELOC_START && code < BFD_RELOC_KVX_RELOC_END)
+      return &elf_kvx_howto_table[code - (BFD_RELOC_KVX_RELOC_START + 1)];
 
   return NULL;
 }
@@ -288,7 +283,7 @@ elfNN_kvx_reloc_name_lookup (bfd *abfd ATTRIBUTE_UNUSED,
 {
   unsigned int i;
 
-  for (i = 1; i < ARRAY_SIZE (elf_kvx_howto_table) - 1; ++i)
+  for (i = 0; i < ARRAY_SIZE (elf_kvx_howto_table); ++i)
     if (elf_kvx_howto_table[i].name != NULL
 	&& strcasecmp (elf_kvx_howto_table[i].name, r_name) == 0)
       return &elf_kvx_howto_table[i];
