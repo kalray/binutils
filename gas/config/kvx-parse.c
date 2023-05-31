@@ -20,8 +20,94 @@ struct node_s {
   int nb_succs;
 };
 
-#define TOKEN_NAME(tok) ((tok) == -1 ? "unknown token" : env.tokens_names[(tok) - 1])
+
 
+static int
+has_relocation_of_size (const struct kvx_reloc **relocs)
+{
+  const int symbol_size = env.params.arch_size;
+
+  /*
+   * This is a bit hackish: in case of PCREL here, it means we are
+   * trying to fit a symbol in the insn, not a pseudo function
+   * (eg. @gotaddr, ...).
+   * We don't want to use a GOTADDR (pcrel) in any insn that tries to fit a symbol.
+   * One way to filter out these is to use the following assumption:
+   * - Any insn that accepts a pcrel immediate has only one immediate variant.
+   * Example:
+   * - call accepts only a pcrel27 -> allow pcrel reloc here
+   * - cb accepts only a pcrel17 -> allow pcrel reloc here
+   * - addd accepts signed10,37,64 -> deny pcrel reloc here
+   *
+   * The motivation here is to prevent the function to allow a 64bits
+   * symbol in a 37bits variant of any ALU insn (that would match with
+   * the GOTADDR 37bits reloc switch case below)
+   */
+
+  if (!relocs)
+    return 0;
+
+  struct kvx_reloc **relocs_it = (struct kvx_reloc **) relocs;
+  int has_only_one_p = relocs[0] && !relocs[1];
+
+  while (*relocs_it)
+    {
+      switch ((*relocs_it)->relative)
+      {
+	/* An absolute reloc needs a full size symbol reloc */
+	case KVX_REL_ABS:
+	  if ((*relocs_it)->bitsize >= symbol_size)
+	    return 1;
+	  break;
+
+	  /* Most likely relative jumps. Let something else check size is
+	     OK. We don't currently have several relocations for such insns */
+	case KVX_REL_PC:
+	  if (has_only_one_p)
+	    return 1;
+	  break;
+
+	  /* These relocations should be handled elsewhere with pseudo functions */
+	case KVX_REL_GP:
+	case KVX_REL_TP:
+	case KVX_REL_GOT:
+	case KVX_REL_BASE:
+	  break;
+      }
+      relocs_it++;
+    }
+
+  return 0;
+}
+
+struct pseudo_func *
+kvx_get_pseudo_func2 (symbolS * sym, struct kvx_reloc **relocs);
+struct pseudo_func *
+kvx_get_pseudo_func2 (symbolS *sym, struct kvx_reloc **relocs)
+{
+  if (!relocs)
+    return NULL;
+
+  struct kvx_reloc **relocs_it = (struct kvx_reloc **) relocs;
+
+  for (int i = 0; i < 26; i++)
+  {
+    if (sym == kvx_core_info->pseudo_funcs[i].sym)
+    {
+      relocs_it = relocs;
+      while (*relocs_it)
+	{
+	  if (*relocs_it == kvx_core_info->pseudo_funcs[i].pseudo_relocs.kreloc
+	      && (env.params.arch_size == (int) kvx_core_info->pseudo_funcs[i].pseudo_relocs.avail_modes
+		|| kvx_core_info->pseudo_funcs[i].pseudo_relocs.avail_modes == PSEUDO_ALL))
+	    return &kvx_core_info->pseudo_funcs[i];
+	  relocs_it++;
+	}
+    }
+  }
+
+  return NULL;
+}
 
 /* Trie */
 
@@ -295,10 +381,10 @@ print_token (struct token_s token, char *buf, int bufsz)
     buf[i] = 0;
 }
 
-static int
+static long long
 promote_token (struct token_s tok)
 {
-  int cur_class = tok.class_id & -tok.class_id;
+  long long cur_class = tok.class_id & -tok.class_id;
   switch (tok.category)
     {
       case CAT_REGISTER:
@@ -307,7 +393,20 @@ promote_token (struct token_s tok)
 	  ? tok.class_id ^ cur_class
 	  : tok.class_id;
       case CAT_IMMEDIATE:
-	return env.promote_immediate (tok.class_id);
+	{
+	  expressionS exp = { 0 };
+	  char *ilp_save = input_line_pointer;
+	  input_line_pointer = tok.insn + tok.begin;
+	  expression (&exp);
+	  input_line_pointer = ilp_save;
+	  long long new_class_id = tok.class_id;
+	  long long old_class_id = tok.class_id;
+	  while ((new_class_id = env.promote_immediate (old_class_id)) != old_class_id
+	      && ((exp.X_op == O_symbol && !has_relocation_of_size (str_hash_find (env.reloc_hash, TOKEN_NAME (new_class_id))))
+		|| (exp.X_op == 64 && !kvx_get_pseudo_func2 (exp.X_op_symbol, str_hash_find (env.reloc_hash, TOKEN_NAME (new_class_id))))))
+	    old_class_id = new_class_id;
+	  return new_class_id;
+	}
       default:
 	return tok.class_id;
     }
@@ -329,15 +428,17 @@ is_insn (const struct token_s *token, struct token_class *classes)
   return res;
 }
 
-static int
+static long long
 get_token_class (struct token_s *token, struct token_classes *classes, int insn_p, int modifier_p)
 {
   int cur = 0;
   int found = 0;
   int tok_sz = token->end - token->begin;
   char *tok = token->insn + token->begin;
+  expressionS exp = {0};
 
-  token->val = -1;
+  token->val = 0;
+  int token_val_p = 0;
 
   struct token_class *class;
   if (tok[0] == '$')
@@ -354,6 +455,12 @@ get_token_class (struct token_s *token, struct token_classes *classes, int insn_
     {
       class = classes->imm_classes;
       token->category = CAT_IMMEDIATE;
+      char *ilp_save = input_line_pointer;
+      input_line_pointer = tok;
+      expression (&exp);
+      token->val = exp.X_add_number;
+      token_val_p = 1;
+      input_line_pointer = ilp_save;
     }
   else if (tok_sz == 1 && is_delim (tok[0]))
     {
@@ -367,17 +474,45 @@ get_token_class (struct token_s *token, struct token_classes *classes, int insn_
     }
   else
     {
-      class = classes->imm_classes; /* symbol */
+      /* We are in fact dealing with a symbol.  */
+      class = classes->imm_classes;
       token->category = CAT_IMMEDIATE;
+
+      char *ilp_save = input_line_pointer;
+      input_line_pointer = tok;
+      expression (&exp);
+
+      /* If the symbol can be resolved easily takes it value now.  Otherwise it
+         means that is either a symbol which will need a real relocation or an
+         internal fixup (ie, a pseudo-function, or a computation on symbols).  */
+      if (exp.X_op != O_symbol && exp.X_op != 64)
+	{
+	  token->val = exp.X_add_number;
+	  token_val_p = 1;
+	}
+
+      input_line_pointer = ilp_save;
     }
 
   if (class == classes->imm_classes)
     {
-      unsigned val = (strtoul (tok + (tok[0] == '-') + (tok[0] == '+'), NULL, 0));
-      int len = 8 * sizeof (val) - __builtin_clzl (val) + (tok[0] == '-');
-      for (; class[cur].class_id != -1 && class[cur].sz < len; ++cur)
+      unsigned long long uval = token_val_p
+	? token->val
+	: strtoull (tok + (tok[0] == '-') + (tok[0] == '+'), NULL, 0);
+      long long val = uval;
+      long long pval = val < 0 ? -val : val;
+      int neg_power2_p = val < 0 && !(pval & (pval - 1));
+      unsigned int len = 8 * sizeof (pval) - __builtin_clzll (pval);
+      for (; class[cur].class_id != -1
+	  && ((unsigned int) (class[cur].sz < 0 ? - class[cur].sz - !neg_power2_p : class[cur].sz) < len
+	      || (exp.X_op == O_symbol && !has_relocation_of_size (str_hash_find (env.reloc_hash, TOKEN_NAME (class[cur].class_id))))
+	      || (exp.X_op == 64 && !kvx_get_pseudo_func2 (exp.X_op_symbol, str_hash_find (env.reloc_hash, TOKEN_NAME (class[cur].class_id)))))
+	  ; ++cur)
 	;
-      token->val = (tok[0] == '-' ? -1 : 1) * val;
+
+      token->val = uval;
+//      if (exp.X_op == 64)
+//	  token->val = (uintptr_t) !kvx_get_pseudo_func2 (exp.X_op_symbol, str_hash_find (env.reloc_hash, TOKEN_NAME (class[cur].class_id)));
       found = 1;
     }
   else
@@ -402,8 +537,8 @@ get_token_class (struct token_s *token, struct token_classes *classes, int insn_
       return token->class_id = classes->imm_classes[0].class_id;
     }
 
-#define unset(w, rg) ((w) & (~(1 << ((rg) - env.fst_reg))))
-  if (class == classes->reg_classes && !env.allow_all_sfr)
+#define unset(w, rg) ((w) & (~(1ULL << ((rg) - env.fst_reg))))
+  if (class == classes->reg_classes && !env.opts.allow_all_sfr)
     return token->class_id = unset (class[cur].class_id, env.sys_reg);
 #undef unset
 
@@ -419,7 +554,7 @@ read_token (struct token_s *tok)
   int *begin = &tok->begin;
   int *end = &tok->end;
 
-  // Eat up all leading spaces.
+  /* Eat up all leading spaces.  */
   while (str[*begin] && (str[*begin] == ' ' || str[*begin] == '\n'))
     *begin += 1;
 
@@ -453,6 +588,7 @@ read_token (struct token_s *tok)
 	*end += 1;
 
     }
+
   get_token_class (tok, env.token_classes, insn_p, modifier_p);
   return 1;
 }
@@ -464,11 +600,11 @@ rule_expect_error (int rule_id, char *buf, int bufsz __attribute__((unused)))
   int i = 0;
   int pos = 0;
   int comma = 0;
-  pos += sprintf (buf + pos, "error: expected one of [");
+  pos += sprintf (buf + pos, "expected one of [");
   struct steering_rule *rules = env.rules[rule_id].rules;
   while (rules[i].steering != -1)
     {
-      if ((env.allow_all_sfr || rules[i].steering != env.sys_reg)
+      if ((env.opts.allow_all_sfr || rules[i].steering != env.sys_reg)
 	  && rules[i].steering != -3)
 	{
 	  pos += sprintf (buf + pos, "%s%s", comma ? ", " : "", TOKEN_NAME (rules[i].steering));
@@ -479,16 +615,6 @@ rule_expect_error (int rule_id, char *buf, int bufsz __attribute__((unused)))
   pos += sprintf (buf + pos, "].");
 }
 
-struct token_list
-{
-  char *tok;
-  int val;
-  int class_id;
-  int loc;
-  struct token_list *next;
-  int len;
-};
-
 static struct token_list *
 create_token (struct token_s tok, int len, int loc)
 {
@@ -498,13 +624,14 @@ create_token (struct token_s tok, int len, int loc)
   memcpy (tl->tok, tok.insn + tok.begin, tok_sz * sizeof (char));
   tl->val = tok.val;
   tl->class_id = tok.class_id;
+  tl->category = tok.category;
   tl->next = NULL;
   tl->len = len;
   tl->loc = loc;
   return tl;
 }
 
-static void
+void
 print_token_list (struct token_list *lst)
 {
   struct token_list *cur = lst;
@@ -582,7 +709,7 @@ free_error_list (struct error_list *l)
 static int
 CLASS_ID (struct token_s tok)
 {
-  int offset = __builtin_ctz (tok.class_id & -tok.class_id);
+  int offset = __builtin_ctzll (tok.class_id & -tok.class_id);
   switch (tok.category)
   {
     case CAT_REGISTER:
@@ -662,7 +789,7 @@ retry:;
     parse_with_restarts (tok, cur_rule[i].jump_target, rules, errs);
   /* While parsing fails but there is hope since the current token can be
      promoted.  */
-  while (!fst_part && tok.class_id != (int) promote_token (tok))
+  while (!fst_part && tok.class_id != (long long) promote_token (tok))
     {
       free_token_list (fst_part);
       tok.class_id = promote_token (tok);
@@ -712,7 +839,7 @@ retry:;
 
   printf_debug (1, "snd_part: Trying to match: %s\n", TOKEN_NAME (CLASS_ID (tok)));
   struct token_list *snd_part = parse_with_restarts (tok, cur_rule[i].stack_it, rules, errs);
-  while (!snd_part && tok.class_id != (int) promote_token (tok))
+  while (!snd_part && tok.class_id != (long long) promote_token (tok))
     {
       tok.class_id = promote_token (tok);
       printf_debug (1, ">> Restart with %s?\n", TOKEN_NAME (CLASS_ID (tok)));
@@ -775,49 +902,53 @@ parse (struct token_s tok)
       if (error_code != -1)
 	{
 	  char buf[256] = { 0 };
-	  const char * msg = "Unexpected token when parsing %s.\n";
+	  const char * msg = "Unexpected token when parsing %s.";
 	    for (int i = 0; i < (int) (strlen (msg) + error_char + 1 - 4) ; ++i)
 	      buf[i] = ' ';
 	    buf[strlen (msg) + error_char + 1 - 4] = '^';
 	  as_bad (msg, tok.insn);
-	  as_bad ("%s", buf);
-	  char err_buf[10000] = { 0 };
-	  rule_expect_error (error_code, err_buf, 10000);
-	  as_bad ("%s", err_buf);
+	  if (env.opts.diagnostics)
+	    {
+	      as_bad ("%s", buf);
+	      char err_buf[10000] = { 0 };
+	      rule_expect_error (error_code, err_buf, 10000);
+	      as_bad ("%s", err_buf);
+	    }
 	}
       else
 	{
 	  char buf[256] = { 0 };
-	  const char * msg = "Extra token when parsing %s.\n";
+	  const char * msg = "Extra token when parsing %s.";
 	    for (int i = 0; i < (int) (strlen (msg) + error_char + 1 - 4) ; ++i)
 	      buf[i] = ' ';
 	    buf[strlen (msg) + error_char + 1 - 4] = '^';
 	  as_bad (msg, tok.insn);
-	  as_bad ("%s\n", buf);
+	  if (env.opts.diagnostics)
+	    as_bad ("%s\n", buf);
 	}
     }
   else
     {
       printf_debug (1, "[PASS] Successfully matched %s\n", tok.insn);
-      print_token_list (tok_list);
+//      print_token_list (tok_list);
 //      free_token_list (tok_list);
     }
   return tok_list;
 }
 
 void
-setup (int core, int allow_all_sfr)
+setup (int core)
 {
   switch (core)
   {
   case ELF_KVX_CORE_KV3_1:
-    setup_kv3_v1 (allow_all_sfr);
+    setup_kv3_v1 ();
     break;
   case ELF_KVX_CORE_KV3_2:
-    setup_kv3_v2 (allow_all_sfr);
+    setup_kv3_v2 ();
     break;
   case ELF_KVX_CORE_KV4_1:
-    setup_kv4_v1 (allow_all_sfr);
+    setup_kv4_v1 ();
     break;
   default:
     as_bad ("Unknown architecture");

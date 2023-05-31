@@ -363,12 +363,12 @@ parse_kvx_dis_options (const char *options)
 int print_insn_kvx (bfd_vma memaddr, struct disassemble_info *info){
   static int insnindex = 0;
   static int insncount = 0;
-  kvxopc_t *op = NULL;             /* operation table index */
+  struct kvxopc *op = NULL;             /* operation table index */
   insn_t *insn;                   /* the instruction       */
   const char *fmtp;
-  kvxopc_t *opc_table = NULL;
+  struct kvxopc *opc_table = NULL;
   int          *kvx_regfiles = NULL;
-  kvx_Register  *kvx_registers = NULL;
+  struct kvx_Register  *kvx_registers = NULL;
   int          *kvx_dec_registers = NULL;
   unsigned int  kvx_max_dec_registers = 0;
   int kvx_arch_size = 32;
@@ -514,7 +514,7 @@ int print_insn_kvx (bfd_vma memaddr, struct disassemble_info *info){
           (*info->fprintf_func) (info->stream, "%s ", op->as_op);
 
           for (i = 0; op->format[i]; i++){
-              kvx_bitfield_t *bf = op->format[i]->bfield;
+              struct kvx_bitfield *bf = op->format[i]->bfield;
               int bf_nb = op->format[i]->bitfields;
               int width = op->format[i]->width;
               int type  = op->format[i]->type;
@@ -558,147 +558,313 @@ int print_insn_kvx (bfd_vma memaddr, struct disassemble_info *info){
         (*info->fprintf_func) (info->stream, "$??"); \
     }
 
-              switch (type) {
+	      if (opc_table == kvx_kv3_v1_optab)
+	      {
+		switch (type) {
 
-                  case RegClass_kvx_singleReg:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_GPR,value)
-                      break;
-                  case RegClass_kvx_pairedReg:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_PGR,value)
-                      break;
-                  case RegClass_kvx_quadReg:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_QGR,value)
-                      break;
-                  case RegClass_kvx_systemReg:
-                  case RegClass_kv3_v2_systemReg:
-                  case RegClass_kv4_v1_systemReg:
-                  case RegClass_kvx_aloneReg:
-                  case RegClass_kv3_v2_aloneReg:
-                  case RegClass_kv4_v1_aloneReg:
-                  case RegClass_kvx_onlyraReg:
-                  case RegClass_kvx_onlygetReg:
-                  case RegClass_kv3_v2_onlygetReg:
-                  case RegClass_kv4_v1_onlygetReg:
-                  case RegClass_kvx_onlysetReg:
-                  case RegClass_kv3_v2_onlysetReg:
-                  case RegClass_kv4_v1_onlysetReg:
-                  case RegClass_kvx_onlyfxReg:
-                  case RegClass_kv3_v2_onlyfxReg:
-                  case RegClass_kv4_v1_onlyfxReg:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_SFR,value)
-                      break;
-                  case RegClass_kvx_coproReg:
-                  case RegClass_kvx_coproReg0M4:
-                  case RegClass_kvx_coproReg1M4:
-                  case RegClass_kvx_coproReg2M4:
-                  case RegClass_kvx_coproReg3M4:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_XCR,value)
-                      break;
-                  case RegClass_kvx_blockReg:
-                  case RegClass_kvx_blockRegE:
-                  case RegClass_kvx_blockRegO:
-                  case RegClass_kvx_blockReg0M4:
-                  case RegClass_kvx_blockReg1M4:
-                  case RegClass_kvx_blockReg2M4:
-                  case RegClass_kvx_blockReg3M4:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_XBR,value)
-                      break;
-                  case RegClass_kvx_vectorReg:
-                  case RegClass_kvx_vectorRegE:
-                  case RegClass_kvx_vectorRegO:
-                  case RegClass_kvx_tileReg_0:
-                  case RegClass_kvx_tileReg_1:
-                  case RegClass_kvx_matrixReg_0:
-                  case RegClass_kvx_matrixReg_1:
-                  case RegClass_kvx_matrixReg_2:
-                  case RegClass_kvx_matrixReg_3:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_XVR,value)
-                      break;
-                  case RegClass_kvx_tileReg:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_XTR,value)
-                      break;
-                  case RegClass_kvx_matrixReg:
-                      KVX_PRINT_REG(KVX_REGFILE_DEC_XMR,value)
-                      break;
-                  case RegClass_kvx_buffer2Reg:
+		  case RegClass_kv3_v1_singleReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_GPR,value)
+		      break;
+		  case RegClass_kv3_v1_pairedReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_PGR,value)
+		      break;
+		  case RegClass_kv3_v1_quadReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_QGR,value)
+		      break;
+		  case RegClass_kv3_v1_systemReg:
+		  case RegClass_kv3_v1_aloneReg:
+		  case RegClass_kv3_v1_onlyraReg:
+		  case RegClass_kv3_v1_onlygetReg:
+		  case RegClass_kv3_v1_onlysetReg:
+		  case RegClass_kv3_v1_onlyfxReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_SFR,value)
+		      break;
+		  case RegClass_kv3_v1_coproReg0M4:
+		  case RegClass_kv3_v1_coproReg1M4:
+		  case RegClass_kv3_v1_coproReg2M4:
+		  case RegClass_kv3_v1_coproReg3M4:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XCR,value)
+		      break;
+		  case RegClass_kv3_v1_blockRegE:
+		  case RegClass_kv3_v1_blockRegO:
+		  case RegClass_kv3_v1_blockReg0M4:
+		  case RegClass_kv3_v1_blockReg1M4:
+		  case RegClass_kv3_v1_blockReg2M4:
+		  case RegClass_kv3_v1_blockReg3M4:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XBR,value)
+		      break;
+		  case RegClass_kv3_v1_vectorReg:
+		  case RegClass_kv3_v1_vectorRegE:
+		  case RegClass_kv3_v1_vectorRegO:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XVR,value)
+		      break;
+		  case RegClass_kv3_v1_tileReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XTR,value)
+		      break;
+		  case RegClass_kv3_v1_matrixReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XMR,value)
+		      break;
+		  case Immediate_kv3_v1_sysnumber:
+		  case Immediate_kv3_v1_signed10:
+		  case Immediate_kv3_v1_signed16:
+		  case Immediate_kv3_v1_signed27:
+		  case Immediate_kv3_v1_wrapped32:
+		  case Immediate_kv3_v1_signed37:
+		  case Immediate_kv3_v1_signed43:
+		  case Immediate_kv3_v1_signed54:
+		  case Immediate_kv3_v1_wrapped64:
+		  case Immediate_kv3_v1_unsigned6:
+		    if(flags & kvxSIGNED){
+		      if(width <= 32) {
+			(*info->fprintf_func) (info->stream, "%d (0x%x)", (int)value, (int)value);
+		      }
+		      else {
+			(*info->fprintf_func) (info->stream, "%lld (0x%llx)", value, value);
+		      }
+		    } else {
+		      if(width <= 32) {
+			(*info->fprintf_func) (info->stream, "%u (0x%x)", (unsigned int) value, (unsigned int) value);
+		      }
+		      else {
+			(*info->fprintf_func) (info->stream, "%llu (0x%llx)", (unsigned long long) value, (unsigned long long) value);
+		      }
+		    }
+		    break;
+
+		  case Immediate_kv3_v1_pcrel17:
+		  case Immediate_kv3_v1_pcrel27:
+		    {
+		      bfd_vma target = value + memaddr;
+
+		      /* Fill in instruction information.  */
+		      info->insn_info_valid = 1;
+		      info->insn_type = dis_branch;
+		      info->target = target;
+
+		      info->print_address_func(value + memaddr, info);
+		    }
+		    break;
+
+		  default:
+		    fprintf(stderr, "error: unexpected operand type (%s)\n", type_name);
+		    exit(-1);
+		};
+	      }
+	      else if (opc_table == kvx_kv3_v2_optab)
+	      {
+		switch (type) {
+
+		  case RegClass_kv3_v2_singleReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_GPR,value)
+		      break;
+		  case RegClass_kv3_v2_pairedReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_PGR,value)
+		      break;
+		  case RegClass_kv3_v2_quadReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_QGR,value)
+		      break;
+		  case RegClass_kv3_v2_systemReg:
+		  case RegClass_kv3_v2_aloneReg:
+		  case RegClass_kv3_v2_onlyraReg:
+		  case RegClass_kv3_v2_onlygetReg:
+		  case RegClass_kv3_v2_onlysetReg:
+		  case RegClass_kv3_v2_onlyfxReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_SFR,value)
+		      break;
+		  case RegClass_kv3_v2_coproReg:
+		  case RegClass_kv3_v2_coproReg0M4:
+		  case RegClass_kv3_v2_coproReg1M4:
+		  case RegClass_kv3_v2_coproReg2M4:
+		  case RegClass_kv3_v2_coproReg3M4:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XCR,value)
+		      break;
+                  case RegClass_kv3_v2_blockReg:
+		  case RegClass_kv3_v2_blockRegE:
+		  case RegClass_kv3_v2_blockRegO:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XBR,value)
+		      break;
+		  case RegClass_kv3_v2_vectorReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XVR,value)
+		      break;
+		  case RegClass_kv3_v2_tileReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XTR,value)
+		      break;
+		  case RegClass_kv3_v2_matrixReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XMR,value)
+		      break;
+                  case RegClass_kv3_v2_buffer2Reg:
                       KVX_PRINT_REG(KVX_REGFILE_DEC_X2R,value)
                       break;
-                  case RegClass_kvx_buffer4Reg:
+                  case RegClass_kv3_v2_buffer4Reg:
                       KVX_PRINT_REG(KVX_REGFILE_DEC_X4R,value)
                       break;
-                  case RegClass_kvx_buffer8Reg:
+                  case RegClass_kv3_v2_buffer8Reg:
                       KVX_PRINT_REG(KVX_REGFILE_DEC_X8R,value)
                       break;
-                  case RegClass_kvx_buffer16Reg:
+                  case RegClass_kv3_v2_buffer16Reg:
                       KVX_PRINT_REG(KVX_REGFILE_DEC_X16R,value)
                       break;
-                  case RegClass_kvx_buffer32Reg:
+                  case RegClass_kv3_v2_buffer32Reg:
                       KVX_PRINT_REG(KVX_REGFILE_DEC_X32R,value)
                       break;
-                  case RegClass_kvx_buffer64Reg:
+                  case RegClass_kv3_v2_buffer64Reg:
                       KVX_PRINT_REG(KVX_REGFILE_DEC_X64R,value)
                       break;
+		  case Immediate_kv3_v2_brknumber:
+		  case Immediate_kv3_v2_sysnumber:
+		  case Immediate_kv3_v2_signed10:
+		  case Immediate_kv3_v2_signed16:
+		  case Immediate_kv3_v2_signed27:
+		  case Immediate_kv3_v2_wrapped32:
+		  case Immediate_kv3_v2_signed37:
+		  case Immediate_kv3_v2_signed43:
+		  case Immediate_kv3_v2_signed54:
+		  case Immediate_kv3_v2_wrapped64:
+		  case Immediate_kv3_v2_unsigned6:
+		    if(flags & kvxSIGNED){
+		      if(width <= 32) {
+			(*info->fprintf_func) (info->stream, "%d (0x%x)", (int)value, (int)value);
+		      }
+		      else {
+			(*info->fprintf_func) (info->stream, "%lld (0x%llx)", value, value);
+		      }
+		    } else {
+		      if(width <= 32) {
+			(*info->fprintf_func) (info->stream, "%u (0x%x)", (unsigned int) value, (unsigned int) value);
+		      }
+		      else {
+			(*info->fprintf_func) (info->stream, "%llu (0x%llx)", (unsigned long long) value, (unsigned long long) value);
+		      }
+		    }
+		    break;
 
-                  case Immediate_kvx_brknumber:
-                  case Immediate_kvx_sysnumber:
-                  case Immediate_kvx_wrapped8:
-                  case Immediate_kvx_signed10:
-                  case Immediate_kvx_signed16:
-                  case Immediate_kvx_signed27:
-                  case Immediate_kvx_wrapped32:
-                  case Immediate_kvx_signed37:
-                  case Immediate_kvx_signed43:
-                  case Immediate_kvx_signed54:
-                  case Immediate_kvx_wrapped64:
-                  case Immediate_kvx_unsigned6:
-                      if(flags & kvxSIGNED){
-                          if(width <= 32) {
-                              (*info->fprintf_func) (info->stream, "%d (0x%x)", (int)value, (int)value);
-                          }
-                          else {
-                              (*info->fprintf_func) (info->stream, "%lld (0x%llx)", value, value);
-                          }
-                      } else {
-                          if(width <= 32) {
-                              (*info->fprintf_func) (info->stream, "%u (0x%x)", (unsigned int) value, (unsigned int) value);
-                          }
-                          else {
-                              (*info->fprintf_func) (info->stream, "%llu (0x%llx)", (unsigned long long) value, (unsigned long long) value);
-                          }
-                      }
+		  case Immediate_kv3_v2_pcrel27:
+		  case Immediate_kv3_v2_pcrel17:
+		    {
+		      bfd_vma target = value + memaddr;
+
+		      /* Fill in instruction information.  */
+		      info->insn_info_valid = 1;
+		      info->insn_type = dis_branch;
+		      info->target = target;
+
+		      info->print_address_func(value + memaddr, info);
+		    }
+		    break;
+
+		  default:
+		    fprintf(stderr, "error: unexpected operand type (%s)\n", type_name);
+		    exit(-1);
+		};
+	      } else if (opc_table == kvx_kv4_v1_optab)
+	      {
+		switch (type) {
+
+		  case RegClass_kv4_v1_singleReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_GPR,value)
+		      break;
+		  case RegClass_kv4_v1_pairedReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_PGR,value)
+		      break;
+		  case RegClass_kv4_v1_quadReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_QGR,value)
+		      break;
+		  case RegClass_kv4_v1_systemReg:
+		  case RegClass_kv4_v1_aloneReg:
+		  case RegClass_kv4_v1_onlyraReg:
+		  case RegClass_kv4_v1_onlygetReg:
+		  case RegClass_kv4_v1_onlysetReg:
+		  case RegClass_kv4_v1_onlyfxReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_SFR,value)
+		      break;
+		  case RegClass_kv4_v1_coproReg:
+		  case RegClass_kv4_v1_coproReg0M4:
+		  case RegClass_kv4_v1_coproReg1M4:
+		  case RegClass_kv4_v1_coproReg2M4:
+		  case RegClass_kv4_v1_coproReg3M4:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XCR,value)
+		      break;
+                  case RegClass_kv4_v1_blockReg:
+		  case RegClass_kv4_v1_blockRegE:
+		  case RegClass_kv4_v1_blockRegO:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XBR,value)
+		      break;
+		  case RegClass_kv4_v1_vectorReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XVR,value)
+		      break;
+		  case RegClass_kv4_v1_tileReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XTR,value)
+		      break;
+		  case RegClass_kv4_v1_matrixReg:
+		    KVX_PRINT_REG(KVX_REGFILE_DEC_XMR,value)
+		      break;
+                  case RegClass_kv4_v1_buffer2Reg:
+                      KVX_PRINT_REG(KVX_REGFILE_DEC_X2R,value)
                       break;
-                  case Immediate_kvx_pcrel17:
-                    {
-                      bfd_vma target = value + memaddr;
+                  case RegClass_kv4_v1_buffer4Reg:
+                      KVX_PRINT_REG(KVX_REGFILE_DEC_X4R,value)
+                      break;
+                  case RegClass_kv4_v1_buffer8Reg:
+                      KVX_PRINT_REG(KVX_REGFILE_DEC_X8R,value)
+                      break;
+                  case RegClass_kv4_v1_buffer16Reg:
+                      KVX_PRINT_REG(KVX_REGFILE_DEC_X16R,value)
+                      break;
+                  case RegClass_kv4_v1_buffer32Reg:
+                      KVX_PRINT_REG(KVX_REGFILE_DEC_X32R,value)
+                      break;
+                  case RegClass_kv4_v1_buffer64Reg:
+                      KVX_PRINT_REG(KVX_REGFILE_DEC_X64R,value)
+                      break;
+		  case Immediate_kv4_v1_brknumber:
+		  case Immediate_kv4_v1_sysnumber:
+		  case Immediate_kv4_v1_signed10:
+		  case Immediate_kv4_v1_signed16:
+		  case Immediate_kv4_v1_signed27:
+		  case Immediate_kv4_v1_wrapped32:
+		  case Immediate_kv4_v1_signed37:
+		  case Immediate_kv4_v1_signed43:
+		  case Immediate_kv4_v1_signed54:
+		  case Immediate_kv4_v1_wrapped64:
+		  case Immediate_kv4_v1_unsigned6:
+		    if(flags & kvxSIGNED){
+		      if(width <= 32) {
+			(*info->fprintf_func) (info->stream, "%d (0x%x)", (int)value, (int)value);
+		      }
+		      else {
+			(*info->fprintf_func) (info->stream, "%lld (0x%llx)", value, value);
+		      }
+		    } else {
+		      if(width <= 32) {
+			(*info->fprintf_func) (info->stream, "%u (0x%x)", (unsigned int) value, (unsigned int) value);
+		      }
+		      else {
+			(*info->fprintf_func) (info->stream, "%llu (0x%llx)", (unsigned long long) value, (unsigned long long) value);
+		      }
+		    }
+		    break;
 
-                      /* Fill in instruction information.  */
-                      info->insn_info_valid = 1;
-                      info->insn_type = dis_condbranch;
-                      info->target = target;
+		  case Immediate_kv4_v1_pcrel27:
+		  case Immediate_kv4_v1_pcrel17:
+		    {
+		      bfd_vma target = value + memaddr;
 
-                      info->print_address_func(value + memaddr, info);
-                    }
-                    break;
+		      /* Fill in instruction information.  */
+		      info->insn_info_valid = 1;
+		      info->insn_type = dis_branch;
+		      info->target = target;
 
-                  case Immediate_kvx_pcrel27:
-                    {
-                      bfd_vma target = value + memaddr;
+		      info->print_address_func(value + memaddr, info);
+		    }
+		    break;
 
-                      /* Fill in instruction information.  */
-                      info->insn_info_valid = 1;
-                      info->insn_type = dis_branch;
-                      info->target = target;
+		  default:
+		    fprintf(stderr, "error: unexpected operand type (%s)\n", type_name);
+		    exit(-1);
+		};
+	      }
 
-                      info->print_address_func(value + memaddr, info);
-                    }
-                    break;
-
-                  default:
-                      fprintf(stderr, "error: unexpected operand type (%s)\n", type_name);
-                      exit(-1);
-              };
-
-#undef KVX_PRINT_REG     
+#undef KVX_PRINT_REG
           }
 
           /* Print trailing characters in the format string, if any */
