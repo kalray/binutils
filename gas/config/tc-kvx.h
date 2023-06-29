@@ -88,6 +88,12 @@ struct rule {
   struct steering_rule *rules;
 };
 
+/* Default kvx_registers array. */
+extern const struct kvx_Register *kvx_registers;
+/* Default kvx_modifiers array. */
+extern const char ***kvx_modifiers;
+/* Default kvx_regfiles array. */
+extern const int *kvx_regfiles;
 /* Default values used if no assume directive is given */
 extern const struct kvx_core_info *kvx_core_info;
 

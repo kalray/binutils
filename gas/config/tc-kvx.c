@@ -79,9 +79,11 @@ struct kvx_as_env env = {
 /* This string should contain position in string where error occured. */
 
 /* Default kvx_registers array. */
-static const struct kvx_Register *kvx_registers = NULL;
+const struct kvx_Register *kvx_registers = NULL;
+/* Default kvx_modifiers array. */
+const char ***kvx_modifiers = NULL;
 /* Default kvx_regfiles array. */
-static const int *kvx_regfiles = NULL;
+const int *kvx_regfiles = NULL;
 /* Default values used if no assume directive is given */
 const struct kvx_core_info *kvx_core_info = NULL;
 
@@ -297,6 +299,7 @@ md_parse_option (int c, const char *arg ATTRIBUTE_UNUSED)
 	      {
 		kvx_core_info = kvx_core_info_table[i];
 		kvx_registers = kvx_registers_table[i];
+		kvx_modifiers = kvx_modifiers_table[i];
 		kvx_regfiles = kvx_regfiles_table[i];
 
 		find_core = 1;
@@ -498,6 +501,11 @@ insert_operand (struct kvxinsn *insn, struct kvx_operand *opdef,
     {
     case CAT_REGISTER:
       op = S_GET_VALUE (str_hash_find (env.reg_hash, tok->tok));
+      op -= opdef->bias;
+      op >>= opdef->shift;
+      break;
+    case CAT_MODIFIER:
+      op = tok->val;
       op -= opdef->bias;
       op >>= opdef->shift;
       break;
@@ -909,33 +917,8 @@ assemble_tokens (struct token_list *tok_list)
      to fuse both before looking up the opcodes hashtable.  */
   char *opcode = NULL;
 
-  if (toks->next && toks->next->category == CAT_MODIFIER)
-    {
-      struct token_list *toks_ = toks;
-      int mod_len = 0;
-      while (toks_ && toks_->next && toks_->next->category == CAT_MODIFIER)
-	{
-	  int len = strlen (toks_->tok);
-	  mod_len += len == 1 ? 0 : len;
-	  toks_ = toks_->next;
-	}
-      int len = toks->len + mod_len + 1;
-      opcode = malloc (len);
-      char *end = stpcpy (opcode, toks->tok);
-
-      while (toks && toks->next && toks->next->category == CAT_MODIFIER)
-	{
-	  if (strlen (toks->next->tok) != 1)
-	    end = stpcpy (end, toks->next->tok);
-	  toks = toks->next;
-	}
-      toks = toks->next;
-    }
-  else
-    {
-      opcode = toks->tok;
-      toks = toks->next;
-    }
+  opcode = toks->tok;
+  toks = toks->next;
 
   while (toks && toks->category == CAT_SEPARATOR)
     toks = toks->next;
@@ -1427,6 +1410,9 @@ kvx_set_cpu (void)
 
   if (!kvx_regfiles)
     kvx_regfiles = kvx_kv3_v1_regfiles;
+
+  if (!kvx_modifiers)
+    kvx_modifiers = kvx_kv3_v1_modifiers;
 
   if (env.params.core == -1)
       env.params.core = kvx_core_info->elf_core;

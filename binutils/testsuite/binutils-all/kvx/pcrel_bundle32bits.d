@@ -17,17 +17,17 @@ Disassembly of section .text:
   18:	00 06 00 f0 00 00 00 b8                         	pcrel \$r0 = 24 \(0x18\)
   20:	00 00 00 00                                     	ld \$r0 = 0 \(0x0\)\[\$r0\];;
 
-  24:	00 f0 03 7f                                     	nop ;;
+  24:	00 f0 03 7f                                     	nop;;
 
-  28:	00 f0 03 7f                                     	nop ;;
+  28:	00 f0 03 7f                                     	nop;;
 
 
 0000002c <.table>:
-  2c:	00 f0 03 7f                                     	nop ;;
+  2c:	00 f0 03 7f                                     	nop;;
 
-  30:	00 f0 03 7f                                     	nop ;;
+  30:	00 f0 03 7f                                     	nop;;
 
 
 00000034 <bar>:
-  34:	00 f0 03 7f                                     	nop ;;
+  34:	00 f0 03 7f                                     	nop;;
 

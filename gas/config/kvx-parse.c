@@ -870,6 +870,35 @@ retry:;
   return token_list_append (fst_part, snd_part);
 }
 
+/* During the parsing the modifiers and registers are handled through pseudo
+   classes such that each register and modifier appears in at most one pseudo
+   class.  Since the pseudo-classes are not correlated with how the modifiers
+   and registers are encoded we fix that after a successful match instead of
+   updating it many times during the parsing.
+
+   Currently, only assigning correct values to modifiers is of interest.  The
+   real value of registers is computed in tc-kvx.c:insert_operand.  */
+
+static void
+assign_final_values (struct token_list *lst)
+{
+  (void) lst;
+  struct token_list *cur = lst;
+
+  while (cur)
+    {
+      if (cur->category == CAT_MODIFIER)
+	{
+	  int idx = cur->class_id - env.fst_mod;
+	  int found = 0;
+	  for (int i = 0 ; !found && kvx_modifiers[idx][i]; ++i)
+	    if ((found = !strcmp (cur->tok, kvx_modifiers[idx][i])))
+	      cur->val = i;
+	}
+      cur = cur->next;
+    }
+}
+
 struct token_list *
 parse (struct token_s tok)
 {
@@ -930,6 +959,7 @@ parse (struct token_s tok)
   else
     {
       printf_debug (1, "[PASS] Successfully matched %s\n", tok.insn);
+      assign_final_values (tok_list);
 //      print_token_list (tok_list);
 //      free_token_list (tok_list);
     }

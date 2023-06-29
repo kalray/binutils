@@ -242,6 +242,7 @@ extern const int kvx_kv4_v1_resources[];
 extern struct kvxopc kvx_kv4_v1_optab[];
 extern const struct kvx_core_info kvx_kv4_v1_core_info;
 extern const struct kvx_core_info *kvx_core_info_table[];
+extern const char ***kvx_modifiers_table[];
 extern const struct kvx_Register *kvx_registers_table[];
 extern const int *kvx_regfiles_table[];
 
@@ -295,6 +296,7 @@ extern const int *kvx_regfiles_table[];
 
 
 extern int kvx_kv3_v1_regfiles[];
+extern const char **kvx_kv3_v1_modifiers[];
 extern struct kvx_Register kvx_kv3_v1_registers[];
 
 extern int kvx_kv3_v1_dec_registers[];
@@ -916,132 +918,22 @@ enum Modifier_kv3_v1_exunum_enum {
   Modifier_kv3_v1_exunum_LSU=3,
 };
 
-enum Modifier_kv3_v1_scalarcond_enum {
-  Modifier_kv3_v1_scalarcond_DNEZ=0,
-  Modifier_kv3_v1_scalarcond_DEQZ=1,
-  Modifier_kv3_v1_scalarcond_DLTZ=2,
-  Modifier_kv3_v1_scalarcond_DGEZ=3,
-  Modifier_kv3_v1_scalarcond_DLEZ=4,
-  Modifier_kv3_v1_scalarcond_DGTZ=5,
-  Modifier_kv3_v1_scalarcond_ODD=6,
-  Modifier_kv3_v1_scalarcond_EVEN=7,
-  Modifier_kv3_v1_scalarcond_WNEZ=8,
-  Modifier_kv3_v1_scalarcond_WEQZ=9,
-  Modifier_kv3_v1_scalarcond_WLTZ=10,
-  Modifier_kv3_v1_scalarcond_WGEZ=11,
-  Modifier_kv3_v1_scalarcond_WLEZ=12,
-  Modifier_kv3_v1_scalarcond_WGTZ=13,
-};
-
-enum Modifier_kv3_v1_simplecond_enum {
-  Modifier_kv3_v1_simplecond_NEZ=0,
-  Modifier_kv3_v1_simplecond_EQZ=1,
-  Modifier_kv3_v1_simplecond_LTZ=2,
-  Modifier_kv3_v1_simplecond_GEZ=3,
-  Modifier_kv3_v1_simplecond_LEZ=4,
-  Modifier_kv3_v1_simplecond_GTZ=5,
-  Modifier_kv3_v1_simplecond_ODD=6,
-  Modifier_kv3_v1_simplecond_EVEN=7,
-};
-
-enum Modifier_kv3_v1_comparison_enum {
-  Modifier_kv3_v1_comparison_NE=0,
-  Modifier_kv3_v1_comparison_EQ=1,
-  Modifier_kv3_v1_comparison_LT=2,
-  Modifier_kv3_v1_comparison_GE=3,
-  Modifier_kv3_v1_comparison_LE=4,
-  Modifier_kv3_v1_comparison_GT=5,
-  Modifier_kv3_v1_comparison_LTU=6,
-  Modifier_kv3_v1_comparison_GEU=7,
-  Modifier_kv3_v1_comparison_LEU=8,
-  Modifier_kv3_v1_comparison_GTU=9,
-  Modifier_kv3_v1_comparison_ALL=10,
-  Modifier_kv3_v1_comparison_NALL=11,
-  Modifier_kv3_v1_comparison_ANY=12,
-  Modifier_kv3_v1_comparison_NONE=13,
-};
-
-enum Modifier_kv3_v1_floatcomp_enum {
-  Modifier_kv3_v1_floatcomp_ONE=0,
-  Modifier_kv3_v1_floatcomp_UEQ=1,
-  Modifier_kv3_v1_floatcomp_OEQ=2,
-  Modifier_kv3_v1_floatcomp_UNE=3,
-  Modifier_kv3_v1_floatcomp_OLT=4,
-  Modifier_kv3_v1_floatcomp_UGE=5,
-  Modifier_kv3_v1_floatcomp_OGE=6,
-  Modifier_kv3_v1_floatcomp_ULT=7,
-};
-
-enum Modifier_kv3_v1_rounding_enum {
-  Modifier_kv3_v1_rounding_RN=0,
-  Modifier_kv3_v1_rounding_RU=1,
-  Modifier_kv3_v1_rounding_RD=2,
-  Modifier_kv3_v1_rounding_RZ=3,
-  Modifier_kv3_v1_rounding_RNA=4,
-  Modifier_kv3_v1_rounding_RNZ=5,
-  Modifier_kv3_v1_rounding_RO=6,
-  Modifier_kv3_v1_rounding_=7,
-};
-
-enum Modifier_kv3_v1_silent_enum {
-  Modifier_kv3_v1_silent_=0,
-  Modifier_kv3_v1_silent_S=1,
-};
-
-enum Modifier_kv3_v1_roundint_enum {
-  Modifier_kv3_v1_roundint_RN=0,
-  Modifier_kv3_v1_roundint_RU=1,
-  Modifier_kv3_v1_roundint_RD=2,
-  Modifier_kv3_v1_roundint_RZ=3,
-  Modifier_kv3_v1_roundint_RHU=4,
-};
-
-enum Modifier_kv3_v1_saturate_enum {
-  Modifier_kv3_v1_saturate_SAT=0,
-  Modifier_kv3_v1_saturate_SATU=1,
-};
-
-enum Modifier_kv3_v1_rectify_enum {
-  Modifier_kv3_v1_rectify_=0,
-  Modifier_kv3_v1_rectify_RELU=1,
-};
-
-enum Modifier_kv3_v1_variant_enum {
-  Modifier_kv3_v1_variant_=0,
-  Modifier_kv3_v1_variant_S=1,
-  Modifier_kv3_v1_variant_U=2,
-  Modifier_kv3_v1_variant_US=3,
-};
-
-enum Modifier_kv3_v1_speculate_enum {
-  Modifier_kv3_v1_speculate_U=0,
-  Modifier_kv3_v1_speculate_US=1,
-};
-
-enum Modifier_kv3_v1_column_enum {
-  Modifier_kv3_v1_column_C0=0,
-  Modifier_kv3_v1_column_C1=1,
-  Modifier_kv3_v1_column_C2=2,
-  Modifier_kv3_v1_column_C3=3,
-};
-
-enum Modifier_kv3_v1_doscale_enum {
-  Modifier_kv3_v1_doscale_=0,
-  Modifier_kv3_v1_doscale_XS=1,
-};
-
-enum Modifier_kv3_v1_qindex_enum {
-  Modifier_kv3_v1_qindex_Q0=0,
-  Modifier_kv3_v1_qindex_Q1=1,
-  Modifier_kv3_v1_qindex_Q2=2,
-  Modifier_kv3_v1_qindex_Q3=3,
-};
-
-enum Modifier_kv3_v1_splat32_enum {
-  Modifier_kv3_v1_splat32_=0,
-  Modifier_kv3_v1_splat32__=1,
-};
-
+extern const char *mod_kv3_v1_exunum[];
+extern const char *mod_kv3_v1_scalarcond[];
+extern const char *mod_kv3_v1_simplecond[];
+extern const char *mod_kv3_v1_comparison[];
+extern const char *mod_kv3_v1_floatcomp[];
+extern const char *mod_kv3_v1_rounding[];
+extern const char *mod_kv3_v1_silent[];
+extern const char *mod_kv3_v1_roundint[];
+extern const char *mod_kv3_v1_saturate[];
+extern const char *mod_kv3_v1_rectify[];
+extern const char *mod_kv3_v1_variant[];
+extern const char *mod_kv3_v1_speculate[];
+extern const char *mod_kv3_v1_column[];
+extern const char *mod_kv3_v1_doscale[];
+extern const char *mod_kv3_v1_qindex[];
+extern const char *mod_kv3_v1_splat32[];
 typedef enum {
   Bundling_kv3_v1_ALL,
   Bundling_kv3_v1_BCU,
@@ -1247,6 +1139,7 @@ extern struct kvx_reloc kv3_v1_rel8_reloc;
 
 
 extern int kvx_kv3_v2_regfiles[];
+extern const char **kvx_kv3_v2_modifiers[];
 extern struct kvx_Register kvx_kv3_v2_registers[];
 
 extern int kvx_kv3_v2_dec_registers[];
@@ -2041,198 +1934,31 @@ enum Modifier_kv3_v2_exunum_enum {
   Modifier_kv3_v2_exunum_LSU=3,
 };
 
-enum Modifier_kv3_v2_scalarcond_enum {
-  Modifier_kv3_v2_scalarcond_DNEZ=0,
-  Modifier_kv3_v2_scalarcond_DEQZ=1,
-  Modifier_kv3_v2_scalarcond_DLTZ=2,
-  Modifier_kv3_v2_scalarcond_DGEZ=3,
-  Modifier_kv3_v2_scalarcond_DLEZ=4,
-  Modifier_kv3_v2_scalarcond_DGTZ=5,
-  Modifier_kv3_v2_scalarcond_ODD=6,
-  Modifier_kv3_v2_scalarcond_EVEN=7,
-  Modifier_kv3_v2_scalarcond_WNEZ=8,
-  Modifier_kv3_v2_scalarcond_WEQZ=9,
-  Modifier_kv3_v2_scalarcond_WLTZ=10,
-  Modifier_kv3_v2_scalarcond_WGEZ=11,
-  Modifier_kv3_v2_scalarcond_WLEZ=12,
-  Modifier_kv3_v2_scalarcond_WGTZ=13,
-};
-
-enum Modifier_kv3_v2_lsomask_enum {
-  Modifier_kv3_v2_lsomask_U0=0,
-  Modifier_kv3_v2_lsomask_U1=1,
-  Modifier_kv3_v2_lsomask_U2=2,
-  Modifier_kv3_v2_lsomask_U3=3,
-  Modifier_kv3_v2_lsomask_MT=4,
-  Modifier_kv3_v2_lsomask_MF=5,
-  Modifier_kv3_v2_lsomask_MTC=6,
-  Modifier_kv3_v2_lsomask_MFC=7,
-};
-
-enum Modifier_kv3_v2_lsumask_enum {
-  Modifier_kv3_v2_lsumask_DNEZ=0,
-  Modifier_kv3_v2_lsumask_DEQZ=1,
-  Modifier_kv3_v2_lsumask_WNEZ=2,
-  Modifier_kv3_v2_lsumask_WEQZ=3,
-  Modifier_kv3_v2_lsumask_MT=4,
-  Modifier_kv3_v2_lsumask_MF=5,
-  Modifier_kv3_v2_lsumask_MTC=6,
-  Modifier_kv3_v2_lsumask_MFC=7,
-};
-
-enum Modifier_kv3_v2_lsupack_enum {
-  Modifier_kv3_v2_lsupack_=0,
-  Modifier_kv3_v2_lsupack_Q=1,
-  Modifier_kv3_v2_lsupack_D=2,
-  Modifier_kv3_v2_lsupack_W=3,
-  Modifier_kv3_v2_lsupack_H=4,
-  Modifier_kv3_v2_lsupack_B=5,
-};
-
-enum Modifier_kv3_v2_simplecond_enum {
-  Modifier_kv3_v2_simplecond_NEZ=0,
-  Modifier_kv3_v2_simplecond_EQZ=1,
-  Modifier_kv3_v2_simplecond_LTZ=2,
-  Modifier_kv3_v2_simplecond_GEZ=3,
-  Modifier_kv3_v2_simplecond_LEZ=4,
-  Modifier_kv3_v2_simplecond_GTZ=5,
-  Modifier_kv3_v2_simplecond_ODD=6,
-  Modifier_kv3_v2_simplecond_EVEN=7,
-};
-
-enum Modifier_kv3_v2_comparison_enum {
-  Modifier_kv3_v2_comparison_NE=0,
-  Modifier_kv3_v2_comparison_EQ=1,
-  Modifier_kv3_v2_comparison_LT=2,
-  Modifier_kv3_v2_comparison_GE=3,
-  Modifier_kv3_v2_comparison_LE=4,
-  Modifier_kv3_v2_comparison_GT=5,
-  Modifier_kv3_v2_comparison_LTU=6,
-  Modifier_kv3_v2_comparison_GEU=7,
-  Modifier_kv3_v2_comparison_LEU=8,
-  Modifier_kv3_v2_comparison_GTU=9,
-  Modifier_kv3_v2_comparison_ALL=10,
-  Modifier_kv3_v2_comparison_NALL=11,
-  Modifier_kv3_v2_comparison_ANY=12,
-  Modifier_kv3_v2_comparison_NONE=13,
-};
-
-enum Modifier_kv3_v2_floatcomp_enum {
-  Modifier_kv3_v2_floatcomp_ONE=0,
-  Modifier_kv3_v2_floatcomp_UEQ=1,
-  Modifier_kv3_v2_floatcomp_OEQ=2,
-  Modifier_kv3_v2_floatcomp_UNE=3,
-  Modifier_kv3_v2_floatcomp_OLT=4,
-  Modifier_kv3_v2_floatcomp_UGE=5,
-  Modifier_kv3_v2_floatcomp_OGE=6,
-  Modifier_kv3_v2_floatcomp_ULT=7,
-};
-
-enum Modifier_kv3_v2_rounding_enum {
-  Modifier_kv3_v2_rounding_RN=0,
-  Modifier_kv3_v2_rounding_RU=1,
-  Modifier_kv3_v2_rounding_RD=2,
-  Modifier_kv3_v2_rounding_RZ=3,
-  Modifier_kv3_v2_rounding_RNA=4,
-  Modifier_kv3_v2_rounding_RNZ=5,
-  Modifier_kv3_v2_rounding_RO=6,
-  Modifier_kv3_v2_rounding_=7,
-};
-
-enum Modifier_kv3_v2_silent_enum {
-  Modifier_kv3_v2_silent_=0,
-  Modifier_kv3_v2_silent_S=1,
-};
-
-enum Modifier_kv3_v2_variant_enum {
-  Modifier_kv3_v2_variant_=0,
-  Modifier_kv3_v2_variant_S=1,
-  Modifier_kv3_v2_variant_U=2,
-  Modifier_kv3_v2_variant_US=3,
-};
-
-enum Modifier_kv3_v2_speculate_enum {
-  Modifier_kv3_v2_speculate_U=0,
-  Modifier_kv3_v2_speculate_US=1,
-};
-
-enum Modifier_kv3_v2_doscale_enum {
-  Modifier_kv3_v2_doscale_=0,
-  Modifier_kv3_v2_doscale_XS=1,
-};
-
-enum Modifier_kv3_v2_qindex_enum {
-  Modifier_kv3_v2_qindex_Q0=0,
-  Modifier_kv3_v2_qindex_Q1=1,
-  Modifier_kv3_v2_qindex_Q2=2,
-  Modifier_kv3_v2_qindex_Q3=3,
-};
-
-enum Modifier_kv3_v2_hindex_enum {
-  Modifier_kv3_v2_hindex_H0=0,
-  Modifier_kv3_v2_hindex_H1=1,
-};
-
-enum Modifier_kv3_v2_cachelev_enum {
-  Modifier_kv3_v2_cachelev_L1=0,
-  Modifier_kv3_v2_cachelev_L2=1,
-};
-
-enum Modifier_kv3_v2_coherency_enum {
-  Modifier_kv3_v2_coherency_=0,
-  Modifier_kv3_v2_coherency_G=1,
-  Modifier_kv3_v2_coherency_S=2,
-};
-
-enum Modifier_kv3_v2_boolcas_enum {
-  Modifier_kv3_v2_boolcas_V=0,
-  Modifier_kv3_v2_boolcas_=1,
-};
-
-enum Modifier_kv3_v2_accesses_enum {
-  Modifier_kv3_v2_accesses_=0,
-  Modifier_kv3_v2_accesses_W=1,
-  Modifier_kv3_v2_accesses_R=2,
-  Modifier_kv3_v2_accesses_WA=3,
-};
-
-enum Modifier_kv3_v2_channel_enum {
-  Modifier_kv3_v2_channel_F=0,
-  Modifier_kv3_v2_channel_B=1,
-};
-
-enum Modifier_kv3_v2_conjugate_enum {
-  Modifier_kv3_v2_conjugate_=0,
-  Modifier_kv3_v2_conjugate_C=1,
-};
-
-enum Modifier_kv3_v2_transpose_enum {
-  Modifier_kv3_v2_transpose_=0,
-  Modifier_kv3_v2_transpose_TN=1,
-  Modifier_kv3_v2_transpose_NT=2,
-  Modifier_kv3_v2_transpose_TT=3,
-};
-
-enum Modifier_kv3_v2_shuffleV_enum {
-  Modifier_kv3_v2_shuffleV_=0,
-  Modifier_kv3_v2_shuffleV_TD=1,
-};
-
-enum Modifier_kv3_v2_shuffleX_enum {
-  Modifier_kv3_v2_shuffleX_=0,
-  Modifier_kv3_v2_shuffleX_ZD=1,
-  Modifier_kv3_v2_shuffleX_UD=2,
-  Modifier_kv3_v2_shuffleX_TQ=3,
-  Modifier_kv3_v2_shuffleX_TW=4,
-  Modifier_kv3_v2_shuffleX_ZW=5,
-  Modifier_kv3_v2_shuffleX_UW=6,
-};
-
-enum Modifier_kv3_v2_splat32_enum {
-  Modifier_kv3_v2_splat32_=0,
-  Modifier_kv3_v2_splat32__=1,
-};
-
+extern const char *mod_kv3_v2_exunum[];
+extern const char *mod_kv3_v2_scalarcond[];
+extern const char *mod_kv3_v2_lsomask[];
+extern const char *mod_kv3_v2_lsumask[];
+extern const char *mod_kv3_v2_lsupack[];
+extern const char *mod_kv3_v2_simplecond[];
+extern const char *mod_kv3_v2_comparison[];
+extern const char *mod_kv3_v2_floatcomp[];
+extern const char *mod_kv3_v2_rounding[];
+extern const char *mod_kv3_v2_silent[];
+extern const char *mod_kv3_v2_variant[];
+extern const char *mod_kv3_v2_speculate[];
+extern const char *mod_kv3_v2_doscale[];
+extern const char *mod_kv3_v2_qindex[];
+extern const char *mod_kv3_v2_hindex[];
+extern const char *mod_kv3_v2_cachelev[];
+extern const char *mod_kv3_v2_coherency[];
+extern const char *mod_kv3_v2_boolcas[];
+extern const char *mod_kv3_v2_accesses[];
+extern const char *mod_kv3_v2_channel[];
+extern const char *mod_kv3_v2_conjugate[];
+extern const char *mod_kv3_v2_transpose[];
+extern const char *mod_kv3_v2_shuffleV[];
+extern const char *mod_kv3_v2_shuffleX[];
+extern const char *mod_kv3_v2_splat32[];
 typedef enum {
   Bundling_kv3_v2_ALL,
   Bundling_kv3_v2_BCU,
@@ -2445,6 +2171,7 @@ extern struct kvx_reloc kv3_v2_rel8_reloc;
 
 
 extern int kvx_kv4_v1_regfiles[];
+extern const char **kvx_kv4_v1_modifiers[];
 extern struct kvx_Register kvx_kv4_v1_registers[];
 
 extern int kvx_kv4_v1_dec_registers[];
@@ -3239,198 +2966,31 @@ enum Modifier_kv4_v1_exunum_enum {
   Modifier_kv4_v1_exunum_LSU=3,
 };
 
-enum Modifier_kv4_v1_scalarcond_enum {
-  Modifier_kv4_v1_scalarcond_DNEZ=0,
-  Modifier_kv4_v1_scalarcond_DEQZ=1,
-  Modifier_kv4_v1_scalarcond_DLTZ=2,
-  Modifier_kv4_v1_scalarcond_DGEZ=3,
-  Modifier_kv4_v1_scalarcond_DLEZ=4,
-  Modifier_kv4_v1_scalarcond_DGTZ=5,
-  Modifier_kv4_v1_scalarcond_ODD=6,
-  Modifier_kv4_v1_scalarcond_EVEN=7,
-  Modifier_kv4_v1_scalarcond_WNEZ=8,
-  Modifier_kv4_v1_scalarcond_WEQZ=9,
-  Modifier_kv4_v1_scalarcond_WLTZ=10,
-  Modifier_kv4_v1_scalarcond_WGEZ=11,
-  Modifier_kv4_v1_scalarcond_WLEZ=12,
-  Modifier_kv4_v1_scalarcond_WGTZ=13,
-};
-
-enum Modifier_kv4_v1_lsomask_enum {
-  Modifier_kv4_v1_lsomask_U0=0,
-  Modifier_kv4_v1_lsomask_U1=1,
-  Modifier_kv4_v1_lsomask_U2=2,
-  Modifier_kv4_v1_lsomask_U3=3,
-  Modifier_kv4_v1_lsomask_MT=4,
-  Modifier_kv4_v1_lsomask_MF=5,
-  Modifier_kv4_v1_lsomask_MTC=6,
-  Modifier_kv4_v1_lsomask_MFC=7,
-};
-
-enum Modifier_kv4_v1_lsumask_enum {
-  Modifier_kv4_v1_lsumask_DNEZ=0,
-  Modifier_kv4_v1_lsumask_DEQZ=1,
-  Modifier_kv4_v1_lsumask_WNEZ=2,
-  Modifier_kv4_v1_lsumask_WEQZ=3,
-  Modifier_kv4_v1_lsumask_MT=4,
-  Modifier_kv4_v1_lsumask_MF=5,
-  Modifier_kv4_v1_lsumask_MTC=6,
-  Modifier_kv4_v1_lsumask_MFC=7,
-};
-
-enum Modifier_kv4_v1_lsupack_enum {
-  Modifier_kv4_v1_lsupack_=0,
-  Modifier_kv4_v1_lsupack_Q=1,
-  Modifier_kv4_v1_lsupack_D=2,
-  Modifier_kv4_v1_lsupack_W=3,
-  Modifier_kv4_v1_lsupack_H=4,
-  Modifier_kv4_v1_lsupack_B=5,
-};
-
-enum Modifier_kv4_v1_simplecond_enum {
-  Modifier_kv4_v1_simplecond_NEZ=0,
-  Modifier_kv4_v1_simplecond_EQZ=1,
-  Modifier_kv4_v1_simplecond_LTZ=2,
-  Modifier_kv4_v1_simplecond_GEZ=3,
-  Modifier_kv4_v1_simplecond_LEZ=4,
-  Modifier_kv4_v1_simplecond_GTZ=5,
-  Modifier_kv4_v1_simplecond_ODD=6,
-  Modifier_kv4_v1_simplecond_EVEN=7,
-};
-
-enum Modifier_kv4_v1_comparison_enum {
-  Modifier_kv4_v1_comparison_NE=0,
-  Modifier_kv4_v1_comparison_EQ=1,
-  Modifier_kv4_v1_comparison_LT=2,
-  Modifier_kv4_v1_comparison_GE=3,
-  Modifier_kv4_v1_comparison_LE=4,
-  Modifier_kv4_v1_comparison_GT=5,
-  Modifier_kv4_v1_comparison_LTU=6,
-  Modifier_kv4_v1_comparison_GEU=7,
-  Modifier_kv4_v1_comparison_LEU=8,
-  Modifier_kv4_v1_comparison_GTU=9,
-  Modifier_kv4_v1_comparison_ALL=10,
-  Modifier_kv4_v1_comparison_NALL=11,
-  Modifier_kv4_v1_comparison_ANY=12,
-  Modifier_kv4_v1_comparison_NONE=13,
-};
-
-enum Modifier_kv4_v1_floatcomp_enum {
-  Modifier_kv4_v1_floatcomp_ONE=0,
-  Modifier_kv4_v1_floatcomp_UEQ=1,
-  Modifier_kv4_v1_floatcomp_OEQ=2,
-  Modifier_kv4_v1_floatcomp_UNE=3,
-  Modifier_kv4_v1_floatcomp_OLT=4,
-  Modifier_kv4_v1_floatcomp_UGE=5,
-  Modifier_kv4_v1_floatcomp_OGE=6,
-  Modifier_kv4_v1_floatcomp_ULT=7,
-};
-
-enum Modifier_kv4_v1_rounding_enum {
-  Modifier_kv4_v1_rounding_RN=0,
-  Modifier_kv4_v1_rounding_RU=1,
-  Modifier_kv4_v1_rounding_RD=2,
-  Modifier_kv4_v1_rounding_RZ=3,
-  Modifier_kv4_v1_rounding_RNA=4,
-  Modifier_kv4_v1_rounding_RNZ=5,
-  Modifier_kv4_v1_rounding_RO=6,
-  Modifier_kv4_v1_rounding_=7,
-};
-
-enum Modifier_kv4_v1_silent_enum {
-  Modifier_kv4_v1_silent_=0,
-  Modifier_kv4_v1_silent_S=1,
-};
-
-enum Modifier_kv4_v1_variant_enum {
-  Modifier_kv4_v1_variant_=0,
-  Modifier_kv4_v1_variant_S=1,
-  Modifier_kv4_v1_variant_U=2,
-  Modifier_kv4_v1_variant_US=3,
-};
-
-enum Modifier_kv4_v1_speculate_enum {
-  Modifier_kv4_v1_speculate_U=0,
-  Modifier_kv4_v1_speculate_US=1,
-};
-
-enum Modifier_kv4_v1_doscale_enum {
-  Modifier_kv4_v1_doscale_=0,
-  Modifier_kv4_v1_doscale_XS=1,
-};
-
-enum Modifier_kv4_v1_qindex_enum {
-  Modifier_kv4_v1_qindex_Q0=0,
-  Modifier_kv4_v1_qindex_Q1=1,
-  Modifier_kv4_v1_qindex_Q2=2,
-  Modifier_kv4_v1_qindex_Q3=3,
-};
-
-enum Modifier_kv4_v1_hindex_enum {
-  Modifier_kv4_v1_hindex_H0=0,
-  Modifier_kv4_v1_hindex_H1=1,
-};
-
-enum Modifier_kv4_v1_cachelev_enum {
-  Modifier_kv4_v1_cachelev_L1=0,
-  Modifier_kv4_v1_cachelev_L2=1,
-};
-
-enum Modifier_kv4_v1_coherency_enum {
-  Modifier_kv4_v1_coherency_=0,
-  Modifier_kv4_v1_coherency_G=1,
-  Modifier_kv4_v1_coherency_S=2,
-};
-
-enum Modifier_kv4_v1_boolcas_enum {
-  Modifier_kv4_v1_boolcas_V=0,
-  Modifier_kv4_v1_boolcas_=1,
-};
-
-enum Modifier_kv4_v1_accesses_enum {
-  Modifier_kv4_v1_accesses_=0,
-  Modifier_kv4_v1_accesses_W=1,
-  Modifier_kv4_v1_accesses_R=2,
-  Modifier_kv4_v1_accesses_WA=3,
-};
-
-enum Modifier_kv4_v1_channel_enum {
-  Modifier_kv4_v1_channel_F=0,
-  Modifier_kv4_v1_channel_B=1,
-};
-
-enum Modifier_kv4_v1_conjugate_enum {
-  Modifier_kv4_v1_conjugate_=0,
-  Modifier_kv4_v1_conjugate_C=1,
-};
-
-enum Modifier_kv4_v1_transpose_enum {
-  Modifier_kv4_v1_transpose_=0,
-  Modifier_kv4_v1_transpose_TN=1,
-  Modifier_kv4_v1_transpose_NT=2,
-  Modifier_kv4_v1_transpose_TT=3,
-};
-
-enum Modifier_kv4_v1_shuffleV_enum {
-  Modifier_kv4_v1_shuffleV_=0,
-  Modifier_kv4_v1_shuffleV_TD=1,
-};
-
-enum Modifier_kv4_v1_shuffleX_enum {
-  Modifier_kv4_v1_shuffleX_=0,
-  Modifier_kv4_v1_shuffleX_ZD=1,
-  Modifier_kv4_v1_shuffleX_UD=2,
-  Modifier_kv4_v1_shuffleX_TQ=3,
-  Modifier_kv4_v1_shuffleX_TW=4,
-  Modifier_kv4_v1_shuffleX_ZW=5,
-  Modifier_kv4_v1_shuffleX_UW=6,
-};
-
-enum Modifier_kv4_v1_splat32_enum {
-  Modifier_kv4_v1_splat32_=0,
-  Modifier_kv4_v1_splat32__=1,
-};
-
+extern const char *mod_kv4_v1_exunum[];
+extern const char *mod_kv4_v1_scalarcond[];
+extern const char *mod_kv4_v1_lsomask[];
+extern const char *mod_kv4_v1_lsumask[];
+extern const char *mod_kv4_v1_lsupack[];
+extern const char *mod_kv4_v1_simplecond[];
+extern const char *mod_kv4_v1_comparison[];
+extern const char *mod_kv4_v1_floatcomp[];
+extern const char *mod_kv4_v1_rounding[];
+extern const char *mod_kv4_v1_silent[];
+extern const char *mod_kv4_v1_variant[];
+extern const char *mod_kv4_v1_speculate[];
+extern const char *mod_kv4_v1_doscale[];
+extern const char *mod_kv4_v1_qindex[];
+extern const char *mod_kv4_v1_hindex[];
+extern const char *mod_kv4_v1_cachelev[];
+extern const char *mod_kv4_v1_coherency[];
+extern const char *mod_kv4_v1_boolcas[];
+extern const char *mod_kv4_v1_accesses[];
+extern const char *mod_kv4_v1_channel[];
+extern const char *mod_kv4_v1_conjugate[];
+extern const char *mod_kv4_v1_transpose[];
+extern const char *mod_kv4_v1_shuffleV[];
+extern const char *mod_kv4_v1_shuffleX[];
+extern const char *mod_kv4_v1_splat32[];
 typedef enum {
   Bundling_kv4_v1_ALL,
   Bundling_kv4_v1_BCU,
