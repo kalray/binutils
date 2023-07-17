@@ -1447,7 +1447,17 @@ kvxop_compar (const void *a, const void *b)
 {
   const struct kvxopc *opa = (const struct kvxopc *) a;
   const struct kvxopc *opb = (const struct kvxopc *) b;
-  return strcmp (opa->as_op, opb->as_op);
+  int res = strcmp (opa->as_op, opb->as_op);
+
+  if (res)
+    return res;
+  else
+    {
+      for (int i = 0; opa->format[i] && opb->format[i]; ++i)
+	if (opa->format[i]->width != opb->format[i]->width)
+	  return opa->format[i]->width - opb->format[i]->width;
+      return 0;
+    }
 }
 
 /***************************************************/
