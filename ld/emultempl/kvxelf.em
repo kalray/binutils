@@ -32,9 +32,15 @@ fragment <<EOF
 static void
 elf${ELFSIZE}_kvx_before_allocation (void)
 {
+EOF
+if test x"${EMULATION_NAME}" != x"elf64kvx_linux"; then
+fragment <<EOF
   if (bfd_link_pie (&link_info)) {
           einfo (_("%F:%P: -pie not supported\n"));
   }
+EOF
+fi
+fragment <<EOF
 
   /* Call the standard elf routine.  */
   gld${EMULATION_NAME}_before_allocation ();
