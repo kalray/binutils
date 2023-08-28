@@ -8226,16 +8226,16 @@ family.
 @include c-ip2k.texi
 @end ifset
 
-@ifset KVX
-@include c-kvx.texi
-@end ifset
-
 @ifset LM32
 @include c-lm32.texi
 @end ifset
 
 @ifset LOONGARCH
 @include c-loongarch.texi
+@end ifset
+
+@ifset KVX
+@include c-kvx.texi
 @end ifset
 
 @ifset M32C

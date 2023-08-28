@@ -1195,7 +1195,7 @@ case "${target}" in
     noconfigdirs="$noconfigdirs gdb"
     ;;
   kvx-*-*)
-    noconfigdirs="$noconfigdirs sim"
+    noconfigdirs="$noconfigdirs gdb gdbserver sim"
     ;;
   mmix-*-*)
     noconfigdirs="$noconfigdirs gdb"

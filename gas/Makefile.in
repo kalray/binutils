@@ -478,9 +478,7 @@ do_compare = @do_compare@
 docdir = @docdir@
 dvidir = @dvidir@
 exec_prefix = @exec_prefix@
-extra_objects = \
-	config/kvx-parse.@OBJEXT@
-
+extra_objects = @extra_objects@
 host = @host@
 host_alias = @host_alias@
 host_cpu = @host_cpu@
@@ -969,7 +967,6 @@ CPU_DOCS = \
 	doc/c-i386.texi \
 	doc/c-ip2k.texi \
 	doc/c-lm32.texi \
-	doc/c-kvx.texi \
 	doc/c-m32c.texi \
 	doc/c-m32r.texi \
 	doc/c-m68hc11.texi \

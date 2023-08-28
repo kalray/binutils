@@ -118,11 +118,11 @@ ALL_MACHINES = \
 	cpu-hppa.lo \
 	cpu-i386.lo \
 	cpu-iamcu.lo \
-	cpu-kvx.lo \
 	cpu-ia64.lo \
 	cpu-ip2k.lo \
 	cpu-iq2000.lo \
 	cpu-lm32.lo \
+	cpu-kvx.lo \
 	cpu-loongarch.lo \
 	cpu-m10200.lo \
 	cpu-m10300.lo \
@@ -560,8 +560,9 @@ BFD64_BACKENDS = \
 	elf64-hppa.lo \
 	elf64-ia64.lo \
 	elf64-ia64-vms.lo \
-	elf64-kvx.lo \
 	elfxx-ia64.lo \
+	elfxx-kvx.lo \
+	elf64-kvx.lo \
 	elf32-loongarch.lo \
 	elf64-loongarch.lo \
 	elfxx-loongarch.lo \
@@ -850,6 +851,14 @@ elf64-aarch64.c : elfnn-aarch64.c
 	$(AM_V_at)echo "#line 1 \"elfnn-aarch64.c\"" > $@
 	$(AM_V_GEN)$(SED) -e s/NN/64/g < $< >> $@
 
+elf32-ia64.c : elfnn-ia64.c
+	$(AM_V_at)echo "#line 1 \"elfnn-ia64.c\"" > $@
+	$(AM_V_GEN)$(SED) -e s/NN/32/g < $< >> $@
+
+elf64-ia64.c : elfnn-ia64.c
+	$(AM_V_at)echo "#line 1 \"elfnn-ia64.c\"" > $@
+	$(AM_V_GEN)$(SED) -e s/NN/64/g < $< >> $@
+
 elf32-kvx.c : elfnn-kvx.c
 	rm -f elf32-kvx.c
 	echo "#line 1 \"$(srcdir)/elfnn-kvx.c\"" > elf32-kvx.new
@@ -861,14 +870,6 @@ elf64-kvx.c : elfnn-kvx.c
 	echo "#line 1 \"$(srcdir)/elfnn-kvx.c\"" > elf64-kvx.new
 	sed -e s/NN/64/g < $(srcdir)/elfnn-kvx.c >> elf64-kvx.new
 	mv -f elf64-kvx.new elf64-kvx.c
-
-elf32-ia64.c : elfnn-ia64.c
-	$(AM_V_at)echo "#line 1 \"elfnn-ia64.c\"" > $@
-	$(AM_V_GEN)$(SED) -e s/NN/32/g < $< >> $@
-
-elf64-ia64.c : elfnn-ia64.c
-	$(AM_V_at)echo "#line 1 \"elfnn-ia64.c\"" > $@
-	$(AM_V_GEN)$(SED) -e s/NN/64/g < $< >> $@
 
 elf32-loongarch.c : elfnn-loongarch.c
 	$(AM_V_at)echo "#line 1 \"elfnn-loongarch.c\"" > $@

@@ -559,9 +559,6 @@ disassembler_usage (FILE *stream ATTRIBUTE_UNUSED)
 #ifdef ARCH_arm
   print_arm_disassembler_options (stream);
 #endif
-#ifdef ARCH_kvx
-  print_kvx_disassembler_options (stream);
-#endif
 #ifdef ARCH_mips
   print_mips_disassembler_options (stream);
 #endif
@@ -576,6 +573,9 @@ disassembler_usage (FILE *stream ATTRIBUTE_UNUSED)
 #endif
 #ifdef ARCH_i386
   print_i386_disassembler_options (stream);
+#endif
+#ifdef ARCH_kvx
+  print_kvx_disassembler_options (stream);
 #endif
 #ifdef ARCH_s390
   print_s390_disassembler_options (stream);
