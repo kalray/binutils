@@ -969,6 +969,7 @@ CPU_DOCS = \
 	doc/c-i386.texi \
 	doc/c-ip2k.texi \
 	doc/c-lm32.texi \
+	doc/c-kvx.texi \
 	doc/c-m32c.texi \
 	doc/c-m32r.texi \
 	doc/c-m68hc11.texi \
