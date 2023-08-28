@@ -2281,6 +2281,9 @@ kvx_type (int start ATTRIBUTE_UNUSED)
   else if (strcmp (typename, "common") == 0
 	   || strcmp (typename, "STT_COMMON") == 0)
     type = BSF_ELF_COMMON;
+  else if (strcmp (typename, "gnu_unique_object") == 0
+	   || strcmp (typename, "STB_GNU_UNIQUE") == 0)
+    type = BSF_OBJECT | BSF_GNU_UNIQUE;
   else if (strcmp (typename, "notype") == 0
 	   || strcmp (typename, "STT_NOTYPE") == 0)
     ;
