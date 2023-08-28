@@ -386,12 +386,6 @@ is_delim (char c)
   return 0;
 }
 
-#define TOKEN_STR(token) \
-__extension__({ \
-char __buf_##token[256] = { 0 }; \
-print_token(token, __buf_##token, 256), __buf_##token; \
-})
-
 __attribute__((unused))
 static void
 print_token (struct token_s token, char *buf, int bufsz)
@@ -763,8 +757,8 @@ parse_with_restarts (struct token_s tok, int jump_target, struct rule rules[],
       return NULL;
     }
 
-  printf_debug (1, "\nEntering rule: %d (Trying to match: %s (%s)[%d])\n", jump_target,
-		TOKEN_NAME (CLASS_ID (tok)), TOKEN_STR (tok), CLASS_ID (tok));
+  printf_debug (1, "\nEntering rule: %d (Trying to match: (%s)[%d])\n", jump_target,
+		TOKEN_NAME (CLASS_ID (tok)), CLASS_ID (tok));
 
   /* 1. Find a rule that can be used with the current token. */
   int i = 0;
