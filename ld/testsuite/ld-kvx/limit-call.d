@@ -10,11 +10,11 @@ Disassembly of section .text:
 .* <_start>:
    0:	ff ff ff 1b                                     	call ffffffc <bar>;;
 
-   4:	00 00 d0 0f                                     	ret ;;
+   4:	00 00 d0 0f                                     	ret;;
 
 
 Disassembly of section .foo:
 
 .* <bar>:
-.*:	00 00 d0 0f                                     	ret ;;
+.*:	00 00 d0 0f                                     	ret;;
 

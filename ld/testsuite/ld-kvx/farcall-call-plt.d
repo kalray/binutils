@@ -24,7 +24,7 @@ Disassembly of section .text:
 	...
 .*:	.. .. 00 18                                     	call .* <__foo_veneer>;;
 
-.*:	00 00 d0 0f                                     	ret ;;
+.*:	00 00 d0 0f                                     	ret;;
 
 
 .* <__foo_veneer>:

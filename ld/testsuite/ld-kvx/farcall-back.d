@@ -21,12 +21,12 @@ Disassembly of section .text:
 
     .*:	.. .. .. ..                                     	goto .* <__bar3_veneer>;;
 
-    .*:	00 00 d0 0f                                     	ret ;;
+    .*:	00 00 d0 0f                                     	ret;;
 
 	...
 
 .* <_back>:
-    .*:	00 00 d0 0f                                     	ret ;;
+    .*:	00 00 d0 0f                                     	ret;;
 
 .* <__bar3_veneer>:
     .*:	00 .. 40 e0 0c 00 20 00                         	make \$r16 = .* \(0x.*\);;
@@ -47,21 +47,21 @@ Disassembly of section .text:
 Disassembly of section .foo:
 
 .* <bar1>:
-.*:	00 00 d0 0f                                     	ret ;;
+.*:	00 00 d0 0f                                     	ret;;
 
 .*:	.. .. .. ..                                     	goto .* <___start_veneer>;;
 
 	...
 
 .* <bar2>:
-.*:	00 00 d0 0f                                     	ret ;;
+.*:	00 00 d0 0f                                     	ret;;
 
 .*:	.. .. .. ..                                     	goto .* <___start_veneer>;;
 
 	...
 
 .* <bar3>:
-.*:	00 00 d0 0f                                     	ret ;;
+.*:	00 00 d0 0f                                     	ret;;
 
 .*:	.. .. .. ..                                     	goto .* <___back_veneer>;;
 

@@ -12,7 +12,7 @@ Disassembly of section .text:
 
 .*:	.. .. .. ..                                     	goto .* <___veneer>;;
 
-.*:	00 00 d0 0f                                     	ret ;;
+.*:	00 00 d0 0f                                     	ret;;
 
 .* <___veneer>:
 .*:	.. .. 40 e0 .. .. .. ..                         	make \$r16 = .* \(0x.*\);;
@@ -28,9 +28,9 @@ Disassembly of section .text:
 Disassembly of section .foo:
 
 .* <bar>:
-.*:	00 00 d0 0f                                     	ret ;;
+.*:	00 00 d0 0f                                     	ret;;
 
 
 .* <bar2>:
-.*:	00 00 d0 0f                                     	ret ;;
+.*:	00 00 d0 0f                                     	ret;;
 
