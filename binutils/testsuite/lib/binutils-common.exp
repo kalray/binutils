@@ -256,6 +256,7 @@ proc supports_gnu_osabi {} {
     if { [istarget "arm*-*-*"]
 	 || [istarget "msp430-*-*"]
 	 || [istarget "hppa-unknown-elf"]
+	 || [istarget "kvx*-*-*"]
 	 || [istarget "visium-*-*"] } {
 	return 0
     }
@@ -372,8 +373,8 @@ proc check_pie_support { } {
     global pie_available_saved
     global ld
 
-    ## kvx-*-cos does support -shared but not PIE.
-    if { [istarget "kvx-*-cos"] } {
+    ## kvx-*-* does support -shared but not PIE.
+    if { [istarget "kvx*-*-*"] && ![istarget "kvx*-linux-*"] } {
         set pie_available_saved 0
     }
 
