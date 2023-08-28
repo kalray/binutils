@@ -51,19 +51,21 @@ run_dump_test "farcall-call-section"
 run_dump_test "pcrel-reloc"
 
 ## 32bits tests
-set extra_32bits [list [list as -m32] [list ld -melf32kvx]]
-run_dump_test "limit-call" $extra_32bits
-run_dump_test "limit-goto" $extra_32bits
-run_dump_test "farcall-back" $extra_32bits
-run_dump_test "farcall-goto-defsym" $extra_32bits
-run_dump_test "farcall-call-defsym" $extra_32bits
-run_dump_test "farcall-goto-gsym" $extra_32bits
-run_dump_test "farcall-goto-plt" $extra_32bits
-run_dump_test "farcall-call-plt" $extra_32bits
-run_dump_test "farcall-call" $extra_32bits
-run_dump_test "farcall-goto" $extra_32bits
-run_dump_test "farcall-goto-none-function" $extra_32bits
-run_dump_test "farcall-call-none-function" $extra_32bits
-run_dump_test "farcall-goto-section" $extra_32bits
-run_dump_test "farcall-call-section" $extra_32bits
-run_dump_test "pcrel-reloc" [list [list as -m32] [list ld -melf32kvx] [list dump pcrel-reloc-32bits.d]]
+if { ![istarget "kvx*-linux-*"] } {
+  set extra_32bits [list [list as -m32] [list ld -melf32kvx]]
+    run_dump_test "limit-call" $extra_32bits
+    run_dump_test "limit-goto" $extra_32bits
+    run_dump_test "farcall-back" $extra_32bits
+    run_dump_test "farcall-goto-defsym" $extra_32bits
+    run_dump_test "farcall-call-defsym" $extra_32bits
+    run_dump_test "farcall-goto-gsym" $extra_32bits
+    run_dump_test "farcall-goto-plt" $extra_32bits
+    run_dump_test "farcall-call-plt" $extra_32bits
+    run_dump_test "farcall-call" $extra_32bits
+    run_dump_test "farcall-goto" $extra_32bits
+    run_dump_test "farcall-goto-none-function" $extra_32bits
+    run_dump_test "farcall-call-none-function" $extra_32bits
+    run_dump_test "farcall-goto-section" $extra_32bits
+    run_dump_test "farcall-call-section" $extra_32bits
+    run_dump_test "pcrel-reloc" [list [list as -m32] [list ld -melf32kvx] [list dump pcrel-reloc-32bits.d]]
+}
