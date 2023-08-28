@@ -1,7 +1,8 @@
-/* Kalray MPPA generic disassembler support code.
-   Copyright (C) 2009-2018 Kalray SA.
+/* kvx-dis.c -- Kalray MPPA generic disassembler.
+   Copyright (C) 2009-2023 Free Software Foundation, Inc.
+   Contributed by Kalray SA.
 
-   This file is part of libopcodes.
+   This file is part of the GNU opcodes library.
 
    This library is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -13,9 +14,9 @@
    or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
    License for more details.
 
-   You should have received a copy of the GNU General Public License along
-   with this program; if not, write to the Free Software Foundation, Inc.,
-   51 Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.  */
+   You should have received a copy of the GNU General Public License
+   along with this program; see the file COPYING3. If not,
+   see <http://www.gnu.org/licenses/>.  */
 
 #define STATIC_TABLE
 #define DEFINE_TABLE

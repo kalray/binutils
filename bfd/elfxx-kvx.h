@@ -1,8 +1,6 @@
 /* KVX-specific backend routines.
-   Copyright (C) 2009-2016 Free Software Foundation, Inc.
-   Contributed by ARM Ltd.
-
-   Copyright (C) 2019 Kalray
+   Copyright (C) 2009-2023 Free Software Foundation, Inc.
+   Contributed by Kalray SA.
 
    This file is part of BFD, the Binary File Descriptor library.
 
