@@ -27,7 +27,7 @@ OUTPUT_FORMAT="elf64-kvx"
 NO_REL_RELOCS=yes
 
 TEMPLATE_NAME=elf
-
+EXTRA_EM_FILE=kvxelf
 # first user page at 64K.
 TEXT_START_ADDR=0x10000
 
