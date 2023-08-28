@@ -29,7 +29,7 @@ NO_REL_RELOCS=yes
 TEMPLATE_NAME=elf
 EXTRA_EM_FILE=kvxelf
 EMBEDDED=yes
-TEXT_START_ADDR=0x0
+TEXT_START_ADDR=0x10000
 
 # No support for .s* sections.
 NO_SMALL_DATA=yes
