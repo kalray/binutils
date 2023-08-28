@@ -2010,6 +2010,7 @@ elfNN_kvx_final_link_relocate (reloc_howto_type *howto,
   bool weak_undef_p;
   asection *base_got;
   bfd_reloc_status_type rret = bfd_reloc_ok;
+  bool resolved_to_zero;
   globals = elf_kvx_hash_table (info);
 
   symtab_hdr = &elf_symtab_hdr (input_bfd);
@@ -2039,6 +2040,8 @@ elfNN_kvx_final_link_relocate (reloc_howto_type *howto,
 
   weak_undef_p = (h ? h->root.type == bfd_link_hash_undefweak
 		  : bfd_is_und_section (sym_sec));
+  resolved_to_zero = (h != NULL
+		      && UNDEFWEAK_NO_DYNAMIC_RELOC (info, h));
 
   switch (bfd_r_type)
     {
@@ -2066,7 +2069,7 @@ elfNN_kvx_final_link_relocate (reloc_howto_type *howto,
 	    || globals->root.is_relocatable_executable)
 	  && (input_section->flags & SEC_ALLOC)
 	  && (h == NULL
-	      || ELF_ST_VISIBILITY (h->other) == STV_DEFAULT
+	      || (ELF_ST_VISIBILITY (h->other) == STV_DEFAULT && !resolved_to_zero)
 	      || h->root.type != bfd_link_hash_undefweak))
 	{
 	  Elf_Internal_Rela outrel;
@@ -2585,9 +2588,9 @@ elfNN_kvx_relocate_section (bfd *output_bfd,
 	  (*_bfd_error_handler)
 	    ((sym_type == STT_TLS
               /* xgettext:c-format */
-              ? _("%pB(%pA+%#" PRIx64 "): %s used with TLS symbol %s")
+              ? _("%pB(%pA+%#lx): %s used with TLS symbol %s")
               /* xgettext:c-format */
-              : _("%pB(%pA+%#" PRIx64 "): %s used with non-TLS symbol %s")),
+              : _("%pB(%pA+%#lx): %s used with non-TLS symbol %s")),
 	     input_bfd,
 	     input_section, (long) rel->r_offset, howto->name, name);
 	}
@@ -3965,7 +3968,8 @@ elfNN_kvx_allocate_dynrelocs (struct elf_link_hash_entry *h, void *inf)
          visibility.  */
       if (h->dyn_relocs != NULL && h->root.type == bfd_link_hash_undefweak)
 	{
-	  if (ELF_ST_VISIBILITY (h->other) != STV_DEFAULT)
+	  if (ELF_ST_VISIBILITY (h->other) != STV_DEFAULT
+	      || UNDEFWEAK_NO_DYNAMIC_RELOC (info, h))
 	    h->dyn_relocs = NULL;
 
 	  /* Make sure undefined weak symbols are output as a dynamic
@@ -4039,6 +4043,9 @@ kvx_readonly_dynrelocs (struct elf_link_hash_entry * h, void * inf)
 	  struct bfd_link_info *info = (struct bfd_link_info *) inf;
 
 	  info->flags |= DF_TEXTREL;
+	  info->callbacks->minfo (_("%pB: dynamic relocation against `%pT' in "
+				    "read-only section `%pA'\n"),
+				  s->owner, h->root.root.string, s);
 
 	  /* Not an error, just cut short the traversal.  */
 	  return false;
@@ -4271,7 +4278,7 @@ elfNN_kvx_size_dynamic_sections (bfd *output_bfd ATTRIBUTE_UNUSED,
 	  /* If any dynamic relocs apply to a read-only section,
 	     then we need a DT_TEXTREL entry.  */
 	  if ((info->flags & DF_TEXTREL) == 0)
-	    elf_link_hash_traverse (& htab->root, kvx_readonly_dynrelocs,
+	    elf_link_hash_traverse (&htab->root, kvx_readonly_dynrelocs,
 				    info);
 
 	  if ((info->flags & DF_TEXTREL) != 0)
