@@ -24124,6 +24124,394 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s, %s",
   },
+  { /* Opcode-kv3_v1-IORD_registerW_registerZ_registerY_simple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0x7a010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORD_registerW_registerZ_s010_simple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0x6a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORD_registerW_registerZ_s037_double */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xfa010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower5_opnd,
+      &kv3_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* Opcode-kv3_v1-IORD_registerW_registerZ_w064_triple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_Y,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORND_registerW_registerZ_registerY_simple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0x7f010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORND_registerW_registerZ_s010_simple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0x6f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORND_registerW_registerZ_s037_double */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORND_registerW_registerZ_w032_splat32_double */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xff010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower5_opnd,
+      &kv3_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* Opcode-kv3_v1-IORND_registerW_registerZ_w064_triple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_Y,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORNW_registerW_registerZ_registerY_simple */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0x7f011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORNW_registerW_registerZ_s010_simple */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0x7f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORNW_registerW_registerZ_s037_double */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0xff000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORW_registerW_registerZ_registerY_simple */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0x7a011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORW_registerW_registerZ_s010_simple */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0x7a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-IORW_registerW_registerZ_s037_double */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0xfa000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
   { /* Opcode-kv3_v1-LANDD_registerW_registerZ_registerY_simple */
     .as_op = "landd",
     .codewords = {
@@ -30975,26 +31363,8 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v1-NOP_simple */
-    .as_op = "nop",
-    .codewords = {
-      {
-        .opcode = 0x7f03f000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_NOP, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_NOP,
-    .format = {
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = "",
-  },
-  { /* Opcode-kv3_v1-NORD_registerW_registerZ_registerY_simple */
-    .as_op = "nord",
+  { /* Opcode-kv3_v1-NIORD_registerW_registerZ_registerY_simple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0x7b010000,
@@ -31014,8 +31384,8 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v1-NORD_registerW_registerZ_s010_simple */
-    .as_op = "nord",
+  { /* Opcode-kv3_v1-NIORD_registerW_registerZ_s010_simple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0x6b000000,
@@ -31035,8 +31405,8 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v1-NORD_registerW_registerZ_s037_double */
-    .as_op = "nord",
+  { /* Opcode-kv3_v1-NIORD_registerW_registerZ_s037_double */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xeb000000,
@@ -31061,8 +31431,8 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v1-NORD_registerW_registerZ_w032_splat32_double */
-    .as_op = "nord",
+  { /* Opcode-kv3_v1-NIORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xfb010000,
@@ -31088,8 +31458,8 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s%s",
   },
-  { /* Opcode-kv3_v1-NORD_registerW_registerZ_w064_triple */
-    .as_op = "nord",
+  { /* Opcode-kv3_v1-NIORD_registerW_registerZ_w064_triple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xeb000000,
@@ -31119,8 +31489,8 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v1-NORW_registerW_registerZ_registerY_simple */
-    .as_op = "norw",
+  { /* Opcode-kv3_v1-NIORW_registerW_registerZ_registerY_simple */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0x7b011000,
@@ -31140,8 +31510,8 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v1-NORW_registerW_registerZ_s010_simple */
-    .as_op = "norw",
+  { /* Opcode-kv3_v1-NIORW_registerW_registerZ_s010_simple */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0x7b000000,
@@ -31161,8 +31531,8 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v1-NORW_registerW_registerZ_s037_double */
-    .as_op = "norw",
+  { /* Opcode-kv3_v1-NIORW_registerW_registerZ_s037_double */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0xfb000000,
@@ -31186,6 +31556,24 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     },
     .rclass = "",
     .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v1-NOP_simple */
+    .as_op = "nop",
+    .codewords = {
+      {
+        .opcode = 0x7f03f000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_NOP, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_NOP,
+    .format = {
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "",
   },
   { /* Opcode-kv3_v1-NXORD_registerW_registerZ_registerY_simple */
     .as_op = "nxord",
@@ -31360,394 +31748,6 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .codewords = {
       {
         .opcode = 0xfd000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORD_registerW_registerZ_registerY_simple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0x7a010000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORD_registerW_registerZ_s010_simple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0x6a000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORD_registerW_registerZ_s037_double */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xea000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORD_registerW_registerZ_w032_splat32_double */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xfa010000,
-        .mask = 0xff03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_upper27_lower5_opnd,
-      &kv3_v1_splat32_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s%s",
-  },
-  { /* Opcode-kv3_v1-ORD_registerW_registerZ_w064_triple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xea000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x80000000,
-        .mask = 0xe0000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 3,
-    .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_Y,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_extend27_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORND_registerW_registerZ_registerY_simple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0x7f010000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORND_registerW_registerZ_s010_simple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0x6f000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORND_registerW_registerZ_s037_double */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xef000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORND_registerW_registerZ_w032_splat32_double */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xff010000,
-        .mask = 0xff03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_upper27_lower5_opnd,
-      &kv3_v1_splat32_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s%s",
-  },
-  { /* Opcode-kv3_v1-ORND_registerW_registerZ_w064_triple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xef000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x80000000,
-        .mask = 0xe0000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 3,
-    .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_Y,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_extend27_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORNW_registerW_registerZ_registerY_simple */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0x7f011000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORNW_registerW_registerZ_s010_simple */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0x7f000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORNW_registerW_registerZ_s037_double */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0xff000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORW_registerW_registerZ_registerY_simple */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0x7a011000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORW_registerW_registerZ_s010_simple */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0x7a000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
-    .format = {
-      &kv3_v1_registerw_opnd,
-      &kv3_v1_registerz_opnd,
-      &kv3_v1_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v1-ORW_registerW_registerZ_s037_double */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0xfa000000,
         .mask = 0xff030000,
         .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
       },
@@ -37832,6 +37832,588 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s, %s",
   },
+  { /* ~_Opcode-kv3_v1-NORD_registerW_registerZ_registerY_simple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0x7b010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-NORD_registerW_registerZ_s010_simple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0x6b000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-NORD_registerW_registerZ_s037_double */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xeb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-NORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xfb010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower5_opnd,
+      &kv3_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv3_v1-NORD_registerW_registerZ_w064_triple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xeb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_Y,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-NORW_registerW_registerZ_registerY_simple */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0x7b011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-NORW_registerW_registerZ_s010_simple */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0x7b000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-NORW_registerW_registerZ_s037_double */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0xfb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORD_registerW_registerZ_registerY_simple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0x7a010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORD_registerW_registerZ_s010_simple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0x6a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORD_registerW_registerZ_s037_double */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xfa010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower5_opnd,
+      &kv3_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv3_v1-ORD_registerW_registerZ_w064_triple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_Y,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORND_registerW_registerZ_registerY_simple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0x7f010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORND_registerW_registerZ_s010_simple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0x6f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORND_registerW_registerZ_s037_double */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORND_registerW_registerZ_w032_splat32_double */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xff010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower5_opnd,
+      &kv3_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv3_v1-ORND_registerW_registerZ_w064_triple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_Y,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORNW_registerW_registerZ_registerY_simple */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0x7f011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORNW_registerW_registerZ_s010_simple */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0x7f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORNW_registerW_registerZ_s037_double */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0xff000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORW_registerW_registerZ_registerY_simple */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0x7a011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORW_registerW_registerZ_s010_simple */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0x7a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v1-ORW_registerW_registerZ_s037_double */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0xfa000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v1_ALU_TINY_X,
+    .format = {
+      &kv3_v1_registerw_opnd,
+      &kv3_v1_registerz_opnd,
+      &kv3_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
   { /* ~_Opcode-kv3_v1-XMOVETQ_registerAE_registerZ_registerY_simple */
     .as_op = "xmovetq",
     .codewords = {
@@ -37874,7 +38456,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-/* Number of instructions : 1145 */
+/* Number of instructions : 1169 */
 	{"", { }, 0, 0, 0, 0, { }, "", ""}};
 
 int kvx_kv3_v2_regfiles[] = {
@@ -61558,6 +62140,454 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s, %s",
   },
+  { /* Opcode-kv3_v2-IORD_registerW_registerZ_registerY_simple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0x7a010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORD_registerW_registerZ_s010_simple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0x6a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORD_registerW_registerZ_s037_double */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xfa010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower5_opnd,
+      &kv3_v2_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* Opcode-kv3_v2-IORD_registerW_registerZ_w064_triple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_Y,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORND_registerW_registerZ_registerY_simple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0x7f010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORND_registerW_registerZ_s010_simple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0x6f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORND_registerW_registerZ_s037_double */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORND_registerW_registerZ_w032_splat32_double */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xff010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower5_opnd,
+      &kv3_v2_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* Opcode-kv3_v2-IORND_registerW_registerZ_w064_triple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_Y,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORNW_registerW_registerZ_registerY_simple */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0x7f011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORNW_registerW_registerZ_s010_simple */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0x7f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORNW_registerW_registerZ_s037_double */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0xff000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORRBOD_registerW_registerZ_simple */
+    .as_op = "iorrbod",
+    .codewords = {
+      {
+        .opcode = 0x7103c080,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* Opcode-kv3_v2-IORRHQD_registerW_registerZ_simple */
+    .as_op = "iorrhqd",
+    .codewords = {
+      {
+        .opcode = 0x7103c040,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* Opcode-kv3_v2-IORRWPD_registerW_registerZ_simple */
+    .as_op = "iorrwpd",
+    .codewords = {
+      {
+        .opcode = 0x7103c000,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* Opcode-kv3_v2-IORW_registerW_registerZ_registerY_simple */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0x7a011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORW_registerW_registerZ_s010_simple */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0x7a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-IORW_registerW_registerZ_s037_double */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0xfa000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
   { /* Opcode-kv3_v2-LANDD_registerW_registerZ_registerY_simple */
     .as_op = "landd",
     .codewords = {
@@ -67340,26 +68370,8 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-NOP_simple */
-    .as_op = "nop",
-    .codewords = {
-      {
-        .opcode = 0x7f03f000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_NOP, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_NOP,
-    .format = {
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = "",
-  },
-  { /* Opcode-kv3_v2-NORD_registerW_registerZ_registerY_simple */
-    .as_op = "nord",
+  { /* Opcode-kv3_v2-NIORD_registerW_registerZ_registerY_simple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0x7b010000,
@@ -67379,8 +68391,8 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-NORD_registerW_registerZ_s010_simple */
-    .as_op = "nord",
+  { /* Opcode-kv3_v2-NIORD_registerW_registerZ_s010_simple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0x6b000000,
@@ -67400,8 +68412,8 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-NORD_registerW_registerZ_s037_double */
-    .as_op = "nord",
+  { /* Opcode-kv3_v2-NIORD_registerW_registerZ_s037_double */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xeb000000,
@@ -67426,8 +68438,8 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-NORD_registerW_registerZ_w032_splat32_double */
-    .as_op = "nord",
+  { /* Opcode-kv3_v2-NIORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xfb010000,
@@ -67453,8 +68465,8 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s%s",
   },
-  { /* Opcode-kv3_v2-NORD_registerW_registerZ_w064_triple */
-    .as_op = "nord",
+  { /* Opcode-kv3_v2-NIORD_registerW_registerZ_w064_triple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xeb000000,
@@ -67484,8 +68496,8 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-NORW_registerW_registerZ_registerY_simple */
-    .as_op = "norw",
+  { /* Opcode-kv3_v2-NIORW_registerW_registerZ_registerY_simple */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0x7b011000,
@@ -67505,8 +68517,8 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-NORW_registerW_registerZ_s010_simple */
-    .as_op = "norw",
+  { /* Opcode-kv3_v2-NIORW_registerW_registerZ_s010_simple */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0x7b000000,
@@ -67526,8 +68538,8 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-NORW_registerW_registerZ_s037_double */
-    .as_op = "norw",
+  { /* Opcode-kv3_v2-NIORW_registerW_registerZ_s037_double */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0xfb000000,
@@ -67551,6 +68563,24 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     },
     .rclass = "",
     .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv3_v2-NOP_simple */
+    .as_op = "nop",
+    .codewords = {
+      {
+        .opcode = 0x7f03f000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_NOP, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_NOP,
+    .format = {
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "",
   },
   { /* Opcode-kv3_v2-NXORD_registerW_registerZ_registerY_simple */
     .as_op = "nxord",
@@ -67725,454 +68755,6 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .codewords = {
       {
         .opcode = 0xfd000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORD_registerW_registerZ_registerY_simple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0x7a010000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORD_registerW_registerZ_s010_simple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0x6a000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORD_registerW_registerZ_s037_double */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xea000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORD_registerW_registerZ_w032_splat32_double */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xfa010000,
-        .mask = 0xff03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_upper27_lower5_opnd,
-      &kv3_v2_splat32_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s%s",
-  },
-  { /* Opcode-kv3_v2-ORD_registerW_registerZ_w064_triple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xea000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x80000000,
-        .mask = 0xe0000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 3,
-    .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_Y,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_extend27_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORND_registerW_registerZ_registerY_simple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0x7f010000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORND_registerW_registerZ_s010_simple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0x6f000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORND_registerW_registerZ_s037_double */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xef000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORND_registerW_registerZ_w032_splat32_double */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xff010000,
-        .mask = 0xff03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_upper27_lower5_opnd,
-      &kv3_v2_splat32_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s%s",
-  },
-  { /* Opcode-kv3_v2-ORND_registerW_registerZ_w064_triple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xef000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x80000000,
-        .mask = 0xe0000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 3,
-    .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_Y,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_extend27_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORNW_registerW_registerZ_registerY_simple */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0x7f011000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORNW_registerW_registerZ_s010_simple */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0x7f000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORNW_registerW_registerZ_s037_double */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0xff000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORRBOD_registerW_registerZ_simple */
-    .as_op = "orrbod",
-    .codewords = {
-      {
-        .opcode = 0x7103c080,
-        .mask = 0x7f03f0c0,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s",
-  },
-  { /* Opcode-kv3_v2-ORRHQD_registerW_registerZ_simple */
-    .as_op = "orrhqd",
-    .codewords = {
-      {
-        .opcode = 0x7103c040,
-        .mask = 0x7f03f0c0,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s",
-  },
-  { /* Opcode-kv3_v2-ORRWPD_registerW_registerZ_simple */
-    .as_op = "orrwpd",
-    .codewords = {
-      {
-        .opcode = 0x7103c000,
-        .mask = 0x7f03f0c0,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s",
-  },
-  { /* Opcode-kv3_v2-ORW_registerW_registerZ_registerY_simple */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0x7a011000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORW_registerW_registerZ_s010_simple */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0x7a000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
-    .format = {
-      &kv3_v2_registerw_opnd,
-      &kv3_v2_registerz_opnd,
-      &kv3_v2_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv3_v2-ORW_registerW_registerZ_s037_double */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0xfa000000,
         .mask = 0xff030000,
         .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
       },
@@ -75123,6 +75705,27 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s, %s",
   },
+  { /* Opcode-kv3_v2-XIORO_registerA_registerB_registerC_simple */
+    .as_op = "xioro",
+    .codewords = {
+      {
+        .opcode = 0x07032000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TCA, ((int)0 << 8) | (int)Reservation_kv3_v2_TCA,
+    .format = {
+      &kv3_v2_registera_opnd,
+      &kv3_v2_registerb_opnd,
+      &kv3_v2_registerc_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
   { /* Opcode-kv3_v2-XLO_variant_doscale_qindex_registerAq_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
@@ -76758,27 +77361,6 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-XORO_registerA_registerB_registerC_simple */
-    .as_op = "xoro",
-    .codewords = {
-      {
-        .opcode = 0x07032000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TCA, ((int)0 << 8) | (int)Reservation_kv3_v2_TCA,
-    .format = {
-      &kv3_v2_registera_opnd,
-      &kv3_v2_registerb_opnd,
-      &kv3_v2_registerc_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
   { /* Opcode-kv3_v2-XORRBOD_registerW_registerZ_simple */
     .as_op = "xorrbod",
     .codewords = {
@@ -77610,6 +78192,648 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s, %s",
   },
+  { /* ~_Opcode-kv3_v2-NORD_registerW_registerZ_registerY_simple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0x7b010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-NORD_registerW_registerZ_s010_simple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0x6b000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-NORD_registerW_registerZ_s037_double */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xeb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-NORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xfb010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower5_opnd,
+      &kv3_v2_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv3_v2-NORD_registerW_registerZ_w064_triple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xeb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_Y,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-NORW_registerW_registerZ_registerY_simple */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0x7b011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-NORW_registerW_registerZ_s010_simple */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0x7b000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-NORW_registerW_registerZ_s037_double */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0xfb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORD_registerW_registerZ_registerY_simple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0x7a010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORD_registerW_registerZ_s010_simple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0x6a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORD_registerW_registerZ_s037_double */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xfa010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower5_opnd,
+      &kv3_v2_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv3_v2-ORD_registerW_registerZ_w064_triple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_Y,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORND_registerW_registerZ_registerY_simple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0x7f010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORND_registerW_registerZ_s010_simple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0x6f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORND_registerW_registerZ_s037_double */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORND_registerW_registerZ_w032_splat32_double */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xff010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower5_opnd,
+      &kv3_v2_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv3_v2-ORND_registerW_registerZ_w064_triple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_Y,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORNW_registerW_registerZ_registerY_simple */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0x7f011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORNW_registerW_registerZ_s010_simple */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0x7f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORNW_registerW_registerZ_s037_double */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0xff000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORRBOD_registerW_registerZ_simple */
+    .as_op = "orrbod",
+    .codewords = {
+      {
+        .opcode = 0x7103c080,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORRHQD_registerW_registerZ_simple */
+    .as_op = "orrhqd",
+    .codewords = {
+      {
+        .opcode = 0x7103c040,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORRWPD_registerW_registerZ_simple */
+    .as_op = "orrwpd",
+    .codewords = {
+      {
+        .opcode = 0x7103c000,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORW_registerW_registerZ_registerY_simple */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0x7a011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORW_registerW_registerZ_s010_simple */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0x7a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv3_v2-ORW_registerW_registerZ_s037_double */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0xfa000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TINY_X, ((int)0 << 8) | (int)Reservation_kv3_v2_ALU_TINY_X,
+    .format = {
+      &kv3_v2_registerw_opnd,
+      &kv3_v2_registerz_opnd,
+      &kv3_v2_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
   { /* ~_Opcode-kv3_v2-XMT44D_registerAq_registerCq_simple */
     .as_op = "xmt44d",
     .codewords = {
@@ -77630,7 +78854,28 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s",
   },
-/* Number of instructions : 1204 */
+  { /* ~_Opcode-kv3_v2-XORO_registerA_registerB_registerC_simple */
+    .as_op = "xoro",
+    .codewords = {
+      {
+        .opcode = 0x07032000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_TCA, ((int)0 << 8) | (int)Reservation_kv3_v2_TCA,
+    .format = {
+      &kv3_v2_registera_opnd,
+      &kv3_v2_registerb_opnd,
+      &kv3_v2_registerc_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+/* Number of instructions : 1232 */
 	{"", { }, 0, 0, 0, 0, { }, "", ""}};
 
 int kvx_kv4_v1_regfiles[] = {
@@ -101314,6 +102559,454 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s, %s",
   },
+  { /* Opcode-kv4_v1-IORD_registerW_registerZ_registerY_simple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0x7a010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORD_registerW_registerZ_s010_simple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0x6a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORD_registerW_registerZ_s037_double */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xfa010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower5_opnd,
+      &kv4_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* Opcode-kv4_v1-IORD_registerW_registerZ_w064_triple */
+    .as_op = "iord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_Y,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORND_registerW_registerZ_registerY_simple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0x7f010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORND_registerW_registerZ_s010_simple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0x6f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORND_registerW_registerZ_s037_double */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORND_registerW_registerZ_w032_splat32_double */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xff010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower5_opnd,
+      &kv4_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* Opcode-kv4_v1-IORND_registerW_registerZ_w064_triple */
+    .as_op = "iornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_Y,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORNW_registerW_registerZ_registerY_simple */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0x7f011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORNW_registerW_registerZ_s010_simple */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0x7f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORNW_registerW_registerZ_s037_double */
+    .as_op = "iornw",
+    .codewords = {
+      {
+        .opcode = 0xff000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORRBOD_registerW_registerZ_simple */
+    .as_op = "iorrbod",
+    .codewords = {
+      {
+        .opcode = 0x7103c080,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* Opcode-kv4_v1-IORRHQD_registerW_registerZ_simple */
+    .as_op = "iorrhqd",
+    .codewords = {
+      {
+        .opcode = 0x7103c040,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* Opcode-kv4_v1-IORRWPD_registerW_registerZ_simple */
+    .as_op = "iorrwpd",
+    .codewords = {
+      {
+        .opcode = 0x7103c000,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* Opcode-kv4_v1-IORW_registerW_registerZ_registerY_simple */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0x7a011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORW_registerW_registerZ_s010_simple */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0x7a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-IORW_registerW_registerZ_s037_double */
+    .as_op = "iorw",
+    .codewords = {
+      {
+        .opcode = 0xfa000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
   { /* Opcode-kv4_v1-LANDD_registerW_registerZ_registerY_simple */
     .as_op = "landd",
     .codewords = {
@@ -107096,26 +108789,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-NOP_simple */
-    .as_op = "nop",
-    .codewords = {
-      {
-        .opcode = 0x7f03f000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_NOP, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_NOP,
-    .format = {
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = "",
-  },
-  { /* Opcode-kv4_v1-NORD_registerW_registerZ_registerY_simple */
-    .as_op = "nord",
+  { /* Opcode-kv4_v1-NIORD_registerW_registerZ_registerY_simple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0x7b010000,
@@ -107135,8 +108810,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-NORD_registerW_registerZ_s010_simple */
-    .as_op = "nord",
+  { /* Opcode-kv4_v1-NIORD_registerW_registerZ_s010_simple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0x6b000000,
@@ -107156,8 +108831,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-NORD_registerW_registerZ_s037_double */
-    .as_op = "nord",
+  { /* Opcode-kv4_v1-NIORD_registerW_registerZ_s037_double */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xeb000000,
@@ -107182,8 +108857,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-NORD_registerW_registerZ_w032_splat32_double */
-    .as_op = "nord",
+  { /* Opcode-kv4_v1-NIORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xfb010000,
@@ -107209,8 +108884,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s%s",
   },
-  { /* Opcode-kv4_v1-NORD_registerW_registerZ_w064_triple */
-    .as_op = "nord",
+  { /* Opcode-kv4_v1-NIORD_registerW_registerZ_w064_triple */
+    .as_op = "niord",
     .codewords = {
       {
         .opcode = 0xeb000000,
@@ -107240,8 +108915,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-NORW_registerW_registerZ_registerY_simple */
-    .as_op = "norw",
+  { /* Opcode-kv4_v1-NIORW_registerW_registerZ_registerY_simple */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0x7b011000,
@@ -107261,8 +108936,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-NORW_registerW_registerZ_s010_simple */
-    .as_op = "norw",
+  { /* Opcode-kv4_v1-NIORW_registerW_registerZ_s010_simple */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0x7b000000,
@@ -107282,8 +108957,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-NORW_registerW_registerZ_s037_double */
-    .as_op = "norw",
+  { /* Opcode-kv4_v1-NIORW_registerW_registerZ_s037_double */
+    .as_op = "niorw",
     .codewords = {
       {
         .opcode = 0xfb000000,
@@ -107307,6 +108982,24 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .rclass = "",
     .fmtstring = " %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-NOP_simple */
+    .as_op = "nop",
+    .codewords = {
+      {
+        .opcode = 0x7f03f000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_NOP, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_NOP,
+    .format = {
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "",
   },
   { /* Opcode-kv4_v1-NXORD_registerW_registerZ_registerY_simple */
     .as_op = "nxord",
@@ -107481,454 +109174,6 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .codewords = {
       {
         .opcode = 0xfd000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORD_registerW_registerZ_registerY_simple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0x7a010000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORD_registerW_registerZ_s010_simple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0x6a000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORD_registerW_registerZ_s037_double */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xea000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORD_registerW_registerZ_w032_splat32_double */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xfa010000,
-        .mask = 0xff03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_upper27_lower5_opnd,
-      &kv4_v1_splat32_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s%s",
-  },
-  { /* Opcode-kv4_v1-ORD_registerW_registerZ_w064_triple */
-    .as_op = "ord",
-    .codewords = {
-      {
-        .opcode = 0xea000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x80000000,
-        .mask = 0xe0000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 3,
-    .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_Y,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_extend27_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORND_registerW_registerZ_registerY_simple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0x7f010000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORND_registerW_registerZ_s010_simple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0x6f000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORND_registerW_registerZ_s037_double */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xef000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORND_registerW_registerZ_w032_splat32_double */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xff010000,
-        .mask = 0xff03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_upper27_lower5_opnd,
-      &kv4_v1_splat32_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s%s",
-  },
-  { /* Opcode-kv4_v1-ORND_registerW_registerZ_w064_triple */
-    .as_op = "ornd",
-    .codewords = {
-      {
-        .opcode = 0xef000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x80000000,
-        .mask = 0xe0000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 3,
-    .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_Y,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_extend27_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORNW_registerW_registerZ_registerY_simple */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0x7f011000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORNW_registerW_registerZ_s010_simple */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0x7f000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORNW_registerW_registerZ_s037_double */
-    .as_op = "ornw",
-    .codewords = {
-      {
-        .opcode = 0xff000000,
-        .mask = 0xff030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_upper27_lower10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORRBOD_registerW_registerZ_simple */
-    .as_op = "orrbod",
-    .codewords = {
-      {
-        .opcode = 0x7103c080,
-        .mask = 0x7f03f0c0,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s",
-  },
-  { /* Opcode-kv4_v1-ORRHQD_registerW_registerZ_simple */
-    .as_op = "orrhqd",
-    .codewords = {
-      {
-        .opcode = 0x7103c040,
-        .mask = 0x7f03f0c0,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s",
-  },
-  { /* Opcode-kv4_v1-ORRWPD_registerW_registerZ_simple */
-    .as_op = "orrwpd",
-    .codewords = {
-      {
-        .opcode = 0x7103c000,
-        .mask = 0x7f03f0c0,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s",
-  },
-  { /* Opcode-kv4_v1-ORW_registerW_registerZ_registerY_simple */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0x7a011000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORW_registerW_registerZ_s010_simple */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0x7a000000,
-        .mask = 0x7f030000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_signed10_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* Opcode-kv4_v1-ORW_registerW_registerZ_s037_double */
-    .as_op = "orw",
-    .codewords = {
-      {
-        .opcode = 0xfa000000,
         .mask = 0xff030000,
         .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
       },
@@ -114879,6 +116124,27 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s, %s",
   },
+  { /* Opcode-kv4_v1-XIORO_registerA_registerB_registerC_simple */
+    .as_op = "xioro",
+    .codewords = {
+      {
+        .opcode = 0x07032000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .format = {
+      &kv4_v1_registera_opnd,
+      &kv4_v1_registerb_opnd,
+      &kv4_v1_registerc_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
   { /* Opcode-kv4_v1-XLO_variant_doscale_qindex_registerAq_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
@@ -116514,27 +117780,6 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-XORO_registerA_registerB_registerC_simple */
-    .as_op = "xoro",
-    .codewords = {
-      {
-        .opcode = 0x07032000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
-    .format = {
-      &kv4_v1_registera_opnd,
-      &kv4_v1_registerb_opnd,
-      &kv4_v1_registerc_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
   { /* Opcode-kv4_v1-XORRBOD_registerW_registerZ_simple */
     .as_op = "xorrbod",
     .codewords = {
@@ -117366,6 +118611,648 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s, %s",
   },
+  { /* ~_Opcode-kv4_v1-NORD_registerW_registerZ_registerY_simple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0x7b010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-NORD_registerW_registerZ_s010_simple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0x6b000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-NORD_registerW_registerZ_s037_double */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xeb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-NORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xfb010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower5_opnd,
+      &kv4_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv4_v1-NORD_registerW_registerZ_w064_triple */
+    .as_op = "nord",
+    .codewords = {
+      {
+        .opcode = 0xeb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_Y,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-NORW_registerW_registerZ_registerY_simple */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0x7b011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-NORW_registerW_registerZ_s010_simple */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0x7b000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-NORW_registerW_registerZ_s037_double */
+    .as_op = "norw",
+    .codewords = {
+      {
+        .opcode = 0xfb000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORD_registerW_registerZ_registerY_simple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0x7a010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORD_registerW_registerZ_s010_simple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0x6a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORD_registerW_registerZ_s037_double */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORD_registerW_registerZ_w032_splat32_double */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xfa010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower5_opnd,
+      &kv4_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv4_v1-ORD_registerW_registerZ_w064_triple */
+    .as_op = "ord",
+    .codewords = {
+      {
+        .opcode = 0xea000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_Y,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORND_registerW_registerZ_registerY_simple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0x7f010000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORND_registerW_registerZ_s010_simple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0x6f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORND_registerW_registerZ_s037_double */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORND_registerW_registerZ_w032_splat32_double */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xff010000,
+        .mask = 0xff03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower5_opnd,
+      &kv4_v1_splat32_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s%s",
+  },
+  { /* ~_Opcode-kv4_v1-ORND_registerW_registerZ_w064_triple */
+    .as_op = "ornd",
+    .codewords = {
+      {
+        .opcode = 0xef000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_Y,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_extend27_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORNW_registerW_registerZ_registerY_simple */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0x7f011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORNW_registerW_registerZ_s010_simple */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0x7f000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORNW_registerW_registerZ_s037_double */
+    .as_op = "ornw",
+    .codewords = {
+      {
+        .opcode = 0xff000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORRBOD_registerW_registerZ_simple */
+    .as_op = "orrbod",
+    .codewords = {
+      {
+        .opcode = 0x7103c080,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORRHQD_registerW_registerZ_simple */
+    .as_op = "orrhqd",
+    .codewords = {
+      {
+        .opcode = 0x7103c040,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORRWPD_registerW_registerZ_simple */
+    .as_op = "orrwpd",
+    .codewords = {
+      {
+        .opcode = 0x7103c000,
+        .mask = 0x7f03f0c0,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORW_registerW_registerZ_registerY_simple */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0x7a011000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registery_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORW_registerW_registerZ_s010_simple */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0x7a000000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_signed10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+  { /* ~_Opcode-kv4_v1-ORW_registerW_registerZ_s037_double */
+    .as_op = "orw",
+    .codewords = {
+      {
+        .opcode = 0xfa000000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
+    .format = {
+      &kv4_v1_registerw_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
   { /* ~_Opcode-kv4_v1-XMT44D_registerAq_registerCq_simple */
     .as_op = "xmt44d",
     .codewords = {
@@ -117386,7 +119273,28 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s",
   },
-/* Number of instructions : 1204 */
+  { /* ~_Opcode-kv4_v1-XORO_registerA_registerB_registerC_simple */
+    .as_op = "xoro",
+    .codewords = {
+      {
+        .opcode = 0x07032000,
+        .mask = 0x7f03f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .format = {
+      &kv4_v1_registera_opnd,
+      &kv4_v1_registerb_opnd,
+      &kv4_v1_registerc_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s = %s, %s",
+  },
+/* Number of instructions : 1232 */
 	{"", { }, 0, 0, 0, 0, { }, "", ""}};
 
 const struct kvx_core_info *kvx_core_info_table[] =
