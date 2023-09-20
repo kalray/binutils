@@ -2792,12 +2792,28 @@ elfNN_kvx_relocate_section (bfd *output_bfd,
 	  switch (r)
 	    {
 	    case bfd_reloc_overflow:
-	      (*info->callbacks->reloc_overflow)
-		(info, (h ? &h->root : NULL), name, howto->name, (bfd_vma) 0,
-		 input_bfd, input_section, rel->r_offset);
+	      {
+		/* We silently disregards overflows, otherwise, this breaks
+		   stabs debugging info, whose relocations are only 32-bits
+		   wide.  Ignore overflows in this case and also for discarded
+		   entries.  */
+		if ((r_type == R_KVX_32)
+		    && (((input_section->flags & SEC_DEBUGGING) != 0
+			 && strcmp (bfd_section_name (input_section),
+				    ".stab") == 0)
+			|| _bfd_elf_section_offset (output_bfd, info,
+						    input_section,
+						    rel->r_offset)
+			     == (bfd_vma)-1))
+		  break;
 
-	      /* Original aarch64 code had a check for alignement correctness */
-	      break;
+		(*info->callbacks->reloc_overflow)
+		  (info, (h ? &h->root : NULL), name, howto->name, (bfd_vma) 0,
+		   input_bfd, input_section, rel->r_offset);
+
+		/* Original aarch64 code had a check for alignement correctness */
+		break;
+	      }
 
 	    case bfd_reloc_undefined:
 	      (*info->callbacks->undefined_symbol)
