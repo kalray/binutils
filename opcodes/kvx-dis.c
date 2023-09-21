@@ -32,10 +32,10 @@
 #include "elf/kvx.h"
 #include "opcode/kvx.h"
 
-/* Steering values for the kvx VLIW architecture.  */
+/* Begin synchronize with processor/kvx-family/BE/LAO/kvx-Bundle.c  */
 
-typedef enum
-{
+/* Steering values for the KVX VLIW architecture.  */
+typedef enum {
   Steering_BCU,
   Steering_LSU,
   Steering_MAU,
@@ -44,72 +44,109 @@ typedef enum
 } enum_Steering;
 typedef uint8_t Steering;
 
-/* BundleIssue enumeration.  */
+/* ExtensionKV3 values a.k.a. KV3 sub-steering values.  */
+typedef enum {
+  ExtensionKV3_ALU0,
+  ExtensionKV3_ALU1,
+  ExtensionKV3_MAU,
+  ExtensionKV3_LSU,
+  ExtensionKV3__
+} enum_ExtensionKV3;
+typedef uint8_t ExtensionKV3;
 
-typedef enum
-{
-  BundleIssue_BCU,
-  BundleIssue_TCA,
-  BundleIssue_ALU0,
-  BundleIssue_ALU1,
-  BundleIssue_MAU,
-  BundleIssue_LSU,
-  BundleIssue__,
-} enum_BundleIssue;
-typedef uint8_t BundleIssue;
+/* ExtensionKV4 values a.k.a. KV4 sub-steering values.  */
+typedef enum {
+  ExtensionKV4_ALU0,
+  ExtensionKV4_ALU1,
+  ExtensionKV4_LSU0,
+  ExtensionKV4_LSU1,
+  ExtensionKV4__
+} enum_ExtensionKV4;
+typedef uint8_t ExtensionKV4;
 
-/* An IMMX syllable is associated with the BundleIssue Extension_BundleIssue[extension].  */
-static const BundleIssue Extension_BundleIssue[] = {
-  BundleIssue_ALU0,
-  BundleIssue_ALU1,
-  BundleIssue_MAU,
-  BundleIssue_LSU
-};
+/*
+ * BundleIssueKV3 enumeration.
+ */
+typedef enum {
+  BundleIssueKV3_BCU,
+  BundleIssueKV3_TCA,
+  BundleIssueKV3_ALU0,
+  BundleIssueKV3_ALU1,
+  BundleIssueKV3_MAU,
+  BundleIssueKV3_LSU,
+  BundleIssueKV3__,
+} enum_BundleIssueKV3;
+typedef uint8_t BundleIssueKV3;
+/*
+ * BundleIssueKV4 enumeration.
+ */
+typedef enum {
+  BundleIssueKV4_BCU0,
+  BundleIssueKV4_BCU1,
+  BundleIssueKV4_ALU0,
+  BundleIssueKV4_ALU1,
+  BundleIssueKV4_MAU0,
+  BundleIssueKV4_MAU1,
+  BundleIssueKV4_LSU0,
+  BundleIssueKV4_LSU1,
+  BundleIssueKV4__,
+} enum_BundleIssueKV4;
+typedef uint8_t BundleIssueKV4;
+
+/*
+ * An IMMX syllable is associated with the BundleIssueKV3 ExtensionKV3_BundleIssueKV3[extension].
+ */
+static const BundleIssueKV3
+ExtensionKV3_BundleIssueKV3[] = { BundleIssueKV3_ALU0, BundleIssueKV3_ALU1, BundleIssueKV3_MAU, BundleIssueKV3_LSU };
+static const BundleIssueKV4
+ExtensionKV4_BundleIssueKV4[] = { BundleIssueKV4_ALU0, BundleIssueKV4_ALU1, BundleIssueKV4_LSU0, BundleIssueKV4_LSU1 };
 
 static inline int
-kvx_steering (uint32_t x)
+kvx_steering(uint32_t x)
 {
   return (((x) & 0x60000000) >> 29);
 }
 
 static inline int
-kvx_extension (uint32_t x)
+kvx_extension(uint32_t x)
 {
-  return (((x) & 0x18000000) >> 27);
+  return  (((x) & 0x18000000) >> 27);
 }
 
 static inline int
-kvx_has_parallel_bit (uint32_t x)
+kvx_has_parallel_bit(uint32_t x)
 {
   return (((x) & 0x80000000) == 0x80000000);
 }
 
 static inline int
-kvx_is_tca_opcode (uint32_t x)
+kvx_is_nop_opcode(uint32_t x)
 {
-  unsigned major = ((x) >> 24) & 0x1F;
-  return (major > 1) && (major < 8);
+  return ((x)<<1) == 0xFFFFFFFE;
 }
 
 static inline int
-kvx_is_nop_opcode (uint32_t x)
+kv3_is_tca_opcode(uint32_t x)
 {
-  return ((x) << 1) == 0xFFFFFFFE;
+  unsigned major = ((x)>>24) & 0x1F;
+  return (major > 1) && (major < 8);
 }
+
+/* End synchronize with processor/kvx-family/BE/LAO/kvx-Bundle.c  */
 
 /* A raw instruction.  */
 
 struct insn_s
 {
-  uint32_t syllables[KVXMAXSYLLABLES];
+  uint32_t syllables[KVX_MAXSYLLABLES];
   int len;
 };
 typedef struct insn_s insn_t;
 
 
-static uint32_t bundle_words[KVXMAXBUNDLEWORDS];
+static uint32_t bundle_words[KVX_MAXBUNDLEWORDS];
 
-static insn_t bundle_insn[KVXMAXBUNDLEISSUE];
+static insn_t bundle_insn[KVX_MAXBUNDLEISSUE];
 
 /* A re-interpreted instruction.  */
 
@@ -258,7 +295,7 @@ kvx_dis_init (struct disassemble_info *info)
 }
 
 static int
-kvx_reassemble_bundle (int wordcount, int *_insncount)
+kv3_reassemble_bundle (int wordcount, int *_insncount)
 {
 
   /* Debugging flag.  */
@@ -275,8 +312,8 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
   int i;
   unsigned int j;
 
-  struct instr_s instr[KVXMAXBUNDLEISSUE];
-  assert (KVXMAXBUNDLEISSUE >= BundleIssue__);
+  struct instr_s instr[KVX_MAXBUNDLEISSUE];
+  assert (KVX_MAXBUNDLEISSUE >= BundleIssueKV3__);
   memset (instr, 0, sizeof (instr));
 
   if (debug)
@@ -298,7 +335,7 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 	  /* BCU or TCA instruction.  */
 	  if (i == 0)
 	    {
-	      if (kvx_is_tca_opcode (syllable))
+	      if (kv3_is_tca_opcode (syllable))
 		{
 		  if (tca_taken)
 		    {
@@ -309,10 +346,10 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 		  if (debug)
 		    fprintf (stderr,
 			     "Syllable 0: Set valid on TCA for instr %d with 0x%x\n",
-			     BundleIssue_TCA, syllable);
-		  instr[BundleIssue_TCA].valid = 1;
-		  instr[BundleIssue_TCA].opcode = syllable;
-		  instr[BundleIssue_TCA].nb_syllables = 1;
+			     BundleIssueKV3_TCA, syllable);
+		  instr[BundleIssueKV3_TCA].valid = 1;
+		  instr[BundleIssueKV3_TCA].opcode = syllable;
+		  instr[BundleIssueKV3_TCA].nb_syllables = 1;
 		  tca_taken = 1;
 		}
 	      else
@@ -320,17 +357,17 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 		  if (debug)
 		    fprintf (stderr,
 			     "Syllable 0: Set valid on BCU for instr %d with 0x%x\n",
-			     BundleIssue_BCU, syllable);
+			     BundleIssueKV3_BCU, syllable);
 
-		  instr[BundleIssue_BCU].valid = 1;
-		  instr[BundleIssue_BCU].opcode = syllable;
-		  instr[BundleIssue_BCU].nb_syllables = 1;
+		  instr[BundleIssueKV3_BCU].valid = 1;
+		  instr[BundleIssueKV3_BCU].opcode = syllable;
+		  instr[BundleIssueKV3_BCU].nb_syllables = 1;
 		  bcu_taken = 1;
 		}
 	    }
 	  else
 	    {
-	      if (i == 1 && bcu_taken && kvx_is_tca_opcode (syllable))
+	      if (i == 1 && bcu_taken && kv3_is_tca_opcode (syllable))
 		{
 		  if (tca_taken)
 		    {
@@ -341,17 +378,17 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 		  if (debug)
 		    fprintf (stderr,
 			     "Syllable 0: Set valid on TCA for instr %d with 0x%x\n",
-			     BundleIssue_TCA, syllable);
-		  instr[BundleIssue_TCA].valid = 1;
-		  instr[BundleIssue_TCA].opcode = syllable;
-		  instr[BundleIssue_TCA].nb_syllables = 1;
+			     BundleIssueKV3_TCA, syllable);
+		  instr[BundleIssueKV3_TCA].valid = 1;
+		  instr[BundleIssueKV3_TCA].opcode = syllable;
+		  instr[BundleIssueKV3_TCA].nb_syllables = 1;
 		  tca_taken = 1;
 		}
 	      else
 		{
 		  /* Not first syllable in bundle, IMMX.  */
 		  struct instr_s *instr_p =
-		    &(instr[Extension_BundleIssue[kvx_extension (syllable)]]);
+		    &(instr[ExtensionKV3_BundleIssueKV3[kvx_extension (syllable)]]);
 		  int immx_count = instr_p->immx_count;
 		  if (immx_count > 1)
 		    {
@@ -366,7 +403,7 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 		    fprintf (stderr,
 			     "Set IMMX[%d] on instr %d for extension %d @ %d\n",
 			     immx_count,
-			     Extension_BundleIssue[kvx_extension (syllable)],
+			     ExtensionKV3_BundleIssueKV3[kvx_extension (syllable)],
 			     kvx_extension (syllable), i);
 		  instr_p->immx_count = immx_count + 1;
 		}
@@ -378,20 +415,20 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      if (debug)
 		fprintf (stderr, "Set valid on ALU0 for instr %d with 0x%x\n",
-			 BundleIssue_ALU0, syllable);
-	      instr[BundleIssue_ALU0].valid = 1;
-	      instr[BundleIssue_ALU0].opcode = syllable;
-	      instr[BundleIssue_ALU0].nb_syllables = 1;
+			 BundleIssueKV3_ALU0, syllable);
+	      instr[BundleIssueKV3_ALU0].valid = 1;
+	      instr[BundleIssueKV3_ALU0].opcode = syllable;
+	      instr[BundleIssueKV3_ALU0].nb_syllables = 1;
 	      alu0_taken = 1;
 	    }
 	  else if (alu1_taken == 0)
 	    {
 	      if (debug)
 		fprintf (stderr, "Set valid on ALU1 for instr %d with 0x%x\n",
-			 BundleIssue_ALU1, syllable);
-	      instr[BundleIssue_ALU1].valid = 1;
-	      instr[BundleIssue_ALU1].opcode = syllable;
-	      instr[BundleIssue_ALU1].nb_syllables = 1;
+			 BundleIssueKV3_ALU1, syllable);
+	      instr[BundleIssueKV3_ALU1].valid = 1;
+	      instr[BundleIssueKV3_ALU1].opcode = syllable;
+	      instr[BundleIssueKV3_ALU1].nb_syllables = 1;
 	      alu1_taken = 1;
 	    }
 	  else if (mau_taken == 0)
@@ -399,10 +436,10 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 	      if (debug)
 		fprintf (stderr,
 			 "Set valid on MAU (ALU) for instr %d with 0x%x\n",
-			 BundleIssue_MAU, syllable);
-	      instr[BundleIssue_MAU].valid = 1;
-	      instr[BundleIssue_MAU].opcode = syllable;
-	      instr[BundleIssue_MAU].nb_syllables = 1;
+			 BundleIssueKV3_MAU, syllable);
+	      instr[BundleIssueKV3_MAU].valid = 1;
+	      instr[BundleIssueKV3_MAU].opcode = syllable;
+	      instr[BundleIssueKV3_MAU].nb_syllables = 1;
 	      mau_taken = 1;
 	    }
 	  else if (lsu_taken == 0)
@@ -410,10 +447,10 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 	      if (debug)
 		fprintf (stderr,
 			 "Set valid on LSU (ALU) for instr %d with 0x%x\n",
-			 BundleIssue_LSU, syllable);
-	      instr[BundleIssue_LSU].valid = 1;
-	      instr[BundleIssue_LSU].opcode = syllable;
-	      instr[BundleIssue_LSU].nb_syllables = 1;
+			 BundleIssueKV3_LSU, syllable);
+	      instr[BundleIssueKV3_LSU].valid = 1;
+	      instr[BundleIssueKV3_LSU].opcode = syllable;
+	      instr[BundleIssueKV3_LSU].nb_syllables = 1;
 	      lsu_taken = 1;
 	    }
 	  else if (kvx_is_nop_opcode (syllable))
@@ -440,10 +477,10 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      if (debug)
 		fprintf (stderr, "Set valid on MAU for instr %d with 0x%x\n",
-			 BundleIssue_MAU, syllable);
-	      instr[BundleIssue_MAU].valid = 1;
-	      instr[BundleIssue_MAU].opcode = syllable;
-	      instr[BundleIssue_MAU].nb_syllables = 1;
+			 BundleIssueKV3_MAU, syllable);
+	      instr[BundleIssueKV3_MAU].valid = 1;
+	      instr[BundleIssueKV3_MAU].opcode = syllable;
+	      instr[BundleIssueKV3_MAU].nb_syllables = 1;
 	      mau_taken = 1;
 	    }
 	  break;
@@ -459,10 +496,10 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      if (debug)
 		fprintf (stderr, "Set valid on LSU for instr %d with 0x%x\n",
-			 BundleIssue_LSU, syllable);
-	      instr[BundleIssue_LSU].valid = 1;
-	      instr[BundleIssue_LSU].opcode = syllable;
-	      instr[BundleIssue_LSU].nb_syllables = 1;
+			 BundleIssueKV3_LSU, syllable);
+	      instr[BundleIssueKV3_LSU].valid = 1;
+	      instr[BundleIssueKV3_LSU].opcode = syllable;
+	      instr[BundleIssueKV3_LSU].nb_syllables = 1;
 	      lsu_taken = 1;
 	    }
 	}
@@ -485,7 +522,7 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
 
   /* Fill bundle_insn and count read syllables.  */
   int instr_idx = 0;
-  for (i = 0; i < KVXMAXBUNDLEISSUE; i++)
+  for (i = 0; i < KVX_MAXBUNDLEISSUE; i++)
     {
       if (instr[i].valid == 1)
 	{
@@ -523,6 +560,278 @@ kvx_reassemble_bundle (int wordcount, int *_insncount)
   return 0;
 }
 
+static int
+kv4_reassemble_bundle (int wordcount, int *_insncount)
+{
+
+  /* Debugging flag.  */
+  int debug = 0;
+
+  /* Available resources.  */
+  int bcu_inuse = 0;
+  int alu_inuse = 0;
+  int mau_inuse = 0;
+  int lsu_inuse = 0;
+
+  struct instr_s instr[KVX_MAXBUNDLEISSUE];
+  assert (KVX_MAXBUNDLEISSUE >= BundleIssueKV4__);
+  memset (instr, 0, sizeof (instr));
+
+  if (debug)
+    fprintf (stderr, "kvx_reassemble_bundle: wordcount = %d\n", wordcount);
+
+  if (wordcount == 0)
+    {
+      if (debug)
+	fprintf (stderr, "wordcount == 0\n");
+      return 1;
+    }
+
+  int index = 0;
+  for (; index < wordcount; index++)
+    {
+      uint32_t syllable = bundle_words[index];
+      switch (kvx_steering (syllable))
+	{
+	case Steering_BCU:
+	  if (index == 0)
+	    /* First BCU syllable in bundle issues in BCU0.  */
+	    {
+	      instr[BundleIssueKV4_BCU0].valid = 1;
+	      instr[BundleIssueKV4_BCU0].opcode = syllable;
+	      instr[BundleIssueKV4_BCU0].nb_syllables = 1;
+	      bcu_inuse++;
+	    }
+	  else if (index == 1 && bcu_inuse == 1)
+	    /* Second BCU syllable in bundle following a BCU issues in BCU1.  */
+	    {
+	      instr[BundleIssueKV4_BCU1].valid = 1;
+	      instr[BundleIssueKV4_BCU1].opcode = syllable;
+	      instr[BundleIssueKV4_BCU1].nb_syllables = 1;
+	      bcu_inuse++;
+	    }
+	  else
+	    {
+	      /* Steering BCU and not first or second, must be IMMX.  */
+	      struct instr_s *instr_p =
+		&(instr[ExtensionKV4_BundleIssueKV4[kvx_extension (syllable)]]);
+	      int immx_count = instr_p->immx_count;
+	      if (immx_count > 1)
+		{
+		  if (debug)
+		    fprintf (stderr, "Too many IMMX syllables");
+		  return 1;
+		}
+	      instr_p->immx[immx_count] = syllable;
+	      instr_p->immx_valid[immx_count] = 1;
+	      instr_p->nb_syllables++;
+	      if (debug)
+		fprintf (stderr,
+			 "Set IMMX[%d] on instr %d for extension %d @ %d\n",
+			 immx_count,
+			 ExtensionKV4_BundleIssueKV4[kvx_extension (syllable)],
+			 kvx_extension (syllable), index);
+	      instr_p->immx_count = immx_count + 1;
+	    }
+	  break;
+
+	case Steering_ALU:
+	  if (alu_inuse == 0)
+	    {
+	      if (debug)
+		fprintf (stderr, "Set valid on ALU0 for instr %d with 0x%x\n",
+			 BundleIssueKV4_ALU0, syllable);
+	      instr[BundleIssueKV4_ALU0].valid = 1;
+	      instr[BundleIssueKV4_ALU0].opcode = syllable;
+	      instr[BundleIssueKV4_ALU0].nb_syllables = 1;
+	      alu_inuse++;
+	    }
+	  else if (alu_inuse == 1)
+	    {
+	      if (debug)
+		fprintf (stderr, "Set valid on ALU1 for instr %d with 0x%x\n",
+			 BundleIssueKV4_ALU1, syllable);
+	      instr[BundleIssueKV4_ALU1].valid = 1;
+	      instr[BundleIssueKV4_ALU1].opcode = syllable;
+	      instr[BundleIssueKV4_ALU1].nb_syllables = 1;
+	      alu_inuse++;
+	    }
+	  else if (lsu_inuse == 0)
+	    {
+	      if (debug)
+		fprintf (stderr,
+			 "Set valid on LSU0 (ALU) for instr %d with 0x%x\n",
+			 BundleIssueKV4_LSU0, syllable);
+	      instr[BundleIssueKV4_LSU0].valid = 1;
+	      instr[BundleIssueKV4_LSU0].opcode = syllable;
+	      instr[BundleIssueKV4_LSU0].nb_syllables = 1;
+	      lsu_inuse++;
+	    }
+	  else if (lsu_inuse == 1)
+	    {
+	      if (debug)
+		fprintf (stderr,
+			 "Set valid on LSU1 (ALU) for instr %d with 0x%x\n",
+			 BundleIssueKV4_LSU1, syllable);
+	      instr[BundleIssueKV4_LSU1].valid = 1;
+	      instr[BundleIssueKV4_LSU1].opcode = syllable;
+	      instr[BundleIssueKV4_LSU1].nb_syllables = 1;
+	      lsu_inuse++;
+	    }
+	  else if (kvx_is_nop_opcode (syllable))
+	    {
+	      if (debug)
+		fprintf (stderr, "Ignoring NOP (ALU) syllable\n");
+	    }
+	  else
+	    {
+	      if (debug)
+		fprintf (stderr, "Too many ALU instructions");
+	      return 1;
+	    }
+	  break;
+
+	case Steering_MAU:
+	  if (mau_inuse == 0)
+	    {
+	      if (debug)
+		fprintf (stderr, "Set valid on MAU0 for instr %d with 0x%x\n",
+			 BundleIssueKV4_MAU0, syllable);
+	      instr[BundleIssueKV4_MAU0].valid = 1;
+	      instr[BundleIssueKV4_MAU0].opcode = syllable;
+	      instr[BundleIssueKV4_MAU0].nb_syllables = 1;
+	      mau_inuse++;
+	    }
+	  else if (mau_inuse == 1)
+	    {
+	      if (debug)
+		fprintf (stderr, "Set valid on MAU1 for instr %d with 0x%x\n",
+			 BundleIssueKV4_MAU1, syllable);
+	      instr[BundleIssueKV4_MAU1].valid = 1;
+	      instr[BundleIssueKV4_MAU1].opcode = syllable;
+	      instr[BundleIssueKV4_MAU1].nb_syllables = 1;
+	      mau_inuse++;
+	    }
+	  else
+	    {
+	      if (debug)
+		fprintf (stderr, "Too many MAU instructions");
+	      return 1;
+	    }
+	  break;
+
+	case Steering_LSU:
+	  if (lsu_inuse == 0)
+	    {
+	      if (debug)
+		fprintf (stderr, "Set valid on LSU0 for instr %d with 0x%x\n",
+			 BundleIssueKV4_LSU0, syllable);
+	      instr[BundleIssueKV4_LSU0].valid = 1;
+	      instr[BundleIssueKV4_LSU0].opcode = syllable;
+	      instr[BundleIssueKV4_LSU0].nb_syllables = 1;
+	      lsu_inuse++;
+	    }
+	  else if (lsu_inuse == 1)
+	    {
+	      if (debug)
+		fprintf (stderr, "Set valid on LSU1 for instr %d with 0x%x\n",
+			 BundleIssueKV4_LSU1, syllable);
+	      instr[BundleIssueKV4_LSU1].valid = 1;
+	      instr[BundleIssueKV4_LSU1].opcode = syllable;
+	      instr[BundleIssueKV4_LSU1].nb_syllables = 1;
+	      lsu_inuse++;
+	    }
+	  else
+	    {
+	      if (debug)
+		fprintf (stderr, "Too many LSU instructions");
+	      return 1;
+	    }
+	  break;
+
+	}
+
+      if (!(kvx_has_parallel_bit (syllable)))
+	{
+	  if (debug)
+	    fprintf (stderr, "Stop! stop bit is set 0x%x\n", syllable);
+	  break;
+	}
+      if (debug)
+	fprintf (stderr, "Continue %d < %d?\n", index, wordcount);
+
+    }
+  if (kvx_has_parallel_bit (bundle_words[index]))
+    {
+      if (debug)
+	fprintf (stderr, "bundle exceeds maximum size");
+      return 1;
+    }
+
+  /* Fill bundle_insn and count read syllables.  */
+  int instr_idx = 0;
+  for (int i = 0; i < KVX_MAXBUNDLEISSUE; i++)
+    {
+      if (instr[i].valid == 1)
+	{
+	  int syllable_idx = 0;
+
+	  /* First copy opcode.  */
+	  bundle_insn[instr_idx].syllables[syllable_idx++] = instr[i].opcode;
+	  bundle_insn[instr_idx].len = 1;
+
+	  for (int j = 0; j < 2; j++)
+	    {
+	      if (instr[i].immx_valid[j])
+		{
+		  if (debug)
+		    fprintf (stderr, "Instr %d valid immx[%d] is valid\n", i,
+			     j);
+		  bundle_insn[instr_idx].syllables[syllable_idx++] =
+		    instr[i].immx[j];
+		  bundle_insn[instr_idx].len++;
+		}
+	    }
+
+	  if (debug)
+	    fprintf (stderr,
+		     "Instr %d valid, copying in bundle_insn (%d syllables <-> %d)\n",
+		     i, bundle_insn[instr_idx].len, instr[i].nb_syllables);
+	  instr_idx++;
+	}
+    }
+
+  if (debug)
+    fprintf (stderr, "End => %d instructions\n", instr_idx);
+
+  *_insncount = instr_idx;
+  return 0;
+}
+
+static int
+kvx_reassemble_bundle (struct disassemble_info *info,
+		       int wordcount, int *_insncount)
+{
+  switch (info->mach)
+    {
+    case bfd_mach_kv3_1_64:
+    case bfd_mach_kv3_1_usr:
+    case bfd_mach_kv3_1:
+    case bfd_mach_kv3_2_64:
+    case bfd_mach_kv3_2_usr:
+    case bfd_mach_kv3_2:
+    default:
+      return kv3_reassemble_bundle (wordcount, _insncount);
+      break;
+    case bfd_mach_kv4_1_64:
+    case bfd_mach_kv4_1_usr:
+    case bfd_mach_kv4_1:
+      return kv4_reassemble_bundle (wordcount, _insncount);
+      break;
+    }
+  return 1;
+}
+
 struct decoded_insn
 {
   /* The entry in the opc_table. */
@@ -549,7 +858,7 @@ struct decoded_insn
     /* If it is a modifier, the modifier category.
        An index in the modifier table.  */
     int mod_idx;
-  } operands[KVXMAXOPERANDS];
+  } operands[KVX_MAXOPERANDS];
 };
 
 static int
@@ -1042,7 +1351,7 @@ print_insn_kvx (bfd_vma memaddr, struct disassemble_info *info)
       do
 	{
 	  int status;
-	  assert (wordcount < KVXMAXBUNDLEWORDS);
+	  assert (wordcount < KVX_MAXBUNDLEWORDS);
 	  status =
 	    (*info->read_memory_func) (memaddr + 4 * wordcount,
 				       (bfd_byte *) (bundle_words +
@@ -1056,11 +1365,11 @@ print_insn_kvx (bfd_vma memaddr, struct disassemble_info *info)
 	  wordcount++;
 	}
       while (kvx_has_parallel_bit (bundle_words[wordcount - 1])
-	     && wordcount < KVXMAXBUNDLEWORDS - 1);
-      invalid_bundle = kvx_reassemble_bundle (wordcount, &insncount);
+	     && wordcount < KVX_MAXBUNDLEWORDS - 1);
+      invalid_bundle = kvx_reassemble_bundle (info, wordcount, &insncount);
     }
 
-  assert (insnindex < KVXMAXBUNDLEISSUE);
+  assert (insnindex < KVX_MAXBUNDLEISSUE);
   insn = &(bundle_insn[insnindex]);
   readsofar = insn->len * 4;
   insnindex++;
@@ -1229,7 +1538,7 @@ decode_prologue_epilogue_bundle (bfd_vma memaddr,
   nb_syl = 0;
   do
     {
-      if (nb_syl >= KVXMAXBUNDLEWORDS)
+      if (nb_syl >= KVX_MAXBUNDLEWORDS)
 	return -1;
       if ((*info->read_memory_func) (memaddr + 4 * nb_syl,
 				     (bfd_byte *) &bundle_words[nb_syl], 4,
@@ -1238,8 +1547,8 @@ decode_prologue_epilogue_bundle (bfd_vma memaddr,
       nb_syl++;
     }
   while (kvx_has_parallel_bit (bundle_words[nb_syl - 1])
-	 && nb_syl < KVXMAXBUNDLEWORDS - 1);
-  if (kvx_reassemble_bundle (nb_syl, &nb_insn))
+	 && nb_syl < KVX_MAXBUNDLEWORDS - 1);
+  if (kvx_reassemble_bundle (info, nb_syl, &nb_insn))
     return -1;
 
   /* Check for extension to right if this is not the end of bundle

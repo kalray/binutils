@@ -96,16 +96,28 @@ static const bfd_byte elfNN_kvx_small_plt0_entry[PLT_ENTRY_SIZE] =
 /* Per function entry in a procedure linkage table looks like this
    if the distance between the PLTGOT and the PLT is < 4GB use
    these PLT entries.  */
-static const bfd_byte elfNN_kvx_small_plt_entry[PLT_SMALL_ENTRY_SIZE] =
+static const bfd_byte elfNN_kvx_small_plt_entry[][PLT_SMALL_ENTRY_SIZE] =
 {
-  0x10, 0x00, 0xc4, 0x0f,       /* get $r16 = $pc     ;; */
+  {	/* bfd_mach_kvx_major_3 */
+    0x10, 0x00, 0xc4, 0x0f,	/* get $r16 = $pc     ;; */
 #if ARCH_SIZE == 32
-  0x10, 0x00, 0x40, 0xb0,       /* lwz $r16 = 0[$r16]   ;; */
+    0x10, 0x00, 0x40, 0xb0,	/* lwz $r16 = 0[$r16]   ;; */
 #else
-  0x10, 0x00, 0x40, 0xb8,       /* ld $r16 = 0[$r16] ;; */
+    0x10, 0x00, 0x40, 0xb8,	/* ld $r16 = 0[$r16] ;; */
 #endif
-  0x00, 0x00, 0x00, 0x18,       /* upper 27 bits for LSU */
-  0x10, 0x00, 0xd8, 0x0f,	/* igoto $r16          ;; */
+    0x00, 0x00, 0x00, 0x18,	/* zero upper 27 bits for LSU, exunum = 3 */
+    0x10, 0x00, 0xd8, 0x0f,	/* igoto $r16          ;; */
+  },
+  {	/* bfd_mach_kvx_major_4 */
+    0x10, 0x00, 0xc4, 0x0f,	/* get $r16 = $pc     ;; */
+#if ARCH_SIZE == 32
+    0x10, 0x00, 0x40, 0xb0,	/* lwz $r16 = 0[$r16]   ;; */
+#else
+    0x10, 0x00, 0x40, 0xb8,	/* ld $r16 = 0[$r16] ;; */
+#endif
+    0x00, 0x00, 0x00, 0x10,	/* zero upper 27 bits for LSU0, exunum = 2 */
+    0x10, 0x00, 0xd8, 0x0f,	/* igoto $r16          ;; */
+  }
 };
 
 /* Long stub use 43bits format of make. */
@@ -477,9 +489,6 @@ struct elf_kvx_link_hash_table
   /* The number of bytes in the subsequent PLT etries.  */
   bfd_size_type plt_entry_size;
 
-  /* The bytes of the subsequent PLT entry.  */
-  const bfd_byte *plt_entry;
-
   /* Short-cuts to get to dynamic linker sections.  */
   asection *sdynbss;
   asection *srelbss;
@@ -649,7 +658,6 @@ elfNN_kvx_link_hash_table_create (bfd *abfd)
 
   ret->plt_header_size = PLT_ENTRY_SIZE;
   ret->plt_entry_size = PLT_SMALL_ENTRY_SIZE;
-  ret->plt_entry = elfNN_kvx_small_plt_entry;
 
   ret->obfd = abfd;
 
@@ -2854,6 +2862,7 @@ elfNN_kvx_object_p (bfd *abfd)
 				abfd->filename, e_core);
 	}
     }
+
   return bfd_default_set_arch_mach (abfd, bfd_arch_kvx, e_set);
 }
 
@@ -4326,7 +4335,28 @@ elfNN_kvx_create_small_pltn_entry (struct elf_link_hash_entry *h,
     gotplt->output_offset + got_offset;
 
   /* Copy in the boiler-plate for the PLTn entry.  */
-  memcpy (plt_entry, elfNN_kvx_small_plt_entry, PLT_SMALL_ENTRY_SIZE);
+  int plt_entry_index = -1;
+  switch (bfd_get_mach (output_bfd))
+    {
+      case bfd_mach_kv3_1:
+      case bfd_mach_kv3_1_64:
+      case bfd_mach_kv3_1_usr:
+      case bfd_mach_kv3_2:
+      case bfd_mach_kv3_2_64:
+      case bfd_mach_kv3_2_usr:
+	plt_entry_index = 0;
+	break;
+      case bfd_mach_kv4_1:
+      case bfd_mach_kv4_1_64:
+      case bfd_mach_kv4_1_usr:
+	plt_entry_index = 1;
+	break;
+      default:
+	(*_bfd_error_handler)
+	  (_("Unknown machine: 0x`%lx'"), bfd_get_mach (output_bfd));
+    }
+  memcpy (plt_entry, elfNN_kvx_small_plt_entry[plt_entry_index],
+	  PLT_SMALL_ENTRY_SIZE);
 
   /* Patch the loading of the GOT entry, relative to the PLT entry
      address. */

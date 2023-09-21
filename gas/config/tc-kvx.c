@@ -138,7 +138,7 @@ struct kvxinsn
   /* order to stabilize sort */
   int order;
   /* instruction words */
-  uint32_t words[KVXMAXBUNDLEWORDS];	
+  uint32_t words[KVX_MAXBUNDLEWORDS];	
   /* the number of fixups [0,2] */
   int nfixups;
   /* the actual fixups */
@@ -153,17 +153,16 @@ static bool assembling_insn = false;
 
 #define NOIMMX -1
 
-/* Was KVXMAXBUNDLEISSUE, changed because of NOPs */
-static struct kvxinsn insbuf[KVXMAXBUNDLEWORDS];
+static struct kvxinsn insbuf[KVX_MAXBUNDLEWORDS];
 static int insncnt = 0;
-static struct kvxinsn immxbuf[KVXMAXBUNDLEWORDS];
+static struct kvxinsn immxbuf[KVX_MAXBUNDLEWORDS];
 static int immxcnt = 0;
 
 static void
 incr_immxcnt (void)
 {
   immxcnt++;
-  if (immxcnt >= KVXMAXBUNDLEWORDS)
+  if (immxcnt >= KVX_MAXBUNDLEWORDS)
     as_bad ("Max immx number exceeded: %d", immxcnt);
 }
 
@@ -370,7 +369,7 @@ md_parse_option (int c, const char *arg ATTRIBUTE_UNUSED)
       break;
     case OPTION_MARCH:
       env.opts.march = strdup (arg);
-      for (int i = 0; i < KVXNUMCORES && !find_core; ++i)
+      for (int i = 0; i < KVX_NUMCORES && !find_core; ++i)
 	    if (!strcasecmp (env.opts.march, kvx_core_info_table[i]->name))
 	      {
 		kvx_core_info = kvx_core_info_table[i];
@@ -508,7 +507,7 @@ static void
 supported_cores (char buf[], size_t buflen)
 {
   buf[0] = '\0';
-  for (int i = 0; i < KVXNUMCORES; i++)
+  for (int i = 0; i < KVX_NUMCORES; i++)
     {
       if (buf[0] == '\0')
 	strcpy (buf, kvx_core_info_table[i]->name);
@@ -985,8 +984,7 @@ assemble_tokens (struct token_list *tok_list)
   struct token_list *toks = tok_list;
 
   /* make sure there is room in instruction buffer */
-  /* Was KVXMAXBUNDLEISSUE, changed because of NOPs */
-  if (insncnt >= KVXMAXBUNDLEWORDS)
+  if (insncnt >= KVX_MAXBUNDLEWORDS)
     as_fatal ("[assemble_tokens]: too many instructions in bundle.");
 
   /* TODO: Merge */
@@ -1179,7 +1177,7 @@ kvxinsn_compare (const void *a, const void *b)
 }
 
 static void
-kvx_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
+kv3_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 {
   enum
   { EXU_BCU, EXU_TCA, EXU_ALU0, EXU_ALU1, EXU_MAU, EXU_LSU, EXU__ };
@@ -1327,6 +1325,175 @@ kvx_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 }
 
 static void
+kv4_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
+{
+  enum
+  { EXU_BCU0, EXU_BCU1, EXU_ALU0, EXU_ALU1,
+    EXU_MAU0, EXU_MAU1, EXU_LSU0, EXU_LSU1, EXU__ };
+  struct kvxinsn *issued[EXU__];
+  int tag, exu;
+
+  memset (issued, 0, sizeof (issued));
+  for (int i = 0; i < bundle_insncnt; i++)
+    {
+      struct kvxinsn *kvxinsn = bundle_insn[i];
+      tag = -1, exu = -1;
+      switch ((int) find_bundling (kvxinsn))
+	{
+	case Bundling_kv4_v1_ALL:
+	  if (bundle_insncnt > 1)
+	    as_fatal ("Too many ops in a single op bundle");
+	  issued[0] = kvxinsn;
+	  break;
+	case Bundling_kv4_v1_BCU:
+	  if (!issued[EXU_BCU0])
+	    issued[EXU_BCU0] = kvxinsn;
+	  else if (!issued[EXU_BCU1])
+	    issued[EXU_BCU1] = kvxinsn;
+	  else
+	    as_fatal ("More than two BCU instructions in bundle");
+	  break;
+	case Bundling_kv4_v1_TCA:
+	  if (!issued[EXU_BCU1])
+	    issued[EXU_BCU1] = kvxinsn;
+	  else
+	    as_fatal ("More than one TCA instruction in bundle");
+	  break;
+	case Bundling_kv4_v1_FULL:
+	case Bundling_kv4_v1_FULL_X:
+	case Bundling_kv4_v1_FULL_Y:
+	  if (!issued[EXU_ALU0])
+	    {
+	      issued[EXU_ALU0] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_ALU0;
+	      exu = EXU_ALU0;
+	    }
+	  else
+	    as_fatal ("More than one ALU FULL instruction in bundle");
+	  break;
+	case Bundling_kv4_v1_LITE:
+	case Bundling_kv4_v1_LITE_X:
+	case Bundling_kv4_v1_LITE_Y:
+	  if (!issued[EXU_ALU0])
+	    {
+	      issued[EXU_ALU0] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_ALU0;
+	      exu = EXU_ALU0;
+	    }
+	  else if (!issued[EXU_ALU1])
+	    {
+	      issued[EXU_ALU1] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_ALU1;
+	      exu = EXU_ALU1;
+	    }
+	  else
+	    as_fatal ("Too many ALU FULL or LITE instructions in bundle");
+	  break;
+	case Bundling_kv4_v1_MAU:
+	  if (!issued[EXU_MAU0])
+	    {
+	      issued[EXU_MAU0] = kvxinsn;
+	    }
+	  else if (!issued[EXU_MAU1])
+	    {
+	      issued[EXU_MAU1] = kvxinsn;
+	    }
+	  else
+	    as_fatal ("More than one MAU instruction in bundle");
+	  break;
+	case Bundling_kv4_v1_MAU_X:
+	case Bundling_kv4_v1_MAU_Y:
+	  as_fatal ("Immediate extension of MAU instruction not allowed");
+	  break;
+	case Bundling_kv4_v1_LSU:
+	case Bundling_kv4_v1_LSU_X:
+	case Bundling_kv4_v1_LSU_Y:
+	  if (!issued[EXU_LSU0])
+	    {
+	      issued[EXU_LSU0] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_LSU0;
+	      exu = EXU_LSU0;
+	    }
+	  else if (!issued[EXU_LSU1])
+	    {
+	      issued[EXU_LSU1] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_LSU1;
+	      exu = EXU_LSU1;
+	    }
+	  else
+	    as_fatal ("More than two LSU instruction in bundle");
+	  break;
+	case Bundling_kv4_v1_TINY:
+	case Bundling_kv4_v1_TINY_X:
+	case Bundling_kv4_v1_TINY_Y:
+	case Bundling_kv4_v1_NOP:
+	  if (!issued[EXU_ALU0])
+	    {
+	      issued[EXU_ALU0] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_ALU0;
+	      exu = EXU_ALU0;
+	    }
+	  else if (!issued[EXU_ALU1])
+	    {
+	      issued[EXU_ALU1] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_ALU1;
+	      exu = EXU_ALU1;
+	    }
+	  else if (!issued[EXU_LSU0])
+	    {
+	      issued[EXU_LSU0] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_LSU0;
+	      exu = EXU_LSU0;
+	    }
+	  else if (!issued[EXU_LSU1])
+	    {
+	      issued[EXU_LSU1] = kvxinsn;
+	      tag = Modifier_kv4_v1_exunum_LSU1;
+	      exu = EXU_LSU1;
+	    }
+	  else
+	    as_fatal ("Too many ALU instructions in bundle");
+	  break;
+	default:
+	  as_fatal ("Unhandled Bundling class %d", find_bundling (kvxinsn));
+	}
+      if (tag >= 0)
+	{
+	  if (issued[exu]->immx0 != NOIMMX)
+	    immxbuf[issued[exu]->immx0].words[0] |= (tag << 27);
+	  if (issued[exu]->immx1 != NOIMMX)
+	    immxbuf[issued[exu]->immx1].words[0] |= (tag << 27);
+	}
+    }
+
+  int i;
+  for (i = 0, exu = 0; exu < EXU__; exu++)
+    {
+      if (issued[exu])
+	bundle_insn[i++] = issued[exu];
+    }
+  if (i != bundle_insncnt)
+    as_fatal ("Mismatch between bundle and issued instructions");
+}
+
+static void
+kvx_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
+{
+  switch (kvx_core_info->elf_core)
+    {
+    case ELF_KVX_CORE_KV3_1:
+    case ELF_KVX_CORE_KV3_2:
+      kv3_reorder_bundle (bundle_insn, bundle_insncnt);
+      break;
+    case ELF_KVX_CORE_KV4_1:
+      kv4_reorder_bundle (bundle_insn, bundle_insncnt);
+      break;
+    default:
+      as_fatal ("Unknown elf core: 0x%x", kvx_core_info->elf_core);
+    }
+}
+
+static void
 kvx_check_resource_usage (struct kvxinsn **bundle_insn, int bundle_insncnt)
 {
   const int reservation_table_len =
@@ -1382,8 +1549,7 @@ md_assemble (char *line)
   {
     inside_bundle = 0;
     //int sec_align = bfd_get_section_alignment(stdoutput, now_seg);
-    /* Was KVXMAXBUNDLEISSUE, changed because of NOPs */
-    struct kvxinsn *bundle_insn[KVXMAXBUNDLEWORDS];
+    struct kvxinsn *bundle_insn[KVX_MAXBUNDLEWORDS];
     int bundle_insncnt = 0;
     int syllables = 0;
     int entry;
@@ -1399,9 +1565,9 @@ md_assemble (char *line)
       syllables += insbuf[j].len;
     }
 
-    if (syllables + immxcnt > KVXMAXBUNDLEWORDS)
+    if (syllables + immxcnt > KVX_MAXBUNDLEWORDS)
       as_fatal ("Bundle has too many syllables : %d instead of %d",
-	  syllables + immxcnt, KVXMAXBUNDLEWORDS);
+	  syllables + immxcnt, KVX_MAXBUNDLEWORDS);
 
     if (env.opts.check_resource_usage)
       kvx_check_resource_usage (bundle_insn, bundle_insncnt);
