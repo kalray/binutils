@@ -73,7 +73,13 @@ struct kvx_as_env env = {
     .diagnostics = 1,
     .more = 1,
     .allow_all_sfr = 0
-  }
+  },
+  .stcall_info = {
+    .found = false,
+    .frag = NULL,
+    .seg = 0,
+    .frag_fix = 0
+  },
 };
 
 /* This string should contain position in string where error occured. */
@@ -192,6 +198,75 @@ static void kvx_proc (int start);
 static void kvx_endp (int start);
 static void kvx_type (int start);
 
+static void
+kvx_cfi_offset (int start)
+{
+  (void) start;
+  offsetT offset;
+  int reg1;
+
+
+  if (frchain_now->frch_cfi_data == NULL)
+    {
+      as_bad (_("CFI instruction used without previous .cfi_startproc"));
+      ignore_rest_of_line ();
+      return;
+    }
+
+  if (env.stcall_info.found)
+    {
+      /* If the last address was not at the current PC, advance to current.  */
+      if (symbol_get_frag (frchain_now->frch_cfi_data->last_address)
+	    != env.stcall_info.frag
+	  || (S_GET_VALUE (frchain_now->frch_cfi_data->last_address)
+	    != env.stcall_info.frag_fix))
+      cfi_add_advance_loc (symbol_temp_new (env.stcall_info.seg,
+					    env.stcall_info.frag,
+					    env.stcall_info.frag_fix));
+    }
+  else
+    {
+      /* If the last address was not at the current PC, advance to current.  */
+      if (symbol_get_frag (frchain_now->frch_cfi_data->last_address) != frag_now
+	  || (S_GET_VALUE (frchain_now->frch_cfi_data->last_address)
+	    != frag_now_fix ()))
+	cfi_add_advance_loc (symbol_temp_new_now ());
+    }
+
+  expressionS exp = { 0 };
+  SKIP_WHITESPACE ();
+  expression (&exp);
+
+  switch (exp.X_op)
+    {
+    case O_register:
+    case O_constant:
+      reg1 = exp.X_add_number;
+      break;
+
+    default:
+      reg1 = -1;
+      break;
+    }
+
+  if (reg1 < 0)
+    {
+      as_bad (_("bad register expression"));
+      reg1 = 0;
+    }
+
+  SKIP_WHITESPACE ();
+  if (*input_line_pointer == ',')
+    input_line_pointer++;
+  else
+    as_bad (_("missing separator"));
+
+  offset = get_absolute_expression ();
+  cfi_add_CFA_offset (reg1, offset);
+
+  demand_empty_rest_of_line ();
+}
+
 const pseudo_typeS md_pseudo_table[] = {
   /* override default 2-bytes */
   { "word",             cons,                  4 },
@@ -214,6 +289,7 @@ const pseudo_typeS md_pseudo_table[] = {
 #ifdef OBJ_ELF
   { "file",             dwarf2_directive_file, 0 },
   { "loc",              dwarf2_directive_loc,  0 },
+  { "cfi_offset",       kvx_cfi_offset,        0 },
 #endif
   { NULL,               0,                     0 }
 };
@@ -745,7 +821,7 @@ assemble_insn (const struct kvxopc * opcode, struct token_list *tok, struct kvxi
  * handled by insert_operand.
  */
 static void
-emit_insn (struct kvxinsn * insn, int insn_pos, int stopflag)
+emit_insn (struct kvxinsn *insn, int insn_pos, int stopflag)
 {
   char *f;
   unsigned int image;
@@ -759,6 +835,14 @@ emit_insn (struct kvxinsn * insn, int insn_pos, int stopflag)
 
   /* allocate space in the fragment.  */
   f = frag_more (insn->len * 4);
+
+  if (env.stcall_info.found
+      && insn->opdef && *insn->opdef->as_op == 'c')
+  {
+    env.stcall_info.seg = now_seg;
+    env.stcall_info.frag = frag_now;
+    env.stcall_info.frag_fix = frag_now_fix ();
+  }
 
   /* spit out bits.  */
   for (int i = 0; i < insn->len; i++)
@@ -1101,6 +1185,7 @@ kvx_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
   { EXU_BCU, EXU_TCA, EXU_ALU0, EXU_ALU1, EXU_MAU, EXU_LSU, EXU__ };
   struct kvxinsn *issued[EXU__];
   int tag, exu;
+  int stcall = 0;
 
   memset (issued, 0, sizeof (issued));
   for (int i = 0; i < bundle_insncnt; i++)
@@ -1118,7 +1203,10 @@ kvx_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 	  break;
 	case Bundling_kv3_v1_BCU:
 	  if (!issued[EXU_BCU])
-	    issued[EXU_BCU] = kvxinsn;
+	    {
+	      issued[EXU_BCU] = kvxinsn;
+	      stcall += !strcmp("call", kvxinsn->opdef->as_op);
+	    }
 	  else
 	    as_fatal ("More than one BCU instruction in bundle");
 	  break;
@@ -1177,6 +1265,7 @@ kvx_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 	    {
 	      issued[EXU_LSU] = kvxinsn;
 	      tag = Modifier_kv3_v1_exunum_LSU;
+	      stcall += *kvxinsn->opdef->as_op == 's';
 	      exu = EXU_LSU;
 	    }
 	  else
@@ -1233,6 +1322,8 @@ kvx_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
     }
   if (i != bundle_insncnt)
     as_fatal ("Mismatch between bundle and issued instructions");
+
+  env.stcall_info.found = (stcall == 2);
 }
 
 static void

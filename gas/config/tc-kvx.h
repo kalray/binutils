@@ -146,6 +146,19 @@ struct kvx_as_params {
 
 extern struct kvx_as_params kvx_params;
 
+struct kvx_stcall {
+  /* Whether the pattern last bundle triggered the pattern.  */
+  bool found;
+  /* The relative information (fragment, segment and frag_fix), needed to create
+     a pseudo label at the point of the call, where the cfi_offset explaining
+     where to find the return address in the call frame.  */
+  fragS* frag;
+  segT seg;
+  valueT frag_fix;
+};
+
+extern struct kvx_stcall kvx_stcall_info;
+
 struct kvx_as_env {
   const char ** tokens_names;
   int fst_reg, sys_reg, fst_mod;
@@ -157,6 +170,11 @@ struct kvx_as_env {
   struct kvx_as_options opts;
   /* Record the parameters of the target architecture.  */
   struct kvx_as_params params;
+  /* Information concerning the last time $ra was save in the same bundle a call
+     was made.  This is needed otherwise gdb is lost and can't produce the
+     correct backtrace from within the call.
+     NB: This catches all bundles with a store and a call.  */
+  struct kvx_stcall stcall_info;
   /* The hash table of instruction opcodes.  */
   htab_t opcode_hash;
   /* The hash table of register symbols.  */
