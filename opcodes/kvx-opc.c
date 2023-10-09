@@ -9802,15 +9802,16 @@ const char *kvx_kv3_v1_resource_names[kvx_kv3_v1_RESOURCE_MAX] = {
   "MAU",
   "BCU",
   "TCA",
+  "XFER",
   "AUXR",
   "AUXW",
+  "MEMW",
   "CRRP",
   "CRWL",
-  "CRWH",
-  "NOP"
+  "CRWH"
 };
 
-const int kvx_kv3_v1_resources[kvx_kv3_v1_RESOURCE_MAX] = { 8,4,2,1,1,1,1,1,1,1,1,1,1,4};
+const int kvx_kv3_v1_resources[kvx_kv3_v1_RESOURCE_MAX] = { 8,4,2,1,1,1,1,1,1,1,1,1,1,1,1};
 
 
 
@@ -9826,12 +9827,13 @@ static const int Reservation_kv3_v1_ALL_table[kvx_kv3_v1_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_FULL_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9843,12 +9845,13 @@ static const int Reservation_kv3_v1_ALU_FULL_table[kvx_kv3_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_FULL_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9860,12 +9863,13 @@ static const int Reservation_kv3_v1_ALU_FULL_X_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_FULL_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9877,12 +9881,13 @@ static const int Reservation_kv3_v1_ALU_FULL_Y_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_LITE_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9894,12 +9899,13 @@ static const int Reservation_kv3_v1_ALU_LITE_table[kvx_kv3_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_LITE_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9911,12 +9917,13 @@ static const int Reservation_kv3_v1_ALU_LITE_X_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_LITE_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9928,12 +9935,13 @@ static const int Reservation_kv3_v1_ALU_LITE_Y_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_LITE_CRWH_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9945,12 +9953,13 @@ static const int Reservation_kv3_v1_ALU_LITE_CRWH_table[kvx_kv3_v1_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  1 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  1 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_LITE_CRWL_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9962,12 +9971,13 @@ static const int Reservation_kv3_v1_ALU_LITE_CRWL_table[kvx_kv3_v1_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   1 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_NOP_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9979,12 +9989,13 @@ static const int Reservation_kv3_v1_ALU_NOP_table[kvx_kv3_v1_RESERVATION_TABLE_L
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  1 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_TINY_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -9996,12 +10007,13 @@ static const int Reservation_kv3_v1_ALU_TINY_table[kvx_kv3_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_TINY_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10013,12 +10025,13 @@ static const int Reservation_kv3_v1_ALU_TINY_X_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_ALU_TINY_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10030,12 +10043,139 @@ static const int Reservation_kv3_v1_ALU_TINY_Y_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
+};
+
+static const int Reservation_kv3_v1_ALU_TINY_CRRP_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv3_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv3_v1-TINY */,
+  0 /* cyc.0 Resource-kv3_v1-LITE */,
+  0 /* cyc.0 Resource-kv3_v1-FULL */,
+  0 /* cyc.0 Resource-kv3_v1-LSU */,
+  0 /* cyc.0 Resource-kv3_v1-MAU */,
+  0 /* cyc.0 Resource-kv3_v1-BCU */,
+  0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
+  0 /* cyc.0 Resource-kv3_v1-AUXR */,
+  0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
+  1 /* cyc.0 Resource-kv3_v1-CRRP */,
+  0 /* cyc.0 Resource-kv3_v1-CRWL */,
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
+};
+
+static const int Reservation_kv3_v1_ALU_TINY_CRRP_CRWL_CRWH_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv3_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv3_v1-TINY */,
+  0 /* cyc.0 Resource-kv3_v1-LITE */,
+  0 /* cyc.0 Resource-kv3_v1-FULL */,
+  0 /* cyc.0 Resource-kv3_v1-LSU */,
+  0 /* cyc.0 Resource-kv3_v1-MAU */,
+  0 /* cyc.0 Resource-kv3_v1-BCU */,
+  0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
+  0 /* cyc.0 Resource-kv3_v1-AUXR */,
+  0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
+  1 /* cyc.0 Resource-kv3_v1-CRRP */,
+  1 /* cyc.0 Resource-kv3_v1-CRWL */,
+  1 /* cyc.0 Resource-kv3_v1-CRWH */
+};
+
+static const int Reservation_kv3_v1_ALU_TINY_CRWH_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv3_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv3_v1-TINY */,
+  0 /* cyc.0 Resource-kv3_v1-LITE */,
+  0 /* cyc.0 Resource-kv3_v1-FULL */,
+  0 /* cyc.0 Resource-kv3_v1-LSU */,
+  0 /* cyc.0 Resource-kv3_v1-MAU */,
+  0 /* cyc.0 Resource-kv3_v1-BCU */,
+  0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
+  0 /* cyc.0 Resource-kv3_v1-AUXR */,
+  0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
+  0 /* cyc.0 Resource-kv3_v1-CRRP */,
+  0 /* cyc.0 Resource-kv3_v1-CRWL */,
+  1 /* cyc.0 Resource-kv3_v1-CRWH */
+};
+
+static const int Reservation_kv3_v1_ALU_TINY_CRWL_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv3_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv3_v1-TINY */,
+  0 /* cyc.0 Resource-kv3_v1-LITE */,
+  0 /* cyc.0 Resource-kv3_v1-FULL */,
+  0 /* cyc.0 Resource-kv3_v1-LSU */,
+  0 /* cyc.0 Resource-kv3_v1-MAU */,
+  0 /* cyc.0 Resource-kv3_v1-BCU */,
+  0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
+  0 /* cyc.0 Resource-kv3_v1-AUXR */,
+  0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
+  0 /* cyc.0 Resource-kv3_v1-CRRP */,
+  1 /* cyc.0 Resource-kv3_v1-CRWL */,
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
+};
+
+static const int Reservation_kv3_v1_ALU_TINY_CRWL_CRWH_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv3_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv3_v1-TINY */,
+  0 /* cyc.0 Resource-kv3_v1-LITE */,
+  0 /* cyc.0 Resource-kv3_v1-FULL */,
+  0 /* cyc.0 Resource-kv3_v1-LSU */,
+  0 /* cyc.0 Resource-kv3_v1-MAU */,
+  0 /* cyc.0 Resource-kv3_v1-BCU */,
+  0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
+  0 /* cyc.0 Resource-kv3_v1-AUXR */,
+  0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
+  0 /* cyc.0 Resource-kv3_v1-CRRP */,
+  1 /* cyc.0 Resource-kv3_v1-CRWL */,
+  1 /* cyc.0 Resource-kv3_v1-CRWH */
+};
+
+static const int Reservation_kv3_v1_ALU_TINY_CRWL_CRWH_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
+  2 /* cyc.0 Resource-kv3_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv3_v1-TINY */,
+  0 /* cyc.0 Resource-kv3_v1-LITE */,
+  0 /* cyc.0 Resource-kv3_v1-FULL */,
+  0 /* cyc.0 Resource-kv3_v1-LSU */,
+  0 /* cyc.0 Resource-kv3_v1-MAU */,
+  0 /* cyc.0 Resource-kv3_v1-BCU */,
+  0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
+  0 /* cyc.0 Resource-kv3_v1-AUXR */,
+  0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
+  0 /* cyc.0 Resource-kv3_v1-CRRP */,
+  1 /* cyc.0 Resource-kv3_v1-CRWL */,
+  1 /* cyc.0 Resource-kv3_v1-CRWH */
+};
+
+static const int Reservation_kv3_v1_ALU_TINY_CRWL_CRWH_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
+  3 /* cyc.0 Resource-kv3_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv3_v1-TINY */,
+  0 /* cyc.0 Resource-kv3_v1-LITE */,
+  0 /* cyc.0 Resource-kv3_v1-FULL */,
+  0 /* cyc.0 Resource-kv3_v1-LSU */,
+  0 /* cyc.0 Resource-kv3_v1-MAU */,
+  0 /* cyc.0 Resource-kv3_v1-BCU */,
+  0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
+  0 /* cyc.0 Resource-kv3_v1-AUXR */,
+  0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
+  0 /* cyc.0 Resource-kv3_v1-CRRP */,
+  1 /* cyc.0 Resource-kv3_v1-CRWL */,
+  1 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_BCU_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10047,12 +10187,13 @@ static const int Reservation_kv3_v1_BCU_table[kvx_kv3_v1_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   1 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_BCU_CRRP_CRWL_CRWH_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10064,12 +10205,13 @@ static const int Reservation_kv3_v1_BCU_CRRP_CRWL_CRWH_table[kvx_kv3_v1_RESERVAT
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   1 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   1 /* cyc.0 Resource-kv3_v1-CRRP */,
   1 /* cyc.0 Resource-kv3_v1-CRWL */,
-  1 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  1 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_BCU_TINY_AUXW_CRRP_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10081,12 +10223,13 @@ static const int Reservation_kv3_v1_BCU_TINY_AUXW_CRRP_table[kvx_kv3_v1_RESERVAT
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   1 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   1 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   1 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_BCU_TINY_TINY_MAU_XNOP_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10098,12 +10241,31 @@ static const int Reservation_kv3_v1_BCU_TINY_TINY_MAU_XNOP_table[kvx_kv3_v1_RESE
   1 /* cyc.0 Resource-kv3_v1-MAU */,
   1 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  4 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
+};
+
+static const int Reservation_kv3_v1_BCU_XFER_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv3_v1-ISSUE */,
+  0 /* cyc.0 Resource-kv3_v1-TINY */,
+  0 /* cyc.0 Resource-kv3_v1-LITE */,
+  0 /* cyc.0 Resource-kv3_v1-FULL */,
+  0 /* cyc.0 Resource-kv3_v1-LSU */,
+  0 /* cyc.0 Resource-kv3_v1-MAU */,
+  1 /* cyc.0 Resource-kv3_v1-BCU */,
+  0 /* cyc.0 Resource-kv3_v1-TCA */,
+  1 /* cyc.0 Resource-kv3_v1-XFER */,
+  0 /* cyc.0 Resource-kv3_v1-AUXR */,
+  0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
+  0 /* cyc.0 Resource-kv3_v1-CRRP */,
+  0 /* cyc.0 Resource-kv3_v1-CRWL */,
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10115,12 +10277,13 @@ static const int Reservation_kv3_v1_LSU_table[kvx_kv3_v1_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10132,12 +10295,13 @@ static const int Reservation_kv3_v1_LSU_X_table[kvx_kv3_v1_RESERVATION_TABLE_LIN
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10149,12 +10313,13 @@ static const int Reservation_kv3_v1_LSU_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LIN
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXR_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10166,12 +10331,13 @@ static const int Reservation_kv3_v1_LSU_AUXR_table[kvx_kv3_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXR_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10183,12 +10349,13 @@ static const int Reservation_kv3_v1_LSU_AUXR_X_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXR_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10200,12 +10367,13 @@ static const int Reservation_kv3_v1_LSU_AUXR_Y_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXR_AUXW_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10217,12 +10385,13 @@ static const int Reservation_kv3_v1_LSU_AUXR_AUXW_table[kvx_kv3_v1_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   1 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXR_AUXW_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10234,12 +10403,13 @@ static const int Reservation_kv3_v1_LSU_AUXR_AUXW_X_table[kvx_kv3_v1_RESERVATION
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   1 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXR_AUXW_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10251,12 +10421,13 @@ static const int Reservation_kv3_v1_LSU_AUXR_AUXW_Y_table[kvx_kv3_v1_RESERVATION
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   1 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXW_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10268,12 +10439,13 @@ static const int Reservation_kv3_v1_LSU_AUXW_table[kvx_kv3_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   1 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXW_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10285,12 +10457,13 @@ static const int Reservation_kv3_v1_LSU_AUXW_X_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   1 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_AUXW_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10302,12 +10475,13 @@ static const int Reservation_kv3_v1_LSU_AUXW_Y_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   1 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_CRRP_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10319,12 +10493,13 @@ static const int Reservation_kv3_v1_LSU_CRRP_table[kvx_kv3_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   1 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_CRRP_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10336,12 +10511,13 @@ static const int Reservation_kv3_v1_LSU_CRRP_X_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   1 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_LSU_CRRP_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10353,12 +10529,13 @@ static const int Reservation_kv3_v1_LSU_CRRP_Y_table[kvx_kv3_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   1 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_MAU_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10370,12 +10547,13 @@ static const int Reservation_kv3_v1_MAU_table[kvx_kv3_v1_RESERVATION_TABLE_LINES
   1 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_MAU_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10387,12 +10565,13 @@ static const int Reservation_kv3_v1_MAU_X_table[kvx_kv3_v1_RESERVATION_TABLE_LIN
   1 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_MAU_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10404,12 +10583,13 @@ static const int Reservation_kv3_v1_MAU_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LIN
   1 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_MAU_AUXR_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10421,12 +10601,13 @@ static const int Reservation_kv3_v1_MAU_AUXR_table[kvx_kv3_v1_RESERVATION_TABLE_
   1 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_MAU_AUXR_X_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10438,12 +10619,13 @@ static const int Reservation_kv3_v1_MAU_AUXR_X_table[kvx_kv3_v1_RESERVATION_TABL
   1 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_MAU_AUXR_Y_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10455,12 +10637,13 @@ static const int Reservation_kv3_v1_MAU_AUXR_Y_table[kvx_kv3_v1_RESERVATION_TABL
   1 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   0 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   1 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 static const int Reservation_kv3_v1_TCA_table[kvx_kv3_v1_RESERVATION_TABLE_LINES * kvx_kv3_v1_RESOURCE_MAX] = {
@@ -10472,12 +10655,13 @@ static const int Reservation_kv3_v1_TCA_table[kvx_kv3_v1_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv3_v1-MAU */,
   0 /* cyc.0 Resource-kv3_v1-BCU */,
   1 /* cyc.0 Resource-kv3_v1-TCA */,
+  0 /* cyc.0 Resource-kv3_v1-XFER */,
   0 /* cyc.0 Resource-kv3_v1-AUXR */,
   0 /* cyc.0 Resource-kv3_v1-AUXW */,
+  0 /* cyc.0 Resource-kv3_v1-MEMW */,
   0 /* cyc.0 Resource-kv3_v1-CRRP */,
   0 /* cyc.0 Resource-kv3_v1-CRWL */,
-  0 /* cyc.0 Resource-kv3_v1-CRWH */,
-  0 /* cyc.0 Resource-kv3_v1-NOP */
+  0 /* cyc.0 Resource-kv3_v1-CRWH */
 };
 
 const int *kvx_kv3_v1_reservation_table_table[] ={
@@ -10486,6 +10670,13 @@ const int *kvx_kv3_v1_reservation_table_table[] ={
   Reservation_kv3_v1_ALU_TINY_table,
   Reservation_kv3_v1_ALU_TINY_X_table,
   Reservation_kv3_v1_ALU_TINY_Y_table,
+  Reservation_kv3_v1_ALU_TINY_CRRP_table,
+  Reservation_kv3_v1_ALU_TINY_CRWL_CRWH_table,
+  Reservation_kv3_v1_ALU_TINY_CRWL_CRWH_X_table,
+  Reservation_kv3_v1_ALU_TINY_CRWL_CRWH_Y_table,
+  Reservation_kv3_v1_ALU_TINY_CRRP_CRWL_CRWH_table,
+  Reservation_kv3_v1_ALU_TINY_CRWL_table,
+  Reservation_kv3_v1_ALU_TINY_CRWH_table,
   Reservation_kv3_v1_ALU_LITE_table,
   Reservation_kv3_v1_ALU_LITE_X_table,
   Reservation_kv3_v1_ALU_LITE_Y_table,
@@ -10495,6 +10686,7 @@ const int *kvx_kv3_v1_reservation_table_table[] ={
   Reservation_kv3_v1_ALU_FULL_X_table,
   Reservation_kv3_v1_ALU_FULL_Y_table,
   Reservation_kv3_v1_BCU_table,
+  Reservation_kv3_v1_BCU_XFER_table,
   Reservation_kv3_v1_BCU_CRRP_CRWL_CRWH_table,
   Reservation_kv3_v1_BCU_TINY_AUXW_CRRP_table,
   Reservation_kv3_v1_BCU_TINY_TINY_MAU_XNOP_table,
@@ -49640,15 +49832,16 @@ const char *kvx_kv3_v2_resource_names[kvx_kv3_v2_RESOURCE_MAX] = {
   "MAU",
   "BCU",
   "TCA",
+  "XFER",
   "AUXR",
   "AUXW",
+  "MEMW",
   "CRRP",
   "CRWL",
-  "CRWH",
-  "NOP"
+  "CRWH"
 };
 
-const int kvx_kv3_v2_resources[kvx_kv3_v2_RESOURCE_MAX] = { 8,4,2,1,1,1,1,1,1,1,1,1,1,4};
+const int kvx_kv3_v2_resources[kvx_kv3_v2_RESOURCE_MAX] = { 8,4,2,1,1,1,1,1,1,1,1,1,1,1,1};
 
 
 
@@ -49664,12 +49857,13 @@ static const int Reservation_kv3_v2_ALL_table[kvx_kv3_v2_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_FULL_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49681,12 +49875,13 @@ static const int Reservation_kv3_v2_ALU_FULL_table[kvx_kv3_v2_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_FULL_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49698,12 +49893,13 @@ static const int Reservation_kv3_v2_ALU_FULL_X_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_FULL_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49715,12 +49911,13 @@ static const int Reservation_kv3_v2_ALU_FULL_Y_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_LITE_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49732,12 +49929,13 @@ static const int Reservation_kv3_v2_ALU_LITE_table[kvx_kv3_v2_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_LITE_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49749,12 +49947,13 @@ static const int Reservation_kv3_v2_ALU_LITE_X_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_LITE_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49766,12 +49965,13 @@ static const int Reservation_kv3_v2_ALU_LITE_Y_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_LITE_CRWH_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49783,12 +49983,13 @@ static const int Reservation_kv3_v2_ALU_LITE_CRWH_table[kvx_kv3_v2_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  1 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  1 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_LITE_CRWL_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49800,12 +50001,13 @@ static const int Reservation_kv3_v2_ALU_LITE_CRWL_table[kvx_kv3_v2_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   1 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_NOP_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49817,12 +50019,13 @@ static const int Reservation_kv3_v2_ALU_NOP_table[kvx_kv3_v2_RESERVATION_TABLE_L
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  1 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49834,12 +50037,13 @@ static const int Reservation_kv3_v2_ALU_TINY_table[kvx_kv3_v2_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49851,12 +50055,13 @@ static const int Reservation_kv3_v2_ALU_TINY_X_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49868,12 +50073,13 @@ static const int Reservation_kv3_v2_ALU_TINY_Y_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_CRRP_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49885,12 +50091,13 @@ static const int Reservation_kv3_v2_ALU_TINY_CRRP_table[kvx_kv3_v2_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   1 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_CRRP_CRWL_CRWH_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49902,12 +50109,13 @@ static const int Reservation_kv3_v2_ALU_TINY_CRRP_CRWL_CRWH_table[kvx_kv3_v2_RES
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   1 /* cyc.0 Resource-kv3_v2-CRRP */,
   1 /* cyc.0 Resource-kv3_v2-CRWL */,
-  1 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  1 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_CRWH_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49919,12 +50127,13 @@ static const int Reservation_kv3_v2_ALU_TINY_CRWH_table[kvx_kv3_v2_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  1 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  1 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_CRWL_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49936,12 +50145,13 @@ static const int Reservation_kv3_v2_ALU_TINY_CRWL_table[kvx_kv3_v2_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   1 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_CRWL_CRWH_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49953,12 +50163,13 @@ static const int Reservation_kv3_v2_ALU_TINY_CRWL_CRWH_table[kvx_kv3_v2_RESERVAT
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   1 /* cyc.0 Resource-kv3_v2-CRWL */,
-  1 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  1 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_CRWL_CRWH_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49970,12 +50181,13 @@ static const int Reservation_kv3_v2_ALU_TINY_CRWL_CRWH_X_table[kvx_kv3_v2_RESERV
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   1 /* cyc.0 Resource-kv3_v2-CRWL */,
-  1 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  1 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_ALU_TINY_CRWL_CRWH_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -49987,12 +50199,13 @@ static const int Reservation_kv3_v2_ALU_TINY_CRWL_CRWH_Y_table[kvx_kv3_v2_RESERV
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   1 /* cyc.0 Resource-kv3_v2-CRWL */,
-  1 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  1 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_BCU_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50004,12 +50217,13 @@ static const int Reservation_kv3_v2_BCU_table[kvx_kv3_v2_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   1 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_BCU_CRRP_CRWL_CRWH_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50021,12 +50235,13 @@ static const int Reservation_kv3_v2_BCU_CRRP_CRWL_CRWH_table[kvx_kv3_v2_RESERVAT
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   1 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   1 /* cyc.0 Resource-kv3_v2-CRRP */,
   1 /* cyc.0 Resource-kv3_v2-CRWL */,
-  1 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  1 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_BCU_TINY_AUXW_CRRP_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50038,12 +50253,13 @@ static const int Reservation_kv3_v2_BCU_TINY_AUXW_CRRP_table[kvx_kv3_v2_RESERVAT
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   1 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   1 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   1 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_BCU_TINY_TINY_MAU_XNOP_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50055,12 +50271,31 @@ static const int Reservation_kv3_v2_BCU_TINY_TINY_MAU_XNOP_table[kvx_kv3_v2_RESE
   1 /* cyc.0 Resource-kv3_v2-MAU */,
   1 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  4 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
+};
+
+static const int Reservation_kv3_v2_BCU_XFER_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv3_v2-ISSUE */,
+  0 /* cyc.0 Resource-kv3_v2-TINY */,
+  0 /* cyc.0 Resource-kv3_v2-LITE */,
+  0 /* cyc.0 Resource-kv3_v2-FULL */,
+  0 /* cyc.0 Resource-kv3_v2-LSU */,
+  0 /* cyc.0 Resource-kv3_v2-MAU */,
+  1 /* cyc.0 Resource-kv3_v2-BCU */,
+  0 /* cyc.0 Resource-kv3_v2-TCA */,
+  1 /* cyc.0 Resource-kv3_v2-XFER */,
+  0 /* cyc.0 Resource-kv3_v2-AUXR */,
+  0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
+  0 /* cyc.0 Resource-kv3_v2-CRRP */,
+  0 /* cyc.0 Resource-kv3_v2-CRWL */,
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50072,12 +50307,13 @@ static const int Reservation_kv3_v2_LSU_table[kvx_kv3_v2_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50089,12 +50325,13 @@ static const int Reservation_kv3_v2_LSU_X_table[kvx_kv3_v2_RESERVATION_TABLE_LIN
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50106,12 +50343,13 @@ static const int Reservation_kv3_v2_LSU_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LIN
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXR_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50123,12 +50361,13 @@ static const int Reservation_kv3_v2_LSU_AUXR_table[kvx_kv3_v2_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXR_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50140,12 +50379,13 @@ static const int Reservation_kv3_v2_LSU_AUXR_X_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXR_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50157,12 +50397,13 @@ static const int Reservation_kv3_v2_LSU_AUXR_Y_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXR_AUXW_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50174,12 +50415,13 @@ static const int Reservation_kv3_v2_LSU_AUXR_AUXW_table[kvx_kv3_v2_RESERVATION_T
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   1 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXR_AUXW_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50191,12 +50433,13 @@ static const int Reservation_kv3_v2_LSU_AUXR_AUXW_X_table[kvx_kv3_v2_RESERVATION
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   1 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXR_AUXW_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50208,12 +50451,13 @@ static const int Reservation_kv3_v2_LSU_AUXR_AUXW_Y_table[kvx_kv3_v2_RESERVATION
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   1 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXW_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50225,12 +50469,13 @@ static const int Reservation_kv3_v2_LSU_AUXW_table[kvx_kv3_v2_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   1 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXW_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50242,12 +50487,13 @@ static const int Reservation_kv3_v2_LSU_AUXW_X_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   1 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_AUXW_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50259,12 +50505,13 @@ static const int Reservation_kv3_v2_LSU_AUXW_Y_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   1 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_CRRP_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50276,12 +50523,13 @@ static const int Reservation_kv3_v2_LSU_CRRP_table[kvx_kv3_v2_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   1 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_CRRP_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50293,12 +50541,13 @@ static const int Reservation_kv3_v2_LSU_CRRP_X_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   1 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_LSU_CRRP_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50310,12 +50559,13 @@ static const int Reservation_kv3_v2_LSU_CRRP_Y_table[kvx_kv3_v2_RESERVATION_TABL
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   1 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_MAU_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50327,12 +50577,13 @@ static const int Reservation_kv3_v2_MAU_table[kvx_kv3_v2_RESERVATION_TABLE_LINES
   1 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_MAU_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50344,12 +50595,13 @@ static const int Reservation_kv3_v2_MAU_X_table[kvx_kv3_v2_RESERVATION_TABLE_LIN
   1 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_MAU_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50361,12 +50613,13 @@ static const int Reservation_kv3_v2_MAU_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LIN
   1 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_MAU_AUXR_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50378,12 +50631,13 @@ static const int Reservation_kv3_v2_MAU_AUXR_table[kvx_kv3_v2_RESERVATION_TABLE_
   1 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_MAU_AUXR_X_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50395,12 +50649,13 @@ static const int Reservation_kv3_v2_MAU_AUXR_X_table[kvx_kv3_v2_RESERVATION_TABL
   1 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_MAU_AUXR_Y_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50412,12 +50667,13 @@ static const int Reservation_kv3_v2_MAU_AUXR_Y_table[kvx_kv3_v2_RESERVATION_TABL
   1 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   0 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   1 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 static const int Reservation_kv3_v2_TCA_table[kvx_kv3_v2_RESERVATION_TABLE_LINES * kvx_kv3_v2_RESOURCE_MAX] = {
@@ -50429,12 +50685,13 @@ static const int Reservation_kv3_v2_TCA_table[kvx_kv3_v2_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv3_v2-MAU */,
   0 /* cyc.0 Resource-kv3_v2-BCU */,
   1 /* cyc.0 Resource-kv3_v2-TCA */,
+  0 /* cyc.0 Resource-kv3_v2-XFER */,
   0 /* cyc.0 Resource-kv3_v2-AUXR */,
   0 /* cyc.0 Resource-kv3_v2-AUXW */,
+  0 /* cyc.0 Resource-kv3_v2-MEMW */,
   0 /* cyc.0 Resource-kv3_v2-CRRP */,
   0 /* cyc.0 Resource-kv3_v2-CRWL */,
-  0 /* cyc.0 Resource-kv3_v2-CRWH */,
-  0 /* cyc.0 Resource-kv3_v2-NOP */
+  0 /* cyc.0 Resource-kv3_v2-CRWH */
 };
 
 const int *kvx_kv3_v2_reservation_table_table[] ={
@@ -50459,6 +50716,7 @@ const int *kvx_kv3_v2_reservation_table_table[] ={
   Reservation_kv3_v2_ALU_FULL_X_table,
   Reservation_kv3_v2_ALU_FULL_Y_table,
   Reservation_kv3_v2_BCU_table,
+  Reservation_kv3_v2_BCU_XFER_table,
   Reservation_kv3_v2_BCU_CRRP_CRWL_CRWH_table,
   Reservation_kv3_v2_BCU_TINY_AUXW_CRRP_table,
   Reservation_kv3_v2_BCU_TINY_TINY_MAU_XNOP_table,
@@ -52144,7 +52402,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_LSU_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_LSU_AUXR_AUXW_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_LSU_X, ((int)0 << 8) | (int)Reservation_kv3_v2_LSU_AUXR_AUXW_X,
     .format = {
       &kv3_v2_boolcas_opnd,
       &kv3_v2_coherency_opnd,
@@ -85007,8 +85265,8 @@ int kvx_kv4_v1_dec_registers[] = {
 const char *mod_kv4_v1_exunum[] = {
   "alu0",
   "alu1",
-  "mau",
-  "lsu",
+  "lsu0",
+  "lsu1",
   NULL,
 };
 
@@ -90554,15 +90812,16 @@ const char *kvx_kv4_v1_resource_names[kvx_kv4_v1_RESOURCE_MAX] = {
   "MAU",
   "BCU",
   "TCA",
+  "XFER",
   "AUXR",
   "AUXW",
+  "MEMW",
   "CRRP",
   "CRWL",
-  "CRWH",
-  "NOP"
+  "CRWH"
 };
 
-const int kvx_kv4_v1_resources[kvx_kv4_v1_RESOURCE_MAX] = { 8,4,2,1,1,1,1,1,1,1,1,1,1,4};
+const int kvx_kv4_v1_resources[kvx_kv4_v1_RESOURCE_MAX] = { 8,4,2,1,2,2,2,1,1,2,2,1,1,1,1};
 
 
 
@@ -90578,12 +90837,13 @@ static const int Reservation_kv4_v1_ALL_table[kvx_kv4_v1_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_FULL_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90595,12 +90855,13 @@ static const int Reservation_kv4_v1_ALU_FULL_table[kvx_kv4_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_FULL_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90612,12 +90873,13 @@ static const int Reservation_kv4_v1_ALU_FULL_X_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_FULL_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90629,12 +90891,13 @@ static const int Reservation_kv4_v1_ALU_FULL_Y_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_LITE_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90646,12 +90909,13 @@ static const int Reservation_kv4_v1_ALU_LITE_table[kvx_kv4_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_LITE_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90663,12 +90927,13 @@ static const int Reservation_kv4_v1_ALU_LITE_X_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_LITE_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90680,46 +90945,13 @@ static const int Reservation_kv4_v1_ALU_LITE_Y_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_LITE_CRWH_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  1 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  1 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_LITE_CRWL_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  1 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  1 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_NOP_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90731,12 +90963,13 @@ static const int Reservation_kv4_v1_ALU_NOP_table[kvx_kv4_v1_RESERVATION_TABLE_L
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  1 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_TINY_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90748,12 +90981,13 @@ static const int Reservation_kv4_v1_ALU_TINY_table[kvx_kv4_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_TINY_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90765,12 +90999,13 @@ static const int Reservation_kv4_v1_ALU_TINY_X_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_ALU_TINY_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90782,131 +91017,13 @@ static const int Reservation_kv4_v1_ALU_TINY_Y_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_TINY_CRRP_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  1 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_TINY_CRRP_CRWL_CRWH_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  1 /* cyc.0 Resource-kv4_v1-CRRP */,
-  1 /* cyc.0 Resource-kv4_v1-CRWL */,
-  1 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_TINY_CRWH_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  1 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_TINY_CRWL_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  1 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  1 /* cyc.0 Resource-kv4_v1-CRWL */,
-  1 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  2 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  1 /* cyc.0 Resource-kv4_v1-CRWL */,
-  1 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  3 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  1 /* cyc.0 Resource-kv4_v1-CRWL */,
-  1 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_BCU_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90918,15 +91035,16 @@ static const int Reservation_kv4_v1_BCU_table[kvx_kv4_v1_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   1 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
-static const int Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+static const int Reservation_kv4_v1_BCU_XFER_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
   1 /* cyc.0 Resource-kv4_v1-ISSUE */,
   0 /* cyc.0 Resource-kv4_v1-TINY */,
   0 /* cyc.0 Resource-kv4_v1-LITE */,
@@ -90935,46 +91053,13 @@ static const int Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH_table[kvx_kv4_v1_RESERVAT
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   1 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  1 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  1 /* cyc.0 Resource-kv4_v1-CRRP */,
-  1 /* cyc.0 Resource-kv4_v1-CRWL */,
-  1 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_BCU_TINY_AUXW_CRRP_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  1 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  1 /* cyc.0 Resource-kv4_v1-AUXW */,
-  1 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  2 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  1 /* cyc.0 Resource-kv4_v1-MAU */,
-  1 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  4 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -90986,12 +91071,13 @@ static const int Reservation_kv4_v1_LSU_table[kvx_kv4_v1_RESERVATION_TABLE_LINES
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91003,12 +91089,13 @@ static const int Reservation_kv4_v1_LSU_X_table[kvx_kv4_v1_RESERVATION_TABLE_LIN
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91020,12 +91107,13 @@ static const int Reservation_kv4_v1_LSU_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LIN
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXR_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91037,12 +91125,13 @@ static const int Reservation_kv4_v1_LSU_AUXR_table[kvx_kv4_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   1 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXR_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91054,12 +91143,13 @@ static const int Reservation_kv4_v1_LSU_AUXR_X_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   1 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXR_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91071,12 +91161,13 @@ static const int Reservation_kv4_v1_LSU_AUXR_Y_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   1 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXR_AUXW_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91088,12 +91179,13 @@ static const int Reservation_kv4_v1_LSU_AUXR_AUXW_table[kvx_kv4_v1_RESERVATION_T
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   1 /* cyc.0 Resource-kv4_v1-AUXR */,
   1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXR_AUXW_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91105,12 +91197,13 @@ static const int Reservation_kv4_v1_LSU_AUXR_AUXW_X_table[kvx_kv4_v1_RESERVATION
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   1 /* cyc.0 Resource-kv4_v1-AUXR */,
   1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXR_AUXW_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91122,12 +91215,121 @@ static const int Reservation_kv4_v1_LSU_AUXR_AUXW_Y_table[kvx_kv4_v1_RESERVATION
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   1 /* cyc.0 Resource-kv4_v1-AUXR */,
   1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  2 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  3 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_AUXR_MEMW_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_AUXR_MEMW_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  2 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_AUXR_MEMW_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  3 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXW_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91139,12 +91341,13 @@ static const int Reservation_kv4_v1_LSU_AUXW_table[kvx_kv4_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXW_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91156,12 +91359,13 @@ static const int Reservation_kv4_v1_LSU_AUXW_X_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_LSU_AUXW_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
@@ -91173,15 +91377,16 @@ static const int Reservation_kv4_v1_LSU_AUXW_Y_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
-static const int Reservation_kv4_v1_LSU_CRRP_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+static const int Reservation_kv4_v1_LSU_AUXW_MEMW_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
   1 /* cyc.0 Resource-kv4_v1-ISSUE */,
   1 /* cyc.0 Resource-kv4_v1-TINY */,
   0 /* cyc.0 Resource-kv4_v1-LITE */,
@@ -91190,15 +91395,16 @@ static const int Reservation_kv4_v1_LSU_CRRP_table[kvx_kv4_v1_RESERVATION_TABLE_
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  1 /* cyc.0 Resource-kv4_v1-CRRP */,
+  1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
-static const int Reservation_kv4_v1_LSU_CRRP_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+static const int Reservation_kv4_v1_LSU_AUXW_MEMW_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
   2 /* cyc.0 Resource-kv4_v1-ISSUE */,
   1 /* cyc.0 Resource-kv4_v1-TINY */,
   0 /* cyc.0 Resource-kv4_v1-LITE */,
@@ -91207,15 +91413,16 @@ static const int Reservation_kv4_v1_LSU_CRRP_X_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  1 /* cyc.0 Resource-kv4_v1-CRRP */,
+  1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
-static const int Reservation_kv4_v1_LSU_CRRP_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+static const int Reservation_kv4_v1_LSU_AUXW_MEMW_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
   3 /* cyc.0 Resource-kv4_v1-ISSUE */,
   1 /* cyc.0 Resource-kv4_v1-TINY */,
   0 /* cyc.0 Resource-kv4_v1-LITE */,
@@ -91224,131 +91431,157 @@ static const int Reservation_kv4_v1_LSU_CRRP_Y_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
   0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  0 /* cyc.0 Resource-kv4_v1-AUXR */,
+  1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_MEMW_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  1 /* cyc.0 Resource-kv4_v1-CRRP */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_MEMW_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  2 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  0 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_LSU_MEMW_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  3 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  1 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  0 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  1 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 static const int Reservation_kv4_v1_MAU_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  1 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_MAU_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  2 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  1 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_MAU_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  3 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  1 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_MAU_AUXR_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  1 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  1 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_MAU_AUXR_X_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  2 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  1 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  1 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_MAU_AUXR_Y_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  3 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  1 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  1 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  0 /* cyc.0 Resource-kv4_v1-TCA */,
-  1 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_TCA_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
   1 /* cyc.0 Resource-kv4_v1-ISSUE */,
   0 /* cyc.0 Resource-kv4_v1-TINY */,
   0 /* cyc.0 Resource-kv4_v1-LITE */,
   0 /* cyc.0 Resource-kv4_v1-FULL */,
   0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  1 /* cyc.0 Resource-kv4_v1-MAU */,
   0 /* cyc.0 Resource-kv4_v1-BCU */,
-  1 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
   0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_MAU_AUXR_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  0 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  0 /* cyc.0 Resource-kv4_v1-LSU */,
+  1 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_MAU_AUXW_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  0 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  0 /* cyc.0 Resource-kv4_v1-LSU */,
+  1 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  0 /* cyc.0 Resource-kv4_v1-AUXR */,
+  1 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_MAU_TCA_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  0 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  0 /* cyc.0 Resource-kv4_v1-LSU */,
+  1 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  1 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  0 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
+};
+
+static const int Reservation_kv4_v1_MAU_TCA_AUXR_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  0 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  0 /* cyc.0 Resource-kv4_v1-LSU */,
+  1 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  1 /* cyc.0 Resource-kv4_v1-TCA */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */
 };
 
 const int *kvx_kv4_v1_reservation_table_table[] ={
@@ -91357,47 +91590,43 @@ const int *kvx_kv4_v1_reservation_table_table[] ={
   Reservation_kv4_v1_ALU_TINY_table,
   Reservation_kv4_v1_ALU_TINY_X_table,
   Reservation_kv4_v1_ALU_TINY_Y_table,
-  Reservation_kv4_v1_ALU_TINY_CRRP_table,
-  Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_table,
-  Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_X_table,
-  Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_Y_table,
-  Reservation_kv4_v1_ALU_TINY_CRRP_CRWL_CRWH_table,
-  Reservation_kv4_v1_ALU_TINY_CRWL_table,
-  Reservation_kv4_v1_ALU_TINY_CRWH_table,
   Reservation_kv4_v1_ALU_LITE_table,
   Reservation_kv4_v1_ALU_LITE_X_table,
   Reservation_kv4_v1_ALU_LITE_Y_table,
-  Reservation_kv4_v1_ALU_LITE_CRWL_table,
-  Reservation_kv4_v1_ALU_LITE_CRWH_table,
   Reservation_kv4_v1_ALU_FULL_table,
   Reservation_kv4_v1_ALU_FULL_X_table,
   Reservation_kv4_v1_ALU_FULL_Y_table,
   Reservation_kv4_v1_BCU_table,
-  Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH_table,
-  Reservation_kv4_v1_BCU_TINY_AUXW_CRRP_table,
-  Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP_table,
-  Reservation_kv4_v1_TCA_table,
+  Reservation_kv4_v1_BCU_XFER_table,
   Reservation_kv4_v1_LSU_table,
   Reservation_kv4_v1_LSU_X_table,
   Reservation_kv4_v1_LSU_Y_table,
-  Reservation_kv4_v1_LSU_CRRP_table,
-  Reservation_kv4_v1_LSU_CRRP_X_table,
-  Reservation_kv4_v1_LSU_CRRP_Y_table,
+  Reservation_kv4_v1_LSU_MEMW_table,
+  Reservation_kv4_v1_LSU_MEMW_X_table,
+  Reservation_kv4_v1_LSU_MEMW_Y_table,
   Reservation_kv4_v1_LSU_AUXR_table,
   Reservation_kv4_v1_LSU_AUXR_X_table,
   Reservation_kv4_v1_LSU_AUXR_Y_table,
+  Reservation_kv4_v1_LSU_AUXR_MEMW_table,
+  Reservation_kv4_v1_LSU_AUXR_MEMW_X_table,
+  Reservation_kv4_v1_LSU_AUXR_MEMW_Y_table,
+  Reservation_kv4_v1_LSU_AUXW_MEMW_table,
+  Reservation_kv4_v1_LSU_AUXW_MEMW_X_table,
+  Reservation_kv4_v1_LSU_AUXW_MEMW_Y_table,
   Reservation_kv4_v1_LSU_AUXW_table,
   Reservation_kv4_v1_LSU_AUXW_X_table,
   Reservation_kv4_v1_LSU_AUXW_Y_table,
   Reservation_kv4_v1_LSU_AUXR_AUXW_table,
   Reservation_kv4_v1_LSU_AUXR_AUXW_X_table,
   Reservation_kv4_v1_LSU_AUXR_AUXW_Y_table,
+  Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_table,
+  Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X_table,
+  Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_Y_table,
   Reservation_kv4_v1_MAU_table,
-  Reservation_kv4_v1_MAU_X_table,
-  Reservation_kv4_v1_MAU_Y_table,
   Reservation_kv4_v1_MAU_AUXR_table,
-  Reservation_kv4_v1_MAU_AUXR_X_table,
-  Reservation_kv4_v1_MAU_AUXR_Y_table
+  Reservation_kv4_v1_MAU_AUXW_table,
+  Reservation_kv4_v1_MAU_TCA_table,
+  Reservation_kv4_v1_MAU_TCA_AUXR_table
 };
 
 const struct kvx_core_info kvx_kv4_v1_core_info = { kvx_kv4_v1_optab, "kv4-1", kvx_kv4_v1_resources, ELF_KVX_CORE_KV4_1, kvx_kv4_v1_pseudo_func, 26, (int **) kvx_kv4_v1_reservation_table_table, kvx_kv4_v1_RESERVATION_TABLE_LINES, kvx_kv4_v1_RESOURCE_MAX, (char **) kvx_kv4_v1_resource_names };
@@ -92904,7 +93133,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -92932,7 +93161,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -92966,7 +93195,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -92990,7 +93219,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -93018,7 +93247,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -93052,7 +93281,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -93076,7 +93305,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -93104,7 +93333,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -93138,7 +93367,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_boolcas_opnd,
       &kv4_v1_coherency_opnd,
@@ -95975,7 +96204,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerz_opnd,
@@ -96001,7 +96230,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_offset27_opnd,
@@ -96033,7 +96262,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_extend27_offset27_opnd,
@@ -96055,7 +96284,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerz_opnd,
@@ -96081,7 +96310,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_offset27_opnd,
@@ -96113,7 +96342,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_extend27_offset27_opnd,
@@ -96135,7 +96364,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96161,7 +96390,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96193,7 +96422,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW_Y,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96215,7 +96444,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96241,7 +96470,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96273,7 +96502,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW_Y,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96295,7 +96524,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96321,7 +96550,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96353,7 +96582,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW_Y,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96375,7 +96604,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96401,7 +96630,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96433,7 +96662,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXW_MEMW_Y,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerw_opnd,
@@ -96861,7 +97090,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerz_opnd,
@@ -96887,7 +97116,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_offset27_opnd,
@@ -96919,7 +97148,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_extend27_offset27_opnd,
@@ -96941,7 +97170,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_registerz_opnd,
@@ -96967,7 +97196,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_offset27_opnd,
@@ -96999,7 +97228,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_coherency_opnd,
       &kv4_v1_extend27_offset27_opnd,
@@ -97840,7 +98069,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_XFER,
     .format = {
       &kv4_v1_pcrel27_opnd,
       NULL
@@ -103121,7 +103350,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
     .format = {
       &kv4_v1_registerz_opnd,
       &kv4_v1_systems2_opnd,
@@ -103141,7 +103370,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
     .format = {
       &kv4_v1_registerz_opnd,
       &kv4_v1_systems3_opnd,
@@ -103161,7 +103390,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_XFER,
     .format = {
       &kv4_v1_pcrel27_opnd,
       NULL
@@ -103294,7 +103523,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_XFER,
     .format = {
       &kv4_v1_registerz_opnd,
       NULL
@@ -103313,7 +103542,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
     .format = {
       &kv4_v1_registerz_opnd,
       NULL
@@ -103332,7 +103561,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_XFER,
     .format = {
       &kv4_v1_registerz_opnd,
       NULL
@@ -110306,7 +110535,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_XFER,
     .format = {
       NULL
     },
@@ -110530,7 +110759,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
     .format = {
       &kv4_v1_registerz_opnd,
       &kv4_v1_systems3_opnd,
@@ -110550,7 +110779,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
     .format = {
       &kv4_v1_registerz_opnd,
       &kv4_v1_systems4_opnd,
@@ -113515,7 +113744,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_doscale_opnd,
       &kv4_v1_registery_opnd,
@@ -113537,7 +113766,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -113564,7 +113793,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -113597,7 +113826,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -113620,7 +113849,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
@@ -113646,7 +113875,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -113677,7 +113906,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -113736,7 +113965,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_doscale_opnd,
       &kv4_v1_registery_opnd,
@@ -113758,7 +113987,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -113785,7 +114014,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -113818,7 +114047,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -113841,7 +114070,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
@@ -113867,7 +114096,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -113898,7 +114127,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -113999,7 +114228,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_doscale_opnd,
       &kv4_v1_registery_opnd,
@@ -114021,7 +114250,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -114048,7 +114277,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -114081,7 +114310,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -114104,7 +114333,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
@@ -114130,7 +114359,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -114161,7 +114390,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -114830,7 +115059,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_doscale_opnd,
       &kv4_v1_registery_opnd,
@@ -114852,7 +115081,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_lsomask_opnd,
       &kv4_v1_registery_opnd,
@@ -114879,7 +115108,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_lsomask_opnd,
       &kv4_v1_registery_opnd,
@@ -114912,7 +115141,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_lsomask_opnd,
       &kv4_v1_registery_opnd,
@@ -114935,7 +115164,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -114962,7 +115191,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -114995,7 +115224,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -115018,7 +115247,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
@@ -115044,7 +115273,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -115075,7 +115304,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -115096,7 +115325,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_doscale_opnd,
       &kv4_v1_registery_opnd,
@@ -115118,7 +115347,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -115145,7 +115374,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -115178,7 +115407,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -115201,7 +115430,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
@@ -115227,7 +115456,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -115258,7 +115487,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -116118,7 +116347,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_doscale_opnd,
       &kv4_v1_registery_opnd,
@@ -116140,7 +116369,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -116167,7 +116396,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -116200,7 +116429,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_lsucond_opnd,
       &kv4_v1_registery_opnd,
@@ -116223,7 +116452,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW,
     .format = {
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
@@ -116249,7 +116478,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_X,
     .format = {
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -116280,7 +116509,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_AUXR_MEMW_Y,
     .format = {
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -116490,7 +116719,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU,
     .format = {
       &kv4_v1_registerz_opnd,
       NULL
@@ -116629,7 +116858,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU,
     .format = {
       &kv4_v1_registern_opnd,
       &kv4_v1_registercg_opnd,
@@ -116650,7 +116879,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU,
     .format = {
       &kv4_v1_registern_opnd,
       &kv4_v1_registerch_opnd,
@@ -116671,7 +116900,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU,
     .format = {
       &kv4_v1_registern_opnd,
       &kv4_v1_registerci_opnd,
@@ -116692,7 +116921,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU,
     .format = {
       &kv4_v1_registern_opnd,
       &kv4_v1_registercj_opnd,
@@ -116713,7 +116942,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU,
     .format = {
       &kv4_v1_registern_opnd,
       &kv4_v1_registerck_opnd,
@@ -116734,7 +116963,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU,
     .format = {
       &kv4_v1_registern_opnd,
       &kv4_v1_registercl_opnd,
@@ -116755,7 +116984,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registercg_opnd,
@@ -116776,7 +117005,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerch_opnd,
@@ -116797,7 +117026,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerci_opnd,
@@ -116818,7 +117047,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registercj_opnd,
@@ -116839,7 +117068,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerck_opnd,
@@ -116860,7 +117089,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registercl_opnd,
@@ -116881,7 +117110,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -116902,7 +117131,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -116923,7 +117152,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerc_opnd,
@@ -116944,7 +117173,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerc_opnd,
@@ -116964,7 +117193,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_shufflev_opnd,
       &kv4_v1_registeraq_opnd,
@@ -116985,7 +117214,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_shufflex_opnd,
       &kv4_v1_registerap_opnd,
@@ -117006,7 +117235,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_rounding_opnd,
       &kv4_v1_silent_opnd,
@@ -117029,7 +117258,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerc_opnd,
@@ -117050,7 +117279,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerc_opnd,
@@ -117071,7 +117300,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_rounding_opnd,
       &kv4_v1_silent_opnd,
@@ -117094,7 +117323,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_rounding_opnd,
       &kv4_v1_silent_opnd,
@@ -117116,7 +117345,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_rounding_opnd,
       &kv4_v1_silent_opnd,
@@ -117139,7 +117368,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -118063,7 +118292,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118084,7 +118313,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118105,7 +118334,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_rounding_opnd,
       &kv4_v1_silent_opnd,
@@ -118128,7 +118357,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118149,7 +118378,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118170,7 +118399,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118191,7 +118420,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118212,7 +118441,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registercp_opnd,
@@ -118233,7 +118462,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118254,7 +118483,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registercp_opnd,
@@ -118275,7 +118504,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118296,7 +118525,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registercp_opnd,
@@ -118317,7 +118546,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118338,7 +118567,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registercp_opnd,
@@ -118359,7 +118588,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registerap_opnd,
       &kv4_v1_registerc_opnd,
@@ -118380,7 +118609,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registerw_opnd,
       &kv4_v1_registercc_qselectc_opnd,
@@ -118400,7 +118629,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registern_opnd,
       &kv4_v1_registerc_opnd,
@@ -118420,7 +118649,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_BCU, ((int)0 << 8) | (int)Reservation_kv4_v1_BCU_TINY_AUXW_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_AUXW,
     .format = {
       &kv4_v1_registerm_opnd,
       &kv4_v1_registercb_hselectc_opnd,
@@ -118440,7 +118669,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_registerat_opnd,
       &kv4_v1_registerz_opnd,
@@ -118460,7 +118689,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWL,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_registerax_opnd,
       &kv4_v1_registerz_opnd,
@@ -118480,7 +118709,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWL,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_registeray_opnd,
       &kv4_v1_registerz_opnd,
@@ -118500,7 +118729,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_registeraz_opnd,
       &kv4_v1_registerz_opnd,
@@ -118520,7 +118749,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWL,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_registerae_opnd,
       &kv4_v1_registerz_opnd,
@@ -118541,7 +118770,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_registerao_opnd,
       &kv4_v1_registerz_opnd,
@@ -118562,7 +118791,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_rounding_opnd,
       &kv4_v1_silent_opnd,
@@ -118585,7 +118814,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -118606,7 +118835,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -118627,7 +118856,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -118774,7 +119003,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -118902,7 +119131,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_rchannel_opnd,
       &kv4_v1_registera_opnd,
@@ -118922,7 +119151,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -118943,7 +119172,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -118964,7 +119193,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_schannel_opnd,
       &kv4_v1_registerc_opnd,
@@ -118984,7 +119213,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRRP_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_schannel_opnd,
       &kv4_v1_rchannel_opnd,
@@ -119006,7 +119235,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW,
     .format = {
       &kv4_v1_doscale_opnd,
       &kv4_v1_registery_opnd,
@@ -119028,7 +119257,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW,
     .format = {
       &kv4_v1_lsumask_opnd,
       &kv4_v1_registery_opnd,
@@ -119055,7 +119284,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_CRRP_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_X,
     .format = {
       &kv4_v1_lsumask_opnd,
       &kv4_v1_registery_opnd,
@@ -119088,7 +119317,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_CRRP_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_Y,
     .format = {
       &kv4_v1_lsumask_opnd,
       &kv4_v1_registery_opnd,
@@ -119111,7 +119340,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_CRRP,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW,
     .format = {
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
@@ -119137,7 +119366,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_CRRP_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_X,
     .format = {
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -119168,7 +119397,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_CRRP_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_Y,
     .format = {
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
@@ -119189,7 +119418,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWL_CRWH,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_signed16_opnd,
@@ -119214,7 +119443,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 2,
     .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_X,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_X,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_extend6_upper27_lower10_opnd,
@@ -119244,7 +119473,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 3,
     .coding_size = 96,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_Y,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_Y,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_extend27_upper27_lower10_opnd,
@@ -119264,7 +119493,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_shufflev_opnd,
       &kv4_v1_registeraq_opnd,
@@ -119285,7 +119514,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_shufflex_opnd,
       &kv4_v1_registerap_opnd,
@@ -119306,7 +119535,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registeraq_opnd,
       &kv4_v1_registerc_opnd,
@@ -119326,7 +119555,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registercq_opnd,
@@ -119346,7 +119575,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,
@@ -119367,7 +119596,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registeraq_opnd,
       &kv4_v1_registerc_opnd,
@@ -120184,7 +120413,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registeraq_opnd,
       &kv4_v1_registercq_opnd,
@@ -120204,7 +120433,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TCA, ((int)0 << 8) | (int)Reservation_kv4_v1_TCA,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_MAU, ((int)0 << 8) | (int)Reservation_kv4_v1_MAU_TCA,
     .format = {
       &kv4_v1_registera_opnd,
       &kv4_v1_registerb_opnd,

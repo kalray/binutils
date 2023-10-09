@@ -24345,7 +24345,7 @@ static const char *pmd_kv4_v1_11[] = {
 };
 
 static const char *pmd_kv4_v1_12[] = {
-  "alu0", "alu1", "mau", "lsu",
+  "alu0", "alu1", "lsu0", "lsu1",
 };
 
 static const char *pmd_kv4_v1_13[] = {

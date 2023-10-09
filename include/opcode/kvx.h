@@ -23,12 +23,11 @@
 #ifndef OPCODE_KVX_H
 #define OPCODE_KVX_H
 
-#define KVXMAXSYLLABLES 3
-#define KVXMAXOPERANDS 7
-#define KVXMAXBUNDLEISSUE 6
-#define KVXMAXBUNDLEWORDS 8
-#define KVXNUMCORES 3
-#define KVXNUMBUNDLINGS 19
+#define KVX_NUMCORES 3
+#define KVX_MAXSYLLABLES 3
+#define KVX_MAXOPERANDS 7
+#define KVX_MAXBUNDLEISSUE 8
+#define KVX_MAXBUNDLEWORDS 16
 
 
 /*
@@ -187,7 +186,7 @@ struct kvxopc {
   /* asm name */
   const char  *as_op;
   /* 32 bits code words. */
-  struct kvx_codeword codewords[KVXMAXSYLLABLES];
+  struct kvx_codeword codewords[KVX_MAXSYLLABLES];
   /* Number of words in codewords[].  */
   int wordcount;
   /* coding size in case of variable length.  */
@@ -197,7 +196,7 @@ struct kvxopc {
   /* Reservation class.  */
   int reservation;
   /* 0 terminated.  */
-  struct kvx_operand *format[KVXMAXOPERANDS + 1];
+  struct kvx_operand *format[KVX_MAXOPERANDS + 1];
   /* Resource class.  */
   const char *rclass;
   /* Formating string.  */
@@ -983,13 +982,14 @@ static const char *bundling_kv3_v1_names(Bundling_kv3_v1 bundling) {
 #define Resource_kv3_v1_MAU 5
 #define Resource_kv3_v1_BCU 6
 #define Resource_kv3_v1_TCA 7
-#define Resource_kv3_v1_AUXR 8
-#define Resource_kv3_v1_AUXW 9
-#define Resource_kv3_v1_CRRP 10
-#define Resource_kv3_v1_CRWL 11
-#define Resource_kv3_v1_CRWH 12
-#define Resource_kv3_v1_NOP 13
-#define kvx_kv3_v1_RESOURCE_MAX 14
+#define Resource_kv3_v1_XFER 8
+#define Resource_kv3_v1_AUXR 9
+#define Resource_kv3_v1_AUXW 10
+#define Resource_kv3_v1_MEMW 11
+#define Resource_kv3_v1_CRRP 12
+#define Resource_kv3_v1_CRWL 13
+#define Resource_kv3_v1_CRWH 14
+#define kvx_kv3_v1_RESOURCE_MAX 15
 
 
 /* Reservations list */
@@ -998,40 +998,48 @@ static const char *bundling_kv3_v1_names(Bundling_kv3_v1 bundling) {
 #define Reservation_kv3_v1_ALU_TINY 2
 #define Reservation_kv3_v1_ALU_TINY_X 3
 #define Reservation_kv3_v1_ALU_TINY_Y 4
-#define Reservation_kv3_v1_ALU_LITE 5
-#define Reservation_kv3_v1_ALU_LITE_X 6
-#define Reservation_kv3_v1_ALU_LITE_Y 7
-#define Reservation_kv3_v1_ALU_LITE_CRWL 8
-#define Reservation_kv3_v1_ALU_LITE_CRWH 9
-#define Reservation_kv3_v1_ALU_FULL 10
-#define Reservation_kv3_v1_ALU_FULL_X 11
-#define Reservation_kv3_v1_ALU_FULL_Y 12
-#define Reservation_kv3_v1_BCU 13
-#define Reservation_kv3_v1_BCU_CRRP_CRWL_CRWH 14
-#define Reservation_kv3_v1_BCU_TINY_AUXW_CRRP 15
-#define Reservation_kv3_v1_BCU_TINY_TINY_MAU_XNOP 16
-#define Reservation_kv3_v1_TCA 17
-#define Reservation_kv3_v1_LSU 18
-#define Reservation_kv3_v1_LSU_X 19
-#define Reservation_kv3_v1_LSU_Y 20
-#define Reservation_kv3_v1_LSU_CRRP 21
-#define Reservation_kv3_v1_LSU_CRRP_X 22
-#define Reservation_kv3_v1_LSU_CRRP_Y 23
-#define Reservation_kv3_v1_LSU_AUXR 24
-#define Reservation_kv3_v1_LSU_AUXR_X 25
-#define Reservation_kv3_v1_LSU_AUXR_Y 26
-#define Reservation_kv3_v1_LSU_AUXW 27
-#define Reservation_kv3_v1_LSU_AUXW_X 28
-#define Reservation_kv3_v1_LSU_AUXW_Y 29
-#define Reservation_kv3_v1_LSU_AUXR_AUXW 30
-#define Reservation_kv3_v1_LSU_AUXR_AUXW_X 31
-#define Reservation_kv3_v1_LSU_AUXR_AUXW_Y 32
-#define Reservation_kv3_v1_MAU 33
-#define Reservation_kv3_v1_MAU_X 34
-#define Reservation_kv3_v1_MAU_Y 35
-#define Reservation_kv3_v1_MAU_AUXR 36
-#define Reservation_kv3_v1_MAU_AUXR_X 37
-#define Reservation_kv3_v1_MAU_AUXR_Y 38
+#define Reservation_kv3_v1_ALU_TINY_CRRP 5
+#define Reservation_kv3_v1_ALU_TINY_CRWL_CRWH 6
+#define Reservation_kv3_v1_ALU_TINY_CRWL_CRWH_X 7
+#define Reservation_kv3_v1_ALU_TINY_CRWL_CRWH_Y 8
+#define Reservation_kv3_v1_ALU_TINY_CRRP_CRWL_CRWH 9
+#define Reservation_kv3_v1_ALU_TINY_CRWL 10
+#define Reservation_kv3_v1_ALU_TINY_CRWH 11
+#define Reservation_kv3_v1_ALU_LITE 12
+#define Reservation_kv3_v1_ALU_LITE_X 13
+#define Reservation_kv3_v1_ALU_LITE_Y 14
+#define Reservation_kv3_v1_ALU_LITE_CRWL 15
+#define Reservation_kv3_v1_ALU_LITE_CRWH 16
+#define Reservation_kv3_v1_ALU_FULL 17
+#define Reservation_kv3_v1_ALU_FULL_X 18
+#define Reservation_kv3_v1_ALU_FULL_Y 19
+#define Reservation_kv3_v1_BCU 20
+#define Reservation_kv3_v1_BCU_XFER 21
+#define Reservation_kv3_v1_BCU_CRRP_CRWL_CRWH 22
+#define Reservation_kv3_v1_BCU_TINY_AUXW_CRRP 23
+#define Reservation_kv3_v1_BCU_TINY_TINY_MAU_XNOP 24
+#define Reservation_kv3_v1_TCA 25
+#define Reservation_kv3_v1_LSU 26
+#define Reservation_kv3_v1_LSU_X 27
+#define Reservation_kv3_v1_LSU_Y 28
+#define Reservation_kv3_v1_LSU_CRRP 29
+#define Reservation_kv3_v1_LSU_CRRP_X 30
+#define Reservation_kv3_v1_LSU_CRRP_Y 31
+#define Reservation_kv3_v1_LSU_AUXR 32
+#define Reservation_kv3_v1_LSU_AUXR_X 33
+#define Reservation_kv3_v1_LSU_AUXR_Y 34
+#define Reservation_kv3_v1_LSU_AUXW 35
+#define Reservation_kv3_v1_LSU_AUXW_X 36
+#define Reservation_kv3_v1_LSU_AUXW_Y 37
+#define Reservation_kv3_v1_LSU_AUXR_AUXW 38
+#define Reservation_kv3_v1_LSU_AUXR_AUXW_X 39
+#define Reservation_kv3_v1_LSU_AUXR_AUXW_Y 40
+#define Reservation_kv3_v1_MAU 41
+#define Reservation_kv3_v1_MAU_X 42
+#define Reservation_kv3_v1_MAU_Y 43
+#define Reservation_kv3_v1_MAU_AUXR 44
+#define Reservation_kv3_v1_MAU_AUXR_X 45
+#define Reservation_kv3_v1_MAU_AUXR_Y 46
 
 
 extern struct kvx_reloc kv3_v1_rel16_reloc;
@@ -2001,13 +2009,14 @@ static const char *bundling_kv3_v2_names(Bundling_kv3_v2 bundling) {
 #define Resource_kv3_v2_MAU 5
 #define Resource_kv3_v2_BCU 6
 #define Resource_kv3_v2_TCA 7
-#define Resource_kv3_v2_AUXR 8
-#define Resource_kv3_v2_AUXW 9
-#define Resource_kv3_v2_CRRP 10
-#define Resource_kv3_v2_CRWL 11
-#define Resource_kv3_v2_CRWH 12
-#define Resource_kv3_v2_NOP 13
-#define kvx_kv3_v2_RESOURCE_MAX 14
+#define Resource_kv3_v2_XFER 8
+#define Resource_kv3_v2_AUXR 9
+#define Resource_kv3_v2_AUXW 10
+#define Resource_kv3_v2_MEMW 11
+#define Resource_kv3_v2_CRRP 12
+#define Resource_kv3_v2_CRWL 13
+#define Resource_kv3_v2_CRWH 14
+#define kvx_kv3_v2_RESOURCE_MAX 15
 
 
 /* Reservations list */
@@ -2032,31 +2041,32 @@ static const char *bundling_kv3_v2_names(Bundling_kv3_v2 bundling) {
 #define Reservation_kv3_v2_ALU_FULL_X 18
 #define Reservation_kv3_v2_ALU_FULL_Y 19
 #define Reservation_kv3_v2_BCU 20
-#define Reservation_kv3_v2_BCU_CRRP_CRWL_CRWH 21
-#define Reservation_kv3_v2_BCU_TINY_AUXW_CRRP 22
-#define Reservation_kv3_v2_BCU_TINY_TINY_MAU_XNOP 23
-#define Reservation_kv3_v2_TCA 24
-#define Reservation_kv3_v2_LSU 25
-#define Reservation_kv3_v2_LSU_X 26
-#define Reservation_kv3_v2_LSU_Y 27
-#define Reservation_kv3_v2_LSU_CRRP 28
-#define Reservation_kv3_v2_LSU_CRRP_X 29
-#define Reservation_kv3_v2_LSU_CRRP_Y 30
-#define Reservation_kv3_v2_LSU_AUXR 31
-#define Reservation_kv3_v2_LSU_AUXR_X 32
-#define Reservation_kv3_v2_LSU_AUXR_Y 33
-#define Reservation_kv3_v2_LSU_AUXW 34
-#define Reservation_kv3_v2_LSU_AUXW_X 35
-#define Reservation_kv3_v2_LSU_AUXW_Y 36
-#define Reservation_kv3_v2_LSU_AUXR_AUXW 37
-#define Reservation_kv3_v2_LSU_AUXR_AUXW_X 38
-#define Reservation_kv3_v2_LSU_AUXR_AUXW_Y 39
-#define Reservation_kv3_v2_MAU 40
-#define Reservation_kv3_v2_MAU_X 41
-#define Reservation_kv3_v2_MAU_Y 42
-#define Reservation_kv3_v2_MAU_AUXR 43
-#define Reservation_kv3_v2_MAU_AUXR_X 44
-#define Reservation_kv3_v2_MAU_AUXR_Y 45
+#define Reservation_kv3_v2_BCU_XFER 21
+#define Reservation_kv3_v2_BCU_CRRP_CRWL_CRWH 22
+#define Reservation_kv3_v2_BCU_TINY_AUXW_CRRP 23
+#define Reservation_kv3_v2_BCU_TINY_TINY_MAU_XNOP 24
+#define Reservation_kv3_v2_TCA 25
+#define Reservation_kv3_v2_LSU 26
+#define Reservation_kv3_v2_LSU_X 27
+#define Reservation_kv3_v2_LSU_Y 28
+#define Reservation_kv3_v2_LSU_CRRP 29
+#define Reservation_kv3_v2_LSU_CRRP_X 30
+#define Reservation_kv3_v2_LSU_CRRP_Y 31
+#define Reservation_kv3_v2_LSU_AUXR 32
+#define Reservation_kv3_v2_LSU_AUXR_X 33
+#define Reservation_kv3_v2_LSU_AUXR_Y 34
+#define Reservation_kv3_v2_LSU_AUXW 35
+#define Reservation_kv3_v2_LSU_AUXW_X 36
+#define Reservation_kv3_v2_LSU_AUXW_Y 37
+#define Reservation_kv3_v2_LSU_AUXR_AUXW 38
+#define Reservation_kv3_v2_LSU_AUXR_AUXW_X 39
+#define Reservation_kv3_v2_LSU_AUXR_AUXW_Y 40
+#define Reservation_kv3_v2_MAU 41
+#define Reservation_kv3_v2_MAU_X 42
+#define Reservation_kv3_v2_MAU_Y 43
+#define Reservation_kv3_v2_MAU_AUXR 44
+#define Reservation_kv3_v2_MAU_AUXR_X 45
+#define Reservation_kv3_v2_MAU_AUXR_Y 46
 
 
 extern struct kvx_reloc kv3_v2_rel16_reloc;
@@ -2931,8 +2941,8 @@ enum Method_kvx_kv4_v1_enum {
 enum Modifier_kv4_v1_exunum_enum {
   Modifier_kv4_v1_exunum_ALU0=0,
   Modifier_kv4_v1_exunum_ALU1=1,
-  Modifier_kv4_v1_exunum_MAU=2,
-  Modifier_kv4_v1_exunum_LSU=3,
+  Modifier_kv4_v1_exunum_LSU0=2,
+  Modifier_kv4_v1_exunum_LSU1=3,
 };
 
 extern const char *mod_kv4_v1_exunum[];
@@ -3018,13 +3028,14 @@ static const char *bundling_kv4_v1_names(Bundling_kv4_v1 bundling) {
 #define Resource_kv4_v1_MAU 5
 #define Resource_kv4_v1_BCU 6
 #define Resource_kv4_v1_TCA 7
-#define Resource_kv4_v1_AUXR 8
-#define Resource_kv4_v1_AUXW 9
-#define Resource_kv4_v1_CRRP 10
-#define Resource_kv4_v1_CRWL 11
-#define Resource_kv4_v1_CRWH 12
-#define Resource_kv4_v1_NOP 13
-#define kvx_kv4_v1_RESOURCE_MAX 14
+#define Resource_kv4_v1_XFER 8
+#define Resource_kv4_v1_AUXR 9
+#define Resource_kv4_v1_AUXW 10
+#define Resource_kv4_v1_MEMW 11
+#define Resource_kv4_v1_CRRP 12
+#define Resource_kv4_v1_CRWL 13
+#define Resource_kv4_v1_CRWH 14
+#define kvx_kv4_v1_RESOURCE_MAX 15
 
 
 /* Reservations list */
@@ -3033,47 +3044,43 @@ static const char *bundling_kv4_v1_names(Bundling_kv4_v1 bundling) {
 #define Reservation_kv4_v1_ALU_TINY 2
 #define Reservation_kv4_v1_ALU_TINY_X 3
 #define Reservation_kv4_v1_ALU_TINY_Y 4
-#define Reservation_kv4_v1_ALU_TINY_CRRP 5
-#define Reservation_kv4_v1_ALU_TINY_CRWL_CRWH 6
-#define Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_X 7
-#define Reservation_kv4_v1_ALU_TINY_CRWL_CRWH_Y 8
-#define Reservation_kv4_v1_ALU_TINY_CRRP_CRWL_CRWH 9
-#define Reservation_kv4_v1_ALU_TINY_CRWL 10
-#define Reservation_kv4_v1_ALU_TINY_CRWH 11
-#define Reservation_kv4_v1_ALU_LITE 12
-#define Reservation_kv4_v1_ALU_LITE_X 13
-#define Reservation_kv4_v1_ALU_LITE_Y 14
-#define Reservation_kv4_v1_ALU_LITE_CRWL 15
-#define Reservation_kv4_v1_ALU_LITE_CRWH 16
-#define Reservation_kv4_v1_ALU_FULL 17
-#define Reservation_kv4_v1_ALU_FULL_X 18
-#define Reservation_kv4_v1_ALU_FULL_Y 19
-#define Reservation_kv4_v1_BCU 20
-#define Reservation_kv4_v1_BCU_CRRP_CRWL_CRWH 21
-#define Reservation_kv4_v1_BCU_TINY_AUXW_CRRP 22
-#define Reservation_kv4_v1_BCU_TINY_TINY_MAU_XNOP 23
-#define Reservation_kv4_v1_TCA 24
-#define Reservation_kv4_v1_LSU 25
-#define Reservation_kv4_v1_LSU_X 26
-#define Reservation_kv4_v1_LSU_Y 27
-#define Reservation_kv4_v1_LSU_CRRP 28
-#define Reservation_kv4_v1_LSU_CRRP_X 29
-#define Reservation_kv4_v1_LSU_CRRP_Y 30
-#define Reservation_kv4_v1_LSU_AUXR 31
-#define Reservation_kv4_v1_LSU_AUXR_X 32
-#define Reservation_kv4_v1_LSU_AUXR_Y 33
-#define Reservation_kv4_v1_LSU_AUXW 34
-#define Reservation_kv4_v1_LSU_AUXW_X 35
-#define Reservation_kv4_v1_LSU_AUXW_Y 36
-#define Reservation_kv4_v1_LSU_AUXR_AUXW 37
-#define Reservation_kv4_v1_LSU_AUXR_AUXW_X 38
-#define Reservation_kv4_v1_LSU_AUXR_AUXW_Y 39
-#define Reservation_kv4_v1_MAU 40
-#define Reservation_kv4_v1_MAU_X 41
-#define Reservation_kv4_v1_MAU_Y 42
-#define Reservation_kv4_v1_MAU_AUXR 43
-#define Reservation_kv4_v1_MAU_AUXR_X 44
-#define Reservation_kv4_v1_MAU_AUXR_Y 45
+#define Reservation_kv4_v1_ALU_LITE 5
+#define Reservation_kv4_v1_ALU_LITE_X 6
+#define Reservation_kv4_v1_ALU_LITE_Y 7
+#define Reservation_kv4_v1_ALU_FULL 8
+#define Reservation_kv4_v1_ALU_FULL_X 9
+#define Reservation_kv4_v1_ALU_FULL_Y 10
+#define Reservation_kv4_v1_BCU 11
+#define Reservation_kv4_v1_BCU_XFER 12
+#define Reservation_kv4_v1_LSU 13
+#define Reservation_kv4_v1_LSU_X 14
+#define Reservation_kv4_v1_LSU_Y 15
+#define Reservation_kv4_v1_LSU_MEMW 16
+#define Reservation_kv4_v1_LSU_MEMW_X 17
+#define Reservation_kv4_v1_LSU_MEMW_Y 18
+#define Reservation_kv4_v1_LSU_AUXR 19
+#define Reservation_kv4_v1_LSU_AUXR_X 20
+#define Reservation_kv4_v1_LSU_AUXR_Y 21
+#define Reservation_kv4_v1_LSU_AUXR_MEMW 22
+#define Reservation_kv4_v1_LSU_AUXR_MEMW_X 23
+#define Reservation_kv4_v1_LSU_AUXR_MEMW_Y 24
+#define Reservation_kv4_v1_LSU_AUXW_MEMW 25
+#define Reservation_kv4_v1_LSU_AUXW_MEMW_X 26
+#define Reservation_kv4_v1_LSU_AUXW_MEMW_Y 27
+#define Reservation_kv4_v1_LSU_AUXW 28
+#define Reservation_kv4_v1_LSU_AUXW_X 29
+#define Reservation_kv4_v1_LSU_AUXW_Y 30
+#define Reservation_kv4_v1_LSU_AUXR_AUXW 31
+#define Reservation_kv4_v1_LSU_AUXR_AUXW_X 32
+#define Reservation_kv4_v1_LSU_AUXR_AUXW_Y 33
+#define Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW 34
+#define Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X 35
+#define Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_Y 36
+#define Reservation_kv4_v1_MAU 37
+#define Reservation_kv4_v1_MAU_AUXR 38
+#define Reservation_kv4_v1_MAU_AUXW 39
+#define Reservation_kv4_v1_MAU_TCA 40
+#define Reservation_kv4_v1_MAU_TCA_AUXR 41
 
 
 extern struct kvx_reloc kv4_v1_rel16_reloc;
