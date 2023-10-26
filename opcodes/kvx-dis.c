@@ -1428,9 +1428,9 @@ print_insn_kvx (bfd_vma memaddr, struct disassemble_info *info)
 		    info->insn_type =
 		      dec.operands[i].width ==
 		      17 ? dis_condbranch : dis_branch;
-		    info->target = dec.operands[i].val;
+		    info->target = dec.operands[i].val - 4 * (insnindex - 1);
 
-		    info->print_address_func (dec.operands[i].val, info);
+		    info->print_address_func (info->target, info);
 		  }
 		else if (dec.operands[i].sign)
 		  {
