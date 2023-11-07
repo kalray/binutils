@@ -13,2333 +13,2360 @@ Disassembly of section .text:
 
       14:	02 00 08 e4 00 00 80 07                         	abdd \$r2 = \$r2, -8589934592 \(0xfffffffe00000000\);;
 
-      1c:	c3 ff 0c e4 ff ff 07 00                         	abdd \$r3 = \$r3, 536870911 \(0x1fffffff\);;
+      1c:	c3 30 0d 74                                     	abdhq \$r3 = \$r3, \$r3;;
 
-      24:	04 31 0d 74                                     	abdhq \$r3 = \$r4, \$r4;;
+      20:	c4 37 11 f4 ff ff ff 00                         	abdhq \$r4 = \$r4, 536870911 \(0x1fffffff\);;
 
-      28:	c5 3f 11 f4 ff ff ff 00                         	abdhq \$r4 = \$r5, 536870911 \(0x1fffffff\).@;;
+      28:	45 21 11 74                                     	abdwp \$r4 = \$r5, \$r5;;
 
-      30:	85 21 15 74                                     	abdwp \$r5 = \$r5, \$r6;;
+      2c:	c6 2f 15 f4 ff ff ff 00                         	abdwp \$r5 = \$r6, 536870911 \(0x1fffffff\).@;;
 
-      34:	c6 27 19 f4 ff ff ff 00                         	abdwp \$r6 = \$r6, 536870911 \(0x1fffffff\);;
+      34:	c6 11 19 74                                     	abdw \$r6 = \$r6, \$r7;;
 
-      3c:	c7 11 1d 74                                     	abdw \$r7 = \$r7, \$r7;;
+      38:	07 f0 1c 74                                     	abdw \$r7 = \$r7, -64 \(0xffffffc0\);;
 
-      40:	08 f0 20 74                                     	abdw \$r8 = \$r8, -64 \(0xffffffc0\);;
+      3c:	08 00 20 f4 00 00 80 07                         	abdw \$r8 = \$r8, -8589934592 \(0xfffffffe00000000\);;
 
-      44:	09 00 20 f4 00 00 80 07                         	abdw \$r8 = \$r9, -8589934592 \(0xfffffffe00000000\);;
+      44:	09 00 20 64                                     	absd \$r8 = \$r9;;
 
-      4c:	09 00 24 64                                     	absd \$r9 = \$r9;;
+      48:	09 30 25 f4 00 00 00 00                         	abshq \$r9 = \$r9;;
 
-      50:	0a 30 29 f4 00 00 00 00                         	abshq \$r10 = \$r10;;
+      50:	0a 20 29 f4 00 00 00 00                         	abswp \$r10 = \$r10;;
 
-      58:	0b 20 29 f4 00 00 00 00                         	abswp \$r10 = \$r11;;
+      58:	0b 00 28 74                                     	absw \$r10 = \$r11;;
 
-      60:	0b 00 2c 74                                     	absw \$r11 = \$r11;;
+      5c:	cb e2 03 3f                                     	acswapd \$r11\[\$r11\] = \$r0r1;;
 
-      64:	0c e3 03 3f                                     	acswapd \$r12\[\$r12\] = \$r0r1;;
+      60:	cc ff 01 bf ff ff ff 9f ff ff ff 18             	acswapd 2305843009213693951 \(0x1fffffffffffffff\)\[\$r12\] = \$r0r1;;
 
-      68:	cd ff 01 bf ff ff ff 9f ff ff ff 18             	acswapd 2305843009213693951 \(0x1fffffffffffffff\)\[\$r13\] = \$r0r1;;
+      6c:	0d 03 0b bf 00 00 00 98 00 00 80 1f             	acswapd.dnez \$r12\? -1125899906842624 \(0xfffc000000000000\)\[\$r13\] = \$r2r3;;
 
-      74:	4e 03 0b bf 00 00 00 98 00 00 80 1f             	acswapd.dnez \$r13\? -1125899906842624 \(0xfffc000000000000\)\[\$r14\] = \$r2r3;;
+      78:	4e 13 0b bf 00 00 80 1f                         	acswapd.deqz \$r13\? -8388608 \(0xff800000\)\[\$r14\] = \$r2r3;;
 
-      80:	8f 13 0b bf 00 00 80 1f                         	acswapd.deqz \$r14\? -8388608 \(0xff800000\)\[\$r15\] = \$r2r3;;
+      80:	8f 23 13 3f                                     	acswapd.dltz \$r14\? \[\$r15\] = \$r4r5;;
 
-      88:	d0 23 13 3f                                     	acswapd.dltz \$r15\? \[\$r16\] = \$r4r5;;
+      84:	0f f0 11 3f                                     	acswapd -64 \(0xffffffc0\)\[\$r15\] = \$r4r5;;
 
-      8c:	10 f0 11 3f                                     	acswapd -64 \(0xffffffc0\)\[\$r16\] = \$r4r5;;
+      88:	10 00 19 bf 00 00 80 1f                         	acswapd -8589934592 \(0xfffffffe00000000\)\[\$r16\] = \$r6r7;;
 
-      90:	10 00 19 bf 00 00 80 1f                         	acswapd -8589934592 \(0xfffffffe00000000\)\[\$r16\] = \$r6r7;;
+      90:	10 f4 1b 3e                                     	acswapw.xs \$r16\[\$r16\] = \$r6r7;;
 
-      98:	51 f4 1b 3e                                     	acswapw.xs \$r17\[\$r17\] = \$r6r7;;
+      94:	d1 ff 21 be ff ff ff 9f ff ff ff 18             	acswapw 2305843009213693951 \(0x1fffffffffffffff\)\[\$r17\] = \$r8r9;;
 
-      9c:	d1 ff 21 be ff ff ff 9f ff ff ff 18             	acswapw 2305843009213693951 \(0x1fffffffffffffff\)\[\$r17\] = \$r8r9;;
+      a0:	51 34 23 be 00 00 00 98 00 00 80 1f             	acswapw.dgez \$r17\? -1125899906842624 \(0xfffc000000000000\)\[\$r17\] = \$r8r9;;
 
-      a8:	92 34 23 be 00 00 00 98 00 00 80 1f             	acswapw.dgez \$r18\? -1125899906842624 \(0xfffc000000000000\)\[\$r18\] = \$r8r9;;
+      ac:	92 44 2b be 00 00 80 1f                         	acswapw.dlez \$r18\? -8388608 \(0xff800000\)\[\$r18\] = \$r10r11;;
 
-      b4:	93 44 2b be 00 00 80 1f                         	acswapw.dlez \$r18\? -8388608 \(0xff800000\)\[\$r19\] = \$r10r11;;
+      b4:	93 54 2b 3e                                     	acswapw.dgtz \$r18\? \[\$r19\] = \$r10r11;;
 
-      bc:	d3 54 2b 3e                                     	acswapw.dgtz \$r19\? \[\$r19\] = \$r10r11;;
+      b8:	13 f0 31 3e                                     	acswapw -64 \(0xffffffc0\)\[\$r19\] = \$r12r13;;
 
-      c0:	14 f0 31 3e                                     	acswapw -64 \(0xffffffc0\)\[\$r20\] = \$r12r13;;
+      bc:	13 00 31 be 00 00 80 1f                         	acswapw -8589934592 \(0xfffffffe00000000\)\[\$r19\] = \$r12r13;;
 
-      c4:	14 00 31 be 00 00 80 1f                         	acswapw -8589934592 \(0xfffffffe00000000\)\[\$r20\] = \$r12r13;;
+      c4:	14 d5 51 7e                                     	addcd.i \$r20 = \$r20, \$r20;;
 
-      cc:	55 d5 51 7e                                     	addcd.i \$r20 = \$r21, \$r21;;
+      c8:	d5 d7 55 fe ff ff ff 00                         	addcd.i \$r21 = \$r21, 536870911 \(0x1fffffff\);;
 
-      d0:	d6 d7 55 fe ff ff ff 00                         	addcd.i \$r21 = \$r22, 536870911 \(0x1fffffff\);;
+      d0:	96 c5 55 7e                                     	addcd \$r21 = \$r22, \$r22;;
 
-      d8:	d6 c5 59 7e                                     	addcd \$r22 = \$r22, \$r23;;
+      d4:	d7 c7 59 fe ff ff ff 00                         	addcd \$r22 = \$r23, 536870911 \(0x1fffffff\);;
 
-      dc:	d7 c7 5d fe ff ff ff 00                         	addcd \$r23 = \$r23, 536870911 \(0x1fffffff\);;
+      dc:	d7 ff 5c e1 ff ff ff 87 ff ff ff 00             	addd \$r23 = \$r23, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-      e4:	d8 ff 60 e1 ff ff ff 87 ff ff ff 00             	addd \$r24 = \$r24, 2305843009213693951 \(0x1fffffffffffffff\);;
+      e8:	18 06 61 71                                     	addd \$r24 = \$r24, \$r24;;
 
-      f0:	59 06 61 71                                     	addd \$r24 = \$r25, \$r25;;
+      ec:	19 f0 64 61                                     	addd \$r25 = \$r25, -64 \(0xffffffc0\);;
 
-      f4:	1a f0 64 61                                     	addd \$r25 = \$r26, -64 \(0xffffffc0\);;
+      f0:	1a 00 64 e1 00 00 80 07                         	addd \$r25 = \$r26, -8589934592 \(0xfffffffe00000000\);;
 
-      f8:	1a 00 68 e1 00 00 80 07                         	addd \$r26 = \$r26, -8589934592 \(0xfffffffe00000000\);;
+      f8:	da 36 69 7c                                     	addhcp.c \$r26 = \$r26, \$r27;;
 
-     100:	db 0f 6d f1 ff ff ff 00                         	addd \$r27 = \$r27, 536870911 \(0x1fffffff\).@;;
+      fc:	db 37 6d fc ff ff ff 00                         	addhcp.c \$r27 = \$r27, 536870911 \(0x1fffffff\);;
 
-     108:	1c 37 6d 7c                                     	addhcp.c \$r27 = \$r28, \$r28;;
+     104:	1c 37 71 71                                     	addhq \$r28 = \$r28, \$r28;;
 
-     10c:	dd 37 71 fc ff ff ff 00                         	addhcp.c \$r28 = \$r29, 536870911 \(0x1fffffff\);;
+     108:	dd 3f 75 f1 ff ff ff 00                         	addhq \$r29 = \$r29, 536870911 \(0x1fffffff\).@;;
 
-     114:	9d 37 75 71                                     	addhq \$r29 = \$r29, \$r30;;
+     110:	de ff 75 ee ff ff ff 87 ff ff ff 00             	addsd \$r29 = \$r30, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     118:	de 3f 79 f1 ff ff ff 00                         	addhq \$r30 = \$r30, 536870911 \(0x1fffffff\).@;;
+     11c:	de a7 79 7e                                     	addsd \$r30 = \$r30, \$r31;;
 
-     120:	df ff 7d ee ff ff ff 87 ff ff ff 00             	addsd \$r31 = \$r31, 2305843009213693951 \(0x1fffffffffffffff\);;
+     120:	1f f0 7d 6e                                     	addsd \$r31 = \$r31, -64 \(0xffffffc0\);;
 
-     12c:	20 a8 7d 7e                                     	addsd \$r31 = \$r32, \$r32;;
+     124:	20 00 81 ee 00 00 80 07                         	addsd \$r32 = \$r32, -8589934592 \(0xfffffffe00000000\);;
 
-     130:	21 f0 81 6e                                     	addsd \$r32 = \$r33, -64 \(0xffffffc0\);;
+     12c:	61 f8 81 7e                                     	addshq \$r32 = \$r33, \$r33;;
 
-     134:	21 00 85 ee 00 00 80 07                         	addsd \$r33 = \$r33, -8589934592 \(0xfffffffe00000000\);;
+     130:	e2 f7 85 fe ff ff ff 00                         	addshq \$r33 = \$r34, 536870911 \(0x1fffffff\);;
 
-     13c:	a2 f8 89 7e                                     	addshq \$r34 = \$r34, \$r34;;
+     138:	e2 e8 89 7e                                     	addswp \$r34 = \$r34, \$r35;;
 
-     140:	e3 f7 8d fe ff ff ff 00                         	addshq \$r35 = \$r35, 536870911 \(0x1fffffff\);;
+     13c:	e3 ef 8d fe ff ff ff 00                         	addswp \$r35 = \$r35, 536870911 \(0x1fffffff\).@;;
 
-     148:	24 e9 8d 7e                                     	addswp \$r35 = \$r36, \$r36;;
+     144:	24 b9 91 7e                                     	addsw \$r36 = \$r36, \$r36;;
 
-     14c:	e5 ef 91 fe ff ff ff 00                         	addswp \$r36 = \$r37, 536870911 \(0x1fffffff\).@;;
+     148:	e5 b7 95 fe ff ff ff 00                         	addsw \$r37 = \$r37, 536870911 \(0x1fffffff\);;
 
-     154:	a5 b9 95 7e                                     	addsw \$r37 = \$r37, \$r38;;
+     150:	a6 49 95 7a                                     	adduwd \$r37 = \$r38, \$r38;;
 
-     158:	e6 b7 99 fe ff ff ff 00                         	addsw \$r38 = \$r38, 536870911 \(0x1fffffff\);;
+     154:	e7 47 99 fa ff ff ff 00                         	adduwd \$r38 = \$r39, 536870911 \(0x1fffffff\);;
 
-     160:	e7 49 9d 7a                                     	adduwd \$r39 = \$r39, \$r39;;
+     15c:	27 2a 9d 7c                                     	addwc.c \$r39 = \$r39, \$r40;;
 
-     164:	e8 47 a1 fa ff ff ff 00                         	adduwd \$r40 = \$r40, 536870911 \(0x1fffffff\);;
+     160:	e8 2f a1 fc ff ff ff 00                         	addwc.c \$r40 = \$r40, 536870911 \(0x1fffffff\).@;;
 
-     16c:	69 2a a1 7c                                     	addwc.c \$r40 = \$r41, \$r41;;
+     168:	69 4a a5 78                                     	addwd \$r41 = \$r41, \$r41;;
 
-     170:	ea 2f a5 fc ff ff ff 00                         	addwc.c \$r41 = \$r42, 536870911 \(0x1fffffff\).@;;
+     16c:	ea 47 a9 f8 ff ff ff 00                         	addwd \$r42 = \$r42, 536870911 \(0x1fffffff\);;
 
-     178:	ea 4a a9 78                                     	addwd \$r42 = \$r42, \$r43;;
+     174:	eb 2a a9 71                                     	addwp \$r42 = \$r43, \$r43;;
 
-     17c:	eb 47 ad f8 ff ff ff 00                         	addwd \$r43 = \$r43, 536870911 \(0x1fffffff\);;
+     178:	ec 2f ad f1 ff ff ff 00                         	addwp \$r43 = \$r44, 536870911 \(0x1fffffff\).@;;
 
-     184:	2c 2b b1 71                                     	addwp \$r44 = \$r44, \$r44;;
+     180:	6c 1b b1 71                                     	addw \$r44 = \$r44, \$r45;;
 
-     188:	ed 2f b5 f1 ff ff ff 00                         	addwp \$r45 = \$r45, 536870911 \(0x1fffffff\).@;;
+     184:	2d f0 b4 71                                     	addw \$r45 = \$r45, -64 \(0xffffffc0\);;
 
-     190:	ae 1b b5 71                                     	addw \$r45 = \$r46, \$r46;;
+     188:	2e 00 b8 f1 00 00 80 07                         	addw \$r46 = \$r46, -8589934592 \(0xfffffffe00000000\);;
 
-     194:	2f f0 b8 71                                     	addw \$r46 = \$r47, -64 \(0xffffffc0\);;
+     190:	ef 4b b9 76                                     	addx16d \$r46 = \$r47, \$r47;;
 
-     198:	2f 00 bc f1 00 00 80 07                         	addw \$r47 = \$r47, -8589934592 \(0xfffffffe00000000\);;
+     194:	f0 47 bd f6 ff ff ff 00                         	addx16d \$r47 = \$r48, 536870911 \(0x1fffffff\);;
 
-     1a0:	30 4c c1 76                                     	addx16d \$r48 = \$r48, \$r48;;
+     19c:	70 7c c1 76                                     	addx16hq \$r48 = \$r48, \$r49;;
 
-     1a4:	f1 47 c5 f6 ff ff ff 00                         	addx16d \$r49 = \$r49, 536870911 \(0x1fffffff\);;
+     1a0:	f1 7f c5 f6 ff ff ff 00                         	addx16hq \$r49 = \$r49, 536870911 \(0x1fffffff\).@;;
 
-     1ac:	b2 7c c5 76                                     	addx16hq \$r49 = \$r50, \$r50;;
+     1a8:	b2 8c c9 7e                                     	addx16uwd \$r50 = \$r50, \$r50;;
 
-     1b0:	f3 7f c9 f6 ff ff ff 00                         	addx16hq \$r50 = \$r51, 536870911 \(0x1fffffff\).@;;
+     1ac:	f3 87 cd fe ff ff ff 00                         	addx16uwd \$r51 = \$r51, 536870911 \(0x1fffffff\);;
 
-     1b8:	33 8d cd 7e                                     	addx16uwd \$r51 = \$r51, \$r52;;
+     1b4:	34 8d cd 76                                     	addx16wd \$r51 = \$r52, \$r52;;
 
-     1bc:	f4 87 d1 fe ff ff ff 00                         	addx16uwd \$r52 = \$r52, 536870911 \(0x1fffffff\);;
+     1b8:	f5 87 d1 f6 ff ff ff 00                         	addx16wd \$r52 = \$r53, 536870911 \(0x1fffffff\);;
 
-     1c4:	75 8d d5 76                                     	addx16wd \$r53 = \$r53, \$r53;;
+     1c0:	b5 6d d5 76                                     	addx16wp \$r53 = \$r53, \$r54;;
 
-     1c8:	f6 87 d9 f6 ff ff ff 00                         	addx16wd \$r54 = \$r54, 536870911 \(0x1fffffff\);;
+     1c4:	f6 67 d9 f6 ff ff ff 00                         	addx16wp \$r54 = \$r54, 536870911 \(0x1fffffff\);;
 
-     1d0:	f7 6d d9 76                                     	addx16wp \$r54 = \$r55, \$r55;;
+     1cc:	f7 5d dd 76                                     	addx16w \$r55 = \$r55, \$r55;;
 
-     1d4:	f8 67 dd f6 ff ff ff 00                         	addx16wp \$r55 = \$r56, 536870911 \(0x1fffffff\);;
+     1d0:	f8 57 e1 f6 ff ff ff 00                         	addx16w \$r56 = \$r56, 536870911 \(0x1fffffff\);;
 
-     1dc:	78 5e e1 76                                     	addx16w \$r56 = \$r56, \$r57;;
+     1d8:	79 4e e1 70                                     	addx2d \$r56 = \$r57, \$r57;;
 
-     1e0:	f9 57 e5 f6 ff ff ff 00                         	addx16w \$r57 = \$r57, 536870911 \(0x1fffffff\);;
+     1dc:	fa 4f e5 f0 ff ff ff 00                         	addx2d \$r57 = \$r58, 536870911 \(0x1fffffff\).@;;
 
-     1e8:	ba 4e e9 70                                     	addx2d \$r58 = \$r58, \$r58;;
+     1e4:	fa 7e e9 70                                     	addx2hq \$r58 = \$r58, \$r59;;
 
-     1ec:	fb 4f ed f0 ff ff ff 00                         	addx2d \$r59 = \$r59, 536870911 \(0x1fffffff\).@;;
+     1e8:	fb 77 ed f0 ff ff ff 00                         	addx2hq \$r59 = \$r59, 536870911 \(0x1fffffff\);;
 
-     1f4:	3c 7f ed 70                                     	addx2hq \$r59 = \$r60, \$r60;;
+     1f0:	3c 8f f1 78                                     	addx2uwd \$r60 = \$r60, \$r60;;
 
-     1f8:	fd 77 f1 f0 ff ff ff 00                         	addx2hq \$r60 = \$r61, 536870911 \(0x1fffffff\);;
+     1f4:	fd 87 f5 f8 ff ff ff 00                         	addx2uwd \$r61 = \$r61, 536870911 \(0x1fffffff\);;
 
-     200:	bd 8f f5 78                                     	addx2uwd \$r61 = \$r61, \$r62;;
+     1fc:	be 8f f5 70                                     	addx2wd \$r61 = \$r62, \$r62;;
 
-     204:	fe 87 f9 f8 ff ff ff 00                         	addx2uwd \$r62 = \$r62, 536870911 \(0x1fffffff\);;
+     200:	ff 87 f9 f0 ff ff ff 00                         	addx2wd \$r62 = \$r63, 536870911 \(0x1fffffff\);;
 
-     20c:	ff 8f fd 70                                     	addx2wd \$r63 = \$r63, \$r63;;
+     208:	3f 60 fd 70                                     	addx2wp \$r63 = \$r63, \$r0;;
 
-     210:	c0 87 01 f0 ff ff ff 00                         	addx2wd \$r0 = \$r0, 536870911 \(0x1fffffff\);;
+     20c:	c0 6f 01 f0 ff ff ff 00                         	addx2wp \$r0 = \$r0, 536870911 \(0x1fffffff\).@;;
 
-     218:	41 60 01 70                                     	addx2wp \$r0 = \$r1, \$r1;;
+     214:	41 50 05 70                                     	addx2w \$r1 = \$r1, \$r1;;
 
-     21c:	c2 6f 05 f0 ff ff ff 00                         	addx2wp \$r1 = \$r2, 536870911 \(0x1fffffff\).@;;
+     218:	c2 57 09 f0 ff ff ff 00                         	addx2w \$r2 = \$r2, 536870911 \(0x1fffffff\);;
 
-     224:	c2 50 09 70                                     	addx2w \$r2 = \$r2, \$r3;;
+     220:	c3 40 09 72                                     	addx4d \$r2 = \$r3, \$r3;;
 
-     228:	c3 57 0d f0 ff ff ff 00                         	addx2w \$r3 = \$r3, 536870911 \(0x1fffffff\);;
+     224:	c4 47 0d f2 ff ff ff 00                         	addx4d \$r3 = \$r4, 536870911 \(0x1fffffff\);;
 
-     230:	04 41 11 72                                     	addx4d \$r4 = \$r4, \$r4;;
+     22c:	44 71 11 72                                     	addx4hq \$r4 = \$r4, \$r5;;
 
-     234:	c5 47 15 f2 ff ff ff 00                         	addx4d \$r5 = \$r5, 536870911 \(0x1fffffff\);;
+     230:	c5 7f 15 f2 ff ff ff 00                         	addx4hq \$r5 = \$r5, 536870911 \(0x1fffffff\).@;;
 
-     23c:	86 71 15 72                                     	addx4hq \$r5 = \$r6, \$r6;;
+     238:	86 81 19 7a                                     	addx4uwd \$r6 = \$r6, \$r6;;
 
-     240:	c7 7f 19 f2 ff ff ff 00                         	addx4hq \$r6 = \$r7, 536870911 \(0x1fffffff\).@;;
+     23c:	c7 87 1d fa ff ff ff 00                         	addx4uwd \$r7 = \$r7, 536870911 \(0x1fffffff\);;
 
-     248:	07 82 1d 7a                                     	addx4uwd \$r7 = \$r7, \$r8;;
+     244:	08 82 1d 72                                     	addx4wd \$r7 = \$r8, \$r8;;
 
-     24c:	c8 87 21 fa ff ff ff 00                         	addx4uwd \$r8 = \$r8, 536870911 \(0x1fffffff\);;
+     248:	c9 87 21 f2 ff ff ff 00                         	addx4wd \$r8 = \$r9, 536870911 \(0x1fffffff\);;
 
-     254:	49 82 25 72                                     	addx4wd \$r9 = \$r9, \$r9;;
+     250:	89 62 25 72                                     	addx4wp \$r9 = \$r9, \$r10;;
 
-     258:	ca 87 29 f2 ff ff ff 00                         	addx4wd \$r10 = \$r10, 536870911 \(0x1fffffff\);;
+     254:	ca 67 29 f2 ff ff ff 00                         	addx4wp \$r10 = \$r10, 536870911 \(0x1fffffff\);;
 
-     260:	cb 62 29 72                                     	addx4wp \$r10 = \$r11, \$r11;;
+     25c:	cb 52 2d 72                                     	addx4w \$r11 = \$r11, \$r11;;
 
-     264:	cc 67 2d f2 ff ff ff 00                         	addx4wp \$r11 = \$r12, 536870911 \(0x1fffffff\);;
+     260:	cc 57 31 f2 ff ff ff 00                         	addx4w \$r12 = \$r12, 536870911 \(0x1fffffff\);;
 
-     26c:	4d 53 31 72                                     	addx4w \$r12 = \$r13, \$r13;;
+     268:	8d 43 35 74                                     	addx8d \$r13 = \$r13, \$r14;;
 
-     270:	ce 57 39 f2 ff ff ff 00                         	addx4w \$r14 = \$r14, 536870911 \(0x1fffffff\);;
+     26c:	cf 4f 39 f4 ff ff ff 00                         	addx8d \$r14 = \$r15, 536870911 \(0x1fffffff\).@;;
 
-     278:	0f 44 3d 74                                     	addx8d \$r15 = \$r15, \$r16;;
+     274:	10 74 3d 74                                     	addx8hq \$r15 = \$r16, \$r16;;
 
-     27c:	d0 4f 41 f4 ff ff ff 00                         	addx8d \$r16 = \$r16, 536870911 \(0x1fffffff\).@;;
+     278:	d1 77 41 f4 ff ff ff 00                         	addx8hq \$r16 = \$r17, 536870911 \(0x1fffffff\);;
 
-     284:	51 74 45 74                                     	addx8hq \$r17 = \$r17, \$r17;;
+     280:	91 84 45 7c                                     	addx8uwd \$r17 = \$r17, \$r18;;
 
-     288:	d2 77 49 f4 ff ff ff 00                         	addx8hq \$r18 = \$r18, 536870911 \(0x1fffffff\);;
+     284:	d2 87 49 fc ff ff ff 00                         	addx8uwd \$r18 = \$r18, 536870911 \(0x1fffffff\);;
 
-     290:	d3 84 49 7c                                     	addx8uwd \$r18 = \$r19, \$r19;;
+     28c:	d3 84 4d 74                                     	addx8wd \$r19 = \$r19, \$r19;;
 
-     294:	d4 87 4d fc ff ff ff 00                         	addx8uwd \$r19 = \$r20, 536870911 \(0x1fffffff\);;
+     290:	d4 87 51 f4 ff ff ff 00                         	addx8wd \$r20 = \$r20, 536870911 \(0x1fffffff\);;
 
-     29c:	54 85 51 74                                     	addx8wd \$r20 = \$r20, \$r21;;
+     298:	55 65 51 74                                     	addx8wp \$r20 = \$r21, \$r21;;
 
-     2a0:	d5 87 55 f4 ff ff ff 00                         	addx8wd \$r21 = \$r21, 536870911 \(0x1fffffff\);;
+     29c:	d6 6f 55 f4 ff ff ff 00                         	addx8wp \$r21 = \$r22, 536870911 \(0x1fffffff\).@;;
 
-     2a8:	96 65 59 74                                     	addx8wp \$r22 = \$r22, \$r22;;
+     2a4:	d6 55 59 74                                     	addx8w \$r22 = \$r22, \$r23;;
 
-     2ac:	d7 6f 5d f4 ff ff ff 00                         	addx8wp \$r23 = \$r23, 536870911 \(0x1fffffff\).@;;
+     2a8:	d7 57 5d f4 ff ff ff 00                         	addx8w \$r23 = \$r23, 536870911 \(0x1fffffff\);;
 
-     2b4:	18 56 5d 74                                     	addx8w \$r23 = \$r24, \$r24;;
+     2b0:	18 e6 63 2f                                     	aladdd \$r24\[\$r24\] = \$r24;;
 
-     2b8:	d9 57 61 f4 ff ff ff 00                         	addx8w \$r24 = \$r25, 536870911 \(0x1fffffff\);;
+     2b4:	d9 ff 65 af ff ff ff 9f ff ff ff 18             	aladdd 2305843009213693951 \(0x1fffffffffffffff\)\[\$r25\] = \$r25;;
 
-     2c0:	59 e6 6b 2f                                     	aladdd \$r25\[\$r25\] = \$r26;;
+     2c0:	5a 66 6b af 00 00 00 98 00 00 80 1f             	aladdd.odd \$r25\? -1125899906842624 \(0xfffc000000000000\)\[\$r26\] = \$r26;;
 
-     2c4:	da ff 69 af ff ff ff 9f ff ff ff 18             	aladdd 2305843009213693951 \(0x1fffffffffffffff\)\[\$r26\] = \$r26;;
+     2cc:	9b 76 6f af 00 00 80 1f                         	aladdd.even \$r26\? -8388608 \(0xff800000\)\[\$r27\] = \$r27;;
 
-     2d0:	db 66 6f af 00 00 00 98 00 00 80 1f             	aladdd.odd \$r27\? -1125899906842624 \(0xfffc000000000000\)\[\$r27\] = \$r27;;
+     2d4:	dc 86 73 2f                                     	aladdd.wnez \$r27\? \[\$r28\] = \$r28;;
 
-     2dc:	1c 77 73 af 00 00 80 1f                         	aladdd.even \$r28\? -8388608 \(0xff800000\)\[\$r28\] = \$r28;;
+     2d8:	1c f0 75 2f                                     	aladdd -64 \(0xffffffc0\)\[\$r28\] = \$r29;;
 
-     2e4:	5d 87 77 2f                                     	aladdd.wnez \$r29\? \[\$r29\] = \$r29;;
+     2dc:	1d 00 75 af 00 00 80 1f                         	aladdd -8589934592 \(0xfffffffe00000000\)\[\$r29\] = \$r29;;
 
-     2e8:	1e f0 79 2f                                     	aladdd -64 \(0xffffffc0\)\[\$r30\] = \$r30;;
+     2e4:	9e f7 7b 2e                                     	aladdw.xs \$r30\[\$r30\] = \$r30;;
 
-     2ec:	1e 00 7d af 00 00 80 1f                         	aladdd -8589934592 \(0xfffffffe00000000\)\[\$r30\] = \$r31;;
+     2e8:	df ff 7d ae ff ff ff 9f ff ff ff 18             	aladdw 2305843009213693951 \(0x1fffffffffffffff\)\[\$r31\] = \$r31;;
 
-     2f4:	df f7 83 2e                                     	aladdw.xs \$r31\[\$r31\] = \$r32;;
+     2f4:	e0 97 83 ae 00 00 00 98 00 00 80 1f             	aladdw.weqz \$r31\? -1125899906842624 \(0xfffc000000000000\)\[\$r32\] = \$r32;;
 
-     2f8:	e0 ff 81 ae ff ff ff 9f ff ff ff 18             	aladdw 2305843009213693951 \(0x1fffffffffffffff\)\[\$r32\] = \$r32;;
+     300:	21 a8 87 ae 00 00 80 1f                         	aladdw.wltz \$r32\? -8388608 \(0xff800000\)\[\$r33\] = \$r33;;
 
-     304:	61 98 87 ae 00 00 00 98 00 00 80 1f             	aladdw.weqz \$r33\? -1125899906842624 \(0xfffc000000000000\)\[\$r33\] = \$r33;;
+     308:	62 b8 8b 2e                                     	aladdw.wgez \$r33\? \[\$r34\] = \$r34;;
 
-     310:	a2 a8 8b ae 00 00 80 1f                         	aladdw.wltz \$r34\? -8388608 \(0xff800000\)\[\$r34\] = \$r34;;
+     30c:	22 f0 8d 2e                                     	aladdw -64 \(0xffffffc0\)\[\$r34\] = \$r35;;
 
-     318:	e3 b8 8f 2e                                     	aladdw.wgez \$r35\? \[\$r35\] = \$r35;;
+     310:	23 00 8d ae 00 00 80 1f                         	aladdw -8589934592 \(0xfffffffe00000000\)\[\$r35\] = \$r35;;
 
-     31c:	24 f0 91 2e                                     	aladdw -64 \(0xffffffc0\)\[\$r36\] = \$r36;;
+     318:	24 e9 93 2b                                     	alclrd \$r36 = \$r36\[\$r36\];;
 
-     320:	24 00 95 ae 00 00 80 1f                         	aladdw -8589934592 \(0xfffffffe00000000\)\[\$r36\] = \$r37;;
+     31c:	65 c9 97 ab 00 00 00 98 00 00 80 1f             	alclrd.wlez \$r37\? \$r37 = -1125899906842624 \(0xfffc000000000000\)\[\$r37\];;
 
-     328:	66 e9 97 2b                                     	alclrd \$r37 = \$r37\[\$r38\];;
+     328:	a6 d9 9b ab 00 00 80 1f                         	alclrd.wgtz \$r38\? \$r38 = -8388608 \(0xff800000\)\[\$r38\];;
 
-     32c:	a7 c9 9b ab 00 00 00 98 00 00 80 1f             	alclrd.wlez \$r38\? \$r38 = -1125899906842624 \(0xfffc000000000000\)\[\$r39\];;
+     330:	e7 09 9f 2b                                     	alclrd.dnez \$r39\? \$r39 = \[\$r39\];;
 
-     338:	e8 d9 9f ab 00 00 80 1f                         	alclrd.wgtz \$r39\? \$r39 = -8388608 \(0xff800000\)\[\$r40\];;
+     334:	e8 ff a1 ab ff ff ff 9f ff ff ff 18             	alclrd \$r40 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r40\];;
 
-     340:	29 0a a3 2b                                     	alclrd.dnez \$r40\? \$r40 = \[\$r41\];;
+     340:	29 f0 a1 2b                                     	alclrd \$r40 = -64 \(0xffffffc0\)\[\$r41\];;
 
-     344:	e9 ff a5 ab ff ff ff 9f ff ff ff 18             	alclrd \$r41 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r41\];;
+     344:	29 00 a5 ab 00 00 80 1f                         	alclrd \$r41 = -8589934592 \(0xfffffffe00000000\)\[\$r41\];;
 
-     350:	2a f0 a9 2b                                     	alclrd \$r42 = -64 \(0xffffffc0\)\[\$r42\];;
+     34c:	aa fa ab 2a                                     	alclrw.xs \$r42 = \$r42\[\$r42\];;
 
-     354:	2b 00 a9 ab 00 00 80 1f                         	alclrd \$r42 = -8589934592 \(0xfffffffe00000000\)\[\$r43\];;
+     350:	eb 1a af aa 00 00 00 98 00 00 80 1f             	alclrw.deqz \$r43\? \$r43 = -1125899906842624 \(0xfffc000000000000\)\[\$r43\];;
 
-     35c:	ec fa af 2a                                     	alclrw.xs \$r43 = \$r43\[\$r44\];;
+     35c:	2c 2b b3 aa 00 00 80 1f                         	alclrw.dltz \$r44\? \$r44 = -8388608 \(0xff800000\)\[\$r44\];;
 
-     360:	2d 1b b3 aa 00 00 00 98 00 00 80 1f             	alclrw.deqz \$r44\? \$r44 = -1125899906842624 \(0xfffc000000000000\)\[\$r45\];;
+     364:	6d 3b b7 2a                                     	alclrw.dgez \$r45\? \$r45 = \[\$r45\];;
 
-     36c:	6e 2b b7 aa 00 00 80 1f                         	alclrw.dltz \$r45\? \$r45 = -8388608 \(0xff800000\)\[\$r46\];;
+     368:	ee ff b9 aa ff ff ff 9f ff ff ff 18             	alclrw \$r46 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r46\];;
 
-     374:	af 3b bb 2a                                     	alclrw.dgez \$r46\? \$r46 = \[\$r47\];;
+     374:	2f f0 b9 2a                                     	alclrw \$r46 = -64 \(0xffffffc0\)\[\$r47\];;
 
-     378:	ef ff bd aa ff ff ff 9f ff ff ff 18             	alclrw \$r47 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r47\];;
+     378:	2f 00 bd aa 00 00 80 1f                         	alclrw \$r47 = -8589934592 \(0xfffffffe00000000\)\[\$r47\];;
 
-     384:	30 f0 c1 2a                                     	alclrw \$r48 = -64 \(0xffffffc0\)\[\$r48\];;
+     380:	07 10 08 00                                     	aligno \$r0r1r2r3 = \$a0, \$a1, 7 \(0x7\);;
 
-     388:	31 00 c1 aa 00 00 80 1f                         	alclrw \$r48 = -8589934592 \(0xfffffffe00000000\)\[\$r49\];;
+     384:	70 10 18 00                                     	aligno \$r4r5r6r7 = \$a0, \$a1, \$r48;;
 
-     390:	07 10 08 00                                     	aligno \$r0r1r2r3 = \$a0, \$a1, 7 \(0x7\);;
+     388:	07 10 2c 00                                     	aligno \$r8r9r10r11 = \$a1, \$a0, 7 \(0x7\);;
 
-     394:	71 10 18 00                                     	aligno \$r4r5r6r7 = \$a0, \$a1, \$r49;;
+     38c:	f0 30 3c 00                                     	aligno \$r12r13r14r15 = \$a3, \$a2, \$r48;;
 
-     398:	07 10 2c 00                                     	aligno \$r8r9r10r11 = \$a1, \$a0, 7 \(0x7\);;
+     390:	87 20 00 01                                     	alignv \$a0 = \$a2, \$a3, 7 \(0x7\);;
 
-     39c:	f1 30 3c 00                                     	aligno \$r12r13r14r15 = \$a3, \$a2, \$r49;;
+     394:	f0 20 00 01                                     	alignv \$a0 = \$a2, \$a3, \$r48;;
 
-     3a0:	87 20 00 01                                     	alignv \$a0 = \$a2, \$a3, 7 \(0x7\);;
+     398:	07 51 00 01                                     	alignv \$a0 = \$a5, \$a4, 7 \(0x7\);;
 
-     3a4:	f2 20 00 01                                     	alignv \$a0 = \$a2, \$a3, \$r50;;
+     39c:	71 51 04 01                                     	alignv \$a1 = \$a5, \$a4, \$r49;;
 
-     3a8:	07 51 00 01                                     	alignv \$a0 = \$a5, \$a4, 7 \(0x7\);;
+     3a0:	f1 ff c4 e8 ff ff ff 87 ff ff ff 00             	andd \$r49 = \$r49, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     3ac:	72 51 04 01                                     	alignv \$a1 = \$a5, \$a4, \$r50;;
+     3ac:	b2 0c c9 78                                     	andd \$r50 = \$r50, \$r50;;
 
-     3b0:	f3 ff c8 e8 ff ff ff 87 ff ff ff 00             	andd \$r50 = \$r51, 2305843009213693951 \(0x1fffffffffffffff\);;
+     3b0:	33 f0 cc 68                                     	andd \$r51 = \$r51, -64 \(0xffffffc0\);;
 
-     3bc:	33 0d cd 78                                     	andd \$r51 = \$r51, \$r52;;
+     3b4:	34 00 cc e8 00 00 80 07                         	andd \$r51 = \$r52, -8589934592 \(0xfffffffe00000000\);;
 
-     3c0:	34 f0 d0 68                                     	andd \$r52 = \$r52, -64 \(0xffffffc0\);;
+     3bc:	f4 ff d0 ee ff ff ff 87 ff ff ff 00             	andnd \$r52 = \$r52, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     3c4:	35 00 d4 e8 00 00 80 07                         	andd \$r53 = \$r53, -8589934592 \(0xfffffffe00000000\);;
+     3c8:	75 0d d5 7e                                     	andnd \$r53 = \$r53, \$r53;;
 
-     3cc:	f6 ff d4 e8 ff ff 07 00                         	andd \$r53 = \$r54, 536870911 \(0x1fffffff\);;
+     3cc:	36 f0 d8 6e                                     	andnd \$r54 = \$r54, -64 \(0xffffffc0\);;
 
-     3d4:	f6 ff d8 ee ff ff ff 87 ff ff ff 00             	andnd \$r54 = \$r54, 2305843009213693951 \(0x1fffffffffffffff\);;
+     3d0:	37 00 d8 ee 00 00 80 07                         	andnd \$r54 = \$r55, -8589934592 \(0xfffffffe00000000\);;
 
-     3e0:	f7 0d dd 7e                                     	andnd \$r55 = \$r55, \$r55;;
+     3d8:	37 1e dd 7e                                     	andnw \$r55 = \$r55, \$r56;;
 
-     3e4:	38 f0 e0 6e                                     	andnd \$r56 = \$r56, -64 \(0xffffffc0\);;
+     3dc:	38 f0 e0 7e                                     	andnw \$r56 = \$r56, -64 \(0xffffffc0\);;
 
-     3e8:	39 00 e0 ee 00 00 80 07                         	andnd \$r56 = \$r57, -8589934592 \(0xfffffffe00000000\);;
+     3e0:	39 00 e4 fe 00 00 80 07                         	andnw \$r57 = \$r57, -8589934592 \(0xfffffffe00000000\);;
 
-     3f0:	f9 0f e5 fe ff ff ff 00                         	andnd \$r57 = \$r57, 536870911 \(0x1fffffff\).@;;
+     3e8:	ba 1e e5 78                                     	andw \$r57 = \$r58, \$r58;;
 
-     3f8:	ba 1e e9 7e                                     	andnw \$r58 = \$r58, \$r58;;
+     3ec:	3b f0 e8 78                                     	andw \$r58 = \$r59, -64 \(0xffffffc0\);;
 
-     3fc:	3b f0 ec 7e                                     	andnw \$r59 = \$r59, -64 \(0xffffffc0\);;
+     3f0:	3b 00 ec f8 00 00 80 07                         	andw \$r59 = \$r59, -8589934592 \(0xfffffffe00000000\);;
 
-     400:	3c 00 ec fe 00 00 80 07                         	andnw \$r59 = \$r60, -8589934592 \(0xfffffffe00000000\);;
+     3f8:	3c 7f f1 78                                     	avghq \$r60 = \$r60, \$r60;;
 
-     408:	7c 1f f1 78                                     	andw \$r60 = \$r60, \$r61;;
+     3fc:	fd 77 f5 f8 ff ff ff 00                         	avghq \$r61 = \$r61, 536870911 \(0x1fffffff\);;
 
-     40c:	3d f0 f4 78                                     	andw \$r61 = \$r61, -64 \(0xffffffc0\);;
+     404:	be 7f f5 7a                                     	avgrhq \$r61 = \$r62, \$r62;;
 
-     410:	3e 00 f8 f8 00 00 80 07                         	andw \$r62 = \$r62, -8589934592 \(0xfffffffe00000000\);;
+     408:	ff 7f f9 fa ff ff ff 00                         	avgrhq \$r62 = \$r63, 536870911 \(0x1fffffff\).@;;
 
-     418:	ff 7f f9 78                                     	avghq \$r62 = \$r63, \$r63;;
+     410:	3f 70 fd 7b                                     	avgruhq \$r63 = \$r63, \$r0;;
 
-     41c:	c0 77 fd f8 ff ff ff 00                         	avghq \$r63 = \$r0, 536870911 \(0x1fffffff\);;
+     414:	c0 77 01 fb ff ff ff 00                         	avgruhq \$r0 = \$r0, 536870911 \(0x1fffffff\);;
 
-     424:	40 70 01 7a                                     	avgrhq \$r0 = \$r0, \$r1;;
+     41c:	41 60 05 7b                                     	avgruwp \$r1 = \$r1, \$r1;;
 
-     428:	c1 7f 05 fa ff ff ff 00                         	avgrhq \$r1 = \$r1, 536870911 \(0x1fffffff\).@;;
+     420:	c2 6f 09 fb ff ff ff 00                         	avgruwp \$r2 = \$r2, 536870911 \(0x1fffffff\).@;;
 
-     430:	82 70 09 7b                                     	avgruhq \$r2 = \$r2, \$r2;;
+     428:	c3 50 09 7b                                     	avgruw \$r2 = \$r3, \$r3;;
 
-     434:	c3 77 0d fb ff ff ff 00                         	avgruhq \$r3 = \$r3, 536870911 \(0x1fffffff\);;
+     42c:	c4 57 0d fb ff ff ff 00                         	avgruw \$r3 = \$r4, 536870911 \(0x1fffffff\);;
 
-     43c:	04 61 0d 7b                                     	avgruwp \$r3 = \$r4, \$r4;;
+     434:	44 61 11 7a                                     	avgrwp \$r4 = \$r4, \$r5;;
 
-     440:	c5 6f 11 fb ff ff ff 00                         	avgruwp \$r4 = \$r5, 536870911 \(0x1fffffff\).@;;
+     438:	c5 67 15 fa ff ff ff 00                         	avgrwp \$r5 = \$r5, 536870911 \(0x1fffffff\);;
 
-     448:	85 51 15 7b                                     	avgruw \$r5 = \$r5, \$r6;;
+     440:	86 51 19 7a                                     	avgrw \$r6 = \$r6, \$r6;;
 
-     44c:	c6 57 19 fb ff ff ff 00                         	avgruw \$r6 = \$r6, 536870911 \(0x1fffffff\);;
+     444:	c7 57 1d fa ff ff ff 00                         	avgrw \$r7 = \$r7, 536870911 \(0x1fffffff\);;
 
-     454:	c7 61 1d 7a                                     	avgrwp \$r7 = \$r7, \$r7;;
+     44c:	08 72 1d 79                                     	avguhq \$r7 = \$r8, \$r8;;
 
-     458:	c8 67 21 fa ff ff ff 00                         	avgrwp \$r8 = \$r8, 536870911 \(0x1fffffff\);;
+     450:	c9 7f 21 f9 ff ff ff 00                         	avguhq \$r8 = \$r9, 536870911 \(0x1fffffff\).@;;
 
-     460:	49 52 21 7a                                     	avgrw \$r8 = \$r9, \$r9;;
+     458:	89 62 25 79                                     	avguwp \$r9 = \$r9, \$r10;;
 
-     464:	ca 57 25 fa ff ff ff 00                         	avgrw \$r9 = \$r10, 536870911 \(0x1fffffff\);;
+     45c:	ca 67 29 f9 ff ff ff 00                         	avguwp \$r10 = \$r10, 536870911 \(0x1fffffff\);;
 
-     46c:	ca 72 29 79                                     	avguhq \$r10 = \$r10, \$r11;;
+     464:	cb 52 2d 79                                     	avguw \$r11 = \$r11, \$r11;;
 
-     470:	cb 7f 2d f9 ff ff ff 00                         	avguhq \$r11 = \$r11, 536870911 \(0x1fffffff\).@;;
+     468:	cc 57 31 f9 ff ff ff 00                         	avguw \$r12 = \$r12, 536870911 \(0x1fffffff\);;
 
-     478:	4c 63 31 79                                     	avguwp \$r12 = \$r12, \$r13;;
+     470:	8d 63 35 78                                     	avgwp \$r13 = \$r13, \$r14;;
 
-     47c:	ce 67 35 f9 ff ff ff 00                         	avguwp \$r13 = \$r14, 536870911 \(0x1fffffff\);;
+     474:	cf 6f 39 f8 ff ff ff 00                         	avgwp \$r14 = \$r15, 536870911 \(0x1fffffff\).@;;
 
-     484:	cf 53 39 79                                     	avguw \$r14 = \$r15, \$r15;;
+     47c:	10 54 3d 78                                     	avgw \$r15 = \$r16, \$r16;;
 
-     488:	d0 57 41 f9 ff ff ff 00                         	avguw \$r16 = \$r16, 536870911 \(0x1fffffff\);;
+     480:	d1 57 41 f8 ff ff ff 00                         	avgw \$r16 = \$r17, 536870911 \(0x1fffffff\);;
 
-     490:	51 64 41 78                                     	avgwp \$r16 = \$r17, \$r17;;
+     488:	00 00 a0 0f                                     	await;;
 
-     494:	d2 6f 45 f8 ff ff ff 00                         	avgwp \$r17 = \$r18, 536870911 \(0x1fffffff\).@;;
+     48c:	00 00 ac 0f                                     	barrier;;
 
-     49c:	d2 54 49 78                                     	avgw \$r18 = \$r18, \$r19;;
+     490:	00 00 80 1f                                     	call fe000490 <main\+0xfe000490>;;
 
-     4a0:	d3 57 4d f8 ff ff ff 00                         	avgw \$r19 = \$r19, 536870911 \(0x1fffffff\);;
+     494:	11 20 46 72                                     	cbsd \$r17 = \$r17;;
 
-     4a8:	00 00 a0 0f                                     	await;;
+     498:	12 40 4a 72                                     	cbswp \$r18 = \$r18;;
 
-     4ac:	00 00 ac 0f                                     	barrier;;
+     49c:	13 30 4a 72                                     	cbsw \$r18 = \$r19;;
 
-     4b0:	00 00 80 1f                                     	call fe0004b0 <main\+0xfe0004b0>;;
+     4a0:	13 00 78 0a                                     	cb.dlez \$r19\? ffff84a0 <main\+0xffff84a0>;;
 
-     4b4:	14 20 52 72                                     	cbsd \$r20 = \$r20;;
+     4a4:	d4 71 4f 6c                                     	clrf \$r19 = \$r20, 7 \(0x7\), 7 \(0x7\);;
 
-     4b8:	15 40 52 72                                     	cbswp \$r20 = \$r21;;
+     4a8:	14 20 52 71                                     	clsd \$r20 = \$r20;;
 
-     4bc:	15 30 56 72                                     	cbsw \$r21 = \$r21;;
+     4ac:	15 40 56 71                                     	clswp \$r21 = \$r21;;
 
-     4c0:	16 00 78 0a                                     	cb.dlez \$r22\? ffff84c0 <main\+0xffff84c0>;;
+     4b0:	16 30 56 71                                     	clsw \$r21 = \$r22;;
 
-     4c4:	d6 71 5b 6c                                     	clrf \$r22 = \$r22, 7 \(0x7\), 7 \(0x7\);;
+     4b4:	16 20 5a 70                                     	clzd \$r22 = \$r22;;
 
-     4c8:	17 20 5e 71                                     	clsd \$r23 = \$r23;;
+     4b8:	17 40 5e 70                                     	clzwp \$r23 = \$r23;;
 
-     4cc:	18 40 5e 71                                     	clswp \$r23 = \$r24;;
+     4bc:	18 30 5e 70                                     	clzw \$r23 = \$r24;;
 
-     4d0:	18 30 62 71                                     	clsw \$r24 = \$r24;;
+     4c0:	d8 ff 62 e5 ff ff ff 87 ff ff ff 00             	cmoved.dgtz \$r24\? \$r24 = 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     4d4:	19 20 66 70                                     	clzd \$r25 = \$r25;;
+     4cc:	59 06 66 76                                     	cmoved.odd \$r25\? \$r25 = \$r25;;
 
-     4d8:	1a 40 66 70                                     	clzwp \$r25 = \$r26;;
+     4d0:	1a f0 6a 67                                     	cmoved.even \$r26\? \$r26 = -64 \(0xffffffc0\);;
 
-     4dc:	1a 30 6a 70                                     	clzw \$r26 = \$r26;;
+     4d4:	1a 00 6e e8 00 00 80 07                         	cmoved.wnez \$r26\? \$r27 = -8589934592 \(0xfffffffe00000000\);;
 
-     4e0:	db ff 6e e5 ff ff ff 87 ff ff ff 00             	cmoved.dgtz \$r27\? \$r27 = 2305843009213693951 \(0x1fffffffffffffff\);;
+     4dc:	1b 17 6e 78                                     	cmovehq.nez \$r27\? \$r27 = \$r28;;
 
-     4ec:	1b 07 72 76                                     	cmoved.odd \$r27\? \$r28 = \$r28;;
+     4e0:	dc 17 72 f9 ff ff ff 00                         	cmovehq.eqz \$r28\? \$r28 = 536870911 \(0x1fffffff\);;
 
-     4f0:	1c f0 76 67                                     	cmoved.even \$r28\? \$r29 = -64 \(0xffffffc0\);;
+     4e8:	5d 17 76 72                                     	cmovewp.ltz \$r29\? \$r29 = \$r29;;
 
-     4f4:	1d 00 76 e8 00 00 80 07                         	cmoved.wnez \$r29\? \$r29 = -8589934592 \(0xfffffffe00000000\);;
+     4ec:	de 1f 7a f3 ff ff ff 00                         	cmovewp.gez \$r30\? \$r30 = 536870911 \(0x1fffffff\).@;;
 
-     4fc:	9e 17 7a 78                                     	cmovehq.nez \$r30\? \$r30 = \$r30;;
+     4f4:	de ff 3c cb ff ff ff 97 ff ff ff 10             	cmuldt \$r14r15 = \$r30, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     500:	df 17 7e 71                                     	cmovewp.eqz \$r31\? \$r31 = \$r31;;
+     500:	df 17 3c 5b                                     	cmuldt \$r14r15 = \$r31, \$r31;;
 
-     504:	e0 ff 3c cb ff ff ff 97 ff ff ff 10             	cmuldt \$r14r15 = \$r32, 2305843009213693951 \(0x1fffffffffffffff\);;
+     504:	1f f0 44 4b                                     	cmuldt \$r16r17 = \$r31, -64 \(0xffffffc0\);;
 
-     510:	20 18 3c 5b                                     	cmuldt \$r14r15 = \$r32, \$r32;;
+     508:	20 00 44 cb 00 00 80 17                         	cmuldt \$r16r17 = \$r32, -8589934592 \(0xfffffffe00000000\);;
 
-     514:	21 f0 44 4b                                     	cmuldt \$r16r17 = \$r33, -64 \(0xffffffc0\);;
+     510:	20 18 4c 5f                                     	cmulghxdt \$r18r19 = \$r32, \$r32;;
 
-     518:	21 00 44 cb 00 00 80 17                         	cmuldt \$r16r17 = \$r33, -8589934592 \(0xfffffffe00000000\);;
+     514:	61 18 4c 5d                                     	cmulglxdt \$r18r19 = \$r33, \$r33;;
 
-     520:	a1 18 4c 5f                                     	cmulghxdt \$r18r19 = \$r33, \$r34;;
+     518:	a1 18 54 5e                                     	cmulgmxdt \$r20r21 = \$r33, \$r34;;
 
-     524:	a2 18 4c 5d                                     	cmulglxdt \$r18r19 = \$r34, \$r34;;
+     51c:	a2 18 54 5c                                     	cmulxdt \$r20r21 = \$r34, \$r34;;
 
-     528:	e3 18 54 5e                                     	cmulgmxdt \$r20r21 = \$r35, \$r35;;
+     520:	e3 ff 8d e0 ff ff ff 87 ff ff ff 00             	compd.ne \$r35 = \$r35, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     52c:	23 19 54 5c                                     	cmulxdt \$r20r21 = \$r35, \$r36;;
+     52c:	24 a9 8d 71                                     	compd.eq \$r35 = \$r36, \$r36;;
 
-     530:	e4 ff 91 e0 ff ff ff 87 ff ff ff 00             	compd.ne \$r36 = \$r36, 2305843009213693951 \(0x1fffffffffffffff\);;
+     530:	25 f0 91 62                                     	compd.lt \$r36 = \$r37, -64 \(0xffffffc0\);;
 
-     53c:	65 a9 95 71                                     	compd.eq \$r37 = \$r37, \$r37;;
+     534:	25 00 95 e3 00 00 80 07                         	compd.ge \$r37 = \$r37, -8589934592 \(0xfffffffe00000000\);;
 
-     540:	26 f0 99 62                                     	compd.lt \$r38 = \$r38, -64 \(0xffffffc0\);;
+     53c:	a6 f9 99 74                                     	compnhq.le \$r38 = \$r38, \$r38;;
 
-     544:	27 00 99 e3 00 00 80 07                         	compd.ge \$r38 = \$r39, -8589934592 \(0xfffffffe00000000\);;
+     540:	e7 f7 9d f5 ff ff ff 00                         	compnhq.gt \$r39 = \$r39, 536870911 \(0x1fffffff\);;
 
-     54c:	27 fa 9d 74                                     	compnhq.le \$r39 = \$r39, \$r40;;
+     548:	28 ea 9d 76                                     	compnwp.ltu \$r39 = \$r40, \$r40;;
 
-     550:	e8 f7 a1 f5 ff ff ff 00                         	compnhq.gt \$r40 = \$r40, 536870911 \(0x1fffffff\);;
+     54c:	e9 ef a1 f7 ff ff ff 00                         	compnwp.geu \$r40 = \$r41, 536870911 \(0x1fffffff\).@;;
 
-     558:	69 ea a5 76                                     	compnwp.ltu \$r41 = \$r41, \$r41;;
+     554:	a9 da a5 78                                     	compuwd.leu \$r41 = \$r41, \$r42;;
 
-     55c:	ea ef a9 f7 ff ff ff 00                         	compnwp.geu \$r42 = \$r42, 536870911 \(0x1fffffff\).@;;
+     558:	ea d7 a9 f9 ff ff ff 00                         	compuwd.gtu \$r42 = \$r42, 536870911 \(0x1fffffff\);;
 
-     564:	eb da a9 78                                     	compuwd.leu \$r42 = \$r43, \$r43;;
+     560:	eb ca ad 7a                                     	compwd.all \$r43 = \$r43, \$r43;;
 
-     568:	ec d7 ad f9 ff ff ff 00                         	compuwd.gtu \$r43 = \$r44, 536870911 \(0x1fffffff\);;
+     564:	ec c7 b1 fb ff ff ff 00                         	compwd.nall \$r44 = \$r44, 536870911 \(0x1fffffff\);;
 
-     570:	6c cb b1 7a                                     	compwd.all \$r44 = \$r44, \$r45;;
+     56c:	6d bb b1 7c                                     	compw.any \$r44 = \$r45, \$r45;;
 
-     574:	ed c7 b5 fb ff ff ff 00                         	compwd.nall \$r45 = \$r45, 536870911 \(0x1fffffff\);;
+     570:	ee b7 b5 fd ff ff ff 00                         	compw.none \$r45 = \$r46, 536870911 \(0x1fffffff\);;
 
-     57c:	ae bb b9 7c                                     	compw.any \$r46 = \$r46, \$r46;;
+     578:	00 00 00 05                                     	convdhv0.rn.sat \$a0_lo = \$a0a1a2a3;;
 
-     580:	ef b7 bd fd ff ff ff 00                         	compw.none \$r47 = \$r47, 536870911 \(0x1fffffff\);;
+     57c:	80 51 00 05                                     	convdhv1.ru.satu \$a0_hi = \$a4a5a6a7;;
 
-     588:	00 00 00 05                                     	convdhv0.rn.sat \$a0_lo = \$a0a1a2a3;;
+     580:	00 82 00 06                                     	convwbv0.rd.sat \$a0_x = \$a8a9a10a11;;
 
-     58c:	80 51 00 05                                     	convdhv1.ru.satu \$a0_hi = \$a4a5a6a7;;
+     584:	80 d3 00 06                                     	convwbv1.rz.satu \$a0_y = \$a12a13a14a15;;
 
-     590:	00 82 00 06                                     	convwbv0.rd.sat \$a0_x = \$a8a9a10a11;;
+     588:	00 24 01 06                                     	convwbv2.rhu.sat \$a0_z = \$a16a17a18a19;;
 
-     594:	80 d3 00 06                                     	convwbv1.rz.satu \$a0_y = \$a12a13a14a15;;
+     58c:	80 70 01 06                                     	convwbv3.rn.satu \$a0_t = \$a20a21a22a23;;
 
-     598:	00 24 01 06                                     	convwbv2.rhu.sat \$a0_z = \$a16a17a18a19;;
+     590:	2e 00 b8 6a                                     	copyd \$r46 = \$r46;;
 
-     59c:	80 70 01 06                                     	convwbv3.rn.satu \$a0_t = \$a20a21a22a23;;
+     594:	14 00 45 3e                                     	copyo \$r16r17r18r19 = \$r20r21r22r23;;
 
-     5a0:	30 00 bc 6a                                     	copyd \$r47 = \$r48;;
+     598:	ef fb 58 5f                                     	copyq \$r22r23 = \$r47, \$r47;;
 
-     5a4:	14 00 45 3e                                     	copyo \$r16r17r18r19 = \$r20r21r22r23;;
+     59c:	30 00 bc 7a                                     	copyw \$r47 = \$r48;;
 
-     5a8:	30 fc 58 5f                                     	copyq \$r22r23 = \$r48, \$r48;;
+     5a0:	70 2c c0 59                                     	crcbellw \$r48 = \$r48, \$r49;;
 
-     5ac:	31 00 c4 7a                                     	copyw \$r49 = \$r49;;
+     5a4:	f1 27 c4 d9 ff ff ff 10                         	crcbellw \$r49 = \$r49, 536870911 \(0x1fffffff\);;
 
-     5b0:	b2 2c c4 59                                     	crcbellw \$r49 = \$r50, \$r50;;
+     5ac:	b2 2c c8 58                                     	crcbelmw \$r50 = \$r50, \$r50;;
 
-     5b4:	f3 27 c8 d9 ff ff ff 10                         	crcbellw \$r50 = \$r51, 536870911 \(0x1fffffff\);;
+     5b0:	f3 27 cc d8 ff ff ff 10                         	crcbelmw \$r51 = \$r51, 536870911 \(0x1fffffff\);;
 
-     5bc:	33 2d cc 58                                     	crcbelmw \$r51 = \$r51, \$r52;;
+     5b8:	34 2d cc 5b                                     	crclellw \$r51 = \$r52, \$r52;;
 
-     5c0:	f4 27 d0 d8 ff ff ff 10                         	crcbelmw \$r52 = \$r52, 536870911 \(0x1fffffff\);;
+     5bc:	f5 27 d0 db ff ff ff 10                         	crclellw \$r52 = \$r53, 536870911 \(0x1fffffff\);;
 
-     5c8:	75 2d d4 5b                                     	crclellw \$r53 = \$r53, \$r53;;
+     5c4:	b5 2d d4 5a                                     	crclelmw \$r53 = \$r53, \$r54;;
 
-     5cc:	f6 27 d8 db ff ff ff 10                         	crclellw \$r54 = \$r54, 536870911 \(0x1fffffff\);;
+     5c8:	f6 27 d8 da ff ff ff 10                         	crclelmw \$r54 = \$r54, 536870911 \(0x1fffffff\);;
 
-     5d4:	f7 2d d8 5a                                     	crclelmw \$r54 = \$r55, \$r55;;
+     5d0:	37 20 de 73                                     	ctzd \$r55 = \$r55;;
 
-     5d8:	f8 27 dc da ff ff ff 10                         	crclelmw \$r55 = \$r56, 536870911 \(0x1fffffff\);;
+     5d4:	38 40 de 73                                     	ctzwp \$r55 = \$r56;;
 
-     5e0:	38 20 e2 73                                     	ctzd \$r56 = \$r56;;
+     5d8:	38 30 e2 73                                     	ctzw \$r56 = \$r56;;
 
-     5e4:	39 40 e6 73                                     	ctzwp \$r57 = \$r57;;
+     5dc:	00 00 8d 3f                                     	d1inval;;
 
-     5e8:	3a 30 e6 73                                     	ctzw \$r57 = \$r58;;
+     5e0:	f9 ff 1c bc ff ff ff 9f ff ff ff 18             	dinvall 2305843009213693951 \(0x1fffffffffffffff\)\[\$r57\];;
 
-     5ec:	00 00 8d 3f                                     	d1inval;;
+     5ec:	79 9e 1e bc 00 00 00 98 00 00 80 1f             	dinvall.weqz \$r57\? -1125899906842624 \(0xfffc000000000000\)\[\$r57\];;
 
-     5f0:	fa ff 1c bc ff ff ff 9f ff ff ff 18             	dinvall 2305843009213693951 \(0x1fffffffffffffff\)\[\$r58\];;
+     5f8:	ba ae 1e bc 00 00 80 1f                         	dinvall.wltz \$r58\? -8388608 \(0xff800000\)\[\$r58\];;
 
-     5fc:	bb 9e 1e bc 00 00 00 98 00 00 80 1f             	dinvall.weqz \$r58\? -1125899906842624 \(0xfffc000000000000\)\[\$r59\];;
+     600:	bb be 1e 3c                                     	dinvall.wgez \$r58\? \[\$r59\];;
 
-     608:	fb ae 1e bc 00 00 80 1f                         	dinvall.wltz \$r59\? -8388608 \(0xff800000\)\[\$r59\];;
+     604:	fb ee 1e 3c                                     	dinvall \$r59\[\$r59\];;
 
-     610:	3c bf 1e 3c                                     	dinvall.wgez \$r60\? \[\$r60\];;
+     608:	3c f0 1c 3c                                     	dinvall -64 \(0xffffffc0\)\[\$r60\];;
 
-     614:	3d ef 1e 3c                                     	dinvall \$r60\[\$r61\];;
+     60c:	3c 00 1c bc 00 00 80 1f                         	dinvall -8589934592 \(0xfffffffe00000000\)\[\$r60\];;
 
-     618:	3d f0 1c 3c                                     	dinvall -64 \(0xffffffc0\)\[\$r61\];;
+     614:	18 26 58 52                                     	dot2suwdp \$r22r23 = \$r24r25, \$r24r25;;
 
-     61c:	3d 00 1c bc 00 00 80 1f                         	dinvall -8589934592 \(0xfffffffe00000000\)\[\$r61\];;
+     618:	fd ff f0 ce ff ff ff 97 ff ff ff 10             	dot2suwd \$r60 = \$r61, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     624:	18 26 58 52                                     	dot2suwdp \$r22r23 = \$r24r25, \$r24r25;;
+     624:	bd 2f f4 5e                                     	dot2suwd \$r61 = \$r61, \$r62;;
 
-     628:	fe ff f8 ce ff ff ff 97 ff ff ff 10             	dot2suwd \$r62 = \$r62, 2305843009213693951 \(0x1fffffffffffffff\);;
+     628:	3e f0 f8 4e                                     	dot2suwd \$r62 = \$r62, -64 \(0xffffffc0\);;
 
-     634:	ff 2f f8 5e                                     	dot2suwd \$r62 = \$r63, \$r63;;
+     62c:	3f 00 fc ce 00 00 80 17                         	dot2suwd \$r63 = \$r63, -8589934592 \(0xfffffffe00000000\);;
 
-     638:	00 f0 fc 4e                                     	dot2suwd \$r63 = \$r0, -64 \(0xffffffc0\);;
+     634:	1a 27 68 51                                     	dot2uwdp \$r26r27 = \$r26r27, \$r28r29;;
 
-     63c:	00 00 00 ce 00 00 80 17                         	dot2suwd \$r0 = \$r0, -8589934592 \(0xfffffffe00000000\);;
+     638:	c0 ff fc cd ff ff ff 97 ff ff ff 10             	dot2uwd \$r63 = \$r0, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     644:	1a 27 68 51                                     	dot2uwdp \$r26r27 = \$r26r27, \$r28r29;;
+     644:	40 20 00 5d                                     	dot2uwd \$r0 = \$r0, \$r1;;
 
-     648:	c1 ff 04 cd ff ff ff 97 ff ff ff 10             	dot2uwd \$r1 = \$r1, 2305843009213693951 \(0x1fffffffffffffff\);;
+     648:	01 f0 04 4d                                     	dot2uwd \$r1 = \$r1, -64 \(0xffffffc0\);;
 
-     654:	82 20 04 5d                                     	dot2uwd \$r1 = \$r2, \$r2;;
+     64c:	02 00 08 cd 00 00 80 17                         	dot2uwd \$r2 = \$r2, -8589934592 \(0xfffffffe00000000\);;
 
-     658:	03 f0 08 4d                                     	dot2uwd \$r2 = \$r3, -64 \(0xffffffc0\);;
+     654:	9e 27 70 50                                     	dot2wdp \$r28r29 = \$r30r31, \$r30r31;;
 
-     65c:	03 00 0c cd 00 00 80 17                         	dot2uwd \$r3 = \$r3, -8589934592 \(0xfffffffe00000000\);;
+     658:	c3 ff 08 cc ff ff ff 97 ff ff ff 10             	dot2wd \$r2 = \$r3, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     664:	9e 27 70 50                                     	dot2wdp \$r28r29 = \$r30r31, \$r30r31;;
+     664:	03 21 0c 5c                                     	dot2wd \$r3 = \$r3, \$r4;;
 
-     668:	c4 ff 10 cc ff ff ff 97 ff ff ff 10             	dot2wd \$r4 = \$r4, 2305843009213693951 \(0x1fffffffffffffff\);;
+     668:	04 f0 10 4c                                     	dot2wd \$r4 = \$r4, -64 \(0xffffffc0\);;
 
-     674:	45 21 10 5c                                     	dot2wd \$r4 = \$r5, \$r5;;
+     66c:	05 00 14 cc 00 00 80 17                         	dot2wd \$r5 = \$r5, -8589934592 \(0xfffffffe00000000\);;
 
-     678:	06 f0 14 4c                                     	dot2wd \$r5 = \$r6, -64 \(0xffffffc0\);;
+     674:	a0 28 80 53                                     	dot2wzp \$r32r33 = \$r32r33, \$r34r35;;
 
-     67c:	06 00 18 cc 00 00 80 17                         	dot2wd \$r6 = \$r6, -8589934592 \(0xfffffffe00000000\);;
+     678:	c6 ff 14 cf ff ff ff 97 ff ff ff 10             	dot2w \$r5 = \$r6, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     684:	a0 28 80 53                                     	dot2wzp \$r32r33 = \$r32r33, \$r34r35;;
+     684:	c6 21 18 5f                                     	dot2w \$r6 = \$r6, \$r7;;
 
-     688:	c7 ff 1c cf ff ff ff 97 ff ff ff 10             	dot2w \$r7 = \$r7, 2305843009213693951 \(0x1fffffffffffffff\);;
+     688:	07 f0 1c 4f                                     	dot2w \$r7 = \$r7, -64 \(0xffffffc0\);;
 
-     694:	08 22 1c 5f                                     	dot2w \$r7 = \$r8, \$r8;;
+     68c:	08 00 20 cf 00 00 80 17                         	dot2w \$r8 = \$r8, -8589934592 \(0xfffffffe00000000\);;
 
-     698:	09 f0 20 4f                                     	dot2w \$r8 = \$r9, -64 \(0xffffffc0\);;
+     694:	c8 ff 0c bc ff ff ff 9f ff ff ff 18             	dtouchl 2305843009213693951 \(0x1fffffffffffffff\)\[\$r8\];;
 
-     69c:	09 00 24 cf 00 00 80 17                         	dot2w \$r9 = \$r9, -8589934592 \(0xfffffffe00000000\);;
+     6a0:	49 c2 0e bc 00 00 00 98 00 00 80 1f             	dtouchl.wlez \$r9\? -1125899906842624 \(0xfffc000000000000\)\[\$r9\];;
 
-     6a4:	ca ff 0c bc ff ff ff 9f ff ff ff 18             	dtouchl 2305843009213693951 \(0x1fffffffffffffff\)\[\$r10\];;
+     6ac:	4a d2 0e bc 00 00 80 1f                         	dtouchl.wgtz \$r9\? -8388608 \(0xff800000\)\[\$r10\];;
 
-     6b0:	8a c2 0e bc 00 00 00 98 00 00 80 1f             	dtouchl.wlez \$r10\? -1125899906842624 \(0xfffc000000000000\)\[\$r10\];;
+     6b4:	8a 02 0e 3c                                     	dtouchl.dnez \$r10\? \[\$r10\];;
 
-     6bc:	cb d2 0e bc 00 00 80 1f                         	dtouchl.wgtz \$r11\? -8388608 \(0xff800000\)\[\$r11\];;
+     6b8:	cb e2 0e 3c                                     	dtouchl \$r11\[\$r11\];;
 
-     6c4:	cc 02 0e 3c                                     	dtouchl.dnez \$r11\? \[\$r12\];;
+     6bc:	0b f0 0c 3c                                     	dtouchl -64 \(0xffffffc0\)\[\$r11\];;
 
-     6c8:	0d e3 0e 3c                                     	dtouchl \$r12\[\$r13\];;
+     6c0:	0c 00 0c bc 00 00 80 1f                         	dtouchl -8589934592 \(0xfffffffe00000000\)\[\$r12\];;
 
-     6cc:	0d f0 0c 3c                                     	dtouchl -64 \(0xffffffc0\)\[\$r13\];;
+     6c8:	cc ff 0d a8 ff ff ff 9f ff ff ff 18             	dzerol 2305843009213693951 \(0x1fffffffffffffff\)\[\$r12\];;
 
-     6d0:	0e 00 0c bc 00 00 80 1f                         	dtouchl -8589934592 \(0xfffffffe00000000\)\[\$r14\];;
+     6d4:	4d 13 0f a8 00 00 00 98 00 00 80 1f             	dzerol.deqz \$r13\? -1125899906842624 \(0xfffc000000000000\)\[\$r13\];;
 
-     6d8:	ce ff 0d a8 ff ff ff 9f ff ff ff 18             	dzerol 2305843009213693951 \(0x1fffffffffffffff\)\[\$r14\];;
+     6e0:	8e 23 0f a8 00 00 80 1f                         	dzerol.dltz \$r14\? -8388608 \(0xff800000\)\[\$r14\];;
 
-     6e4:	cf 13 0f a8 00 00 00 98 00 00 80 1f             	dzerol.deqz \$r15\? -1125899906842624 \(0xfffc000000000000\)\[\$r15\];;
+     6e8:	cf 33 0f 28                                     	dzerol.dgez \$r15\? \[\$r15\];;
 
-     6f0:	10 24 0f a8 00 00 80 1f                         	dzerol.dltz \$r16\? -8388608 \(0xff800000\)\[\$r16\];;
+     6ec:	10 e4 0f 28                                     	dzerol \$r16\[\$r16\];;
 
-     6f8:	11 34 0f 28                                     	dzerol.dgez \$r16\? \[\$r17\];;
+     6f0:	10 f0 0d 28                                     	dzerol -64 \(0xffffffc0\)\[\$r16\];;
 
-     6fc:	51 e4 0f 28                                     	dzerol \$r17\[\$r17\];;
+     6f4:	11 00 0d a8 00 00 80 1f                         	dzerol -8589934592 \(0xfffffffe00000000\)\[\$r17\];;
 
-     700:	12 f0 0d 28                                     	dzerol -64 \(0xffffffc0\)\[\$r18\];;
+     6fc:	00 00 00 00                                     	errop;;
 
-     704:	12 00 0d a8 00 00 80 1f                         	dzerol -8589934592 \(0xfffffffe00000000\)\[\$r18\];;
+     700:	d1 71 47 68                                     	extfs \$r17 = \$r17, 7 \(0x7\), 7 \(0x7\);;
 
-     70c:	00 00 00 00                                     	errop;;
+     704:	d2 71 4b 64                                     	extfz \$r18 = \$r18, 7 \(0x7\), 7 \(0x7\);;
 
-     710:	d3 71 4b 68                                     	extfs \$r18 = \$r19, 7 \(0x7\), 7 \(0x7\);;
+     708:	13 20 4b 71                                     	fabsd \$r18 = \$r19;;
 
-     714:	d3 71 4f 64                                     	extfz \$r19 = \$r19, 7 \(0x7\), 7 \(0x7\);;
+     70c:	13 20 4f 77                                     	fabshq \$r19 = \$r19;;
 
-     718:	14 20 53 71                                     	fabsd \$r20 = \$r20;;
+     710:	14 20 53 75                                     	fabswp \$r20 = \$r20;;
 
-     71c:	15 20 53 77                                     	fabshq \$r20 = \$r21;;
+     714:	15 20 53 73                                     	fabsw \$r20 = \$r21;;
 
-     720:	15 20 57 75                                     	fabswp \$r21 = \$r21;;
+     718:	24 09 8b 5d                                     	fadddc.c.rn \$r34r35 = \$r36r37, \$r36r37;;
 
-     724:	16 20 5b 73                                     	fabsw \$r22 = \$r22;;
+     71c:	26 9a 9b 5c                                     	fadddp.ru.s \$r38r39 = \$r38r39, \$r40r41;;
 
-     728:	24 09 8b 5d                                     	fadddc.c.rn \$r34r35 = \$r36r37, \$r36r37;;
+     720:	aa 2a a3 5c                                     	fadddp.rd \$r40r41 = \$r42r43, \$r42r43;;
 
-     72c:	26 9a 9b 5c                                     	fadddp.ru.s \$r38r39 = \$r38r39, \$r40r41;;
+     724:	d5 ff 56 c0 ff ff ff 97 ff ff ff 10             	faddd \$r21 = \$r21, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     730:	aa 2a a3 5c                                     	fadddp.rd \$r40r41 = \$r42r43, \$r42r43;;
+     730:	16 f0 5a 40                                     	faddd \$r22 = \$r22, -64 \(0xffffffc0\);;
 
-     734:	d7 ff 5a c0 ff ff ff 97 ff ff ff 10             	faddd \$r22 = \$r23, 2305843009213693951 \(0x1fffffffffffffff\);;
+     734:	17 00 5a c0 00 00 80 17                         	faddd \$r22 = \$r23, -8589934592 \(0xfffffffe00000000\);;
 
-     740:	17 f0 5e 40                                     	faddd \$r23 = \$r23, -64 \(0xffffffc0\);;
+     73c:	17 b6 5e 50                                     	faddd.rz.s \$r23 = \$r23, \$r24;;
 
-     744:	18 00 62 c0 00 00 80 17                         	faddd \$r24 = \$r24, -8589934592 \(0xfffffffe00000000\);;
+     740:	d8 ff 62 c2 ff ff ff 97 ff ff ff 10             	faddhq \$r24 = \$r24, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     74c:	59 b6 62 50                                     	faddd.rz.s \$r24 = \$r25, \$r25;;
+     74c:	19 f0 66 42                                     	faddhq \$r25 = \$r25, -64 \(0xffffffc0\);;
 
-     750:	da ff 66 c2 ff ff ff 97 ff ff ff 10             	faddhq \$r25 = \$r26, 2305843009213693951 \(0x1fffffffffffffff\);;
+     750:	1a 00 66 c2 00 00 80 17                         	faddhq \$r25 = \$r26, -8589934592 \(0xfffffffe00000000\);;
 
-     75c:	1a f0 6a 42                                     	faddhq \$r26 = \$r26, -64 \(0xffffffc0\);;
+     758:	da 46 6a 52                                     	faddhq.rna \$r26 = \$r26, \$r27;;
 
-     760:	1b 00 6e c2 00 00 80 17                         	faddhq \$r27 = \$r27, -8589934592 \(0xfffffffe00000000\);;
+     75c:	db ff 6e c3 ff ff ff 97 ff ff ff 10             	faddwc.c \$r27 = \$r27, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     768:	1c 47 6e 52                                     	faddhq.rna \$r27 = \$r28, \$r28;;
+     768:	1c f0 72 43                                     	faddwc.c \$r28 = \$r28, -64 \(0xffffffc0\);;
 
-     76c:	dd ff 72 c3 ff ff ff 97 ff ff ff 10             	faddwc.c \$r28 = \$r29, 2305843009213693951 \(0x1fffffffffffffff\);;
+     76c:	1d 00 72 c3 00 00 80 17                         	faddwc.c \$r28 = \$r29, -8589934592 \(0xfffffffe00000000\);;
 
-     778:	1d f0 76 43                                     	faddwc.c \$r29 = \$r29, -64 \(0xffffffc0\);;
+     774:	9d d7 76 53                                     	faddwc.c.rnz.s \$r29 = \$r29, \$r30;;
 
-     77c:	1e 00 7a c3 00 00 80 17                         	faddwc.c \$r30 = \$r30, -8589934592 \(0xfffffffe00000000\);;
+     778:	ac 6b b7 59                                     	faddwcp.c.ro \$r44r45 = \$r44r45, \$r46r47;;
 
-     784:	df d7 7a 53                                     	faddwc.c.rnz.s \$r30 = \$r31, \$r31;;
+     77c:	30 fc bf 58                                     	faddwq.s \$r46r47 = \$r48r49, \$r48r49;;
 
-     788:	ac 6b b7 59                                     	faddwcp.c.ro \$r44r45 = \$r44r45, \$r46r47;;
+     780:	de 07 7a 51                                     	faddwp.rn \$r30 = \$r30, \$r31;;
 
-     78c:	30 fc bf 58                                     	faddwq.s \$r46r47 = \$r48r49, \$r48r49;;
+     784:	df ff 7e c1 ff ff ff 97 ff ff ff 10             	faddwp \$r31 = \$r31, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     790:	20 08 7e 51                                     	faddwp.rn \$r31 = \$r32, \$r32;;
+     790:	20 f0 82 41                                     	faddwp \$r32 = \$r32, -64 \(0xffffffc0\);;
 
-     794:	e1 ff 82 c1 ff ff ff 97 ff ff ff 10             	faddwp \$r32 = \$r33, 2305843009213693951 \(0x1fffffffffffffff\);;
+     794:	21 00 82 c1 00 00 80 17                         	faddwp \$r32 = \$r33, -8589934592 \(0xfffffffe00000000\);;
 
-     7a0:	21 f0 86 41                                     	faddwp \$r33 = \$r33, -64 \(0xffffffc0\);;
+     79c:	a1 98 86 51                                     	faddwp.ru.s \$r33 = \$r33, \$r34;;
 
-     7a4:	22 00 8a c1 00 00 80 17                         	faddwp \$r34 = \$r34, -8589934592 \(0xfffffffe00000000\);;
+     7a0:	32 2d cf 58                                     	faddwq.rd \$r50r51 = \$r50r51, \$r52r53;;
 
-     7ac:	e3 98 8a 51                                     	faddwp.ru.s \$r34 = \$r35, \$r35;;
+     7a4:	e2 ff 8a cc ff ff ff 97 ff ff ff 10             	faddw \$r34 = \$r34, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     7b0:	32 2d cf 58                                     	faddwq.rd \$r50r51 = \$r50r51, \$r52r53;;
+     7b0:	23 f0 8e 4c                                     	faddw \$r35 = \$r35, -64 \(0xffffffc0\);;
 
-     7b4:	e4 ff 8e cc ff ff ff 97 ff ff ff 10             	faddw \$r35 = \$r36, 2305843009213693951 \(0x1fffffffffffffff\);;
+     7b4:	24 00 8e cc 00 00 80 17                         	faddw \$r35 = \$r36, -8589934592 \(0xfffffffe00000000\);;
 
-     7c0:	24 f0 92 4c                                     	faddw \$r36 = \$r36, -64 \(0xffffffc0\);;
+     7bc:	64 b9 92 5c                                     	faddw.rz.s \$r36 = \$r36, \$r37;;
 
-     7c4:	25 00 96 cc 00 00 80 17                         	faddw \$r37 = \$r37, -8589934592 \(0xfffffffe00000000\);;
+     7c0:	34 50 97 71                                     	fcdivd \$r37 = \$r52r53;;
 
-     7cc:	a6 b9 96 5c                                     	faddw.rz.s \$r37 = \$r38, \$r38;;
+     7c4:	36 58 97 75                                     	fcdivwp.s \$r37 = \$r54r55;;
 
-     7d0:	34 50 9b 71                                     	fcdivd \$r38 = \$r52r53;;
+     7c8:	36 50 9b 73                                     	fcdivw \$r38 = \$r54r55;;
 
-     7d4:	36 58 9f 75                                     	fcdivwp.s \$r39 = \$r54r55;;
+     7cc:	e6 09 9b 78                                     	fcompd.one \$r38 = \$r38, \$r39;;
 
-     7d8:	36 50 9f 73                                     	fcdivw \$r39 = \$r54r55;;
+     7d0:	e7 07 9f f9 ff ff ff 00                         	fcompd.ueq \$r39 = \$r39, 536870911 \(0x1fffffff\);;
 
-     7dc:	28 0a 9f 78                                     	fcompd.one \$r39 = \$r40, \$r40;;
+     7d8:	28 1a a3 7a                                     	fcompnhq.oeq \$r40 = \$r40, \$r40;;
 
-     7e0:	e9 07 a3 f9 ff ff ff 00                         	fcompd.ueq \$r40 = \$r41, 536870911 \(0x1fffffff\);;
+     7dc:	e9 17 a7 fb ff ff ff 00                         	fcompnhq.une \$r41 = \$r41, 536870911 \(0x1fffffff\);;
 
-     7e8:	a9 1a a7 7a                                     	fcompnhq.oeq \$r41 = \$r41, \$r42;;
+     7e4:	aa 1a a7 74                                     	fcompnwp.olt \$r41 = \$r42, \$r42;;
 
-     7ec:	ea 17 ab fb ff ff ff 00                         	fcompnhq.une \$r42 = \$r42, 536870911 \(0x1fffffff\);;
+     7e8:	eb 1f ab f5 ff ff ff 00                         	fcompnwp.uge \$r42 = \$r43, 536870911 \(0x1fffffff\).@;;
 
-     7f4:	eb 1a af 74                                     	fcompnwp.olt \$r43 = \$r43, \$r43;;
+     7f0:	2b 0b af 76                                     	fcompw.oge \$r43 = \$r43, \$r44;;
 
-     7f8:	ec 1f b3 f5 ff ff ff 00                         	fcompnwp.uge \$r44 = \$r44, 536870911 \(0x1fffffff\).@;;
+     7f4:	ec 07 b3 f7 ff ff ff 00                         	fcompw.ult \$r44 = \$r44, 536870911 \(0x1fffffff\);;
 
-     800:	6d 0b b3 76                                     	fcompw.oge \$r44 = \$r45, \$r45;;
+     7fc:	b8 ce e7 5c                                     	fdot2wdp.rna.s \$r56r57 = \$r56r57, \$r58r59;;
 
-     804:	ee 07 b7 f7 ff ff ff 00                         	fcompw.ult \$r45 = \$r46, 536870911 \(0x1fffffff\);;
+     800:	ed ff b5 cd ff ff ff 97 ff ff ff 10             	fdot2wd \$r45 = \$r45, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     80c:	b8 ce e7 5c                                     	fdot2wdp.rna.s \$r56r57 = \$r56r57, \$r58r59;;
+     80c:	2e f0 b5 4d                                     	fdot2wd \$r45 = \$r46, -64 \(0xffffffc0\);;
 
-     810:	ee ff b9 cd ff ff ff 97 ff ff ff 10             	fdot2wd \$r46 = \$r46, 2305843009213693951 \(0x1fffffffffffffff\);;
+     810:	2e 00 b9 cd 00 00 80 17                         	fdot2wd \$r46 = \$r46, -8589934592 \(0xfffffffe00000000\);;
 
-     81c:	2f f0 bd 4d                                     	fdot2wd \$r47 = \$r47, -64 \(0xffffffc0\);;
+     818:	ef 5b bd 5d                                     	fdot2wd.rnz \$r47 = \$r47, \$r47;;
 
-     820:	30 00 bd cd 00 00 80 17                         	fdot2wd \$r47 = \$r48, -8589934592 \(0xfffffffe00000000\);;
+     81c:	3c ef ef 5d                                     	fdot2wzp.ro.s \$r58r59 = \$r60r61, \$r60r61;;
 
-     828:	70 5c c1 5d                                     	fdot2wd.rnz \$r48 = \$r48, \$r49;;
+     820:	f0 ff c1 cc ff ff ff 97 ff ff ff 10             	fdot2w \$r48 = \$r48, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     82c:	3c ef ef 5d                                     	fdot2wzp.ro.s \$r58r59 = \$r60r61, \$r60r61;;
+     82c:	31 f0 c1 4c                                     	fdot2w \$r48 = \$r49, -64 \(0xffffffc0\);;
 
-     830:	f1 ff c5 cc ff ff ff 97 ff ff ff 10             	fdot2w \$r49 = \$r49, 2305843009213693951 \(0x1fffffffffffffff\);;
+     830:	31 00 c5 cc 00 00 80 17                         	fdot2w \$r49 = \$r49, -8589934592 \(0xfffffffe00000000\);;
 
-     83c:	32 f0 c9 4c                                     	fdot2w \$r50 = \$r50, -64 \(0xffffffc0\);;
+     838:	b2 7c c9 5c                                     	fdot2w \$r50 = \$r50, \$r50;;
 
-     840:	33 00 c9 cc 00 00 80 17                         	fdot2w \$r50 = \$r51, -8589934592 \(0xfffffffe00000000\);;
+     83c:	00 00 cd 3f                                     	fence;;
 
-     848:	33 7d cd 5c                                     	fdot2w \$r51 = \$r51, \$r52;;
+     840:	f3 ff cd c0 ff ff ff 97 ff ff ff 10             	ffmad \$r51 = \$r51, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     84c:	00 00 cd 3f                                     	fence;;
+     84c:	34 f0 cd 40                                     	ffmad \$r51 = \$r52, -64 \(0xffffffc0\);;
 
-     850:	f4 ff d1 c0 ff ff ff 97 ff ff ff 10             	ffmad \$r52 = \$r52, 2305843009213693951 \(0x1fffffffffffffff\);;
+     850:	34 00 d1 c0 00 00 80 17                         	ffmad \$r52 = \$r52, -8589934592 \(0xfffffffe00000000\);;
 
-     85c:	35 f0 d5 40                                     	ffmad \$r53 = \$r53, -64 \(0xffffffc0\);;
+     858:	75 8d d5 50                                     	ffmad.rn.s \$r53 = \$r53, \$r53;;
 
-     860:	36 00 d5 c0 00 00 80 17                         	ffmad \$r53 = \$r54, -8589934592 \(0xfffffffe00000000\);;
+     85c:	f6 ff d9 c3 ff ff ff 97 ff ff ff 10             	ffmahq \$r54 = \$r54, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     868:	f6 8d d9 50                                     	ffmad.rn.s \$r54 = \$r54, \$r55;;
+     868:	37 f0 d9 43                                     	ffmahq \$r54 = \$r55, -64 \(0xffffffc0\);;
 
-     86c:	f7 ff dd c3 ff ff ff 97 ff ff ff 10             	ffmahq \$r55 = \$r55, 2305843009213693951 \(0x1fffffffffffffff\);;
+     86c:	37 00 dd c3 00 00 80 17                         	ffmahq \$r55 = \$r55, -8589934592 \(0xfffffffe00000000\);;
 
-     878:	38 f0 e1 43                                     	ffmahq \$r56 = \$r56, -64 \(0xffffffc0\);;
+     874:	38 1e e1 53                                     	ffmahq.ru \$r56 = \$r56, \$r56;;
 
-     87c:	39 00 e1 c3 00 00 80 17                         	ffmahq \$r56 = \$r57, -8589934592 \(0xfffffffe00000000\);;
+     878:	f9 ff fb c1 ff ff ff 97 ff ff ff 10             	ffmahwq \$r62r63 = \$r57, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     884:	b9 1e e5 53                                     	ffmahq.ru \$r57 = \$r57, \$r58;;
+     884:	39 f0 fb 41                                     	ffmahwq \$r62r63 = \$r57, -64 \(0xffffffc0\);;
 
-     888:	fa ff fb c1 ff ff ff 97 ff ff ff 10             	ffmahwq \$r62r63 = \$r58, 2305843009213693951 \(0x1fffffffffffffff\);;
+     888:	39 00 03 c1 00 00 80 17                         	ffmahwq \$r0r1 = \$r57, -8589934592 \(0xfffffffe00000000\);;
 
-     894:	3a f0 fb 41                                     	ffmahwq \$r62r63 = \$r58, -64 \(0xffffffc0\);;
+     890:	ba ae 03 51                                     	ffmahwq.rd.s \$r0r1 = \$r58, \$r58;;
 
-     898:	3b 00 03 c1 00 00 80 17                         	ffmahwq \$r0r1 = \$r59, -8589934592 \(0xfffffffe00000000\);;
+     894:	fb ff ea c8 ff ff ff 97 ff ff ff 10             	ffmahw \$r58 = \$r59, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     8a0:	fb ae 03 51                                     	ffmahwq.rd.s \$r0r1 = \$r59, \$r59;;
+     8a0:	3b f0 ee 48                                     	ffmahw \$r59 = \$r59, -64 \(0xffffffc0\);;
 
-     8a4:	fc ff f2 c8 ff ff ff 97 ff ff ff 10             	ffmahw \$r60 = \$r60, 2305843009213693951 \(0x1fffffffffffffff\);;
+     8a4:	3c 00 f2 c8 00 00 80 17                         	ffmahw \$r60 = \$r60, -8589934592 \(0xfffffffe00000000\);;
 
-     8b0:	3d f0 f2 48                                     	ffmahw \$r60 = \$r61, -64 \(0xffffffc0\);;
+     8ac:	7d 3f f2 58                                     	ffmahw.rz \$r60 = \$r61, \$r61;;
 
-     8b4:	3d 00 f6 c8 00 00 80 17                         	ffmahw \$r61 = \$r61, -8589934592 \(0xfffffffe00000000\);;
+     8b0:	fd ff 0b c0 ff ff ff 97 ff ff ff 10             	ffmawdp \$r2r3 = \$r61, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     8bc:	be 3f fa 58                                     	ffmahw.rz \$r62 = \$r62, \$r62;;
+     8bc:	3e f0 0b 40                                     	ffmawdp \$r2r3 = \$r62, -64 \(0xffffffc0\);;
 
-     8c0:	ff ff 0b c0 ff ff ff 97 ff ff ff 10             	ffmawdp \$r2r3 = \$r63, 2305843009213693951 \(0x1fffffffffffffff\);;
+     8c0:	3e 00 13 c0 00 00 80 17                         	ffmawdp \$r4r5 = \$r62, -8589934592 \(0xfffffffe00000000\);;
 
-     8cc:	3f f0 0b 40                                     	ffmawdp \$r2r3 = \$r63, -64 \(0xffffffc0\);;
+     8c8:	fe cf 13 50                                     	ffmawdp.rna.s \$r4r5 = \$r62, \$r63;;
 
-     8d0:	3f 00 13 c0 00 00 80 17                         	ffmawdp \$r4r5 = \$r63, -8589934592 \(0xfffffffe00000000\);;
+     8cc:	ff ff fd c1 ff ff ff 97 ff ff ff 10             	ffmawd \$r63 = \$r63, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     8d8:	00 c0 13 50                                     	ffmawdp.rna.s \$r4r5 = \$r0, \$r0;;
+     8d8:	00 f0 01 41                                     	ffmawd \$r0 = \$r0, -64 \(0xffffffc0\);;
 
-     8dc:	c1 ff 01 c1 ff ff ff 97 ff ff ff 10             	ffmawd \$r0 = \$r1, 2305843009213693951 \(0x1fffffffffffffff\);;
+     8dc:	01 00 01 c1 00 00 80 17                         	ffmawd \$r0 = \$r1, -8589934592 \(0xfffffffe00000000\);;
 
-     8e8:	01 f0 05 41                                     	ffmawd \$r1 = \$r1, -64 \(0xffffffc0\);;
+     8e4:	81 50 05 51                                     	ffmawd.rnz \$r1 = \$r1, \$r2;;
 
-     8ec:	02 00 09 c1 00 00 80 17                         	ffmawd \$r2 = \$r2, -8589934592 \(0xfffffffe00000000\);;
+     8e8:	c2 ff 09 c2 ff ff ff 97 ff ff ff 10             	ffmawp \$r2 = \$r2, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     8f4:	c3 50 09 51                                     	ffmawd.rnz \$r2 = \$r3, \$r3;;
+     8f4:	03 f0 0d 42                                     	ffmawp \$r3 = \$r3, -64 \(0xffffffc0\);;
 
-     8f8:	c4 ff 0d c2 ff ff ff 97 ff ff ff 10             	ffmawp \$r3 = \$r4, 2305843009213693951 \(0x1fffffffffffffff\);;
+     8f8:	04 00 0d c2 00 00 80 17                         	ffmawp \$r3 = \$r4, -8589934592 \(0xfffffffe00000000\);;
 
-     904:	04 f0 11 42                                     	ffmawp \$r4 = \$r4, -64 \(0xffffffc0\);;
+     900:	44 e1 11 52                                     	ffmawp.ro.s \$r4 = \$r4, \$r5;;
 
-     908:	05 00 15 c2 00 00 80 17                         	ffmawp \$r5 = \$r5, -8589934592 \(0xfffffffe00000000\);;
+     904:	c5 ff 16 c9 ff ff ff 97 ff ff ff 10             	ffmaw \$r5 = \$r5, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     910:	86 e1 15 52                                     	ffmawp.ro.s \$r5 = \$r6, \$r6;;
+     910:	06 f0 1a 49                                     	ffmaw \$r6 = \$r6, -64 \(0xffffffc0\);;
 
-     914:	c7 ff 1a c9 ff ff ff 97 ff ff ff 10             	ffmaw \$r6 = \$r7, 2305843009213693951 \(0x1fffffffffffffff\);;
+     914:	07 00 1a c9 00 00 80 17                         	ffmaw \$r6 = \$r7, -8589934592 \(0xfffffffe00000000\);;
 
-     920:	07 f0 1e 49                                     	ffmaw \$r7 = \$r7, -64 \(0xffffffc0\);;
+     91c:	07 72 1e 59                                     	ffmaw \$r7 = \$r7, \$r8;;
 
-     924:	08 00 22 c9 00 00 80 17                         	ffmaw \$r8 = \$r8, -8589934592 \(0xfffffffe00000000\);;
+     920:	c8 ff 21 c4 ff ff ff 97 ff ff ff 10             	ffmsd \$r8 = \$r8, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     92c:	49 72 22 59                                     	ffmaw \$r8 = \$r9, \$r9;;
+     92c:	09 f0 25 44                                     	ffmsd \$r9 = \$r9, -64 \(0xffffffc0\);;
 
-     930:	ca ff 25 c4 ff ff ff 97 ff ff ff 10             	ffmsd \$r9 = \$r10, 2305843009213693951 \(0x1fffffffffffffff\);;
+     930:	0a 00 25 c4 00 00 80 17                         	ffmsd \$r9 = \$r10, -8589934592 \(0xfffffffe00000000\);;
 
-     93c:	0a f0 29 44                                     	ffmsd \$r10 = \$r10, -64 \(0xffffffc0\);;
+     938:	ca 82 29 54                                     	ffmsd.rn.s \$r10 = \$r10, \$r11;;
 
-     940:	0b 00 2d c4 00 00 80 17                         	ffmsd \$r11 = \$r11, -8589934592 \(0xfffffffe00000000\);;
+     93c:	cb ff 2d c7 ff ff ff 97 ff ff ff 10             	ffmshq \$r11 = \$r11, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     948:	0c 83 2d 54                                     	ffmsd.rn.s \$r11 = \$r12, \$r12;;
+     948:	0c f0 31 47                                     	ffmshq \$r12 = \$r12, -64 \(0xffffffc0\);;
 
-     94c:	cd ff 35 c7 ff ff ff 97 ff ff ff 10             	ffmshq \$r13 = \$r13, 2305843009213693951 \(0x1fffffffffffffff\);;
+     94c:	0d 00 35 c7 00 00 80 17                         	ffmshq \$r13 = \$r13, -8589934592 \(0xfffffffe00000000\);;
 
-     958:	0e f0 39 47                                     	ffmshq \$r14 = \$r14, -64 \(0xffffffc0\);;
+     954:	ce 13 39 57                                     	ffmshq.ru \$r14 = \$r14, \$r15;;
 
-     95c:	0f 00 3d c7 00 00 80 17                         	ffmshq \$r15 = \$r15, -8589934592 \(0xfffffffe00000000\);;
+     958:	cf ff 1b c3 ff ff ff 97 ff ff ff 10             	ffmshwq \$r6r7 = \$r15, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     964:	10 14 41 57                                     	ffmshq.ru \$r16 = \$r16, \$r16;;
+     964:	10 f0 1b 43                                     	ffmshwq \$r6r7 = \$r16, -64 \(0xffffffc0\);;
 
-     968:	d1 ff 1b c3 ff ff ff 97 ff ff ff 10             	ffmshwq \$r6r7 = \$r17, 2305843009213693951 \(0x1fffffffffffffff\);;
+     968:	10 00 23 c3 00 00 80 17                         	ffmshwq \$r8r9 = \$r16, -8589934592 \(0xfffffffe00000000\);;
 
-     974:	11 f0 1b 43                                     	ffmshwq \$r6r7 = \$r17, -64 \(0xffffffc0\);;
+     970:	50 a4 23 53                                     	ffmshwq.rd.s \$r8r9 = \$r16, \$r17;;
 
-     978:	11 00 23 c3 00 00 80 17                         	ffmshwq \$r8r9 = \$r17, -8589934592 \(0xfffffffe00000000\);;
+     974:	d1 ff 46 ca ff ff ff 97 ff ff ff 10             	ffmshw \$r17 = \$r17, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     980:	92 a4 23 53                                     	ffmshwq.rd.s \$r8r9 = \$r18, \$r18;;
+     980:	12 f0 4a 4a                                     	ffmshw \$r18 = \$r18, -64 \(0xffffffc0\);;
 
-     984:	d3 ff 4a ca ff ff ff 97 ff ff ff 10             	ffmshw \$r18 = \$r19, 2305843009213693951 \(0x1fffffffffffffff\);;
+     984:	13 00 4a ca 00 00 80 17                         	ffmshw \$r18 = \$r19, -8589934592 \(0xfffffffe00000000\);;
 
-     990:	13 f0 4e 4a                                     	ffmshw \$r19 = \$r19, -64 \(0xffffffc0\);;
+     98c:	13 35 4e 5a                                     	ffmshw.rz \$r19 = \$r19, \$r20;;
 
-     994:	14 00 52 ca 00 00 80 17                         	ffmshw \$r20 = \$r20, -8589934592 \(0xfffffffe00000000\);;
+     990:	d4 ff 2b c2 ff ff ff 97 ff ff ff 10             	ffmswdp \$r10r11 = \$r20, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     99c:	55 35 52 5a                                     	ffmshw.rz \$r20 = \$r21, \$r21;;
+     99c:	14 f0 2b 42                                     	ffmswdp \$r10r11 = \$r20, -64 \(0xffffffc0\);;
 
-     9a0:	d5 ff 2b c2 ff ff ff 97 ff ff ff 10             	ffmswdp \$r10r11 = \$r21, 2305843009213693951 \(0x1fffffffffffffff\);;
+     9a0:	15 00 33 c2 00 00 80 17                         	ffmswdp \$r12r13 = \$r21, -8589934592 \(0xfffffffe00000000\);;
 
-     9ac:	16 f0 2b 42                                     	ffmswdp \$r10r11 = \$r22, -64 \(0xffffffc0\);;
+     9a8:	55 c5 33 52                                     	ffmswdp.rna.s \$r12r13 = \$r21, \$r21;;
 
-     9b0:	16 00 33 c2 00 00 80 17                         	ffmswdp \$r12r13 = \$r22, -8589934592 \(0xfffffffe00000000\);;
+     9ac:	d6 ff 59 c5 ff ff ff 97 ff ff ff 10             	ffmswd \$r22 = \$r22, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     9b8:	d6 c5 33 52                                     	ffmswdp.rna.s \$r12r13 = \$r22, \$r23;;
+     9b8:	17 f0 59 45                                     	ffmswd \$r22 = \$r23, -64 \(0xffffffc0\);;
 
-     9bc:	d7 ff 5d c5 ff ff ff 97 ff ff ff 10             	ffmswd \$r23 = \$r23, 2305843009213693951 \(0x1fffffffffffffff\);;
+     9bc:	17 00 5d c5 00 00 80 17                         	ffmswd \$r23 = \$r23, -8589934592 \(0xfffffffe00000000\);;
 
-     9c8:	18 f0 61 45                                     	ffmswd \$r24 = \$r24, -64 \(0xffffffc0\);;
+     9c4:	18 56 61 55                                     	ffmswd.rnz \$r24 = \$r24, \$r24;;
 
-     9cc:	19 00 61 c5 00 00 80 17                         	ffmswd \$r24 = \$r25, -8589934592 \(0xfffffffe00000000\);;
+     9c8:	d9 ff 65 c6 ff ff ff 97 ff ff ff 10             	ffmswp \$r25 = \$r25, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     9d4:	99 56 65 55                                     	ffmswd.rnz \$r25 = \$r25, \$r26;;
+     9d4:	1a f0 65 46                                     	ffmswp \$r25 = \$r26, -64 \(0xffffffc0\);;
 
-     9d8:	da ff 69 c6 ff ff ff 97 ff ff ff 10             	ffmswp \$r26 = \$r26, 2305843009213693951 \(0x1fffffffffffffff\);;
+     9d8:	1a 00 69 c6 00 00 80 17                         	ffmswp \$r26 = \$r26, -8589934592 \(0xfffffffe00000000\);;
 
-     9e4:	1b f0 6d 46                                     	ffmswp \$r27 = \$r27, -64 \(0xffffffc0\);;
+     9e0:	db e6 6d 56                                     	ffmswp.ro.s \$r27 = \$r27, \$r27;;
 
-     9e8:	1c 00 6d c6 00 00 80 17                         	ffmswp \$r27 = \$r28, -8589934592 \(0xfffffffe00000000\);;
+     9e4:	dc ff 72 cb ff ff ff 97 ff ff ff 10             	ffmsw \$r28 = \$r28, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     9f0:	5c e7 71 56                                     	ffmswp.ro.s \$r28 = \$r28, \$r29;;
+     9f0:	1d f0 72 4b                                     	ffmsw \$r28 = \$r29, -64 \(0xffffffc0\);;
 
-     9f4:	dd ff 76 cb ff ff ff 97 ff ff ff 10             	ffmsw \$r29 = \$r29, 2305843009213693951 \(0x1fffffffffffffff\);;
+     9f4:	1d 00 76 cb 00 00 80 17                         	ffmsw \$r29 = \$r29, -8589934592 \(0xfffffffe00000000\);;
 
-     a00:	1e f0 7a 4b                                     	ffmsw \$r30 = \$r30, -64 \(0xffffffc0\);;
+     9fc:	9e 77 7a 5b                                     	ffmsw \$r30 = \$r30, \$r30;;
 
-     a04:	1f 00 7a cb 00 00 80 17                         	ffmsw \$r30 = \$r31, -8589934592 \(0xfffffffe00000000\);;
+     a00:	df 81 7f 46                                     	fixedd.rn.s \$r31 = \$r31, 7 \(0x7\);;
 
-     a0c:	1f 78 7e 5b                                     	ffmsw \$r31 = \$r31, \$r32;;
+     a04:	e0 11 7f 47                                     	fixedud.ru \$r31 = \$r32, 7 \(0x7\);;
 
-     a10:	e0 81 83 46                                     	fixedd.rn.s \$r32 = \$r32, 7 \(0x7\);;
+     a08:	e0 a1 83 4f                                     	fixeduwp.rd.s \$r32 = \$r32, 7 \(0x7\);;
 
-     a14:	e1 11 87 47                                     	fixedud.ru \$r33 = \$r33, 7 \(0x7\);;
+     a0c:	e1 31 87 4b                                     	fixeduw.rz \$r33 = \$r33, 7 \(0x7\);;
 
-     a18:	e2 a1 87 4f                                     	fixeduwp.rd.s \$r33 = \$r34, 7 \(0x7\);;
+     a10:	e2 c1 87 4e                                     	fixedwp.rna.s \$r33 = \$r34, 7 \(0x7\);;
 
-     a1c:	e2 31 8b 4b                                     	fixeduw.rz \$r34 = \$r34, 7 \(0x7\);;
+     a14:	e2 51 8b 4a                                     	fixedw.rnz \$r34 = \$r34, 7 \(0x7\);;
 
-     a20:	e3 c1 8f 4e                                     	fixedwp.rna.s \$r35 = \$r35, 7 \(0x7\);;
+     a18:	e3 e1 8f 44                                     	floatd.ro.s \$r35 = \$r35, 7 \(0x7\);;
 
-     a24:	e4 51 8f 4a                                     	fixedw.rnz \$r35 = \$r36, 7 \(0x7\);;
+     a1c:	e4 71 8f 45                                     	floatud \$r35 = \$r36, 7 \(0x7\);;
 
-     a28:	e4 e1 93 44                                     	floatd.ro.s \$r36 = \$r36, 7 \(0x7\);;
+     a20:	e4 81 93 4d                                     	floatuwp.rn.s \$r36 = \$r36, 7 \(0x7\);;
 
-     a2c:	e5 71 97 45                                     	floatud \$r37 = \$r37, 7 \(0x7\);;
+     a24:	e5 11 97 49                                     	floatuw.ru \$r37 = \$r37, 7 \(0x7\);;
 
-     a30:	e6 81 97 4d                                     	floatuwp.rn.s \$r37 = \$r38, 7 \(0x7\);;
+     a28:	e6 a1 97 4c                                     	floatwp.rd.s \$r37 = \$r38, 7 \(0x7\);;
 
-     a34:	e6 11 9b 49                                     	floatuw.ru \$r38 = \$r38, 7 \(0x7\);;
+     a2c:	e6 31 9b 48                                     	floatw.rz \$r38 = \$r38, 7 \(0x7\);;
 
-     a38:	e7 a1 9f 4c                                     	floatwp.rd.s \$r39 = \$r39, 7 \(0x7\);;
+     a30:	e7 89 9f 71                                     	fmaxd \$r39 = \$r39, \$r39;;
 
-     a3c:	e8 31 9f 48                                     	floatw.rz \$r39 = \$r40, 7 \(0x7\);;
+     a34:	28 8a a3 77                                     	fmaxhq \$r40 = \$r40, \$r40;;
 
-     a40:	68 8a a3 71                                     	fmaxd \$r40 = \$r40, \$r41;;
+     a38:	69 8a a7 75                                     	fmaxwp \$r41 = \$r41, \$r41;;
 
-     a44:	a9 8a a7 77                                     	fmaxhq \$r41 = \$r41, \$r42;;
+     a3c:	aa 8a ab 73                                     	fmaxw \$r42 = \$r42, \$r42;;
 
-     a48:	ea 8a ab 75                                     	fmaxwp \$r42 = \$r42, \$r43;;
+     a40:	eb 8a af 70                                     	fmind \$r43 = \$r43, \$r43;;
 
-     a4c:	2b 8b af 73                                     	fmaxw \$r43 = \$r43, \$r44;;
+     a44:	2c 8b b3 76                                     	fminhq \$r44 = \$r44, \$r44;;
 
-     a50:	6c 8b b3 70                                     	fmind \$r44 = \$r44, \$r45;;
+     a48:	6d 8b b7 74                                     	fminwp \$r45 = \$r45, \$r45;;
 
-     a54:	ad 8b b7 76                                     	fminhq \$r45 = \$r45, \$r46;;
+     a4c:	ae 8b bb 72                                     	fminw \$r46 = \$r46, \$r46;;
 
-     a58:	ee 8b bb 74                                     	fminwp \$r46 = \$r46, \$r47;;
+     a50:	ef cb 3f 54                                     	fmm212w.rna.s \$r14r15 = \$r47, \$r47;;
 
-     a5c:	2f 8c bf 72                                     	fminw \$r47 = \$r47, \$r48;;
+     a54:	2f 5c 3b 54                                     	fmma212w.rnz \$r14r15 = \$r47, \$r48;;
 
-     a60:	30 cc 3f 54                                     	fmm212w.rna.s \$r14r15 = \$r48, \$r48;;
+     a58:	41 00 00 03                                     	fmma242hw0 \$a0_lo = \$a0a1, \$a1, \$a1;;
 
-     a64:	71 5c 3b 54                                     	fmma212w.rnz \$r14r15 = \$r49, \$r49;;
+     a5c:	82 10 00 03                                     	fmma242hw1 \$a0_hi = \$a0a1, \$a2, \$a2;;
 
-     a68:	41 00 00 03                                     	fmma242hw0 \$a0_lo = \$a0a1, \$a1, \$a1;;
+     a60:	83 20 04 03                                     	fmma242hw2 \$a1_lo = \$a2a3, \$a2, \$a3;;
 
-     a6c:	82 10 00 03                                     	fmma242hw1 \$a0_hi = \$a0a1, \$a2, \$a2;;
+     a64:	c3 30 04 03                                     	fmma242hw3 \$a1_hi = \$a2a3, \$a3, \$a3;;
 
-     a70:	83 20 04 03                                     	fmma242hw2 \$a1_lo = \$a2a3, \$a2, \$a3;;
+     a68:	30 ec 43 56                                     	fmms212w.ro.s \$r16r17 = \$r48, \$r48;;
 
-     a74:	c3 30 04 03                                     	fmma242hw3 \$a1_hi = \$a2a3, \$a3, \$a3;;
+     a6c:	f1 ff c5 c8 ff ff ff 97 ff ff ff 10             	fmuld \$r49 = \$r49, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     a78:	b1 ec 43 56                                     	fmms212w.ro.s \$r16r17 = \$r49, \$r50;;
+     a78:	32 f0 c5 48                                     	fmuld \$r49 = \$r50, -64 \(0xffffffc0\);;
 
-     a7c:	f2 ff c9 c8 ff ff ff 97 ff ff ff 10             	fmuld \$r50 = \$r50, 2305843009213693951 \(0x1fffffffffffffff\);;
+     a7c:	32 00 c9 c8 00 00 80 17                         	fmuld \$r50 = \$r50, -8589934592 \(0xfffffffe00000000\);;
 
-     a88:	33 f0 cd 48                                     	fmuld \$r51 = \$r51, -64 \(0xffffffc0\);;
+     a84:	f3 7c cd 58                                     	fmuld \$r51 = \$r51, \$r51;;
 
-     a8c:	34 00 cd c8 00 00 80 17                         	fmuld \$r51 = \$r52, -8589934592 \(0xfffffffe00000000\);;
+     a88:	f4 ff d1 cb ff ff ff 97 ff ff ff 10             	fmulhq \$r52 = \$r52, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     a94:	74 7d d1 58                                     	fmuld \$r52 = \$r52, \$r53;;
+     a94:	35 f0 d1 4b                                     	fmulhq \$r52 = \$r53, -64 \(0xffffffc0\);;
 
-     a98:	f5 ff d5 cb ff ff ff 97 ff ff ff 10             	fmulhq \$r53 = \$r53, 2305843009213693951 \(0x1fffffffffffffff\);;
+     a98:	35 00 d5 cb 00 00 80 17                         	fmulhq \$r53 = \$r53, -8589934592 \(0xfffffffe00000000\);;
 
-     aa4:	36 f0 d9 4b                                     	fmulhq \$r54 = \$r54, -64 \(0xffffffc0\);;
+     aa0:	b6 8d d9 5b                                     	fmulhq.rn.s \$r54 = \$r54, \$r54;;
 
-     aa8:	37 00 d9 cb 00 00 80 17                         	fmulhq \$r54 = \$r55, -8589934592 \(0xfffffffe00000000\);;
+     aa4:	f7 ff 47 c1 ff ff ff 97 ff ff ff 10             	fmulhwq \$r16r17 = \$r55, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     ab0:	37 8e dd 5b                                     	fmulhq.rn.s \$r55 = \$r55, \$r56;;
+     ab0:	37 f0 4f 41                                     	fmulhwq \$r18r19 = \$r55, -64 \(0xffffffc0\);;
 
-     ab4:	f8 ff 47 c1 ff ff ff 97 ff ff ff 10             	fmulhwq \$r16r17 = \$r56, 2305843009213693951 \(0x1fffffffffffffff\);;
+     ab4:	37 00 4f c1 00 00 80 17                         	fmulhwq \$r18r19 = \$r55, -8589934592 \(0xfffffffe00000000\);;
 
-     ac0:	38 f0 4f 41                                     	fmulhwq \$r18r19 = \$r56, -64 \(0xffffffc0\);;
+     abc:	38 1e 57 51                                     	fmulhwq.ru \$r20r21 = \$r56, \$r56;;
 
-     ac4:	39 00 4f c1 00 00 80 17                         	fmulhwq \$r18r19 = \$r57, -8589934592 \(0xfffffffe00000000\);;
+     ac0:	f9 ff e2 cf ff ff ff 97 ff ff ff 10             	fmulhw \$r56 = \$r57, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     acc:	79 1e 57 51                                     	fmulhwq.ru \$r20r21 = \$r57, \$r57;;
+     acc:	39 f0 e6 4f                                     	fmulhw \$r57 = \$r57, -64 \(0xffffffc0\);;
 
-     ad0:	fa ff ea cf ff ff ff 97 ff ff ff 10             	fmulhw \$r58 = \$r58, 2305843009213693951 \(0x1fffffffffffffff\);;
+     ad0:	3a 00 ea cf 00 00 80 17                         	fmulhw \$r58 = \$r58, -8589934592 \(0xfffffffe00000000\);;
 
-     adc:	3b f0 ea 4f                                     	fmulhw \$r58 = \$r59, -64 \(0xffffffc0\);;
+     ad8:	fb ae ea 5f                                     	fmulhw.rd.s \$r58 = \$r59, \$r59;;
 
-     ae0:	3b 00 ee cf 00 00 80 17                         	fmulhw \$r59 = \$r59, -8589934592 \(0xfffffffe00000000\);;
+     adc:	fc ff ed cf ff ff ff 97 ff ff ff 10             	fmulwc.c \$r59 = \$r60, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     ae8:	3c af f2 5f                                     	fmulhw.rd.s \$r60 = \$r60, \$r60;;
+     ae8:	3c f0 f1 4f                                     	fmulwc.c \$r60 = \$r60, -64 \(0xffffffc0\);;
 
-     aec:	fd ff f5 cf ff ff ff 97 ff ff ff 10             	fmulwc.c \$r61 = \$r61, 2305843009213693951 \(0x1fffffffffffffff\);;
+     aec:	3d 00 f5 cf 00 00 80 17                         	fmulwc.c \$r61 = \$r61, -8589934592 \(0xfffffffe00000000\);;
 
-     af8:	3e f0 f5 4f                                     	fmulwc.c \$r61 = \$r62, -64 \(0xffffffc0\);;
+     af4:	be 3f f5 5f                                     	fmulwc.c.rz \$r61 = \$r62, \$r62;;
 
-     afc:	3e 00 f9 cf 00 00 80 17                         	fmulwc.c \$r62 = \$r62, -8589934592 \(0xfffffffe00000000\);;
+     af8:	ff ff f9 ce ff ff ff 97 ff ff ff 10             	fmulwc \$r62 = \$r63, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     b04:	ff 3f fd 5f                                     	fmulwc.c.rz \$r63 = \$r63, \$r63;;
+     b04:	3f f0 fd 4e                                     	fmulwc \$r63 = \$r63, -64 \(0xffffffc0\);;
 
-     b08:	c0 ff 01 ce ff ff ff 97 ff ff ff 10             	fmulwc \$r0 = \$r0, 2305843009213693951 \(0x1fffffffffffffff\);;
+     b08:	00 00 01 ce 00 00 80 17                         	fmulwc \$r0 = \$r0, -8589934592 \(0xfffffffe00000000\);;
 
-     b14:	01 f0 01 4e                                     	fmulwc \$r0 = \$r1, -64 \(0xffffffc0\);;
+     b10:	41 c0 01 5e                                     	fmulwc.rna.s \$r0 = \$r1, \$r1;;
 
-     b18:	01 00 05 ce 00 00 80 17                         	fmulwc \$r1 = \$r1, -8589934592 \(0xfffffffe00000000\);;
+     b14:	c1 ff 57 c3 ff ff ff 97 ff ff ff 10             	fmulwdc.c \$r20r21 = \$r1, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     b20:	82 c0 09 5e                                     	fmulwc.rna.s \$r2 = \$r2, \$r2;;
+     b20:	02 f0 5f 43                                     	fmulwdc.c \$r22r23 = \$r2, -64 \(0xffffffc0\);;
 
-     b24:	c3 ff 57 c3 ff ff ff 97 ff ff ff 10             	fmulwdc.c \$r20r21 = \$r3, 2305843009213693951 \(0x1fffffffffffffff\);;
+     b24:	02 00 5f c3 00 00 80 17                         	fmulwdc.c \$r22r23 = \$r2, -8589934592 \(0xfffffffe00000000\);;
 
-     b30:	03 f0 5f 43                                     	fmulwdc.c \$r22r23 = \$r3, -64 \(0xffffffc0\);;
+     b2c:	c2 50 67 53                                     	fmulwdc.c.rnz \$r24r25 = \$r2, \$r3;;
 
-     b34:	03 00 5f c3 00 00 80 17                         	fmulwdc.c \$r22r23 = \$r3, -8589934592 \(0xfffffffe00000000\);;
+     b30:	c3 ff 67 c2 ff ff ff 97 ff ff ff 10             	fmulwdc \$r24r25 = \$r3, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     b3c:	04 51 67 53                                     	fmulwdc.c.rnz \$r24r25 = \$r4, \$r4;;
+     b3c:	03 f0 6f 42                                     	fmulwdc \$r26r27 = \$r3, -64 \(0xffffffc0\);;
 
-     b40:	c4 ff 67 c2 ff ff ff 97 ff ff ff 10             	fmulwdc \$r24r25 = \$r4, 2305843009213693951 \(0x1fffffffffffffff\);;
+     b40:	04 00 6f c2 00 00 80 17                         	fmulwdc \$r26r27 = \$r4, -8589934592 \(0xfffffffe00000000\);;
 
-     b4c:	05 f0 6f 42                                     	fmulwdc \$r26r27 = \$r5, -64 \(0xffffffc0\);;
+     b48:	04 e1 77 52                                     	fmulwdc.ro.s \$r28r29 = \$r4, \$r4;;
 
-     b50:	05 00 6f c2 00 00 80 17                         	fmulwdc \$r26r27 = \$r5, -8589934592 \(0xfffffffe00000000\);;
+     b4c:	c5 ff 77 c0 ff ff ff 97 ff ff ff 10             	fmulwdp \$r28r29 = \$r5, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     b58:	85 e1 77 52                                     	fmulwdc.ro.s \$r28r29 = \$r5, \$r6;;
+     b58:	05 f0 7f 40                                     	fmulwdp \$r30r31 = \$r5, -64 \(0xffffffc0\);;
 
-     b5c:	c6 ff 77 c0 ff ff ff 97 ff ff ff 10             	fmulwdp \$r28r29 = \$r6, 2305843009213693951 \(0x1fffffffffffffff\);;
+     b5c:	05 00 7f c0 00 00 80 17                         	fmulwdp \$r30r31 = \$r5, -8589934592 \(0xfffffffe00000000\);;
 
-     b68:	06 f0 7f 40                                     	fmulwdp \$r30r31 = \$r6, -64 \(0xffffffc0\);;
+     b64:	86 71 87 50                                     	fmulwdp \$r32r33 = \$r6, \$r6;;
 
-     b6c:	07 00 7f c0 00 00 80 17                         	fmulwdp \$r30r31 = \$r7, -8589934592 \(0xfffffffe00000000\);;
+     b68:	c7 ff 19 c9 ff ff ff 97 ff ff ff 10             	fmulwd \$r6 = \$r7, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     b74:	c7 71 87 50                                     	fmulwdp \$r32r33 = \$r7, \$r7;;
+     b74:	07 f0 1d 49                                     	fmulwd \$r7 = \$r7, -64 \(0xffffffc0\);;
 
-     b78:	c8 ff 21 c9 ff ff ff 97 ff ff ff 10             	fmulwd \$r8 = \$r8, 2305843009213693951 \(0x1fffffffffffffff\);;
+     b78:	08 00 21 c9 00 00 80 17                         	fmulwd \$r8 = \$r8, -8589934592 \(0xfffffffe00000000\);;
 
-     b84:	09 f0 21 49                                     	fmulwd \$r8 = \$r9, -64 \(0xffffffc0\);;
+     b80:	49 82 21 59                                     	fmulwd.rn.s \$r8 = \$r9, \$r9;;
 
-     b88:	09 00 25 c9 00 00 80 17                         	fmulwd \$r9 = \$r9, -8589934592 \(0xfffffffe00000000\);;
+     b84:	ca ff 25 ca ff ff ff 97 ff ff ff 10             	fmulwp \$r9 = \$r10, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     b90:	8a 82 29 59                                     	fmulwd.rn.s \$r10 = \$r10, \$r10;;
+     b90:	0a f0 29 4a                                     	fmulwp \$r10 = \$r10, -64 \(0xffffffc0\);;
 
-     b94:	cb ff 2d ca ff ff ff 97 ff ff ff 10             	fmulwp \$r11 = \$r11, 2305843009213693951 \(0x1fffffffffffffff\);;
+     b94:	0b 00 2d ca 00 00 80 17                         	fmulwp \$r11 = \$r11, -8589934592 \(0xfffffffe00000000\);;
 
-     ba0:	0c f0 2d 4a                                     	fmulwp \$r11 = \$r12, -64 \(0xffffffc0\);;
+     b9c:	0c 13 2d 5a                                     	fmulwp.ru \$r11 = \$r12, \$r12;;
 
-     ba4:	0d 00 31 ca 00 00 80 17                         	fmulwp \$r12 = \$r13, -8589934592 \(0xfffffffe00000000\);;
+     ba0:	a2 a8 87 5e                                     	fmulwq.rd.s \$r32r33 = \$r34r35, \$r34r35;;
 
-     bac:	8e 13 35 5a                                     	fmulwp.ru \$r13 = \$r14, \$r14;;
+     ba4:	cd ff 36 ce ff ff ff 97 ff ff ff 10             	fmulw \$r13 = \$r13, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     bb0:	a2 a8 87 5e                                     	fmulwq.rd.s \$r32r33 = \$r34r35, \$r34r35;;
+     bb0:	0e f0 3a 4e                                     	fmulw \$r14 = \$r14, -64 \(0xffffffc0\);;
 
-     bb4:	cf ff 3e ce ff ff ff 97 ff ff ff 10             	fmulw \$r15 = \$r15, 2305843009213693951 \(0x1fffffffffffffff\);;
+     bb4:	0f 00 3e ce 00 00 80 17                         	fmulw \$r15 = \$r15, -8589934592 \(0xfffffffe00000000\);;
 
-     bc0:	10 f0 42 4e                                     	fmulw \$r16 = \$r16, -64 \(0xffffffc0\);;
+     bbc:	10 34 42 5e                                     	fmulw.rz \$r16 = \$r16, \$r16;;
 
-     bc4:	11 00 42 ce 00 00 80 17                         	fmulw \$r16 = \$r17, -8589934592 \(0xfffffffe00000000\);;
+     bc0:	40 4c 10 07                                     	fnarrow44wh.rna.s \$a4 = \$a4a5;;
 
-     bcc:	91 34 46 5e                                     	fmulw.rz \$r17 = \$r17, \$r18;;
+     bc4:	24 65 47 7c                                     	fnarrowdwp.rnz \$r17 = \$r36r37;;
 
-     bd0:	40 4c 10 07                                     	fnarrow44wh.rna.s \$a4 = \$a4a5;;
+     bc8:	11 6e 47 78                                     	fnarrowdw.ro.s \$r17 = \$r17;;
 
-     bd4:	24 65 4b 7c                                     	fnarrowdwp.rnz \$r18 = \$r36r37;;
+     bcc:	24 67 4b 7e                                     	fnarrowwhq \$r18 = \$r36r37;;
 
-     bd8:	13 6e 4b 78                                     	fnarrowdw.ro.s \$r18 = \$r19;;
+     bd0:	12 68 4b 7a                                     	fnarrowwh.rn.s \$r18 = \$r18;;
 
-     bdc:	24 67 4f 7e                                     	fnarrowwhq \$r19 = \$r36r37;;
+     bd4:	13 20 4f 70                                     	fnegd \$r19 = \$r19;;
 
-     be0:	14 68 4f 7a                                     	fnarrowwh.rn.s \$r19 = \$r20;;
+     bd8:	14 20 4f 76                                     	fneghq \$r19 = \$r20;;
 
-     be4:	14 20 53 70                                     	fnegd \$r20 = \$r20;;
+     bdc:	14 20 53 74                                     	fnegwp \$r20 = \$r20;;
 
-     be8:	15 20 57 76                                     	fneghq \$r21 = \$r21;;
+     be0:	15 20 57 72                                     	fnegw \$r21 = \$r21;;
 
-     bec:	16 20 57 74                                     	fnegwp \$r21 = \$r22;;
+     be4:	16 61 57 72                                     	frecw.ru \$r21 = \$r22;;
 
-     bf0:	16 20 5b 72                                     	fnegw \$r22 = \$r22;;
+     be8:	16 6a 5b 73                                     	frsrw.rd.s \$r22 = \$r22;;
 
-     bf4:	17 61 5f 72                                     	frecw.ru \$r23 = \$r23;;
+     bec:	26 3a 9b 5f                                     	fsbfdc.c.rz \$r38r39 = \$r38r39, \$r40r41;;
 
-     bf8:	18 6a 5f 73                                     	frsrw.rd.s \$r23 = \$r24;;
+     bf0:	aa ca a3 5e                                     	fsbfdp.rna.s \$r40r41 = \$r42r43, \$r42r43;;
 
-     bfc:	26 3a 9b 5f                                     	fsbfdc.c.rz \$r38r39 = \$r38r39, \$r40r41;;
+     bf4:	ac 5b b3 5e                                     	fsbfdp.rnz \$r44r45 = \$r44r45, \$r46r47;;
 
-     c00:	aa ca a3 5e                                     	fsbfdp.rna.s \$r40r41 = \$r42r43, \$r42r43;;
+     bf8:	d7 ff 5e c4 ff ff ff 97 ff ff ff 10             	fsbfd \$r23 = \$r23, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     c04:	ac 5b b3 5e                                     	fsbfdp.rnz \$r44r45 = \$r44r45, \$r46r47;;
+     c04:	18 f0 5e 44                                     	fsbfd \$r23 = \$r24, -64 \(0xffffffc0\);;
 
-     c08:	d8 ff 62 c4 ff ff ff 97 ff ff ff 10             	fsbfd \$r24 = \$r24, 2305843009213693951 \(0x1fffffffffffffff\);;
+     c08:	18 00 62 c4 00 00 80 17                         	fsbfd \$r24 = \$r24, -8589934592 \(0xfffffffe00000000\);;
 
-     c14:	19 f0 66 44                                     	fsbfd \$r25 = \$r25, -64 \(0xffffffc0\);;
+     c10:	59 e6 66 54                                     	fsbfd.ro.s \$r25 = \$r25, \$r25;;
 
-     c18:	1a 00 66 c4 00 00 80 17                         	fsbfd \$r25 = \$r26, -8589934592 \(0xfffffffe00000000\);;
+     c14:	da ff 6a c6 ff ff ff 97 ff ff ff 10             	fsbfhq \$r26 = \$r26, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     c20:	da e6 6a 54                                     	fsbfd.ro.s \$r26 = \$r26, \$r27;;
+     c20:	1b f0 6a 46                                     	fsbfhq \$r26 = \$r27, -64 \(0xffffffc0\);;
 
-     c24:	db ff 6e c6 ff ff ff 97 ff ff ff 10             	fsbfhq \$r27 = \$r27, 2305843009213693951 \(0x1fffffffffffffff\);;
+     c24:	1b 00 6e c6 00 00 80 17                         	fsbfhq \$r27 = \$r27, -8589934592 \(0xfffffffe00000000\);;
 
-     c30:	1c f0 72 46                                     	fsbfhq \$r28 = \$r28, -64 \(0xffffffc0\);;
+     c2c:	1c 77 72 56                                     	fsbfhq \$r28 = \$r28, \$r28;;
 
-     c34:	1d 00 72 c6 00 00 80 17                         	fsbfhq \$r28 = \$r29, -8589934592 \(0xfffffffe00000000\);;
+     c30:	dd ff 76 c7 ff ff ff 97 ff ff ff 10             	fsbfwc.c \$r29 = \$r29, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     c3c:	9d 77 76 56                                     	fsbfhq \$r29 = \$r29, \$r30;;
+     c3c:	1e f0 76 47                                     	fsbfwc.c \$r29 = \$r30, -64 \(0xffffffc0\);;
 
-     c40:	de ff 7a c7 ff ff ff 97 ff ff ff 10             	fsbfwc.c \$r30 = \$r30, 2305843009213693951 \(0x1fffffffffffffff\);;
+     c40:	1e 00 7a c7 00 00 80 17                         	fsbfwc.c \$r30 = \$r30, -8589934592 \(0xfffffffe00000000\);;
 
-     c4c:	1f f0 7e 47                                     	fsbfwc.c \$r31 = \$r31, -64 \(0xffffffc0\);;
+     c48:	df 87 7e 57                                     	fsbfwc.c.rn.s \$r31 = \$r31, \$r31;;
 
-     c50:	20 00 7e c7 00 00 80 17                         	fsbfwc.c \$r31 = \$r32, -8589934592 \(0xfffffffe00000000\);;
+     c4c:	30 1c bf 5b                                     	fsbfwcp.c.ru \$r46r47 = \$r48r49, \$r48r49;;
 
-     c58:	60 88 82 57                                     	fsbfwc.c.rn.s \$r32 = \$r32, \$r33;;
+     c50:	32 ad cf 5a                                     	fsbfwq.rd.s \$r50r51 = \$r50r51, \$r52r53;;
 
-     c5c:	30 1c bf 5b                                     	fsbfwcp.c.ru \$r46r47 = \$r48r49, \$r48r49;;
+     c54:	20 38 82 55                                     	fsbfwp.rz \$r32 = \$r32, \$r32;;
 
-     c60:	32 ad cf 5a                                     	fsbfwq.rd.s \$r50r51 = \$r50r51, \$r52r53;;
+     c58:	e1 ff 86 c5 ff ff ff 97 ff ff ff 10             	fsbfwp \$r33 = \$r33, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     c64:	a1 38 86 55                                     	fsbfwp.rz \$r33 = \$r33, \$r34;;
+     c64:	22 f0 86 45                                     	fsbfwp \$r33 = \$r34, -64 \(0xffffffc0\);;
 
-     c68:	e2 ff 8a c5 ff ff ff 97 ff ff ff 10             	fsbfwp \$r34 = \$r34, 2305843009213693951 \(0x1fffffffffffffff\);;
+     c68:	22 00 8a c5 00 00 80 17                         	fsbfwp \$r34 = \$r34, -8589934592 \(0xfffffffe00000000\);;
 
-     c74:	23 f0 8e 45                                     	fsbfwp \$r35 = \$r35, -64 \(0xffffffc0\);;
+     c70:	e3 c8 8e 55                                     	fsbfwp.rna.s \$r35 = \$r35, \$r35;;
 
-     c78:	24 00 8e c5 00 00 80 17                         	fsbfwp \$r35 = \$r36, -8589934592 \(0xfffffffe00000000\);;
+     c74:	b6 5d d7 5a                                     	fsbfwq.rnz \$r52r53 = \$r54r55, \$r54r55;;
 
-     c80:	64 c9 92 55                                     	fsbfwp.rna.s \$r36 = \$r36, \$r37;;
+     c78:	e4 ff 92 cd ff ff ff 97 ff ff ff 10             	fsbfw \$r36 = \$r36, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     c84:	b6 5d d7 5a                                     	fsbfwq.rnz \$r52r53 = \$r54r55, \$r54r55;;
+     c84:	25 f0 92 4d                                     	fsbfw \$r36 = \$r37, -64 \(0xffffffc0\);;
 
-     c88:	e5 ff 96 cd ff ff ff 97 ff ff ff 10             	fsbfw \$r37 = \$r37, 2305843009213693951 \(0x1fffffffffffffff\);;
+     c88:	25 00 96 cd 00 00 80 17                         	fsbfw \$r37 = \$r37, -8589934592 \(0xfffffffe00000000\);;
 
-     c94:	26 f0 9a 4d                                     	fsbfw \$r38 = \$r38, -64 \(0xffffffc0\);;
+     c90:	a6 e9 9a 5d                                     	fsbfw.ro.s \$r38 = \$r38, \$r38;;
 
-     c98:	27 00 9a cd 00 00 80 17                         	fsbfw \$r38 = \$r39, -8589934592 \(0xfffffffe00000000\);;
+     c94:	00 47 10 07                                     	fscalewv \$a4 = \$a4;;
 
-     ca0:	27 ea 9e 5d                                     	fsbfw.ro.s \$r39 = \$r39, \$r40;;
+     c98:	38 58 9f 70                                     	fsdivd.s \$r39 = \$r56r57;;
 
-     ca4:	00 47 10 07                                     	fscalewv \$a4 = \$a4;;
+     c9c:	38 50 9f 74                                     	fsdivwp \$r39 = \$r56r57;;
 
-     ca8:	38 58 a3 70                                     	fsdivd.s \$r40 = \$r56r57;;
+     ca0:	3a 58 9f 72                                     	fsdivw.s \$r39 = \$r58r59;;
 
-     cac:	38 50 a3 74                                     	fsdivwp \$r40 = \$r56r57;;
+     ca4:	28 40 a3 70                                     	fsrecd \$r40 = \$r40;;
 
-     cb0:	3a 58 a7 72                                     	fsdivw.s \$r41 = \$r58r59;;
+     ca8:	29 48 a3 74                                     	fsrecwp.s \$r40 = \$r41;;
 
-     cb4:	29 40 a7 70                                     	fsrecd \$r41 = \$r41;;
+     cac:	29 40 a7 72                                     	fsrecw \$r41 = \$r41;;
 
-     cb8:	2a 48 ab 74                                     	fsrecwp.s \$r42 = \$r42;;
+     cb0:	2a 20 ab 78                                     	fsrsrd \$r42 = \$r42;;
 
-     cbc:	2b 40 ab 72                                     	fsrecw \$r42 = \$r43;;
+     cb4:	2b 20 ab 7c                                     	fsrsrwp \$r42 = \$r43;;
 
-     cc0:	2b 20 af 78                                     	fsrsrd \$r43 = \$r43;;
+     cb8:	2b 20 af 7a                                     	fsrsrw \$r43 = \$r43;;
 
-     cc4:	2c 20 b3 7c                                     	fsrsrwp \$r44 = \$r44;;
+     cbc:	2c 38 b3 7c                                     	fwidenlhwp.s \$r44 = \$r44;;
 
-     cc8:	2d 20 b3 7a                                     	fsrsrw \$r44 = \$r45;;
+     cc0:	2d 30 b3 7a                                     	fwidenlhw \$r44 = \$r45;;
 
-     ccc:	2d 38 b7 7c                                     	fwidenlhwp.s \$r45 = \$r45;;
+     cc4:	2d 38 b7 78                                     	fwidenlwd.s \$r45 = \$r45;;
 
-     cd0:	2e 30 bb 7a                                     	fwidenlhw \$r46 = \$r46;;
+     cc8:	2e 30 bb 7d                                     	fwidenmhwp \$r46 = \$r46;;
 
-     cd4:	2f 38 bb 78                                     	fwidenlwd.s \$r46 = \$r47;;
+     ccc:	2f 38 bb 7b                                     	fwidenmhw.s \$r46 = \$r47;;
 
-     cd8:	2f 30 bf 7d                                     	fwidenmhwp \$r47 = \$r47;;
+     cd0:	2f 30 bf 79                                     	fwidenmwd \$r47 = \$r47;;
 
-     cdc:	30 38 c3 7b                                     	fwidenmhw.s \$r48 = \$r48;;
+     cd4:	30 00 c4 0f                                     	get \$r48 = \$pc;;
 
-     ce0:	31 30 c3 79                                     	fwidenmwd \$r48 = \$r49;;
+     cd8:	30 00 c4 0f                                     	get \$r48 = \$pc;;
 
-     ce4:	31 00 c4 0f                                     	get \$r49 = \$pc;;
+     cdc:	00 00 80 17                                     	goto fe000cdc <main\+0xfe000cdc>;;
 
-     ce8:	31 00 c4 0f                                     	get \$r49 = \$pc;;
+     ce0:	f0 ff 5c bc ff ff ff 9f ff ff ff 18             	i1invals 2305843009213693951 \(0x1fffffffffffffff\)\[\$r48\];;
 
-     cec:	00 00 80 17                                     	goto fe000cec <main\+0xfe000cec>;;
+     cec:	71 4c 5e bc 00 00 00 98 00 00 80 1f             	i1invals.dlez \$r49\? -1125899906842624 \(0xfffc000000000000\)\[\$r49\];;
 
-     cf0:	f2 ff 5c bc ff ff ff 9f ff ff ff 18             	i1invals 2305843009213693951 \(0x1fffffffffffffff\)\[\$r50\];;
+     cf8:	72 5c 5e bc 00 00 80 1f                         	i1invals.dgtz \$r49\? -8388608 \(0xff800000\)\[\$r50\];;
 
-     cfc:	b2 4c 5e bc 00 00 00 98 00 00 80 1f             	i1invals.dlez \$r50\? -1125899906842624 \(0xfffc000000000000\)\[\$r50\];;
+     d00:	b2 6c 5e 3c                                     	i1invals.odd \$r50\? \[\$r50\];;
 
-     d08:	f3 5c 5e bc 00 00 80 1f                         	i1invals.dgtz \$r51\? -8388608 \(0xff800000\)\[\$r51\];;
+     d04:	f3 ec 5e 3c                                     	i1invals \$r51\[\$r51\];;
 
-     d10:	f4 6c 5e 3c                                     	i1invals.odd \$r51\? \[\$r52\];;
+     d08:	33 f0 5c 3c                                     	i1invals -64 \(0xffffffc0\)\[\$r51\];;
 
-     d14:	34 ed 5e 3c                                     	i1invals \$r52\[\$r52\];;
+     d0c:	34 00 5c bc 00 00 80 1f                         	i1invals -8589934592 \(0xfffffffe00000000\)\[\$r52\];;
 
-     d18:	35 f0 5c 3c                                     	i1invals -64 \(0xffffffc0\)\[\$r53\];;
+     d14:	00 00 9d 3f                                     	i1inval;;
 
-     d1c:	35 00 5c bc 00 00 80 1f                         	i1invals -8589934592 \(0xfffffffe00000000\)\[\$r53\];;
+     d18:	34 00 dc 0f                                     	icall \$r52;;
 
-     d24:	00 00 9d 3f                                     	i1inval;;
+     d1c:	34 00 cc 0f                                     	iget \$r52;;
 
-     d28:	35 00 dc 0f                                     	icall \$r53;;
+     d20:	35 00 d8 0f                                     	igoto \$r53;;
 
-     d2c:	36 00 cc 0f                                     	iget \$r54;;
+     d24:	f5 71 d7 60                                     	insf \$r53 = \$r53, 7 \(0x7\), 7 \(0x7\);;
 
-     d30:	36 00 d8 0f                                     	igoto \$r54;;
+     d28:	f6 ff d8 ea ff ff ff 87 ff ff ff 00             	iord \$r54 = \$r54, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     d34:	f7 71 db 60                                     	insf \$r54 = \$r55, 7 \(0x7\), 7 \(0x7\);;
+     d34:	f7 0d d9 7a                                     	iord \$r54 = \$r55, \$r55;;
 
-     d38:	f7 ff dc ea ff ff ff 87 ff ff ff 00             	iord \$r55 = \$r55, 2305843009213693951 \(0x1fffffffffffffff\);;
+     d38:	38 f0 dc 6a                                     	iord \$r55 = \$r56, -64 \(0xffffffc0\);;
 
-     d44:	38 0e e1 7a                                     	iord \$r56 = \$r56, \$r56;;
+     d3c:	38 00 e0 ea 00 00 80 07                         	iord \$r56 = \$r56, -8589934592 \(0xfffffffe00000000\);;
 
-     d48:	39 f0 e4 6a                                     	iord \$r57 = \$r57, -64 \(0xffffffc0\);;
+     d44:	f9 ff e4 ef ff ff ff 87 ff ff ff 00             	iornd \$r57 = \$r57, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-     d4c:	3a 00 e4 ea 00 00 80 07                         	iord \$r57 = \$r58, -8589934592 \(0xfffffffe00000000\);;
+     d50:	ba 0e e5 7f                                     	iornd \$r57 = \$r58, \$r58;;
 
-     d54:	fa ff e8 ea ff ff 07 00                         	iord \$r58 = \$r58, 536870911 \(0x1fffffff\);;
+     d54:	3b f0 e8 6f                                     	iornd \$r58 = \$r59, -64 \(0xffffffc0\);;
 
-     d5c:	fb ff ec ef ff ff ff 87 ff ff ff 00             	iornd \$r59 = \$r59, 2305843009213693951 \(0x1fffffffffffffff\);;
+     d58:	3b 00 ec ef 00 00 80 07                         	iornd \$r59 = \$r59, -8589934592 \(0xfffffffe00000000\);;
 
-     d68:	3c 0f ed 7f                                     	iornd \$r59 = \$r60, \$r60;;
+     d60:	3c 1f f1 7f                                     	iornw \$r60 = \$r60, \$r60;;
 
-     d6c:	3d f0 f0 6f                                     	iornd \$r60 = \$r61, -64 \(0xffffffc0\);;
+     d64:	3d f0 f4 7f                                     	iornw \$r61 = \$r61, -64 \(0xffffffc0\);;
 
-     d70:	3d 00 f4 ef 00 00 80 07                         	iornd \$r61 = \$r61, -8589934592 \(0xfffffffe00000000\);;
+     d68:	3e 00 f4 ff 00 00 80 07                         	iornw \$r61 = \$r62, -8589934592 \(0xfffffffe00000000\);;
 
-     d78:	fe 0f f9 ff ff ff ff 00                         	iornd \$r62 = \$r62, 536870911 \(0x1fffffff\).@;;
+     d70:	fe 1f f9 7a                                     	iorw \$r62 = \$r62, \$r63;;
 
-     d80:	ff 1f f9 7f                                     	iornw \$r62 = \$r63, \$r63;;
+     d74:	3f f0 fc 7a                                     	iorw \$r63 = \$r63, -64 \(0xffffffc0\);;
 
-     d84:	00 f0 fc 7f                                     	iornw \$r63 = \$r0, -64 \(0xffffffc0\);;
+     d78:	00 00 00 fa 00 00 80 07                         	iorw \$r0 = \$r0, -8589934592 \(0xfffffffe00000000\);;
 
-     d88:	00 00 00 ff 00 00 80 07                         	iornw \$r0 = \$r0, -8589934592 \(0xfffffffe00000000\);;
+     d80:	41 40 01 7c                                     	landd \$r0 = \$r1, \$r1;;
 
-     d90:	41 10 05 7a                                     	iorw \$r1 = \$r1, \$r1;;
+     d84:	c2 47 05 fc ff ff ff 00                         	landd \$r1 = \$r2, 536870911 \(0x1fffffff\);;
 
-     d94:	02 f0 08 7a                                     	iorw \$r2 = \$r2, -64 \(0xffffffc0\);;
+     d8c:	c2 70 09 7c                                     	landhq \$r2 = \$r2, \$r3;;
 
-     d98:	03 00 08 fa 00 00 80 07                         	iorw \$r2 = \$r3, -8589934592 \(0xfffffffe00000000\);;
+     d90:	c3 7f 0d fc ff ff ff 00                         	landhq \$r3 = \$r3, 536870911 \(0x1fffffff\).@;;
 
-     da0:	03 41 0d 7c                                     	landd \$r3 = \$r3, \$r4;;
+     d98:	04 61 11 7c                                     	landwp \$r4 = \$r4, \$r4;;
 
-     da4:	c4 47 11 fc ff ff ff 00                         	landd \$r4 = \$r4, 536870911 \(0x1fffffff\);;
+     d9c:	c5 67 15 fc ff ff ff 00                         	landwp \$r5 = \$r5, 536870911 \(0x1fffffff\);;
 
-     dac:	45 71 15 7c                                     	landhq \$r5 = \$r5, \$r5;;
+     da4:	86 51 15 7c                                     	landw \$r5 = \$r6, \$r6;;
 
-     db0:	c6 7f 19 fc ff ff ff 00                         	landhq \$r6 = \$r6, 536870911 \(0x1fffffff\).@;;
+     da8:	c7 57 19 fc ff ff ff 00                         	landw \$r6 = \$r7, 536870911 \(0x1fffffff\);;
 
-     db8:	c7 61 19 7c                                     	landwp \$r6 = \$r7, \$r7;;
+     db0:	c8 e1 1e 24                                     	lbs \$r7 = \$r7\[\$r8\];;
 
-     dbc:	c8 67 1d fc ff ff ff 00                         	landwp \$r7 = \$r8, 536870911 \(0x1fffffff\);;
+     db4:	09 72 22 a5 00 00 00 98 00 00 80 1f             	lbs.s.even \$r8\? \$r8 = -1125899906842624 \(0xfffc000000000000\)\[\$r9\];;
 
-     dc4:	48 52 21 7c                                     	landw \$r8 = \$r8, \$r9;;
+     dc0:	4a 82 26 a6 00 00 80 1f                         	lbs.u.wnez \$r9\? \$r9 = -8388608 \(0xff800000\)\[\$r10\];;
 
-     dc8:	c9 57 25 fc ff ff ff 00                         	landw \$r9 = \$r9, 536870911 \(0x1fffffff\);;
+     dc8:	8b 92 2a 27                                     	lbs.us.weqz \$r10\? \$r10 = \[\$r11\];;
 
-     dd0:	8a e2 2a 24                                     	lbs \$r10 = \$r10\[\$r10\];;
+     dcc:	cb ff 2c a4 ff ff ff 9f ff ff ff 18             	lbs \$r11 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r11\];;
 
-     dd4:	cb 72 2e a5 00 00 00 98 00 00 80 1f             	lbs.s.even \$r11\? \$r11 = -1125899906842624 \(0xfffc000000000000\)\[\$r11\];;
+     dd8:	0c f0 30 25                                     	lbs.s \$r12 = -64 \(0xffffffc0\)\[\$r12\];;
 
-     de0:	0d 83 32 a6 00 00 80 1f                         	lbs.u.wnez \$r12\? \$r12 = -8388608 \(0xff800000\)\[\$r13\];;
+     ddc:	0d 00 34 a6 00 00 80 1f                         	lbs.u \$r13 = -8589934592 \(0xfffffffe00000000\)\[\$r13\];;
 
-     de8:	4e 93 3a 27                                     	lbs.us.weqz \$r13\? \$r14 = \[\$r14\];;
+     de4:	8f f3 3a 23                                     	lbz.us.xs \$r14 = \$r14\[\$r15\];;
 
-     dec:	cf ff 3c a4 ff ff ff 9f ff ff ff 18             	lbs \$r15 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r15\];;
+     de8:	d0 a3 42 a0 00 00 00 98 00 00 80 1f             	lbz.wltz \$r15\? \$r16 = -1125899906842624 \(0xfffc000000000000\)\[\$r16\];;
 
-     df8:	10 f0 40 25                                     	lbs.s \$r16 = -64 \(0xffffffc0\)\[\$r16\];;
+     df4:	11 b4 46 a1 00 00 80 1f                         	lbz.s.wgez \$r16\? \$r17 = -8388608 \(0xff800000\)\[\$r17\];;
 
-     dfc:	11 00 40 a6 00 00 80 1f                         	lbs.u \$r16 = -8589934592 \(0xfffffffe00000000\)\[\$r17\];;
+     dfc:	52 c4 4a 22                                     	lbz.u.wlez \$r17\? \$r18 = \[\$r18\];;
 
-     e04:	52 f4 46 23                                     	lbz.us.xs \$r17 = \$r17\[\$r18\];;
+     e00:	d3 ff 48 a3 ff ff ff 9f ff ff ff 18             	lbz.us \$r18 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r19\];;
 
-     e08:	93 a4 4a a0 00 00 00 98 00 00 80 1f             	lbz.wltz \$r18\? \$r18 = -1125899906842624 \(0xfffc000000000000\)\[\$r19\];;
+     e0c:	13 f0 4c 20                                     	lbz \$r19 = -64 \(0xffffffc0\)\[\$r19\];;
 
-     e14:	d4 b4 4e a1 00 00 80 1f                         	lbz.s.wgez \$r19\? \$r19 = -8388608 \(0xff800000\)\[\$r20\];;
+     e10:	14 00 50 a1 00 00 80 1f                         	lbz.s \$r20 = -8589934592 \(0xfffffffe00000000\)\[\$r20\];;
 
-     e1c:	15 c5 52 22                                     	lbz.u.wlez \$r20\? \$r20 = \[\$r21\];;
+     e18:	55 e5 52 3a                                     	ld.u \$r20 = \$r21\[\$r21\];;
 
-     e20:	d5 ff 54 a3 ff ff ff 9f ff ff ff 18             	lbz.us \$r21 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r21\];;
+     e1c:	56 d5 5a bb 00 00 00 98 00 00 80 1f             	ld.us.wgtz \$r21\? \$r22 = -1125899906842624 \(0xfffc000000000000\)\[\$r22\];;
 
-     e2c:	16 f0 58 20                                     	lbz \$r22 = -64 \(0xffffffc0\)\[\$r22\];;
+     e28:	97 05 5e b8 00 00 80 1f                         	ld.dnez \$r22\? \$r23 = -8388608 \(0xff800000\)\[\$r23\];;
 
-     e30:	17 00 58 a1 00 00 80 1f                         	lbz.s \$r22 = -8589934592 \(0xfffffffe00000000\)\[\$r23\];;
+     e30:	d8 15 62 39                                     	ld.s.deqz \$r23\? \$r24 = \[\$r24\];;
 
-     e38:	d8 e5 5e 3a                                     	ld.u \$r23 = \$r23\[\$r24\];;
+     e34:	d9 ff 60 ba ff ff ff 9f ff ff ff 18             	ld.u \$r24 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r25\];;
 
-     e3c:	19 d6 62 bb 00 00 00 98 00 00 80 1f             	ld.us.wgtz \$r24\? \$r24 = -1125899906842624 \(0xfffc000000000000\)\[\$r25\];;
+     e40:	19 f0 64 3b                                     	ld.us \$r25 = -64 \(0xffffffc0\)\[\$r25\];;
 
-     e48:	5a 06 66 b8 00 00 80 1f                         	ld.dnez \$r25\? \$r25 = -8388608 \(0xff800000\)\[\$r26\];;
+     e44:	1a 00 68 b8 00 00 80 1f                         	ld \$r26 = -8589934592 \(0xfffffffe00000000\)\[\$r26\];;
 
-     e50:	9b 16 6a 39                                     	ld.s.deqz \$r26\? \$r26 = \[\$r27\];;
+     e4c:	db f6 6a 2d                                     	lhs.s.xs \$r26 = \$r27\[\$r27\];;
 
-     e54:	db ff 6c ba ff ff ff 9f ff ff ff 18             	ld.u \$r27 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r27\];;
+     e50:	dc 26 72 ae 00 00 00 98 00 00 80 1f             	lhs.u.dltz \$r27\? \$r28 = -1125899906842624 \(0xfffc000000000000\)\[\$r28\];;
 
-     e60:	1c f0 70 3b                                     	ld.us \$r28 = -64 \(0xffffffc0\)\[\$r28\];;
+     e5c:	1d 37 76 af 00 00 80 1f                         	lhs.us.dgez \$r28\? \$r29 = -8388608 \(0xff800000\)\[\$r29\];;
 
-     e64:	1d 00 70 b8 00 00 80 1f                         	ld \$r28 = -8589934592 \(0xfffffffe00000000\)\[\$r29\];;
+     e64:	5e 47 7a 2c                                     	lhs.dlez \$r29\? \$r30 = \[\$r30\];;
 
-     e6c:	5e f7 76 2d                                     	lhs.s.xs \$r29 = \$r29\[\$r30\];;
+     e68:	df ff 78 ad ff ff ff 9f ff ff ff 18             	lhs.s \$r30 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r31\];;
 
-     e70:	9f 27 7a ae 00 00 00 98 00 00 80 1f             	lhs.u.dltz \$r30\? \$r30 = -1125899906842624 \(0xfffc000000000000\)\[\$r31\];;
+     e74:	1f f0 7c 2e                                     	lhs.u \$r31 = -64 \(0xffffffc0\)\[\$r31\];;
 
-     e7c:	e0 37 7e af 00 00 80 1f                         	lhs.us.dgez \$r31\? \$r31 = -8388608 \(0xff800000\)\[\$r32\];;
+     e78:	20 00 80 af 00 00 80 1f                         	lhs.us \$r32 = -8589934592 \(0xfffffffe00000000\)\[\$r32\];;
 
-     e84:	21 48 82 2c                                     	lhs.dlez \$r32\? \$r32 = \[\$r33\];;
+     e80:	61 e8 82 28                                     	lhz \$r32 = \$r33\[\$r33\];;
 
-     e88:	e1 ff 84 ad ff ff ff 9f ff ff ff 18             	lhs.s \$r33 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r33\];;
+     e84:	62 58 8a a9 00 00 00 98 00 00 80 1f             	lhz.s.dgtz \$r33\? \$r34 = -1125899906842624 \(0xfffc000000000000\)\[\$r34\];;
 
-     e94:	22 f0 88 2e                                     	lhs.u \$r34 = -64 \(0xffffffc0\)\[\$r34\];;
+     e90:	a3 68 8e aa 00 00 80 1f                         	lhz.u.odd \$r34\? \$r35 = -8388608 \(0xff800000\)\[\$r35\];;
 
-     e98:	23 00 88 af 00 00 80 1f                         	lhs.us \$r34 = -8589934592 \(0xfffffffe00000000\)\[\$r35\];;
+     e98:	e4 78 92 2b                                     	lhz.us.even \$r35\? \$r36 = \[\$r36\];;
 
-     ea0:	e4 e8 8e 28                                     	lhz \$r35 = \$r35\[\$r36\];;
+     e9c:	e5 ff 90 a8 ff ff ff 9f ff ff ff 18             	lhz \$r36 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r37\];;
 
-     ea4:	25 59 92 a9 00 00 00 98 00 00 80 1f             	lhz.s.dgtz \$r36\? \$r36 = -1125899906842624 \(0xfffc000000000000\)\[\$r37\];;
+     ea8:	25 f0 94 29                                     	lhz.s \$r37 = -64 \(0xffffffc0\)\[\$r37\];;
 
-     eb0:	66 69 96 aa 00 00 80 1f                         	lhz.u.odd \$r37\? \$r37 = -8388608 \(0xff800000\)\[\$r38\];;
+     eac:	26 00 98 aa 00 00 80 1f                         	lhz.u \$r38 = -8589934592 \(0xfffffffe00000000\)\[\$r38\];;
 
-     eb8:	a7 79 9a 2b                                     	lhz.us.even \$r38\? \$r38 = \[\$r39\];;
+     eb4:	e7 49 99 7e                                     	liord \$r38 = \$r39, \$r39;;
 
-     ebc:	e7 ff 9c a8 ff ff ff 9f ff ff ff 18             	lhz \$r39 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r39\];;
+     eb8:	e8 4f 9d fe ff ff ff 00                         	liord \$r39 = \$r40, 536870911 \(0x1fffffff\).@;;
 
-     ec8:	28 f0 a0 29                                     	lhz.s \$r40 = -64 \(0xffffffc0\)\[\$r40\];;
+     ec0:	68 7a a1 7e                                     	liorhq \$r40 = \$r40, \$r41;;
 
-     ecc:	29 00 a0 aa 00 00 80 1f                         	lhz.u \$r40 = -8589934592 \(0xfffffffe00000000\)\[\$r41\];;
+     ec4:	e9 77 a5 fe ff ff ff 00                         	liorhq \$r41 = \$r41, 536870911 \(0x1fffffff\);;
 
-     ed4:	a9 4a a5 7d                                     	lnandd \$r41 = \$r41, \$r42;;
+     ecc:	aa 6a a9 7e                                     	liorwp \$r42 = \$r42, \$r42;;
 
-     ed8:	ea 4f a9 fd ff ff ff 00                         	lnandd \$r42 = \$r42, 536870911 \(0x1fffffff\).@;;
+     ed0:	eb 6f ad fe ff ff ff 00                         	liorwp \$r43 = \$r43, 536870911 \(0x1fffffff\).@;;
 
-     ee0:	eb 7a ad 7d                                     	lnandhq \$r43 = \$r43, \$r43;;
+     ed8:	2c 5b ad 7e                                     	liorw \$r43 = \$r44, \$r44;;
 
-     ee4:	ec 77 b1 fd ff ff ff 00                         	lnandhq \$r44 = \$r44, 536870911 \(0x1fffffff\);;
+     edc:	ed 57 b1 fe ff ff ff 00                         	liorw \$r44 = \$r45, 536870911 \(0x1fffffff\);;
 
-     eec:	6d 6b b1 7d                                     	lnandwp \$r44 = \$r45, \$r45;;
+     ee4:	ad 4b b5 7d                                     	lnandd \$r45 = \$r45, \$r46;;
 
-     ef0:	ee 6f b5 fd ff ff ff 00                         	lnandwp \$r45 = \$r46, 536870911 \(0x1fffffff\).@;;
+     ee8:	ee 47 b9 fd ff ff ff 00                         	lnandd \$r46 = \$r46, 536870911 \(0x1fffffff\);;
 
-     ef8:	ee 5b b9 7d                                     	lnandw \$r46 = \$r46, \$r47;;
+     ef0:	ef 7b bd 7d                                     	lnandhq \$r47 = \$r47, \$r47;;
 
-     efc:	ef 57 bd fd ff ff ff 00                         	lnandw \$r47 = \$r47, 536870911 \(0x1fffffff\);;
+     ef4:	f0 7f c1 fd ff ff ff 00                         	lnandhq \$r48 = \$r48, 536870911 \(0x1fffffff\).@;;
 
-     f04:	30 4c c1 7f                                     	lnord \$r48 = \$r48, \$r48;;
+     efc:	71 6c c1 7d                                     	lnandwp \$r48 = \$r49, \$r49;;
 
-     f08:	f1 47 c5 ff ff ff ff 00                         	lnord \$r49 = \$r49, 536870911 \(0x1fffffff\);;
+     f00:	f2 67 c5 fd ff ff ff 00                         	lnandwp \$r49 = \$r50, 536870911 \(0x1fffffff\);;
 
-     f10:	b2 7c c5 7f                                     	lnorhq \$r49 = \$r50, \$r50;;
+     f08:	f2 5c c9 7d                                     	lnandw \$r50 = \$r50, \$r51;;
 
-     f14:	f3 7f c9 ff ff ff ff 00                         	lnorhq \$r50 = \$r51, 536870911 \(0x1fffffff\).@;;
+     f0c:	f3 57 cd fd ff ff ff 00                         	lnandw \$r51 = \$r51, 536870911 \(0x1fffffff\);;
 
-     f1c:	33 6d cd 7f                                     	lnorwp \$r51 = \$r51, \$r52;;
+     f14:	34 4d d1 7f                                     	lniord \$r52 = \$r52, \$r52;;
 
-     f20:	f4 67 d1 ff ff ff ff 00                         	lnorwp \$r52 = \$r52, 536870911 \(0x1fffffff\);;
+     f18:	f5 4f d5 ff ff ff ff 00                         	lniord \$r53 = \$r53, 536870911 \(0x1fffffff\).@;;
 
-     f28:	75 5d d5 7f                                     	lnorw \$r53 = \$r53, \$r53;;
+     f20:	b6 7d d5 7f                                     	lniorhq \$r53 = \$r54, \$r54;;
 
-     f2c:	f6 57 d9 ff ff ff ff 00                         	lnorw \$r54 = \$r54, 536870911 \(0x1fffffff\);;
+     f24:	f7 77 d9 ff ff ff ff 00                         	lniorhq \$r54 = \$r55, 536870911 \(0x1fffffff\);;
 
-     f34:	36 00 78 0f                                     	loopdo \$r54, ffff8f34 <main\+0xffff8f34>;;
+     f2c:	37 6e dd 7f                                     	lniorwp \$r55 = \$r55, \$r56;;
 
-     f38:	f7 4d dd 7e                                     	lord \$r55 = \$r55, \$r55;;
+     f30:	f8 6f e1 ff ff ff ff 00                         	lniorwp \$r56 = \$r56, 536870911 \(0x1fffffff\).@;;
 
-     f3c:	f8 4f e1 fe ff ff ff 00                         	lord \$r56 = \$r56, 536870911 \(0x1fffffff\).@;;
+     f38:	79 5e e5 7f                                     	lniorw \$r57 = \$r57, \$r57;;
 
-     f44:	79 7e e1 7e                                     	lorhq \$r56 = \$r57, \$r57;;
+     f3c:	fa 57 e9 ff ff ff ff 00                         	lniorw \$r58 = \$r58, 536870911 \(0x1fffffff\);;
 
-     f48:	fa 77 e5 fe ff ff ff 00                         	lorhq \$r57 = \$r58, 536870911 \(0x1fffffff\);;
+     f44:	fb 4e e9 7f                                     	lniord \$r58 = \$r59, \$r59;;
 
-     f50:	fa 6e e9 7e                                     	lorwp \$r58 = \$r58, \$r59;;
+     f48:	fc 47 ed ff ff ff ff 00                         	lniord \$r59 = \$r60, 536870911 \(0x1fffffff\);;
 
-     f54:	fb 6f ed fe ff ff ff 00                         	lorwp \$r59 = \$r59, 536870911 \(0x1fffffff\).@;;
+     f50:	7c 7f f1 7f                                     	lniorhq \$r60 = \$r60, \$r61;;
 
-     f5c:	3c 5f f1 7e                                     	lorw \$r60 = \$r60, \$r60;;
+     f54:	fd 7f f5 ff ff ff ff 00                         	lniorhq \$r61 = \$r61, 536870911 \(0x1fffffff\).@;;
 
-     f60:	fd 57 f5 fe ff ff ff 00                         	lorw \$r61 = \$r61, 536870911 \(0x1fffffff\);;
+     f5c:	be 6f f9 7f                                     	lniorwp \$r62 = \$r62, \$r62;;
 
-     f68:	7e ff 66 3f                                     	lo.us.xs \$r24r25r26r27 = \$r61\[\$r62\];;
+     f60:	ff 67 fd ff ff ff ff 00                         	lniorwp \$r63 = \$r63, 536870911 \(0x1fffffff\);;
 
-     f6c:	be 8f 76 bc 00 00 00 98 00 00 80 1f             	lo.wnez \$r62\? \$r28r29r30r31 = -1125899906842624 \(0xfffc000000000000\)\[\$r62\];;
+     f68:	00 50 fd 7f                                     	lniorw \$r63 = \$r0, \$r0;;
 
-     f78:	ff 9f 86 bd 00 00 80 1f                         	lo.s.weqz \$r63\? \$r32r33r34r35 = -8388608 \(0xff800000\)\[\$r63\];;
+     f6c:	c1 57 01 ff ff ff ff 00                         	lniorw \$r0 = \$r1, 536870911 \(0x1fffffff\);;
 
-     f80:	c0 af 96 3e                                     	lo.u.wltz \$r63\? \$r36r37r38r39 = \[\$r0\];;
+     f74:	01 00 78 0f                                     	loopdo \$r1, ffff8f74 <main\+0xffff8f74>;;
 
-     f84:	c0 ff a4 bf ff ff ff 9f ff ff ff 18             	lo.us \$r40r41r42r43 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r0\];;
+     f78:	82 40 05 7e                                     	liord \$r1 = \$r2, \$r2;;
 
-     f90:	00 f0 b4 3c                                     	lo \$r44r45r46r47 = -64 \(0xffffffc0\)\[\$r0\];;
+     f7c:	c3 4f 09 fe ff ff ff 00                         	liord \$r2 = \$r3, 536870911 \(0x1fffffff\).@;;
 
-     f94:	01 00 c4 bd 00 00 80 1f                         	lo.s \$r48r49r50r51 = -8589934592 \(0xfffffffe00000000\)\[\$r1\];;
+     f84:	03 71 0d 7e                                     	liorhq \$r3 = \$r3, \$r4;;
 
-     f9c:	41 e0 ea 3e                                     	lq.u \$r58r59 = \$r1\[\$r1\];;
+     f88:	c4 77 11 fe ff ff ff 00                         	liorhq \$r4 = \$r4, 536870911 \(0x1fffffff\);;
 
-     fa0:	82 b0 f2 bf 00 00 00 98 00 00 80 1f             	lq.us.wgez \$r2\? \$r60r61 = -1125899906842624 \(0xfffc000000000000\)\[\$r2\];;
+     f90:	45 61 15 7e                                     	liorwp \$r5 = \$r5, \$r5;;
 
-     fac:	83 c0 f2 bc 00 00 80 1f                         	lq.wlez \$r2\? \$r60r61 = -8388608 \(0xff800000\)\[\$r3\];;
+     f94:	c6 6f 19 fe ff ff ff 00                         	liorwp \$r6 = \$r6, 536870911 \(0x1fffffff\).@;;
 
-     fb4:	c3 d0 fa 3d                                     	lq.s.wgtz \$r3\? \$r62r63 = \[\$r3\];;
+     f9c:	c7 51 19 7e                                     	liorw \$r6 = \$r7, \$r7;;
 
-     fb8:	c4 ff f8 be ff ff ff 9f ff ff ff 18             	lq.u \$r62r63 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r4\];;
+     fa0:	c8 57 1d fe ff ff ff 00                         	liorw \$r7 = \$r8, 536870911 \(0x1fffffff\);;
 
-     fc4:	04 f0 00 3f                                     	lq.us \$r0r1 = -64 \(0xffffffc0\)\[\$r4\];;
+     fa8:	08 f2 66 3f                                     	lo.us.xs \$r24r25r26r27 = \$r8\[\$r8\];;
 
-     fc8:	04 00 00 bc 00 00 80 1f                         	lq \$r0r1 = -8589934592 \(0xfffffffe00000000\)\[\$r4\];;
+     fac:	49 82 76 bc 00 00 00 98 00 00 80 1f             	lo.wnez \$r9\? \$r28r29r30r31 = -1125899906842624 \(0xfffc000000000000\)\[\$r9\];;
 
-     fd0:	45 f1 16 35                                     	lws.s.xs \$r5 = \$r5\[\$r5\];;
+     fb8:	4a 92 86 bd 00 00 80 1f                         	lo.s.weqz \$r9\? \$r32r33r34r35 = -8388608 \(0xff800000\)\[\$r10\];;
 
-     fd4:	86 01 1a b6 00 00 00 98 00 00 80 1f             	lws.u.dnez \$r6\? \$r6 = -1125899906842624 \(0xfffc000000000000\)\[\$r6\];;
+     fc0:	8a a2 96 3e                                     	lo.u.wltz \$r10\? \$r36r37r38r39 = \[\$r10\];;
 
-     fe0:	c7 11 1e b7 00 00 80 1f                         	lws.us.deqz \$r7\? \$r7 = -8388608 \(0xff800000\)\[\$r7\];;
+     fc4:	cb ff a4 bf ff ff ff 9f ff ff ff 18             	lo.us \$r40r41r42r43 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r11\];;
 
-     fe8:	08 22 22 34                                     	lws.dltz \$r8\? \$r8 = \[\$r8\];;
+     fd0:	0b f0 b4 3c                                     	lo \$r44r45r46r47 = -64 \(0xffffffc0\)\[\$r11\];;
 
-     fec:	c9 ff 24 b5 ff ff ff 9f ff ff ff 18             	lws.s \$r9 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r9\];;
+     fd4:	0b 00 c4 bd 00 00 80 1f                         	lo.s \$r48r49r50r51 = -8589934592 \(0xfffffffe00000000\)\[\$r11\];;
 
-     ff8:	0a f0 24 36                                     	lws.u \$r9 = -64 \(0xffffffc0\)\[\$r10\];;
+     fdc:	0c e3 ea 3e                                     	lq.u \$r58r59 = \$r12\[\$r12\];;
 
-     ffc:	0a 00 28 b7 00 00 80 1f                         	lws.us \$r10 = -8589934592 \(0xfffffffe00000000\)\[\$r10\];;
+     fe0:	4d b3 f2 bf 00 00 00 98 00 00 80 1f             	lq.us.wgez \$r13\? \$r60r61 = -1125899906842624 \(0xfffc000000000000\)\[\$r13\];;
 
-    1004:	cb e2 2e 30                                     	lwz \$r11 = \$r11\[\$r11\];;
+     fec:	8e c3 f2 bc 00 00 80 1f                         	lq.wlez \$r14\? \$r60r61 = -8388608 \(0xff800000\)\[\$r14\];;
 
-    1008:	0d 33 32 b1 00 00 00 98 00 00 80 1f             	lwz.s.dgez \$r12\? \$r12 = -1125899906842624 \(0xfffc000000000000\)\[\$r13\];;
+     ff4:	cf d3 fa 3d                                     	lq.s.wgtz \$r15\? \$r62r63 = \[\$r15\];;
 
-    1014:	4e 43 3a b2 00 00 80 1f                         	lwz.u.dlez \$r13\? \$r14 = -8388608 \(0xff800000\)\[\$r14\];;
+     ff8:	d0 ff f8 be ff ff ff 9f ff ff ff 18             	lq.u \$r62r63 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r16\];;
 
-    101c:	d0 53 3e 33                                     	lwz.us.dgtz \$r15\? \$r15 = \[\$r16\];;
+    1004:	10 f0 00 3f                                     	lq.us \$r0r1 = -64 \(0xffffffc0\)\[\$r16\];;
 
-    1020:	d0 ff 40 b0 ff ff ff 9f ff ff ff 18             	lwz \$r16 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r16\];;
+    1008:	10 00 00 bc 00 00 80 1f                         	lq \$r0r1 = -8589934592 \(0xfffffffe00000000\)\[\$r16\];;
 
-    102c:	11 f0 44 31                                     	lwz.s \$r17 = -64 \(0xffffffc0\)\[\$r17\];;
+    1010:	51 f4 46 35                                     	lws.s.xs \$r17 = \$r17\[\$r17\];;
 
-    1030:	12 00 44 b2 00 00 80 1f                         	lwz.u \$r17 = -8589934592 \(0xfffffffe00000000\)\[\$r18\];;
+    1014:	92 04 4a b6 00 00 00 98 00 00 80 1f             	lws.u.dnez \$r18\? \$r18 = -1125899906842624 \(0xfffc000000000000\)\[\$r18\];;
 
-    1038:	d2 ff 08 c8 ff ff ff 97 ff ff ff 10             	madddt \$r2r3 = \$r18, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1020:	d3 14 4e b7 00 00 80 1f                         	lws.us.deqz \$r19\? \$r19 = -8388608 \(0xff800000\)\[\$r19\];;
 
-    1044:	d2 14 08 58                                     	madddt \$r2r3 = \$r18, \$r19;;
+    1028:	14 25 52 34                                     	lws.dltz \$r20\? \$r20 = \[\$r20\];;
 
-    1048:	13 f0 10 48                                     	madddt \$r4r5 = \$r19, -64 \(0xffffffc0\);;
+    102c:	d5 ff 54 b5 ff ff ff 9f ff ff ff 18             	lws.s \$r21 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r21\];;
 
-    104c:	13 00 10 c8 00 00 80 17                         	madddt \$r4r5 = \$r19, -8589934592 \(0xfffffffe00000000\);;
+    1038:	16 f0 54 36                                     	lws.u \$r21 = -64 \(0xffffffc0\)\[\$r22\];;
 
-    1054:	d4 ff 50 c0 ff ff ff 97 ff ff ff 10             	maddd \$r20 = \$r20, 2305843009213693951 \(0x1fffffffffffffff\);;
+    103c:	16 00 58 b7 00 00 80 1f                         	lws.us \$r22 = -8589934592 \(0xfffffffe00000000\)\[\$r22\];;
 
-    1060:	55 05 50 50                                     	maddd \$r20 = \$r21, \$r21;;
+    1044:	d7 e5 5e 30                                     	lwz \$r23 = \$r23\[\$r23\];;
 
-    1064:	16 f0 54 40                                     	maddd \$r21 = \$r22, -64 \(0xffffffc0\);;
+    1048:	18 36 62 b1 00 00 00 98 00 00 80 1f             	lwz.s.dgez \$r24\? \$r24 = -1125899906842624 \(0xfffc000000000000\)\[\$r24\];;
 
-    1068:	16 00 58 c0 00 00 80 17                         	maddd \$r22 = \$r22, -8589934592 \(0xfffffffe00000000\);;
+    1054:	59 46 66 b2 00 00 80 1f                         	lwz.u.dlez \$r25\? \$r25 = -8388608 \(0xff800000\)\[\$r25\];;
 
-    1070:	d7 ff 5c c2 ff ff ff 97 ff ff ff 10             	maddhq \$r23 = \$r23, 2305843009213693951 \(0x1fffffffffffffff\);;
+    105c:	9a 56 6a 33                                     	lwz.us.dgtz \$r26\? \$r26 = \[\$r26\];;
 
-    107c:	18 06 5c 52                                     	maddhq \$r23 = \$r24, \$r24;;
+    1060:	db ff 6c b0 ff ff ff 9f ff ff ff 18             	lwz \$r27 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r27\];;
 
-    1080:	19 f0 60 42                                     	maddhq \$r24 = \$r25, -64 \(0xffffffc0\);;
+    106c:	1c f0 6c 31                                     	lwz.s \$r27 = -64 \(0xffffffc0\)\[\$r28\];;
 
-    1084:	19 00 64 c2 00 00 80 17                         	maddhq \$r25 = \$r25, -8589934592 \(0xfffffffe00000000\);;
+    1070:	1c 00 70 b2 00 00 80 1f                         	lwz.u \$r28 = -8589934592 \(0xfffffffe00000000\)\[\$r28\];;
 
-    108c:	9a 46 18 50                                     	maddhwq \$r6r7 = \$r26, \$r26;;
+    1078:	dd ff 08 c8 ff ff ff 97 ff ff ff 10             	madddt \$r2r3 = \$r29, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1090:	da ff 18 ca ff ff ff 97 ff ff ff 10             	maddsudt \$r6r7 = \$r26, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1084:	5d 17 08 58                                     	madddt \$r2r3 = \$r29, \$r29;;
 
-    109c:	db 16 20 5a                                     	maddsudt \$r8r9 = \$r27, \$r27;;
+    1088:	1e f0 10 48                                     	madddt \$r4r5 = \$r30, -64 \(0xffffffc0\);;
 
-    10a0:	1b f0 20 4a                                     	maddsudt \$r8r9 = \$r27, -64 \(0xffffffc0\);;
+    108c:	1e 00 10 c8 00 00 80 17                         	madddt \$r4r5 = \$r30, -8589934592 \(0xfffffffe00000000\);;
 
-    10a4:	1c 00 28 ca 00 00 80 17                         	maddsudt \$r10r11 = \$r28, -8589934592 \(0xfffffffe00000000\);;
+    1094:	df ff 78 c0 ff ff ff 97 ff ff ff 10             	maddd \$r30 = \$r31, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    10ac:	1c 47 28 52                                     	maddsuhwq \$r10r11 = \$r28, \$r28;;
+    10a0:	1f 08 7c 50                                     	maddd \$r31 = \$r31, \$r32;;
 
-    10b0:	5d 07 30 5a                                     	maddsuwdp \$r12r13 = \$r29, \$r29;;
+    10a4:	20 f0 80 40                                     	maddd \$r32 = \$r32, -64 \(0xffffffc0\);;
 
-    10b4:	9e 37 74 52                                     	maddsuwd \$r29 = \$r30, \$r30;;
+    10a8:	21 00 84 c0 00 00 80 17                         	maddd \$r33 = \$r33, -8589934592 \(0xfffffffe00000000\);;
 
-    10b8:	df 37 78 d2 ff ff ff 10                         	maddsuwd \$r30 = \$r31, 536870911 \(0x1fffffff\);;
+    10b0:	e2 ff 84 c2 ff ff ff 97 ff ff ff 10             	maddhq \$r33 = \$r34, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    10c0:	df ff 30 c9 ff ff ff 97 ff ff ff 10             	maddudt \$r12r13 = \$r31, 2305843009213693951 \(0x1fffffffffffffff\);;
+    10bc:	e2 08 88 52                                     	maddhq \$r34 = \$r34, \$r35;;
 
-    10cc:	1f 18 38 59                                     	maddudt \$r14r15 = \$r31, \$r32;;
+    10c0:	23 f0 8c 42                                     	maddhq \$r35 = \$r35, -64 \(0xffffffc0\);;
 
-    10d0:	20 f0 38 49                                     	maddudt \$r14r15 = \$r32, -64 \(0xffffffc0\);;
+    10c4:	24 00 90 c2 00 00 80 17                         	maddhq \$r36 = \$r36, -8589934592 \(0xfffffffe00000000\);;
 
-    10d4:	20 00 40 c9 00 00 80 17                         	maddudt \$r16r17 = \$r32, -8589934592 \(0xfffffffe00000000\);;
+    10cc:	64 49 18 50                                     	maddhwq \$r6r7 = \$r36, \$r37;;
 
-    10dc:	61 48 40 51                                     	madduhwq \$r16r17 = \$r33, \$r33;;
+    10d0:	e5 ff 18 ca ff ff ff 97 ff ff ff 10             	maddsudt \$r6r7 = \$r37, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    10e0:	a1 08 48 59                                     	madduwdp \$r18r19 = \$r33, \$r34;;
+    10dc:	a5 19 20 5a                                     	maddsudt \$r8r9 = \$r37, \$r38;;
 
-    10e4:	e2 38 88 51                                     	madduwd \$r34 = \$r34, \$r35;;
+    10e0:	26 f0 20 4a                                     	maddsudt \$r8r9 = \$r38, -64 \(0xffffffc0\);;
 
-    10e8:	e3 37 8c d1 ff ff ff 10                         	madduwd \$r35 = \$r35, 536870911 \(0x1fffffff\);;
+    10e4:	26 00 28 ca 00 00 80 17                         	maddsudt \$r10r11 = \$r38, -8589934592 \(0xfffffffe00000000\);;
 
-    10f0:	e4 ff 48 cb ff ff ff 97 ff ff ff 10             	madduzdt \$r18r19 = \$r36, 2305843009213693951 \(0x1fffffffffffffff\);;
+    10ec:	e7 49 28 52                                     	maddsuhwq \$r10r11 = \$r39, \$r39;;
 
-    10fc:	24 19 50 5b                                     	madduzdt \$r20r21 = \$r36, \$r36;;
+    10f0:	27 0a 30 5a                                     	maddsuwdp \$r12r13 = \$r39, \$r40;;
 
-    1100:	25 f0 50 4b                                     	madduzdt \$r20r21 = \$r37, -64 \(0xffffffc0\);;
+    10f4:	e8 07 30 da ff ff ff 10                         	maddsuwdp \$r12r13 = \$r40, 536870911 \(0x1fffffff\);;
 
-    1104:	25 00 58 cb 00 00 80 17                         	madduzdt \$r22r23 = \$r37, -8589934592 \(0xfffffffe00000000\);;
+    10fc:	69 3a a0 52                                     	maddsuwd \$r40 = \$r41, \$r41;;
 
-    110c:	a5 09 58 58                                     	maddwdp \$r22r23 = \$r37, \$r38;;
+    1100:	ea 37 a4 d2 ff ff ff 10                         	maddsuwd \$r41 = \$r42, 536870911 \(0x1fffffff\);;
 
-    1110:	e6 39 98 50                                     	maddwd \$r38 = \$r38, \$r39;;
+    1108:	ea ff 38 c9 ff ff ff 97 ff ff ff 10             	maddudt \$r14r15 = \$r42, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1114:	e7 37 9c d0 ff ff ff 10                         	maddwd \$r39 = \$r39, 536870911 \(0x1fffffff\);;
+    1114:	ea 1a 38 59                                     	maddudt \$r14r15 = \$r42, \$r43;;
 
-    111c:	e8 ff a0 c1 ff ff ff 97 ff ff ff 10             	maddwp \$r40 = \$r40, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1118:	2b f0 40 49                                     	maddudt \$r16r17 = \$r43, -64 \(0xffffffc0\);;
 
-    1128:	69 0a a0 51                                     	maddwp \$r40 = \$r41, \$r41;;
+    111c:	2b 00 40 c9 00 00 80 17                         	maddudt \$r16r17 = \$r43, -8589934592 \(0xfffffffe00000000\);;
 
-    112c:	2a f0 a4 41                                     	maddwp \$r41 = \$r42, -64 \(0xffffffc0\);;
+    1124:	2c 4b 48 51                                     	madduhwq \$r18r19 = \$r44, \$r44;;
 
-    1130:	2a 00 a8 c1 00 00 80 17                         	maddwp \$r42 = \$r42, -8589934592 \(0xfffffffe00000000\);;
+    1128:	6c 0b 48 59                                     	madduwdp \$r18r19 = \$r44, \$r45;;
 
-    1138:	eb 3a ac 53                                     	maddw \$r43 = \$r43, \$r43;;
+    112c:	ed 0f 50 d9 ff ff ff 10                         	madduwdp \$r20r21 = \$r45, 536870911 \(0x1fffffff\).@;;
 
-    113c:	ec 37 b0 d3 ff ff ff 10                         	maddw \$r44 = \$r44, 536870911 \(0x1fffffff\);;
+    1134:	ae 3b b4 51                                     	madduwd \$r45 = \$r46, \$r46;;
 
-    1144:	c0 ff b0 e0 ff ff ff 87 ff ff ff 00             	make \$r44 = 2305843009213693951 \(0x1fffffffffffffff\);;
+    1138:	ef 37 b8 d1 ff ff ff 10                         	madduwd \$r46 = \$r47, 536870911 \(0x1fffffff\);;
 
-    1150:	3c 00 b4 e0 00 00 00 00                         	make \$r45 = -549755813888 \(0xffffff8000000000\);;
+    1140:	ef ff 50 cb ff ff ff 97 ff ff ff 10             	madduzdt \$r20r21 = \$r47, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1158:	00 f0 b4 60                                     	make \$r45 = -4096 \(0xfffff000\);;
+    114c:	2f 1c 58 5b                                     	madduzdt \$r22r23 = \$r47, \$r48;;
 
-    115c:	ee ff b4 e3 ff ff ff 87 ff ff ff 00             	maxd \$r45 = \$r46, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1150:	30 f0 58 4b                                     	madduzdt \$r22r23 = \$r48, -64 \(0xffffffc0\);;
 
-    1168:	ee 0b b9 73                                     	maxd \$r46 = \$r46, \$r47;;
+    1154:	30 00 60 cb 00 00 80 17                         	madduzdt \$r24r25 = \$r48, -8589934592 \(0xfffffffe00000000\);;
 
-    116c:	2f f0 bc 63                                     	maxd \$r47 = \$r47, -64 \(0xffffffc0\);;
+    115c:	71 0c 60 58                                     	maddwdp \$r24r25 = \$r49, \$r49;;
 
-    1170:	30 00 c0 e3 00 00 80 07                         	maxd \$r48 = \$r48, -8589934592 \(0xfffffffe00000000\);;
+    1160:	f1 07 68 d8 ff ff ff 10                         	maddwdp \$r26r27 = \$r49, 536870911 \(0x1fffffff\);;
 
-    1178:	f1 ff c0 e3 ff ff 07 00                         	maxd \$r48 = \$r49, 536870911 \(0x1fffffff\);;
+    1168:	b2 3c c8 50                                     	maddwd \$r50 = \$r50, \$r50;;
 
-    1180:	b1 3c c5 73                                     	maxhq \$r49 = \$r49, \$r50;;
+    116c:	f3 37 cc d0 ff ff ff 10                         	maddwd \$r51 = \$r51, 536870911 \(0x1fffffff\);;
 
-    1184:	f2 3f c9 f3 ff ff ff 00                         	maxhq \$r50 = \$r50, 536870911 \(0x1fffffff\).@;;
+    1174:	f4 ff cc c1 ff ff ff 97 ff ff ff 10             	maddwp \$r51 = \$r52, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    118c:	f3 ff cc e7 ff ff ff 87 ff ff ff 00             	maxud \$r51 = \$r51, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1180:	74 0d d0 51                                     	maddwp \$r52 = \$r52, \$r53;;
 
-    1198:	34 0d cd 77                                     	maxud \$r51 = \$r52, \$r52;;
+    1184:	35 f0 d4 41                                     	maddwp \$r53 = \$r53, -64 \(0xffffffc0\);;
 
-    119c:	35 f0 d0 67                                     	maxud \$r52 = \$r53, -64 \(0xffffffc0\);;
+    1188:	36 00 d8 c1 00 00 80 17                         	maddwp \$r54 = \$r54, -8589934592 \(0xfffffffe00000000\);;
 
-    11a0:	35 00 d4 e7 00 00 80 07                         	maxud \$r53 = \$r53, -8589934592 \(0xfffffffe00000000\);;
+    1190:	f7 3d d8 53                                     	maddw \$r54 = \$r55, \$r55;;
 
-    11a8:	f6 ff d8 e7 ff ff 07 00                         	maxud \$r54 = \$r54, 536870911 \(0x1fffffff\);;
+    1194:	f8 37 dc d3 ff ff ff 10                         	maddw \$r55 = \$r56, 536870911 \(0x1fffffff\);;
 
-    11b0:	f7 3d d9 77                                     	maxuhq \$r54 = \$r55, \$r55;;
+    119c:	c0 ff e0 e0 ff ff ff 87 ff ff ff 00             	make \$r56 = 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    11b4:	f8 3f dd f7 ff ff ff 00                         	maxuhq \$r55 = \$r56, 536870911 \(0x1fffffff\).@;;
+    11a8:	3c 00 e0 e0 00 00 00 00                         	make \$r56 = -549755813888 \(0xffffff8000000000\);;
 
-    11bc:	78 2e e1 77                                     	maxuwp \$r56 = \$r56, \$r57;;
+    11b0:	00 f0 e4 60                                     	make \$r57 = -4096 \(0xfffff000\);;
 
-    11c0:	f9 27 e5 f7 ff ff ff 00                         	maxuwp \$r57 = \$r57, 536870911 \(0x1fffffff\);;
+    11b4:	f9 ff e4 e3 ff ff ff 87 ff ff ff 00             	maxd \$r57 = \$r57, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    11c8:	ba 1e e9 77                                     	maxuw \$r58 = \$r58, \$r58;;
+    11c0:	ba 0e e9 73                                     	maxd \$r58 = \$r58, \$r58;;
 
-    11cc:	3b f0 ec 77                                     	maxuw \$r59 = \$r59, -64 \(0xffffffc0\);;
+    11c4:	3b f0 ec 63                                     	maxd \$r59 = \$r59, -64 \(0xffffffc0\);;
 
-    11d0:	3c 00 ec f7 00 00 80 07                         	maxuw \$r59 = \$r60, -8589934592 \(0xfffffffe00000000\);;
+    11c8:	3c 00 ec e3 00 00 80 07                         	maxd \$r59 = \$r60, -8589934592 \(0xfffffffe00000000\);;
 
-    11d8:	7c 2f f1 73                                     	maxwp \$r60 = \$r60, \$r61;;
+    11d0:	7c 3f f1 73                                     	maxhq \$r60 = \$r60, \$r61;;
 
-    11dc:	fd 2f f5 f3 ff ff ff 00                         	maxwp \$r61 = \$r61, 536870911 \(0x1fffffff\).@;;
+    11d4:	fd 3f f5 f3 ff ff ff 00                         	maxhq \$r61 = \$r61, 536870911 \(0x1fffffff\).@;;
 
-    11e4:	be 1f f9 73                                     	maxw \$r62 = \$r62, \$r62;;
+    11dc:	fe ff f8 e7 ff ff ff 87 ff ff ff 00             	maxud \$r62 = \$r62, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    11e8:	3f f0 fc 73                                     	maxw \$r63 = \$r63, -64 \(0xffffffc0\);;
+    11e8:	ff 0f f9 77                                     	maxud \$r62 = \$r63, \$r63;;
 
-    11ec:	00 00 fc f3 00 00 80 07                         	maxw \$r63 = \$r0, -8589934592 \(0xfffffffe00000000\);;
+    11ec:	00 f0 fc 67                                     	maxud \$r63 = \$r0, -64 \(0xffffffc0\);;
 
-    11f4:	c0 ff 00 e2 ff ff ff 87 ff ff ff 00             	mind \$r0 = \$r0, 2305843009213693951 \(0x1fffffffffffffff\);;
+    11f0:	00 00 00 e7 00 00 80 07                         	maxud \$r0 = \$r0, -8589934592 \(0xfffffffe00000000\);;
 
-    1200:	41 00 05 72                                     	mind \$r1 = \$r1, \$r1;;
+    11f8:	41 30 05 77                                     	maxuhq \$r1 = \$r1, \$r1;;
 
-    1204:	02 f0 08 62                                     	mind \$r2 = \$r2, -64 \(0xffffffc0\);;
+    11fc:	c2 37 09 f7 ff ff ff 00                         	maxuhq \$r2 = \$r2, 536870911 \(0x1fffffff\);;
 
-    1208:	03 00 08 e2 00 00 80 07                         	mind \$r2 = \$r3, -8589934592 \(0xfffffffe00000000\);;
+    1204:	c3 20 09 77                                     	maxuwp \$r2 = \$r3, \$r3;;
 
-    1210:	c3 ff 0c e2 ff ff 07 00                         	mind \$r3 = \$r3, 536870911 \(0x1fffffff\);;
+    1208:	c4 2f 0d f7 ff ff ff 00                         	maxuwp \$r3 = \$r4, 536870911 \(0x1fffffff\).@;;
 
-    1218:	04 31 11 72                                     	minhq \$r4 = \$r4, \$r4;;
+    1210:	44 11 11 77                                     	maxuw \$r4 = \$r4, \$r5;;
 
-    121c:	c5 3f 15 f2 ff ff ff 00                         	minhq \$r5 = \$r5, 536870911 \(0x1fffffff\).@;;
+    1214:	05 f0 14 77                                     	maxuw \$r5 = \$r5, -64 \(0xffffffc0\);;
 
-    1224:	c6 ff 14 e6 ff ff ff 87 ff ff ff 00             	minud \$r5 = \$r6, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1218:	06 00 18 f7 00 00 80 07                         	maxuw \$r6 = \$r6, -8589934592 \(0xfffffffe00000000\);;
 
-    1230:	c6 01 19 76                                     	minud \$r6 = \$r6, \$r7;;
+    1220:	c7 21 19 73                                     	maxwp \$r6 = \$r7, \$r7;;
 
-    1234:	07 f0 1c 66                                     	minud \$r7 = \$r7, -64 \(0xffffffc0\);;
+    1224:	c8 27 1d f3 ff ff ff 00                         	maxwp \$r7 = \$r8, 536870911 \(0x1fffffff\);;
 
-    1238:	08 00 20 e6 00 00 80 07                         	minud \$r8 = \$r8, -8589934592 \(0xfffffffe00000000\);;
+    122c:	48 12 21 73                                     	maxw \$r8 = \$r8, \$r9;;
 
-    1240:	c9 ff 20 e6 ff ff 07 00                         	minud \$r8 = \$r9, 536870911 \(0x1fffffff\);;
+    1230:	09 f0 24 73                                     	maxw \$r9 = \$r9, -64 \(0xffffffc0\);;
 
-    1248:	89 32 25 76                                     	minuhq \$r9 = \$r9, \$r10;;
+    1234:	0a 00 28 f3 00 00 80 07                         	maxw \$r10 = \$r10, -8589934592 \(0xfffffffe00000000\);;
 
-    124c:	ca 3f 29 f6 ff ff ff 00                         	minuhq \$r10 = \$r10, 536870911 \(0x1fffffff\).@;;
+    123c:	cb ff 28 e2 ff ff ff 87 ff ff ff 00             	mind \$r10 = \$r11, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1254:	cb 22 2d 76                                     	minuwp \$r11 = \$r11, \$r11;;
+    1248:	0b 03 2d 72                                     	mind \$r11 = \$r11, \$r12;;
 
-    1258:	cc 27 31 f6 ff ff ff 00                         	minuwp \$r12 = \$r12, 536870911 \(0x1fffffff\);;
+    124c:	0d f0 30 62                                     	mind \$r12 = \$r13, -64 \(0xffffffc0\);;
 
-    1260:	8d 13 35 76                                     	minuw \$r13 = \$r13, \$r14;;
+    1250:	0e 00 34 e2 00 00 80 07                         	mind \$r13 = \$r14, -8589934592 \(0xfffffffe00000000\);;
 
-    1264:	0f f0 38 76                                     	minuw \$r14 = \$r15, -64 \(0xffffffc0\);;
+    1258:	cf 33 39 72                                     	minhq \$r14 = \$r15, \$r15;;
 
-    1268:	10 00 3c f6 00 00 80 07                         	minuw \$r15 = \$r16, -8589934592 \(0xfffffffe00000000\);;
+    125c:	d0 3f 41 f2 ff ff ff 00                         	minhq \$r16 = \$r16, 536870911 \(0x1fffffff\).@;;
 
-    1270:	50 24 41 72                                     	minwp \$r16 = \$r16, \$r17;;
+    1264:	d1 ff 40 e6 ff ff ff 87 ff ff ff 00             	minud \$r16 = \$r17, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1274:	d1 2f 45 f2 ff ff ff 00                         	minwp \$r17 = \$r17, 536870911 \(0x1fffffff\).@;;
+    1270:	91 04 45 76                                     	minud \$r17 = \$r17, \$r18;;
 
-    127c:	92 14 49 72                                     	minw \$r18 = \$r18, \$r18;;
+    1274:	12 f0 48 66                                     	minud \$r18 = \$r18, -64 \(0xffffffc0\);;
 
-    1280:	13 f0 4c 72                                     	minw \$r19 = \$r19, -64 \(0xffffffc0\);;
+    1278:	13 00 4c e6 00 00 80 07                         	minud \$r19 = \$r19, -8589934592 \(0xfffffffe00000000\);;
 
-    1284:	14 00 4c f2 00 00 80 07                         	minw \$r19 = \$r20, -8589934592 \(0xfffffffe00000000\);;
+    1280:	14 35 4d 76                                     	minuhq \$r19 = \$r20, \$r20;;
 
-    128c:	14 15 60 53                                     	mm212w \$r24r25 = \$r20, \$r20;;
+    1284:	d5 37 51 f6 ff ff ff 00                         	minuhq \$r20 = \$r21, 536870911 \(0x1fffffff\);;
 
-    1290:	55 05 60 5b                                     	mma212w \$r24r25 = \$r21, \$r21;;
+    128c:	95 25 55 76                                     	minuwp \$r21 = \$r21, \$r22;;
 
-    1294:	45 c1 61 04                                     	mma444hbd0 \$a24a25a26a27 = \$a28a29a30a31, \$a5, \$a5;;
+    1290:	d6 2f 59 f6 ff ff ff 00                         	minuwp \$r22 = \$r22, 536870911 \(0x1fffffff\).@;;
 
-    1298:	46 41 86 04                                     	mma444hbd1 \$a32a33a34a35 = \$a36a37a38a39, \$a5, \$a6;;
+    1298:	d7 15 5d 76                                     	minuw \$r23 = \$r23, \$r23;;
 
-    129c:	86 c1 aa 04                                     	mma444hd \$a40a41a42a43 = \$a44a45a46a47, \$a6, \$a6;;
+    129c:	18 f0 60 76                                     	minuw \$r24 = \$r24, -64 \(0xffffffc0\);;
 
-    12a0:	c7 61 c3 04                                     	mma444suhbd0 \$a48a49a50a51 = \$a52a53a54a55, \$a7, \$a7;;
+    12a0:	19 00 60 f6 00 00 80 07                         	minuw \$r24 = \$r25, -8589934592 \(0xfffffffe00000000\);;
 
-    12a4:	c8 e1 e7 04                                     	mma444suhbd1 \$a56a57a58a59 = \$a60a61a62a63, \$a7, \$a8;;
+    12a8:	99 26 65 72                                     	minwp \$r25 = \$r25, \$r26;;
 
-    12a8:	08 62 08 04                                     	mma444suhd \$a0a1a2a3 = \$a4a5a6a7, \$a8, \$a8;;
+    12ac:	da 27 69 f2 ff ff ff 00                         	minwp \$r26 = \$r26, 536870911 \(0x1fffffff\);;
 
-    12ac:	49 d2 20 04                                     	mma444uhbd0 \$a8a9a10a11 = \$a12a13a14a15, \$a9, \$a9;;
+    12b4:	db 16 6d 72                                     	minw \$r27 = \$r27, \$r27;;
 
-    12b0:	4a 52 45 04                                     	mma444uhbd1 \$a16a17a18a19 = \$a20a21a22a23, \$a9, \$a10;;
+    12b8:	1c f0 70 72                                     	minw \$r28 = \$r28, -64 \(0xffffffc0\);;
 
-    12b4:	8a d2 69 04                                     	mma444uhd \$a24a25a26a27 = \$a28a29a30a31, \$a10, \$a10;;
+    12bc:	1d 00 70 f2 00 00 80 07                         	minw \$r28 = \$r29, -8589934592 \(0xfffffffe00000000\);;
 
-    12b8:	cb 72 82 04                                     	mma444ushbd0 \$a32a33a34a35 = \$a36a37a38a39, \$a11, \$a11;;
+    12c4:	5d 17 68 53                                     	mm212w \$r26r27 = \$r29, \$r29;;
 
-    12bc:	cc f2 a6 04                                     	mma444ushbd1 \$a40a41a42a43 = \$a44a45a46a47, \$a11, \$a12;;
+    12c8:	de 1f 70 d3 ff ff ff 10                         	mm212w \$r28r29 = \$r30, 536870911 \(0x1fffffff\).@;;
 
-    12c0:	0c 73 cb 04                                     	mma444ushd \$a48a49a50a51 = \$a52a53a54a55, \$a12, \$a12;;
+    12d0:	9e 07 70 5b                                     	mma212w \$r28r29 = \$r30, \$r30;;
 
-    12c4:	95 05 68 5f                                     	mms212w \$r26r27 = \$r21, \$r22;;
+    12d4:	df 07 78 db ff ff ff 10                         	mma212w \$r30r31 = \$r31, 536870911 \(0x1fffffff\);;
 
-    12c8:	96 e5 02 7f                                     	movetq \$a0_lo = \$r22, \$r22;;
+    12dc:	45 c1 61 04                                     	mma444hbd0 \$a24a25a26a27 = \$a28a29a30a31, \$a5, \$a5;;
 
-    12cc:	d7 f5 02 7f                                     	movetq \$a0_hi = \$r23, \$r23;;
+    12e0:	46 41 86 04                                     	mma444hbd1 \$a32a33a34a35 = \$a36a37a38a39, \$a5, \$a6;;
 
-    12d0:	17 16 68 5c                                     	msbfdt \$r26r27 = \$r23, \$r24;;
+    12e4:	86 c1 aa 04                                     	mma444hd \$a40a41a42a43 = \$a44a45a46a47, \$a6, \$a6;;
 
-    12d4:	58 06 60 54                                     	msbfd \$r24 = \$r24, \$r25;;
+    12e8:	c7 61 c3 04                                     	mma444suhbd0 \$a48a49a50a51 = \$a52a53a54a55, \$a7, \$a7;;
 
-    12d8:	99 06 64 56                                     	msbfhq \$r25 = \$r25, \$r26;;
+    12ec:	c8 e1 e7 04                                     	mma444suhbd1 \$a56a57a58a59 = \$a60a61a62a63, \$a7, \$a8;;
 
-    12dc:	9a 46 70 54                                     	msbfhwq \$r28r29 = \$r26, \$r26;;
+    12f0:	08 62 08 04                                     	mma444suhd \$a0a1a2a3 = \$a4a5a6a7, \$a8, \$a8;;
 
-    12e0:	db 16 70 5e                                     	msbfsudt \$r28r29 = \$r27, \$r27;;
+    12f4:	49 d2 20 04                                     	mma444uhbd0 \$a8a9a10a11 = \$a12a13a14a15, \$a9, \$a9;;
 
-    12e4:	1b 47 78 56                                     	msbfsuhwq \$r30r31 = \$r27, \$r28;;
+    12f8:	4a 52 45 04                                     	mma444uhbd1 \$a16a17a18a19 = \$a20a21a22a23, \$a9, \$a10;;
 
-    12e8:	1c 07 78 5e                                     	msbfsuwdp \$r30r31 = \$r28, \$r28;;
+    12fc:	8a d2 69 04                                     	mma444uhd \$a24a25a26a27 = \$a28a29a30a31, \$a10, \$a10;;
 
-    12ec:	5d 37 74 56                                     	msbfsuwd \$r29 = \$r29, \$r29;;
+    1300:	cb 72 82 04                                     	mma444ushbd0 \$a32a33a34a35 = \$a36a37a38a39, \$a11, \$a11;;
 
-    12f0:	de 37 78 d6 ff ff ff 10                         	msbfsuwd \$r30 = \$r30, 536870911 \(0x1fffffff\);;
+    1304:	cc f2 a6 04                                     	mma444ushbd1 \$a40a41a42a43 = \$a44a45a46a47, \$a11, \$a12;;
 
-    12f8:	de 17 80 5d                                     	msbfudt \$r32r33 = \$r30, \$r31;;
+    1308:	0c 73 cb 04                                     	mma444ushd \$a48a49a50a51 = \$a52a53a54a55, \$a12, \$a12;;
 
-    12fc:	df 47 80 55                                     	msbfuhwq \$r32r33 = \$r31, \$r31;;
+    130c:	df 07 78 5f                                     	mms212w \$r30r31 = \$r31, \$r31;;
 
-    1300:	20 08 88 5d                                     	msbfuwdp \$r34r35 = \$r32, \$r32;;
+    1310:	e0 0f 80 df ff ff ff 10                         	mms212w \$r32r33 = \$r32, 536870911 \(0x1fffffff\).@;;
 
-    1304:	61 38 80 55                                     	msbfuwd \$r32 = \$r33, \$r33;;
+    1318:	20 e8 02 7f                                     	movetq \$a0_lo = \$r32, \$r32;;
 
-    1308:	e2 37 84 d5 ff ff ff 10                         	msbfuwd \$r33 = \$r34, 536870911 \(0x1fffffff\);;
+    131c:	61 f8 02 7f                                     	movetq \$a0_hi = \$r33, \$r33;;
 
-    1310:	a2 18 88 5f                                     	msbfuzdt \$r34r35 = \$r34, \$r34;;
+    1320:	a1 18 80 5c                                     	msbfdt \$r32r33 = \$r33, \$r34;;
 
-    1314:	e3 08 90 5c                                     	msbfwdp \$r36r37 = \$r35, \$r35;;
+    1324:	e2 08 88 54                                     	msbfd \$r34 = \$r34, \$r35;;
 
-    1318:	24 39 8c 54                                     	msbfwd \$r35 = \$r36, \$r36;;
+    1328:	e3 07 8c d4 ff ff ff 10                         	msbfd \$r35 = \$r35, 536870911 \(0x1fffffff\);;
 
-    131c:	e5 37 90 d4 ff ff ff 10                         	msbfwd \$r36 = \$r37, 536870911 \(0x1fffffff\);;
+    1330:	24 09 90 56                                     	msbfhq \$r36 = \$r36, \$r36;;
 
-    1324:	a5 09 94 55                                     	msbfwp \$r37 = \$r37, \$r38;;
+    1334:	e5 0f 94 d6 ff ff ff 10                         	msbfhq \$r37 = \$r37, 536870911 \(0x1fffffff\).@;;
 
-    1328:	e6 39 98 57                                     	msbfw \$r38 = \$r38, \$r39;;
+    133c:	a5 49 88 54                                     	msbfhwq \$r34r35 = \$r37, \$r38;;
 
-    132c:	e7 37 9c d7 ff ff ff 10                         	msbfw \$r39 = \$r39, 536870911 \(0x1fffffff\);;
+    1340:	a6 19 88 5e                                     	msbfsudt \$r34r35 = \$r38, \$r38;;
 
-    1334:	e8 ff 94 c8 ff ff ff 97 ff ff ff 10             	muldt \$r36r37 = \$r40, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1344:	e7 49 90 56                                     	msbfsuhwq \$r36r37 = \$r39, \$r39;;
 
-    1340:	28 1a 9c 58                                     	muldt \$r38r39 = \$r40, \$r40;;
+    1348:	27 0a 90 5e                                     	msbfsuwdp \$r36r37 = \$r39, \$r40;;
 
-    1344:	29 f0 9c 48                                     	muldt \$r38r39 = \$r41, -64 \(0xffffffc0\);;
+    134c:	e8 07 98 de ff ff ff 10                         	msbfsuwdp \$r38r39 = \$r40, 536870911 \(0x1fffffff\);;
 
-    1348:	29 00 a4 c8 00 00 80 17                         	muldt \$r40r41 = \$r41, -8589934592 \(0xfffffffe00000000\);;
+    1354:	69 3a a0 56                                     	msbfsuwd \$r40 = \$r41, \$r41;;
 
-    1350:	ea ff a4 c4 ff ff ff 97 ff ff ff 10             	muld \$r41 = \$r42, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1358:	ea 37 a4 d6 ff ff ff 10                         	msbfsuwd \$r41 = \$r42, 536870911 \(0x1fffffff\);;
 
-    135c:	ea 1a a8 54                                     	muld \$r42 = \$r42, \$r43;;
+    1360:	aa 1a 98 5d                                     	msbfudt \$r38r39 = \$r42, \$r42;;
 
-    1360:	2b f0 ac 44                                     	muld \$r43 = \$r43, -64 \(0xffffffc0\);;
+    1364:	eb 4a a0 55                                     	msbfuhwq \$r40r41 = \$r43, \$r43;;
 
-    1364:	2c 00 b0 c4 00 00 80 17                         	muld \$r44 = \$r44, -8589934592 \(0xfffffffe00000000\);;
+    1368:	2b 0b a0 5d                                     	msbfuwdp \$r40r41 = \$r43, \$r44;;
 
-    136c:	ed ff b0 c6 ff ff ff 97 ff ff ff 10             	mulhq \$r44 = \$r45, 2305843009213693951 \(0x1fffffffffffffff\);;
+    136c:	ec 0f a8 dd ff ff ff 10                         	msbfuwdp \$r42r43 = \$r44, 536870911 \(0x1fffffff\).@;;
 
-    1378:	ad 1b b4 56                                     	mulhq \$r45 = \$r45, \$r46;;
+    1374:	6d 3b b0 55                                     	msbfuwd \$r44 = \$r45, \$r45;;
 
-    137c:	2e f0 b8 46                                     	mulhq \$r46 = \$r46, -64 \(0xffffffc0\);;
+    1378:	ee 37 b4 d5 ff ff ff 10                         	msbfuwd \$r45 = \$r46, 536870911 \(0x1fffffff\);;
 
-    1380:	2f 00 bc c6 00 00 80 17                         	mulhq \$r47 = \$r47, -8589934592 \(0xfffffffe00000000\);;
+    1380:	ae 1b a8 5f                                     	msbfuzdt \$r42r43 = \$r46, \$r46;;
 
-    1388:	2f 4c a0 58                                     	mulhwq \$r40r41 = \$r47, \$r48;;
+    1384:	ef 0b b0 5c                                     	msbfwdp \$r44r45 = \$r47, \$r47;;
 
-    138c:	f0 ff ac ca ff ff ff 97 ff ff ff 10             	mulsudt \$r42r43 = \$r48, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1388:	ef 07 b0 dc ff ff ff 10                         	msbfwdp \$r44r45 = \$r47, 536870911 \(0x1fffffff\);;
 
-    1398:	70 1c ac 5a                                     	mulsudt \$r42r43 = \$r48, \$r49;;
+    1390:	30 3c c0 54                                     	msbfwd \$r48 = \$r48, \$r48;;
 
-    139c:	31 f0 b4 4a                                     	mulsudt \$r44r45 = \$r49, -64 \(0xffffffc0\);;
+    1394:	f1 37 c4 d4 ff ff ff 10                         	msbfwd \$r49 = \$r49, 536870911 \(0x1fffffff\);;
 
-    13a0:	31 00 b4 ca 00 00 80 17                         	mulsudt \$r44r45 = \$r49, -8589934592 \(0xfffffffe00000000\);;
+    139c:	b2 0c c4 55                                     	msbfwp \$r49 = \$r50, \$r50;;
 
-    13a8:	b2 4c b8 5a                                     	mulsuhwq \$r46r47 = \$r50, \$r50;;
+    13a0:	f3 0f c8 d5 ff ff ff 10                         	msbfwp \$r50 = \$r51, 536870911 \(0x1fffffff\).@;;
 
-    13ac:	f2 1c b8 52                                     	mulsuwdp \$r46r47 = \$r50, \$r51;;
+    13a8:	33 3d cc 57                                     	msbfw \$r51 = \$r51, \$r52;;
 
-    13b0:	33 3d cc 5a                                     	mulsuwd \$r51 = \$r51, \$r52;;
+    13ac:	f4 37 d0 d7 ff ff ff 10                         	msbfw \$r52 = \$r52, 536870911 \(0x1fffffff\);;
 
-    13b4:	f4 37 d0 da ff ff ff 10                         	mulsuwd \$r52 = \$r52, 536870911 \(0x1fffffff\);;
+    13b4:	f5 ff bc c8 ff ff ff 97 ff ff ff 10             	muldt \$r46r47 = \$r53, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    13bc:	f5 ff c4 c9 ff ff ff 97 ff ff ff 10             	muludt \$r48r49 = \$r53, 2305843009213693951 \(0x1fffffffffffffff\);;
+    13c0:	75 1d bc 58                                     	muldt \$r46r47 = \$r53, \$r53;;
 
-    13c8:	75 1d c4 59                                     	muludt \$r48r49 = \$r53, \$r53;;
+    13c4:	36 f0 c4 48                                     	muldt \$r48r49 = \$r54, -64 \(0xffffffc0\);;
 
-    13cc:	36 f0 cc 49                                     	muludt \$r50r51 = \$r54, -64 \(0xffffffc0\);;
+    13c8:	36 00 c4 c8 00 00 80 17                         	muldt \$r48r49 = \$r54, -8589934592 \(0xfffffffe00000000\);;
 
-    13d0:	36 00 cc c9 00 00 80 17                         	muludt \$r50r51 = \$r54, -8589934592 \(0xfffffffe00000000\);;
+    13d0:	f7 ff d8 c4 ff ff ff 97 ff ff ff 10             	muld \$r54 = \$r55, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    13d8:	f6 4d d0 59                                     	muluhwq \$r52r53 = \$r54, \$r55;;
+    13dc:	37 1e dc 54                                     	muld \$r55 = \$r55, \$r56;;
 
-    13dc:	f7 1d d0 51                                     	muluwdp \$r52r53 = \$r55, \$r55;;
+    13e0:	38 f0 e0 44                                     	muld \$r56 = \$r56, -64 \(0xffffffc0\);;
 
-    13e0:	38 3e e0 59                                     	muluwd \$r56 = \$r56, \$r56;;
+    13e4:	39 00 e4 c4 00 00 80 17                         	muld \$r57 = \$r57, -8589934592 \(0xfffffffe00000000\);;
 
-    13e4:	f9 37 e4 d9 ff ff ff 10                         	muluwd \$r57 = \$r57, 536870911 \(0x1fffffff\);;
+    13ec:	fa ff e4 c6 ff ff ff 97 ff ff ff 10             	mulhq \$r57 = \$r58, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    13ec:	ba 2e e4 55                                     	mulwc.c \$r57 = \$r58, \$r58;;
+    13f8:	fa 1e e8 56                                     	mulhq \$r58 = \$r58, \$r59;;
 
-    13f0:	fb ff e8 c7 ff ff ff 97 ff ff ff 10             	mulwc \$r58 = \$r59, 2305843009213693951 \(0x1fffffffffffffff\);;
+    13fc:	3b f0 ec 46                                     	mulhq \$r59 = \$r59, -64 \(0xffffffc0\);;
 
-    13fc:	3b 1f ec 57                                     	mulwc \$r59 = \$r59, \$r60;;
+    1400:	3c 00 f0 c6 00 00 80 17                         	mulhq \$r60 = \$r60, -8589934592 \(0xfffffffe00000000\);;
 
-    1400:	3c f0 f0 47                                     	mulwc \$r60 = \$r60, -64 \(0xffffffc0\);;
+    1408:	7c 4f c8 58                                     	mulhwq \$r50r51 = \$r60, \$r61;;
 
-    1404:	3d 00 f4 c7 00 00 80 17                         	mulwc \$r61 = \$r61, -8589934592 \(0xfffffffe00000000\);;
+    140c:	fd ff cc ca ff ff ff 97 ff ff ff 10             	mulsudt \$r50r51 = \$r61, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    140c:	bd 2f d8 57                                     	mulwdc.c \$r54r55 = \$r61, \$r62;;
+    1418:	bd 1f d4 5a                                     	mulsudt \$r52r53 = \$r61, \$r62;;
 
-    1410:	be 2f d8 56                                     	mulwdc \$r54r55 = \$r62, \$r62;;
+    141c:	3e f0 d4 4a                                     	mulsudt \$r52r53 = \$r62, -64 \(0xffffffc0\);;
 
-    1414:	ff 1f e0 50                                     	mulwdp \$r56r57 = \$r63, \$r63;;
+    1420:	3e 00 dc ca 00 00 80 17                         	mulsudt \$r54r55 = \$r62, -8589934592 \(0xfffffffe00000000\);;
 
-    1418:	00 30 fc 58                                     	mulwd \$r63 = \$r0, \$r0;;
+    1428:	ff 4f d8 5a                                     	mulsuhwq \$r54r55 = \$r63, \$r63;;
 
-    141c:	c1 37 00 d8 ff ff ff 10                         	mulwd \$r0 = \$r1, 536870911 \(0x1fffffff\);;
+    142c:	3f 10 e0 52                                     	mulsuwdp \$r56r57 = \$r63, \$r0;;
 
-    1424:	c1 ff 04 c5 ff ff ff 97 ff ff ff 10             	mulwp \$r1 = \$r1, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1430:	c0 17 e0 d2 ff ff ff 10                         	mulsuwdp \$r56r57 = \$r0, 536870911 \(0x1fffffff\);;
 
-    1430:	82 10 08 55                                     	mulwp \$r2 = \$r2, \$r2;;
+    1438:	41 30 00 5a                                     	mulsuwd \$r0 = \$r1, \$r1;;
 
-    1434:	03 f0 0c 45                                     	mulwp \$r3 = \$r3, -64 \(0xffffffc0\);;
+    143c:	c2 37 04 da ff ff ff 10                         	mulsuwd \$r1 = \$r2, 536870911 \(0x1fffffff\);;
 
-    1438:	04 00 0c c5 00 00 80 17                         	mulwp \$r3 = \$r4, -8589934592 \(0xfffffffe00000000\);;
+    1444:	c2 ff ec c9 ff ff ff 97 ff ff ff 10             	muludt \$r58r59 = \$r2, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1440:	ba 2e e0 54                                     	mulwq \$r56r57 = \$r58r59, \$r58r59;;
+    1450:	c2 10 ec 59                                     	muludt \$r58r59 = \$r2, \$r3;;
 
-    1444:	44 31 10 5b                                     	mulw \$r4 = \$r4, \$r5;;
+    1454:	03 f0 f4 49                                     	muludt \$r60r61 = \$r3, -64 \(0xffffffc0\);;
 
-    1448:	c5 37 14 db ff ff ff 10                         	mulw \$r5 = \$r5, 536870911 \(0x1fffffff\);;
+    1458:	03 00 f4 c9 00 00 80 17                         	muludt \$r60r61 = \$r3, -8589934592 \(0xfffffffe00000000\);;
 
-    1450:	c6 ff 18 e9 ff ff ff 87 ff ff ff 00             	nandd \$r6 = \$r6, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1460:	04 41 f8 59                                     	muluhwq \$r62r63 = \$r4, \$r4;;
 
-    145c:	c7 01 19 79                                     	nandd \$r6 = \$r7, \$r7;;
+    1464:	44 11 f8 51                                     	muluwdp \$r62r63 = \$r4, \$r5;;
 
-    1460:	08 f0 1c 69                                     	nandd \$r7 = \$r8, -64 \(0xffffffc0\);;
+    1468:	c5 1f 00 d1 ff ff ff 10                         	muluwdp \$r0r1 = \$r5, 536870911 \(0x1fffffff\).@;;
 
-    1464:	08 00 20 e9 00 00 80 07                         	nandd \$r8 = \$r8, -8589934592 \(0xfffffffe00000000\);;
+    1470:	86 31 14 59                                     	muluwd \$r5 = \$r6, \$r6;;
 
-    146c:	c9 ff 24 e9 ff ff 07 00                         	nandd \$r9 = \$r9, 536870911 \(0x1fffffff\);;
+    1474:	c7 37 18 d9 ff ff ff 10                         	muluwd \$r6 = \$r7, 536870911 \(0x1fffffff\);;
 
-    1474:	8a 12 25 79                                     	nandw \$r9 = \$r10, \$r10;;
+    147c:	07 22 1c 55                                     	mulwc.c \$r7 = \$r7, \$r8;;
 
-    1478:	0b f0 28 79                                     	nandw \$r10 = \$r11, -64 \(0xffffffc0\);;
+    1480:	c8 ff 20 c7 ff ff ff 97 ff ff ff 10             	mulwc \$r8 = \$r8, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    147c:	0b 00 2c f9 00 00 80 07                         	nandw \$r11 = \$r11, -8589934592 \(0xfffffffe00000000\);;
+    148c:	49 12 24 57                                     	mulwc \$r9 = \$r9, \$r9;;
 
-    1484:	0c 00 30 65                                     	negd \$r12 = \$r12;;
+    1490:	0a f0 28 47                                     	mulwc \$r10 = \$r10, -64 \(0xffffffc0\);;
 
-    1488:	0d 30 35 f5 00 00 00 00                         	neghq \$r13 = \$r13;;
+    1494:	0b 00 28 c7 00 00 80 17                         	mulwc \$r10 = \$r11, -8589934592 \(0xfffffffe00000000\);;
 
-    1490:	0e 20 39 f5 00 00 00 00                         	negwp \$r14 = \$r14;;
+    149c:	cb 22 00 57                                     	mulwdc.c \$r0r1 = \$r11, \$r11;;
 
-    1498:	0f 00 3c 75                                     	negw \$r15 = \$r15;;
+    14a0:	0c 23 08 56                                     	mulwdc \$r2r3 = \$r12, \$r12;;
 
-    149c:	d0 ff 40 eb ff ff ff 87 ff ff ff 00             	niord \$r16 = \$r16, 2305843009213693951 \(0x1fffffffffffffff\);;
+    14a4:	4d 13 08 50                                     	mulwdp \$r2r3 = \$r13, \$r13;;
 
-    14a8:	51 04 41 7b                                     	niord \$r16 = \$r17, \$r17;;
+    14a8:	ce 17 10 d0 ff ff ff 10                         	mulwdp \$r4r5 = \$r14, 536870911 \(0x1fffffff\);;
 
-    14ac:	12 f0 44 6b                                     	niord \$r17 = \$r18, -64 \(0xffffffc0\);;
+    14b0:	cf 33 38 58                                     	mulwd \$r14 = \$r15, \$r15;;
 
-    14b0:	12 00 48 eb 00 00 80 07                         	niord \$r18 = \$r18, -8589934592 \(0xfffffffe00000000\);;
+    14b4:	d0 37 40 d8 ff ff ff 10                         	mulwd \$r16 = \$r16, 536870911 \(0x1fffffff\);;
 
-    14b8:	d3 0f 4d fb ff ff ff 00                         	niord \$r19 = \$r19, 536870911 \(0x1fffffff\).@;;
+    14bc:	d1 ff 40 c5 ff ff ff 97 ff ff ff 10             	mulwp \$r16 = \$r17, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    14c0:	14 15 4d 7b                                     	niorw \$r19 = \$r20, \$r20;;
+    14c8:	91 14 44 55                                     	mulwp \$r17 = \$r17, \$r18;;
 
-    14c4:	15 f0 50 7b                                     	niorw \$r20 = \$r21, -64 \(0xffffffc0\);;
+    14cc:	12 f0 48 45                                     	mulwp \$r18 = \$r18, -64 \(0xffffffc0\);;
 
-    14c8:	15 00 54 fb 00 00 80 07                         	niorw \$r21 = \$r21, -8589934592 \(0xfffffffe00000000\);;
+    14d0:	13 00 4c c5 00 00 80 17                         	mulwp \$r19 = \$r19, -8589934592 \(0xfffffffe00000000\);;
 
-    14d0:	00 f0 03 7f                                     	nop;;
+    14d8:	86 21 10 54                                     	mulwq \$r4r5 = \$r6r7, \$r6r7;;
 
-    14d4:	d6 ff 58 eb ff ff ff 87 ff ff ff 00             	niord \$r22 = \$r22, 2305843009213693951 \(0x1fffffffffffffff\);;
+    14dc:	14 35 4c 5b                                     	mulw \$r19 = \$r20, \$r20;;
 
-    14e0:	d7 05 59 7b                                     	niord \$r22 = \$r23, \$r23;;
+    14e0:	d5 37 50 db ff ff ff 10                         	mulw \$r20 = \$r21, 536870911 \(0x1fffffff\);;
 
-    14e4:	18 f0 5c 6b                                     	niord \$r23 = \$r24, -64 \(0xffffffc0\);;
+    14e8:	d5 ff 54 e9 ff ff ff 87 ff ff ff 00             	nandd \$r21 = \$r21, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    14e8:	18 00 60 eb 00 00 80 07                         	niord \$r24 = \$r24, -8589934592 \(0xfffffffe00000000\);;
+    14f4:	96 05 59 79                                     	nandd \$r22 = \$r22, \$r22;;
 
-    14f0:	d9 ff 64 eb ff ff 07 00                         	niord \$r25 = \$r25, 536870911 \(0x1fffffff\);;
+    14f8:	17 f0 5c 69                                     	nandd \$r23 = \$r23, -64 \(0xffffffc0\);;
 
-    14f8:	9a 16 65 7b                                     	niorw \$r25 = \$r26, \$r26;;
+    14fc:	18 00 5c e9 00 00 80 07                         	nandd \$r23 = \$r24, -8589934592 \(0xfffffffe00000000\);;
 
-    14fc:	1b f0 68 7b                                     	niorw \$r26 = \$r27, -64 \(0xffffffc0\);;
+    1504:	58 16 61 79                                     	nandw \$r24 = \$r24, \$r25;;
 
-    1500:	1b 00 6c fb 00 00 80 07                         	niorw \$r27 = \$r27, -8589934592 \(0xfffffffe00000000\);;
+    1508:	19 f0 64 79                                     	nandw \$r25 = \$r25, -64 \(0xffffffc0\);;
 
-    1508:	dc ff 70 6c                                     	notd \$r28 = \$r28;;
+    150c:	1a 00 68 f9 00 00 80 07                         	nandw \$r26 = \$r26, -8589934592 \(0xfffffffe00000000\);;
 
-    150c:	dd ff 70 7c                                     	notw \$r28 = \$r29;;
+    1514:	1b 00 68 65                                     	negd \$r26 = \$r27;;
 
-    1510:	dd ff 74 ed ff ff ff 87 ff ff ff 00             	nxord \$r29 = \$r29, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1518:	1b 30 6d f5 00 00 00 00                         	neghq \$r27 = \$r27;;
 
-    151c:	9e 07 79 7d                                     	nxord \$r30 = \$r30, \$r30;;
+    1520:	1c 20 71 f5 00 00 00 00                         	negwp \$r28 = \$r28;;
 
-    1520:	1f f0 7c 6d                                     	nxord \$r31 = \$r31, -64 \(0xffffffc0\);;
+    1528:	1d 00 70 75                                     	negw \$r28 = \$r29;;
 
-    1524:	20 00 7c ed 00 00 80 07                         	nxord \$r31 = \$r32, -8589934592 \(0xfffffffe00000000\);;
+    152c:	dd ff 74 eb ff ff ff 87 ff ff ff 00             	niord \$r29 = \$r29, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    152c:	e0 0f 81 fd ff ff ff 00                         	nxord \$r32 = \$r32, 536870911 \(0x1fffffff\).@;;
+    1538:	9e 07 79 7b                                     	niord \$r30 = \$r30, \$r30;;
 
-    1534:	61 18 85 7d                                     	nxorw \$r33 = \$r33, \$r33;;
+    153c:	1f f0 7c 6b                                     	niord \$r31 = \$r31, -64 \(0xffffffc0\);;
 
-    1538:	22 f0 88 7d                                     	nxorw \$r34 = \$r34, -64 \(0xffffffc0\);;
+    1540:	20 00 7c eb 00 00 80 07                         	niord \$r31 = \$r32, -8589934592 \(0xfffffffe00000000\);;
 
-    153c:	23 00 88 fd 00 00 80 07                         	nxorw \$r34 = \$r35, -8589934592 \(0xfffffffe00000000\);;
+    1548:	60 18 81 7b                                     	niorw \$r32 = \$r32, \$r33;;
 
-    1544:	e3 ff 8c ea ff ff ff 87 ff ff ff 00             	iord \$r35 = \$r35, 2305843009213693951 \(0x1fffffffffffffff\);;
+    154c:	21 f0 84 7b                                     	niorw \$r33 = \$r33, -64 \(0xffffffc0\);;
 
-    1550:	24 09 91 7a                                     	iord \$r36 = \$r36, \$r36;;
+    1550:	22 00 88 fb 00 00 80 07                         	niorw \$r34 = \$r34, -8589934592 \(0xfffffffe00000000\);;
 
-    1554:	25 f0 94 6a                                     	iord \$r37 = \$r37, -64 \(0xffffffc0\);;
+    1558:	00 f0 03 7f                                     	nop;;
 
-    1558:	26 00 94 ea 00 00 80 07                         	iord \$r37 = \$r38, -8589934592 \(0xfffffffe00000000\);;
+    155c:	e3 ff 88 eb ff ff ff 87 ff ff ff 00             	niord \$r34 = \$r35, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1560:	e6 ff 98 ea ff ff 07 00                         	iord \$r38 = \$r38, 536870911 \(0x1fffffff\);;
+    1568:	23 09 8d 7b                                     	niord \$r35 = \$r35, \$r36;;
 
-    1568:	e7 ff 9c ef ff ff ff 87 ff ff ff 00             	iornd \$r39 = \$r39, 2305843009213693951 \(0x1fffffffffffffff\);;
+    156c:	24 f0 90 6b                                     	niord \$r36 = \$r36, -64 \(0xffffffc0\);;
 
-    1574:	28 0a 9d 7f                                     	iornd \$r39 = \$r40, \$r40;;
+    1570:	25 00 94 eb 00 00 80 07                         	niord \$r37 = \$r37, -8589934592 \(0xfffffffe00000000\);;
 
-    1578:	29 f0 a0 6f                                     	iornd \$r40 = \$r41, -64 \(0xffffffc0\);;
+    1578:	a6 19 95 7b                                     	niorw \$r37 = \$r38, \$r38;;
 
-    157c:	29 00 a4 ef 00 00 80 07                         	iornd \$r41 = \$r41, -8589934592 \(0xfffffffe00000000\);;
+    157c:	27 f0 98 7b                                     	niorw \$r38 = \$r39, -64 \(0xffffffc0\);;
 
-    1584:	ea 0f a9 ff ff ff ff 00                         	iornd \$r42 = \$r42, 536870911 \(0x1fffffff\).@;;
+    1580:	27 00 9c fb 00 00 80 07                         	niorw \$r39 = \$r39, -8589934592 \(0xfffffffe00000000\);;
 
-    158c:	eb 1a a9 7f                                     	iornw \$r42 = \$r43, \$r43;;
+    1588:	e8 ff a0 6c                                     	notd \$r40 = \$r40;;
 
-    1590:	2c f0 ac 7f                                     	iornw \$r43 = \$r44, -64 \(0xffffffc0\);;
+    158c:	e9 ff a0 7c                                     	notw \$r40 = \$r41;;
 
-    1594:	2c 00 b0 ff 00 00 80 07                         	iornw \$r44 = \$r44, -8589934592 \(0xfffffffe00000000\);;
+    1590:	e9 ff a4 ed ff ff ff 87 ff ff ff 00             	nxord \$r41 = \$r41, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    159c:	6d 1b b5 7a                                     	iorw \$r45 = \$r45, \$r45;;
+    159c:	aa 0a a9 7d                                     	nxord \$r42 = \$r42, \$r42;;
 
-    15a0:	2e f0 b8 7a                                     	iorw \$r46 = \$r46, -64 \(0xffffffc0\);;
+    15a0:	2b f0 ac 6d                                     	nxord \$r43 = \$r43, -64 \(0xffffffc0\);;
 
-    15a4:	2f 00 b8 fa 00 00 80 07                         	iorw \$r46 = \$r47, -8589934592 \(0xfffffffe00000000\);;
+    15a4:	2c 00 ac ed 00 00 80 07                         	nxord \$r43 = \$r44, -8589934592 \(0xfffffffe00000000\);;
 
-    15ac:	c0 ff bc f0 ff ff ff 87 ff ff ff 00             	pcrel \$r47 = 2305843009213693951 \(0x1fffffffffffffff\);;
+    15ac:	6c 1b b1 7d                                     	nxorw \$r44 = \$r44, \$r45;;
 
-    15b8:	3c 00 bc f0 00 00 00 00                         	pcrel \$r47 = -549755813888 \(0xffffff8000000000\);;
+    15b0:	2d f0 b4 7d                                     	nxorw \$r45 = \$r45, -64 \(0xffffffc0\);;
 
-    15c0:	00 f0 c0 70                                     	pcrel \$r48 = -4096 \(0xfffff000\);;
+    15b4:	2e 00 b8 fd 00 00 80 07                         	nxorw \$r46 = \$r46, -8589934592 \(0xfffffffe00000000\);;
 
-    15c4:	00 00 d0 0f                                     	ret;;
+    15bc:	ef ff b8 ea ff ff ff 87 ff ff ff 00             	iord \$r46 = \$r47, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    15c8:	00 00 d4 0f                                     	rfe;;
+    15c8:	2f 0c bd 7a                                     	iord \$r47 = \$r47, \$r48;;
 
-    15cc:	70 8c c2 7e                                     	rolwps \$r48 = \$r48, \$r49;;
+    15cc:	30 f0 c0 6a                                     	iord \$r48 = \$r48, -64 \(0xffffffc0\);;
 
-    15d0:	f1 41 c6 7e                                     	rolwps \$r49 = \$r49, 7 \(0x7\);;
+    15d0:	31 00 c4 ea 00 00 80 07                         	iord \$r49 = \$r49, -8589934592 \(0xfffffffe00000000\);;
 
-    15d4:	b2 7c ca 7e                                     	rolw \$r50 = \$r50, \$r50;;
+    15d8:	f2 ff c4 ef ff ff ff 87 ff ff ff 00             	iornd \$r49 = \$r50, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    15d8:	f3 31 ce 7e                                     	rolw \$r51 = \$r51, 7 \(0x7\);;
+    15e4:	f2 0c c9 7f                                     	iornd \$r50 = \$r50, \$r51;;
 
-    15dc:	34 8d ce 7f                                     	rorwps \$r51 = \$r52, \$r52;;
+    15e8:	33 f0 cc 6f                                     	iornd \$r51 = \$r51, -64 \(0xffffffc0\);;
 
-    15e0:	f5 41 d2 7f                                     	rorwps \$r52 = \$r53, 7 \(0x7\);;
+    15ec:	34 00 d0 ef 00 00 80 07                         	iornd \$r52 = \$r52, -8589934592 \(0xfffffffe00000000\);;
 
-    15e4:	b5 7d d6 7f                                     	rorw \$r53 = \$r53, \$r54;;
+    15f4:	75 1d d1 7f                                     	iornw \$r52 = \$r53, \$r53;;
 
-    15e8:	f6 31 da 7f                                     	rorw \$r54 = \$r54, 7 \(0x7\);;
+    15f8:	36 f0 d4 7f                                     	iornw \$r53 = \$r54, -64 \(0xffffffc0\);;
 
-    15ec:	37 07 c8 0f                                     	rswap \$r55 = \$mmc;;
+    15fc:	36 00 d8 ff 00 00 80 07                         	iornw \$r54 = \$r54, -8589934592 \(0xfffffffe00000000\);;
 
-    15f0:	37 00 c8 0f                                     	rswap \$r55 = \$pc;;
+    1604:	f7 1d dd 7a                                     	iorw \$r55 = \$r55, \$r55;;
 
-    15f4:	37 00 c8 0f                                     	rswap \$r55 = \$pc;;
+    1608:	38 f0 e0 7a                                     	iorw \$r56 = \$r56, -64 \(0xffffffc0\);;
 
-    15f8:	38 24 e2 7e                                     	satdh \$r56 = \$r56;;
+    160c:	39 00 e0 fa 00 00 80 07                         	iorw \$r56 = \$r57, -8589934592 \(0xfffffffe00000000\);;
 
-    15fc:	39 28 e2 7e                                     	satdw \$r56 = \$r57;;
+    1614:	c0 ff e4 f0 ff ff ff 87 ff ff ff 00             	pcrel \$r57 = 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1600:	b9 6e e6 7e                                     	satd \$r57 = \$r57, \$r58;;
+    1620:	3c 00 e4 f0 00 00 00 00                         	pcrel \$r57 = -549755813888 \(0xffffff8000000000\);;
 
-    1604:	fa 21 ea 7e                                     	satd \$r58 = \$r58, 7 \(0x7\);;
+    1628:	00 f0 e8 70                                     	pcrel \$r58 = -4096 \(0xfffff000\);;
 
-    1608:	fb de ed 7f                                     	sbfcd.i \$r59 = \$r59, \$r59;;
+    162c:	00 00 d0 0f                                     	ret;;
 
-    160c:	fc d7 f1 ff ff ff ff 00                         	sbfcd.i \$r60 = \$r60, 536870911 \(0x1fffffff\);;
+    1630:	00 00 d4 0f                                     	rfe;;
 
-    1614:	7d cf f1 7f                                     	sbfcd \$r60 = \$r61, \$r61;;
+    1634:	fa 8e ea 7e                                     	rolwps \$r58 = \$r58, \$r59;;
 
-    1618:	fe c7 f5 ff ff ff ff 00                         	sbfcd \$r61 = \$r62, 536870911 \(0x1fffffff\);;
+    1638:	fb 41 ee 7e                                     	rolwps \$r59 = \$r59, 7 \(0x7\);;
 
-    1620:	fe ff f8 e5 ff ff ff 87 ff ff ff 00             	sbfd \$r62 = \$r62, 2305843009213693951 \(0x1fffffffffffffff\);;
+    163c:	3c 7f f2 7e                                     	rolw \$r60 = \$r60, \$r60;;
 
-    162c:	ff 0f fd 75                                     	sbfd \$r63 = \$r63, \$r63;;
+    1640:	fd 31 f6 7e                                     	rolw \$r61 = \$r61, 7 \(0x7\);;
 
-    1630:	00 f0 00 65                                     	sbfd \$r0 = \$r0, -64 \(0xffffffc0\);;
+    1644:	be 8f f6 7f                                     	rorwps \$r61 = \$r62, \$r62;;
 
-    1634:	01 00 00 e5 00 00 80 07                         	sbfd \$r0 = \$r1, -8589934592 \(0xfffffffe00000000\);;
+    1648:	ff 41 fa 7f                                     	rorwps \$r62 = \$r63, 7 \(0x7\);;
 
-    163c:	c1 ff 04 e5 ff ff 07 00                         	sbfd \$r1 = \$r1, 536870911 \(0x1fffffff\);;
+    164c:	3f 70 fe 7f                                     	rorw \$r63 = \$r63, \$r0;;
 
-    1644:	82 30 09 7d                                     	sbfhcp.c \$r2 = \$r2, \$r2;;
+    1650:	c0 31 02 7f                                     	rorw \$r0 = \$r0, 7 \(0x7\);;
 
-    1648:	c3 3f 0d fd ff ff ff 00                         	sbfhcp.c \$r3 = \$r3, 536870911 \(0x1fffffff\).@;;
+    1654:	01 07 c8 0f                                     	rswap \$r1 = \$mmc;;
 
-    1650:	04 31 0d 75                                     	sbfhq \$r3 = \$r4, \$r4;;
+    1658:	01 00 c8 0f                                     	rswap \$r1 = \$pc;;
 
-    1654:	c5 37 11 f5 ff ff ff 00                         	sbfhq \$r4 = \$r5, 536870911 \(0x1fffffff\);;
+    165c:	01 00 c8 0f                                     	rswap \$r1 = \$pc;;
 
-    165c:	c5 ff 15 ef ff ff ff 87 ff ff ff 00             	sbfsd \$r5 = \$r5, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1660:	02 24 0a 7e                                     	satdh \$r2 = \$r2;;
 
-    1668:	86 a1 19 7f                                     	sbfsd \$r6 = \$r6, \$r6;;
+    1664:	03 28 0a 7e                                     	satdw \$r2 = \$r3;;
 
-    166c:	07 f0 1d 6f                                     	sbfsd \$r7 = \$r7, -64 \(0xffffffc0\);;
+    1668:	03 61 0e 7e                                     	satd \$r3 = \$r3, \$r4;;
 
-    1670:	08 00 1d ef 00 00 80 07                         	sbfsd \$r7 = \$r8, -8589934592 \(0xfffffffe00000000\);;
+    166c:	c4 21 12 7e                                     	satd \$r4 = \$r4, 7 \(0x7\);;
 
-    1678:	48 f2 21 7f                                     	sbfshq \$r8 = \$r8, \$r9;;
+    1670:	45 d1 15 7f                                     	sbfcd.i \$r5 = \$r5, \$r5;;
 
-    167c:	c9 ff 25 ff ff ff ff 00                         	sbfshq \$r9 = \$r9, 536870911 \(0x1fffffff\).@;;
+    1674:	c6 d7 19 ff ff ff ff 00                         	sbfcd.i \$r6 = \$r6, 536870911 \(0x1fffffff\);;
 
-    1684:	8a e2 29 7f                                     	sbfswp \$r10 = \$r10, \$r10;;
+    167c:	c7 c1 19 7f                                     	sbfcd \$r6 = \$r7, \$r7;;
 
-    1688:	cb e7 2d ff ff ff ff 00                         	sbfswp \$r11 = \$r11, 536870911 \(0x1fffffff\);;
+    1680:	c8 c7 1d ff ff ff ff 00                         	sbfcd \$r7 = \$r8, 536870911 \(0x1fffffff\);;
 
-    1690:	0c b3 2d 7f                                     	sbfsw \$r11 = \$r12, \$r12;;
+    1688:	c8 ff 20 e5 ff ff ff 87 ff ff ff 00             	sbfd \$r8 = \$r8, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1694:	cd b7 35 ff ff ff ff 00                         	sbfsw \$r13 = \$r13, 536870911 \(0x1fffffff\);;
+    1694:	49 02 25 75                                     	sbfd \$r9 = \$r9, \$r9;;
 
-    169c:	ce 43 39 7b                                     	sbfuwd \$r14 = \$r14, \$r15;;
+    1698:	0a f0 28 65                                     	sbfd \$r10 = \$r10, -64 \(0xffffffc0\);;
 
-    16a0:	d0 4f 3d fb ff ff ff 00                         	sbfuwd \$r15 = \$r16, 536870911 \(0x1fffffff\).@;;
+    169c:	0b 00 28 e5 00 00 80 07                         	sbfd \$r10 = \$r11, -8589934592 \(0xfffffffe00000000\);;
 
-    16a8:	50 24 41 7d                                     	sbfwc.c \$r16 = \$r16, \$r17;;
+    16a4:	0b 33 2d 7d                                     	sbfhcp.c \$r11 = \$r11, \$r12;;
 
-    16ac:	d1 27 45 fd ff ff ff 00                         	sbfwc.c \$r17 = \$r17, 536870911 \(0x1fffffff\);;
+    16a8:	cd 3f 31 fd ff ff ff 00                         	sbfhcp.c \$r12 = \$r13, 536870911 \(0x1fffffff\).@;;
 
-    16b4:	92 44 49 79                                     	sbfwd \$r18 = \$r18, \$r18;;
+    16b0:	8e 33 35 75                                     	sbfhq \$r13 = \$r14, \$r14;;
 
-    16b8:	d3 4f 4d f9 ff ff ff 00                         	sbfwd \$r19 = \$r19, 536870911 \(0x1fffffff\).@;;
+    16b4:	cf 37 3d f5 ff ff ff 00                         	sbfhq \$r15 = \$r15, 536870911 \(0x1fffffff\);;
 
-    16c0:	14 25 4d 75                                     	sbfwp \$r19 = \$r20, \$r20;;
+    16bc:	d0 ff 41 ef ff ff ff 87 ff ff ff 00             	sbfsd \$r16 = \$r16, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    16c4:	d5 27 51 f5 ff ff ff 00                         	sbfwp \$r20 = \$r21, 536870911 \(0x1fffffff\);;
+    16c8:	51 a4 41 7f                                     	sbfsd \$r16 = \$r17, \$r17;;
 
-    16cc:	95 15 55 75                                     	sbfw \$r21 = \$r21, \$r22;;
+    16cc:	12 f0 45 6f                                     	sbfsd \$r17 = \$r18, -64 \(0xffffffc0\);;
 
-    16d0:	16 f0 58 75                                     	sbfw \$r22 = \$r22, -64 \(0xffffffc0\);;
+    16d0:	12 00 49 ef 00 00 80 07                         	sbfsd \$r18 = \$r18, -8589934592 \(0xfffffffe00000000\);;
 
-    16d4:	17 00 5c f5 00 00 80 07                         	sbfw \$r23 = \$r23, -8589934592 \(0xfffffffe00000000\);;
+    16d8:	d3 f4 4d 7f                                     	sbfshq \$r19 = \$r19, \$r19;;
 
-    16dc:	18 46 5d 77                                     	sbfx16d \$r23 = \$r24, \$r24;;
+    16dc:	d4 ff 51 ff ff ff ff 00                         	sbfshq \$r20 = \$r20, 536870911 \(0x1fffffff\).@;;
 
-    16e0:	d9 4f 61 f7 ff ff ff 00                         	sbfx16d \$r24 = \$r25, 536870911 \(0x1fffffff\).@;;
+    16e4:	55 e5 51 7f                                     	sbfswp \$r20 = \$r21, \$r21;;
 
-    16e8:	99 76 65 77                                     	sbfx16hq \$r25 = \$r25, \$r26;;
+    16e8:	d6 e7 55 ff ff ff ff 00                         	sbfswp \$r21 = \$r22, 536870911 \(0x1fffffff\);;
 
-    16ec:	da 77 69 f7 ff ff ff 00                         	sbfx16hq \$r26 = \$r26, 536870911 \(0x1fffffff\);;
+    16f0:	d6 b5 59 7f                                     	sbfsw \$r22 = \$r22, \$r23;;
 
-    16f4:	db 86 6d 7f                                     	sbfx16uwd \$r27 = \$r27, \$r27;;
+    16f4:	d7 b7 5d ff ff ff ff 00                         	sbfsw \$r23 = \$r23, 536870911 \(0x1fffffff\);;
 
-    16f8:	dc 87 71 ff ff ff ff 00                         	sbfx16uwd \$r28 = \$r28, 536870911 \(0x1fffffff\);;
+    16fc:	18 46 61 7b                                     	sbfuwd \$r24 = \$r24, \$r24;;
 
-    1700:	5d 87 71 77                                     	sbfx16wd \$r28 = \$r29, \$r29;;
+    1700:	d9 4f 65 fb ff ff ff 00                         	sbfuwd \$r25 = \$r25, 536870911 \(0x1fffffff\).@;;
 
-    1704:	de 87 75 f7 ff ff ff 00                         	sbfx16wd \$r29 = \$r30, 536870911 \(0x1fffffff\);;
+    1708:	9a 26 65 7d                                     	sbfwc.c \$r25 = \$r26, \$r26;;
 
-    170c:	de 67 79 77                                     	sbfx16wp \$r30 = \$r30, \$r31;;
+    170c:	db 27 69 fd ff ff ff 00                         	sbfwc.c \$r26 = \$r27, 536870911 \(0x1fffffff\);;
 
-    1710:	df 6f 7d f7 ff ff ff 00                         	sbfx16wp \$r31 = \$r31, 536870911 \(0x1fffffff\).@;;
+    1714:	1b 47 6d 79                                     	sbfwd \$r27 = \$r27, \$r28;;
 
-    1718:	20 58 81 77                                     	sbfx16w \$r32 = \$r32, \$r32;;
+    1718:	dc 4f 71 f9 ff ff ff 00                         	sbfwd \$r28 = \$r28, 536870911 \(0x1fffffff\).@;;
 
-    171c:	e1 57 85 f7 ff ff ff 00                         	sbfx16w \$r33 = \$r33, 536870911 \(0x1fffffff\);;
+    1720:	5d 27 75 75                                     	sbfwp \$r29 = \$r29, \$r29;;
 
-    1724:	a2 48 85 71                                     	sbfx2d \$r33 = \$r34, \$r34;;
+    1724:	de 27 79 f5 ff ff ff 00                         	sbfwp \$r30 = \$r30, 536870911 \(0x1fffffff\);;
 
-    1728:	e3 47 89 f1 ff ff ff 00                         	sbfx2d \$r34 = \$r35, 536870911 \(0x1fffffff\);;
+    172c:	df 17 79 75                                     	sbfw \$r30 = \$r31, \$r31;;
 
-    1730:	23 79 8d 71                                     	sbfx2hq \$r35 = \$r35, \$r36;;
+    1730:	20 f0 7c 75                                     	sbfw \$r31 = \$r32, -64 \(0xffffffc0\);;
 
-    1734:	e4 7f 91 f1 ff ff ff 00                         	sbfx2hq \$r36 = \$r36, 536870911 \(0x1fffffff\).@;;
+    1734:	20 00 80 f5 00 00 80 07                         	sbfw \$r32 = \$r32, -8589934592 \(0xfffffffe00000000\);;
 
-    173c:	65 89 95 79                                     	sbfx2uwd \$r37 = \$r37, \$r37;;
+    173c:	61 48 85 77                                     	sbfx16d \$r33 = \$r33, \$r33;;
 
-    1740:	e6 87 99 f9 ff ff ff 00                         	sbfx2uwd \$r38 = \$r38, 536870911 \(0x1fffffff\);;
+    1740:	e2 4f 89 f7 ff ff ff 00                         	sbfx16d \$r34 = \$r34, 536870911 \(0x1fffffff\).@;;
 
-    1748:	e7 89 99 71                                     	sbfx2wd \$r38 = \$r39, \$r39;;
+    1748:	e3 78 89 77                                     	sbfx16hq \$r34 = \$r35, \$r35;;
 
-    174c:	e8 87 9d f1 ff ff ff 00                         	sbfx2wd \$r39 = \$r40, 536870911 \(0x1fffffff\);;
+    174c:	e4 77 8d f7 ff ff ff 00                         	sbfx16hq \$r35 = \$r36, 536870911 \(0x1fffffff\);;
 
-    1754:	68 6a a1 71                                     	sbfx2wp \$r40 = \$r40, \$r41;;
+    1754:	64 89 91 7f                                     	sbfx16uwd \$r36 = \$r36, \$r37;;
 
-    1758:	e9 67 a5 f1 ff ff ff 00                         	sbfx2wp \$r41 = \$r41, 536870911 \(0x1fffffff\);;
+    1758:	e5 87 95 ff ff ff ff 00                         	sbfx16uwd \$r37 = \$r37, 536870911 \(0x1fffffff\);;
 
-    1760:	aa 5a a9 71                                     	sbfx2w \$r42 = \$r42, \$r42;;
+    1760:	a6 89 99 77                                     	sbfx16wd \$r38 = \$r38, \$r38;;
 
-    1764:	eb 57 ad f1 ff ff ff 00                         	sbfx2w \$r43 = \$r43, 536870911 \(0x1fffffff\);;
+    1764:	e7 87 9d f7 ff ff ff 00                         	sbfx16wd \$r39 = \$r39, 536870911 \(0x1fffffff\);;
 
-    176c:	2c 4b ad 73                                     	sbfx4d \$r43 = \$r44, \$r44;;
+    176c:	28 6a 9d 77                                     	sbfx16wp \$r39 = \$r40, \$r40;;
 
-    1770:	ed 4f b1 f3 ff ff ff 00                         	sbfx4d \$r44 = \$r45, 536870911 \(0x1fffffff\).@;;
+    1770:	e9 6f a1 f7 ff ff ff 00                         	sbfx16wp \$r40 = \$r41, 536870911 \(0x1fffffff\).@;;
 
-    1778:	ad 7b b5 73                                     	sbfx4hq \$r45 = \$r45, \$r46;;
+    1778:	a9 5a a5 77                                     	sbfx16w \$r41 = \$r41, \$r42;;
 
-    177c:	ee 77 b9 f3 ff ff ff 00                         	sbfx4hq \$r46 = \$r46, 536870911 \(0x1fffffff\);;
+    177c:	ea 57 a9 f7 ff ff ff 00                         	sbfx16w \$r42 = \$r42, 536870911 \(0x1fffffff\);;
 
-    1784:	ef 8b bd 7b                                     	sbfx4uwd \$r47 = \$r47, \$r47;;
+    1784:	eb 4a ad 71                                     	sbfx2d \$r43 = \$r43, \$r43;;
 
-    1788:	f0 87 c1 fb ff ff ff 00                         	sbfx4uwd \$r48 = \$r48, 536870911 \(0x1fffffff\);;
+    1788:	ec 47 b1 f1 ff ff ff 00                         	sbfx2d \$r44 = \$r44, 536870911 \(0x1fffffff\);;
 
-    1790:	71 8c c1 73                                     	sbfx4wd \$r48 = \$r49, \$r49;;
+    1790:	6d 7b b1 71                                     	sbfx2hq \$r44 = \$r45, \$r45;;
 
-    1794:	f2 87 c5 f3 ff ff ff 00                         	sbfx4wd \$r49 = \$r50, 536870911 \(0x1fffffff\);;
+    1794:	ee 7f b5 f1 ff ff ff 00                         	sbfx2hq \$r45 = \$r46, 536870911 \(0x1fffffff\).@;;
 
-    179c:	f2 6c c9 73                                     	sbfx4wp \$r50 = \$r50, \$r51;;
+    179c:	ee 8b b9 79                                     	sbfx2uwd \$r46 = \$r46, \$r47;;
 
-    17a0:	f3 6f cd f3 ff ff ff 00                         	sbfx4wp \$r51 = \$r51, 536870911 \(0x1fffffff\).@;;
+    17a0:	ef 87 bd f9 ff ff ff 00                         	sbfx2uwd \$r47 = \$r47, 536870911 \(0x1fffffff\);;
 
-    17a8:	34 5d d1 73                                     	sbfx4w \$r52 = \$r52, \$r52;;
+    17a8:	30 8c c1 71                                     	sbfx2wd \$r48 = \$r48, \$r48;;
 
-    17ac:	f5 57 d5 f3 ff ff ff 00                         	sbfx4w \$r53 = \$r53, 536870911 \(0x1fffffff\);;
+    17ac:	f1 87 c5 f1 ff ff ff 00                         	sbfx2wd \$r49 = \$r49, 536870911 \(0x1fffffff\);;
 
-    17b4:	b6 4d d5 75                                     	sbfx8d \$r53 = \$r54, \$r54;;
+    17b4:	b2 6c c5 71                                     	sbfx2wp \$r49 = \$r50, \$r50;;
 
-    17b8:	f7 47 d9 f5 ff ff ff 00                         	sbfx8d \$r54 = \$r55, 536870911 \(0x1fffffff\);;
+    17b8:	f3 67 c9 f1 ff ff ff 00                         	sbfx2wp \$r50 = \$r51, 536870911 \(0x1fffffff\);;
 
-    17c0:	37 7e dd 75                                     	sbfx8hq \$r55 = \$r55, \$r56;;
+    17c0:	33 5d cd 71                                     	sbfx2w \$r51 = \$r51, \$r52;;
 
-    17c4:	f8 7f e1 f5 ff ff ff 00                         	sbfx8hq \$r56 = \$r56, 536870911 \(0x1fffffff\).@;;
+    17c4:	f4 57 d1 f1 ff ff ff 00                         	sbfx2w \$r52 = \$r52, 536870911 \(0x1fffffff\);;
 
-    17cc:	79 8e e5 7d                                     	sbfx8uwd \$r57 = \$r57, \$r57;;
+    17cc:	75 4d d5 73                                     	sbfx4d \$r53 = \$r53, \$r53;;
 
-    17d0:	fa 87 e9 fd ff ff ff 00                         	sbfx8uwd \$r58 = \$r58, 536870911 \(0x1fffffff\);;
+    17d0:	f6 4f d9 f3 ff ff ff 00                         	sbfx4d \$r54 = \$r54, 536870911 \(0x1fffffff\).@;;
 
-    17d8:	fb 8e e9 75                                     	sbfx8wd \$r58 = \$r59, \$r59;;
+    17d8:	f7 7d d9 73                                     	sbfx4hq \$r54 = \$r55, \$r55;;
 
-    17dc:	fc 87 ed f5 ff ff ff 00                         	sbfx8wd \$r59 = \$r60, 536870911 \(0x1fffffff\);;
+    17dc:	f8 77 dd f3 ff ff ff 00                         	sbfx4hq \$r55 = \$r56, 536870911 \(0x1fffffff\);;
 
-    17e4:	7c 6f f1 75                                     	sbfx8wp \$r60 = \$r60, \$r61;;
+    17e4:	78 8e e1 7b                                     	sbfx4uwd \$r56 = \$r56, \$r57;;
 
-    17e8:	fd 67 f5 f5 ff ff ff 00                         	sbfx8wp \$r61 = \$r61, 536870911 \(0x1fffffff\);;
+    17e8:	f9 87 e5 fb ff ff ff 00                         	sbfx4uwd \$r57 = \$r57, 536870911 \(0x1fffffff\);;
 
-    17f0:	be 5f f9 75                                     	sbfx8w \$r62 = \$r62, \$r62;;
+    17f0:	ba 8e e9 73                                     	sbfx4wd \$r58 = \$r58, \$r58;;
 
-    17f4:	ff 57 fd f5 ff ff ff 00                         	sbfx8w \$r63 = \$r63, 536870911 \(0x1fffffff\);;
+    17f4:	fb 87 ed f3 ff ff ff 00                         	sbfx4wd \$r59 = \$r59, 536870911 \(0x1fffffff\);;
 
-    17fc:	c0 ff fe ee ff ff ff 87 ff ff ff 00             	sbmm8 \$r63 = \$r0, 2305843009213693951 \(0x1fffffffffffffff\);;
+    17fc:	3c 6f ed 73                                     	sbfx4wp \$r59 = \$r60, \$r60;;
 
-    1808:	40 00 02 7e                                     	sbmm8 \$r0 = \$r0, \$r1;;
+    1800:	fd 6f f1 f3 ff ff ff 00                         	sbfx4wp \$r60 = \$r61, 536870911 \(0x1fffffff\).@;;
 
-    180c:	01 f0 06 6e                                     	sbmm8 \$r1 = \$r1, -64 \(0xffffffc0\);;
+    1808:	bd 5f f5 73                                     	sbfx4w \$r61 = \$r61, \$r62;;
 
-    1810:	02 00 0a ee 00 00 80 07                         	sbmm8 \$r2 = \$r2, -8589934592 \(0xfffffffe00000000\);;
+    180c:	fe 57 f9 f3 ff ff ff 00                         	sbfx4w \$r62 = \$r62, 536870911 \(0x1fffffff\);;
 
-    1818:	c3 0f 0a fe ff ff ff 00                         	sbmm8 \$r2 = \$r3, 536870911 \(0x1fffffff\).@;;
+    1814:	ff 4f fd 75                                     	sbfx8d \$r63 = \$r63, \$r63;;
 
-    1820:	c3 ff 0e ef ff ff ff 87 ff ff ff 00             	sbmmt8 \$r3 = \$r3, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1818:	c0 47 01 f5 ff ff ff 00                         	sbfx8d \$r0 = \$r0, 536870911 \(0x1fffffff\);;
 
-    182c:	04 01 12 7f                                     	sbmmt8 \$r4 = \$r4, \$r4;;
+    1820:	41 70 01 75                                     	sbfx8hq \$r0 = \$r1, \$r1;;
 
-    1830:	05 f0 16 6f                                     	sbmmt8 \$r5 = \$r5, -64 \(0xffffffc0\);;
+    1824:	c2 7f 05 f5 ff ff ff 00                         	sbfx8hq \$r1 = \$r2, 536870911 \(0x1fffffff\).@;;
 
-    1834:	06 00 16 ef 00 00 80 07                         	sbmmt8 \$r5 = \$r6, -8589934592 \(0xfffffffe00000000\);;
+    182c:	c2 80 09 7d                                     	sbfx8uwd \$r2 = \$r2, \$r3;;
 
-    183c:	c6 ff 1a ef ff ff 07 00                         	sbmmt8 \$r6 = \$r6, 536870911 \(0x1fffffff\);;
+    1830:	c3 87 0d fd ff ff ff 00                         	sbfx8uwd \$r3 = \$r3, 536870911 \(0x1fffffff\);;
 
-    1844:	c7 f1 1f 24                                     	sb.xs \$r7\[\$r7\] = \$r7;;
+    1838:	04 81 11 75                                     	sbfx8wd \$r4 = \$r4, \$r4;;
 
-    1848:	c8 ff 21 a4 ff ff ff 9f ff ff ff 18             	sb 2305843009213693951 \(0x1fffffffffffffff\)\[\$r8\] = \$r8;;
+    183c:	c5 87 15 f5 ff ff ff 00                         	sbfx8wd \$r5 = \$r5, 536870911 \(0x1fffffff\);;
 
-    1854:	09 62 27 a4 00 00 00 98 00 00 80 1f             	sb.odd \$r8\? -1125899906842624 \(0xfffc000000000000\)\[\$r9\] = \$r9;;
+    1844:	86 61 15 75                                     	sbfx8wp \$r5 = \$r6, \$r6;;
 
-    1860:	4a 72 2b a4 00 00 80 1f                         	sb.even \$r9\? -8388608 \(0xff800000\)\[\$r10\] = \$r10;;
+    1848:	c7 67 19 f5 ff ff ff 00                         	sbfx8wp \$r6 = \$r7, 536870911 \(0x1fffffff\);;
 
-    1868:	8b 82 2f 24                                     	sb.wnez \$r10\? \[\$r11\] = \$r11;;
+    1850:	07 52 1d 75                                     	sbfx8w \$r7 = \$r7, \$r8;;
 
-    186c:	0b f0 31 24                                     	sb -64 \(0xffffffc0\)\[\$r11\] = \$r12;;
+    1854:	c8 57 21 f5 ff ff ff 00                         	sbfx8w \$r8 = \$r8, 536870911 \(0x1fffffff\);;
 
-    1870:	0c 00 35 a4 00 00 80 1f                         	sb -8589934592 \(0xfffffffe00000000\)\[\$r12\] = \$r13;;
+    185c:	c9 ff 26 ee ff ff ff 87 ff ff ff 00             	sbmm8 \$r9 = \$r9, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1878:	0d 00 e4 0f                                     	scall \$r13;;
+    1868:	8a 02 26 7e                                     	sbmm8 \$r9 = \$r10, \$r10;;
 
-    187c:	ff 01 e0 0f                                     	scall 511 \(0x1ff\);;
+    186c:	0b f0 2a 6e                                     	sbmm8 \$r10 = \$r11, -64 \(0xffffffc0\);;
 
-    1880:	8e e3 3f 27                                     	sd \$r14\[\$r14\] = \$r15;;
+    1870:	0b 00 2e ee 00 00 80 07                         	sbmm8 \$r11 = \$r11, -8589934592 \(0xfffffffe00000000\);;
 
-    1884:	cf ff 41 a7 ff ff ff 9f ff ff ff 18             	sd 2305843009213693951 \(0x1fffffffffffffff\)\[\$r15\] = \$r16;;
+    1878:	cc ff 32 ef ff ff ff 87 ff ff ff 00             	sbmmt8 \$r12 = \$r12, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1890:	10 94 47 a7 00 00 00 98 00 00 80 1f             	sd.weqz \$r16\? -1125899906842624 \(0xfffc000000000000\)\[\$r16\] = \$r17;;
+    1884:	8d 03 36 7f                                     	sbmmt8 \$r13 = \$r13, \$r14;;
 
-    189c:	51 a4 4b a7 00 00 80 1f                         	sd.wltz \$r17\? -8388608 \(0xff800000\)\[\$r17\] = \$r18;;
+    1888:	0f f0 3a 6f                                     	sbmmt8 \$r14 = \$r15, -64 \(0xffffffc0\);;
 
-    18a4:	92 b4 4f 27                                     	sd.wgez \$r18\? \[\$r18\] = \$r19;;
+    188c:	10 00 3e ef 00 00 80 07                         	sbmmt8 \$r15 = \$r16, -8589934592 \(0xfffffffe00000000\);;
 
-    18a8:	13 f0 4d 27                                     	sd -64 \(0xffffffc0\)\[\$r19\] = \$r19;;
+    1894:	10 f4 47 24                                     	sb.xs \$r16\[\$r16\] = \$r17;;
 
-    18ac:	14 00 51 a7 00 00 80 1f                         	sd -8589934592 \(0xfffffffe00000000\)\[\$r20\] = \$r20;;
+    1898:	d1 ff 45 a4 ff ff ff 9f ff ff ff 18             	sb 2305843009213693951 \(0x1fffffffffffffff\)\[\$r17\] = \$r17;;
 
-    18b4:	14 07 c0 0f                                     	set \$mmc = \$r20;;
+    18a4:	92 64 4b a4 00 00 00 98 00 00 80 1f             	sb.odd \$r18\? -1125899906842624 \(0xfffc000000000000\)\[\$r18\] = \$r18;;
 
-    18b8:	d5 00 c0 0f                                     	set \$ra = \$r21;;
+    18b0:	d3 74 4f a4 00 00 80 1f                         	sb.even \$r19\? -8388608 \(0xff800000\)\[\$r19\] = \$r19;;
 
-    18bc:	55 00 c0 0f                                     	set \$ps = \$r21;;
+    18b8:	14 85 53 24                                     	sb.wnez \$r20\? \[\$r20\] = \$r20;;
 
-    18c0:	55 00 c0 0f                                     	set \$ps = \$r21;;
+    18bc:	15 f0 55 24                                     	sb -64 \(0xffffffc0\)\[\$r21\] = \$r21;;
 
-    18c4:	96 f5 5b 25                                     	sh.xs \$r22\[\$r22\] = \$r22;;
+    18c0:	15 00 59 a4 00 00 80 1f                         	sb -8589934592 \(0xfffffffe00000000\)\[\$r21\] = \$r22;;
 
-    18c8:	d7 ff 5d a5 ff ff ff 9f ff ff ff 18             	sh 2305843009213693951 \(0x1fffffffffffffff\)\[\$r23\] = \$r23;;
+    18c8:	16 00 e4 0f                                     	scall \$r22;;
 
-    18d4:	d8 c5 63 a5 00 00 00 98 00 00 80 1f             	sh.wlez \$r23\? -1125899906842624 \(0xfffc000000000000\)\[\$r24\] = \$r24;;
+    18cc:	ff 01 e0 0f                                     	scall 511 \(0x1ff\);;
 
-    18e0:	19 d6 67 a5 00 00 80 1f                         	sh.wgtz \$r24\? -8388608 \(0xff800000\)\[\$r25\] = \$r25;;
+    18d0:	97 e5 5f 27                                     	sd \$r22\[\$r23\] = \$r23;;
 
-    18e8:	5a 06 6b 25                                     	sh.dnez \$r25\? \[\$r26\] = \$r26;;
+    18d4:	d7 ff 61 a7 ff ff ff 9f ff ff ff 18             	sd 2305843009213693951 \(0x1fffffffffffffff\)\[\$r23\] = \$r24;;
 
-    18ec:	1a f0 6d 25                                     	sh -64 \(0xffffffc0\)\[\$r26\] = \$r27;;
+    18e0:	18 96 67 a7 00 00 00 98 00 00 80 1f             	sd.weqz \$r24\? -1125899906842624 \(0xfffc000000000000\)\[\$r24\] = \$r25;;
 
-    18f0:	1b 00 6d a5 00 00 80 1f                         	sh -8589934592 \(0xfffffffe00000000\)\[\$r27\] = \$r27;;
+    18ec:	59 a6 6b a7 00 00 80 1f                         	sd.wltz \$r25\? -8388608 \(0xff800000\)\[\$r25\] = \$r26;;
 
-    18f8:	00 00 a4 0f                                     	sleep;;
+    18f4:	9a b6 6f 27                                     	sd.wgez \$r26\? \[\$r26\] = \$r27;;
 
-    18fc:	1c 67 72 79                                     	slld \$r28 = \$r28, \$r28;;
+    18f8:	1b f0 6d 27                                     	sd -64 \(0xffffffc0\)\[\$r27\] = \$r27;;
 
-    1900:	dd 21 76 79                                     	slld \$r29 = \$r29, 7 \(0x7\);;
+    18fc:	1c 00 71 a7 00 00 80 1f                         	sd -8589934592 \(0xfffffffe00000000\)\[\$r28\] = \$r28;;
 
-    1904:	9e 97 76 79                                     	sllhqs \$r29 = \$r30, \$r30;;
+    1904:	1c 07 c0 0f                                     	set \$mmc = \$r28;;
 
-    1908:	df 51 7a 79                                     	sllhqs \$r30 = \$r31, 7 \(0x7\);;
+    1908:	dd 00 c0 0f                                     	set \$ra = \$r29;;
 
-    190c:	1f 88 7e 79                                     	sllwps \$r31 = \$r31, \$r32;;
+    190c:	5d 00 c0 0f                                     	set \$ps = \$r29;;
 
-    1910:	e0 41 82 79                                     	sllwps \$r32 = \$r32, 7 \(0x7\);;
+    1910:	5d 00 c0 0f                                     	set \$ps = \$r29;;
 
-    1914:	61 78 86 79                                     	sllw \$r33 = \$r33, \$r33;;
+    1914:	9e f7 7b 25                                     	sh.xs \$r30\[\$r30\] = \$r30;;
 
-    1918:	e2 31 8a 79                                     	sllw \$r34 = \$r34, 7 \(0x7\);;
+    1918:	df ff 7d a5 ff ff ff 9f ff ff ff 18             	sh 2305843009213693951 \(0x1fffffffffffffff\)\[\$r31\] = \$r31;;
 
-    191c:	e3 68 8a 7c                                     	slsd \$r34 = \$r35, \$r35;;
+    1924:	e0 c7 83 a5 00 00 00 98 00 00 80 1f             	sh.wlez \$r31\? -1125899906842624 \(0xfffc000000000000\)\[\$r32\] = \$r32;;
 
-    1920:	e4 21 8e 7c                                     	slsd \$r35 = \$r36, 7 \(0x7\);;
+    1930:	21 d8 87 a5 00 00 80 1f                         	sh.wgtz \$r32\? -8388608 \(0xff800000\)\[\$r33\] = \$r33;;
 
-    1924:	64 99 92 7c                                     	slshqs \$r36 = \$r36, \$r37;;
+    1938:	62 08 8b 25                                     	sh.dnez \$r33\? \[\$r34\] = \$r34;;
 
-    1928:	e5 51 96 7c                                     	slshqs \$r37 = \$r37, 7 \(0x7\);;
+    193c:	22 f0 8d 25                                     	sh -64 \(0xffffffc0\)\[\$r34\] = \$r35;;
 
-    192c:	a6 89 9a 7c                                     	slswps \$r38 = \$r38, \$r38;;
+    1940:	23 00 8d a5 00 00 80 1f                         	sh -8589934592 \(0xfffffffe00000000\)\[\$r35\] = \$r35;;
 
-    1930:	e7 41 9e 7c                                     	slswps \$r39 = \$r39, 7 \(0x7\);;
+    1948:	00 00 a4 0f                                     	sleep;;
 
-    1934:	28 7a 9e 7c                                     	slsw \$r39 = \$r40, \$r40;;
+    194c:	24 69 92 79                                     	slld \$r36 = \$r36, \$r36;;
 
-    1938:	e9 31 a2 7c                                     	slsw \$r40 = \$r41, 7 \(0x7\);;
+    1950:	e5 21 96 79                                     	slld \$r37 = \$r37, 7 \(0x7\);;
 
-    193c:	69 ea d7 28                                     	so \$r41\[\$r41\] = \$r52r53r54r55;;
+    1954:	a6 99 96 79                                     	sllhqs \$r37 = \$r38, \$r38;;
 
-    1940:	ea ff e5 a8 ff ff ff 9f ff ff ff 18             	so 2305843009213693951 \(0x1fffffffffffffff\)\[\$r42\] = \$r56r57r58r59;;
+    1958:	e7 51 9a 79                                     	sllhqs \$r38 = \$r39, 7 \(0x7\);;
 
-    194c:	aa 1a f7 a8 00 00 00 98 00 00 80 1f             	so.deqz \$r42\? -1125899906842624 \(0xfffc000000000000\)\[\$r42\] = \$r60r61r62r63;;
+    195c:	27 8a 9e 79                                     	sllwps \$r39 = \$r39, \$r40;;
 
-    1958:	eb 2a 07 a8 00 00 80 1f                         	so.dltz \$r43\? -8388608 \(0xff800000\)\[\$r43\] = \$r0r1r2r3;;
+    1960:	e8 41 a2 79                                     	sllwps \$r40 = \$r40, 7 \(0x7\);;
 
-    1960:	ec 3a 17 28                                     	so.dgez \$r43\? \[\$r44\] = \$r4r5r6r7;;
+    1964:	69 7a a6 79                                     	sllw \$r41 = \$r41, \$r41;;
 
-    1964:	2c f0 25 28                                     	so -64 \(0xffffffc0\)\[\$r44\] = \$r8r9r10r11;;
+    1968:	ea 31 aa 79                                     	sllw \$r42 = \$r42, 7 \(0x7\);;
 
-    1968:	2c 00 35 a8 00 00 80 1f                         	so -8589934592 \(0xfffffffe00000000\)\[\$r44\] = \$r12r13r14r15;;
+    196c:	eb 6a aa 7c                                     	slsd \$r42 = \$r43, \$r43;;
 
-    1970:	6d fb f3 28                                     	sq.xs \$r45\[\$r45\] = \$r60r61;;
+    1970:	ec 21 ae 7c                                     	slsd \$r43 = \$r44, 7 \(0x7\);;
 
-    1974:	ed ff f1 a8 ff ff ff 9f ff ff ff 18             	sq 2305843009213693951 \(0x1fffffffffffffff\)\[\$r45\] = \$r60r61;;
+    1974:	6c 9b b2 7c                                     	slshqs \$r44 = \$r44, \$r45;;
 
-    1980:	ae 4b fb a8 00 00 00 98 00 00 80 1f             	sq.dlez \$r46\? -1125899906842624 \(0xfffc000000000000\)\[\$r46\] = \$r62r63;;
+    1978:	ed 51 b6 7c                                     	slshqs \$r45 = \$r45, 7 \(0x7\);;
 
-    198c:	af 5b fb a8 00 00 80 1f                         	sq.dgtz \$r46\? -8388608 \(0xff800000\)\[\$r47\] = \$r62r63;;
+    197c:	ae 8b ba 7c                                     	slswps \$r46 = \$r46, \$r46;;
 
-    1994:	ef 6b 03 28                                     	sq.odd \$r47\? \[\$r47\] = \$r0r1;;
+    1980:	ef 41 be 7c                                     	slswps \$r47 = \$r47, 7 \(0x7\);;
 
-    1998:	30 f0 01 28                                     	sq -64 \(0xffffffc0\)\[\$r48\] = \$r0r1;;
+    1984:	30 7c be 7c                                     	slsw \$r47 = \$r48, \$r48;;
 
-    199c:	30 00 09 a8 00 00 80 1f                         	sq -8589934592 \(0xfffffffe00000000\)\[\$r48\] = \$r2r3;;
+    1988:	f1 31 c2 7c                                     	slsw \$r48 = \$r49, 7 \(0x7\);;
 
-    19a4:	71 6c c2 7a                                     	srad \$r48 = \$r49, \$r49;;
+    198c:	71 ec d7 28                                     	so \$r49\[\$r49\] = \$r52r53r54r55;;
 
-    19a8:	f2 21 c6 7a                                     	srad \$r49 = \$r50, 7 \(0x7\);;
+    1990:	f2 ff e5 a8 ff ff ff 9f ff ff ff 18             	so 2305843009213693951 \(0x1fffffffffffffff\)\[\$r50\] = \$r56r57r58r59;;
 
-    19ac:	f2 9c ca 7a                                     	srahqs \$r50 = \$r50, \$r51;;
+    199c:	b2 1c f7 a8 00 00 00 98 00 00 80 1f             	so.deqz \$r50\? -1125899906842624 \(0xfffc000000000000\)\[\$r50\] = \$r60r61r62r63;;
 
-    19b0:	f3 51 ce 7a                                     	srahqs \$r51 = \$r51, 7 \(0x7\);;
+    19a8:	f3 2c 07 a8 00 00 80 1f                         	so.dltz \$r51\? -8388608 \(0xff800000\)\[\$r51\] = \$r0r1r2r3;;
 
-    19b4:	34 8d d2 7a                                     	srawps \$r52 = \$r52, \$r52;;
+    19b0:	f4 3c 17 28                                     	so.dgez \$r51\? \[\$r52\] = \$r4r5r6r7;;
 
-    19b8:	f5 41 d6 7a                                     	srawps \$r53 = \$r53, 7 \(0x7\);;
+    19b4:	34 f0 25 28                                     	so -64 \(0xffffffc0\)\[\$r52\] = \$r8r9r10r11;;
 
-    19bc:	b6 7d d6 7a                                     	sraw \$r53 = \$r54, \$r54;;
+    19b8:	34 00 35 a8 00 00 80 1f                         	so -8589934592 \(0xfffffffe00000000\)\[\$r52\] = \$r12r13r14r15;;
 
-    19c0:	f7 31 da 7a                                     	sraw \$r54 = \$r55, 7 \(0x7\);;
+    19c0:	75 fd 23 28                                     	sq.xs \$r53\[\$r53\] = \$r8r9;;
 
-    19c4:	37 6e de 7b                                     	srld \$r55 = \$r55, \$r56;;
+    19c4:	f5 ff 21 a8 ff ff ff 9f ff ff ff 18             	sq 2305843009213693951 \(0x1fffffffffffffff\)\[\$r53\] = \$r8r9;;
 
-    19c8:	f8 21 e2 7b                                     	srld \$r56 = \$r56, 7 \(0x7\);;
+    19d0:	b6 4d 2b a8 00 00 00 98 00 00 80 1f             	sq.dlez \$r54\? -1125899906842624 \(0xfffc000000000000\)\[\$r54\] = \$r10r11;;
 
-    19cc:	79 9e e6 7b                                     	srlhqs \$r57 = \$r57, \$r57;;
+    19dc:	b7 5d 2b a8 00 00 80 1f                         	sq.dgtz \$r54\? -8388608 \(0xff800000\)\[\$r55\] = \$r10r11;;
 
-    19d0:	fa 51 ea 7b                                     	srlhqs \$r58 = \$r58, 7 \(0x7\);;
+    19e4:	f7 6d 33 28                                     	sq.odd \$r55\? \[\$r55\] = \$r12r13;;
 
-    19d4:	fb 8e ea 7b                                     	srlwps \$r58 = \$r59, \$r59;;
+    19e8:	38 f0 31 28                                     	sq -64 \(0xffffffc0\)\[\$r56\] = \$r12r13;;
 
-    19d8:	fc 41 ee 7b                                     	srlwps \$r59 = \$r60, 7 \(0x7\);;
+    19ec:	38 00 39 a8 00 00 80 1f                         	sq -8589934592 \(0xfffffffe00000000\)\[\$r56\] = \$r14r15;;
 
-    19dc:	7c 7f f2 7b                                     	srlw \$r60 = \$r60, \$r61;;
+    19f4:	79 6e e2 7a                                     	srad \$r56 = \$r57, \$r57;;
 
-    19e0:	fd 31 f6 7b                                     	srlw \$r61 = \$r61, 7 \(0x7\);;
+    19f8:	fa 21 e6 7a                                     	srad \$r57 = \$r58, 7 \(0x7\);;
 
-    19e4:	be 6f fa 78                                     	srsd \$r62 = \$r62, \$r62;;
+    19fc:	fa 9e ea 7a                                     	srahqs \$r58 = \$r58, \$r59;;
 
-    19e8:	ff 21 fe 78                                     	srsd \$r63 = \$r63, 7 \(0x7\);;
+    1a00:	fb 51 ee 7a                                     	srahqs \$r59 = \$r59, 7 \(0x7\);;
 
-    19ec:	00 90 fe 78                                     	srshqs \$r63 = \$r0, \$r0;;
+    1a04:	3c 8f f2 7a                                     	srawps \$r60 = \$r60, \$r60;;
 
-    19f0:	c1 51 02 78                                     	srshqs \$r0 = \$r1, 7 \(0x7\);;
+    1a08:	fd 41 f6 7a                                     	srawps \$r61 = \$r61, 7 \(0x7\);;
 
-    19f4:	81 80 06 78                                     	srswps \$r1 = \$r1, \$r2;;
+    1a0c:	be 7f f6 7a                                     	sraw \$r61 = \$r62, \$r62;;
 
-    19f8:	c2 41 0a 78                                     	srswps \$r2 = \$r2, 7 \(0x7\);;
+    1a10:	ff 31 fa 7a                                     	sraw \$r62 = \$r63, 7 \(0x7\);;
 
-    19fc:	c3 70 0e 78                                     	srsw \$r3 = \$r3, \$r3;;
+    1a14:	3f 60 fe 7b                                     	srld \$r63 = \$r63, \$r0;;
 
-    1a00:	c4 31 12 78                                     	srsw \$r4 = \$r4, 7 \(0x7\);;
+    1a18:	c0 21 02 7b                                     	srld \$r0 = \$r0, 7 \(0x7\);;
 
-    1a04:	00 00 a8 0f                                     	stop;;
+    1a1c:	41 90 06 7b                                     	srlhqs \$r1 = \$r1, \$r1;;
 
-    1a08:	45 01 11 70                                     	stsud \$r4 = \$r5, \$r5;;
+    1a20:	c2 51 0a 7b                                     	srlhqs \$r2 = \$r2, 7 \(0x7\);;
 
-    1a0c:	86 11 15 70                                     	stsuw \$r5 = \$r6, \$r6;;
+    1a24:	c3 80 0a 7b                                     	srlwps \$r2 = \$r3, \$r3;;
 
-    1a10:	87 e1 1f 26                                     	sw \$r6\[\$r7\] = \$r7;;
+    1a28:	c4 41 0e 7b                                     	srlwps \$r3 = \$r4, 7 \(0x7\);;
 
-    1a14:	c7 ff 21 a6 ff ff ff 9f ff ff ff 18             	sw 2305843009213693951 \(0x1fffffffffffffff\)\[\$r7\] = \$r8;;
+    1a2c:	44 71 12 7b                                     	srlw \$r4 = \$r4, \$r5;;
 
-    1a20:	08 72 27 a6 00 00 00 98 00 00 80 1f             	sw.even \$r8\? -1125899906842624 \(0xfffc000000000000\)\[\$r8\] = \$r9;;
+    1a30:	c5 31 16 7b                                     	srlw \$r5 = \$r5, 7 \(0x7\);;
 
-    1a2c:	49 82 2b a6 00 00 80 1f                         	sw.wnez \$r9\? -8388608 \(0xff800000\)\[\$r9\] = \$r10;;
+    1a34:	86 61 1a 78                                     	srsd \$r6 = \$r6, \$r6;;
 
-    1a34:	8a 92 2f 26                                     	sw.weqz \$r10\? \[\$r10\] = \$r11;;
+    1a38:	c7 21 1e 78                                     	srsd \$r7 = \$r7, 7 \(0x7\);;
 
-    1a38:	0b f0 2d 26                                     	sw -64 \(0xffffffc0\)\[\$r11\] = \$r11;;
+    1a3c:	08 92 1e 78                                     	srshqs \$r7 = \$r8, \$r8;;
 
-    1a3c:	0c 00 31 a6 00 00 80 1f                         	sw -8589934592 \(0xfffffffe00000000\)\[\$r12\] = \$r12;;
+    1a40:	c9 51 22 78                                     	srshqs \$r8 = \$r9, 7 \(0x7\);;
 
-    1a44:	0d 70 37 68                                     	sxbd \$r13 = \$r13;;
+    1a44:	89 82 26 78                                     	srswps \$r9 = \$r9, \$r10;;
 
-    1a48:	0e f0 3b 68                                     	sxhd \$r14 = \$r14;;
+    1a48:	ca 41 2a 78                                     	srswps \$r10 = \$r10, 7 \(0x7\);;
 
-    1a4c:	0f 50 3e 76                                     	sxlbhq \$r15 = \$r15;;
+    1a4c:	cb 72 2e 78                                     	srsw \$r11 = \$r11, \$r11;;
 
-    1a50:	10 40 42 76                                     	sxlhwp \$r16 = \$r16;;
+    1a50:	cc 31 32 78                                     	srsw \$r12 = \$r12, 7 \(0x7\);;
 
-    1a54:	11 50 42 77                                     	sxmbhq \$r16 = \$r17;;
+    1a54:	00 00 a8 0f                                     	stop;;
 
-    1a58:	11 40 46 77                                     	sxmhwp \$r17 = \$r17;;
+    1a58:	8d 03 35 70                                     	stsud \$r13 = \$r13, \$r14;;
 
-    1a5c:	12 f0 4b 69                                     	sxwd \$r18 = \$r18;;
+    1a5c:	cf 13 39 70                                     	stsuw \$r14 = \$r15, \$r15;;
 
-    1a60:	12 00 b4 0f                                     	syncgroup \$r18;;
+    1a60:	10 e4 43 26                                     	sw \$r16\[\$r16\] = \$r16;;
 
-    1a64:	00 00 8c 0f                                     	tlbdinval;;
+    1a64:	d1 ff 45 a6 ff ff ff 9f ff ff ff 18             	sw 2305843009213693951 \(0x1fffffffffffffff\)\[\$r17\] = \$r17;;
 
-    1a68:	00 00 90 0f                                     	tlbiinval;;
+    1a70:	52 74 4b a6 00 00 00 98 00 00 80 1f             	sw.even \$r17\? -1125899906842624 \(0xfffc000000000000\)\[\$r18\] = \$r18;;
 
-    1a6c:	00 00 84 0f                                     	tlbprobe;;
+    1a7c:	93 84 4f a6 00 00 80 1f                         	sw.wnez \$r18\? -8388608 \(0xff800000\)\[\$r19\] = \$r19;;
 
-    1a70:	00 00 80 0f                                     	tlbread;;
+    1a84:	d4 94 53 26                                     	sw.weqz \$r19\? \[\$r20\] = \$r20;;
 
-    1a74:	00 00 88 0f                                     	tlbwrite;;
+    1a88:	14 f0 55 26                                     	sw -64 \(0xffffffc0\)\[\$r20\] = \$r21;;
 
-    1a78:	13 00 b0 0f                                     	waitit \$r19;;
+    1a8c:	15 00 55 a6 00 00 80 1f                         	sw -8589934592 \(0xfffffffe00000000\)\[\$r21\] = \$r21;;
 
-    1a7c:	53 00 b8 0f                                     	wfxl \$ps, \$r19;;
+    1a94:	16 70 5b 68                                     	sxbd \$r22 = \$r22;;
 
-    1a80:	93 00 b8 0f                                     	wfxl \$pcr, \$r19;;
+    1a98:	17 f0 5b 68                                     	sxhd \$r22 = \$r23;;
 
-    1a84:	54 00 b8 0f                                     	wfxl \$ps, \$r20;;
+    1a9c:	17 50 5e 76                                     	sxlbhq \$r23 = \$r23;;
 
-    1a88:	54 00 bc 0f                                     	wfxm \$ps, \$r20;;
+    1aa0:	18 40 62 76                                     	sxlhwp \$r24 = \$r24;;
 
-    1a8c:	94 00 bc 0f                                     	wfxm \$pcr, \$r20;;
+    1aa4:	19 50 62 77                                     	sxmbhq \$r24 = \$r25;;
 
-    1a90:	95 00 bc 0f                                     	wfxm \$pcr, \$r21;;
+    1aa8:	19 40 66 77                                     	sxmhwp \$r25 = \$r25;;
 
-    1a94:	80 4f 34 01                                     	xcopyo \$a13 = \$a4;;
+    1aac:	1a f0 6b 69                                     	sxwd \$r26 = \$r26;;
 
-    1a98:	80 5f 34 01                                     	xcopyo \$a13 = \$a5;;
+    1ab0:	1a 00 b4 0f                                     	syncgroup \$r26;;
 
-    1a9c:	55 f5 37 20                                     	xlo.u.xs \$a13 = \$r21\[\$r21\];;
+    1ab4:	00 00 8c 0f                                     	tlbdinval;;
 
-    1aa0:	96 a5 e3 a3 00 00 00 98 00 00 80 1f             	xlo.us.wltz.q0 \$r22\? \$a56a57a58a59 = -1125899906842624 \(0xfffc000000000000\)\[\$r22\];;
+    1ab8:	00 00 90 0f                                     	tlbiinval;;
 
-    1aac:	97 b5 f7 a2 00 00 80 1f                         	xlo.u.wgez.q1 \$r22\? \$a60a61a62a63 = -8388608 \(0xff800000\)\[\$r23\];;
+    1abc:	00 00 84 0f                                     	tlbprobe;;
 
-    1ab4:	d7 c5 0b 23                                     	xlo.us.wlez.q2 \$r23\? \$a0a1a2a3 = \[\$r23\];;
+    1ac0:	00 00 80 0f                                     	tlbread;;
 
-    1ab8:	18 d6 3b a0 00 00 00 98 00 00 80 1f             	xlo.u.wgtz \$r24\? \$a14 = -1125899906842624 \(0xfffc000000000000\)\[\$r24\];;
+    1ac4:	00 00 88 0f                                     	tlbwrite;;
 
-    1ac4:	19 06 3b a1 00 00 80 1f                         	xlo.us.dnez \$r24\? \$a14 = -8388608 \(0xff800000\)\[\$r25\];;
+    1ac8:	1b 00 b0 0f                                     	waitit \$r27;;
 
-    1acc:	59 16 3b 20                                     	xlo.u.deqz \$r25\? \$a14 = \[\$r25\];;
+    1acc:	5b 00 b8 0f                                     	wfxl \$ps, \$r27;;
 
-    1ad0:	9a e6 1f 23                                     	xlo.us.q3 \$a4a5a6a7 = \$r26\[\$r26\];;
+    1ad0:	9b 00 b8 0f                                     	wfxl \$pcr, \$r27;;
 
-    1ad4:	da ff 21 a2 ff ff ff 9f ff ff ff 18             	xlo.u.q0 \$a8a9a10a11 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r26\];;
+    1ad4:	5c 00 b8 0f                                     	wfxl \$ps, \$r28;;
 
-    1ae0:	1b f0 35 23                                     	xlo.us.q1 \$a12a13a14a15 = -64 \(0xffffffc0\)\[\$r27\];;
+    1ad8:	5c 00 bc 0f                                     	wfxm \$ps, \$r28;;
 
-    1ae4:	1b 00 49 a2 00 00 80 1f                         	xlo.u.q2 \$a16a17a18a19 = -8589934592 \(0xfffffffe00000000\)\[\$r27\];;
+    1adc:	9c 00 bc 0f                                     	wfxm \$pcr, \$r28;;
 
-    1aec:	db ff 3d a1 ff ff ff 9f ff ff ff 18             	xlo.us \$a15 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r27\];;
+    1ae0:	9d 00 bc 0f                                     	wfxm \$pcr, \$r29;;
 
-    1af8:	1c f0 3d 20                                     	xlo.u \$a15 = -64 \(0xffffffc0\)\[\$r28\];;
+    1ae4:	80 4f 34 01                                     	xcopyo \$a13 = \$a4;;
 
-    1afc:	1c 00 3d a1 00 00 80 1f                         	xlo.us \$a15 = -8589934592 \(0xfffffffe00000000\)\[\$r28\];;
+    1ae8:	80 5f 34 01                                     	xcopyo \$a13 = \$a5;;
 
-    1b04:	10 64 10 02                                     	xmma484bw \$a4a5 = \$a6a7, \$a16, \$a16;;
+    1aec:	5d f7 37 20                                     	xlo.u.xs \$a13 = \$r29\[\$r29\];;
 
-    1b08:	11 84 1c 02                                     	xmma484subw \$a6a7 = \$a8a9, \$a16, \$a17;;
+    1af0:	9e a7 e3 a3 00 00 00 98 00 00 80 1f             	xlo.us.wltz.q0 \$r30\? \$a56a57a58a59 = -1125899906842624 \(0xfffc000000000000\)\[\$r30\];;
 
-    1b0c:	51 b4 20 02                                     	xmma484ubw \$a8a9 = \$a10a11, \$a17, \$a17;;
+    1afc:	9f b7 f7 a2 00 00 80 1f                         	xlo.u.wgez.q1 \$r30\? \$a60a61a62a63 = -8388608 \(0xff800000\)\[\$r31\];;
 
-    1b10:	92 d4 2c 02                                     	xmma484usbw \$a10a11 = \$a12a13, \$a18, \$a18;;
+    1b04:	df c7 0b 23                                     	xlo.us.wlez.q2 \$r31\? \$a0a1a2a3 = \[\$r31\];;
 
-    1b14:	80 7f 48 00                                     	xmovefo \$r16r17r18r19 = \$a6;;
+    1b08:	20 d8 3b a0 00 00 00 98 00 00 80 1f             	xlo.u.wgtz \$r32\? \$a14 = -1125899906842624 \(0xfffc000000000000\)\[\$r32\];;
 
-    1b18:	80 7f 5c 00                                     	xmovefo \$r20r21r22r23 = \$a7;;
+    1b14:	21 08 3b a1 00 00 80 1f                         	xlo.us.dnez \$r32\? \$a14 = -8388608 \(0xff800000\)\[\$r33\];;
 
-    1b1c:	5c e7 06 7f                                     	movetq \$a1_lo = \$r28, \$r29;;
+    1b1c:	61 18 3b 20                                     	xlo.u.deqz \$r33\? \$a14 = \[\$r33\];;
 
-    1b20:	5d f7 06 7f                                     	movetq \$a1_hi = \$r29, \$r29;;
+    1b20:	a2 e8 1f 23                                     	xlo.us.q3 \$a4a5a6a7 = \$r34\[\$r34\];;
 
-    1b24:	00 80 5d 04                                     	xmt44d \$a20a21a22a23 = \$a24a25a26a27;;
+    1b24:	e2 ff 21 a2 ff ff ff 9f ff ff ff 18             	xlo.u.q0 \$a8a9a10a11 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r34\];;
 
-    1b28:	de ff 78 ec ff ff ff 87 ff ff ff 00             	xord \$r30 = \$r30, 2305843009213693951 \(0x1fffffffffffffff\);;
+    1b30:	23 f0 35 23                                     	xlo.us.q1 \$a12a13a14a15 = -64 \(0xffffffc0\)\[\$r35\];;
 
-    1b34:	df 07 79 7c                                     	xord \$r30 = \$r31, \$r31;;
+    1b34:	23 00 49 a2 00 00 80 1f                         	xlo.u.q2 \$a16a17a18a19 = -8589934592 \(0xfffffffe00000000\)\[\$r35\];;
 
-    1b38:	20 f0 7c 6c                                     	xord \$r31 = \$r32, -64 \(0xffffffc0\);;
+    1b3c:	e3 ff 3d a1 ff ff ff 9f ff ff ff 18             	xlo.us \$a15 = 2305843009213693951 \(0x1fffffffffffffff\)\[\$r35\];;
 
-    1b3c:	20 00 80 ec 00 00 80 07                         	xord \$r32 = \$r32, -8589934592 \(0xfffffffe00000000\);;
+    1b48:	24 f0 3d 20                                     	xlo.u \$a15 = -64 \(0xffffffc0\)\[\$r36\];;
 
-    1b44:	e1 0f 85 fc ff ff ff 00                         	xord \$r33 = \$r33, 536870911 \(0x1fffffff\).@;;
+    1b4c:	24 00 3d a1 00 00 80 1f                         	xlo.us \$a15 = -8589934592 \(0xfffffffe00000000\)\[\$r36\];;
 
-    1b4c:	a2 18 85 7c                                     	xorw \$r33 = \$r34, \$r34;;
+    1b54:	10 64 10 02                                     	xmma484bw \$a4a5 = \$a6a7, \$a16, \$a16;;
 
-    1b50:	23 f0 88 7c                                     	xorw \$r34 = \$r35, -64 \(0xffffffc0\);;
+    1b58:	11 84 1c 02                                     	xmma484subw \$a6a7 = \$a8a9, \$a16, \$a17;;
 
-    1b54:	23 00 8c fc 00 00 80 07                         	xorw \$r35 = \$r35, -8589934592 \(0xfffffffe00000000\);;
+    1b5c:	51 b4 20 02                                     	xmma484ubw \$a8a9 = \$a10a11, \$a17, \$a17;;
 
-    1b5c:	24 f9 4b 29                                     	xso.xs \$r36\[\$r36\] = \$a18;;
+    1b60:	92 d4 2c 02                                     	xmma484usbw \$a10a11 = \$a12a13, \$a18, \$a18;;
 
-    1b60:	e4 ff 4d a9 ff ff ff 9f ff ff ff 18             	xso 2305843009213693951 \(0x1fffffffffffffff\)\[\$r36\] = \$a19;;
+    1b64:	80 7f 48 00                                     	xmovefo \$r16r17r18r19 = \$a6;;
 
-    1b6c:	65 29 4f a9 00 00 00 98 00 00 80 1f             	xso.dltz \$r37\? -1125899906842624 \(0xfffc000000000000\)\[\$r37\] = \$a19;;
+    1b68:	80 7f 5c 00                                     	xmovefo \$r20r21r22r23 = \$a7;;
 
-    1b78:	66 39 4f a9 00 00 80 1f                         	xso.dgez \$r37\? -8388608 \(0xff800000\)\[\$r38\] = \$a19;;
+    1b6c:	64 e9 06 7f                                     	movetq \$a1_lo = \$r36, \$r37;;
 
-    1b80:	a6 49 53 29                                     	xso.dlez \$r38\? \[\$r38\] = \$a20;;
+    1b70:	65 f9 06 7f                                     	movetq \$a1_hi = \$r37, \$r37;;
 
-    1b84:	27 f0 51 29                                     	xso -64 \(0xffffffc0\)\[\$r39\] = \$a20;;
+    1b74:	00 80 5d 04                                     	xmt44d \$a20a21a22a23 = \$a24a25a26a27;;
 
-    1b88:	27 00 51 a9 00 00 80 1f                         	xso -8589934592 \(0xfffffffe00000000\)\[\$r39\] = \$a20;;
+    1b78:	e6 ff 98 ec ff ff ff 87 ff ff ff 00             	xord \$r38 = \$r38, 2305843009213693951 \(0x1fffffffffffffff\);;
 
-    1b90:	e8 3f 9c 78                                     	zxbd \$r39 = \$r40;;
+    1b84:	e7 09 99 7c                                     	xord \$r38 = \$r39, \$r39;;
 
-    1b94:	28 f0 a3 64                                     	zxhd \$r40 = \$r40;;
+    1b88:	28 f0 9c 6c                                     	xord \$r39 = \$r40, -64 \(0xffffffc0\);;
 
-    1b98:	e9 ff a4 78                                     	zxwd \$r41 = \$r41;;
+    1b8c:	28 00 a0 ec 00 00 80 07                         	xord \$r40 = \$r40, -8589934592 \(0xfffffffe00000000\);;
+
+    1b94:	69 1a a5 7c                                     	xorw \$r41 = \$r41, \$r41;;
+
+    1b98:	2a f0 a8 7c                                     	xorw \$r42 = \$r42, -64 \(0xffffffc0\);;
+
+    1b9c:	2b 00 a8 fc 00 00 80 07                         	xorw \$r42 = \$r43, -8589934592 \(0xfffffffe00000000\);;
+
+    1ba4:	eb fa 4b 29                                     	xso.xs \$r43\[\$r43\] = \$a18;;
+
+    1ba8:	ec ff 4d a9 ff ff ff 9f ff ff ff 18             	xso 2305843009213693951 \(0x1fffffffffffffff\)\[\$r44\] = \$a19;;
+
+    1bb4:	2c 2b 4f a9 00 00 00 98 00 00 80 1f             	xso.dltz \$r44\? -1125899906842624 \(0xfffc000000000000\)\[\$r44\] = \$a19;;
+
+    1bc0:	6d 3b 4f a9 00 00 80 1f                         	xso.dgez \$r45\? -8388608 \(0xff800000\)\[\$r45\] = \$a19;;
+
+    1bc8:	6e 4b 53 29                                     	xso.dlez \$r45\? \[\$r46\] = \$a20;;
+
+    1bcc:	2e f0 51 29                                     	xso -64 \(0xffffffc0\)\[\$r46\] = \$a20;;
+
+    1bd0:	2e 00 51 a9 00 00 80 1f                         	xso -8589934592 \(0xfffffffe00000000\)\[\$r46\] = \$a20;;
+
+    1bd8:	ef 3f bc 78                                     	zxbd \$r47 = \$r47;;
+
+    1bdc:	30 f0 bf 64                                     	zxhd \$r47 = \$r48;;
+
+    1be0:	f0 ff c0 78                                     	zxwd \$r48 = \$r48;;
+
 
