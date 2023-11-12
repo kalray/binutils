@@ -1265,7 +1265,6 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case Modifier_kv4_v1_channel:
 		    case Modifier_kv4_v1_coherency:
 		    case Modifier_kv4_v1_comparison:
-		    case Modifier_kv4_v1_conjugate:
 		    case Modifier_kv4_v1_doscale:
 		    case Modifier_kv4_v1_exunum:
 		    case Modifier_kv4_v1_floatcomp:
@@ -1282,7 +1281,6 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case Modifier_kv4_v1_simplecond:
 		    case Modifier_kv4_v1_speculate:
 		    case Modifier_kv4_v1_splat32:
-		    case Modifier_kv4_v1_transpose:
 		    case Modifier_kv4_v1_variant:
 		      {
 			int sz = 0;
@@ -1816,7 +1814,6 @@ decode_prologue_epilogue_bundle (bfd_vma memaddr,
 		   || chk_type (kv4_v1, Modifier_kv4_v1_channel)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_coherency)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_comparison)
-		   || chk_type (kv4_v1, Modifier_kv4_v1_conjugate)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_doscale)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_exunum)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_floatcomp)
@@ -1833,7 +1830,6 @@ decode_prologue_epilogue_bundle (bfd_vma memaddr,
 		   || chk_type (kv4_v1, Modifier_kv4_v1_simplecond)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_speculate)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_splat32)
-		   || chk_type (kv4_v1, Modifier_kv4_v1_transpose)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_variant))
 	    {
 	      /* Do nothing.  */
