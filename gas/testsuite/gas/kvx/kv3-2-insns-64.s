@@ -687,19 +687,39 @@ main:
 	;;
 	dtouchl -8589934592[$r60r61r62r63.z] 	#Opcode-kv3_v2-DTOUCHL_upper27_lower10_registerZ_double
 	;;
+	eord $r63 = $r62r63.hi, 2305843009213693951 	#Opcode-kv3_v2-EORD_registerW_registerZ_extend27_upper27_lower10_triple
+	;;
+	eord $r60r61r62r63.t = $r0, $r0r1.lo 	#Opcode-kv3_v2-EORD_registerW_registerZ_registerY_simple
+	;;
+	eord $r0r1r2r3.x = $r1, -64 	#Opcode-kv3_v2-EORD_registerW_registerZ_signed10_simple
+	;;
+	eord $r0r1.hi = $r0r1r2r3.y, -8589934592 	#Opcode-kv3_v2-EORD_registerW_registerZ_upper27_lower10_double
+	;;
+	eorrbod $r2 = $r2r3.lo 	#Opcode-kv3_v2-EORRBOD_registerW_registerZ_simple
+	;;
+	eorrhqd $r0r1r2r3.z = $r3 	#Opcode-kv3_v2-EORRHQD_registerW_registerZ_simple
+	;;
+	eorrwpd $r2r3.hi = $r0r1r2r3.t 	#Opcode-kv3_v2-EORRWPD_registerW_registerZ_simple
+	;;
+	eorw $r4 = $r4r5.lo, $r4r5r6r7.x 	#Opcode-kv3_v2-EORW_registerW_registerZ_registerY_simple
+	;;
+	eorw $r5 = $r4r5.hi, -64 	#Opcode-kv3_v2-EORW_registerW_registerZ_signed10_simple
+	;;
+	eorw $r4r5r6r7.y = $r6, -8589934592 	#Opcode-kv3_v2-EORW_registerW_registerZ_upper27_lower10_double
+	;;
 	errop 	#Opcode-kv3_v2-ERROP_simple
 	;;
-	extfs $r63 = $r62r63.hi, 7, 7 	#Opcode-kv3_v2-EXTFS_registerW_registerZ_stopbit2_stopbit4_startbit_simple
+	extfs $r6r7.lo = $r4r5r6r7.z, 7, 7 	#Opcode-kv3_v2-EXTFS_registerW_registerZ_stopbit2_stopbit4_startbit_simple
 	;;
-	extfz $r60r61r62r63.t = $r0, 7, 7 	#Opcode-kv3_v2-EXTFZ_registerW_registerZ_stopbit2_stopbit4_startbit_simple
+	extfz $r7 = $r6r7.hi, 7, 7 	#Opcode-kv3_v2-EXTFZ_registerW_registerZ_stopbit2_stopbit4_startbit_simple
 	;;
-	fabsd $r0r1.lo = $r0r1r2r3.x 	#Opcode-kv3_v2-FABSD_registerW_registerZ_simple
+	fabsd $r4r5r6r7.t = $r8 	#Opcode-kv3_v2-FABSD_registerW_registerZ_simple
 	;;
-	fabshq $r1 = $r0r1.hi 	#Opcode-kv3_v2-FABSHQ_registerW_registerZ_simple
+	fabshq $r8r9.lo = $r8r9r10r11.x 	#Opcode-kv3_v2-FABSHQ_registerW_registerZ_simple
 	;;
-	fabswp $r0r1r2r3.y = $r2 	#Opcode-kv3_v2-FABSWP_registerW_registerZ_simple
+	fabswp $r9 = $r8r9.hi 	#Opcode-kv3_v2-FABSWP_registerW_registerZ_simple
 	;;
-	fabsw $r2r3.lo = $r0r1r2r3.z 	#Opcode-kv3_v2-FABSW_registerW_registerZ_simple
+	fabsw $r8r9r10r11.y = $r10 	#Opcode-kv3_v2-FABSW_registerW_registerZ_simple
 	;;
 	fadddc.c.rn $r24r25r26r27.hi = $r28r29, $r28r29r30r31.lo 	#Opcode-kv3_v2-FADDDC.C_rounding_silent_registerM_registerP_registerO_simple
 	;;
@@ -707,245 +727,245 @@ main:
 	;;
 	fadddp.rd $r32r33r34r35.lo = $r34r35, $r32r33r34r35.hi 	#Opcode-kv3_v2-FADDDP_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	faddd.rz.s $r3 = $r2r3.hi, $r0r1r2r3.t 	#Opcode-kv3_v2-FADDD_rounding_silent_registerW_registerZ_registerY_simple
+	faddd.rz.s $r10r11.lo = $r8r9r10r11.z, $r11 	#Opcode-kv3_v2-FADDD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	faddho.rna $r36r37 = $r36r37r38r39.lo, $r38r39 	#Opcode-kv3_v2-FADDHO_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	faddhq.rnz.s $r4 = $r4r5.lo, $r4r5r6r7.x 	#Opcode-kv3_v2-FADDHQ_rounding_silent_registerW_registerZ_registerY_simple
+	faddhq.rnz.s $r10r11.hi = $r8r9r10r11.t, $r12 	#Opcode-kv3_v2-FADDHQ_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	faddwc.c.ro $r5 = $r4r5.hi, $r4r5r6r7.y 	#Opcode-kv3_v2-FADDWC.C_rounding_silent_registerW_registerZ_registerY_simple
+	faddwc.c.ro $sp = $r13, $tp 	#Opcode-kv3_v2-FADDWC.C_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	faddwcp.c.s $r36r37r38r39.hi = $r40r41, $r40r41r42r43.lo 	#Opcode-kv3_v2-FADDWCP.C_rounding_silent_registerM_registerP_registerO_simple
 	;;
 	faddwcp.rn $r42r43 = $r40r41r42r43.hi, $r44r45 	#Opcode-kv3_v2-FADDWCP_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	faddwc.ru.s $r6 = $r6r7.lo, $r4r5r6r7.z 	#Opcode-kv3_v2-FADDWC_rounding_silent_registerW_registerZ_registerY_simple
+	faddwc.ru.s $r14 = $fp, $r15 	#Opcode-kv3_v2-FADDWC_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	faddwp.rd $r7 = $r6r7.hi, $r4r5r6r7.t 	#Opcode-kv3_v2-FADDWP_rounding_silent_registerW_registerZ_registerY_simple
+	faddwp.rd $rp = $r16, $r16r17.lo 	#Opcode-kv3_v2-FADDWP_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	faddwq.rz.s $r44r45r46r47.lo = $r46r47, $r44r45r46r47.hi 	#Opcode-kv3_v2-FADDWQ_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	faddw.rna $r8 = $r8r9.lo, $r8r9r10r11.x 	#Opcode-kv3_v2-FADDW_rounding_silent_registerW_registerZ_registerY_simple
+	faddw.rna $r16r17r18r19.x = $r17, $r16r17.hi 	#Opcode-kv3_v2-FADDW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fcdivd.s $r9 = $r48r49 	#Opcode-kv3_v2-FCDIVD_silent2_registerW_registerP_simple
+	fcdivd.s $r16r17r18r19.y = $r48r49 	#Opcode-kv3_v2-FCDIVD_silent2_registerW_registerP_simple
 	;;
-	fcdivwp $r8r9.hi = $r48r49r50r51.lo 	#Opcode-kv3_v2-FCDIVWP_silent2_registerW_registerP_simple
+	fcdivwp $r18 = $r48r49r50r51.lo 	#Opcode-kv3_v2-FCDIVWP_silent2_registerW_registerP_simple
 	;;
-	fcdivw.s $r8r9r10r11.y = $r50r51 	#Opcode-kv3_v2-FCDIVW_silent2_registerW_registerP_simple
+	fcdivw.s $r18r19.lo = $r50r51 	#Opcode-kv3_v2-FCDIVW_silent2_registerW_registerP_simple
 	;;
-	fcompd.one $r10 = $r10r11.lo, $r8r9r10r11.z 	#Opcode-kv3_v2-FCOMPD_floatcomp_registerW_registerZ_registerY_simple
+	fcompd.one $r16r17r18r19.z = $r19, $r18r19.hi 	#Opcode-kv3_v2-FCOMPD_floatcomp_registerW_registerZ_registerY_simple
 	;;
-	fcompd.ueq $r11 = $r10r11.hi, 536870911 	#Opcode-kv3_v2-FCOMPD_floatcomp_registerW_registerZ_upper27_lower5_double
+	fcompd.ueq $r16r17r18r19.t = $r20, 536870911 	#Opcode-kv3_v2-FCOMPD_floatcomp_registerW_registerZ_upper27_lower5_double
 	;;
-	fcompnd.oeq $r8r9r10r11.t = $r12, $sp 	#Opcode-kv3_v2-FCOMPND_floatcomp_registerW_registerZ_registerY_simple
+	fcompnd.oeq $r20r21.lo = $r20r21r22r23.x, $r21 	#Opcode-kv3_v2-FCOMPND_floatcomp_registerW_registerZ_registerY_simple
 	;;
-	fcompnd.une $r13 = $tp, 536870911 	#Opcode-kv3_v2-FCOMPND_floatcomp_registerW_registerZ_upper27_lower5_double
+	fcompnd.une $r20r21.hi = $r20r21r22r23.y, 536870911 	#Opcode-kv3_v2-FCOMPND_floatcomp_registerW_registerZ_upper27_lower5_double
 	;;
-	fcompnhq.olt $r14 = $fp, $r15 	#Opcode-kv3_v2-FCOMPNHQ_floatcomp_registerW_registerZ_registerY_simple
+	fcompnhq.olt $r22 = $r22r23.lo, $r20r21r22r23.z 	#Opcode-kv3_v2-FCOMPNHQ_floatcomp_registerW_registerZ_registerY_simple
 	;;
-	fcompnhq.uge $rp = $r16, 536870911 	#Opcode-kv3_v2-FCOMPNHQ_floatcomp_registerW_registerZ_upper27_lower5_splat32_double
+	fcompnhq.uge $r23 = $r22r23.hi, 536870911 	#Opcode-kv3_v2-FCOMPNHQ_floatcomp_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	fcompnwp.oge $r16r17.lo = $r16r17r18r19.x, $r17 	#Opcode-kv3_v2-FCOMPNWP_floatcomp_registerW_registerZ_registerY_simple
+	fcompnwp.oge $r20r21r22r23.t = $r24, $r24r25.lo 	#Opcode-kv3_v2-FCOMPNWP_floatcomp_registerW_registerZ_registerY_simple
 	;;
-	fcompnwp.ult $r16r17.hi = $r16r17r18r19.y, 536870911.@ 	#Opcode-kv3_v2-FCOMPNWP_floatcomp_registerW_registerZ_upper27_lower5_splat32_double
+	fcompnwp.ult $r24r25r26r27.x = $r25, 536870911.@ 	#Opcode-kv3_v2-FCOMPNWP_floatcomp_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	fcompnw.one $r18 = $r18r19.lo, $r16r17r18r19.z 	#Opcode-kv3_v2-FCOMPNW_floatcomp_registerW_registerZ_registerY_simple
+	fcompnw.one $r24r25.hi = $r24r25r26r27.y, $r26 	#Opcode-kv3_v2-FCOMPNW_floatcomp_registerW_registerZ_registerY_simple
 	;;
-	fcompnw.ueq $r19 = $r18r19.hi, 536870911 	#Opcode-kv3_v2-FCOMPNW_floatcomp_registerW_registerZ_upper27_lower5_double
+	fcompnw.ueq $r26r27.lo = $r24r25r26r27.z, 536870911 	#Opcode-kv3_v2-FCOMPNW_floatcomp_registerW_registerZ_upper27_lower5_double
 	;;
-	fcompw.oeq $r16r17r18r19.t = $r20, $r20r21.lo 	#Opcode-kv3_v2-FCOMPW_floatcomp_registerW_registerZ_registerY_simple
+	fcompw.oeq $r27 = $r26r27.hi, $r24r25r26r27.t 	#Opcode-kv3_v2-FCOMPW_floatcomp_registerW_registerZ_registerY_simple
 	;;
-	fcompw.une $r20r21r22r23.x = $r21, 536870911 	#Opcode-kv3_v2-FCOMPW_floatcomp_registerW_registerZ_upper27_lower5_double
+	fcompw.une $r28 = $r28r29.lo, 536870911 	#Opcode-kv3_v2-FCOMPW_floatcomp_registerW_registerZ_upper27_lower5_double
 	;;
 	fdot2wdp.rnz $r48r49r50r51.hi = $r52r53, $r52r53r54r55.lo 	#Opcode-kv3_v2-FDOT2WDP_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fdot2wd.ro.s $r20r21.hi = $r20r21r22r23.y, $r22 	#Opcode-kv3_v2-FDOT2WD_rounding_silent_registerW_registerZ_registerY_simple
+	fdot2wd.ro.s $r28r29r30r31.x = $r29, $r28r29.hi 	#Opcode-kv3_v2-FDOT2WD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	fdot2wzp $r54r55 = $r52r53r54r55.hi, $r56r57 	#Opcode-kv3_v2-FDOT2WZP_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fdot2w.rn.s $r22r23.lo = $r20r21r22r23.z, $r23 	#Opcode-kv3_v2-FDOT2W_rounding_silent_registerW_registerZ_registerY_simple
+	fdot2w.rn.s $r28r29r30r31.y = $r30, $r30r31.lo 	#Opcode-kv3_v2-FDOT2W_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	fence 	#Opcode-kv3_v2-FENCE_accesses_simple
 	;;
-	ffdmaswp.ru $r22r23.hi = $r56r57r58r59.lo, $r58r59 	#Opcode-kv3_v2-FFDMASWP_rounding_silent_registerW_registerP_registerO_simple
+	ffdmaswp.ru $r28r29r30r31.z = $r56r57r58r59.lo, $r58r59 	#Opcode-kv3_v2-FFDMASWP_rounding_silent_registerW_registerP_registerO_simple
 	;;
 	ffdmaswq.rd.s $r56r57r58r59.hi = $r20r21r22r23, $r24r25r26r27 	#Opcode-kv3_v2-FFDMASWQ_rounding_silent_registerM_registerR_registerQ_simple
 	;;
-	ffdmasw.rz $r20r21r22r23.t = $r24, $r24r25.lo 	#Opcode-kv3_v2-FFDMASW_rounding_silent_registerW_registerZ_registerY_simple
+	ffdmasw.rz $r31 = $r30r31.hi, $r28r29r30r31.t 	#Opcode-kv3_v2-FFDMASW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffdmawp.rna.s $r24r25r26r27.x = $r60r61, $r60r61r62r63.lo 	#Opcode-kv3_v2-FFDMAWP_rounding_silent_registerW_registerP_registerO_simple
+	ffdmawp.rna.s $r32 = $r60r61, $r60r61r62r63.lo 	#Opcode-kv3_v2-FFDMAWP_rounding_silent_registerW_registerP_registerO_simple
 	;;
 	ffdmawq.rnz $r62r63 = $r28r29r30r31, $r32r33r34r35 	#Opcode-kv3_v2-FFDMAWQ_rounding_silent_registerM_registerR_registerQ_simple
 	;;
-	ffdmaw.ro.s $r25 = $r24r25.hi, $r24r25r26r27.y 	#Opcode-kv3_v2-FFDMAW_rounding_silent_registerW_registerZ_registerY_simple
+	ffdmaw.ro.s $r32r33.lo = $r32r33r34r35.x, $r33 	#Opcode-kv3_v2-FFDMAW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffdmdawp $r26 = $r60r61r62r63.hi, $r0r1 	#Opcode-kv3_v2-FFDMDAWP_rounding_silent_registerW_registerP_registerO_simple
+	ffdmdawp $r32r33.hi = $r60r61r62r63.hi, $r0r1 	#Opcode-kv3_v2-FFDMDAWP_rounding_silent_registerW_registerP_registerO_simple
 	;;
 	ffdmdawq.rn.s $r0r1r2r3.lo = $r36r37r38r39, $r40r41r42r43 	#Opcode-kv3_v2-FFDMDAWQ_rounding_silent_registerM_registerR_registerQ_simple
 	;;
-	ffdmdaw.ru $r26r27.lo = $r24r25r26r27.z, $r27 	#Opcode-kv3_v2-FFDMDAW_rounding_silent_registerW_registerZ_registerY_simple
+	ffdmdaw.ru $r32r33r34r35.y = $r34, $r34r35.lo 	#Opcode-kv3_v2-FFDMDAW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffdmdswp.rd.s $r26r27.hi = $r2r3, $r0r1r2r3.hi 	#Opcode-kv3_v2-FFDMDSWP_rounding_silent_registerW_registerP_registerO_simple
+	ffdmdswp.rd.s $r32r33r34r35.z = $r2r3, $r0r1r2r3.hi 	#Opcode-kv3_v2-FFDMDSWP_rounding_silent_registerW_registerP_registerO_simple
 	;;
 	ffdmdswq.rz $r4r5 = $r44r45r46r47, $r48r49r50r51 	#Opcode-kv3_v2-FFDMDSWQ_rounding_silent_registerM_registerR_registerQ_simple
 	;;
-	ffdmdsw.rna.s $r24r25r26r27.t = $r28, $r28r29.lo 	#Opcode-kv3_v2-FFDMDSW_rounding_silent_registerW_registerZ_registerY_simple
+	ffdmdsw.rna.s $r35 = $r34r35.hi, $r32r33r34r35.t 	#Opcode-kv3_v2-FFDMDSW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffdmsawp.rnz $r28r29r30r31.x = $r4r5r6r7.lo, $r6r7 	#Opcode-kv3_v2-FFDMSAWP_rounding_silent_registerW_registerP_registerO_simple
+	ffdmsawp.rnz $r36 = $r4r5r6r7.lo, $r6r7 	#Opcode-kv3_v2-FFDMSAWP_rounding_silent_registerW_registerP_registerO_simple
 	;;
 	ffdmsawq.ro.s $r4r5r6r7.hi = $r52r53r54r55, $r56r57r58r59 	#Opcode-kv3_v2-FFDMSAWQ_rounding_silent_registerM_registerR_registerQ_simple
 	;;
-	ffdmsaw $r29 = $r28r29.hi, $r28r29r30r31.y 	#Opcode-kv3_v2-FFDMSAW_rounding_silent_registerW_registerZ_registerY_simple
+	ffdmsaw $r36r37.lo = $r36r37r38r39.x, $r37 	#Opcode-kv3_v2-FFDMSAW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffdmswp.rn.s $r30 = $r8r9, $r8r9r10r11.lo 	#Opcode-kv3_v2-FFDMSWP_rounding_silent_registerW_registerP_registerO_simple
+	ffdmswp.rn.s $r36r37.hi = $r8r9, $r8r9r10r11.lo 	#Opcode-kv3_v2-FFDMSWP_rounding_silent_registerW_registerP_registerO_simple
 	;;
 	ffdmswq.ru $r10r11 = $r60r61r62r63, $r0r1r2r3 	#Opcode-kv3_v2-FFDMSWQ_rounding_silent_registerM_registerR_registerQ_simple
 	;;
-	ffdmsw.rd.s $r30r31.lo = $r28r29r30r31.z, $r31 	#Opcode-kv3_v2-FFDMSW_rounding_silent_registerW_registerZ_registerY_simple
+	ffdmsw.rd.s $r36r37r38r39.y = $r38, $r38r39.lo 	#Opcode-kv3_v2-FFDMSW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffmad.rz $r30r31.hi = $r28r29r30r31.t, $r32 	#Opcode-kv3_v2-FFMAD_rounding_silent_registerW_registerZ_registerY_simple
+	ffmad.rz $r36r37r38r39.z = $r39, $r38r39.hi 	#Opcode-kv3_v2-FFMAD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	ffmaho.rna.s $r8r9r10r11.hi = $r12r13, $r12r13r14r15.lo 	#Opcode-kv3_v2-FFMAHO_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	ffmahq.rnz $r32r33.lo = $r32r33r34r35.x, $r33 	#Opcode-kv3_v2-FFMAHQ_rounding_silent_registerW_registerZ_registerY_simple
+	ffmahq.rnz $r36r37r38r39.t = $r40, $r40r41.lo 	#Opcode-kv3_v2-FFMAHQ_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffmahwq.ro.s $r14r15 = $r32r33.hi, $r32r33r34r35.y 	#Opcode-kv3_v2-FFMAHWQ_rounding_silent_registerM_registerZ_registerY_simple
+	ffmahwq.ro.s $r14r15 = $r40r41r42r43.x, $r41 	#Opcode-kv3_v2-FFMAHWQ_rounding_silent_registerM_registerZ_registerY_simple
 	;;
-	ffmahw $r34 = $r34r35.lo, $r32r33r34r35.z 	#Opcode-kv3_v2-FFMAHW_rounding_silent_registerW_registerZ_registerY_simple
+	ffmahw $r40r41.hi = $r40r41r42r43.y, $r42 	#Opcode-kv3_v2-FFMAHW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	ffmawcp.rn.s $r12r13r14r15.hi = $r16r17, $r16r17r18r19.lo 	#Opcode-kv3_v2-FFMAWCP_conjugate_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	ffmawc.c.ru $r35 = $r34r35.hi, $r32r33r34r35.t 	#Opcode-kv3_v2-FFMAWC_conjugate_rounding_silent_registerW_registerZ_registerY_simple
+	ffmawc.c.ru $r42r43.lo = $r40r41r42r43.z, $r43 	#Opcode-kv3_v2-FFMAWC_conjugate_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffmawdp.rd.s $r18r19 = $r36, $r36r37.lo 	#Opcode-kv3_v2-FFMAWDP_rounding_silent_registerM_registerZ_registerY_simple
+	ffmawdp.rd.s $r18r19 = $r42r43.hi, $r40r41r42r43.t 	#Opcode-kv3_v2-FFMAWDP_rounding_silent_registerM_registerZ_registerY_simple
 	;;
-	ffmawd.rz $r36r37r38r39.x = $r37, $r36r37.hi 	#Opcode-kv3_v2-FFMAWD_rounding_silent_registerW_registerZ_registerY_simple
+	ffmawd.rz $r44 = $r44r45.lo, $r44r45r46r47.x 	#Opcode-kv3_v2-FFMAWD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffmawp.rna.s $r36r37r38r39.y = $r38, $r38r39.lo 	#Opcode-kv3_v2-FFMAWP_rounding_silent_registerW_registerZ_registerY_simple
+	ffmawp.rna.s $r45 = $r44r45.hi, $r44r45r46r47.y 	#Opcode-kv3_v2-FFMAWP_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	ffmawq.rnz $r16r17r18r19.hi = $r20r21, $r20r21r22r23.lo 	#Opcode-kv3_v2-FFMAWQ_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	ffmaw.ro.s $r36r37r38r39.z = $r39, $r38r39.hi 	#Opcode-kv3_v2-FFMAW_rounding_silent_registerW_registerZ_registerY_simple
+	ffmaw.ro.s $r46 = $r46r47.lo, $r44r45r46r47.z 	#Opcode-kv3_v2-FFMAW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffmsd $r36r37r38r39.t = $r40, $r40r41.lo 	#Opcode-kv3_v2-FFMSD_rounding_silent_registerW_registerZ_registerY_simple
+	ffmsd $r47 = $r46r47.hi, $r44r45r46r47.t 	#Opcode-kv3_v2-FFMSD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	ffmsho.rn.s $r22r23 = $r20r21r22r23.hi, $r24r25 	#Opcode-kv3_v2-FFMSHO_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	ffmshq.ru $r40r41r42r43.x = $r41, $r40r41.hi 	#Opcode-kv3_v2-FFMSHQ_rounding_silent_registerW_registerZ_registerY_simple
+	ffmshq.ru $r48 = $r48r49.lo, $r48r49r50r51.x 	#Opcode-kv3_v2-FFMSHQ_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffmshwq.rd.s $r24r25r26r27.lo = $r40r41r42r43.y, $r42 	#Opcode-kv3_v2-FFMSHWQ_rounding_silent_registerM_registerZ_registerY_simple
+	ffmshwq.rd.s $r24r25r26r27.lo = $r49, $r48r49.hi 	#Opcode-kv3_v2-FFMSHWQ_rounding_silent_registerM_registerZ_registerY_simple
 	;;
-	ffmshw.rz $r42r43.lo = $r40r41r42r43.z, $r43 	#Opcode-kv3_v2-FFMSHW_rounding_silent_registerW_registerZ_registerY_simple
+	ffmshw.rz $r48r49r50r51.y = $r50, $r50r51.lo 	#Opcode-kv3_v2-FFMSHW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	ffmswcp.rna.s $r26r27 = $r24r25r26r27.hi, $r28r29 	#Opcode-kv3_v2-FFMSWCP_conjugate_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	ffmswc.c.rnz $r42r43.hi = $r40r41r42r43.t, $r44 	#Opcode-kv3_v2-FFMSWC_conjugate_rounding_silent_registerW_registerZ_registerY_simple
+	ffmswc.c.rnz $r48r49r50r51.z = $r51, $r50r51.hi 	#Opcode-kv3_v2-FFMSWC_conjugate_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffmswdp.ro.s $r28r29r30r31.lo = $r44r45.lo, $r44r45r46r47.x 	#Opcode-kv3_v2-FFMSWDP_rounding_silent_registerM_registerZ_registerY_simple
+	ffmswdp.ro.s $r28r29r30r31.lo = $r48r49r50r51.t, $r52 	#Opcode-kv3_v2-FFMSWDP_rounding_silent_registerM_registerZ_registerY_simple
 	;;
-	ffmswd $r45 = $r44r45.hi, $r44r45r46r47.y 	#Opcode-kv3_v2-FFMSWD_rounding_silent_registerW_registerZ_registerY_simple
+	ffmswd $r52r53.lo = $r52r53r54r55.x, $r53 	#Opcode-kv3_v2-FFMSWD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	ffmswp.rn.s $r46 = $r46r47.lo, $r44r45r46r47.z 	#Opcode-kv3_v2-FFMSWP_rounding_silent_registerW_registerZ_registerY_simple
+	ffmswp.rn.s $r52r53.hi = $r52r53r54r55.y, $r54 	#Opcode-kv3_v2-FFMSWP_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	ffmswq.ru $r30r31 = $r28r29r30r31.hi, $r32r33 	#Opcode-kv3_v2-FFMSWQ_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	ffmsw.rd.s $r47 = $r46r47.hi, $r44r45r46r47.t 	#Opcode-kv3_v2-FFMSW_rounding_silent_registerW_registerZ_registerY_simple
+	ffmsw.rd.s $r54r55.lo = $r52r53r54r55.z, $r55 	#Opcode-kv3_v2-FFMSW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fixedd.rz $r48 = $r48r49.lo, 7 	#Opcode-kv3_v2-FIXEDD_rounding_silent_registerW_registerZ_unsigned6_simple
+	fixedd.rz $r54r55.hi = $r52r53r54r55.t, 7 	#Opcode-kv3_v2-FIXEDD_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	fixedud.rna.s $r48r49r50r51.x = $r49, 7 	#Opcode-kv3_v2-FIXEDUD_rounding_silent_registerW_registerZ_unsigned6_simple
+	fixedud.rna.s $r56 = $r56r57.lo, 7 	#Opcode-kv3_v2-FIXEDUD_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	fixeduwp.rnz $r48r49.hi = $r48r49r50r51.y, 7 	#Opcode-kv3_v2-FIXEDUWP_rounding_silent_registerW_registerZ_unsigned6_simple
+	fixeduwp.rnz $r56r57r58r59.x = $r57, 7 	#Opcode-kv3_v2-FIXEDUWP_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	fixeduw.ro.s $r50 = $r50r51.lo, 7 	#Opcode-kv3_v2-FIXEDUW_rounding_silent_registerW_registerZ_unsigned6_simple
+	fixeduw.ro.s $r56r57.hi = $r56r57r58r59.y, 7 	#Opcode-kv3_v2-FIXEDUW_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	fixedwp $r48r49r50r51.z = $r51, 7 	#Opcode-kv3_v2-FIXEDWP_rounding_silent_registerW_registerZ_unsigned6_simple
+	fixedwp $r58 = $r58r59.lo, 7 	#Opcode-kv3_v2-FIXEDWP_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	fixedw.rn.s $r50r51.hi = $r48r49r50r51.t, 7 	#Opcode-kv3_v2-FIXEDW_rounding_silent_registerW_registerZ_unsigned6_simple
+	fixedw.rn.s $r56r57r58r59.z = $r59, 7 	#Opcode-kv3_v2-FIXEDW_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	floatd.ru $r52 = $r52r53.lo, 7 	#Opcode-kv3_v2-FLOATD_rounding_silent_registerW_registerZ_unsigned6_simple
+	floatd.ru $r58r59.hi = $r56r57r58r59.t, 7 	#Opcode-kv3_v2-FLOATD_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	floatud.rd.s $r52r53r54r55.x = $r53, 7 	#Opcode-kv3_v2-FLOATUD_rounding_silent_registerW_registerZ_unsigned6_simple
+	floatud.rd.s $r60 = $r60r61.lo, 7 	#Opcode-kv3_v2-FLOATUD_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	floatuwp.rz $r52r53.hi = $r52r53r54r55.y, 7 	#Opcode-kv3_v2-FLOATUWP_rounding_silent_registerW_registerZ_unsigned6_simple
+	floatuwp.rz $r60r61r62r63.x = $r61, 7 	#Opcode-kv3_v2-FLOATUWP_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	floatuw.rna.s $r54 = $r54r55.lo, 7 	#Opcode-kv3_v2-FLOATUW_rounding_silent_registerW_registerZ_unsigned6_simple
+	floatuw.rna.s $r60r61.hi = $r60r61r62r63.y, 7 	#Opcode-kv3_v2-FLOATUW_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	floatwp.rnz $r52r53r54r55.z = $r55, 7 	#Opcode-kv3_v2-FLOATWP_rounding_silent_registerW_registerZ_unsigned6_simple
+	floatwp.rnz $r62 = $r62r63.lo, 7 	#Opcode-kv3_v2-FLOATWP_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	floatw.ro.s $r54r55.hi = $r52r53r54r55.t, 7 	#Opcode-kv3_v2-FLOATW_rounding_silent_registerW_registerZ_unsigned6_simple
+	floatw.ro.s $r60r61r62r63.z = $r63, 7 	#Opcode-kv3_v2-FLOATW_rounding_silent_registerW_registerZ_unsigned6_simple
 	;;
-	fmaxd $r56 = $r56r57.lo, $r56r57r58r59.x 	#Opcode-kv3_v2-FMAXD_registerW_registerZ_registerY_simple
+	fmaxd $r62r63.hi = $r60r61r62r63.t, $r0 	#Opcode-kv3_v2-FMAXD_registerW_registerZ_registerY_simple
 	;;
-	fmaxhq $r57 = $r56r57.hi, $r56r57r58r59.y 	#Opcode-kv3_v2-FMAXHQ_registerW_registerZ_registerY_simple
+	fmaxhq $r0r1.lo = $r0r1r2r3.x, $r1 	#Opcode-kv3_v2-FMAXHQ_registerW_registerZ_registerY_simple
 	;;
-	fmaxwp $r58 = $r58r59.lo, $r56r57r58r59.z 	#Opcode-kv3_v2-FMAXWP_registerW_registerZ_registerY_simple
+	fmaxwp $r0r1.hi = $r0r1r2r3.y, $r2 	#Opcode-kv3_v2-FMAXWP_registerW_registerZ_registerY_simple
 	;;
-	fmaxw $r59 = $r58r59.hi, $r56r57r58r59.t 	#Opcode-kv3_v2-FMAXW_registerW_registerZ_registerY_simple
+	fmaxw $r2r3.lo = $r0r1r2r3.z, $r3 	#Opcode-kv3_v2-FMAXW_registerW_registerZ_registerY_simple
 	;;
-	fmind $r60 = $r60r61.lo, $r60r61r62r63.x 	#Opcode-kv3_v2-FMIND_registerW_registerZ_registerY_simple
+	fmind $r2r3.hi = $r0r1r2r3.t, $r4 	#Opcode-kv3_v2-FMIND_registerW_registerZ_registerY_simple
 	;;
-	fminhq $r61 = $r60r61.hi, $r60r61r62r63.y 	#Opcode-kv3_v2-FMINHQ_registerW_registerZ_registerY_simple
+	fminhq $r4r5.lo = $r4r5r6r7.x, $r5 	#Opcode-kv3_v2-FMINHQ_registerW_registerZ_registerY_simple
 	;;
-	fminwp $r62 = $r62r63.lo, $r60r61r62r63.z 	#Opcode-kv3_v2-FMINWP_registerW_registerZ_registerY_simple
+	fminwp $r4r5.hi = $r4r5r6r7.y, $r6 	#Opcode-kv3_v2-FMINWP_registerW_registerZ_registerY_simple
 	;;
-	fminw $r63 = $r62r63.hi, $r60r61r62r63.t 	#Opcode-kv3_v2-FMINW_registerW_registerZ_registerY_simple
+	fminw $r6r7.lo = $r4r5r6r7.z, $r7 	#Opcode-kv3_v2-FMINW_registerW_registerZ_registerY_simple
 	;;
-	fmm212w $r32r33r34r35.lo = $r0, $r0r1.lo 	#Opcode-kv3_v2-FMM212W_rounding_silent_registerM_registerZ_registerY_simple
+	fmm212w $r32r33r34r35.lo = $r6r7.hi, $r4r5r6r7.t 	#Opcode-kv3_v2-FMM212W_rounding_silent_registerM_registerZ_registerY_simple
 	;;
 	fmm222w.rn.s $r34r35 = $r32r33r34r35.hi, $r36r37 	#Opcode-kv3_v2-FMM222W_multransm_multransl_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fmma212w.ru $r36r37r38r39.lo = $r0r1r2r3.x, $r1 	#Opcode-kv3_v2-FMMA212W_rounding_silent_registerM_registerZ_registerY_simple
+	fmma212w.ru $r36r37r38r39.lo = $r8, $r8r9.lo 	#Opcode-kv3_v2-FMMA212W_rounding_silent_registerM_registerZ_registerY_simple
 	;;
 	fmma222w.tn.rd.s $r38r39 = $r36r37r38r39.hi, $r40r41 	#Opcode-kv3_v2-FMMA222W_multransm_multransl_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fmms212w.rz $r40r41r42r43.lo = $r0r1.hi, $r0r1r2r3.y 	#Opcode-kv3_v2-FMMS212W_rounding_silent_registerM_registerZ_registerY_simple
+	fmms212w.rz $r40r41r42r43.lo = $r8r9r10r11.x, $r9 	#Opcode-kv3_v2-FMMS212W_rounding_silent_registerM_registerZ_registerY_simple
 	;;
 	fmms222w.nt.rna.s $r42r43 = $r40r41r42r43.hi, $r44r45 	#Opcode-kv3_v2-FMMS222W_multransm_multransl_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fmuld.rnz $r2 = $r2r3.lo, $r0r1r2r3.z 	#Opcode-kv3_v2-FMULD_rounding_silent_registerW_registerZ_registerY_simple
+	fmuld.rnz $r8r9.hi = $r8r9r10r11.y, $r10 	#Opcode-kv3_v2-FMULD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	fmulho.ro.s $r44r45r46r47.lo = $r46r47, $r44r45r46r47.hi 	#Opcode-kv3_v2-FMULHO_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fmulhq $r3 = $r2r3.hi, $r0r1r2r3.t 	#Opcode-kv3_v2-FMULHQ_rounding_silent_registerW_registerZ_registerY_simple
+	fmulhq $r10r11.lo = $r8r9r10r11.z, $r11 	#Opcode-kv3_v2-FMULHQ_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fmulhwq.rn.s $r48r49 = $r4, $r4r5.lo 	#Opcode-kv3_v2-FMULHWQ_rounding_silent_registerM_registerZ_registerY_simple
+	fmulhwq.rn.s $r48r49 = $r10r11.hi, $r8r9r10r11.t 	#Opcode-kv3_v2-FMULHWQ_rounding_silent_registerM_registerZ_registerY_simple
 	;;
-	fmulhw.ru $r4r5r6r7.x = $r5, $r4r5.hi 	#Opcode-kv3_v2-FMULHW_rounding_silent_registerW_registerZ_registerY_simple
+	fmulhw.ru $r12 = $sp, $r13 	#Opcode-kv3_v2-FMULHW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	fmulwcp.rd.s $r48r49r50r51.lo = $r50r51, $r48r49r50r51.hi 	#Opcode-kv3_v2-FMULWCP_conjugate_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fmulwc.c.rz $r4r5r6r7.y = $r6, $r6r7.lo 	#Opcode-kv3_v2-FMULWC_conjugate_rounding_silent_registerW_registerZ_registerY_simple
+	fmulwc.c.rz $tp = $r14, $fp 	#Opcode-kv3_v2-FMULWC_conjugate_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fmulwdp.rna.s $r52r53 = $r4r5r6r7.z, $r7 	#Opcode-kv3_v2-FMULWDP_rounding_silent_registerM_registerZ_registerY_simple
+	fmulwdp.rna.s $r52r53 = $r15, $rp 	#Opcode-kv3_v2-FMULWDP_rounding_silent_registerM_registerZ_registerY_simple
 	;;
-	fmulwd.rnz $r6r7.hi = $r4r5r6r7.t, $r8 	#Opcode-kv3_v2-FMULWD_rounding_silent_registerW_registerZ_registerY_simple
+	fmulwd.rnz $r16 = $r16r17.lo, $r16r17r18r19.x 	#Opcode-kv3_v2-FMULWD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fmulwp.ro.s $r8r9.lo = $r8r9r10r11.x, $r9 	#Opcode-kv3_v2-FMULWP_rounding_silent_registerW_registerZ_registerY_simple
+	fmulwp.ro.s $r17 = $r16r17.hi, $r16r17r18r19.y 	#Opcode-kv3_v2-FMULWP_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	fmulwq $r52r53r54r55.lo = $r54r55, $r52r53r54r55.hi 	#Opcode-kv3_v2-FMULWQ_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fmulw.rn.s $r8r9.hi = $r8r9r10r11.y, $r10 	#Opcode-kv3_v2-FMULW_rounding_silent_registerW_registerZ_registerY_simple
+	fmulw.rn.s $r18 = $r18r19.lo, $r16r17r18r19.z 	#Opcode-kv3_v2-FMULW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fnarrowdwp.ru $r10r11.lo = $r56r57 	#Opcode-kv3_v2-FNARROWDWP_rounding2_silent2_registerW_registerP_simple
+	fnarrowdwp.ru $r19 = $r56r57 	#Opcode-kv3_v2-FNARROWDWP_rounding2_silent2_registerW_registerP_simple
 	;;
-	fnarrowdw.rd.s $r8r9r10r11.z = $r11 	#Opcode-kv3_v2-FNARROWDW_rounding2_silent2_registerW_registerZ_simple
+	fnarrowdw.rd.s $r18r19.hi = $r16r17r18r19.t 	#Opcode-kv3_v2-FNARROWDW_rounding2_silent2_registerW_registerZ_simple
 	;;
-	fnarrowwhq.rz $r10r11.hi = $r56r57r58r59.lo 	#Opcode-kv3_v2-FNARROWWHQ_rounding2_silent2_registerW_registerP_simple
+	fnarrowwhq.rz $r20 = $r56r57r58r59.lo 	#Opcode-kv3_v2-FNARROWWHQ_rounding2_silent2_registerW_registerP_simple
 	;;
-	fnarrowwh.rna.s $r8r9r10r11.t = $r12 	#Opcode-kv3_v2-FNARROWWH_rounding2_silent2_registerW_registerZ_simple
+	fnarrowwh.rna.s $r20r21.lo = $r20r21r22r23.x 	#Opcode-kv3_v2-FNARROWWH_rounding2_silent2_registerW_registerZ_simple
 	;;
-	fnegd $sp = $r13 	#Opcode-kv3_v2-FNEGD_registerW_registerZ_simple
+	fnegd $r21 = $r20r21.hi 	#Opcode-kv3_v2-FNEGD_registerW_registerZ_simple
 	;;
-	fneghq $tp = $r14 	#Opcode-kv3_v2-FNEGHQ_registerW_registerZ_simple
+	fneghq $r20r21r22r23.y = $r22 	#Opcode-kv3_v2-FNEGHQ_registerW_registerZ_simple
 	;;
-	fnegwp $fp = $r15 	#Opcode-kv3_v2-FNEGWP_registerW_registerZ_simple
+	fnegwp $r22r23.lo = $r20r21r22r23.z 	#Opcode-kv3_v2-FNEGWP_registerW_registerZ_simple
 	;;
-	fnegw $rp = $r16 	#Opcode-kv3_v2-FNEGW_registerW_registerZ_simple
+	fnegw $r23 = $r22r23.hi 	#Opcode-kv3_v2-FNEGW_registerW_registerZ_simple
 	;;
-	frecw.rnz $r16r17.lo = $r16r17r18r19.x 	#Opcode-kv3_v2-FRECW_rounding2_silent2_registerW_registerZ_simple
+	frecw.rnz $r20r21r22r23.t = $r24 	#Opcode-kv3_v2-FRECW_rounding2_silent2_registerW_registerZ_simple
 	;;
-	frsrw.ro.s $r17 = $r16r17.hi 	#Opcode-kv3_v2-FRSRW_rounding2_silent2_registerW_registerZ_simple
+	frsrw.ro.s $r24r25.lo = $r24r25r26r27.x 	#Opcode-kv3_v2-FRSRW_rounding2_silent2_registerW_registerZ_simple
 	;;
 	fsbfdc.c $r58r59 = $r56r57r58r59.hi, $r60r61 	#Opcode-kv3_v2-FSBFDC.C_rounding_silent_registerM_registerP_registerO_simple
 	;;
@@ -953,1261 +973,1275 @@ main:
 	;;
 	fsbfdp.ru $r0r1 = $r0r1r2r3.lo, $r2r3 	#Opcode-kv3_v2-FSBFDP_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fsbfd.rd.s $r16r17r18r19.y = $r18, $r18r19.lo 	#Opcode-kv3_v2-FSBFD_rounding_silent_registerW_registerZ_registerY_simple
+	fsbfd.rd.s $r25 = $r24r25.hi, $r24r25r26r27.y 	#Opcode-kv3_v2-FSBFD_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	fsbfho.rz $r0r1r2r3.hi = $r4r5, $r4r5r6r7.lo 	#Opcode-kv3_v2-FSBFHO_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fsbfhq.rna.s $r16r17r18r19.z = $r19, $r18r19.hi 	#Opcode-kv3_v2-FSBFHQ_rounding_silent_registerW_registerZ_registerY_simple
+	fsbfhq.rna.s $r26 = $r26r27.lo, $r24r25r26r27.z 	#Opcode-kv3_v2-FSBFHQ_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fsbfwc.c.rnz $r16r17r18r19.t = $r20, $r20r21.lo 	#Opcode-kv3_v2-FSBFWC.C_rounding_silent_registerW_registerZ_registerY_simple
+	fsbfwc.c.rnz $r27 = $r26r27.hi, $r24r25r26r27.t 	#Opcode-kv3_v2-FSBFWC.C_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	fsbfwcp.c.ro.s $r6r7 = $r4r5r6r7.hi, $r8r9 	#Opcode-kv3_v2-FSBFWCP.C_rounding_silent_registerM_registerP_registerO_simple
 	;;
 	fsbfwcp $r8r9r10r11.lo = $r10r11, $r8r9r10r11.hi 	#Opcode-kv3_v2-FSBFWCP_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fsbfwc.rn.s $r20r21r22r23.x = $r21, $r20r21.hi 	#Opcode-kv3_v2-FSBFWC_rounding_silent_registerW_registerZ_registerY_simple
+	fsbfwc.rn.s $r28 = $r28r29.lo, $r28r29r30r31.x 	#Opcode-kv3_v2-FSBFWC_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fsbfwp.ru $r20r21r22r23.y = $r22, $r22r23.lo 	#Opcode-kv3_v2-FSBFWP_rounding_silent_registerW_registerZ_registerY_simple
+	fsbfwp.ru $r29 = $r28r29.hi, $r28r29r30r31.y 	#Opcode-kv3_v2-FSBFWP_rounding_silent_registerW_registerZ_registerY_simple
 	;;
 	fsbfwq.rd.s $r12r13 = $r12r13r14r15.lo, $r14r15 	#Opcode-kv3_v2-FSBFWQ_rounding_silent_registerM_registerP_registerO_simple
 	;;
-	fsbfw.rz $r20r21r22r23.z = $r23, $r22r23.hi 	#Opcode-kv3_v2-FSBFW_rounding_silent_registerW_registerZ_registerY_simple
+	fsbfw.rz $r30 = $r30r31.lo, $r28r29r30r31.z 	#Opcode-kv3_v2-FSBFW_rounding_silent_registerW_registerZ_registerY_simple
 	;;
-	fsdivd.s $r20r21r22r23.t = $r12r13r14r15.hi 	#Opcode-kv3_v2-FSDIVD_silent2_registerW_registerP_simple
+	fsdivd.s $r31 = $r12r13r14r15.hi 	#Opcode-kv3_v2-FSDIVD_silent2_registerW_registerP_simple
 	;;
-	fsdivwp $r24 = $r16r17 	#Opcode-kv3_v2-FSDIVWP_silent2_registerW_registerP_simple
+	fsdivwp $r30r31.hi = $r16r17 	#Opcode-kv3_v2-FSDIVWP_silent2_registerW_registerP_simple
 	;;
-	fsdivw.s $r24r25.lo = $r16r17r18r19.lo 	#Opcode-kv3_v2-FSDIVW_silent2_registerW_registerP_simple
+	fsdivw.s $r28r29r30r31.t = $r16r17r18r19.lo 	#Opcode-kv3_v2-FSDIVW_silent2_registerW_registerP_simple
 	;;
-	fsrecd $r24r25r26r27.x = $r25 	#Opcode-kv3_v2-FSRECD_silent2_registerW_registerZ_simple
+	fsrecd $r32 = $r32r33.lo 	#Opcode-kv3_v2-FSRECD_silent2_registerW_registerZ_simple
 	;;
-	fsrecwp.s $r24r25.hi = $r24r25r26r27.y 	#Opcode-kv3_v2-FSRECWP_silent2_registerW_registerZ_simple
+	fsrecwp.s $r32r33r34r35.x = $r33 	#Opcode-kv3_v2-FSRECWP_silent2_registerW_registerZ_simple
 	;;
-	fsrecw $r26 = $r26r27.lo 	#Opcode-kv3_v2-FSRECW_silent2_registerW_registerZ_simple
+	fsrecw $r32r33.hi = $r32r33r34r35.y 	#Opcode-kv3_v2-FSRECW_silent2_registerW_registerZ_simple
 	;;
-	fsrsrd $r24r25r26r27.z = $r27 	#Opcode-kv3_v2-FSRSRD_registerW_registerZ_simple
+	fsrsrd $r34 = $r34r35.lo 	#Opcode-kv3_v2-FSRSRD_registerW_registerZ_simple
 	;;
-	fsrsrwp $r26r27.hi = $r24r25r26r27.t 	#Opcode-kv3_v2-FSRSRWP_registerW_registerZ_simple
+	fsrsrwp $r32r33r34r35.z = $r35 	#Opcode-kv3_v2-FSRSRWP_registerW_registerZ_simple
 	;;
-	fsrsrw $r28 = $r28r29.lo 	#Opcode-kv3_v2-FSRSRW_registerW_registerZ_simple
+	fsrsrw $r34r35.hi = $r32r33r34r35.t 	#Opcode-kv3_v2-FSRSRW_registerW_registerZ_simple
 	;;
-	fwidenlhwp.s $r28r29r30r31.x = $r29 	#Opcode-kv3_v2-FWIDENLHWP_silent2_registerW_registerZ_simple
+	fwidenlhwp.s $r36 = $r36r37.lo 	#Opcode-kv3_v2-FWIDENLHWP_silent2_registerW_registerZ_simple
 	;;
-	fwidenlhw $r28r29.hi = $r28r29r30r31.y 	#Opcode-kv3_v2-FWIDENLHW_silent2_registerW_registerZ_simple
+	fwidenlhw $r36r37r38r39.x = $r37 	#Opcode-kv3_v2-FWIDENLHW_silent2_registerW_registerZ_simple
 	;;
-	fwidenlwd.s $r30 = $r30r31.lo 	#Opcode-kv3_v2-FWIDENLWD_silent2_registerW_registerZ_simple
+	fwidenlwd.s $r36r37.hi = $r36r37r38r39.y 	#Opcode-kv3_v2-FWIDENLWD_silent2_registerW_registerZ_simple
 	;;
-	fwidenmhwp $r28r29r30r31.z = $r31 	#Opcode-kv3_v2-FWIDENMHWP_silent2_registerW_registerZ_simple
+	fwidenmhwp $r38 = $r38r39.lo 	#Opcode-kv3_v2-FWIDENMHWP_silent2_registerW_registerZ_simple
 	;;
-	fwidenmhw.s $r30r31.hi = $r28r29r30r31.t 	#Opcode-kv3_v2-FWIDENMHW_silent2_registerW_registerZ_simple
+	fwidenmhw.s $r36r37r38r39.z = $r39 	#Opcode-kv3_v2-FWIDENMHW_silent2_registerW_registerZ_simple
 	;;
-	fwidenmwd $r32 = $r32r33.lo 	#Opcode-kv3_v2-FWIDENMWD_silent2_registerW_registerZ_simple
+	fwidenmwd $r38r39.hi = $r36r37r38r39.t 	#Opcode-kv3_v2-FWIDENMWD_silent2_registerW_registerZ_simple
 	;;
-	get $r32r33r34r35.x = $pc 	#Opcode-kv3_v2-GET_registerZ_systemS2_simple
+	get $r40 = $pc 	#Opcode-kv3_v2-GET_registerZ_systemS2_simple
 	;;
-	get $r33 = $pc 	#Opcode-kv3_v2-GET_registerZ_systemS3_simple
+	get $r40r41.lo = $pc 	#Opcode-kv3_v2-GET_registerZ_systemS3_simple
 	;;
 	goto -33554432 	#Opcode-kv3_v2-GOTO_pcrel27_simple
 	;;
-	i1invals $r32r33.hi[$r32r33r34r35.y] 	#Opcode-kv3_v2-I1INVALS_doscale_registerY_registerZ_simple
+	i1invals $r40r41r42r43.x[$r41] 	#Opcode-kv3_v2-I1INVALS_doscale_registerY_registerZ_simple
 	;;
-	i1invals 2305843009213693951[$r34] 	#Opcode-kv3_v2-I1INVALS_extend27_upper27_lower10_registerZ_triple
+	i1invals 2305843009213693951[$r40r41.hi] 	#Opcode-kv3_v2-I1INVALS_extend27_upper27_lower10_registerZ_triple
 	;;
-	i1invals -64[$r34r35.lo] 	#Opcode-kv3_v2-I1INVALS_signed10_registerZ_simple
+	i1invals -64[$r40r41r42r43.y] 	#Opcode-kv3_v2-I1INVALS_signed10_registerZ_simple
 	;;
-	i1invals -8589934592[$r32r33r34r35.z] 	#Opcode-kv3_v2-I1INVALS_upper27_lower10_registerZ_double
+	i1invals -8589934592[$r42] 	#Opcode-kv3_v2-I1INVALS_upper27_lower10_registerZ_double
 	;;
 	i1inval 	#Opcode-kv3_v2-I1INVAL_simple
 	;;
-	icall $r35 	#Opcode-kv3_v2-ICALL_registerZ_simple
+	icall $r42r43.lo 	#Opcode-kv3_v2-ICALL_registerZ_simple
 	;;
-	iget $r34r35.hi 	#Opcode-kv3_v2-IGET_registerZ_simple
+	iget $r40r41r42r43.z 	#Opcode-kv3_v2-IGET_registerZ_simple
 	;;
-	igoto $r32r33r34r35.t 	#Opcode-kv3_v2-IGOTO_registerZ_simple
+	igoto $r43 	#Opcode-kv3_v2-IGOTO_registerZ_simple
 	;;
-	insf $r36 = $r36r37.lo, 7, 7 	#Opcode-kv3_v2-INSF_registerW_registerZ_stopbit2_stopbit4_startbit_simple
+	insf $r42r43.hi = $r40r41r42r43.t, 7, 7 	#Opcode-kv3_v2-INSF_registerW_registerZ_stopbit2_stopbit4_startbit_simple
 	;;
-	iord $r36r37r38r39.x = $r37, 2305843009213693951 	#Opcode-kv3_v2-IORD_registerW_registerZ_extend27_upper27_lower10_triple
+	iord $r44 = $r44r45.lo, 2305843009213693951 	#Opcode-kv3_v2-IORD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	iord $r36r37.hi = $r36r37r38r39.y, $r38 	#Opcode-kv3_v2-IORD_registerW_registerZ_registerY_simple
+	iord $r44r45r46r47.x = $r45, $r44r45.hi 	#Opcode-kv3_v2-IORD_registerW_registerZ_registerY_simple
 	;;
-	iord $r38r39.lo = $r36r37r38r39.z, -64 	#Opcode-kv3_v2-IORD_registerW_registerZ_signed10_simple
+	iord $r44r45r46r47.y = $r46, -64 	#Opcode-kv3_v2-IORD_registerW_registerZ_signed10_simple
 	;;
-	iord $r39 = $r38r39.hi, -8589934592 	#Opcode-kv3_v2-IORD_registerW_registerZ_upper27_lower10_double
+	iord $r46r47.lo = $r44r45r46r47.z, -8589934592 	#Opcode-kv3_v2-IORD_registerW_registerZ_upper27_lower10_double
 	;;
-	iornd $r36r37r38r39.t = $r40, 2305843009213693951 	#Opcode-kv3_v2-IORND_registerW_registerZ_extend27_upper27_lower10_triple
+	iornd $r47 = $r46r47.hi, 2305843009213693951 	#Opcode-kv3_v2-IORND_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	iornd $r40r41.lo = $r40r41r42r43.x, $r41 	#Opcode-kv3_v2-IORND_registerW_registerZ_registerY_simple
+	iornd $r44r45r46r47.t = $r48, $r48r49.lo 	#Opcode-kv3_v2-IORND_registerW_registerZ_registerY_simple
 	;;
-	iornd $r40r41.hi = $r40r41r42r43.y, -64 	#Opcode-kv3_v2-IORND_registerW_registerZ_signed10_simple
+	iornd $r48r49r50r51.x = $r49, -64 	#Opcode-kv3_v2-IORND_registerW_registerZ_signed10_simple
 	;;
-	iornd $r42 = $r42r43.lo, -8589934592 	#Opcode-kv3_v2-IORND_registerW_registerZ_upper27_lower10_double
+	iornd $r48r49.hi = $r48r49r50r51.y, -8589934592 	#Opcode-kv3_v2-IORND_registerW_registerZ_upper27_lower10_double
 	;;
-	iornw $r40r41r42r43.z = $r43, $r42r43.hi 	#Opcode-kv3_v2-IORNW_registerW_registerZ_registerY_simple
+	iornw $r50 = $r50r51.lo, $r48r49r50r51.z 	#Opcode-kv3_v2-IORNW_registerW_registerZ_registerY_simple
 	;;
-	iornw $r40r41r42r43.t = $r44, -64 	#Opcode-kv3_v2-IORNW_registerW_registerZ_signed10_simple
+	iornw $r51 = $r50r51.hi, -64 	#Opcode-kv3_v2-IORNW_registerW_registerZ_signed10_simple
 	;;
-	iornw $r44r45.lo = $r44r45r46r47.x, -8589934592 	#Opcode-kv3_v2-IORNW_registerW_registerZ_upper27_lower10_double
+	iornw $r48r49r50r51.t = $r52, -8589934592 	#Opcode-kv3_v2-IORNW_registerW_registerZ_upper27_lower10_double
 	;;
-	iorrbod $r45 = $r44r45.hi 	#Opcode-kv3_v2-IORRBOD_registerW_registerZ_simple
+	iorrbod $r52r53.lo = $r52r53r54r55.x 	#Opcode-kv3_v2-IORRBOD_registerW_registerZ_simple
 	;;
-	iorrhqd $r44r45r46r47.y = $r46 	#Opcode-kv3_v2-IORRHQD_registerW_registerZ_simple
+	iorrhqd $r53 = $r52r53.hi 	#Opcode-kv3_v2-IORRHQD_registerW_registerZ_simple
 	;;
-	iorrwpd $r46r47.lo = $r44r45r46r47.z 	#Opcode-kv3_v2-IORRWPD_registerW_registerZ_simple
+	iorrwpd $r52r53r54r55.y = $r54 	#Opcode-kv3_v2-IORRWPD_registerW_registerZ_simple
 	;;
-	iorw $r47 = $r46r47.hi, $r44r45r46r47.t 	#Opcode-kv3_v2-IORW_registerW_registerZ_registerY_simple
+	iorw $r54r55.lo = $r52r53r54r55.z, $r55 	#Opcode-kv3_v2-IORW_registerW_registerZ_registerY_simple
 	;;
-	iorw $r48 = $r48r49.lo, -64 	#Opcode-kv3_v2-IORW_registerW_registerZ_signed10_simple
+	iorw $r54r55.hi = $r52r53r54r55.t, -64 	#Opcode-kv3_v2-IORW_registerW_registerZ_signed10_simple
 	;;
-	iorw $r48r49r50r51.x = $r49, -8589934592 	#Opcode-kv3_v2-IORW_registerW_registerZ_upper27_lower10_double
+	iorw $r56 = $r56r57.lo, -8589934592 	#Opcode-kv3_v2-IORW_registerW_registerZ_upper27_lower10_double
 	;;
-	landd $r48r49.hi = $r48r49r50r51.y, $r50 	#Opcode-kv3_v2-LANDD_registerW_registerZ_registerY_simple
+	landd $r56r57r58r59.x = $r57, $r56r57.hi 	#Opcode-kv3_v2-LANDD_registerW_registerZ_registerY_simple
 	;;
-	landw $r50r51.lo = $r48r49r50r51.z, $r51 	#Opcode-kv3_v2-LANDW_registerW_registerZ_registerY_simple
+	landw $r56r57r58r59.y = $r58, $r58r59.lo 	#Opcode-kv3_v2-LANDW_registerW_registerZ_registerY_simple
 	;;
-	landw $r50r51.hi = $r48r49r50r51.t, 536870911 	#Opcode-kv3_v2-LANDW_registerW_registerZ_upper27_lower5_double
+	landw $r56r57r58r59.z = $r59, 536870911 	#Opcode-kv3_v2-LANDW_registerW_registerZ_upper27_lower5_double
 	;;
-	lbs.xs $r52 = $r52r53.lo[$r52r53r54r55.x] 	#Opcode-kv3_v2-LBS_variant_doscale_registerW_registerY_registerZ_simple
+	lbs.xs $r58r59.hi = $r56r57r58r59.t[$r60] 	#Opcode-kv3_v2-LBS_variant_doscale_registerW_registerY_registerZ_simple
 	;;
-	lbs.s.dgtz $r53? $r52r53.hi = -1125899906842624[$r52r53r54r55.y] 	#Opcode-kv3_v2-LBS_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
+	lbs.s.dgtz $r60r61.lo? $r60r61r62r63.x = -1125899906842624[$r61] 	#Opcode-kv3_v2-LBS_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
 	;;
-	lbs.u.odd $r54? $r54r55.lo = -8388608[$r52r53r54r55.z] 	#Opcode-kv3_v2-LBS_variant_lsucond_registerY_registerW_offset27_registerZ_double
+	lbs.u.odd $r60r61.hi? $r60r61r62r63.y = -8388608[$r62] 	#Opcode-kv3_v2-LBS_variant_lsucond_registerY_registerW_offset27_registerZ_double
 	;;
-	lbs.us.even $r55? $r54r55.hi = [$r52r53r54r55.t] 	#Opcode-kv3_v2-LBS_variant_lsucond_registerY_registerW_registerZ_simple
+	lbs.us.even $r62r63.lo? $r60r61r62r63.z = [$r63] 	#Opcode-kv3_v2-LBS_variant_lsucond_registerY_registerW_registerZ_simple
 	;;
-	lbs $r56 = 2305843009213693951[$r56r57.lo] 	#Opcode-kv3_v2-LBS_variant_registerW_extend27_upper27_lower10_registerZ_triple
+	lbs $r62r63.hi = 2305843009213693951[$r60r61r62r63.t] 	#Opcode-kv3_v2-LBS_variant_registerW_extend27_upper27_lower10_registerZ_triple
 	;;
-	lbs.s $r56r57r58r59.x = -64[$r57] 	#Opcode-kv3_v2-LBS_variant_registerW_signed10_registerZ_simple
+	lbs.s $r0 = -64[$r0r1.lo] 	#Opcode-kv3_v2-LBS_variant_registerW_signed10_registerZ_simple
 	;;
-	lbs.u $r56r57.hi = -8589934592[$r56r57r58r59.y] 	#Opcode-kv3_v2-LBS_variant_registerW_upper27_lower10_registerZ_double
+	lbs.u $r0r1r2r3.x = -8589934592[$r1] 	#Opcode-kv3_v2-LBS_variant_registerW_upper27_lower10_registerZ_double
 	;;
-	lbz.us $r58 = $r58r59.lo[$r56r57r58r59.z] 	#Opcode-kv3_v2-LBZ_variant_doscale_registerW_registerY_registerZ_simple
+	lbz.us $r0r1.hi = $r0r1r2r3.y[$r2] 	#Opcode-kv3_v2-LBZ_variant_doscale_registerW_registerY_registerZ_simple
 	;;
-	lbz.wnez $r59? $r58r59.hi = -1125899906842624[$r56r57r58r59.t] 	#Opcode-kv3_v2-LBZ_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
+	lbz.wnez $r2r3.lo? $r0r1r2r3.z = -1125899906842624[$r3] 	#Opcode-kv3_v2-LBZ_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
 	;;
-	lbz.s.weqz $r60? $r60r61.lo = -8388608[$r60r61r62r63.x] 	#Opcode-kv3_v2-LBZ_variant_lsucond_registerY_registerW_offset27_registerZ_double
+	lbz.s.weqz $r2r3.hi? $r0r1r2r3.t = -8388608[$r4] 	#Opcode-kv3_v2-LBZ_variant_lsucond_registerY_registerW_offset27_registerZ_double
 	;;
-	lbz.u.wltz $r61? $r60r61.hi = [$r60r61r62r63.y] 	#Opcode-kv3_v2-LBZ_variant_lsucond_registerY_registerW_registerZ_simple
+	lbz.u.wltz $r4r5.lo? $r4r5r6r7.x = [$r5] 	#Opcode-kv3_v2-LBZ_variant_lsucond_registerY_registerW_registerZ_simple
 	;;
-	lbz.us $r62 = 2305843009213693951[$r62r63.lo] 	#Opcode-kv3_v2-LBZ_variant_registerW_extend27_upper27_lower10_registerZ_triple
+	lbz.us $r4r5.hi = 2305843009213693951[$r4r5r6r7.y] 	#Opcode-kv3_v2-LBZ_variant_registerW_extend27_upper27_lower10_registerZ_triple
 	;;
-	lbz $r60r61r62r63.z = -64[$r63] 	#Opcode-kv3_v2-LBZ_variant_registerW_signed10_registerZ_simple
+	lbz $r6 = -64[$r6r7.lo] 	#Opcode-kv3_v2-LBZ_variant_registerW_signed10_registerZ_simple
 	;;
-	lbz.s $r62r63.hi = -8589934592[$r60r61r62r63.t] 	#Opcode-kv3_v2-LBZ_variant_registerW_upper27_lower10_registerZ_double
+	lbz.s $r4r5r6r7.z = -8589934592[$r7] 	#Opcode-kv3_v2-LBZ_variant_registerW_upper27_lower10_registerZ_double
 	;;
-	ld.u.xs $r0 = $r0r1.lo[$r0r1r2r3.x] 	#Opcode-kv3_v2-LD_variant_doscale_registerW_registerY_registerZ_simple
+	ld.u.xs $r6r7.hi = $r4r5r6r7.t[$r8] 	#Opcode-kv3_v2-LD_variant_doscale_registerW_registerY_registerZ_simple
 	;;
-	ld.us.wgez $r1? $r0r1.hi = -1125899906842624[$r0r1r2r3.y] 	#Opcode-kv3_v2-LD_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
+	ld.us.wgez $r8r9.lo? $r8r9r10r11.x = -1125899906842624[$r9] 	#Opcode-kv3_v2-LD_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
 	;;
-	ld.wlez $r2? $r2r3.lo = -8388608[$r0r1r2r3.z] 	#Opcode-kv3_v2-LD_variant_lsucond_registerY_registerW_offset27_registerZ_double
+	ld.wlez $r8r9.hi? $r8r9r10r11.y = -8388608[$r10] 	#Opcode-kv3_v2-LD_variant_lsucond_registerY_registerW_offset27_registerZ_double
 	;;
-	ld.s.wgtz $r3? $r2r3.hi = [$r0r1r2r3.t] 	#Opcode-kv3_v2-LD_variant_lsucond_registerY_registerW_registerZ_simple
+	ld.s.wgtz $r10r11.lo? $r8r9r10r11.z = [$r11] 	#Opcode-kv3_v2-LD_variant_lsucond_registerY_registerW_registerZ_simple
 	;;
-	ld.u $r4 = 2305843009213693951[$r4r5.lo] 	#Opcode-kv3_v2-LD_variant_registerW_extend27_upper27_lower10_registerZ_triple
+	ld.u $r10r11.hi = 2305843009213693951[$r8r9r10r11.t] 	#Opcode-kv3_v2-LD_variant_registerW_extend27_upper27_lower10_registerZ_triple
 	;;
-	ld.us $r4r5r6r7.x = -64[$r5] 	#Opcode-kv3_v2-LD_variant_registerW_signed10_registerZ_simple
+	ld.us $r12 = -64[$sp] 	#Opcode-kv3_v2-LD_variant_registerW_signed10_registerZ_simple
 	;;
-	ld $r4r5.hi = -8589934592[$r4r5r6r7.y] 	#Opcode-kv3_v2-LD_variant_registerW_upper27_lower10_registerZ_double
+	ld $r13 = -8589934592[$tp] 	#Opcode-kv3_v2-LD_variant_registerW_upper27_lower10_registerZ_double
 	;;
-	lhs.s $r6 = $r6r7.lo[$r4r5r6r7.z] 	#Opcode-kv3_v2-LHS_variant_doscale_registerW_registerY_registerZ_simple
+	lhs.s $r14 = $fp[$r15] 	#Opcode-kv3_v2-LHS_variant_doscale_registerW_registerY_registerZ_simple
 	;;
-	lhs.u.dnez $r7? $r6r7.hi = -1125899906842624[$r4r5r6r7.t] 	#Opcode-kv3_v2-LHS_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
+	lhs.u.dnez $rp? $r16 = -1125899906842624[$r16r17.lo] 	#Opcode-kv3_v2-LHS_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
 	;;
-	lhs.us.deqz $r8? $r8r9.lo = -8388608[$r8r9r10r11.x] 	#Opcode-kv3_v2-LHS_variant_lsucond_registerY_registerW_offset27_registerZ_double
+	lhs.us.deqz $r16r17r18r19.x? $r17 = -8388608[$r16r17.hi] 	#Opcode-kv3_v2-LHS_variant_lsucond_registerY_registerW_offset27_registerZ_double
 	;;
-	lhs.dltz $r9? $r8r9.hi = [$r8r9r10r11.y] 	#Opcode-kv3_v2-LHS_variant_lsucond_registerY_registerW_registerZ_simple
+	lhs.dltz $r16r17r18r19.y? $r18 = [$r18r19.lo] 	#Opcode-kv3_v2-LHS_variant_lsucond_registerY_registerW_registerZ_simple
 	;;
-	lhs.s $r10 = 2305843009213693951[$r10r11.lo] 	#Opcode-kv3_v2-LHS_variant_registerW_extend27_upper27_lower10_registerZ_triple
+	lhs.s $r16r17r18r19.z = 2305843009213693951[$r19] 	#Opcode-kv3_v2-LHS_variant_registerW_extend27_upper27_lower10_registerZ_triple
 	;;
-	lhs.u $r8r9r10r11.z = -64[$r11] 	#Opcode-kv3_v2-LHS_variant_registerW_signed10_registerZ_simple
+	lhs.u $r18r19.hi = -64[$r16r17r18r19.t] 	#Opcode-kv3_v2-LHS_variant_registerW_signed10_registerZ_simple
 	;;
-	lhs.us $r10r11.hi = -8589934592[$r8r9r10r11.t] 	#Opcode-kv3_v2-LHS_variant_registerW_upper27_lower10_registerZ_double
+	lhs.us $r20 = -8589934592[$r20r21.lo] 	#Opcode-kv3_v2-LHS_variant_registerW_upper27_lower10_registerZ_double
 	;;
-	lhz.xs $r12 = $sp[$r13] 	#Opcode-kv3_v2-LHZ_variant_doscale_registerW_registerY_registerZ_simple
+	lhz.xs $r20r21r22r23.x = $r21[$r20r21.hi] 	#Opcode-kv3_v2-LHZ_variant_doscale_registerW_registerY_registerZ_simple
 	;;
-	lhz.s.dgez $tp? $r14 = -1125899906842624[$fp] 	#Opcode-kv3_v2-LHZ_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
+	lhz.s.dgez $r20r21r22r23.y? $r22 = -1125899906842624[$r22r23.lo] 	#Opcode-kv3_v2-LHZ_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
 	;;
-	lhz.u.dlez $r15? $rp = -8388608[$r16] 	#Opcode-kv3_v2-LHZ_variant_lsucond_registerY_registerW_offset27_registerZ_double
+	lhz.u.dlez $r20r21r22r23.z? $r23 = -8388608[$r22r23.hi] 	#Opcode-kv3_v2-LHZ_variant_lsucond_registerY_registerW_offset27_registerZ_double
 	;;
-	lhz.us.dgtz $r16r17.lo? $r16r17r18r19.x = [$r17] 	#Opcode-kv3_v2-LHZ_variant_lsucond_registerY_registerW_registerZ_simple
+	lhz.us.dgtz $r20r21r22r23.t? $r24 = [$r24r25.lo] 	#Opcode-kv3_v2-LHZ_variant_lsucond_registerY_registerW_registerZ_simple
 	;;
-	lhz $r16r17.hi = 2305843009213693951[$r16r17r18r19.y] 	#Opcode-kv3_v2-LHZ_variant_registerW_extend27_upper27_lower10_registerZ_triple
+	lhz $r24r25r26r27.x = 2305843009213693951[$r25] 	#Opcode-kv3_v2-LHZ_variant_registerW_extend27_upper27_lower10_registerZ_triple
 	;;
-	lhz.s $r18 = -64[$r18r19.lo] 	#Opcode-kv3_v2-LHZ_variant_registerW_signed10_registerZ_simple
+	lhz.s $r24r25.hi = -64[$r24r25r26r27.y] 	#Opcode-kv3_v2-LHZ_variant_registerW_signed10_registerZ_simple
 	;;
-	lhz.u $r16r17r18r19.z = -8589934592[$r19] 	#Opcode-kv3_v2-LHZ_variant_registerW_upper27_lower10_registerZ_double
+	lhz.u $r26 = -8589934592[$r26r27.lo] 	#Opcode-kv3_v2-LHZ_variant_registerW_upper27_lower10_registerZ_double
 	;;
-	liord $r18r19.hi = $r16r17r18r19.t, $r20 	#Opcode-kv3_v2-LIORD_registerW_registerZ_registerY_simple
+	liord $r24r25r26r27.z = $r27, $r26r27.hi 	#Opcode-kv3_v2-LIORD_registerW_registerZ_registerY_simple
 	;;
-	liorw $r20r21.lo = $r20r21r22r23.x, $r21 	#Opcode-kv3_v2-LIORW_registerW_registerZ_registerY_simple
+	liorw $r24r25r26r27.t = $r28, $r28r29.lo 	#Opcode-kv3_v2-LIORW_registerW_registerZ_registerY_simple
 	;;
-	liorw $r20r21.hi = $r20r21r22r23.y, 536870911 	#Opcode-kv3_v2-LIORW_registerW_registerZ_upper27_lower5_double
+	liorw $r28r29r30r31.x = $r29, 536870911 	#Opcode-kv3_v2-LIORW_registerW_registerZ_upper27_lower5_double
 	;;
-	lnandd $r22 = $r22r23.lo, $r20r21r22r23.z 	#Opcode-kv3_v2-LNANDD_registerW_registerZ_registerY_simple
+	lnandd $r28r29.hi = $r28r29r30r31.y, $r30 	#Opcode-kv3_v2-LNANDD_registerW_registerZ_registerY_simple
 	;;
-	lnandw $r23 = $r22r23.hi, $r20r21r22r23.t 	#Opcode-kv3_v2-LNANDW_registerW_registerZ_registerY_simple
+	lnandw $r30r31.lo = $r28r29r30r31.z, $r31 	#Opcode-kv3_v2-LNANDW_registerW_registerZ_registerY_simple
 	;;
-	lnandw $r24 = $r24r25.lo, 536870911 	#Opcode-kv3_v2-LNANDW_registerW_registerZ_upper27_lower5_double
+	lnandw $r30r31.hi = $r28r29r30r31.t, 536870911 	#Opcode-kv3_v2-LNANDW_registerW_registerZ_upper27_lower5_double
 	;;
-	lniord $r24r25r26r27.x = $r25, $r24r25.hi 	#Opcode-kv3_v2-LNIORD_registerW_registerZ_registerY_simple
+	lniord $r32 = $r32r33.lo, $r32r33r34r35.x 	#Opcode-kv3_v2-LNIORD_registerW_registerZ_registerY_simple
 	;;
-	lniorw $r24r25r26r27.y = $r26, $r26r27.lo 	#Opcode-kv3_v2-LNIORW_registerW_registerZ_registerY_simple
+	lniorw $r33 = $r32r33.hi, $r32r33r34r35.y 	#Opcode-kv3_v2-LNIORW_registerW_registerZ_registerY_simple
 	;;
-	lniorw $r24r25r26r27.z = $r27, 536870911 	#Opcode-kv3_v2-LNIORW_registerW_registerZ_upper27_lower5_double
+	lniorw $r34 = $r34r35.lo, 536870911 	#Opcode-kv3_v2-LNIORW_registerW_registerZ_upper27_lower5_double
 	;;
-	lnord $r26r27.hi = $r24r25r26r27.t, $r28 	#Opcode-kv3_v2-LNORD_registerW_registerZ_registerY_simple
+	lnord $r32r33r34r35.z = $r35, $r34r35.hi 	#Opcode-kv3_v2-LNORD_registerW_registerZ_registerY_simple
 	;;
-	lnorw $r28r29.lo = $r28r29r30r31.x, $r29 	#Opcode-kv3_v2-LNORW_registerW_registerZ_registerY_simple
+	lnorw $r32r33r34r35.t = $r36, $r36r37.lo 	#Opcode-kv3_v2-LNORW_registerW_registerZ_registerY_simple
 	;;
-	lnorw $r28r29.hi = $r28r29r30r31.y, 536870911 	#Opcode-kv3_v2-LNORW_registerW_registerZ_upper27_lower5_double
+	lnorw $r36r37r38r39.x = $r37, 536870911 	#Opcode-kv3_v2-LNORW_registerW_registerZ_upper27_lower5_double
 	;;
-	loopdo $r30, -32768 	#Opcode-kv3_v2-LOOPDO_registerZ_pcrel17_simple
+	loopdo $r36r37.hi, -32768 	#Opcode-kv3_v2-LOOPDO_registerZ_pcrel17_simple
 	;;
-	lord $r30r31.lo = $r28r29r30r31.z, $r31 	#Opcode-kv3_v2-LORD_registerW_registerZ_registerY_simple
+	lord $r36r37r38r39.y = $r38, $r38r39.lo 	#Opcode-kv3_v2-LORD_registerW_registerZ_registerY_simple
 	;;
-	lorw $r30r31.hi = $r28r29r30r31.t, $r32 	#Opcode-kv3_v2-LORW_registerW_registerZ_registerY_simple
+	lorw $r36r37r38r39.z = $r39, $r38r39.hi 	#Opcode-kv3_v2-LORW_registerW_registerZ_registerY_simple
 	;;
-	lorw $r32r33.lo = $r32r33r34r35.x, 536870911 	#Opcode-kv3_v2-LORW_registerW_registerZ_upper27_lower5_double
+	lorw $r36r37r38r39.t = $r40, 536870911 	#Opcode-kv3_v2-LORW_registerW_registerZ_upper27_lower5_double
 	;;
-	lo.us $r4r5r6r7 = $r33[$r32r33.hi] 	#Opcode-kv3_v2-LO_variant_doscale_registerN_registerY_registerZ_simple
+	lo.us $r4r5r6r7 = $r40r41.lo[$r40r41r42r43.x] 	#Opcode-kv3_v2-LO_variant_doscale_registerN_registerY_registerZ_simple
 	;;
-	lo.u0 $r32r33r34r35.y? $r8r9r10r11 = -1125899906842624[$r34] 	#Opcode-kv3_v2-LO_variant_lsomask_registerY_registerN_extend27_offset27_registerZ_triple
+	lo.u0 $r41? $r8r9r10r11 = -1125899906842624[$r40r41.hi] 	#Opcode-kv3_v2-LO_variant_lsomask_registerY_registerN_extend27_offset27_registerZ_triple
 	;;
-	lo.s.u1 $r34r35.lo? $r12r13r14r15 = -8388608[$r32r33r34r35.z] 	#Opcode-kv3_v2-LO_variant_lsomask_registerY_registerN_offset27_registerZ_double
+	lo.s.u1 $r40r41r42r43.y? $r12r13r14r15 = -8388608[$r42] 	#Opcode-kv3_v2-LO_variant_lsomask_registerY_registerN_offset27_registerZ_double
 	;;
-	lo.u.u2 $r35? $r16r17r18r19 = [$r34r35.hi] 	#Opcode-kv3_v2-LO_variant_lsomask_registerY_registerN_registerZ_simple
+	lo.u.u2 $r42r43.lo? $r16r17r18r19 = [$r40r41r42r43.z] 	#Opcode-kv3_v2-LO_variant_lsomask_registerY_registerN_registerZ_simple
 	;;
-	lo.us.odd $r32r33r34r35.t? $r20r21r22r23 = -1125899906842624[$r36] 	#Opcode-kv3_v2-LO_variant_lsucond_registerY_registerN_extend27_offset27_registerZ_triple
+	lo.us.odd $r43? $r20r21r22r23 = -1125899906842624[$r42r43.hi] 	#Opcode-kv3_v2-LO_variant_lsucond_registerY_registerN_extend27_offset27_registerZ_triple
 	;;
-	lo.even $r36r37.lo? $r24r25r26r27 = -8388608[$r36r37r38r39.x] 	#Opcode-kv3_v2-LO_variant_lsucond_registerY_registerN_offset27_registerZ_double
+	lo.even $r40r41r42r43.t? $r24r25r26r27 = -8388608[$r44] 	#Opcode-kv3_v2-LO_variant_lsucond_registerY_registerN_offset27_registerZ_double
 	;;
-	lo.s.wnez $r37? $r28r29r30r31 = [$r36r37.hi] 	#Opcode-kv3_v2-LO_variant_lsucond_registerY_registerN_registerZ_simple
+	lo.s.wnez $r44r45.lo? $r28r29r30r31 = [$r44r45r46r47.x] 	#Opcode-kv3_v2-LO_variant_lsucond_registerY_registerN_registerZ_simple
 	;;
-	lo.u $r32r33r34r35 = 2305843009213693951[$r36r37r38r39.y] 	#Opcode-kv3_v2-LO_variant_registerN_extend27_upper27_lower10_registerZ_triple
+	lo.u $r32r33r34r35 = 2305843009213693951[$r45] 	#Opcode-kv3_v2-LO_variant_registerN_extend27_upper27_lower10_registerZ_triple
 	;;
-	lo.us $r36r37r38r39 = -64[$r38] 	#Opcode-kv3_v2-LO_variant_registerN_signed10_registerZ_simple
+	lo.us $r36r37r38r39 = -64[$r44r45.hi] 	#Opcode-kv3_v2-LO_variant_registerN_signed10_registerZ_simple
 	;;
-	lo $r40r41r42r43 = -8589934592[$r38r39.lo] 	#Opcode-kv3_v2-LO_variant_registerN_upper27_lower10_registerZ_double
+	lo $r40r41r42r43 = -8589934592[$r44r45r46r47.y] 	#Opcode-kv3_v2-LO_variant_registerN_upper27_lower10_registerZ_double
 	;;
-	lq.s.xs $r18r19 = $r36r37r38r39.z[$r39] 	#Opcode-kv3_v2-LQ_variant_doscale_registerM_registerY_registerZ_simple
+	lq.s.xs $r18r19 = $r46[$r46r47.lo] 	#Opcode-kv3_v2-LQ_variant_doscale_registerM_registerY_registerZ_simple
 	;;
-	lq.u.weqz $r38r39.hi? $r16r17r18r19.hi = -1125899906842624[$r36r37r38r39.t] 	#Opcode-kv3_v2-LQ_variant_lsucond_registerY_registerM_extend27_offset27_registerZ_triple
+	lq.u.weqz $r44r45r46r47.z? $r16r17r18r19.hi = -1125899906842624[$r47] 	#Opcode-kv3_v2-LQ_variant_lsucond_registerY_registerM_extend27_offset27_registerZ_triple
 	;;
-	lq.us.wltz $r40? $r20r21 = -8388608[$r40r41.lo] 	#Opcode-kv3_v2-LQ_variant_lsucond_registerY_registerM_offset27_registerZ_double
+	lq.us.wltz $r46r47.hi? $r20r21 = -8388608[$r44r45r46r47.t] 	#Opcode-kv3_v2-LQ_variant_lsucond_registerY_registerM_offset27_registerZ_double
 	;;
-	lq.wgez $r40r41r42r43.x? $r20r21r22r23.lo = [$r41] 	#Opcode-kv3_v2-LQ_variant_lsucond_registerY_registerM_registerZ_simple
+	lq.wgez $r48? $r20r21r22r23.lo = [$r48r49.lo] 	#Opcode-kv3_v2-LQ_variant_lsucond_registerY_registerM_registerZ_simple
 	;;
-	lq.s $r22r23 = 2305843009213693951[$r40r41.hi] 	#Opcode-kv3_v2-LQ_variant_registerM_extend27_upper27_lower10_registerZ_triple
+	lq.s $r22r23 = 2305843009213693951[$r48r49r50r51.x] 	#Opcode-kv3_v2-LQ_variant_registerM_extend27_upper27_lower10_registerZ_triple
 	;;
-	lq.u $r20r21r22r23.hi = -64[$r40r41r42r43.y] 	#Opcode-kv3_v2-LQ_variant_registerM_signed10_registerZ_simple
+	lq.u $r20r21r22r23.hi = -64[$r49] 	#Opcode-kv3_v2-LQ_variant_registerM_signed10_registerZ_simple
 	;;
-	lq.us $r24r25 = -8589934592[$r42] 	#Opcode-kv3_v2-LQ_variant_registerM_upper27_lower10_registerZ_double
+	lq.us $r24r25 = -8589934592[$r48r49.hi] 	#Opcode-kv3_v2-LQ_variant_registerM_upper27_lower10_registerZ_double
 	;;
-	lws $r42r43.lo = $r40r41r42r43.z[$r43] 	#Opcode-kv3_v2-LWS_variant_doscale_registerW_registerY_registerZ_simple
+	lws $r48r49r50r51.y = $r50[$r50r51.lo] 	#Opcode-kv3_v2-LWS_variant_doscale_registerW_registerY_registerZ_simple
 	;;
-	lws.s.wlez $r42r43.hi? $r40r41r42r43.t = -1125899906842624[$r44] 	#Opcode-kv3_v2-LWS_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
+	lws.s.wlez $r48r49r50r51.z? $r51 = -1125899906842624[$r50r51.hi] 	#Opcode-kv3_v2-LWS_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
 	;;
-	lws.u.wgtz $r44r45.lo? $r44r45r46r47.x = -8388608[$r45] 	#Opcode-kv3_v2-LWS_variant_lsucond_registerY_registerW_offset27_registerZ_double
+	lws.u.wgtz $r48r49r50r51.t? $r52 = -8388608[$r52r53.lo] 	#Opcode-kv3_v2-LWS_variant_lsucond_registerY_registerW_offset27_registerZ_double
 	;;
-	lws.us.dnez $r44r45.hi? $r44r45r46r47.y = [$r46] 	#Opcode-kv3_v2-LWS_variant_lsucond_registerY_registerW_registerZ_simple
+	lws.us.dnez $r52r53r54r55.x? $r53 = [$r52r53.hi] 	#Opcode-kv3_v2-LWS_variant_lsucond_registerY_registerW_registerZ_simple
 	;;
-	lws $r46r47.lo = 2305843009213693951[$r44r45r46r47.z] 	#Opcode-kv3_v2-LWS_variant_registerW_extend27_upper27_lower10_registerZ_triple
+	lws $r52r53r54r55.y = 2305843009213693951[$r54] 	#Opcode-kv3_v2-LWS_variant_registerW_extend27_upper27_lower10_registerZ_triple
 	;;
-	lws.s $r47 = -64[$r46r47.hi] 	#Opcode-kv3_v2-LWS_variant_registerW_signed10_registerZ_simple
+	lws.s $r54r55.lo = -64[$r52r53r54r55.z] 	#Opcode-kv3_v2-LWS_variant_registerW_signed10_registerZ_simple
 	;;
-	lws.u $r44r45r46r47.t = -8589934592[$r48] 	#Opcode-kv3_v2-LWS_variant_registerW_upper27_lower10_registerZ_double
+	lws.u $r55 = -8589934592[$r54r55.hi] 	#Opcode-kv3_v2-LWS_variant_registerW_upper27_lower10_registerZ_double
 	;;
-	lwz.us.xs $r48r49.lo = $r48r49r50r51.x[$r49] 	#Opcode-kv3_v2-LWZ_variant_doscale_registerW_registerY_registerZ_simple
+	lwz.us.xs $r52r53r54r55.t = $r56[$r56r57.lo] 	#Opcode-kv3_v2-LWZ_variant_doscale_registerW_registerY_registerZ_simple
 	;;
-	lwz.deqz $r48r49.hi? $r48r49r50r51.y = -1125899906842624[$r50] 	#Opcode-kv3_v2-LWZ_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
+	lwz.deqz $r56r57r58r59.x? $r57 = -1125899906842624[$r56r57.hi] 	#Opcode-kv3_v2-LWZ_variant_lsucond_registerY_registerW_extend27_offset27_registerZ_triple
 	;;
-	lwz.s.dltz $r50r51.lo? $r48r49r50r51.z = -8388608[$r51] 	#Opcode-kv3_v2-LWZ_variant_lsucond_registerY_registerW_offset27_registerZ_double
+	lwz.s.dltz $r56r57r58r59.y? $r58 = -8388608[$r58r59.lo] 	#Opcode-kv3_v2-LWZ_variant_lsucond_registerY_registerW_offset27_registerZ_double
 	;;
-	lwz.u.dgez $r50r51.hi? $r48r49r50r51.t = [$r52] 	#Opcode-kv3_v2-LWZ_variant_lsucond_registerY_registerW_registerZ_simple
+	lwz.u.dgez $r56r57r58r59.z? $r59 = [$r58r59.hi] 	#Opcode-kv3_v2-LWZ_variant_lsucond_registerY_registerW_registerZ_simple
 	;;
-	lwz.us $r52r53.lo = 2305843009213693951[$r52r53r54r55.x] 	#Opcode-kv3_v2-LWZ_variant_registerW_extend27_upper27_lower10_registerZ_triple
+	lwz.us $r56r57r58r59.t = 2305843009213693951[$r60] 	#Opcode-kv3_v2-LWZ_variant_registerW_extend27_upper27_lower10_registerZ_triple
 	;;
-	lwz $r53 = -64[$r52r53.hi] 	#Opcode-kv3_v2-LWZ_variant_registerW_signed10_registerZ_simple
+	lwz $r60r61.lo = -64[$r60r61r62r63.x] 	#Opcode-kv3_v2-LWZ_variant_registerW_signed10_registerZ_simple
 	;;
-	lwz.s $r52r53r54r55.y = -8589934592[$r54] 	#Opcode-kv3_v2-LWZ_variant_registerW_upper27_lower10_registerZ_double
+	lwz.s $r61 = -8589934592[$r60r61.hi] 	#Opcode-kv3_v2-LWZ_variant_registerW_upper27_lower10_registerZ_double
 	;;
-	madddt $r24r25r26r27.lo = $r54r55.lo, $r52r53r54r55.z 	#Opcode-kv3_v2-MADDDT_registerM_registerZ_registerY_simple
+	madddt $r24r25r26r27.lo = $r60r61r62r63.y, $r62 	#Opcode-kv3_v2-MADDDT_registerM_registerZ_registerY_simple
 	;;
-	maddd $r55 = $r54r55.hi, $r52r53r54r55.t 	#Opcode-kv3_v2-MADDD_registerW_registerZ_registerY_simple
+	maddd $r62r63.lo = $r60r61r62r63.z, $r63 	#Opcode-kv3_v2-MADDD_registerW_registerZ_registerY_simple
 	;;
-	maddd $r56 = $r56r57.lo, 536870911 	#Opcode-kv3_v2-MADDD_registerW_registerZ_upper27_lower5_splat32_double
+	maddd $r62r63.hi = $r60r61r62r63.t, 536870911 	#Opcode-kv3_v2-MADDD_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	maddhq $r56r57r58r59.x = $r57, $r56r57.hi 	#Opcode-kv3_v2-MADDHQ_registerW_registerZ_registerY_simple
+	maddhq $r0 = $r0r1.lo, $r0r1r2r3.x 	#Opcode-kv3_v2-MADDHQ_registerW_registerZ_registerY_simple
 	;;
-	maddhq $r56r57r58r59.y = $r58, 536870911.@ 	#Opcode-kv3_v2-MADDHQ_registerW_registerZ_upper27_lower5_splat32_double
+	maddhq $r1 = $r0r1.hi, 536870911.@ 	#Opcode-kv3_v2-MADDHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	maddhwq $r26r27 = $r58r59.lo, $r56r57r58r59.z 	#Opcode-kv3_v2-MADDHWQ_registerM_registerZ_registerY_simple
+	maddhwq $r26r27 = $r0r1r2r3.y, $r2 	#Opcode-kv3_v2-MADDHWQ_registerM_registerZ_registerY_simple
 	;;
 	maddmwq $r24r25r26r27.hi = $r28r29, $r28r29r30r31.lo 	#Opcode-kv3_v2-MADDMWQ_registerM_registerP_registerO_simple
 	;;
-	maddsudt $r30r31 = $r59, $r58r59.hi 	#Opcode-kv3_v2-MADDSUDT_registerM_registerZ_registerY_simple
+	maddsudt $r30r31 = $r2r3.lo, $r0r1r2r3.z 	#Opcode-kv3_v2-MADDSUDT_registerM_registerZ_registerY_simple
 	;;
-	maddsuhwq $r28r29r30r31.hi = $r56r57r58r59.t, $r60 	#Opcode-kv3_v2-MADDSUHWQ_registerM_registerZ_registerY_simple
+	maddsuhwq $r28r29r30r31.hi = $r3, $r2r3.hi 	#Opcode-kv3_v2-MADDSUHWQ_registerM_registerZ_registerY_simple
 	;;
 	maddsumwq $r32r33 = $r32r33r34r35.lo, $r34r35 	#Opcode-kv3_v2-MADDSUMWQ_registerM_registerP_registerO_simple
 	;;
-	maddsuwdp $r32r33r34r35.hi = $r60r61.lo, $r60r61r62r63.x 	#Opcode-kv3_v2-MADDSUWDP_registerM_registerZ_registerY_simple
+	maddsuwdp $r32r33r34r35.hi = $r0r1r2r3.t, $r4 	#Opcode-kv3_v2-MADDSUWDP_registerM_registerZ_registerY_simple
 	;;
-	maddsuwdp $r36r37 = $r61, 536870911 	#Opcode-kv3_v2-MADDSUWDP_registerM_registerZ_upper27_lower5_splat32_double
+	maddsuwdp $r36r37 = $r4r5.lo, 536870911 	#Opcode-kv3_v2-MADDSUWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	maddsuwd $r60r61.hi = $r60r61r62r63.y, $r62 	#Opcode-kv3_v2-MADDSUWD_registerW_registerZ_registerY_simple
+	maddsuwd $r4r5r6r7.x = $r5, $r4r5.hi 	#Opcode-kv3_v2-MADDSUWD_registerW_registerZ_registerY_simple
 	;;
-	maddsuwd $r62r63.lo = $r60r61r62r63.z, 536870911 	#Opcode-kv3_v2-MADDSUWD_registerW_registerZ_upper27_lower5_double
+	maddsuwd $r4r5r6r7.y = $r6, 536870911 	#Opcode-kv3_v2-MADDSUWD_registerW_registerZ_upper27_lower5_double
 	;;
-	maddudt $r36r37r38r39.lo = $r63, $r62r63.hi 	#Opcode-kv3_v2-MADDUDT_registerM_registerZ_registerY_simple
+	maddudt $r36r37r38r39.lo = $r6r7.lo, $r4r5r6r7.z 	#Opcode-kv3_v2-MADDUDT_registerM_registerZ_registerY_simple
 	;;
-	madduhwq $r38r39 = $r60r61r62r63.t, $r0 	#Opcode-kv3_v2-MADDUHWQ_registerM_registerZ_registerY_simple
+	madduhwq $r38r39 = $r7, $r6r7.hi 	#Opcode-kv3_v2-MADDUHWQ_registerM_registerZ_registerY_simple
 	;;
 	maddumwq $r36r37r38r39.hi = $r40r41, $r40r41r42r43.lo 	#Opcode-kv3_v2-MADDUMWQ_registerM_registerP_registerO_simple
 	;;
-	madduwdp $r42r43 = $r0r1.lo, $r0r1r2r3.x 	#Opcode-kv3_v2-MADDUWDP_registerM_registerZ_registerY_simple
+	madduwdp $r42r43 = $r4r5r6r7.t, $r8 	#Opcode-kv3_v2-MADDUWDP_registerM_registerZ_registerY_simple
 	;;
-	madduwdp $r40r41r42r43.hi = $r1, 536870911.@ 	#Opcode-kv3_v2-MADDUWDP_registerM_registerZ_upper27_lower5_splat32_double
+	madduwdp $r40r41r42r43.hi = $r8r9.lo, 536870911.@ 	#Opcode-kv3_v2-MADDUWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	madduwd $r0r1.hi = $r0r1r2r3.y, $r2 	#Opcode-kv3_v2-MADDUWD_registerW_registerZ_registerY_simple
+	madduwd $r8r9r10r11.x = $r9, $r8r9.hi 	#Opcode-kv3_v2-MADDUWD_registerW_registerZ_registerY_simple
 	;;
-	madduwd $r2r3.lo = $r0r1r2r3.z, 536870911 	#Opcode-kv3_v2-MADDUWD_registerW_registerZ_upper27_lower5_double
+	madduwd $r8r9r10r11.y = $r10, 536870911 	#Opcode-kv3_v2-MADDUWD_registerW_registerZ_upper27_lower5_double
 	;;
-	madduzdt $r44r45 = $r3, $r2r3.hi 	#Opcode-kv3_v2-MADDUZDT_registerM_registerZ_registerY_simple
+	madduzdt $r44r45 = $r10r11.lo, $r8r9r10r11.z 	#Opcode-kv3_v2-MADDUZDT_registerM_registerZ_registerY_simple
 	;;
-	maddwdp $r44r45r46r47.lo = $r0r1r2r3.t, $r4 	#Opcode-kv3_v2-MADDWDP_registerM_registerZ_registerY_simple
+	maddwdp $r44r45r46r47.lo = $r11, $r10r11.hi 	#Opcode-kv3_v2-MADDWDP_registerM_registerZ_registerY_simple
 	;;
-	maddwdp $r46r47 = $r4r5.lo, 536870911 	#Opcode-kv3_v2-MADDWDP_registerM_registerZ_upper27_lower5_splat32_double
+	maddwdp $r46r47 = $r8r9r10r11.t, 536870911 	#Opcode-kv3_v2-MADDWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	maddwd $r4r5r6r7.x = $r5, $r4r5.hi 	#Opcode-kv3_v2-MADDWD_registerW_registerZ_registerY_simple
+	maddwd $r12 = $sp, $r13 	#Opcode-kv3_v2-MADDWD_registerW_registerZ_registerY_simple
 	;;
-	maddwd $r4r5r6r7.y = $r6, 536870911 	#Opcode-kv3_v2-MADDWD_registerW_registerZ_upper27_lower5_double
+	maddwd $tp = $r14, 536870911 	#Opcode-kv3_v2-MADDWD_registerW_registerZ_upper27_lower5_double
 	;;
-	maddwp $r6r7.lo = $r4r5r6r7.z, $r7 	#Opcode-kv3_v2-MADDWP_registerW_registerZ_registerY_simple
+	maddwp $fp = $r15, $rp 	#Opcode-kv3_v2-MADDWP_registerW_registerZ_registerY_simple
 	;;
-	maddwp $r6r7.hi = $r4r5r6r7.t, 536870911.@ 	#Opcode-kv3_v2-MADDWP_registerW_registerZ_upper27_lower5_splat32_double
+	maddwp $r16 = $r16r17.lo, 536870911.@ 	#Opcode-kv3_v2-MADDWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
 	maddwq $r44r45r46r47.hi = $r48r49, $r48r49r50r51.lo 	#Opcode-kv3_v2-MADDWQ_registerM_registerP_registerO_simple
 	;;
-	maddw $r8 = $r8r9.lo, $r8r9r10r11.x 	#Opcode-kv3_v2-MADDW_registerW_registerZ_registerY_simple
+	maddw $r16r17r18r19.x = $r17, $r16r17.hi 	#Opcode-kv3_v2-MADDW_registerW_registerZ_registerY_simple
 	;;
-	maddw $r9 = $r8r9.hi, 536870911 	#Opcode-kv3_v2-MADDW_registerW_registerZ_upper27_lower5_double
+	maddw $r16r17r18r19.y = $r18, 536870911 	#Opcode-kv3_v2-MADDW_registerW_registerZ_upper27_lower5_double
 	;;
-	make $r8r9r10r11.y = 2305843009213693951 	#Opcode-kv3_v2-MAKE_registerW_extend27_upper27_lower10_triple
+	make $r18r19.lo = 2305843009213693951 	#Opcode-kv3_v2-MAKE_registerW_extend27_upper27_lower10_triple
 	;;
-	make $r10 = -549755813888 	#Opcode-kv3_v2-MAKE_registerW_extend6_upper27_lower10_double
+	make $r16r17r18r19.z = -549755813888 	#Opcode-kv3_v2-MAKE_registerW_extend6_upper27_lower10_double
 	;;
-	make $r10r11.lo = -4096 	#Opcode-kv3_v2-MAKE_registerW_signed16_simple
+	make $r19 = -4096 	#Opcode-kv3_v2-MAKE_registerW_signed16_simple
 	;;
-	maxbo $r8r9r10r11.z = $r11, $r10r11.hi 	#Opcode-kv3_v2-MAXBO_registerW_registerZ_registerY_simple
+	maxbo $r18r19.hi = $r16r17r18r19.t, $r20 	#Opcode-kv3_v2-MAXBO_registerW_registerZ_registerY_simple
 	;;
-	maxbo $r8r9r10r11.t = $r12, 536870911 	#Opcode-kv3_v2-MAXBO_registerW_registerZ_upper27_lower5_splat32_double
+	maxbo $r20r21.lo = $r20r21r22r23.x, 536870911 	#Opcode-kv3_v2-MAXBO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	maxd $sp = $r13, 2305843009213693951 	#Opcode-kv3_v2-MAXD_registerW_registerZ_extend27_upper27_lower10_triple
+	maxd $r21 = $r20r21.hi, 2305843009213693951 	#Opcode-kv3_v2-MAXD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	maxd $tp = $r14, $fp 	#Opcode-kv3_v2-MAXD_registerW_registerZ_registerY_simple
+	maxd $r20r21r22r23.y = $r22, $r22r23.lo 	#Opcode-kv3_v2-MAXD_registerW_registerZ_registerY_simple
 	;;
-	maxd $r15 = $rp, -64 	#Opcode-kv3_v2-MAXD_registerW_registerZ_signed10_simple
+	maxd $r20r21r22r23.z = $r23, -64 	#Opcode-kv3_v2-MAXD_registerW_registerZ_signed10_simple
 	;;
-	maxd $r16 = $r16r17.lo, -8589934592 	#Opcode-kv3_v2-MAXD_registerW_registerZ_upper27_lower10_double
+	maxd $r22r23.hi = $r20r21r22r23.t, -8589934592 	#Opcode-kv3_v2-MAXD_registerW_registerZ_upper27_lower10_double
 	;;
-	maxhq $r16r17r18r19.x = $r17, $r16r17.hi 	#Opcode-kv3_v2-MAXHQ_registerW_registerZ_registerY_simple
+	maxhq $r24 = $r24r25.lo, $r24r25r26r27.x 	#Opcode-kv3_v2-MAXHQ_registerW_registerZ_registerY_simple
 	;;
-	maxhq $r16r17r18r19.y = $r18, 536870911.@ 	#Opcode-kv3_v2-MAXHQ_registerW_registerZ_upper27_lower5_splat32_double
+	maxhq $r25 = $r24r25.hi, 536870911.@ 	#Opcode-kv3_v2-MAXHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	maxrbod $r18r19.lo = $r16r17r18r19.z 	#Opcode-kv3_v2-MAXRBOD_registerW_registerZ_simple
+	maxrbod $r24r25r26r27.y = $r26 	#Opcode-kv3_v2-MAXRBOD_registerW_registerZ_simple
 	;;
-	maxrhqd $r19 = $r18r19.hi 	#Opcode-kv3_v2-MAXRHQD_registerW_registerZ_simple
+	maxrhqd $r26r27.lo = $r24r25r26r27.z 	#Opcode-kv3_v2-MAXRHQD_registerW_registerZ_simple
 	;;
-	maxrwpd $r16r17r18r19.t = $r20 	#Opcode-kv3_v2-MAXRWPD_registerW_registerZ_simple
+	maxrwpd $r27 = $r26r27.hi 	#Opcode-kv3_v2-MAXRWPD_registerW_registerZ_simple
 	;;
-	maxubo $r20r21.lo = $r20r21r22r23.x, $r21 	#Opcode-kv3_v2-MAXUBO_registerW_registerZ_registerY_simple
+	maxubo $r24r25r26r27.t = $r28, $r28r29.lo 	#Opcode-kv3_v2-MAXUBO_registerW_registerZ_registerY_simple
 	;;
-	maxubo $r20r21.hi = $r20r21r22r23.y, 536870911 	#Opcode-kv3_v2-MAXUBO_registerW_registerZ_upper27_lower5_splat32_double
+	maxubo $r28r29r30r31.x = $r29, 536870911 	#Opcode-kv3_v2-MAXUBO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	maxud $r22 = $r22r23.lo, 2305843009213693951 	#Opcode-kv3_v2-MAXUD_registerW_registerZ_extend27_upper27_lower10_triple
+	maxud $r28r29.hi = $r28r29r30r31.y, 2305843009213693951 	#Opcode-kv3_v2-MAXUD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	maxud $r20r21r22r23.z = $r23, $r22r23.hi 	#Opcode-kv3_v2-MAXUD_registerW_registerZ_registerY_simple
+	maxud $r30 = $r30r31.lo, $r28r29r30r31.z 	#Opcode-kv3_v2-MAXUD_registerW_registerZ_registerY_simple
 	;;
-	maxud $r20r21r22r23.t = $r24, -64 	#Opcode-kv3_v2-MAXUD_registerW_registerZ_signed10_simple
+	maxud $r31 = $r30r31.hi, -64 	#Opcode-kv3_v2-MAXUD_registerW_registerZ_signed10_simple
 	;;
-	maxud $r24r25.lo = $r24r25r26r27.x, -8589934592 	#Opcode-kv3_v2-MAXUD_registerW_registerZ_upper27_lower10_double
+	maxud $r28r29r30r31.t = $r32, -8589934592 	#Opcode-kv3_v2-MAXUD_registerW_registerZ_upper27_lower10_double
 	;;
-	maxuhq $r25 = $r24r25.hi, $r24r25r26r27.y 	#Opcode-kv3_v2-MAXUHQ_registerW_registerZ_registerY_simple
+	maxuhq $r32r33.lo = $r32r33r34r35.x, $r33 	#Opcode-kv3_v2-MAXUHQ_registerW_registerZ_registerY_simple
 	;;
-	maxuhq $r26 = $r26r27.lo, 536870911.@ 	#Opcode-kv3_v2-MAXUHQ_registerW_registerZ_upper27_lower5_splat32_double
+	maxuhq $r32r33.hi = $r32r33r34r35.y, 536870911.@ 	#Opcode-kv3_v2-MAXUHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	maxurbod $r24r25r26r27.z = $r27 	#Opcode-kv3_v2-MAXURBOD_registerW_registerZ_simple
+	maxurbod $r34 = $r34r35.lo 	#Opcode-kv3_v2-MAXURBOD_registerW_registerZ_simple
 	;;
-	maxurhqd $r26r27.hi = $r24r25r26r27.t 	#Opcode-kv3_v2-MAXURHQD_registerW_registerZ_simple
+	maxurhqd $r32r33r34r35.z = $r35 	#Opcode-kv3_v2-MAXURHQD_registerW_registerZ_simple
 	;;
-	maxurwpd $r28 = $r28r29.lo 	#Opcode-kv3_v2-MAXURWPD_registerW_registerZ_simple
+	maxurwpd $r34r35.hi = $r32r33r34r35.t 	#Opcode-kv3_v2-MAXURWPD_registerW_registerZ_simple
 	;;
-	maxuwp $r28r29r30r31.x = $r29, $r28r29.hi 	#Opcode-kv3_v2-MAXUWP_registerW_registerZ_registerY_simple
+	maxuwp $r36 = $r36r37.lo, $r36r37r38r39.x 	#Opcode-kv3_v2-MAXUWP_registerW_registerZ_registerY_simple
 	;;
-	maxuwp $r28r29r30r31.y = $r30, 536870911 	#Opcode-kv3_v2-MAXUWP_registerW_registerZ_upper27_lower5_splat32_double
+	maxuwp $r37 = $r36r37.hi, 536870911 	#Opcode-kv3_v2-MAXUWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	maxuw $r30r31.lo = $r28r29r30r31.z, $r31 	#Opcode-kv3_v2-MAXUW_registerW_registerZ_registerY_simple
+	maxuw $r36r37r38r39.y = $r38, $r38r39.lo 	#Opcode-kv3_v2-MAXUW_registerW_registerZ_registerY_simple
 	;;
-	maxuw $r30r31.hi = $r28r29r30r31.t, -64 	#Opcode-kv3_v2-MAXUW_registerW_registerZ_signed10_simple
+	maxuw $r36r37r38r39.z = $r39, -64 	#Opcode-kv3_v2-MAXUW_registerW_registerZ_signed10_simple
 	;;
-	maxuw $r32 = $r32r33.lo, -8589934592 	#Opcode-kv3_v2-MAXUW_registerW_registerZ_upper27_lower10_double
+	maxuw $r38r39.hi = $r36r37r38r39.t, -8589934592 	#Opcode-kv3_v2-MAXUW_registerW_registerZ_upper27_lower10_double
 	;;
-	maxwp $r32r33r34r35.x = $r33, $r32r33.hi 	#Opcode-kv3_v2-MAXWP_registerW_registerZ_registerY_simple
+	maxwp $r40 = $r40r41.lo, $r40r41r42r43.x 	#Opcode-kv3_v2-MAXWP_registerW_registerZ_registerY_simple
 	;;
-	maxwp $r32r33r34r35.y = $r34, 536870911.@ 	#Opcode-kv3_v2-MAXWP_registerW_registerZ_upper27_lower5_splat32_double
+	maxwp $r41 = $r40r41.hi, 536870911.@ 	#Opcode-kv3_v2-MAXWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	maxw $r34r35.lo = $r32r33r34r35.z, $r35 	#Opcode-kv3_v2-MAXW_registerW_registerZ_registerY_simple
+	maxw $r40r41r42r43.y = $r42, $r42r43.lo 	#Opcode-kv3_v2-MAXW_registerW_registerZ_registerY_simple
 	;;
-	maxw $r34r35.hi = $r32r33r34r35.t, -64 	#Opcode-kv3_v2-MAXW_registerW_registerZ_signed10_simple
+	maxw $r40r41r42r43.z = $r43, -64 	#Opcode-kv3_v2-MAXW_registerW_registerZ_signed10_simple
 	;;
-	maxw $r36 = $r36r37.lo, -8589934592 	#Opcode-kv3_v2-MAXW_registerW_registerZ_upper27_lower10_double
+	maxw $r42r43.hi = $r40r41r42r43.t, -8589934592 	#Opcode-kv3_v2-MAXW_registerW_registerZ_upper27_lower10_double
 	;;
-	minbo $r36r37r38r39.x = $r37, $r36r37.hi 	#Opcode-kv3_v2-MINBO_registerW_registerZ_registerY_simple
+	minbo $r44 = $r44r45.lo, $r44r45r46r47.x 	#Opcode-kv3_v2-MINBO_registerW_registerZ_registerY_simple
 	;;
-	minbo $r36r37r38r39.y = $r38, 536870911 	#Opcode-kv3_v2-MINBO_registerW_registerZ_upper27_lower5_splat32_double
+	minbo $r45 = $r44r45.hi, 536870911 	#Opcode-kv3_v2-MINBO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	mind $r38r39.lo = $r36r37r38r39.z, 2305843009213693951 	#Opcode-kv3_v2-MIND_registerW_registerZ_extend27_upper27_lower10_triple
+	mind $r44r45r46r47.y = $r46, 2305843009213693951 	#Opcode-kv3_v2-MIND_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	mind $r39 = $r38r39.hi, $r36r37r38r39.t 	#Opcode-kv3_v2-MIND_registerW_registerZ_registerY_simple
+	mind $r46r47.lo = $r44r45r46r47.z, $r47 	#Opcode-kv3_v2-MIND_registerW_registerZ_registerY_simple
 	;;
-	mind $r40 = $r40r41.lo, -64 	#Opcode-kv3_v2-MIND_registerW_registerZ_signed10_simple
+	mind $r46r47.hi = $r44r45r46r47.t, -64 	#Opcode-kv3_v2-MIND_registerW_registerZ_signed10_simple
 	;;
-	mind $r40r41r42r43.x = $r41, -8589934592 	#Opcode-kv3_v2-MIND_registerW_registerZ_upper27_lower10_double
+	mind $r48 = $r48r49.lo, -8589934592 	#Opcode-kv3_v2-MIND_registerW_registerZ_upper27_lower10_double
 	;;
-	minhq $r40r41.hi = $r40r41r42r43.y, $r42 	#Opcode-kv3_v2-MINHQ_registerW_registerZ_registerY_simple
+	minhq $r48r49r50r51.x = $r49, $r48r49.hi 	#Opcode-kv3_v2-MINHQ_registerW_registerZ_registerY_simple
 	;;
-	minhq $r42r43.lo = $r40r41r42r43.z, 536870911.@ 	#Opcode-kv3_v2-MINHQ_registerW_registerZ_upper27_lower5_splat32_double
+	minhq $r48r49r50r51.y = $r50, 536870911.@ 	#Opcode-kv3_v2-MINHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	minrbod $r43 = $r42r43.hi 	#Opcode-kv3_v2-MINRBOD_registerW_registerZ_simple
+	minrbod $r50r51.lo = $r48r49r50r51.z 	#Opcode-kv3_v2-MINRBOD_registerW_registerZ_simple
 	;;
-	minrhqd $r40r41r42r43.t = $r44 	#Opcode-kv3_v2-MINRHQD_registerW_registerZ_simple
+	minrhqd $r51 = $r50r51.hi 	#Opcode-kv3_v2-MINRHQD_registerW_registerZ_simple
 	;;
-	minrwpd $r44r45.lo = $r44r45r46r47.x 	#Opcode-kv3_v2-MINRWPD_registerW_registerZ_simple
+	minrwpd $r48r49r50r51.t = $r52 	#Opcode-kv3_v2-MINRWPD_registerW_registerZ_simple
 	;;
-	minubo $r45 = $r44r45.hi, $r44r45r46r47.y 	#Opcode-kv3_v2-MINUBO_registerW_registerZ_registerY_simple
+	minubo $r52r53.lo = $r52r53r54r55.x, $r53 	#Opcode-kv3_v2-MINUBO_registerW_registerZ_registerY_simple
 	;;
-	minubo $r46 = $r46r47.lo, 536870911 	#Opcode-kv3_v2-MINUBO_registerW_registerZ_upper27_lower5_splat32_double
+	minubo $r52r53.hi = $r52r53r54r55.y, 536870911 	#Opcode-kv3_v2-MINUBO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	minud $r44r45r46r47.z = $r47, 2305843009213693951 	#Opcode-kv3_v2-MINUD_registerW_registerZ_extend27_upper27_lower10_triple
+	minud $r54 = $r54r55.lo, 2305843009213693951 	#Opcode-kv3_v2-MINUD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	minud $r46r47.hi = $r44r45r46r47.t, $r48 	#Opcode-kv3_v2-MINUD_registerW_registerZ_registerY_simple
+	minud $r52r53r54r55.z = $r55, $r54r55.hi 	#Opcode-kv3_v2-MINUD_registerW_registerZ_registerY_simple
 	;;
-	minud $r48r49.lo = $r48r49r50r51.x, -64 	#Opcode-kv3_v2-MINUD_registerW_registerZ_signed10_simple
+	minud $r52r53r54r55.t = $r56, -64 	#Opcode-kv3_v2-MINUD_registerW_registerZ_signed10_simple
 	;;
-	minud $r49 = $r48r49.hi, -8589934592 	#Opcode-kv3_v2-MINUD_registerW_registerZ_upper27_lower10_double
+	minud $r56r57.lo = $r56r57r58r59.x, -8589934592 	#Opcode-kv3_v2-MINUD_registerW_registerZ_upper27_lower10_double
 	;;
-	minuhq $r48r49r50r51.y = $r50, $r50r51.lo 	#Opcode-kv3_v2-MINUHQ_registerW_registerZ_registerY_simple
+	minuhq $r57 = $r56r57.hi, $r56r57r58r59.y 	#Opcode-kv3_v2-MINUHQ_registerW_registerZ_registerY_simple
 	;;
-	minuhq $r48r49r50r51.z = $r51, 536870911.@ 	#Opcode-kv3_v2-MINUHQ_registerW_registerZ_upper27_lower5_splat32_double
+	minuhq $r58 = $r58r59.lo, 536870911.@ 	#Opcode-kv3_v2-MINUHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	minurbod $r50r51.hi = $r48r49r50r51.t 	#Opcode-kv3_v2-MINURBOD_registerW_registerZ_simple
+	minurbod $r56r57r58r59.z = $r59 	#Opcode-kv3_v2-MINURBOD_registerW_registerZ_simple
 	;;
-	minurhqd $r52 = $r52r53.lo 	#Opcode-kv3_v2-MINURHQD_registerW_registerZ_simple
+	minurhqd $r58r59.hi = $r56r57r58r59.t 	#Opcode-kv3_v2-MINURHQD_registerW_registerZ_simple
 	;;
-	minurwpd $r52r53r54r55.x = $r53 	#Opcode-kv3_v2-MINURWPD_registerW_registerZ_simple
+	minurwpd $r60 = $r60r61.lo 	#Opcode-kv3_v2-MINURWPD_registerW_registerZ_simple
 	;;
-	minuwp $r52r53.hi = $r52r53r54r55.y, $r54 	#Opcode-kv3_v2-MINUWP_registerW_registerZ_registerY_simple
+	minuwp $r60r61r62r63.x = $r61, $r60r61.hi 	#Opcode-kv3_v2-MINUWP_registerW_registerZ_registerY_simple
 	;;
-	minuwp $r54r55.lo = $r52r53r54r55.z, 536870911 	#Opcode-kv3_v2-MINUWP_registerW_registerZ_upper27_lower5_splat32_double
+	minuwp $r60r61r62r63.y = $r62, 536870911 	#Opcode-kv3_v2-MINUWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	minuw $r55 = $r54r55.hi, $r52r53r54r55.t 	#Opcode-kv3_v2-MINUW_registerW_registerZ_registerY_simple
+	minuw $r62r63.lo = $r60r61r62r63.z, $r63 	#Opcode-kv3_v2-MINUW_registerW_registerZ_registerY_simple
 	;;
-	minuw $r56 = $r56r57.lo, -64 	#Opcode-kv3_v2-MINUW_registerW_registerZ_signed10_simple
+	minuw $r62r63.hi = $r60r61r62r63.t, -64 	#Opcode-kv3_v2-MINUW_registerW_registerZ_signed10_simple
 	;;
-	minuw $r56r57r58r59.x = $r57, -8589934592 	#Opcode-kv3_v2-MINUW_registerW_registerZ_upper27_lower10_double
+	minuw $r0 = $r0r1.lo, -8589934592 	#Opcode-kv3_v2-MINUW_registerW_registerZ_upper27_lower10_double
 	;;
-	minwp $r56r57.hi = $r56r57r58r59.y, $r58 	#Opcode-kv3_v2-MINWP_registerW_registerZ_registerY_simple
+	minwp $r0r1r2r3.x = $r1, $r0r1.hi 	#Opcode-kv3_v2-MINWP_registerW_registerZ_registerY_simple
 	;;
-	minwp $r58r59.lo = $r56r57r58r59.z, 536870911.@ 	#Opcode-kv3_v2-MINWP_registerW_registerZ_upper27_lower5_splat32_double
+	minwp $r0r1r2r3.y = $r2, 536870911.@ 	#Opcode-kv3_v2-MINWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	minw $r59 = $r58r59.hi, $r56r57r58r59.t 	#Opcode-kv3_v2-MINW_registerW_registerZ_registerY_simple
+	minw $r2r3.lo = $r0r1r2r3.z, $r3 	#Opcode-kv3_v2-MINW_registerW_registerZ_registerY_simple
 	;;
-	minw $r60 = $r60r61.lo, -64 	#Opcode-kv3_v2-MINW_registerW_registerZ_signed10_simple
+	minw $r2r3.hi = $r0r1r2r3.t, -64 	#Opcode-kv3_v2-MINW_registerW_registerZ_signed10_simple
 	;;
-	minw $r60r61r62r63.x = $r61, -8589934592 	#Opcode-kv3_v2-MINW_registerW_registerZ_upper27_lower10_double
+	minw $r4 = $r4r5.lo, -8589934592 	#Opcode-kv3_v2-MINW_registerW_registerZ_upper27_lower10_double
 	;;
-	mm212w $r50r51 = $r60r61.hi, $r60r61r62r63.y 	#Opcode-kv3_v2-MM212W_registerM_registerZ_registerY_simple
+	mm212w $r50r51 = $r4r5r6r7.x, $r5 	#Opcode-kv3_v2-MM212W_registerM_registerZ_registerY_simple
 	;;
-	mm212w $r48r49r50r51.hi = $r62, 536870911 	#Opcode-kv3_v2-MM212W_registerM_registerZ_upper27_lower5_splat32_double
+	mm212w $r48r49r50r51.hi = $r4r5.hi, 536870911 	#Opcode-kv3_v2-MM212W_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	mma212w $r52r53 = $r62r63.lo, $r60r61r62r63.z 	#Opcode-kv3_v2-MMA212W_registerM_registerZ_registerY_simple
+	mma212w $r52r53 = $r4r5r6r7.y, $r6 	#Opcode-kv3_v2-MMA212W_registerM_registerZ_registerY_simple
 	;;
-	mma212w $r52r53r54r55.lo = $r63, 536870911.@ 	#Opcode-kv3_v2-MMA212W_registerM_registerZ_upper27_lower5_splat32_double
+	mma212w $r52r53r54r55.lo = $r6r7.lo, 536870911.@ 	#Opcode-kv3_v2-MMA212W_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	mms212w $r54r55 = $r62r63.hi, $r60r61r62r63.t 	#Opcode-kv3_v2-MMS212W_registerM_registerZ_registerY_simple
+	mms212w $r54r55 = $r4r5r6r7.z, $r7 	#Opcode-kv3_v2-MMS212W_registerM_registerZ_registerY_simple
 	;;
-	mms212w $r52r53r54r55.hi = $r0, 536870911 	#Opcode-kv3_v2-MMS212W_registerM_registerZ_upper27_lower5_splat32_double
+	mms212w $r52r53r54r55.hi = $r6r7.hi, 536870911 	#Opcode-kv3_v2-MMS212W_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	msbfdt $r56r57 = $r0r1.lo, $r0r1r2r3.x 	#Opcode-kv3_v2-MSBFDT_registerM_registerZ_registerY_simple
+	msbfdt $r56r57 = $r4r5r6r7.t, $r8 	#Opcode-kv3_v2-MSBFDT_registerM_registerZ_registerY_simple
 	;;
-	msbfd $r1 = $r0r1.hi, $r0r1r2r3.y 	#Opcode-kv3_v2-MSBFD_registerW_registerZ_registerY_simple
+	msbfd $r8r9.lo = $r8r9r10r11.x, $r9 	#Opcode-kv3_v2-MSBFD_registerW_registerZ_registerY_simple
 	;;
-	msbfd $r2 = $r2r3.lo, 536870911.@ 	#Opcode-kv3_v2-MSBFD_registerW_registerZ_upper27_lower5_splat32_double
+	msbfd $r8r9.hi = $r8r9r10r11.y, 536870911.@ 	#Opcode-kv3_v2-MSBFD_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	msbfhq $r0r1r2r3.z = $r3, $r2r3.hi 	#Opcode-kv3_v2-MSBFHQ_registerW_registerZ_registerY_simple
+	msbfhq $r10 = $r10r11.lo, $r8r9r10r11.z 	#Opcode-kv3_v2-MSBFHQ_registerW_registerZ_registerY_simple
 	;;
-	msbfhq $r0r1r2r3.t = $r4, 536870911 	#Opcode-kv3_v2-MSBFHQ_registerW_registerZ_upper27_lower5_splat32_double
+	msbfhq $r11 = $r10r11.hi, 536870911 	#Opcode-kv3_v2-MSBFHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	msbfhwq $r56r57r58r59.lo = $r4r5.lo, $r4r5r6r7.x 	#Opcode-kv3_v2-MSBFHWQ_registerM_registerZ_registerY_simple
+	msbfhwq $r56r57r58r59.lo = $r8r9r10r11.t, $r12 	#Opcode-kv3_v2-MSBFHWQ_registerM_registerZ_registerY_simple
 	;;
 	msbfmwq $r58r59 = $r56r57r58r59.hi, $r60r61 	#Opcode-kv3_v2-MSBFMWQ_registerM_registerP_registerO_simple
 	;;
-	msbfsudt $r60r61r62r63.lo = $r5, $r4r5.hi 	#Opcode-kv3_v2-MSBFSUDT_registerM_registerZ_registerY_simple
+	msbfsudt $r60r61r62r63.lo = $sp, $r13 	#Opcode-kv3_v2-MSBFSUDT_registerM_registerZ_registerY_simple
 	;;
-	msbfsuhwq $r62r63 = $r4r5r6r7.y, $r6 	#Opcode-kv3_v2-MSBFSUHWQ_registerM_registerZ_registerY_simple
+	msbfsuhwq $r62r63 = $tp, $r14 	#Opcode-kv3_v2-MSBFSUHWQ_registerM_registerZ_registerY_simple
 	;;
 	msbfsumwq $r60r61r62r63.hi = $r0r1, $r0r1r2r3.lo 	#Opcode-kv3_v2-MSBFSUMWQ_registerM_registerP_registerO_simple
 	;;
-	msbfsuwdp $r2r3 = $r6r7.lo, $r4r5r6r7.z 	#Opcode-kv3_v2-MSBFSUWDP_registerM_registerZ_registerY_simple
+	msbfsuwdp $r2r3 = $fp, $r15 	#Opcode-kv3_v2-MSBFSUWDP_registerM_registerZ_registerY_simple
 	;;
-	msbfsuwdp $r0r1r2r3.hi = $r7, 536870911.@ 	#Opcode-kv3_v2-MSBFSUWDP_registerM_registerZ_upper27_lower5_splat32_double
+	msbfsuwdp $r0r1r2r3.hi = $rp, 536870911.@ 	#Opcode-kv3_v2-MSBFSUWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	msbfsuwd $r6r7.hi = $r4r5r6r7.t, $r8 	#Opcode-kv3_v2-MSBFSUWD_registerW_registerZ_registerY_simple
+	msbfsuwd $r16 = $r16r17.lo, $r16r17r18r19.x 	#Opcode-kv3_v2-MSBFSUWD_registerW_registerZ_registerY_simple
 	;;
-	msbfsuwd $r8r9.lo = $r8r9r10r11.x, 536870911 	#Opcode-kv3_v2-MSBFSUWD_registerW_registerZ_upper27_lower5_double
+	msbfsuwd $r17 = $r16r17.hi, 536870911 	#Opcode-kv3_v2-MSBFSUWD_registerW_registerZ_upper27_lower5_double
 	;;
-	msbfudt $r4r5 = $r9, $r8r9.hi 	#Opcode-kv3_v2-MSBFUDT_registerM_registerZ_registerY_simple
+	msbfudt $r4r5 = $r16r17r18r19.y, $r18 	#Opcode-kv3_v2-MSBFUDT_registerM_registerZ_registerY_simple
 	;;
-	msbfuhwq $r4r5r6r7.lo = $r8r9r10r11.y, $r10 	#Opcode-kv3_v2-MSBFUHWQ_registerM_registerZ_registerY_simple
+	msbfuhwq $r4r5r6r7.lo = $r18r19.lo, $r16r17r18r19.z 	#Opcode-kv3_v2-MSBFUHWQ_registerM_registerZ_registerY_simple
 	;;
 	msbfumwq $r6r7 = $r4r5r6r7.hi, $r8r9 	#Opcode-kv3_v2-MSBFUMWQ_registerM_registerP_registerO_simple
 	;;
-	msbfuwdp $r8r9r10r11.lo = $r10r11.lo, $r8r9r10r11.z 	#Opcode-kv3_v2-MSBFUWDP_registerM_registerZ_registerY_simple
+	msbfuwdp $r8r9r10r11.lo = $r19, $r18r19.hi 	#Opcode-kv3_v2-MSBFUWDP_registerM_registerZ_registerY_simple
 	;;
-	msbfuwdp $r10r11 = $r11, 536870911 	#Opcode-kv3_v2-MSBFUWDP_registerM_registerZ_upper27_lower5_splat32_double
+	msbfuwdp $r10r11 = $r16r17r18r19.t, 536870911 	#Opcode-kv3_v2-MSBFUWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	msbfuwd $r10r11.hi = $r8r9r10r11.t, $r12 	#Opcode-kv3_v2-MSBFUWD_registerW_registerZ_registerY_simple
+	msbfuwd $r20 = $r20r21.lo, $r20r21r22r23.x 	#Opcode-kv3_v2-MSBFUWD_registerW_registerZ_registerY_simple
 	;;
-	msbfuwd $sp = $r13, 536870911 	#Opcode-kv3_v2-MSBFUWD_registerW_registerZ_upper27_lower5_double
+	msbfuwd $r21 = $r20r21.hi, 536870911 	#Opcode-kv3_v2-MSBFUWD_registerW_registerZ_upper27_lower5_double
 	;;
-	msbfuzdt $r8r9r10r11.hi = $tp, $r14 	#Opcode-kv3_v2-MSBFUZDT_registerM_registerZ_registerY_simple
+	msbfuzdt $r8r9r10r11.hi = $r20r21r22r23.y, $r22 	#Opcode-kv3_v2-MSBFUZDT_registerM_registerZ_registerY_simple
 	;;
-	msbfwdp $r12r13 = $fp, $r15 	#Opcode-kv3_v2-MSBFWDP_registerM_registerZ_registerY_simple
+	msbfwdp $r12r13 = $r22r23.lo, $r20r21r22r23.z 	#Opcode-kv3_v2-MSBFWDP_registerM_registerZ_registerY_simple
 	;;
-	msbfwdp $r12r13r14r15.lo = $rp, 536870911.@ 	#Opcode-kv3_v2-MSBFWDP_registerM_registerZ_upper27_lower5_splat32_double
+	msbfwdp $r12r13r14r15.lo = $r23, 536870911.@ 	#Opcode-kv3_v2-MSBFWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	msbfwd $r16 = $r16r17.lo, $r16r17r18r19.x 	#Opcode-kv3_v2-MSBFWD_registerW_registerZ_registerY_simple
+	msbfwd $r22r23.hi = $r20r21r22r23.t, $r24 	#Opcode-kv3_v2-MSBFWD_registerW_registerZ_registerY_simple
 	;;
-	msbfwd $r17 = $r16r17.hi, 536870911 	#Opcode-kv3_v2-MSBFWD_registerW_registerZ_upper27_lower5_double
+	msbfwd $r24r25.lo = $r24r25r26r27.x, 536870911 	#Opcode-kv3_v2-MSBFWD_registerW_registerZ_upper27_lower5_double
 	;;
-	msbfwp $r16r17r18r19.y = $r18, $r18r19.lo 	#Opcode-kv3_v2-MSBFWP_registerW_registerZ_registerY_simple
+	msbfwp $r25 = $r24r25.hi, $r24r25r26r27.y 	#Opcode-kv3_v2-MSBFWP_registerW_registerZ_registerY_simple
 	;;
-	msbfwp $r16r17r18r19.z = $r19, 536870911 	#Opcode-kv3_v2-MSBFWP_registerW_registerZ_upper27_lower5_splat32_double
+	msbfwp $r26 = $r26r27.lo, 536870911 	#Opcode-kv3_v2-MSBFWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
 	msbfwq $r14r15 = $r12r13r14r15.hi, $r16r17 	#Opcode-kv3_v2-MSBFWQ_registerM_registerP_registerO_simple
 	;;
-	msbfw $r18r19.hi = $r16r17r18r19.t, $r20 	#Opcode-kv3_v2-MSBFW_registerW_registerZ_registerY_simple
+	msbfw $r24r25r26r27.z = $r27, $r26r27.hi 	#Opcode-kv3_v2-MSBFW_registerW_registerZ_registerY_simple
 	;;
-	msbfw $r20r21.lo = $r20r21r22r23.x, 536870911 	#Opcode-kv3_v2-MSBFW_registerW_registerZ_upper27_lower5_double
+	msbfw $r24r25r26r27.t = $r28, 536870911 	#Opcode-kv3_v2-MSBFW_registerW_registerZ_upper27_lower5_double
 	;;
-	muldt $r16r17r18r19.lo = $r21, $r20r21.hi 	#Opcode-kv3_v2-MULDT_registerM_registerZ_registerY_simple
+	muldt $r16r17r18r19.lo = $r28r29.lo, $r28r29r30r31.x 	#Opcode-kv3_v2-MULDT_registerM_registerZ_registerY_simple
 	;;
-	muld $r20r21r22r23.y = $r22, $r22r23.lo 	#Opcode-kv3_v2-MULD_registerW_registerZ_registerY_simple
+	muld $r29 = $r28r29.hi, $r28r29r30r31.y 	#Opcode-kv3_v2-MULD_registerW_registerZ_registerY_simple
 	;;
-	muld $r20r21r22r23.z = $r23, 536870911.@ 	#Opcode-kv3_v2-MULD_registerW_registerZ_upper27_lower5_splat32_double
+	muld $r30 = $r30r31.lo, 536870911.@ 	#Opcode-kv3_v2-MULD_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	mulhq $r22r23.hi = $r20r21r22r23.t, $r24 	#Opcode-kv3_v2-MULHQ_registerW_registerZ_registerY_simple
+	mulhq $r28r29r30r31.z = $r31, $r30r31.hi 	#Opcode-kv3_v2-MULHQ_registerW_registerZ_registerY_simple
 	;;
-	mulhq $r24r25.lo = $r24r25r26r27.x, 536870911 	#Opcode-kv3_v2-MULHQ_registerW_registerZ_upper27_lower5_splat32_double
+	mulhq $r28r29r30r31.t = $r32, 536870911 	#Opcode-kv3_v2-MULHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	mulhwq $r18r19 = $r25, $r24r25.hi 	#Opcode-kv3_v2-MULHWQ_registerM_registerZ_registerY_simple
+	mulhwq $r18r19 = $r32r33.lo, $r32r33r34r35.x 	#Opcode-kv3_v2-MULHWQ_registerM_registerZ_registerY_simple
 	;;
 	mulmwq $r16r17r18r19.hi = $r20r21, $r20r21r22r23.lo 	#Opcode-kv3_v2-MULMWQ_registerM_registerP_registerO_simple
 	;;
-	mulsudt $r22r23 = $r24r25r26r27.y, $r26 	#Opcode-kv3_v2-MULSUDT_registerM_registerZ_registerY_simple
+	mulsudt $r22r23 = $r33, $r32r33.hi 	#Opcode-kv3_v2-MULSUDT_registerM_registerZ_registerY_simple
 	;;
-	mulsuhwq $r20r21r22r23.hi = $r26r27.lo, $r24r25r26r27.z 	#Opcode-kv3_v2-MULSUHWQ_registerM_registerZ_registerY_simple
+	mulsuhwq $r20r21r22r23.hi = $r32r33r34r35.y, $r34 	#Opcode-kv3_v2-MULSUHWQ_registerM_registerZ_registerY_simple
 	;;
 	mulsumwq $r24r25 = $r24r25r26r27.lo, $r26r27 	#Opcode-kv3_v2-MULSUMWQ_registerM_registerP_registerO_simple
 	;;
-	mulsuwdp $r24r25r26r27.hi = $r27, $r26r27.hi 	#Opcode-kv3_v2-MULSUWDP_registerM_registerZ_registerY_simple
+	mulsuwdp $r24r25r26r27.hi = $r34r35.lo, $r32r33r34r35.z 	#Opcode-kv3_v2-MULSUWDP_registerM_registerZ_registerY_simple
 	;;
-	mulsuwdp $r28r29 = $r24r25r26r27.t, 536870911.@ 	#Opcode-kv3_v2-MULSUWDP_registerM_registerZ_upper27_lower5_splat32_double
+	mulsuwdp $r28r29 = $r35, 536870911.@ 	#Opcode-kv3_v2-MULSUWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	mulsuwd $r28 = $r28r29.lo, $r28r29r30r31.x 	#Opcode-kv3_v2-MULSUWD_registerW_registerZ_registerY_simple
+	mulsuwd $r34r35.hi = $r32r33r34r35.t, $r36 	#Opcode-kv3_v2-MULSUWD_registerW_registerZ_registerY_simple
 	;;
-	mulsuwd $r29 = $r28r29.hi, 536870911 	#Opcode-kv3_v2-MULSUWD_registerW_registerZ_upper27_lower5_double
+	mulsuwd $r36r37.lo = $r36r37r38r39.x, 536870911 	#Opcode-kv3_v2-MULSUWD_registerW_registerZ_upper27_lower5_double
 	;;
-	muludt $r28r29r30r31.lo = $r28r29r30r31.y, $r30 	#Opcode-kv3_v2-MULUDT_registerM_registerZ_registerY_simple
+	muludt $r28r29r30r31.lo = $r37, $r36r37.hi 	#Opcode-kv3_v2-MULUDT_registerM_registerZ_registerY_simple
 	;;
-	muluhwq $r30r31 = $r30r31.lo, $r28r29r30r31.z 	#Opcode-kv3_v2-MULUHWQ_registerM_registerZ_registerY_simple
+	muluhwq $r30r31 = $r36r37r38r39.y, $r38 	#Opcode-kv3_v2-MULUHWQ_registerM_registerZ_registerY_simple
 	;;
 	mulumwq $r28r29r30r31.hi = $r32r33, $r32r33r34r35.lo 	#Opcode-kv3_v2-MULUMWQ_registerM_registerP_registerO_simple
 	;;
-	muluwdp $r34r35 = $r31, $r30r31.hi 	#Opcode-kv3_v2-MULUWDP_registerM_registerZ_registerY_simple
+	muluwdp $r34r35 = $r38r39.lo, $r36r37r38r39.z 	#Opcode-kv3_v2-MULUWDP_registerM_registerZ_registerY_simple
 	;;
-	muluwdp $r32r33r34r35.hi = $r28r29r30r31.t, 536870911 	#Opcode-kv3_v2-MULUWDP_registerM_registerZ_upper27_lower5_splat32_double
+	muluwdp $r32r33r34r35.hi = $r39, 536870911 	#Opcode-kv3_v2-MULUWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	muluwd $r32 = $r32r33.lo, $r32r33r34r35.x 	#Opcode-kv3_v2-MULUWD_registerW_registerZ_registerY_simple
+	muluwd $r38r39.hi = $r36r37r38r39.t, $r40 	#Opcode-kv3_v2-MULUWD_registerW_registerZ_registerY_simple
 	;;
-	muluwd $r33 = $r32r33.hi, 536870911 	#Opcode-kv3_v2-MULUWD_registerW_registerZ_upper27_lower5_double
+	muluwd $r40r41.lo = $r40r41r42r43.x, 536870911 	#Opcode-kv3_v2-MULUWD_registerW_registerZ_upper27_lower5_double
 	;;
-	mulwdp $r36r37 = $r32r33r34r35.y, $r34 	#Opcode-kv3_v2-MULWDP_registerM_registerZ_registerY_simple
+	mulwdp $r36r37 = $r41, $r40r41.hi 	#Opcode-kv3_v2-MULWDP_registerM_registerZ_registerY_simple
 	;;
-	mulwdp $r36r37r38r39.lo = $r34r35.lo, 536870911.@ 	#Opcode-kv3_v2-MULWDP_registerM_registerZ_upper27_lower5_splat32_double
+	mulwdp $r36r37r38r39.lo = $r40r41r42r43.y, 536870911.@ 	#Opcode-kv3_v2-MULWDP_registerM_registerZ_upper27_lower5_splat32_double
 	;;
-	mulwd $r32r33r34r35.z = $r35, $r34r35.hi 	#Opcode-kv3_v2-MULWD_registerW_registerZ_registerY_simple
+	mulwd $r42 = $r42r43.lo, $r40r41r42r43.z 	#Opcode-kv3_v2-MULWD_registerW_registerZ_registerY_simple
 	;;
-	mulwd $r32r33r34r35.t = $r36, 536870911 	#Opcode-kv3_v2-MULWD_registerW_registerZ_upper27_lower5_double
+	mulwd $r43 = $r42r43.hi, 536870911 	#Opcode-kv3_v2-MULWD_registerW_registerZ_upper27_lower5_double
 	;;
-	mulwp $r36r37.lo = $r36r37r38r39.x, $r37 	#Opcode-kv3_v2-MULWP_registerW_registerZ_registerY_simple
+	mulwp $r40r41r42r43.t = $r44, $r44r45.lo 	#Opcode-kv3_v2-MULWP_registerW_registerZ_registerY_simple
 	;;
-	mulwp $r36r37.hi = $r36r37r38r39.y, 536870911 	#Opcode-kv3_v2-MULWP_registerW_registerZ_upper27_lower5_splat32_double
+	mulwp $r44r45r46r47.x = $r45, 536870911 	#Opcode-kv3_v2-MULWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
 	mulwq $r38r39 = $r36r37r38r39.hi, $r40r41 	#Opcode-kv3_v2-MULWQ_registerM_registerP_registerO_simple
 	;;
-	mulw $r38 = $r38r39.lo, $r36r37r38r39.z 	#Opcode-kv3_v2-MULW_registerW_registerZ_registerY_simple
+	mulw $r44r45.hi = $r44r45r46r47.y, $r46 	#Opcode-kv3_v2-MULW_registerW_registerZ_registerY_simple
 	;;
-	mulw $r39 = $r38r39.hi, 536870911 	#Opcode-kv3_v2-MULW_registerW_registerZ_upper27_lower5_double
+	mulw $r46r47.lo = $r44r45r46r47.z, 536870911 	#Opcode-kv3_v2-MULW_registerW_registerZ_upper27_lower5_double
 	;;
-	nandd $r36r37r38r39.t = $r40, 2305843009213693951 	#Opcode-kv3_v2-NANDD_registerW_registerZ_extend27_upper27_lower10_triple
+	nandd $r47 = $r46r47.hi, 2305843009213693951 	#Opcode-kv3_v2-NANDD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	nandd $r40r41.lo = $r40r41r42r43.x, $r41 	#Opcode-kv3_v2-NANDD_registerW_registerZ_registerY_simple
+	nandd $r44r45r46r47.t = $r48, $r48r49.lo 	#Opcode-kv3_v2-NANDD_registerW_registerZ_registerY_simple
 	;;
-	nandd $r40r41.hi = $r40r41r42r43.y, -64 	#Opcode-kv3_v2-NANDD_registerW_registerZ_signed10_simple
+	nandd $r48r49r50r51.x = $r49, -64 	#Opcode-kv3_v2-NANDD_registerW_registerZ_signed10_simple
 	;;
-	nandd $r42 = $r42r43.lo, -8589934592 	#Opcode-kv3_v2-NANDD_registerW_registerZ_upper27_lower10_double
+	nandd $r48r49.hi = $r48r49r50r51.y, -8589934592 	#Opcode-kv3_v2-NANDD_registerW_registerZ_upper27_lower10_double
 	;;
-	nandw $r40r41r42r43.z = $r43, $r42r43.hi 	#Opcode-kv3_v2-NANDW_registerW_registerZ_registerY_simple
+	nandw $r50 = $r50r51.lo, $r48r49r50r51.z 	#Opcode-kv3_v2-NANDW_registerW_registerZ_registerY_simple
 	;;
-	nandw $r40r41r42r43.t = $r44, -64 	#Opcode-kv3_v2-NANDW_registerW_registerZ_signed10_simple
+	nandw $r51 = $r50r51.hi, -64 	#Opcode-kv3_v2-NANDW_registerW_registerZ_signed10_simple
 	;;
-	nandw $r44r45.lo = $r44r45r46r47.x, -8589934592 	#Opcode-kv3_v2-NANDW_registerW_registerZ_upper27_lower10_double
+	nandw $r48r49r50r51.t = $r52, -8589934592 	#Opcode-kv3_v2-NANDW_registerW_registerZ_upper27_lower10_double
 	;;
-	negbo $r45 = $r44r45.hi 	#Opcode-kv3_v2-NEGBO_registerW_registerZ_double
+	negbo $r52r53.lo = $r52r53r54r55.x 	#Opcode-kv3_v2-NEGBO_registerW_registerZ_double
 	;;
-	negd $r44r45r46r47.y = $r46 	#Opcode-kv3_v2-NEGD_registerW_registerZ_simple
+	negd $r53 = $r52r53.hi 	#Opcode-kv3_v2-NEGD_registerW_registerZ_simple
 	;;
-	neghq $r46r47.lo = $r44r45r46r47.z 	#Opcode-kv3_v2-NEGHQ_registerW_registerZ_double
+	neghq $r52r53r54r55.y = $r54 	#Opcode-kv3_v2-NEGHQ_registerW_registerZ_double
 	;;
-	negsbo $r47 = $r46r47.hi 	#Opcode-kv3_v2-NEGSBO_registerW_registerZ_double
+	negsbo $r54r55.lo = $r52r53r54r55.z 	#Opcode-kv3_v2-NEGSBO_registerW_registerZ_double
 	;;
-	negsd $r44r45r46r47.t = $r48 	#Opcode-kv3_v2-NEGSD_registerW_registerZ_double
+	negsd $r55 = $r54r55.hi 	#Opcode-kv3_v2-NEGSD_registerW_registerZ_double
 	;;
-	negshq $r48r49.lo = $r48r49r50r51.x 	#Opcode-kv3_v2-NEGSHQ_registerW_registerZ_double
+	negshq $r52r53r54r55.t = $r56 	#Opcode-kv3_v2-NEGSHQ_registerW_registerZ_double
 	;;
-	negswp $r49 = $r48r49.hi 	#Opcode-kv3_v2-NEGSWP_registerW_registerZ_double
+	negswp $r56r57.lo = $r56r57r58r59.x 	#Opcode-kv3_v2-NEGSWP_registerW_registerZ_double
 	;;
-	negsw $r48r49r50r51.y = $r50 	#Opcode-kv3_v2-NEGSW_registerW_registerZ_double
+	negsw $r57 = $r56r57.hi 	#Opcode-kv3_v2-NEGSW_registerW_registerZ_double
 	;;
-	negwp $r50r51.lo = $r48r49r50r51.z 	#Opcode-kv3_v2-NEGWP_registerW_registerZ_double
+	negwp $r56r57r58r59.y = $r58 	#Opcode-kv3_v2-NEGWP_registerW_registerZ_double
 	;;
-	negw $r51 = $r50r51.hi 	#Opcode-kv3_v2-NEGW_registerW_registerZ_simple
+	negw $r58r59.lo = $r56r57r58r59.z 	#Opcode-kv3_v2-NEGW_registerW_registerZ_simple
 	;;
-	niord $r48r49r50r51.t = $r52, 2305843009213693951 	#Opcode-kv3_v2-NIORD_registerW_registerZ_extend27_upper27_lower10_triple
+	neord $r59 = $r58r59.hi, 2305843009213693951 	#Opcode-kv3_v2-NEORD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	niord $r52r53.lo = $r52r53r54r55.x, $r53 	#Opcode-kv3_v2-NIORD_registerW_registerZ_registerY_simple
+	neord $r56r57r58r59.t = $r60, $r60r61.lo 	#Opcode-kv3_v2-NEORD_registerW_registerZ_registerY_simple
 	;;
-	niord $r52r53.hi = $r52r53r54r55.y, -64 	#Opcode-kv3_v2-NIORD_registerW_registerZ_signed10_simple
+	neord $r60r61r62r63.x = $r61, -64 	#Opcode-kv3_v2-NEORD_registerW_registerZ_signed10_simple
 	;;
-	niord $r54 = $r54r55.lo, -8589934592 	#Opcode-kv3_v2-NIORD_registerW_registerZ_upper27_lower10_double
+	neord $r60r61.hi = $r60r61r62r63.y, -8589934592 	#Opcode-kv3_v2-NEORD_registerW_registerZ_upper27_lower10_double
 	;;
-	niorw $r52r53r54r55.z = $r55, $r54r55.hi 	#Opcode-kv3_v2-NIORW_registerW_registerZ_registerY_simple
+	neorw $r62 = $r62r63.lo, $r60r61r62r63.z 	#Opcode-kv3_v2-NEORW_registerW_registerZ_registerY_simple
 	;;
-	niorw $r52r53r54r55.t = $r56, -64 	#Opcode-kv3_v2-NIORW_registerW_registerZ_signed10_simple
+	neorw $r63 = $r62r63.hi, -64 	#Opcode-kv3_v2-NEORW_registerW_registerZ_signed10_simple
 	;;
-	niorw $r56r57.lo = $r56r57r58r59.x, -8589934592 	#Opcode-kv3_v2-NIORW_registerW_registerZ_upper27_lower10_double
+	neorw $r60r61r62r63.t = $r0, -8589934592 	#Opcode-kv3_v2-NEORW_registerW_registerZ_upper27_lower10_double
+	;;
+	niord $r0r1.lo = $r0r1r2r3.x, 2305843009213693951 	#Opcode-kv3_v2-NIORD_registerW_registerZ_extend27_upper27_lower10_triple
+	;;
+	niord $r1 = $r0r1.hi, $r0r1r2r3.y 	#Opcode-kv3_v2-NIORD_registerW_registerZ_registerY_simple
+	;;
+	niord $r2 = $r2r3.lo, -64 	#Opcode-kv3_v2-NIORD_registerW_registerZ_signed10_simple
+	;;
+	niord $r0r1r2r3.z = $r3, -8589934592 	#Opcode-kv3_v2-NIORD_registerW_registerZ_upper27_lower10_double
+	;;
+	niorw $r2r3.hi = $r0r1r2r3.t, $r4 	#Opcode-kv3_v2-NIORW_registerW_registerZ_registerY_simple
+	;;
+	niorw $r4r5.lo = $r4r5r6r7.x, -64 	#Opcode-kv3_v2-NIORW_registerW_registerZ_signed10_simple
+	;;
+	niorw $r5 = $r4r5.hi, -8589934592 	#Opcode-kv3_v2-NIORW_registerW_registerZ_upper27_lower10_double
 	;;
 	nop 	#Opcode-kv3_v2-NOP_simple
 	;;
-	nord $r57 = $r56r57.hi, 2305843009213693951 	#Opcode-kv3_v2-NORD_registerW_registerZ_extend27_upper27_lower10_triple
+	nord $r4r5r6r7.y = $r6, 2305843009213693951 	#Opcode-kv3_v2-NORD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	nord $r56r57r58r59.y = $r58, $r58r59.lo 	#Opcode-kv3_v2-NORD_registerW_registerZ_registerY_simple
+	nord $r6r7.lo = $r4r5r6r7.z, $r7 	#Opcode-kv3_v2-NORD_registerW_registerZ_registerY_simple
 	;;
-	nord $r56r57r58r59.z = $r59, -64 	#Opcode-kv3_v2-NORD_registerW_registerZ_signed10_simple
+	nord $r6r7.hi = $r4r5r6r7.t, -64 	#Opcode-kv3_v2-NORD_registerW_registerZ_signed10_simple
 	;;
-	nord $r58r59.hi = $r56r57r58r59.t, -8589934592 	#Opcode-kv3_v2-NORD_registerW_registerZ_upper27_lower10_double
+	nord $r8 = $r8r9.lo, -8589934592 	#Opcode-kv3_v2-NORD_registerW_registerZ_upper27_lower10_double
 	;;
-	norw $r60 = $r60r61.lo, $r60r61r62r63.x 	#Opcode-kv3_v2-NORW_registerW_registerZ_registerY_simple
+	norw $r8r9r10r11.x = $r9, $r8r9.hi 	#Opcode-kv3_v2-NORW_registerW_registerZ_registerY_simple
 	;;
-	norw $r61 = $r60r61.hi, -64 	#Opcode-kv3_v2-NORW_registerW_registerZ_signed10_simple
+	norw $r8r9r10r11.y = $r10, -64 	#Opcode-kv3_v2-NORW_registerW_registerZ_signed10_simple
 	;;
-	norw $r60r61r62r63.y = $r62, -8589934592 	#Opcode-kv3_v2-NORW_registerW_registerZ_upper27_lower10_double
+	norw $r10r11.lo = $r8r9r10r11.z, -8589934592 	#Opcode-kv3_v2-NORW_registerW_registerZ_upper27_lower10_double
 	;;
-	notd $r62r63.lo = $r60r61r62r63.z 	#Opcode-kv3_v2-NOTD_registerW_registerZ_simple
+	notd $r11 = $r10r11.hi 	#Opcode-kv3_v2-NOTD_registerW_registerZ_simple
 	;;
-	notw $r63 = $r62r63.hi 	#Opcode-kv3_v2-NOTW_registerW_registerZ_simple
+	notw $r8r9r10r11.t = $r12 	#Opcode-kv3_v2-NOTW_registerW_registerZ_simple
 	;;
-	nxord $r60r61r62r63.t = $r0, 2305843009213693951 	#Opcode-kv3_v2-NXORD_registerW_registerZ_extend27_upper27_lower10_triple
+	nxord $sp = $r13, 2305843009213693951 	#Opcode-kv3_v2-NXORD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	nxord $r0r1.lo = $r0r1r2r3.x, $r1 	#Opcode-kv3_v2-NXORD_registerW_registerZ_registerY_simple
+	nxord $tp = $r14, $fp 	#Opcode-kv3_v2-NXORD_registerW_registerZ_registerY_simple
 	;;
-	nxord $r0r1.hi = $r0r1r2r3.y, -64 	#Opcode-kv3_v2-NXORD_registerW_registerZ_signed10_simple
+	nxord $r15 = $rp, -64 	#Opcode-kv3_v2-NXORD_registerW_registerZ_signed10_simple
 	;;
-	nxord $r2 = $r2r3.lo, -8589934592 	#Opcode-kv3_v2-NXORD_registerW_registerZ_upper27_lower10_double
+	nxord $r16 = $r16r17.lo, -8589934592 	#Opcode-kv3_v2-NXORD_registerW_registerZ_upper27_lower10_double
 	;;
-	nxorw $r0r1r2r3.z = $r3, $r2r3.hi 	#Opcode-kv3_v2-NXORW_registerW_registerZ_registerY_simple
+	nxorw $r16r17r18r19.x = $r17, $r16r17.hi 	#Opcode-kv3_v2-NXORW_registerW_registerZ_registerY_simple
 	;;
-	nxorw $r0r1r2r3.t = $r4, -64 	#Opcode-kv3_v2-NXORW_registerW_registerZ_signed10_simple
+	nxorw $r16r17r18r19.y = $r18, -64 	#Opcode-kv3_v2-NXORW_registerW_registerZ_signed10_simple
 	;;
-	nxorw $r4r5.lo = $r4r5r6r7.x, -8589934592 	#Opcode-kv3_v2-NXORW_registerW_registerZ_upper27_lower10_double
+	nxorw $r18r19.lo = $r16r17r18r19.z, -8589934592 	#Opcode-kv3_v2-NXORW_registerW_registerZ_upper27_lower10_double
 	;;
-	ord $r5 = $r4r5.hi, 2305843009213693951 	#Opcode-kv3_v2-ORD_registerW_registerZ_extend27_upper27_lower10_triple
+	ord $r19 = $r18r19.hi, 2305843009213693951 	#Opcode-kv3_v2-ORD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	ord $r4r5r6r7.y = $r6, $r6r7.lo 	#Opcode-kv3_v2-ORD_registerW_registerZ_registerY_simple
+	ord $r16r17r18r19.t = $r20, $r20r21.lo 	#Opcode-kv3_v2-ORD_registerW_registerZ_registerY_simple
 	;;
-	ord $r4r5r6r7.z = $r7, -64 	#Opcode-kv3_v2-ORD_registerW_registerZ_signed10_simple
+	ord $r20r21r22r23.x = $r21, -64 	#Opcode-kv3_v2-ORD_registerW_registerZ_signed10_simple
 	;;
-	ord $r6r7.hi = $r4r5r6r7.t, -8589934592 	#Opcode-kv3_v2-ORD_registerW_registerZ_upper27_lower10_double
+	ord $r20r21.hi = $r20r21r22r23.y, -8589934592 	#Opcode-kv3_v2-ORD_registerW_registerZ_upper27_lower10_double
 	;;
-	ornd $r8 = $r8r9.lo, 2305843009213693951 	#Opcode-kv3_v2-ORND_registerW_registerZ_extend27_upper27_lower10_triple
+	ornd $r22 = $r22r23.lo, 2305843009213693951 	#Opcode-kv3_v2-ORND_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	ornd $r8r9r10r11.x = $r9, $r8r9.hi 	#Opcode-kv3_v2-ORND_registerW_registerZ_registerY_simple
+	ornd $r20r21r22r23.z = $r23, $r22r23.hi 	#Opcode-kv3_v2-ORND_registerW_registerZ_registerY_simple
 	;;
-	ornd $r8r9r10r11.y = $r10, -64 	#Opcode-kv3_v2-ORND_registerW_registerZ_signed10_simple
+	ornd $r20r21r22r23.t = $r24, -64 	#Opcode-kv3_v2-ORND_registerW_registerZ_signed10_simple
 	;;
-	ornd $r10r11.lo = $r8r9r10r11.z, -8589934592 	#Opcode-kv3_v2-ORND_registerW_registerZ_upper27_lower10_double
+	ornd $r24r25.lo = $r24r25r26r27.x, -8589934592 	#Opcode-kv3_v2-ORND_registerW_registerZ_upper27_lower10_double
 	;;
-	ornw $r11 = $r10r11.hi, $r8r9r10r11.t 	#Opcode-kv3_v2-ORNW_registerW_registerZ_registerY_simple
+	ornw $r25 = $r24r25.hi, $r24r25r26r27.y 	#Opcode-kv3_v2-ORNW_registerW_registerZ_registerY_simple
 	;;
-	ornw $r12 = $sp, -64 	#Opcode-kv3_v2-ORNW_registerW_registerZ_signed10_simple
+	ornw $r26 = $r26r27.lo, -64 	#Opcode-kv3_v2-ORNW_registerW_registerZ_signed10_simple
 	;;
-	ornw $r13 = $tp, -8589934592 	#Opcode-kv3_v2-ORNW_registerW_registerZ_upper27_lower10_double
+	ornw $r24r25r26r27.z = $r27, -8589934592 	#Opcode-kv3_v2-ORNW_registerW_registerZ_upper27_lower10_double
 	;;
-	orrbod $r14 = $fp 	#Opcode-kv3_v2-ORRBOD_registerW_registerZ_simple
+	orrbod $r26r27.hi = $r24r25r26r27.t 	#Opcode-kv3_v2-ORRBOD_registerW_registerZ_simple
 	;;
-	orrhqd $r15 = $rp 	#Opcode-kv3_v2-ORRHQD_registerW_registerZ_simple
+	orrhqd $r28 = $r28r29.lo 	#Opcode-kv3_v2-ORRHQD_registerW_registerZ_simple
 	;;
-	orrwpd $r16 = $r16r17.lo 	#Opcode-kv3_v2-ORRWPD_registerW_registerZ_simple
+	orrwpd $r28r29r30r31.x = $r29 	#Opcode-kv3_v2-ORRWPD_registerW_registerZ_simple
 	;;
-	orw $r16r17r18r19.x = $r17, $r16r17.hi 	#Opcode-kv3_v2-ORW_registerW_registerZ_registerY_simple
+	orw $r28r29.hi = $r28r29r30r31.y, $r30 	#Opcode-kv3_v2-ORW_registerW_registerZ_registerY_simple
 	;;
-	orw $r16r17r18r19.y = $r18, -64 	#Opcode-kv3_v2-ORW_registerW_registerZ_signed10_simple
+	orw $r30r31.lo = $r28r29r30r31.z, -64 	#Opcode-kv3_v2-ORW_registerW_registerZ_signed10_simple
 	;;
-	orw $r18r19.lo = $r16r17r18r19.z, -8589934592 	#Opcode-kv3_v2-ORW_registerW_registerZ_upper27_lower10_double
+	orw $r31 = $r30r31.hi, -8589934592 	#Opcode-kv3_v2-ORW_registerW_registerZ_upper27_lower10_double
 	;;
-	pcrel $r19 = 2305843009213693951 	#Opcode-kv3_v2-PCREL_registerW_extend27_upper27_lower10_triple
+	pcrel $r28r29r30r31.t = 2305843009213693951 	#Opcode-kv3_v2-PCREL_registerW_extend27_upper27_lower10_triple
 	;;
-	pcrel $r18r19.hi = -549755813888 	#Opcode-kv3_v2-PCREL_registerW_extend6_upper27_lower10_double
+	pcrel $r32 = -549755813888 	#Opcode-kv3_v2-PCREL_registerW_extend6_upper27_lower10_double
 	;;
-	pcrel $r16r17r18r19.t = -4096 	#Opcode-kv3_v2-PCREL_registerW_signed16_simple
+	pcrel $r32r33.lo = -4096 	#Opcode-kv3_v2-PCREL_registerW_signed16_simple
 	;;
 	ret 	#Opcode-kv3_v2-RET_simple
 	;;
 	rfe 	#Opcode-kv3_v2-RFE_simple
 	;;
-	rolwps $r20 = $r20r21.lo, $r20r21r22r23.x 	#Opcode-kv3_v2-ROLWPS_registerW_registerZ_registerY_simple
+	rolwps $r32r33r34r35.x = $r33, $r32r33.hi 	#Opcode-kv3_v2-ROLWPS_registerW_registerZ_registerY_simple
 	;;
-	rolwps $r21 = $r20r21.hi, 7 	#Opcode-kv3_v2-ROLWPS_registerW_registerZ_unsigned6_simple
+	rolwps $r32r33r34r35.y = $r34, 7 	#Opcode-kv3_v2-ROLWPS_registerW_registerZ_unsigned6_simple
 	;;
-	rolw $r20r21r22r23.y = $r22, $r22r23.lo 	#Opcode-kv3_v2-ROLW_registerW_registerZ_registerY_simple
+	rolw $r34r35.lo = $r32r33r34r35.z, $r35 	#Opcode-kv3_v2-ROLW_registerW_registerZ_registerY_simple
 	;;
-	rolw $r20r21r22r23.z = $r23, 7 	#Opcode-kv3_v2-ROLW_registerW_registerZ_unsigned6_simple
+	rolw $r34r35.hi = $r32r33r34r35.t, 7 	#Opcode-kv3_v2-ROLW_registerW_registerZ_unsigned6_simple
 	;;
-	rorwps $r22r23.hi = $r20r21r22r23.t, $r24 	#Opcode-kv3_v2-RORWPS_registerW_registerZ_registerY_simple
+	rorwps $r36 = $r36r37.lo, $r36r37r38r39.x 	#Opcode-kv3_v2-RORWPS_registerW_registerZ_registerY_simple
 	;;
-	rorwps $r24r25.lo = $r24r25r26r27.x, 7 	#Opcode-kv3_v2-RORWPS_registerW_registerZ_unsigned6_simple
+	rorwps $r37 = $r36r37.hi, 7 	#Opcode-kv3_v2-RORWPS_registerW_registerZ_unsigned6_simple
 	;;
-	rorw $r25 = $r24r25.hi, $r24r25r26r27.y 	#Opcode-kv3_v2-RORW_registerW_registerZ_registerY_simple
+	rorw $r36r37r38r39.y = $r38, $r38r39.lo 	#Opcode-kv3_v2-RORW_registerW_registerZ_registerY_simple
 	;;
-	rorw $r26 = $r26r27.lo, 7 	#Opcode-kv3_v2-RORW_registerW_registerZ_unsigned6_simple
+	rorw $r36r37r38r39.z = $r39, 7 	#Opcode-kv3_v2-RORW_registerW_registerZ_unsigned6_simple
 	;;
-	rswap $r24r25r26r27.z = $mmc 	#Opcode-kv3_v2-RSWAP_registerZ_systemAlone_simple
+	rswap $r38r39.hi = $mmc 	#Opcode-kv3_v2-RSWAP_registerZ_systemAlone_simple
 	;;
-	rswap $r27 = $s0 	#Opcode-kv3_v2-RSWAP_registerZ_systemS3_simple
+	rswap $r36r37r38r39.t = $s0 	#Opcode-kv3_v2-RSWAP_registerZ_systemS3_simple
 	;;
-	rswap $r26r27.hi = $pc 	#Opcode-kv3_v2-RSWAP_registerZ_systemS4_simple
+	rswap $r40 = $pc 	#Opcode-kv3_v2-RSWAP_registerZ_systemS4_simple
 	;;
-	sbfbo $r24r25r26r27.t = $r28, $r28r29.lo 	#Opcode-kv3_v2-SBFBO_registerW_registerZ_registerY_simple
+	sbfbo $r40r41.lo = $r40r41r42r43.x, $r41 	#Opcode-kv3_v2-SBFBO_registerW_registerZ_registerY_simple
 	;;
-	sbfbo $r28r29r30r31.x = $r29, 536870911.@ 	#Opcode-kv3_v2-SBFBO_registerW_registerZ_upper27_lower5_splat32_double
+	sbfbo $r40r41.hi = $r40r41r42r43.y, 536870911.@ 	#Opcode-kv3_v2-SBFBO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfcd.i $r28r29.hi = $r28r29r30r31.y, $r30 	#Opcode-kv3_v2-SBFCD.I_registerW_registerZ_registerY_simple
+	sbfcd.i $r42 = $r42r43.lo, $r40r41r42r43.z 	#Opcode-kv3_v2-SBFCD.I_registerW_registerZ_registerY_simple
 	;;
-	sbfcd.i $r30r31.lo = $r28r29r30r31.z, 536870911 	#Opcode-kv3_v2-SBFCD.I_registerW_registerZ_upper27_lower5_double
+	sbfcd.i $r43 = $r42r43.hi, 536870911 	#Opcode-kv3_v2-SBFCD.I_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfcd $r31 = $r30r31.hi, $r28r29r30r31.t 	#Opcode-kv3_v2-SBFCD_registerW_registerZ_registerY_simple
+	sbfcd $r40r41r42r43.t = $r44, $r44r45.lo 	#Opcode-kv3_v2-SBFCD_registerW_registerZ_registerY_simple
 	;;
-	sbfcd $r32 = $r32r33.lo, 536870911 	#Opcode-kv3_v2-SBFCD_registerW_registerZ_upper27_lower5_double
+	sbfcd $r44r45r46r47.x = $r45, 536870911 	#Opcode-kv3_v2-SBFCD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfd $r32r33r34r35.x = $r33, 2305843009213693951 	#Opcode-kv3_v2-SBFD_registerW_registerZ_extend27_upper27_lower10_triple
+	sbfd $r44r45.hi = $r44r45r46r47.y, 2305843009213693951 	#Opcode-kv3_v2-SBFD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	sbfd $r32r33.hi = $r32r33r34r35.y, $r34 	#Opcode-kv3_v2-SBFD_registerW_registerZ_registerY_simple
+	sbfd $r46 = $r46r47.lo, $r44r45r46r47.z 	#Opcode-kv3_v2-SBFD_registerW_registerZ_registerY_simple
 	;;
-	sbfd $r34r35.lo = $r32r33r34r35.z, -64 	#Opcode-kv3_v2-SBFD_registerW_registerZ_signed10_simple
+	sbfd $r47 = $r46r47.hi, -64 	#Opcode-kv3_v2-SBFD_registerW_registerZ_signed10_simple
 	;;
-	sbfd $r35 = $r34r35.hi, -8589934592 	#Opcode-kv3_v2-SBFD_registerW_registerZ_upper27_lower10_double
+	sbfd $r44r45r46r47.t = $r48, -8589934592 	#Opcode-kv3_v2-SBFD_registerW_registerZ_upper27_lower10_double
 	;;
-	sbfhq $r32r33r34r35.t = $r36, $r36r37.lo 	#Opcode-kv3_v2-SBFHQ_registerW_registerZ_registerY_simple
+	sbfhq $r48r49.lo = $r48r49r50r51.x, $r49 	#Opcode-kv3_v2-SBFHQ_registerW_registerZ_registerY_simple
 	;;
-	sbfhq $r36r37r38r39.x = $r37, 536870911 	#Opcode-kv3_v2-SBFHQ_registerW_registerZ_upper27_lower5_splat32_double
+	sbfhq $r48r49.hi = $r48r49r50r51.y, 536870911 	#Opcode-kv3_v2-SBFHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfsbo $r36r37.hi = $r36r37r38r39.y, $r38 	#Opcode-kv3_v2-SBFSBO_registerW_registerZ_registerY_simple
+	sbfsbo $r50 = $r50r51.lo, $r48r49r50r51.z 	#Opcode-kv3_v2-SBFSBO_registerW_registerZ_registerY_simple
 	;;
-	sbfsbo $r38r39.lo = $r36r37r38r39.z, 536870911.@ 	#Opcode-kv3_v2-SBFSBO_registerW_registerZ_upper27_lower5_splat32_double
+	sbfsbo $r51 = $r50r51.hi, 536870911.@ 	#Opcode-kv3_v2-SBFSBO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfsd $r39 = $r38r39.hi, $r36r37r38r39.t 	#Opcode-kv3_v2-SBFSD_registerW_registerZ_registerY_simple
+	sbfsd $r48r49r50r51.t = $r52, $r52r53.lo 	#Opcode-kv3_v2-SBFSD_registerW_registerZ_registerY_simple
 	;;
-	sbfsd $r40 = $r40r41.lo, 536870911 	#Opcode-kv3_v2-SBFSD_registerW_registerZ_upper27_lower5_splat32_double
+	sbfsd $r52r53r54r55.x = $r53, 536870911 	#Opcode-kv3_v2-SBFSD_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfshq $r40r41r42r43.x = $r41, $r40r41.hi 	#Opcode-kv3_v2-SBFSHQ_registerW_registerZ_registerY_simple
+	sbfshq $r52r53.hi = $r52r53r54r55.y, $r54 	#Opcode-kv3_v2-SBFSHQ_registerW_registerZ_registerY_simple
 	;;
-	sbfshq $r40r41r42r43.y = $r42, 536870911.@ 	#Opcode-kv3_v2-SBFSHQ_registerW_registerZ_upper27_lower5_splat32_double
+	sbfshq $r54r55.lo = $r52r53r54r55.z, 536870911.@ 	#Opcode-kv3_v2-SBFSHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfswp $r42r43.lo = $r40r41r42r43.z, $r43 	#Opcode-kv3_v2-SBFSWP_registerW_registerZ_registerY_simple
+	sbfswp $r55 = $r54r55.hi, $r52r53r54r55.t 	#Opcode-kv3_v2-SBFSWP_registerW_registerZ_registerY_simple
 	;;
-	sbfswp $r42r43.hi = $r40r41r42r43.t, 536870911 	#Opcode-kv3_v2-SBFSWP_registerW_registerZ_upper27_lower5_splat32_double
+	sbfswp $r56 = $r56r57.lo, 536870911 	#Opcode-kv3_v2-SBFSWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfsw $r44 = $r44r45.lo, $r44r45r46r47.x 	#Opcode-kv3_v2-SBFSW_registerW_registerZ_registerY_simple
+	sbfsw $r56r57r58r59.x = $r57, $r56r57.hi 	#Opcode-kv3_v2-SBFSW_registerW_registerZ_registerY_simple
 	;;
-	sbfsw $r45 = $r44r45.hi, 536870911 	#Opcode-kv3_v2-SBFSW_registerW_registerZ_upper27_lower5_double
+	sbfsw $r56r57r58r59.y = $r58, 536870911 	#Opcode-kv3_v2-SBFSW_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfusbo $r44r45r46r47.y = $r46, $r46r47.lo 	#Opcode-kv3_v2-SBFUSBO_registerW_registerZ_registerY_simple
+	sbfusbo $r58r59.lo = $r56r57r58r59.z, $r59 	#Opcode-kv3_v2-SBFUSBO_registerW_registerZ_registerY_simple
 	;;
-	sbfusbo $r44r45r46r47.z = $r47, 536870911.@ 	#Opcode-kv3_v2-SBFUSBO_registerW_registerZ_upper27_lower5_splat32_double
+	sbfusbo $r58r59.hi = $r56r57r58r59.t, 536870911.@ 	#Opcode-kv3_v2-SBFUSBO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfusd $r46r47.hi = $r44r45r46r47.t, $r48 	#Opcode-kv3_v2-SBFUSD_registerW_registerZ_registerY_simple
+	sbfusd $r60 = $r60r61.lo, $r60r61r62r63.x 	#Opcode-kv3_v2-SBFUSD_registerW_registerZ_registerY_simple
 	;;
-	sbfusd $r48r49.lo = $r48r49r50r51.x, 536870911 	#Opcode-kv3_v2-SBFUSD_registerW_registerZ_upper27_lower5_splat32_double
+	sbfusd $r61 = $r60r61.hi, 536870911 	#Opcode-kv3_v2-SBFUSD_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfushq $r49 = $r48r49.hi, $r48r49r50r51.y 	#Opcode-kv3_v2-SBFUSHQ_registerW_registerZ_registerY_simple
+	sbfushq $r60r61r62r63.y = $r62, $r62r63.lo 	#Opcode-kv3_v2-SBFUSHQ_registerW_registerZ_registerY_simple
 	;;
-	sbfushq $r50 = $r50r51.lo, 536870911.@ 	#Opcode-kv3_v2-SBFUSHQ_registerW_registerZ_upper27_lower5_splat32_double
+	sbfushq $r60r61r62r63.z = $r63, 536870911.@ 	#Opcode-kv3_v2-SBFUSHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfuswp $r48r49r50r51.z = $r51, $r50r51.hi 	#Opcode-kv3_v2-SBFUSWP_registerW_registerZ_registerY_simple
+	sbfuswp $r62r63.hi = $r60r61r62r63.t, $r0 	#Opcode-kv3_v2-SBFUSWP_registerW_registerZ_registerY_simple
 	;;
-	sbfuswp $r48r49r50r51.t = $r52, 536870911 	#Opcode-kv3_v2-SBFUSWP_registerW_registerZ_upper27_lower5_splat32_double
+	sbfuswp $r0r1.lo = $r0r1r2r3.x, 536870911 	#Opcode-kv3_v2-SBFUSWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfusw $r52r53.lo = $r52r53r54r55.x, $r53 	#Opcode-kv3_v2-SBFUSW_registerW_registerZ_registerY_simple
+	sbfusw $r1 = $r0r1.hi, $r0r1r2r3.y 	#Opcode-kv3_v2-SBFUSW_registerW_registerZ_registerY_simple
 	;;
-	sbfusw $r52r53.hi = $r52r53r54r55.y, 536870911 	#Opcode-kv3_v2-SBFUSW_registerW_registerZ_upper27_lower5_double
+	sbfusw $r2 = $r2r3.lo, 536870911 	#Opcode-kv3_v2-SBFUSW_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfuwd $r54 = $r54r55.lo, $r52r53r54r55.z 	#Opcode-kv3_v2-SBFUWD_registerW_registerZ_registerY_simple
+	sbfuwd $r0r1r2r3.z = $r3, $r2r3.hi 	#Opcode-kv3_v2-SBFUWD_registerW_registerZ_registerY_simple
 	;;
-	sbfuwd $r55 = $r54r55.hi, 536870911 	#Opcode-kv3_v2-SBFUWD_registerW_registerZ_upper27_lower5_double
+	sbfuwd $r0r1r2r3.t = $r4, 536870911 	#Opcode-kv3_v2-SBFUWD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfwd $r52r53r54r55.t = $r56, $r56r57.lo 	#Opcode-kv3_v2-SBFWD_registerW_registerZ_registerY_simple
+	sbfwd $r4r5.lo = $r4r5r6r7.x, $r5 	#Opcode-kv3_v2-SBFWD_registerW_registerZ_registerY_simple
 	;;
-	sbfwd $r56r57r58r59.x = $r57, 536870911 	#Opcode-kv3_v2-SBFWD_registerW_registerZ_upper27_lower5_double
+	sbfwd $r4r5.hi = $r4r5r6r7.y, 536870911 	#Opcode-kv3_v2-SBFWD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfwp $r56r57.hi = $r56r57r58r59.y, $r58 	#Opcode-kv3_v2-SBFWP_registerW_registerZ_registerY_simple
+	sbfwp $r6 = $r6r7.lo, $r4r5r6r7.z 	#Opcode-kv3_v2-SBFWP_registerW_registerZ_registerY_simple
 	;;
-	sbfwp $r58r59.lo = $r56r57r58r59.z, 536870911.@ 	#Opcode-kv3_v2-SBFWP_registerW_registerZ_upper27_lower5_splat32_double
+	sbfwp $r7 = $r6r7.hi, 536870911.@ 	#Opcode-kv3_v2-SBFWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfw $r59 = $r58r59.hi, $r56r57r58r59.t 	#Opcode-kv3_v2-SBFW_registerW_registerZ_registerY_simple
+	sbfw $r4r5r6r7.t = $r8, $r8r9.lo 	#Opcode-kv3_v2-SBFW_registerW_registerZ_registerY_simple
 	;;
-	sbfw $r60 = $r60r61.lo, -64 	#Opcode-kv3_v2-SBFW_registerW_registerZ_signed10_simple
+	sbfw $r8r9r10r11.x = $r9, -64 	#Opcode-kv3_v2-SBFW_registerW_registerZ_signed10_simple
 	;;
-	sbfw $r60r61r62r63.x = $r61, -8589934592 	#Opcode-kv3_v2-SBFW_registerW_registerZ_upper27_lower10_double
+	sbfw $r8r9.hi = $r8r9r10r11.y, -8589934592 	#Opcode-kv3_v2-SBFW_registerW_registerZ_upper27_lower10_double
 	;;
-	sbfx16bo $r60r61.hi = $r60r61r62r63.y, $r62 	#Opcode-kv3_v2-SBFX16BO_registerW_registerZ_registerY_simple
+	sbfx16bo $r10 = $r10r11.lo, $r8r9r10r11.z 	#Opcode-kv3_v2-SBFX16BO_registerW_registerZ_registerY_simple
 	;;
-	sbfx16bo $r62r63.lo = $r60r61r62r63.z, 536870911 	#Opcode-kv3_v2-SBFX16BO_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx16bo $r11 = $r10r11.hi, 536870911 	#Opcode-kv3_v2-SBFX16BO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx16d $r63 = $r62r63.hi, $r60r61r62r63.t 	#Opcode-kv3_v2-SBFX16D_registerW_registerZ_registerY_simple
+	sbfx16d $r8r9r10r11.t = $r12, $sp 	#Opcode-kv3_v2-SBFX16D_registerW_registerZ_registerY_simple
 	;;
-	sbfx16d $r0 = $r0r1.lo, 536870911.@ 	#Opcode-kv3_v2-SBFX16D_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx16d $r13 = $tp, 536870911.@ 	#Opcode-kv3_v2-SBFX16D_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx16hq $r0r1r2r3.x = $r1, $r0r1.hi 	#Opcode-kv3_v2-SBFX16HQ_registerW_registerZ_registerY_simple
+	sbfx16hq $r14 = $fp, $r15 	#Opcode-kv3_v2-SBFX16HQ_registerW_registerZ_registerY_simple
 	;;
-	sbfx16hq $r0r1r2r3.y = $r2, 536870911 	#Opcode-kv3_v2-SBFX16HQ_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx16hq $rp = $r16, 536870911 	#Opcode-kv3_v2-SBFX16HQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx16uwd $r2r3.lo = $r0r1r2r3.z, $r3 	#Opcode-kv3_v2-SBFX16UWD_registerW_registerZ_registerY_simple
+	sbfx16uwd $r16r17.lo = $r16r17r18r19.x, $r17 	#Opcode-kv3_v2-SBFX16UWD_registerW_registerZ_registerY_simple
 	;;
-	sbfx16uwd $r2r3.hi = $r0r1r2r3.t, 536870911 	#Opcode-kv3_v2-SBFX16UWD_registerW_registerZ_upper27_lower5_double
+	sbfx16uwd $r16r17.hi = $r16r17r18r19.y, 536870911 	#Opcode-kv3_v2-SBFX16UWD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx16wd $r4 = $r4r5.lo, $r4r5r6r7.x 	#Opcode-kv3_v2-SBFX16WD_registerW_registerZ_registerY_simple
+	sbfx16wd $r18 = $r18r19.lo, $r16r17r18r19.z 	#Opcode-kv3_v2-SBFX16WD_registerW_registerZ_registerY_simple
 	;;
-	sbfx16wd $r5 = $r4r5.hi, 536870911 	#Opcode-kv3_v2-SBFX16WD_registerW_registerZ_upper27_lower5_double
+	sbfx16wd $r19 = $r18r19.hi, 536870911 	#Opcode-kv3_v2-SBFX16WD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx16wp $r4r5r6r7.y = $r6, $r6r7.lo 	#Opcode-kv3_v2-SBFX16WP_registerW_registerZ_registerY_simple
+	sbfx16wp $r16r17r18r19.t = $r20, $r20r21.lo 	#Opcode-kv3_v2-SBFX16WP_registerW_registerZ_registerY_simple
 	;;
-	sbfx16wp $r4r5r6r7.z = $r7, 536870911.@ 	#Opcode-kv3_v2-SBFX16WP_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx16wp $r20r21r22r23.x = $r21, 536870911.@ 	#Opcode-kv3_v2-SBFX16WP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx16w $r6r7.hi = $r4r5r6r7.t, $r8 	#Opcode-kv3_v2-SBFX16W_registerW_registerZ_registerY_simple
+	sbfx16w $r20r21.hi = $r20r21r22r23.y, $r22 	#Opcode-kv3_v2-SBFX16W_registerW_registerZ_registerY_simple
 	;;
-	sbfx16w $r8r9.lo = $r8r9r10r11.x, 536870911 	#Opcode-kv3_v2-SBFX16W_registerW_registerZ_upper27_lower5_double
+	sbfx16w $r22r23.lo = $r20r21r22r23.z, 536870911 	#Opcode-kv3_v2-SBFX16W_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx2bo $r9 = $r8r9.hi, $r8r9r10r11.y 	#Opcode-kv3_v2-SBFX2BO_registerW_registerZ_registerY_simple
+	sbfx2bo $r23 = $r22r23.hi, $r20r21r22r23.t 	#Opcode-kv3_v2-SBFX2BO_registerW_registerZ_registerY_simple
 	;;
-	sbfx2bo $r10 = $r10r11.lo, 536870911 	#Opcode-kv3_v2-SBFX2BO_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx2bo $r24 = $r24r25.lo, 536870911 	#Opcode-kv3_v2-SBFX2BO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx2d $r8r9r10r11.z = $r11, $r10r11.hi 	#Opcode-kv3_v2-SBFX2D_registerW_registerZ_registerY_simple
+	sbfx2d $r24r25r26r27.x = $r25, $r24r25.hi 	#Opcode-kv3_v2-SBFX2D_registerW_registerZ_registerY_simple
 	;;
-	sbfx2d $r8r9r10r11.t = $r12, 536870911.@ 	#Opcode-kv3_v2-SBFX2D_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx2d $r24r25r26r27.y = $r26, 536870911.@ 	#Opcode-kv3_v2-SBFX2D_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx2hq $sp = $r13, $tp 	#Opcode-kv3_v2-SBFX2HQ_registerW_registerZ_registerY_simple
+	sbfx2hq $r26r27.lo = $r24r25r26r27.z, $r27 	#Opcode-kv3_v2-SBFX2HQ_registerW_registerZ_registerY_simple
 	;;
-	sbfx2hq $r14 = $fp, 536870911 	#Opcode-kv3_v2-SBFX2HQ_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx2hq $r26r27.hi = $r24r25r26r27.t, 536870911 	#Opcode-kv3_v2-SBFX2HQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx2uwd $r15 = $rp, $r16 	#Opcode-kv3_v2-SBFX2UWD_registerW_registerZ_registerY_simple
+	sbfx2uwd $r28 = $r28r29.lo, $r28r29r30r31.x 	#Opcode-kv3_v2-SBFX2UWD_registerW_registerZ_registerY_simple
 	;;
-	sbfx2uwd $r16r17.lo = $r16r17r18r19.x, 536870911 	#Opcode-kv3_v2-SBFX2UWD_registerW_registerZ_upper27_lower5_double
+	sbfx2uwd $r29 = $r28r29.hi, 536870911 	#Opcode-kv3_v2-SBFX2UWD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx2wd $r17 = $r16r17.hi, $r16r17r18r19.y 	#Opcode-kv3_v2-SBFX2WD_registerW_registerZ_registerY_simple
+	sbfx2wd $r28r29r30r31.y = $r30, $r30r31.lo 	#Opcode-kv3_v2-SBFX2WD_registerW_registerZ_registerY_simple
 	;;
-	sbfx2wd $r18 = $r18r19.lo, 536870911 	#Opcode-kv3_v2-SBFX2WD_registerW_registerZ_upper27_lower5_double
+	sbfx2wd $r28r29r30r31.z = $r31, 536870911 	#Opcode-kv3_v2-SBFX2WD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx2wp $r16r17r18r19.z = $r19, $r18r19.hi 	#Opcode-kv3_v2-SBFX2WP_registerW_registerZ_registerY_simple
+	sbfx2wp $r30r31.hi = $r28r29r30r31.t, $r32 	#Opcode-kv3_v2-SBFX2WP_registerW_registerZ_registerY_simple
 	;;
-	sbfx2wp $r16r17r18r19.t = $r20, 536870911.@ 	#Opcode-kv3_v2-SBFX2WP_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx2wp $r32r33.lo = $r32r33r34r35.x, 536870911.@ 	#Opcode-kv3_v2-SBFX2WP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx2w $r20r21.lo = $r20r21r22r23.x, $r21 	#Opcode-kv3_v2-SBFX2W_registerW_registerZ_registerY_simple
+	sbfx2w $r33 = $r32r33.hi, $r32r33r34r35.y 	#Opcode-kv3_v2-SBFX2W_registerW_registerZ_registerY_simple
 	;;
-	sbfx2w $r20r21.hi = $r20r21r22r23.y, 536870911 	#Opcode-kv3_v2-SBFX2W_registerW_registerZ_upper27_lower5_double
+	sbfx2w $r34 = $r34r35.lo, 536870911 	#Opcode-kv3_v2-SBFX2W_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx32d $r22 = $r22r23.lo, $r20r21r22r23.z 	#Opcode-kv3_v2-SBFX32D_registerW_registerZ_registerY_simple
+	sbfx32d $r32r33r34r35.z = $r35, $r34r35.hi 	#Opcode-kv3_v2-SBFX32D_registerW_registerZ_registerY_simple
 	;;
-	sbfx32d $r23 = $r22r23.hi, 536870911 	#Opcode-kv3_v2-SBFX32D_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx32d $r32r33r34r35.t = $r36, 536870911 	#Opcode-kv3_v2-SBFX32D_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx32uwd $r20r21r22r23.t = $r24, $r24r25.lo 	#Opcode-kv3_v2-SBFX32UWD_registerW_registerZ_registerY_simple
+	sbfx32uwd $r36r37.lo = $r36r37r38r39.x, $r37 	#Opcode-kv3_v2-SBFX32UWD_registerW_registerZ_registerY_simple
 	;;
-	sbfx32uwd $r24r25r26r27.x = $r25, 536870911 	#Opcode-kv3_v2-SBFX32UWD_registerW_registerZ_upper27_lower5_double
+	sbfx32uwd $r36r37.hi = $r36r37r38r39.y, 536870911 	#Opcode-kv3_v2-SBFX32UWD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx32wd $r24r25.hi = $r24r25r26r27.y, $r26 	#Opcode-kv3_v2-SBFX32WD_registerW_registerZ_registerY_simple
+	sbfx32wd $r38 = $r38r39.lo, $r36r37r38r39.z 	#Opcode-kv3_v2-SBFX32WD_registerW_registerZ_registerY_simple
 	;;
-	sbfx32wd $r26r27.lo = $r24r25r26r27.z, 536870911 	#Opcode-kv3_v2-SBFX32WD_registerW_registerZ_upper27_lower5_double
+	sbfx32wd $r39 = $r38r39.hi, 536870911 	#Opcode-kv3_v2-SBFX32WD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx32w $r27 = $r26r27.hi, $r24r25r26r27.t 	#Opcode-kv3_v2-SBFX32W_registerW_registerZ_registerY_simple
+	sbfx32w $r36r37r38r39.t = $r40, $r40r41.lo 	#Opcode-kv3_v2-SBFX32W_registerW_registerZ_registerY_simple
 	;;
-	sbfx32w $r28 = $r28r29.lo, 536870911 	#Opcode-kv3_v2-SBFX32W_registerW_registerZ_upper27_lower5_double
+	sbfx32w $r40r41r42r43.x = $r41, 536870911 	#Opcode-kv3_v2-SBFX32W_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx4bo $r28r29r30r31.x = $r29, $r28r29.hi 	#Opcode-kv3_v2-SBFX4BO_registerW_registerZ_registerY_simple
+	sbfx4bo $r40r41.hi = $r40r41r42r43.y, $r42 	#Opcode-kv3_v2-SBFX4BO_registerW_registerZ_registerY_simple
 	;;
-	sbfx4bo $r28r29r30r31.y = $r30, 536870911.@ 	#Opcode-kv3_v2-SBFX4BO_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx4bo $r42r43.lo = $r40r41r42r43.z, 536870911.@ 	#Opcode-kv3_v2-SBFX4BO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx4d $r30r31.lo = $r28r29r30r31.z, $r31 	#Opcode-kv3_v2-SBFX4D_registerW_registerZ_registerY_simple
+	sbfx4d $r43 = $r42r43.hi, $r40r41r42r43.t 	#Opcode-kv3_v2-SBFX4D_registerW_registerZ_registerY_simple
 	;;
-	sbfx4d $r30r31.hi = $r28r29r30r31.t, 536870911 	#Opcode-kv3_v2-SBFX4D_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx4d $r44 = $r44r45.lo, 536870911 	#Opcode-kv3_v2-SBFX4D_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx4hq $r32 = $r32r33.lo, $r32r33r34r35.x 	#Opcode-kv3_v2-SBFX4HQ_registerW_registerZ_registerY_simple
+	sbfx4hq $r44r45r46r47.x = $r45, $r44r45.hi 	#Opcode-kv3_v2-SBFX4HQ_registerW_registerZ_registerY_simple
 	;;
-	sbfx4hq $r33 = $r32r33.hi, 536870911.@ 	#Opcode-kv3_v2-SBFX4HQ_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx4hq $r44r45r46r47.y = $r46, 536870911.@ 	#Opcode-kv3_v2-SBFX4HQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx4uwd $r32r33r34r35.y = $r34, $r34r35.lo 	#Opcode-kv3_v2-SBFX4UWD_registerW_registerZ_registerY_simple
+	sbfx4uwd $r46r47.lo = $r44r45r46r47.z, $r47 	#Opcode-kv3_v2-SBFX4UWD_registerW_registerZ_registerY_simple
 	;;
-	sbfx4uwd $r32r33r34r35.z = $r35, 536870911 	#Opcode-kv3_v2-SBFX4UWD_registerW_registerZ_upper27_lower5_double
+	sbfx4uwd $r46r47.hi = $r44r45r46r47.t, 536870911 	#Opcode-kv3_v2-SBFX4UWD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx4wd $r34r35.hi = $r32r33r34r35.t, $r36 	#Opcode-kv3_v2-SBFX4WD_registerW_registerZ_registerY_simple
+	sbfx4wd $r48 = $r48r49.lo, $r48r49r50r51.x 	#Opcode-kv3_v2-SBFX4WD_registerW_registerZ_registerY_simple
 	;;
-	sbfx4wd $r36r37.lo = $r36r37r38r39.x, 536870911 	#Opcode-kv3_v2-SBFX4WD_registerW_registerZ_upper27_lower5_double
+	sbfx4wd $r49 = $r48r49.hi, 536870911 	#Opcode-kv3_v2-SBFX4WD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx4wp $r37 = $r36r37.hi, $r36r37r38r39.y 	#Opcode-kv3_v2-SBFX4WP_registerW_registerZ_registerY_simple
+	sbfx4wp $r48r49r50r51.y = $r50, $r50r51.lo 	#Opcode-kv3_v2-SBFX4WP_registerW_registerZ_registerY_simple
 	;;
-	sbfx4wp $r38 = $r38r39.lo, 536870911 	#Opcode-kv3_v2-SBFX4WP_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx4wp $r48r49r50r51.z = $r51, 536870911 	#Opcode-kv3_v2-SBFX4WP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx4w $r36r37r38r39.z = $r39, $r38r39.hi 	#Opcode-kv3_v2-SBFX4W_registerW_registerZ_registerY_simple
+	sbfx4w $r50r51.hi = $r48r49r50r51.t, $r52 	#Opcode-kv3_v2-SBFX4W_registerW_registerZ_registerY_simple
 	;;
-	sbfx4w $r36r37r38r39.t = $r40, 536870911 	#Opcode-kv3_v2-SBFX4W_registerW_registerZ_upper27_lower5_double
+	sbfx4w $r52r53.lo = $r52r53r54r55.x, 536870911 	#Opcode-kv3_v2-SBFX4W_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx64d $r40r41.lo = $r40r41r42r43.x, $r41 	#Opcode-kv3_v2-SBFX64D_registerW_registerZ_registerY_simple
+	sbfx64d $r53 = $r52r53.hi, $r52r53r54r55.y 	#Opcode-kv3_v2-SBFX64D_registerW_registerZ_registerY_simple
 	;;
-	sbfx64d $r40r41.hi = $r40r41r42r43.y, 536870911.@ 	#Opcode-kv3_v2-SBFX64D_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx64d $r54 = $r54r55.lo, 536870911.@ 	#Opcode-kv3_v2-SBFX64D_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx64uwd $r42 = $r42r43.lo, $r40r41r42r43.z 	#Opcode-kv3_v2-SBFX64UWD_registerW_registerZ_registerY_simple
+	sbfx64uwd $r52r53r54r55.z = $r55, $r54r55.hi 	#Opcode-kv3_v2-SBFX64UWD_registerW_registerZ_registerY_simple
 	;;
-	sbfx64uwd $r43 = $r42r43.hi, 536870911 	#Opcode-kv3_v2-SBFX64UWD_registerW_registerZ_upper27_lower5_double
+	sbfx64uwd $r52r53r54r55.t = $r56, 536870911 	#Opcode-kv3_v2-SBFX64UWD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx64wd $r40r41r42r43.t = $r44, $r44r45.lo 	#Opcode-kv3_v2-SBFX64WD_registerW_registerZ_registerY_simple
+	sbfx64wd $r56r57.lo = $r56r57r58r59.x, $r57 	#Opcode-kv3_v2-SBFX64WD_registerW_registerZ_registerY_simple
 	;;
-	sbfx64wd $r44r45r46r47.x = $r45, 536870911 	#Opcode-kv3_v2-SBFX64WD_registerW_registerZ_upper27_lower5_double
+	sbfx64wd $r56r57.hi = $r56r57r58r59.y, 536870911 	#Opcode-kv3_v2-SBFX64WD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx64w $r44r45.hi = $r44r45r46r47.y, $r46 	#Opcode-kv3_v2-SBFX64W_registerW_registerZ_registerY_simple
+	sbfx64w $r58 = $r58r59.lo, $r56r57r58r59.z 	#Opcode-kv3_v2-SBFX64W_registerW_registerZ_registerY_simple
 	;;
-	sbfx64w $r46r47.lo = $r44r45r46r47.z, 536870911 	#Opcode-kv3_v2-SBFX64W_registerW_registerZ_upper27_lower5_double
+	sbfx64w $r59 = $r58r59.hi, 536870911 	#Opcode-kv3_v2-SBFX64W_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx8bo $r47 = $r46r47.hi, $r44r45r46r47.t 	#Opcode-kv3_v2-SBFX8BO_registerW_registerZ_registerY_simple
+	sbfx8bo $r56r57r58r59.t = $r60, $r60r61.lo 	#Opcode-kv3_v2-SBFX8BO_registerW_registerZ_registerY_simple
 	;;
-	sbfx8bo $r48 = $r48r49.lo, 536870911 	#Opcode-kv3_v2-SBFX8BO_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx8bo $r60r61r62r63.x = $r61, 536870911 	#Opcode-kv3_v2-SBFX8BO_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx8d $r48r49r50r51.x = $r49, $r48r49.hi 	#Opcode-kv3_v2-SBFX8D_registerW_registerZ_registerY_simple
+	sbfx8d $r60r61.hi = $r60r61r62r63.y, $r62 	#Opcode-kv3_v2-SBFX8D_registerW_registerZ_registerY_simple
 	;;
-	sbfx8d $r48r49r50r51.y = $r50, 536870911.@ 	#Opcode-kv3_v2-SBFX8D_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx8d $r62r63.lo = $r60r61r62r63.z, 536870911.@ 	#Opcode-kv3_v2-SBFX8D_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx8hq $r50r51.lo = $r48r49r50r51.z, $r51 	#Opcode-kv3_v2-SBFX8HQ_registerW_registerZ_registerY_simple
+	sbfx8hq $r63 = $r62r63.hi, $r60r61r62r63.t 	#Opcode-kv3_v2-SBFX8HQ_registerW_registerZ_registerY_simple
 	;;
-	sbfx8hq $r50r51.hi = $r48r49r50r51.t, 536870911 	#Opcode-kv3_v2-SBFX8HQ_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx8hq $r0 = $r0r1.lo, 536870911 	#Opcode-kv3_v2-SBFX8HQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx8uwd $r52 = $r52r53.lo, $r52r53r54r55.x 	#Opcode-kv3_v2-SBFX8UWD_registerW_registerZ_registerY_simple
+	sbfx8uwd $r0r1r2r3.x = $r1, $r0r1.hi 	#Opcode-kv3_v2-SBFX8UWD_registerW_registerZ_registerY_simple
 	;;
-	sbfx8uwd $r53 = $r52r53.hi, 536870911 	#Opcode-kv3_v2-SBFX8UWD_registerW_registerZ_upper27_lower5_double
+	sbfx8uwd $r0r1r2r3.y = $r2, 536870911 	#Opcode-kv3_v2-SBFX8UWD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx8wd $r52r53r54r55.y = $r54, $r54r55.lo 	#Opcode-kv3_v2-SBFX8WD_registerW_registerZ_registerY_simple
+	sbfx8wd $r2r3.lo = $r0r1r2r3.z, $r3 	#Opcode-kv3_v2-SBFX8WD_registerW_registerZ_registerY_simple
 	;;
-	sbfx8wd $r52r53r54r55.z = $r55, 536870911 	#Opcode-kv3_v2-SBFX8WD_registerW_registerZ_upper27_lower5_double
+	sbfx8wd $r2r3.hi = $r0r1r2r3.t, 536870911 	#Opcode-kv3_v2-SBFX8WD_registerW_registerZ_upper27_lower5_double
 	;;
-	sbfx8wp $r54r55.hi = $r52r53r54r55.t, $r56 	#Opcode-kv3_v2-SBFX8WP_registerW_registerZ_registerY_simple
+	sbfx8wp $r4 = $r4r5.lo, $r4r5r6r7.x 	#Opcode-kv3_v2-SBFX8WP_registerW_registerZ_registerY_simple
 	;;
-	sbfx8wp $r56r57.lo = $r56r57r58r59.x, 536870911.@ 	#Opcode-kv3_v2-SBFX8WP_registerW_registerZ_upper27_lower5_splat32_double
+	sbfx8wp $r5 = $r4r5.hi, 536870911.@ 	#Opcode-kv3_v2-SBFX8WP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	sbfx8w $r57 = $r56r57.hi, $r56r57r58r59.y 	#Opcode-kv3_v2-SBFX8W_registerW_registerZ_registerY_simple
+	sbfx8w $r4r5r6r7.y = $r6, $r6r7.lo 	#Opcode-kv3_v2-SBFX8W_registerW_registerZ_registerY_simple
 	;;
-	sbfx8w $r58 = $r58r59.lo, 536870911 	#Opcode-kv3_v2-SBFX8W_registerW_registerZ_upper27_lower5_double
+	sbfx8w $r4r5r6r7.z = $r7, 536870911 	#Opcode-kv3_v2-SBFX8W_registerW_registerZ_upper27_lower5_double
 	;;
-	sbmm8 $r56r57r58r59.z = $r59, 2305843009213693951 	#Opcode-kv3_v2-SBMM8_registerW_registerZ_extend27_upper27_lower10_triple
+	sbmm8 $r6r7.hi = $r4r5r6r7.t, 2305843009213693951 	#Opcode-kv3_v2-SBMM8_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	sbmm8 $r58r59.hi = $r56r57r58r59.t, $r60 	#Opcode-kv3_v2-SBMM8_registerW_registerZ_registerY_simple
+	sbmm8 $r8 = $r8r9.lo, $r8r9r10r11.x 	#Opcode-kv3_v2-SBMM8_registerW_registerZ_registerY_simple
 	;;
-	sbmm8 $r60r61.lo = $r60r61r62r63.x, -64 	#Opcode-kv3_v2-SBMM8_registerW_registerZ_signed10_simple
+	sbmm8 $r9 = $r8r9.hi, -64 	#Opcode-kv3_v2-SBMM8_registerW_registerZ_signed10_simple
 	;;
-	sbmm8 $r61 = $r60r61.hi, -8589934592 	#Opcode-kv3_v2-SBMM8_registerW_registerZ_upper27_lower10_double
+	sbmm8 $r8r9r10r11.y = $r10, -8589934592 	#Opcode-kv3_v2-SBMM8_registerW_registerZ_upper27_lower10_double
 	;;
-	sbmmt8 $r60r61r62r63.y = $r62, 2305843009213693951 	#Opcode-kv3_v2-SBMMT8_registerW_registerZ_extend27_upper27_lower10_triple
+	sbmmt8 $r10r11.lo = $r8r9r10r11.z, 2305843009213693951 	#Opcode-kv3_v2-SBMMT8_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	sbmmt8 $r62r63.lo = $r60r61r62r63.z, $r63 	#Opcode-kv3_v2-SBMMT8_registerW_registerZ_registerY_simple
+	sbmmt8 $r11 = $r10r11.hi, $r8r9r10r11.t 	#Opcode-kv3_v2-SBMMT8_registerW_registerZ_registerY_simple
 	;;
-	sbmmt8 $r62r63.hi = $r60r61r62r63.t, -64 	#Opcode-kv3_v2-SBMMT8_registerW_registerZ_signed10_simple
+	sbmmt8 $r12 = $sp, -64 	#Opcode-kv3_v2-SBMMT8_registerW_registerZ_signed10_simple
 	;;
-	sbmmt8 $r0 = $r0r1.lo, -8589934592 	#Opcode-kv3_v2-SBMMT8_registerW_registerZ_upper27_lower10_double
+	sbmmt8 $r13 = $tp, -8589934592 	#Opcode-kv3_v2-SBMMT8_registerW_registerZ_upper27_lower10_double
 	;;
-	sb $r0r1r2r3.x[$r1] = $r0r1.hi 	#Opcode-kv3_v2-SB_doscale_registerY_registerZ_registerT_simple
+	sb $r14[$fp] = $r15 	#Opcode-kv3_v2-SB_doscale_registerY_registerZ_registerT_simple
 	;;
-	sb 2305843009213693951[$r0r1r2r3.y] = $r2 	#Opcode-kv3_v2-SB_extend27_upper27_lower10_registerZ_registerT_triple
+	sb 2305843009213693951[$rp] = $r16 	#Opcode-kv3_v2-SB_extend27_upper27_lower10_registerZ_registerT_triple
 	;;
-	sb.dlez $r2r3.lo? -1125899906842624[$r0r1r2r3.z] = $r3 	#Opcode-kv3_v2-SB_lsucond_registerY_extend27_offset27_registerZ_registerT_triple
+	sb.dlez $r16r17.lo? -1125899906842624[$r16r17r18r19.x] = $r17 	#Opcode-kv3_v2-SB_lsucond_registerY_extend27_offset27_registerZ_registerT_triple
 	;;
-	sb.dgtz $r2r3.hi? -8388608[$r0r1r2r3.t] = $r4 	#Opcode-kv3_v2-SB_lsucond_registerY_offset27_registerZ_registerT_double
+	sb.dgtz $r16r17.hi? -8388608[$r16r17r18r19.y] = $r18 	#Opcode-kv3_v2-SB_lsucond_registerY_offset27_registerZ_registerT_double
 	;;
-	sb.odd $r4r5.lo? [$r4r5r6r7.x] = $r5 	#Opcode-kv3_v2-SB_lsucond_registerY_registerZ_registerT_simple
+	sb.odd $r18r19.lo? [$r16r17r18r19.z] = $r19 	#Opcode-kv3_v2-SB_lsucond_registerY_registerZ_registerT_simple
 	;;
-	sb -64[$r4r5.hi] = $r4r5r6r7.y 	#Opcode-kv3_v2-SB_signed10_registerZ_registerT_simple
+	sb -64[$r18r19.hi] = $r16r17r18r19.t 	#Opcode-kv3_v2-SB_signed10_registerZ_registerT_simple
 	;;
-	sb -8589934592[$r6] = $r6r7.lo 	#Opcode-kv3_v2-SB_upper27_lower10_registerZ_registerT_double
+	sb -8589934592[$r20] = $r20r21.lo 	#Opcode-kv3_v2-SB_upper27_lower10_registerZ_registerT_double
 	;;
-	scall $r4r5r6r7.z 	#Opcode-kv3_v2-SCALL_registerZ_simple
+	scall $r20r21r22r23.x 	#Opcode-kv3_v2-SCALL_registerZ_simple
 	;;
 	scall 511 	#Opcode-kv3_v2-SCALL_sysnumber_simple
 	;;
-	sd.xs $r7[$r6r7.hi] = $r4r5r6r7.t 	#Opcode-kv3_v2-SD_doscale_registerY_registerZ_registerT_simple
+	sd.xs $r21[$r20r21.hi] = $r20r21r22r23.y 	#Opcode-kv3_v2-SD_doscale_registerY_registerZ_registerT_simple
 	;;
-	sd 2305843009213693951[$r8] = $r8r9.lo 	#Opcode-kv3_v2-SD_extend27_upper27_lower10_registerZ_registerT_triple
+	sd 2305843009213693951[$r22] = $r22r23.lo 	#Opcode-kv3_v2-SD_extend27_upper27_lower10_registerZ_registerT_triple
 	;;
-	sd.even $r8r9r10r11.x? -1125899906842624[$r9] = $r8r9.hi 	#Opcode-kv3_v2-SD_lsucond_registerY_extend27_offset27_registerZ_registerT_triple
+	sd.even $r20r21r22r23.z? -1125899906842624[$r23] = $r22r23.hi 	#Opcode-kv3_v2-SD_lsucond_registerY_extend27_offset27_registerZ_registerT_triple
 	;;
-	sd.wnez $r8r9r10r11.y? -8388608[$r10] = $r10r11.lo 	#Opcode-kv3_v2-SD_lsucond_registerY_offset27_registerZ_registerT_double
+	sd.wnez $r20r21r22r23.t? -8388608[$r24] = $r24r25.lo 	#Opcode-kv3_v2-SD_lsucond_registerY_offset27_registerZ_registerT_double
 	;;
-	sd.weqz $r8r9r10r11.z? [$r11] = $r10r11.hi 	#Opcode-kv3_v2-SD_lsucond_registerY_registerZ_registerT_simple
+	sd.weqz $r24r25r26r27.x? [$r25] = $r24r25.hi 	#Opcode-kv3_v2-SD_lsucond_registerY_registerZ_registerT_simple
 	;;
-	sd -64[$r8r9r10r11.t] = $r12 	#Opcode-kv3_v2-SD_signed10_registerZ_registerT_simple
+	sd -64[$r24r25r26r27.y] = $r26 	#Opcode-kv3_v2-SD_signed10_registerZ_registerT_simple
 	;;
-	sd -8589934592[$sp] = $r13 	#Opcode-kv3_v2-SD_upper27_lower10_registerZ_registerT_double
+	sd -8589934592[$r26r27.lo] = $r24r25r26r27.z 	#Opcode-kv3_v2-SD_upper27_lower10_registerZ_registerT_double
 	;;
-	set $s28 = $tp 	#Opcode-kv3_v2-SET_systemAlone_registerZ_simple
+	set $s28 = $r27 	#Opcode-kv3_v2-SET_systemAlone_registerZ_simple
 	;;
-	set $ra = $r14 	#Opcode-kv3_v2-SET_systemRA_registerZ_simple
+	set $ra = $r26r27.hi 	#Opcode-kv3_v2-SET_systemRA_registerZ_simple
 	;;
-	set $ps = $fp 	#Opcode-kv3_v2-SET_systemT3_registerZ_simple
+	set $ps = $r24r25r26r27.t 	#Opcode-kv3_v2-SET_systemT3_registerZ_simple
 	;;
-	set $ps = $r15 	#Opcode-kv3_v2-SET_systemT4_registerZ_simple
+	set $ps = $r28 	#Opcode-kv3_v2-SET_systemT4_registerZ_simple
 	;;
-	sh $rp[$r16] = $r16r17.lo 	#Opcode-kv3_v2-SH_doscale_registerY_registerZ_registerT_simple
+	sh $r28r29.lo[$r28r29r30r31.x] = $r29 	#Opcode-kv3_v2-SH_doscale_registerY_registerZ_registerT_simple
 	;;
-	sh 2305843009213693951[$r16r17r18r19.x] = $r17 	#Opcode-kv3_v2-SH_extend27_upper27_lower10_registerZ_registerT_triple
+	sh 2305843009213693951[$r28r29.hi] = $r28r29r30r31.y 	#Opcode-kv3_v2-SH_extend27_upper27_lower10_registerZ_registerT_triple
 	;;
-	sh.wltz $r16r17.hi? -1125899906842624[$r16r17r18r19.y] = $r18 	#Opcode-kv3_v2-SH_lsucond_registerY_extend27_offset27_registerZ_registerT_triple
+	sh.wltz $r30? -1125899906842624[$r30r31.lo] = $r28r29r30r31.z 	#Opcode-kv3_v2-SH_lsucond_registerY_extend27_offset27_registerZ_registerT_triple
 	;;
-	sh.wgez $r18r19.lo? -8388608[$r16r17r18r19.z] = $r19 	#Opcode-kv3_v2-SH_lsucond_registerY_offset27_registerZ_registerT_double
+	sh.wgez $r31? -8388608[$r30r31.hi] = $r28r29r30r31.t 	#Opcode-kv3_v2-SH_lsucond_registerY_offset27_registerZ_registerT_double
 	;;
-	sh.wlez $r18r19.hi? [$r16r17r18r19.t] = $r20 	#Opcode-kv3_v2-SH_lsucond_registerY_registerZ_registerT_simple
+	sh.wlez $r32? [$r32r33.lo] = $r32r33r34r35.x 	#Opcode-kv3_v2-SH_lsucond_registerY_registerZ_registerT_simple
 	;;
-	sh -64[$r20r21.lo] = $r20r21r22r23.x 	#Opcode-kv3_v2-SH_signed10_registerZ_registerT_simple
+	sh -64[$r33] = $r32r33.hi 	#Opcode-kv3_v2-SH_signed10_registerZ_registerT_simple
 	;;
-	sh -8589934592[$r21] = $r20r21.hi 	#Opcode-kv3_v2-SH_upper27_lower10_registerZ_registerT_double
+	sh -8589934592[$r32r33r34r35.y] = $r34 	#Opcode-kv3_v2-SH_upper27_lower10_registerZ_registerT_double
 	;;
 	sleep 	#Opcode-kv3_v2-SLEEP_simple
 	;;
-	sllbos $r20r21r22r23.y = $r22, $r22r23.lo 	#Opcode-kv3_v2-SLLBOS_registerW_registerZ_registerY_simple
+	sllbos $r34r35.lo = $r32r33r34r35.z, $r35 	#Opcode-kv3_v2-SLLBOS_registerW_registerZ_registerY_simple
 	;;
-	sllbos $r20r21r22r23.z = $r23, 7 	#Opcode-kv3_v2-SLLBOS_registerW_registerZ_unsigned6_simple
+	sllbos $r34r35.hi = $r32r33r34r35.t, 7 	#Opcode-kv3_v2-SLLBOS_registerW_registerZ_unsigned6_simple
 	;;
-	slld $r22r23.hi = $r20r21r22r23.t, $r24 	#Opcode-kv3_v2-SLLD_registerW_registerZ_registerY_simple
+	slld $r36 = $r36r37.lo, $r36r37r38r39.x 	#Opcode-kv3_v2-SLLD_registerW_registerZ_registerY_simple
 	;;
-	slld $r24r25.lo = $r24r25r26r27.x, 7 	#Opcode-kv3_v2-SLLD_registerW_registerZ_unsigned6_simple
+	slld $r37 = $r36r37.hi, 7 	#Opcode-kv3_v2-SLLD_registerW_registerZ_unsigned6_simple
 	;;
-	sllhqs $r25 = $r24r25.hi, $r24r25r26r27.y 	#Opcode-kv3_v2-SLLHQS_registerW_registerZ_registerY_simple
+	sllhqs $r36r37r38r39.y = $r38, $r38r39.lo 	#Opcode-kv3_v2-SLLHQS_registerW_registerZ_registerY_simple
 	;;
-	sllhqs $r26 = $r26r27.lo, 7 	#Opcode-kv3_v2-SLLHQS_registerW_registerZ_unsigned6_simple
+	sllhqs $r36r37r38r39.z = $r39, 7 	#Opcode-kv3_v2-SLLHQS_registerW_registerZ_unsigned6_simple
 	;;
-	sllwps $r24r25r26r27.z = $r27, $r26r27.hi 	#Opcode-kv3_v2-SLLWPS_registerW_registerZ_registerY_simple
+	sllwps $r38r39.hi = $r36r37r38r39.t, $r40 	#Opcode-kv3_v2-SLLWPS_registerW_registerZ_registerY_simple
 	;;
-	sllwps $r24r25r26r27.t = $r28, 7 	#Opcode-kv3_v2-SLLWPS_registerW_registerZ_unsigned6_simple
+	sllwps $r40r41.lo = $r40r41r42r43.x, 7 	#Opcode-kv3_v2-SLLWPS_registerW_registerZ_unsigned6_simple
 	;;
-	sllw $r28r29.lo = $r28r29r30r31.x, $r29 	#Opcode-kv3_v2-SLLW_registerW_registerZ_registerY_simple
+	sllw $r41 = $r40r41.hi, $r40r41r42r43.y 	#Opcode-kv3_v2-SLLW_registerW_registerZ_registerY_simple
 	;;
-	sllw $r28r29.hi = $r28r29r30r31.y, 7 	#Opcode-kv3_v2-SLLW_registerW_registerZ_unsigned6_simple
+	sllw $r42 = $r42r43.lo, 7 	#Opcode-kv3_v2-SLLW_registerW_registerZ_unsigned6_simple
 	;;
-	slsbos $r30 = $r30r31.lo, $r28r29r30r31.z 	#Opcode-kv3_v2-SLSBOS_registerW_registerZ_registerY_simple
+	slsbos $r40r41r42r43.z = $r43, $r42r43.hi 	#Opcode-kv3_v2-SLSBOS_registerW_registerZ_registerY_simple
 	;;
-	slsbos $r31 = $r30r31.hi, 7 	#Opcode-kv3_v2-SLSBOS_registerW_registerZ_unsigned6_simple
+	slsbos $r40r41r42r43.t = $r44, 7 	#Opcode-kv3_v2-SLSBOS_registerW_registerZ_unsigned6_simple
 	;;
-	slsd $r28r29r30r31.t = $r32, $r32r33.lo 	#Opcode-kv3_v2-SLSD_registerW_registerZ_registerY_simple
+	slsd $r44r45.lo = $r44r45r46r47.x, $r45 	#Opcode-kv3_v2-SLSD_registerW_registerZ_registerY_simple
 	;;
-	slsd $r32r33r34r35.x = $r33, 7 	#Opcode-kv3_v2-SLSD_registerW_registerZ_unsigned6_simple
+	slsd $r44r45.hi = $r44r45r46r47.y, 7 	#Opcode-kv3_v2-SLSD_registerW_registerZ_unsigned6_simple
 	;;
-	slshqs $r32r33.hi = $r32r33r34r35.y, $r34 	#Opcode-kv3_v2-SLSHQS_registerW_registerZ_registerY_simple
+	slshqs $r46 = $r46r47.lo, $r44r45r46r47.z 	#Opcode-kv3_v2-SLSHQS_registerW_registerZ_registerY_simple
 	;;
-	slshqs $r34r35.lo = $r32r33r34r35.z, 7 	#Opcode-kv3_v2-SLSHQS_registerW_registerZ_unsigned6_simple
+	slshqs $r47 = $r46r47.hi, 7 	#Opcode-kv3_v2-SLSHQS_registerW_registerZ_unsigned6_simple
 	;;
-	slswps $r35 = $r34r35.hi, $r32r33r34r35.t 	#Opcode-kv3_v2-SLSWPS_registerW_registerZ_registerY_simple
+	slswps $r44r45r46r47.t = $r48, $r48r49.lo 	#Opcode-kv3_v2-SLSWPS_registerW_registerZ_registerY_simple
 	;;
-	slswps $r36 = $r36r37.lo, 7 	#Opcode-kv3_v2-SLSWPS_registerW_registerZ_unsigned6_simple
+	slswps $r48r49r50r51.x = $r49, 7 	#Opcode-kv3_v2-SLSWPS_registerW_registerZ_unsigned6_simple
 	;;
-	slsw $r36r37r38r39.x = $r37, $r36r37.hi 	#Opcode-kv3_v2-SLSW_registerW_registerZ_registerY_simple
+	slsw $r48r49.hi = $r48r49r50r51.y, $r50 	#Opcode-kv3_v2-SLSW_registerW_registerZ_registerY_simple
 	;;
-	slsw $r36r37r38r39.y = $r38, 7 	#Opcode-kv3_v2-SLSW_registerW_registerZ_unsigned6_simple
+	slsw $r50r51.lo = $r48r49r50r51.z, 7 	#Opcode-kv3_v2-SLSW_registerW_registerZ_unsigned6_simple
 	;;
-	slusbos $r38r39.lo = $r36r37r38r39.z, $r39 	#Opcode-kv3_v2-SLUSBOS_registerW_registerZ_registerY_simple
+	slusbos $r51 = $r50r51.hi, $r48r49r50r51.t 	#Opcode-kv3_v2-SLUSBOS_registerW_registerZ_registerY_simple
 	;;
-	slusbos $r38r39.hi = $r36r37r38r39.t, 7 	#Opcode-kv3_v2-SLUSBOS_registerW_registerZ_unsigned6_simple
+	slusbos $r52 = $r52r53.lo, 7 	#Opcode-kv3_v2-SLUSBOS_registerW_registerZ_unsigned6_simple
 	;;
-	slusd $r40 = $r40r41.lo, $r40r41r42r43.x 	#Opcode-kv3_v2-SLUSD_registerW_registerZ_registerY_simple
+	slusd $r52r53r54r55.x = $r53, $r52r53.hi 	#Opcode-kv3_v2-SLUSD_registerW_registerZ_registerY_simple
 	;;
-	slusd $r41 = $r40r41.hi, 7 	#Opcode-kv3_v2-SLUSD_registerW_registerZ_unsigned6_simple
+	slusd $r52r53r54r55.y = $r54, 7 	#Opcode-kv3_v2-SLUSD_registerW_registerZ_unsigned6_simple
 	;;
-	slushqs $r40r41r42r43.y = $r42, $r42r43.lo 	#Opcode-kv3_v2-SLUSHQS_registerW_registerZ_registerY_simple
+	slushqs $r54r55.lo = $r52r53r54r55.z, $r55 	#Opcode-kv3_v2-SLUSHQS_registerW_registerZ_registerY_simple
 	;;
-	slushqs $r40r41r42r43.z = $r43, 7 	#Opcode-kv3_v2-SLUSHQS_registerW_registerZ_unsigned6_simple
+	slushqs $r54r55.hi = $r52r53r54r55.t, 7 	#Opcode-kv3_v2-SLUSHQS_registerW_registerZ_unsigned6_simple
 	;;
-	sluswps $r42r43.hi = $r40r41r42r43.t, $r44 	#Opcode-kv3_v2-SLUSWPS_registerW_registerZ_registerY_simple
+	sluswps $r56 = $r56r57.lo, $r56r57r58r59.x 	#Opcode-kv3_v2-SLUSWPS_registerW_registerZ_registerY_simple
 	;;
-	sluswps $r44r45.lo = $r44r45r46r47.x, 7 	#Opcode-kv3_v2-SLUSWPS_registerW_registerZ_unsigned6_simple
+	sluswps $r57 = $r56r57.hi, 7 	#Opcode-kv3_v2-SLUSWPS_registerW_registerZ_unsigned6_simple
 	;;
-	slusw $r45 = $r44r45.hi, $r44r45r46r47.y 	#Opcode-kv3_v2-SLUSW_registerW_registerZ_registerY_simple
+	slusw $r56r57r58r59.y = $r58, $r58r59.lo 	#Opcode-kv3_v2-SLUSW_registerW_registerZ_registerY_simple
 	;;
-	slusw $r46 = $r46r47.lo, 7 	#Opcode-kv3_v2-SLUSW_registerW_registerZ_unsigned6_simple
+	slusw $r56r57r58r59.z = $r59, 7 	#Opcode-kv3_v2-SLUSW_registerW_registerZ_unsigned6_simple
 	;;
-	so.xs $r44r45r46r47.z[$r47] = $r44r45r46r47 	#Opcode-kv3_v2-SO_doscale_registerY_registerZ_registerV_simple
+	so.xs $r58r59.hi[$r56r57r58r59.t] = $r44r45r46r47 	#Opcode-kv3_v2-SO_doscale_registerY_registerZ_registerV_simple
 	;;
-	so 2305843009213693951[$r46r47.hi] = $r48r49r50r51 	#Opcode-kv3_v2-SO_extend27_upper27_lower10_registerZ_registerV_triple
+	so 2305843009213693951[$r60] = $r48r49r50r51 	#Opcode-kv3_v2-SO_extend27_upper27_lower10_registerZ_registerV_triple
 	;;
-	so.u3 $r44r45r46r47.t? -1125899906842624[$r48] = $r52r53r54r55 	#Opcode-kv3_v2-SO_lsomask_registerY_extend27_offset27_registerZ_registerV_triple
+	so.u3 $r60r61.lo? -1125899906842624[$r60r61r62r63.x] = $r52r53r54r55 	#Opcode-kv3_v2-SO_lsomask_registerY_extend27_offset27_registerZ_registerV_triple
 	;;
-	so.mt $r48r49.lo? -8388608[$r48r49r50r51.x] = $r56r57r58r59 	#Opcode-kv3_v2-SO_lsomask_registerY_offset27_registerZ_registerV_double
+	so.mt $r61? -8388608[$r60r61.hi] = $r56r57r58r59 	#Opcode-kv3_v2-SO_lsomask_registerY_offset27_registerZ_registerV_double
 	;;
-	so.mf $r49? [$r48r49.hi] = $r60r61r62r63 	#Opcode-kv3_v2-SO_lsomask_registerY_registerZ_registerV_simple
+	so.mf $r60r61r62r63.y? [$r62] = $r60r61r62r63 	#Opcode-kv3_v2-SO_lsomask_registerY_registerZ_registerV_simple
 	;;
-	so.wgtz $r48r49r50r51.y? -1125899906842624[$r50] = $r0r1r2r3 	#Opcode-kv3_v2-SO_lsucond_registerY_extend27_offset27_registerZ_registerV_triple
+	so.wgtz $r62r63.lo? -1125899906842624[$r60r61r62r63.z] = $r0r1r2r3 	#Opcode-kv3_v2-SO_lsucond_registerY_extend27_offset27_registerZ_registerV_triple
 	;;
-	so.dnez $r50r51.lo? -8388608[$r48r49r50r51.z] = $r4r5r6r7 	#Opcode-kv3_v2-SO_lsucond_registerY_offset27_registerZ_registerV_double
+	so.dnez $r63? -8388608[$r62r63.hi] = $r4r5r6r7 	#Opcode-kv3_v2-SO_lsucond_registerY_offset27_registerZ_registerV_double
 	;;
-	so.deqz $r51? [$r50r51.hi] = $r8r9r10r11 	#Opcode-kv3_v2-SO_lsucond_registerY_registerZ_registerV_simple
+	so.deqz $r60r61r62r63.t? [$r0] = $r8r9r10r11 	#Opcode-kv3_v2-SO_lsucond_registerY_registerZ_registerV_simple
 	;;
-	so -64[$r48r49r50r51.t] = $r12r13r14r15 	#Opcode-kv3_v2-SO_signed10_registerZ_registerV_simple
+	so -64[$r0r1.lo] = $r12r13r14r15 	#Opcode-kv3_v2-SO_signed10_registerZ_registerV_simple
 	;;
-	so -8589934592[$r52] = $r16r17r18r19 	#Opcode-kv3_v2-SO_upper27_lower10_registerZ_registerV_double
+	so -8589934592[$r0r1r2r3.x] = $r16r17r18r19 	#Opcode-kv3_v2-SO_upper27_lower10_registerZ_registerV_double
 	;;
-	sq $r52r53.lo[$r52r53r54r55.x] = $r40r41r42r43.lo 	#Opcode-kv3_v2-SQ_doscale_registerY_registerZ_registerU_simple
+	sq $r1[$r0r1.hi] = $r40r41r42r43.lo 	#Opcode-kv3_v2-SQ_doscale_registerY_registerZ_registerU_simple
 	;;
-	sq 2305843009213693951[$r53] = $r42r43 	#Opcode-kv3_v2-SQ_extend27_upper27_lower10_registerZ_registerU_triple
+	sq 2305843009213693951[$r0r1r2r3.y] = $r42r43 	#Opcode-kv3_v2-SQ_extend27_upper27_lower10_registerZ_registerU_triple
 	;;
-	sq.dltz $r52r53.hi? -1125899906842624[$r52r53r54r55.y] = $r40r41r42r43.hi 	#Opcode-kv3_v2-SQ_lsucond_registerY_extend27_offset27_registerZ_registerU_triple
+	sq.dltz $r2? -1125899906842624[$r2r3.lo] = $r40r41r42r43.hi 	#Opcode-kv3_v2-SQ_lsucond_registerY_extend27_offset27_registerZ_registerU_triple
 	;;
-	sq.dgez $r54? -8388608[$r54r55.lo] = $r44r45 	#Opcode-kv3_v2-SQ_lsucond_registerY_offset27_registerZ_registerU_double
+	sq.dgez $r0r1r2r3.z? -8388608[$r3] = $r44r45 	#Opcode-kv3_v2-SQ_lsucond_registerY_offset27_registerZ_registerU_double
 	;;
-	sq.dlez $r52r53r54r55.z? [$r55] = $r44r45r46r47.lo 	#Opcode-kv3_v2-SQ_lsucond_registerY_registerZ_registerU_simple
+	sq.dlez $r2r3.hi? [$r0r1r2r3.t] = $r44r45r46r47.lo 	#Opcode-kv3_v2-SQ_lsucond_registerY_registerZ_registerU_simple
 	;;
-	sq -64[$r54r55.hi] = $r46r47 	#Opcode-kv3_v2-SQ_signed10_registerZ_registerU_simple
+	sq -64[$r4] = $r46r47 	#Opcode-kv3_v2-SQ_signed10_registerZ_registerU_simple
 	;;
-	sq -8589934592[$r52r53r54r55.t] = $r44r45r46r47.hi 	#Opcode-kv3_v2-SQ_upper27_lower10_registerZ_registerU_double
+	sq -8589934592[$r4r5.lo] = $r44r45r46r47.hi 	#Opcode-kv3_v2-SQ_upper27_lower10_registerZ_registerU_double
 	;;
-	srabos $r56 = $r56r57.lo, $r56r57r58r59.x 	#Opcode-kv3_v2-SRABOS_registerW_registerZ_registerY_simple
+	srabos $r4r5r6r7.x = $r5, $r4r5.hi 	#Opcode-kv3_v2-SRABOS_registerW_registerZ_registerY_simple
 	;;
-	srabos $r57 = $r56r57.hi, 7 	#Opcode-kv3_v2-SRABOS_registerW_registerZ_unsigned6_simple
+	srabos $r4r5r6r7.y = $r6, 7 	#Opcode-kv3_v2-SRABOS_registerW_registerZ_unsigned6_simple
 	;;
-	srad $r56r57r58r59.y = $r58, $r58r59.lo 	#Opcode-kv3_v2-SRAD_registerW_registerZ_registerY_simple
+	srad $r6r7.lo = $r4r5r6r7.z, $r7 	#Opcode-kv3_v2-SRAD_registerW_registerZ_registerY_simple
 	;;
-	srad $r56r57r58r59.z = $r59, 7 	#Opcode-kv3_v2-SRAD_registerW_registerZ_unsigned6_simple
+	srad $r6r7.hi = $r4r5r6r7.t, 7 	#Opcode-kv3_v2-SRAD_registerW_registerZ_unsigned6_simple
 	;;
-	srahqs $r58r59.hi = $r56r57r58r59.t, $r60 	#Opcode-kv3_v2-SRAHQS_registerW_registerZ_registerY_simple
+	srahqs $r8 = $r8r9.lo, $r8r9r10r11.x 	#Opcode-kv3_v2-SRAHQS_registerW_registerZ_registerY_simple
 	;;
-	srahqs $r60r61.lo = $r60r61r62r63.x, 7 	#Opcode-kv3_v2-SRAHQS_registerW_registerZ_unsigned6_simple
+	srahqs $r9 = $r8r9.hi, 7 	#Opcode-kv3_v2-SRAHQS_registerW_registerZ_unsigned6_simple
 	;;
-	srawps $r61 = $r60r61.hi, $r60r61r62r63.y 	#Opcode-kv3_v2-SRAWPS_registerW_registerZ_registerY_simple
+	srawps $r8r9r10r11.y = $r10, $r10r11.lo 	#Opcode-kv3_v2-SRAWPS_registerW_registerZ_registerY_simple
 	;;
-	srawps $r62 = $r62r63.lo, 7 	#Opcode-kv3_v2-SRAWPS_registerW_registerZ_unsigned6_simple
+	srawps $r8r9r10r11.z = $r11, 7 	#Opcode-kv3_v2-SRAWPS_registerW_registerZ_unsigned6_simple
 	;;
-	sraw $r60r61r62r63.z = $r63, $r62r63.hi 	#Opcode-kv3_v2-SRAW_registerW_registerZ_registerY_simple
+	sraw $r10r11.hi = $r8r9r10r11.t, $r12 	#Opcode-kv3_v2-SRAW_registerW_registerZ_registerY_simple
 	;;
-	sraw $r60r61r62r63.t = $r0, 7 	#Opcode-kv3_v2-SRAW_registerW_registerZ_unsigned6_simple
+	sraw $sp = $r13, 7 	#Opcode-kv3_v2-SRAW_registerW_registerZ_unsigned6_simple
 	;;
-	srlbos $r0r1.lo = $r0r1r2r3.x, $r1 	#Opcode-kv3_v2-SRLBOS_registerW_registerZ_registerY_simple
+	srlbos $tp = $r14, $fp 	#Opcode-kv3_v2-SRLBOS_registerW_registerZ_registerY_simple
 	;;
-	srlbos $r0r1.hi = $r0r1r2r3.y, 7 	#Opcode-kv3_v2-SRLBOS_registerW_registerZ_unsigned6_simple
+	srlbos $r15 = $rp, 7 	#Opcode-kv3_v2-SRLBOS_registerW_registerZ_unsigned6_simple
 	;;
-	srld $r2 = $r2r3.lo, $r0r1r2r3.z 	#Opcode-kv3_v2-SRLD_registerW_registerZ_registerY_simple
+	srld $r16 = $r16r17.lo, $r16r17r18r19.x 	#Opcode-kv3_v2-SRLD_registerW_registerZ_registerY_simple
 	;;
-	srld $r3 = $r2r3.hi, 7 	#Opcode-kv3_v2-SRLD_registerW_registerZ_unsigned6_simple
+	srld $r17 = $r16r17.hi, 7 	#Opcode-kv3_v2-SRLD_registerW_registerZ_unsigned6_simple
 	;;
-	srlhqs $r0r1r2r3.t = $r4, $r4r5.lo 	#Opcode-kv3_v2-SRLHQS_registerW_registerZ_registerY_simple
+	srlhqs $r16r17r18r19.y = $r18, $r18r19.lo 	#Opcode-kv3_v2-SRLHQS_registerW_registerZ_registerY_simple
 	;;
-	srlhqs $r4r5r6r7.x = $r5, 7 	#Opcode-kv3_v2-SRLHQS_registerW_registerZ_unsigned6_simple
+	srlhqs $r16r17r18r19.z = $r19, 7 	#Opcode-kv3_v2-SRLHQS_registerW_registerZ_unsigned6_simple
 	;;
-	srlwps $r4r5.hi = $r4r5r6r7.y, $r6 	#Opcode-kv3_v2-SRLWPS_registerW_registerZ_registerY_simple
+	srlwps $r18r19.hi = $r16r17r18r19.t, $r20 	#Opcode-kv3_v2-SRLWPS_registerW_registerZ_registerY_simple
 	;;
-	srlwps $r6r7.lo = $r4r5r6r7.z, 7 	#Opcode-kv3_v2-SRLWPS_registerW_registerZ_unsigned6_simple
+	srlwps $r20r21.lo = $r20r21r22r23.x, 7 	#Opcode-kv3_v2-SRLWPS_registerW_registerZ_unsigned6_simple
 	;;
-	srlw $r7 = $r6r7.hi, $r4r5r6r7.t 	#Opcode-kv3_v2-SRLW_registerW_registerZ_registerY_simple
+	srlw $r21 = $r20r21.hi, $r20r21r22r23.y 	#Opcode-kv3_v2-SRLW_registerW_registerZ_registerY_simple
 	;;
-	srlw $r8 = $r8r9.lo, 7 	#Opcode-kv3_v2-SRLW_registerW_registerZ_unsigned6_simple
+	srlw $r22 = $r22r23.lo, 7 	#Opcode-kv3_v2-SRLW_registerW_registerZ_unsigned6_simple
 	;;
-	srsbos $r8r9r10r11.x = $r9, $r8r9.hi 	#Opcode-kv3_v2-SRSBOS_registerW_registerZ_registerY_simple
+	srsbos $r20r21r22r23.z = $r23, $r22r23.hi 	#Opcode-kv3_v2-SRSBOS_registerW_registerZ_registerY_simple
 	;;
-	srsbos $r8r9r10r11.y = $r10, 7 	#Opcode-kv3_v2-SRSBOS_registerW_registerZ_unsigned6_simple
+	srsbos $r20r21r22r23.t = $r24, 7 	#Opcode-kv3_v2-SRSBOS_registerW_registerZ_unsigned6_simple
 	;;
-	srsd $r10r11.lo = $r8r9r10r11.z, $r11 	#Opcode-kv3_v2-SRSD_registerW_registerZ_registerY_simple
+	srsd $r24r25.lo = $r24r25r26r27.x, $r25 	#Opcode-kv3_v2-SRSD_registerW_registerZ_registerY_simple
 	;;
-	srsd $r10r11.hi = $r8r9r10r11.t, 7 	#Opcode-kv3_v2-SRSD_registerW_registerZ_unsigned6_simple
+	srsd $r24r25.hi = $r24r25r26r27.y, 7 	#Opcode-kv3_v2-SRSD_registerW_registerZ_unsigned6_simple
 	;;
-	srshqs $r12 = $sp, $r13 	#Opcode-kv3_v2-SRSHQS_registerW_registerZ_registerY_simple
+	srshqs $r26 = $r26r27.lo, $r24r25r26r27.z 	#Opcode-kv3_v2-SRSHQS_registerW_registerZ_registerY_simple
 	;;
-	srshqs $tp = $r14, 7 	#Opcode-kv3_v2-SRSHQS_registerW_registerZ_unsigned6_simple
+	srshqs $r27 = $r26r27.hi, 7 	#Opcode-kv3_v2-SRSHQS_registerW_registerZ_unsigned6_simple
 	;;
-	srswps $fp = $r15, $rp 	#Opcode-kv3_v2-SRSWPS_registerW_registerZ_registerY_simple
+	srswps $r24r25r26r27.t = $r28, $r28r29.lo 	#Opcode-kv3_v2-SRSWPS_registerW_registerZ_registerY_simple
 	;;
-	srswps $r16 = $r16r17.lo, 7 	#Opcode-kv3_v2-SRSWPS_registerW_registerZ_unsigned6_simple
+	srswps $r28r29r30r31.x = $r29, 7 	#Opcode-kv3_v2-SRSWPS_registerW_registerZ_unsigned6_simple
 	;;
-	srsw $r16r17r18r19.x = $r17, $r16r17.hi 	#Opcode-kv3_v2-SRSW_registerW_registerZ_registerY_simple
+	srsw $r28r29.hi = $r28r29r30r31.y, $r30 	#Opcode-kv3_v2-SRSW_registerW_registerZ_registerY_simple
 	;;
-	srsw $r16r17r18r19.y = $r18, 7 	#Opcode-kv3_v2-SRSW_registerW_registerZ_unsigned6_simple
+	srsw $r30r31.lo = $r28r29r30r31.z, 7 	#Opcode-kv3_v2-SRSW_registerW_registerZ_unsigned6_simple
 	;;
 	stop 	#Opcode-kv3_v2-STOP_simple
 	;;
-	stsud $r18r19.lo = $r16r17r18r19.z, $r19 	#Opcode-kv3_v2-STSUD_registerW_registerZ_registerY_simple
+	stsud $r31 = $r30r31.hi, $r28r29r30r31.t 	#Opcode-kv3_v2-STSUD_registerW_registerZ_registerY_simple
 	;;
-	stsud $r18r19.hi = $r16r17r18r19.t, 536870911 	#Opcode-kv3_v2-STSUD_registerW_registerZ_upper27_lower5_splat32_double
+	stsud $r32 = $r32r33.lo, 536870911 	#Opcode-kv3_v2-STSUD_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	stsuhq $r20 = $r20r21.lo, $r20r21r22r23.x 	#Opcode-kv3_v2-STSUHQ_registerW_registerZ_registerY_simple
+	stsuhq $r32r33r34r35.x = $r33, $r32r33.hi 	#Opcode-kv3_v2-STSUHQ_registerW_registerZ_registerY_simple
 	;;
-	stsuhq $r21 = $r20r21.hi, 536870911.@ 	#Opcode-kv3_v2-STSUHQ_registerW_registerZ_upper27_lower5_splat32_double
+	stsuhq $r32r33r34r35.y = $r34, 536870911.@ 	#Opcode-kv3_v2-STSUHQ_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	stsuwp $r20r21r22r23.y = $r22, $r22r23.lo 	#Opcode-kv3_v2-STSUWP_registerW_registerZ_registerY_simple
+	stsuwp $r34r35.lo = $r32r33r34r35.z, $r35 	#Opcode-kv3_v2-STSUWP_registerW_registerZ_registerY_simple
 	;;
-	stsuwp $r20r21r22r23.z = $r23, 536870911 	#Opcode-kv3_v2-STSUWP_registerW_registerZ_upper27_lower5_splat32_double
+	stsuwp $r34r35.hi = $r32r33r34r35.t, 536870911 	#Opcode-kv3_v2-STSUWP_registerW_registerZ_upper27_lower5_splat32_double
 	;;
-	stsuw $r22r23.hi = $r20r21r22r23.t, $r24 	#Opcode-kv3_v2-STSUW_registerW_registerZ_registerY_simple
+	stsuw $r36 = $r36r37.lo, $r36r37r38r39.x 	#Opcode-kv3_v2-STSUW_registerW_registerZ_registerY_simple
 	;;
-	stsuw $r24r25.lo = $r24r25r26r27.x, 536870911 	#Opcode-kv3_v2-STSUW_registerW_registerZ_upper27_lower5_double
+	stsuw $r37 = $r36r37.hi, 536870911 	#Opcode-kv3_v2-STSUW_registerW_registerZ_upper27_lower5_double
 	;;
-	sw.xs $r25[$r24r25.hi] = $r24r25r26r27.y 	#Opcode-kv3_v2-SW_doscale_registerY_registerZ_registerT_simple
+	sw.xs $r36r37r38r39.y[$r38] = $r38r39.lo 	#Opcode-kv3_v2-SW_doscale_registerY_registerZ_registerT_simple
 	;;
-	sw 2305843009213693951[$r26] = $r26r27.lo 	#Opcode-kv3_v2-SW_extend27_upper27_lower10_registerZ_registerT_triple
+	sw 2305843009213693951[$r36r37r38r39.z] = $r39 	#Opcode-kv3_v2-SW_extend27_upper27_lower10_registerZ_registerT_triple
 	;;
-	sw.dgtz $r24r25r26r27.z? -1125899906842624[$r27] = $r26r27.hi 	#Opcode-kv3_v2-SW_lsucond_registerY_extend27_offset27_registerZ_registerT_triple
+	sw.dgtz $r38r39.hi? -1125899906842624[$r36r37r38r39.t] = $r40 	#Opcode-kv3_v2-SW_lsucond_registerY_extend27_offset27_registerZ_registerT_triple
 	;;
-	sw.odd $r24r25r26r27.t? -8388608[$r28] = $r28r29.lo 	#Opcode-kv3_v2-SW_lsucond_registerY_offset27_registerZ_registerT_double
+	sw.odd $r40r41.lo? -8388608[$r40r41r42r43.x] = $r41 	#Opcode-kv3_v2-SW_lsucond_registerY_offset27_registerZ_registerT_double
 	;;
-	sw.even $r28r29r30r31.x? [$r29] = $r28r29.hi 	#Opcode-kv3_v2-SW_lsucond_registerY_registerZ_registerT_simple
+	sw.even $r40r41.hi? [$r40r41r42r43.y] = $r42 	#Opcode-kv3_v2-SW_lsucond_registerY_registerZ_registerT_simple
 	;;
-	sw -64[$r28r29r30r31.y] = $r30 	#Opcode-kv3_v2-SW_signed10_registerZ_registerT_simple
+	sw -64[$r42r43.lo] = $r40r41r42r43.z 	#Opcode-kv3_v2-SW_signed10_registerZ_registerT_simple
 	;;
-	sw -8589934592[$r30r31.lo] = $r28r29r30r31.z 	#Opcode-kv3_v2-SW_upper27_lower10_registerZ_registerT_double
+	sw -8589934592[$r43] = $r42r43.hi 	#Opcode-kv3_v2-SW_upper27_lower10_registerZ_registerT_double
 	;;
-	sxbd $r31 = $r30r31.hi 	#Opcode-kv3_v2-SXBD_registerW_registerZ_simple
+	sxbd $r40r41r42r43.t = $r44 	#Opcode-kv3_v2-SXBD_registerW_registerZ_simple
 	;;
-	sxhd $r28r29r30r31.t = $r32 	#Opcode-kv3_v2-SXHD_registerW_registerZ_simple
+	sxhd $r44r45.lo = $r44r45r46r47.x 	#Opcode-kv3_v2-SXHD_registerW_registerZ_simple
 	;;
-	sxlbhq $r32r33.lo = $r32r33r34r35.x 	#Opcode-kv3_v2-SXLBHQ_registerW_registerZ_simple
+	sxlbhq $r45 = $r44r45.hi 	#Opcode-kv3_v2-SXLBHQ_registerW_registerZ_simple
 	;;
-	sxlhwp $r33 = $r32r33.hi 	#Opcode-kv3_v2-SXLHWP_registerW_registerZ_simple
+	sxlhwp $r44r45r46r47.y = $r46 	#Opcode-kv3_v2-SXLHWP_registerW_registerZ_simple
 	;;
-	sxmbhq $r32r33r34r35.y = $r34 	#Opcode-kv3_v2-SXMBHQ_registerW_registerZ_simple
+	sxmbhq $r46r47.lo = $r44r45r46r47.z 	#Opcode-kv3_v2-SXMBHQ_registerW_registerZ_simple
 	;;
-	sxmhwp $r34r35.lo = $r32r33r34r35.z 	#Opcode-kv3_v2-SXMHWP_registerW_registerZ_simple
+	sxmhwp $r47 = $r46r47.hi 	#Opcode-kv3_v2-SXMHWP_registerW_registerZ_simple
 	;;
-	sxwd $r35 = $r34r35.hi 	#Opcode-kv3_v2-SXWD_registerW_registerZ_simple
+	sxwd $r44r45r46r47.t = $r48 	#Opcode-kv3_v2-SXWD_registerW_registerZ_simple
 	;;
-	syncgroup $r32r33r34r35.t 	#Opcode-kv3_v2-SYNCGROUP_registerZ_simple
+	syncgroup $r48r49.lo 	#Opcode-kv3_v2-SYNCGROUP_registerZ_simple
 	;;
 	tlbdinval 	#Opcode-kv3_v2-TLBDINVAL_simple
 	;;
@@ -2219,43 +2253,43 @@ main:
 	;;
 	tlbwrite 	#Opcode-kv3_v2-TLBWRITE_simple
 	;;
-	waitit $r36 	#Opcode-kv3_v2-WAITIT_registerZ_simple
+	waitit $r48r49r50r51.x 	#Opcode-kv3_v2-WAITIT_registerZ_simple
 	;;
-	wfxl $ps, $r36r37.lo 	#Opcode-kv3_v2-WFXL_systemAlone_registerZ_simple
+	wfxl $ps, $r49 	#Opcode-kv3_v2-WFXL_systemAlone_registerZ_simple
 	;;
-	wfxl $pcr, $r36r37r38r39.x 	#Opcode-kv3_v2-WFXL_systemT2_registerZ_simple
+	wfxl $pcr, $r48r49.hi 	#Opcode-kv3_v2-WFXL_systemT2_registerZ_simple
 	;;
-	wfxl $s1, $r37 	#Opcode-kv3_v2-WFXL_systemT4_registerZ_simple
+	wfxl $s1, $r48r49r50r51.y 	#Opcode-kv3_v2-WFXL_systemT4_registerZ_simple
 	;;
-	wfxm $s1, $r36r37.hi 	#Opcode-kv3_v2-WFXM_systemAlone_registerZ_simple
+	wfxm $s1, $r50 	#Opcode-kv3_v2-WFXM_systemAlone_registerZ_simple
 	;;
-	wfxm $s2, $r36r37r38r39.y 	#Opcode-kv3_v2-WFXM_systemT2_registerZ_simple
+	wfxm $s2, $r50r51.lo 	#Opcode-kv3_v2-WFXM_systemT2_registerZ_simple
 	;;
-	wfxm $pcr, $r38 	#Opcode-kv3_v2-WFXM_systemT4_registerZ_simple
+	wfxm $pcr, $r48r49r50r51.z 	#Opcode-kv3_v2-WFXM_systemT4_registerZ_simple
 	;;
-	xaccesso $r20r21r22r23 = $a0..a1, $r38r39.lo 	#Opcode-kv3_v2-XACCESSO_registerN_registerCg_registerZ_simple
+	xaccesso $r20r21r22r23 = $a0..a1, $r51 	#Opcode-kv3_v2-XACCESSO_registerN_registerCg_registerZ_simple
 	;;
-	xaccesso $r24r25r26r27 = $a0..a3, $r36r37r38r39.z 	#Opcode-kv3_v2-XACCESSO_registerN_registerCh_registerZ_simple
+	xaccesso $r24r25r26r27 = $a0..a3, $r50r51.hi 	#Opcode-kv3_v2-XACCESSO_registerN_registerCh_registerZ_simple
 	;;
-	xaccesso $r28r29r30r31 = $a0..a7, $r39 	#Opcode-kv3_v2-XACCESSO_registerN_registerCi_registerZ_simple
+	xaccesso $r28r29r30r31 = $a0..a7, $r48r49r50r51.t 	#Opcode-kv3_v2-XACCESSO_registerN_registerCi_registerZ_simple
 	;;
-	xaccesso $r32r33r34r35 = $a0..a15, $r38r39.hi 	#Opcode-kv3_v2-XACCESSO_registerN_registerCj_registerZ_simple
+	xaccesso $r32r33r34r35 = $a0..a15, $r52 	#Opcode-kv3_v2-XACCESSO_registerN_registerCj_registerZ_simple
 	;;
-	xaccesso $r36r37r38r39 = $a0..a31, $r36r37r38r39.t 	#Opcode-kv3_v2-XACCESSO_registerN_registerCk_registerZ_simple
+	xaccesso $r36r37r38r39 = $a0..a31, $r52r53.lo 	#Opcode-kv3_v2-XACCESSO_registerN_registerCk_registerZ_simple
 	;;
-	xaccesso $r40r41r42r43 = $a0..a63, $r40 	#Opcode-kv3_v2-XACCESSO_registerN_registerCl_registerZ_simple
+	xaccesso $r40r41r42r43 = $a0..a63, $r52r53r54r55.x 	#Opcode-kv3_v2-XACCESSO_registerN_registerCl_registerZ_simple
 	;;
-	xaligno $a0 = $a2..a3, $r40r41.lo 	#Opcode-kv3_v2-XALIGNO_registerA_registerCg_registerZ_simple
+	xaligno $a0 = $a2..a3, $r53 	#Opcode-kv3_v2-XALIGNO_registerA_registerCg_registerZ_simple
 	;;
-	xaligno $a0a1.lo = $a4..a7, $r40r41r42r43.x 	#Opcode-kv3_v2-XALIGNO_registerA_registerCh_registerZ_simple
+	xaligno $a0a1.lo = $a4..a7, $r52r53.hi 	#Opcode-kv3_v2-XALIGNO_registerA_registerCh_registerZ_simple
 	;;
-	xaligno $a0a1a2a3.x = $a8..a15, $r41 	#Opcode-kv3_v2-XALIGNO_registerA_registerCi_registerZ_simple
+	xaligno $a0a1a2a3.x = $a8..a15, $r52r53r54r55.y 	#Opcode-kv3_v2-XALIGNO_registerA_registerCi_registerZ_simple
 	;;
-	xaligno $a1 = $a16..a31, $r40r41.hi 	#Opcode-kv3_v2-XALIGNO_registerA_registerCj_registerZ_simple
+	xaligno $a1 = $a16..a31, $r54 	#Opcode-kv3_v2-XALIGNO_registerA_registerCj_registerZ_simple
 	;;
-	xaligno $a0a1.hi = $a32..a63, $r40r41r42r43.y 	#Opcode-kv3_v2-XALIGNO_registerA_registerCk_registerZ_simple
+	xaligno $a0a1.hi = $a32..a63, $r54r55.lo 	#Opcode-kv3_v2-XALIGNO_registerA_registerCk_registerZ_simple
 	;;
-	xaligno $a0a1a2a3.y = $a0..a63, $r42 	#Opcode-kv3_v2-XALIGNO_registerA_registerCl_registerZ_simple
+	xaligno $a0a1a2a3.y = $a0..a63, $r52r53r54r55.z 	#Opcode-kv3_v2-XALIGNO_registerA_registerCl_registerZ_simple
 	;;
 	xandno $a2 = $a2a3.lo, $a0a1a2a3.z 	#Opcode-kv3_v2-XANDNO_registerA_registerB_registerC_simple
 	;;
@@ -2269,226 +2303,229 @@ main:
 	;;
 	xcopyx $a0a1 = $a0a1a2a3.lo 	#Opcode-kv3_v2-XCOPYX_shuffleX_registerAp_registerCp_simple
 	;;
-	xffma44hw.rna.s $a2a3 = $a4a5a6a7.y, $a6 	#Opcode-kv3_v2-XFFMA44HW_rounding_silent_registerAp_registerC_registerD_simple
+	xeoro $a4a5a6a7.y = $a6, $a6a7.lo 	#Opcode-kv3_v2-XEORO_registerA_registerB_registerC_simple
 	;;
-	xfmaxhx $a6a7.lo = $a4a5a6a7.z, $a7 	#Opcode-kv3_v2-XFMAXHX_registerA_registerC_registerD_simple
+	xffma44hw.rna.s $a2a3 = $a4a5a6a7.z, $a7 	#Opcode-kv3_v2-XFFMA44HW_rounding_silent_registerAp_registerC_registerD_simple
 	;;
-	xfminhx $a6a7.hi = $a4a5a6a7.t, $a8 	#Opcode-kv3_v2-XFMINHX_registerA_registerC_registerD_simple
+	xfmaxhx $a6a7.hi = $a4a5a6a7.t, $a8 	#Opcode-kv3_v2-XFMAXHX_registerA_registerC_registerD_simple
+	;;
+	xfminhx $a8a9.lo = $a8a9a10a11.x, $a9 	#Opcode-kv3_v2-XFMINHX_registerA_registerC_registerD_simple
 	;;
 	xfmma484hw.rnz $a0a1a2a3.hi = $a4a5, $a4a5a6a7.lo 	#Opcode-kv3_v2-XFMMA484HW_rounding_silent_registerAp_registerCp_registerDp_simple
 	;;
-	xfnarrow44wh.ro.s $a8a9.lo = $a6a7 	#Opcode-kv3_v2-XFNARROW44WH_rounding_silent_registerA_registerCp_simple
+	xfnarrow44wh.ro.s $a8a9.hi = $a6a7 	#Opcode-kv3_v2-XFNARROW44WH_rounding_silent_registerA_registerCp_simple
 	;;
-	xfscalewo $a8a9a10a11.x = $a9, $r42r43.lo 	#Opcode-kv3_v2-XFSCALEWO_rounding_silent_registerA_registerC_registerZ_simple
+	xfscalewo $a8a9a10a11.y = $a10, $r55 	#Opcode-kv3_v2-XFSCALEWO_rounding_silent_registerA_registerC_registerZ_simple
 	;;
-	xiorno $a8a9.hi = $a8a9a10a11.y, $a10 	#Opcode-kv3_v2-XIORNO_registerA_registerB_registerC_simple
+	xiorno $a10a11.lo = $a8a9a10a11.z, $a11 	#Opcode-kv3_v2-XIORNO_registerA_registerB_registerC_simple
 	;;
-	xioro $a10a11.lo = $a8a9a10a11.z, $a11 	#Opcode-kv3_v2-XIORO_registerA_registerB_registerC_simple
+	xioro $a10a11.hi = $a8a9a10a11.t, $a12 	#Opcode-kv3_v2-XIORO_registerA_registerB_registerC_simple
 	;;
-	xlo.u.q0 $a8a9a10a11 = $r40r41r42r43.z[$r43] 	#Opcode-kv3_v2-XLO_variant_doscale_qindex_registerAq_registerY_registerZ_simple
+	xlo.u.q0 $a8a9a10a11 = $r54r55.hi[$r52r53r54r55.t] 	#Opcode-kv3_v2-XLO_variant_doscale_qindex_registerAq_registerY_registerZ_simple
 	;;
-	xlo.us.xs $a10a11.hi = $r42r43.hi[$r40r41r42r43.t] 	#Opcode-kv3_v2-XLO_variant_doscale_registerA_registerY_registerZ_simple
+	xlo.us.xs $a12a13.lo = $r56[$r56r57.lo] 	#Opcode-kv3_v2-XLO_variant_doscale_registerA_registerY_registerZ_simple
 	;;
-	xlo.dnez.q1 $r44? $a12a13a14a15 = -1125899906842624[$r44r45.lo] 	#Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_extend27_offset27_registerZ_triple
+	xlo.dnez.q1 $r56r57r58r59.x? $a12a13a14a15 = -1125899906842624[$r57] 	#Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_extend27_offset27_registerZ_triple
 	;;
-	xlo.s.deqz.q2 $r44r45r46r47.x? $a16a17a18a19 = -8388608[$r45] 	#Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_offset27_registerZ_double
+	xlo.s.deqz.q2 $r56r57.hi? $a16a17a18a19 = -8388608[$r56r57r58r59.y] 	#Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_offset27_registerZ_double
 	;;
-	xlo.u.wnez.q3 $r44r45.hi? $a20a21a22a23 = [$r44r45r46r47.y] 	#Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_registerZ_simple
+	xlo.u.wnez.q3 $r58? $a20a21a22a23 = [$r58r59.lo] 	#Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_registerZ_simple
 	;;
-	xlo.us.weqz $r46? $a8a9a10a11.t = -1125899906842624[$r46r47.lo] 	#Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_extend27_offset27_registerZ_triple
+	xlo.us.weqz $r56r57r58r59.z? $a12a13a14a15.x = -1125899906842624[$r59] 	#Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_extend27_offset27_registerZ_triple
 	;;
-	xlo.mt $r44r45r46r47.z? $a12 = -8388608[$r47] 	#Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_offset27_registerZ_double
+	xlo.mt $r58r59.hi? $a13 = -8388608[$r56r57r58r59.t] 	#Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_offset27_registerZ_double
 	;;
-	xlo.s.mf $r46r47.hi? $a12a13.lo = [$r44r45r46r47.t] 	#Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_registerZ_simple
+	xlo.s.mf $r60? $a12a13.hi = [$r60r61.lo] 	#Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_registerZ_simple
 	;;
-	xlo.u $a4..a5, $r48 = -1125899906842624[$r48r49.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_extend27_offset27_registerZ_triple
+	xlo.u $a4..a5, $r60r61r62r63.x = -1125899906842624[$r61] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_extend27_offset27_registerZ_triple
 	;;
-	xlo.us.q $a6..a7, $r48r49r50r51.x = -8388608[$r49] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_offset27_registerZ_double
+	xlo.us.q $a6..a7, $r60r61.hi = -8388608[$r60r61r62r63.y] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_offset27_registerZ_double
 	;;
-	xlo.d $a8..a9, $r48r49.hi = [$r48r49r50r51.y] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_registerZ_simple
+	xlo.d $a8..a9, $r62 = [$r62r63.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_registerZ_simple
 	;;
-	xlo.s.w $a8..a11, $r50 = -1125899906842624[$r50r51.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_extend27_offset27_registerZ_triple
+	xlo.s.w $a8..a11, $r60r61r62r63.z = -1125899906842624[$r63] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_extend27_offset27_registerZ_triple
 	;;
-	xlo.u.h $a12..a15, $r48r49r50r51.z = -8388608[$r51] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_offset27_registerZ_double
+	xlo.u.h $a12..a15, $r62r63.hi = -8388608[$r60r61r62r63.t] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_offset27_registerZ_double
 	;;
-	xlo.us.b $a16..a19, $r50r51.hi = [$r48r49r50r51.t] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_registerZ_simple
+	xlo.us.b $a16..a19, $r0 = [$r0r1.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_registerZ_simple
 	;;
-	xlo $a16..a23, $r52 = -1125899906842624[$r52r53.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_extend27_offset27_registerZ_triple
+	xlo $a16..a23, $r0r1r2r3.x = -1125899906842624[$r1] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_extend27_offset27_registerZ_triple
 	;;
-	xlo.s.q $a24..a31, $r52r53r54r55.x = -8388608[$r53] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_offset27_registerZ_double
+	xlo.s.q $a24..a31, $r0r1.hi = -8388608[$r0r1r2r3.y] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_offset27_registerZ_double
 	;;
-	xlo.u.d $a32..a39, $r52r53.hi = [$r52r53r54r55.y] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_registerZ_simple
+	xlo.u.d $a32..a39, $r2 = [$r2r3.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_registerZ_simple
 	;;
-	xlo.us.w $a32..a47, $r54 = -1125899906842624[$r54r55.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_extend27_offset27_registerZ_triple
+	xlo.us.w $a32..a47, $r0r1r2r3.z = -1125899906842624[$r3] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_extend27_offset27_registerZ_triple
 	;;
-	xlo.h $a48..a63, $r52r53r54r55.z = -8388608[$r55] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_offset27_registerZ_double
+	xlo.h $a48..a63, $r2r3.hi = -8388608[$r0r1r2r3.t] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_offset27_registerZ_double
 	;;
-	xlo.s.b $a0..a15, $r54r55.hi = [$r52r53r54r55.t] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_registerZ_simple
+	xlo.s.b $a0..a15, $r4 = [$r4r5.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_registerZ_simple
 	;;
-	xlo.u $a0..a31, $r56 = -1125899906842624[$r56r57.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_extend27_offset27_registerZ_triple
+	xlo.u $a0..a31, $r4r5r6r7.x = -1125899906842624[$r5] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_extend27_offset27_registerZ_triple
 	;;
-	xlo.us.q $a32..a63, $r56r57r58r59.x = -8388608[$r57] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_offset27_registerZ_double
+	xlo.us.q $a32..a63, $r4r5.hi = -8388608[$r4r5r6r7.y] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_offset27_registerZ_double
 	;;
-	xlo.d $a0..a31, $r56r57.hi = [$r56r57r58r59.y] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_registerZ_simple
+	xlo.d $a0..a31, $r6 = [$r6r7.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_registerZ_simple
 	;;
-	xlo.s.w $a0..a63, $r58 = -1125899906842624[$r58r59.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_extend27_offset27_registerZ_triple
+	xlo.s.w $a0..a63, $r4r5r6r7.z = -1125899906842624[$r7] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_extend27_offset27_registerZ_triple
 	;;
-	xlo.u.h $a0..a63, $r56r57r58r59.z = -8388608[$r59] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_offset27_registerZ_double
+	xlo.u.h $a0..a63, $r6r7.hi = -8388608[$r4r5r6r7.t] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_offset27_registerZ_double
 	;;
-	xlo.us.b $a0..a63, $r58r59.hi = [$r56r57r58r59.t] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_registerZ_simple
+	xlo.us.b $a0..a63, $r8 = [$r8r9.lo] 	#Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_registerZ_simple
 	;;
-	xlo.q0 $a24a25a26a27 = 2305843009213693951[$r60] 	#Opcode-kv3_v2-XLO_variant_qindex_registerAq_extend27_upper27_lower10_registerZ_triple
+	xlo.q0 $a24a25a26a27 = 2305843009213693951[$r8r9r10r11.x] 	#Opcode-kv3_v2-XLO_variant_qindex_registerAq_extend27_upper27_lower10_registerZ_triple
 	;;
-	xlo.s.q1 $a28a29a30a31 = -64[$r60r61.lo] 	#Opcode-kv3_v2-XLO_variant_qindex_registerAq_signed10_registerZ_simple
+	xlo.s.q1 $a28a29a30a31 = -64[$r9] 	#Opcode-kv3_v2-XLO_variant_qindex_registerAq_signed10_registerZ_simple
 	;;
-	xlo.u.q2 $a32a33a34a35 = -8589934592[$r60r61r62r63.x] 	#Opcode-kv3_v2-XLO_variant_qindex_registerAq_upper27_lower10_registerZ_double
+	xlo.u.q2 $a32a33a34a35 = -8589934592[$r8r9.hi] 	#Opcode-kv3_v2-XLO_variant_qindex_registerAq_upper27_lower10_registerZ_double
 	;;
-	xlo.us $a12a13a14a15.x = 2305843009213693951[$r61] 	#Opcode-kv3_v2-XLO_variant_registerA_extend27_upper27_lower10_registerZ_triple
+	xlo.us $a12a13a14a15.y = 2305843009213693951[$r8r9r10r11.y] 	#Opcode-kv3_v2-XLO_variant_registerA_extend27_upper27_lower10_registerZ_triple
 	;;
-	xlo $a13 = -64[$r60r61.hi] 	#Opcode-kv3_v2-XLO_variant_registerA_signed10_registerZ_simple
+	xlo $a14 = -64[$r10] 	#Opcode-kv3_v2-XLO_variant_registerA_signed10_registerZ_simple
 	;;
-	xlo.s $a12a13.hi = -8589934592[$r60r61r62r63.y] 	#Opcode-kv3_v2-XLO_variant_registerA_upper27_lower10_registerZ_double
+	xlo.s $a14a15.lo = -8589934592[$r10r11.lo] 	#Opcode-kv3_v2-XLO_variant_registerA_upper27_lower10_registerZ_double
 	;;
-	xmadd44bw0 $a4a5a6a7.hi = $a12a13a14a15.y, $a14 	#Opcode-kv3_v2-XMADD44BW0_registerAp_registerC_registerD_simple
+	xmadd44bw0 $a4a5a6a7.hi = $a12a13a14a15.z, $a15 	#Opcode-kv3_v2-XMADD44BW0_registerAp_registerC_registerD_simple
 	;;
-	xmadd44bw1 $a8a9 = $a14a15.lo, $a12a13a14a15.z 	#Opcode-kv3_v2-XMADD44BW1_registerAp_registerC_registerD_simple
+	xmadd44bw1 $a8a9 = $a14a15.hi, $a12a13a14a15.t 	#Opcode-kv3_v2-XMADD44BW1_registerAp_registerC_registerD_simple
 	;;
-	xmaddifwo.rn.s $a15 = $a14a15.hi, $a12a13a14a15.t 	#Opcode-kv3_v2-XMADDIFWO_rounding_silent_registerA_registerC_registerD_simple
+	xmaddifwo.rn.s $a16 = $a16a17.lo, $a16a17a18a19.x 	#Opcode-kv3_v2-XMADDIFWO_rounding_silent_registerA_registerC_registerD_simple
 	;;
-	xmaddsu44bw0 $a8a9a10a11.lo = $a16, $a16a17.lo 	#Opcode-kv3_v2-XMADDSU44BW0_registerAp_registerC_registerD_simple
+	xmaddsu44bw0 $a8a9a10a11.lo = $a17, $a16a17.hi 	#Opcode-kv3_v2-XMADDSU44BW0_registerAp_registerC_registerD_simple
 	;;
-	xmaddsu44bw1 $a10a11 = $a16a17a18a19.x, $a17 	#Opcode-kv3_v2-XMADDSU44BW1_registerAp_registerC_registerD_simple
+	xmaddsu44bw1 $a10a11 = $a16a17a18a19.y, $a18 	#Opcode-kv3_v2-XMADDSU44BW1_registerAp_registerC_registerD_simple
 	;;
-	xmaddu44bw0 $a8a9a10a11.hi = $a16a17.hi, $a16a17a18a19.y 	#Opcode-kv3_v2-XMADDU44BW0_registerAp_registerC_registerD_simple
+	xmaddu44bw0 $a8a9a10a11.hi = $a18a19.lo, $a16a17a18a19.z 	#Opcode-kv3_v2-XMADDU44BW0_registerAp_registerC_registerD_simple
 	;;
-	xmaddu44bw1 $a12a13 = $a18, $a18a19.lo 	#Opcode-kv3_v2-XMADDU44BW1_registerAp_registerC_registerD_simple
+	xmaddu44bw1 $a12a13 = $a19, $a18a19.hi 	#Opcode-kv3_v2-XMADDU44BW1_registerAp_registerC_registerD_simple
 	;;
 	xmma4164bw $a12a13a14a15.lo = $a14a15, $a12a13a14a15.hi 	#Opcode-kv3_v2-XMMA4164BW_registerAp_registerCp_registerDp_simple
 	;;
-	xmma484bw $a16a17 = $a16a17a18a19.z, $a19 	#Opcode-kv3_v2-XMMA484BW_registerAp_registerC_registerD_simple
+	xmma484bw $a16a17 = $a16a17a18a19.t, $a20 	#Opcode-kv3_v2-XMMA484BW_registerAp_registerC_registerD_simple
 	;;
 	xmmasu4164bw $a16a17a18a19.lo = $a18a19, $a16a17a18a19.hi 	#Opcode-kv3_v2-XMMASU4164BW_registerAp_registerCp_registerDp_simple
 	;;
-	xmmasu484bw $a20a21 = $a18a19.hi, $a16a17a18a19.t 	#Opcode-kv3_v2-XMMASU484BW_registerAp_registerC_registerD_simple
+	xmmasu484bw $a20a21 = $a20a21.lo, $a20a21a22a23.x 	#Opcode-kv3_v2-XMMASU484BW_registerAp_registerC_registerD_simple
 	;;
 	xmmau4164bw $a20a21a22a23.lo = $a22a23, $a20a21a22a23.hi 	#Opcode-kv3_v2-XMMAU4164BW_registerAp_registerCp_registerDp_simple
 	;;
-	xmmau484bw $a24a25 = $a20, $a20a21.lo 	#Opcode-kv3_v2-XMMAU484BW_registerAp_registerC_registerD_simple
+	xmmau484bw $a24a25 = $a21, $a20a21.hi 	#Opcode-kv3_v2-XMMAU484BW_registerAp_registerC_registerD_simple
 	;;
 	xmmaus4164bw $a24a25a26a27.lo = $a26a27, $a24a25a26a27.hi 	#Opcode-kv3_v2-XMMAUS4164BW_registerAp_registerCp_registerDp_simple
 	;;
-	xmmaus484bw $a28a29 = $a20a21a22a23.x, $a21 	#Opcode-kv3_v2-XMMAUS484BW_registerAp_registerC_registerD_simple
+	xmmaus484bw $a28a29 = $a20a21a22a23.y, $a22 	#Opcode-kv3_v2-XMMAUS484BW_registerAp_registerC_registerD_simple
 	;;
-	xmovefd $r62 = $a0_x 	#Opcode-kv3_v2-XMOVEFD_registerW_registerCc_qselectC_simple
+	xmovefd $r8r9r10r11.z = $a0_x 	#Opcode-kv3_v2-XMOVEFD_registerW_registerCc_qselectC_simple
 	;;
-	xmovefo $r44r45r46r47 = $a20a21.hi 	#Opcode-kv3_v2-XMOVEFO_registerN_registerC_simple
+	xmovefo $r44r45r46r47 = $a22a23.lo 	#Opcode-kv3_v2-XMOVEFO_registerN_registerC_simple
 	;;
 	xmovefq $r48r49 = $a0_lo 	#Opcode-kv3_v2-XMOVEFQ_registerM_registerCb_hselectC_simple
 	;;
-	xmovetd $a0_t = $r62r63.lo 	#Opcode-kv3_v2-XMOVETD_registerAt_registerZ_simple
+	xmovetd $a0_t = $r11 	#Opcode-kv3_v2-XMOVETD_registerAt_registerZ_simple
 	;;
-	xmovetd $a0_x = $r60r61r62r63.z 	#Opcode-kv3_v2-XMOVETD_registerAx_registerZ_simple
+	xmovetd $a0_x = $r10r11.hi 	#Opcode-kv3_v2-XMOVETD_registerAx_registerZ_simple
 	;;
-	xmovetd $a0_y = $r63 	#Opcode-kv3_v2-XMOVETD_registerAy_registerZ_simple
+	xmovetd $a0_y = $r8r9r10r11.t 	#Opcode-kv3_v2-XMOVETD_registerAy_registerZ_simple
 	;;
-	xmovetd $a0_z = $r62r63.hi 	#Opcode-kv3_v2-XMOVETD_registerAz_registerZ_simple
+	xmovetd $a0_z = $r12 	#Opcode-kv3_v2-XMOVETD_registerAz_registerZ_simple
 	;;
-	xmovetq $a0_lo = $r60r61r62r63.t, $r0 	#Opcode-kv3_v2-XMOVETQ_registerAE_registerZ_registerY_simple
+	xmovetq $a0_lo = $sp, $r13 	#Opcode-kv3_v2-XMOVETQ_registerAE_registerZ_registerY_simple
 	;;
-	xmovetq $a0_hi = $r0r1.lo, $r0r1r2r3.x 	#Opcode-kv3_v2-XMOVETQ_registerAO_registerZ_registerY_simple
+	xmovetq $a0_hi = $tp, $r14 	#Opcode-kv3_v2-XMOVETQ_registerAO_registerZ_registerY_simple
 	;;
-	xmsbfifwo.ru $a20a21a22a23.y = $a22, $a22a23.lo 	#Opcode-kv3_v2-XMSBFIFWO_rounding_silent_registerA_registerC_registerD_simple
+	xmsbfifwo.ru $a20a21a22a23.z = $a23, $a22a23.hi 	#Opcode-kv3_v2-XMSBFIFWO_rounding_silent_registerA_registerC_registerD_simple
 	;;
 	xmt44d $a36a37a38a39 = $a40a41a42a43 	#Opcode-kv3_v2-XMT44D_registerAq_registerCq_simple
 	;;
-	xnando $a20a21a22a23.z = $a23, $a22a23.hi 	#Opcode-kv3_v2-XNANDO_registerA_registerB_registerC_simple
+	xnando $a20a21a22a23.t = $a24, $a24a25.lo 	#Opcode-kv3_v2-XNANDO_registerA_registerB_registerC_simple
 	;;
-	xnioro $a20a21a22a23.t = $a24, $a24a25.lo 	#Opcode-kv3_v2-XNIORO_registerA_registerB_registerC_simple
+	xneoro $a24a25a26a27.x = $a25, $a24a25.hi 	#Opcode-kv3_v2-XNEORO_registerA_registerB_registerC_simple
 	;;
-	xnoro $a24a25a26a27.x = $a25, $a24a25.hi 	#Opcode-kv3_v2-XNORO_registerA_registerB_registerC_simple
+	xnioro $a24a25a26a27.y = $a26, $a26a27.lo 	#Opcode-kv3_v2-XNIORO_registerA_registerB_registerC_simple
 	;;
-	xnxoro $a24a25a26a27.y = $a26, $a26a27.lo 	#Opcode-kv3_v2-XNXORO_registerA_registerB_registerC_simple
+	xnoro $a24a25a26a27.z = $a27, $a26a27.hi 	#Opcode-kv3_v2-XNORO_registerA_registerB_registerC_simple
 	;;
-	xord $r1 = $r0r1.hi, 2305843009213693951 	#Opcode-kv3_v2-XORD_registerW_registerZ_extend27_upper27_lower10_triple
+	xnxoro $a24a25a26a27.t = $a28, $a28a29.lo 	#Opcode-kv3_v2-XNXORO_registerA_registerB_registerC_simple
 	;;
-	xord $r0r1r2r3.y = $r2, $r2r3.lo 	#Opcode-kv3_v2-XORD_registerW_registerZ_registerY_simple
+	xord $fp = $r15, 2305843009213693951 	#Opcode-kv3_v2-XORD_registerW_registerZ_extend27_upper27_lower10_triple
 	;;
-	xord $r0r1r2r3.z = $r3, -64 	#Opcode-kv3_v2-XORD_registerW_registerZ_signed10_simple
+	xord $rp = $r16, $r16r17.lo 	#Opcode-kv3_v2-XORD_registerW_registerZ_registerY_simple
 	;;
-	xord $r2r3.hi = $r0r1r2r3.t, -8589934592 	#Opcode-kv3_v2-XORD_registerW_registerZ_upper27_lower10_double
+	xord $r16r17r18r19.x = $r17, -64 	#Opcode-kv3_v2-XORD_registerW_registerZ_signed10_simple
 	;;
-	xorno $a24a25a26a27.z = $a27, $a26a27.hi 	#Opcode-kv3_v2-XORNO_registerA_registerB_registerC_simple
+	xord $r16r17.hi = $r16r17r18r19.y, -8589934592 	#Opcode-kv3_v2-XORD_registerW_registerZ_upper27_lower10_double
 	;;
-	xoro $a24a25a26a27.t = $a28, $a28a29.lo 	#Opcode-kv3_v2-XORO_registerA_registerB_registerC_simple
+	xorno $a28a29a30a31.x = $a29, $a28a29.hi 	#Opcode-kv3_v2-XORNO_registerA_registerB_registerC_simple
 	;;
-	xorrbod $r4 = $r4r5.lo 	#Opcode-kv3_v2-XORRBOD_registerW_registerZ_simple
+	xoro $a28a29a30a31.y = $a30, $a30a31.lo 	#Opcode-kv3_v2-XORO_registerA_registerB_registerC_simple
 	;;
-	xorrhqd $r4r5r6r7.x = $r5 	#Opcode-kv3_v2-XORRHQD_registerW_registerZ_simple
+	xorrbod $r18 = $r18r19.lo 	#Opcode-kv3_v2-XORRBOD_registerW_registerZ_simple
 	;;
-	xorrwpd $r4r5.hi = $r4r5r6r7.y 	#Opcode-kv3_v2-XORRWPD_registerW_registerZ_simple
+	xorrhqd $r16r17r18r19.z = $r19 	#Opcode-kv3_v2-XORRHQD_registerW_registerZ_simple
 	;;
-	xorw $r6 = $r6r7.lo, $r4r5r6r7.z 	#Opcode-kv3_v2-XORW_registerW_registerZ_registerY_simple
+	xorrwpd $r18r19.hi = $r16r17r18r19.t 	#Opcode-kv3_v2-XORRWPD_registerW_registerZ_simple
 	;;
-	xorw $r7 = $r6r7.hi, -64 	#Opcode-kv3_v2-XORW_registerW_registerZ_signed10_simple
+	xorw $r20 = $r20r21.lo, $r20r21r22r23.x 	#Opcode-kv3_v2-XORW_registerW_registerZ_registerY_simple
 	;;
-	xorw $r4r5r6r7.t = $r8, -8589934592 	#Opcode-kv3_v2-XORW_registerW_registerZ_upper27_lower10_double
+	xorw $r21 = $r20r21.hi, -64 	#Opcode-kv3_v2-XORW_registerW_registerZ_signed10_simple
 	;;
-	xrecvo.f $a28a29a30a31.x 	#Opcode-kv3_v2-XRECVO_rchannel_registerA_simple
+	xorw $r20r21r22r23.y = $r22, -8589934592 	#Opcode-kv3_v2-XORW_registerW_registerZ_upper27_lower10_double
 	;;
-	xsbmm8dq $a29 = $a28a29.hi, $a28a29a30a31.y 	#Opcode-kv3_v2-XSBMM8DQ_registerA_registerB_registerC_simple
+	xrecvo.f $a28a29a30a31.z 	#Opcode-kv3_v2-XRECVO_rchannel_registerA_simple
 	;;
-	xsbmmt8dq $a30 = $a30a31.lo, $a28a29a30a31.z 	#Opcode-kv3_v2-XSBMMT8DQ_registerA_registerB_registerC_simple
+	xsbmm8dq $a31 = $a30a31.hi, $a28a29a30a31.t 	#Opcode-kv3_v2-XSBMM8DQ_registerA_registerB_registerC_simple
 	;;
-	xsendo.b $a31 	#Opcode-kv3_v2-XSENDO_schannel_registerC_simple
+	xsbmmt8dq $a32 = $a32a33.lo, $a32a33a34a35.x 	#Opcode-kv3_v2-XSBMMT8DQ_registerA_registerB_registerC_simple
 	;;
-	xsendrecvo.f.b $a30a31.hi, $a28a29a30a31.t 	#Opcode-kv3_v2-XSENDRECVO_schannel_rchannel_registerC_registerA_simple
+	xsendo.b $a33 	#Opcode-kv3_v2-XSENDO_schannel_registerC_simple
 	;;
-	xso $r8r9.lo[$r8r9r10r11.x] = $a32 	#Opcode-kv3_v2-XSO_doscale_registerY_registerZ_registerE_simple
+	xsendrecvo.f.b $a32a33.hi, $a32a33a34a35.y 	#Opcode-kv3_v2-XSENDRECVO_schannel_rchannel_registerC_registerA_simple
 	;;
-	xso 2305843009213693951[$r9] = $a32a33.lo 	#Opcode-kv3_v2-XSO_extend27_upper27_lower10_registerZ_registerE_triple
+	xso $r22r23.lo[$r20r21r22r23.z] = $a34 	#Opcode-kv3_v2-XSO_doscale_registerY_registerZ_registerE_simple
 	;;
-	xso.mtc $r8r9.hi? -1125899906842624[$r8r9r10r11.y] = $a32a33a34a35.x 	#Opcode-kv3_v2-XSO_lsumask_registerY_extend27_offset27_registerZ_registerE_triple
+	xso 2305843009213693951[$r23] = $a34a35.lo 	#Opcode-kv3_v2-XSO_extend27_upper27_lower10_registerZ_registerE_triple
 	;;
-	xso.mfc $r10? -8388608[$r10r11.lo] = $a33 	#Opcode-kv3_v2-XSO_lsumask_registerY_offset27_registerZ_registerE_double
+	xso.mtc $r22r23.hi? -1125899906842624[$r20r21r22r23.t] = $a32a33a34a35.z 	#Opcode-kv3_v2-XSO_lsumask_registerY_extend27_offset27_registerZ_registerE_triple
 	;;
-	xso.dnez $r8r9r10r11.z? [$r11] = $a32a33.hi 	#Opcode-kv3_v2-XSO_lsumask_registerY_registerZ_registerE_simple
+	xso.mfc $r24? -8388608[$r24r25.lo] = $a35 	#Opcode-kv3_v2-XSO_lsumask_registerY_offset27_registerZ_registerE_double
 	;;
-	xso -64[$r10r11.hi] = $a32a33a34a35.y 	#Opcode-kv3_v2-XSO_signed10_registerZ_registerE_simple
+	xso.dnez $r24r25r26r27.x? [$r25] = $a34a35.hi 	#Opcode-kv3_v2-XSO_lsumask_registerY_registerZ_registerE_simple
 	;;
-	xso -8589934592[$r8r9r10r11.t] = $a34 	#Opcode-kv3_v2-XSO_upper27_lower10_registerZ_registerE_double
+	xso -64[$r24r25.hi] = $a32a33a34a35.t 	#Opcode-kv3_v2-XSO_signed10_registerZ_registerE_simple
 	;;
-	xsplatdo $a34a35.lo = 2305843009213693951 	#Opcode-kv3_v2-XSPLATDO_registerA_extend27_upper27_lower10_triple
+	xso -8589934592[$r24r25r26r27.y] = $a36 	#Opcode-kv3_v2-XSO_upper27_lower10_registerZ_registerE_double
 	;;
-	xsplatdo $a32a33a34a35.z = -549755813888 	#Opcode-kv3_v2-XSPLATDO_registerA_extend6_upper27_lower10_double
+	xsplatdo $a36a37.lo = 2305843009213693951 	#Opcode-kv3_v2-XSPLATDO_registerA_extend27_upper27_lower10_triple
 	;;
-	xsplatdo $a35 = -4096 	#Opcode-kv3_v2-XSPLATDO_registerA_signed16_simple
+	xsplatdo $a36a37a38a39.x = -549755813888 	#Opcode-kv3_v2-XSPLATDO_registerA_extend6_upper27_lower10_double
 	;;
-	xsplatov.td $a44a45a46a47 = $a34a35.hi 	#Opcode-kv3_v2-XSPLATOV_shuffleV_registerAq_registerC_simple
+	xsplatdo $a37 = -4096 	#Opcode-kv3_v2-XSPLATDO_registerA_signed16_simple
 	;;
-	xsplatox.zd $a28a29a30a31.lo = $a32a33a34a35.t 	#Opcode-kv3_v2-XSPLATOX_shuffleX_registerAp_registerC_simple
+	xsplatov.td $a44a45a46a47 = $a36a37.hi 	#Opcode-kv3_v2-XSPLATOV_shuffleV_registerAq_registerC_simple
 	;;
-	xsx48bw $a48a49a50a51 = $a36 	#Opcode-kv3_v2-XSX48BW_registerAq_registerC_simple
+	xsplatox.zd $a28a29a30a31.lo = $a36a37a38a39.y 	#Opcode-kv3_v2-XSPLATOX_shuffleX_registerAp_registerC_simple
 	;;
-	xtrunc48wb $a36a37.lo = $a52a53a54a55 	#Opcode-kv3_v2-XTRUNC48WB_registerA_registerCq_simple
+	xsx48bw $a48a49a50a51 = $a38 	#Opcode-kv3_v2-XSX48BW_registerAq_registerC_simple
 	;;
-	xxoro $a36a37a38a39.x = $a37, $a36a37.hi 	#Opcode-kv3_v2-XXORO_registerA_registerB_registerC_simple
+	xtrunc48wb $a38a39.lo = $a52a53a54a55 	#Opcode-kv3_v2-XTRUNC48WB_registerA_registerCq_simple
 	;;
-	xzx48bw $a56a57a58a59 = $a36a37a38a39.y 	#Opcode-kv3_v2-XZX48BW_registerAq_registerC_simple
+	xxoro $a36a37a38a39.z = $a39, $a38a39.hi 	#Opcode-kv3_v2-XXORO_registerA_registerB_registerC_simple
 	;;
-	zxbd $r12 = $sp 	#Opcode-kv3_v2-ZXBD_registerW_registerZ_simple
+	xzx48bw $a56a57a58a59 = $a36a37a38a39.t 	#Opcode-kv3_v2-XZX48BW_registerAq_registerC_simple
 	;;
-	zxhd $r13 = $tp 	#Opcode-kv3_v2-ZXHD_registerW_registerZ_simple
+	zxbd $r26 = $r26r27.lo 	#Opcode-kv3_v2-ZXBD_registerW_registerZ_simple
 	;;
-	zxlbhq $r14 = $fp 	#Opcode-kv3_v2-ZXLBHQ_registerW_registerZ_simple
+	zxhd $r24r25r26r27.z = $r27 	#Opcode-kv3_v2-ZXHD_registerW_registerZ_simple
 	;;
-	zxlhwp $r15 = $rp 	#Opcode-kv3_v2-ZXLHWP_registerW_registerZ_simple
+	zxlbhq $r26r27.hi = $r24r25r26r27.t 	#Opcode-kv3_v2-ZXLBHQ_registerW_registerZ_simple
 	;;
-	zxmbhq $r16 = $r16r17.lo 	#Opcode-kv3_v2-ZXMBHQ_registerW_registerZ_simple
+	zxlhwp $r28 = $r28r29.lo 	#Opcode-kv3_v2-ZXLHWP_registerW_registerZ_simple
 	;;
-	zxmhwp $r16r17r18r19.x = $r17 	#Opcode-kv3_v2-ZXMHWP_registerW_registerZ_simple
+	zxmbhq $r28r29r30r31.x = $r29 	#Opcode-kv3_v2-ZXMBHQ_registerW_registerZ_simple
 	;;
-	zxwd $r16r17.hi = $r16r17r18r19.y 	#Opcode-kv3_v2-ZXWD_registerW_registerZ_simple
+	zxmhwp $r28r29.hi = $r28r29r30r31.y 	#Opcode-kv3_v2-ZXMHWP_registerW_registerZ_simple
+	;;
+	zxwd $r30 = $r30r31.lo 	#Opcode-kv3_v2-ZXWD_registerW_registerZ_simple
 	;;
 	.endp	main
 	.section .text
-
