@@ -43,33 +43,34 @@ typedef enum {
   Steering__
 } enum_Steering;
 typedef uint8_t Steering;
+#define Steering_EXT Steering_MAU
 
-/* ExtensionKV3 values a.k.a. KV3 sub-steering values.  */
+/* ImmediateKV3 values a.k.a. KV3 sub-steering values.  */
 typedef enum {
-  ExtensionKV3_ALU0,
-  ExtensionKV3_ALU1,
-  ExtensionKV3_MAU,
-  ExtensionKV3_LSU,
-  ExtensionKV3__
-} enum_ExtensionKV3;
-typedef uint8_t ExtensionKV3;
+  ImmediateKV3_ALU0,
+  ImmediateKV3_ALU1,
+  ImmediateKV3_MAU,
+  ImmediateKV3_LSU,
+  ImmediateKV3__
+} enum_ImmediateKV3;
+typedef uint8_t ImmediateKV3;
 
-/* ExtensionKV4 values a.k.a. KV4 sub-steering values.  */
+/* ImmediateKV4 values a.k.a. KV4 sub-steering values.  */
 typedef enum {
-  ExtensionKV4_ALU0,
-  ExtensionKV4_ALU1,
-  ExtensionKV4_LSU0,
-  ExtensionKV4_LSU1,
-  ExtensionKV4__
-} enum_ExtensionKV4;
-typedef uint8_t ExtensionKV4;
+  ImmediateKV4_ALU0,
+  ImmediateKV4_ALU1,
+  ImmediateKV4_LSU0,
+  ImmediateKV4_LSU1,
+  ImmediateKV4__
+} enum_ImmediateKV4;
+typedef uint8_t ImmediateKV4;
 
 /*
  * BundleIssueKV3 enumeration.
  */
 typedef enum {
   BundleIssueKV3_BCU,
-  BundleIssueKV3_TCA,
+  BundleIssueKV3_EXT,
   BundleIssueKV3_ALU0,
   BundleIssueKV3_ALU1,
   BundleIssueKV3_MAU,
@@ -77,6 +78,7 @@ typedef enum {
   BundleIssueKV3__,
 } enum_BundleIssueKV3;
 typedef uint8_t BundleIssueKV3;
+
 /*
  * BundleIssueKV4 enumeration.
  */
@@ -85,8 +87,8 @@ typedef enum {
   BundleIssueKV4_BCU1,
   BundleIssueKV4_ALU0,
   BundleIssueKV4_ALU1,
-  BundleIssueKV4_MAU0,
-  BundleIssueKV4_MAU1,
+  BundleIssueKV4_EXT0,
+  BundleIssueKV4_EXT1,
   BundleIssueKV4_LSU0,
   BundleIssueKV4_LSU1,
   BundleIssueKV4__,
@@ -94,12 +96,12 @@ typedef enum {
 typedef uint8_t BundleIssueKV4;
 
 /*
- * An IMMX syllable is associated with the BundleIssueKV3 ExtensionKV3_BundleIssueKV3[extension].
+ * Map sub-steering value in [0, 3] to the BundleIssue*.
  */
 static const BundleIssueKV3
-ExtensionKV3_BundleIssueKV3[] = { BundleIssueKV3_ALU0, BundleIssueKV3_ALU1, BundleIssueKV3_MAU, BundleIssueKV3_LSU };
+ImmediateKV3_BundleIssueKV3[] = { BundleIssueKV3_ALU0, BundleIssueKV3_ALU1, BundleIssueKV3_MAU, BundleIssueKV3_LSU };
 static const BundleIssueKV4
-ExtensionKV4_BundleIssueKV4[] = { BundleIssueKV4_ALU0, BundleIssueKV4_ALU1, BundleIssueKV4_LSU0, BundleIssueKV4_LSU1 };
+ImmediateKV4_BundleIssueKV4[] = { BundleIssueKV4_ALU0, BundleIssueKV4_ALU1, BundleIssueKV4_LSU0, BundleIssueKV4_LSU1 };
 
 static inline int
 kvx_steering(uint32_t x)
@@ -297,13 +299,12 @@ kvx_dis_init (struct disassemble_info *info)
 static int
 kv3_reassemble_bundle (int wordcount, int *_insncount)
 {
-
   /* Debugging flag.  */
   int debug = 0;
 
   /* Available resources.  */
   int bcu_taken = 0;
-  int tca_taken = 0;
+  int ext_taken = 0;
   int alu0_taken = 0;
   int alu1_taken = 0;
   int mau_taken = 0;
@@ -332,25 +333,25 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
       switch (kvx_steering (syllable))
 	{
 	case Steering_BCU:
-	  /* BCU or TCA instruction.  */
+	  /* BCU or EXT instruction.  */
 	  if (i == 0)
 	    {
 	      if (kv3_is_tca_opcode (syllable))
 		{
-		  if (tca_taken)
+		  if (ext_taken)
 		    {
 		      if (debug)
-			fprintf (stderr, "Too many TCA instructions");
+			fprintf (stderr, "Too many EXT instructions");
 		      return 1;
 		    }
 		  if (debug)
 		    fprintf (stderr,
-			     "Syllable 0: Set valid on TCA for instr %d with 0x%x\n",
-			     BundleIssueKV3_TCA, syllable);
-		  instr[BundleIssueKV3_TCA].valid = 1;
-		  instr[BundleIssueKV3_TCA].opcode = syllable;
-		  instr[BundleIssueKV3_TCA].nb_syllables = 1;
-		  tca_taken = 1;
+			     "Syllable 0: Set valid on EXT for instr %d with 0x%x\n",
+			     BundleIssueKV3_EXT, syllable);
+		  instr[BundleIssueKV3_EXT].valid = 1;
+		  instr[BundleIssueKV3_EXT].opcode = syllable;
+		  instr[BundleIssueKV3_EXT].nb_syllables = 1;
+		  ext_taken = 1;
 		}
 	      else
 		{
@@ -369,26 +370,26 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      if (i == 1 && bcu_taken && kv3_is_tca_opcode (syllable))
 		{
-		  if (tca_taken)
+		  if (ext_taken)
 		    {
 		      if (debug)
-			fprintf (stderr, "Too many TCA instructions");
+			fprintf (stderr, "Too many EXT instructions");
 		      return 1;
 		    }
 		  if (debug)
 		    fprintf (stderr,
-			     "Syllable 0: Set valid on TCA for instr %d with 0x%x\n",
-			     BundleIssueKV3_TCA, syllable);
-		  instr[BundleIssueKV3_TCA].valid = 1;
-		  instr[BundleIssueKV3_TCA].opcode = syllable;
-		  instr[BundleIssueKV3_TCA].nb_syllables = 1;
-		  tca_taken = 1;
+			     "Syllable 0: Set valid on EXT for instr %d with 0x%x\n",
+			     BundleIssueKV3_EXT, syllable);
+		  instr[BundleIssueKV3_EXT].valid = 1;
+		  instr[BundleIssueKV3_EXT].opcode = syllable;
+		  instr[BundleIssueKV3_EXT].nb_syllables = 1;
+		  ext_taken = 1;
 		}
 	      else
 		{
 		  /* Not first syllable in bundle, IMMX.  */
 		  struct instr_s *instr_p =
-		    &(instr[ExtensionKV3_BundleIssueKV3[kvx_extension (syllable)]]);
+		    &(instr[ImmediateKV3_BundleIssueKV3[kvx_extension (syllable)]]);
 		  int immx_count = instr_p->immx_count;
 		  if (immx_count > 1)
 		    {
@@ -403,7 +404,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 		    fprintf (stderr,
 			     "Set IMMX[%d] on instr %d for extension %d @ %d\n",
 			     immx_count,
-			     ExtensionKV3_BundleIssueKV3[kvx_extension (syllable)],
+			     ImmediateKV3_BundleIssueKV3[kvx_extension (syllable)],
 			     kvx_extension (syllable), i);
 		  instr_p->immx_count = immx_count + 1;
 		}
@@ -563,14 +564,13 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 static int
 kv4_reassemble_bundle (int wordcount, int *_insncount)
 {
-
   /* Debugging flag.  */
   int debug = 0;
 
   /* Available resources.  */
   int bcu_inuse = 0;
   int alu_inuse = 0;
-  int mau_inuse = 0;
+  int ext_inuse = 0;
   int lsu_inuse = 0;
 
   struct instr_s instr[KVX_MAXBUNDLEISSUE];
@@ -614,7 +614,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      /* Steering BCU and not first or second, must be IMMX.  */
 	      struct instr_s *instr_p =
-		&(instr[ExtensionKV4_BundleIssueKV4[kvx_extension (syllable)]]);
+		&(instr[ImmediateKV4_BundleIssueKV4[kvx_extension (syllable)]]);
 	      int immx_count = instr_p->immx_count;
 	      if (immx_count > 1)
 		{
@@ -629,7 +629,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 		fprintf (stderr,
 			 "Set IMMX[%d] on instr %d for extension %d @ %d\n",
 			 immx_count,
-			 ExtensionKV4_BundleIssueKV4[kvx_extension (syllable)],
+			 ImmediateKV4_BundleIssueKV4[kvx_extension (syllable)],
 			 kvx_extension (syllable), index);
 	      instr_p->immx_count = immx_count + 1;
 	    }
@@ -691,26 +691,26 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	    }
 	  break;
 
-	case Steering_MAU:
-	  if (mau_inuse == 0)
+	case Steering_EXT:
+	  if (ext_inuse == 0)
 	    {
 	      if (debug)
 		fprintf (stderr, "Set valid on MAU0 for instr %d with 0x%x\n",
-			 BundleIssueKV4_MAU0, syllable);
-	      instr[BundleIssueKV4_MAU0].valid = 1;
-	      instr[BundleIssueKV4_MAU0].opcode = syllable;
-	      instr[BundleIssueKV4_MAU0].nb_syllables = 1;
-	      mau_inuse++;
+			 BundleIssueKV4_EXT0, syllable);
+	      instr[BundleIssueKV4_EXT0].valid = 1;
+	      instr[BundleIssueKV4_EXT0].opcode = syllable;
+	      instr[BundleIssueKV4_EXT0].nb_syllables = 1;
+	      ext_inuse++;
 	    }
-	  else if (mau_inuse == 1)
+	  else if (ext_inuse == 1)
 	    {
 	      if (debug)
 		fprintf (stderr, "Set valid on MAU1 for instr %d with 0x%x\n",
-			 BundleIssueKV4_MAU1, syllable);
-	      instr[BundleIssueKV4_MAU1].valid = 1;
-	      instr[BundleIssueKV4_MAU1].opcode = syllable;
-	      instr[BundleIssueKV4_MAU1].nb_syllables = 1;
-	      mau_inuse++;
+			 BundleIssueKV4_EXT1, syllable);
+	      instr[BundleIssueKV4_EXT1].valid = 1;
+	      instr[BundleIssueKV4_EXT1].opcode = syllable;
+	      instr[BundleIssueKV4_EXT1].nb_syllables = 1;
+	      ext_inuse++;
 	    }
 	  else
 	    {

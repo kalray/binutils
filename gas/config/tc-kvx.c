@@ -1091,7 +1091,7 @@ insn_syntax (struct kvxopc * op, char *buf, int buf_size)
 #define ASM_CHARS_MAX (71)
 
 static void
-kvx_print_insn (struct kvxopc * op ATTRIBUTE_UNUSED)
+kv3_print_insn (struct kvxopc * op ATTRIBUTE_UNUSED)
 {
   char asm_str[ASM_CHARS_MAX];
   int chars = insn_syntax (op, asm_str, ASM_CHARS_MAX);
@@ -1101,8 +1101,7 @@ kvx_print_insn (struct kvxopc * op ATTRIBUTE_UNUSED)
   for (int i = chars - 1; i < ASM_CHARS_MAX - 1; i++)
     asm_str[i] = '-';
 
-  /* This is a hack which works because the Bundling is the same for all cores
-     for now.  */
+  /* This works because the Bundling is the same for the KV3 v1 and v2.  */
   switch ((int) op->bundling)
     {
     case Bundling_kv3_v1_ALL:
@@ -1111,8 +1110,8 @@ kvx_print_insn (struct kvxopc * op ATTRIBUTE_UNUSED)
     case Bundling_kv3_v1_BCU:
       insn_type = "BCU  ";
       break;
-    case Bundling_kv3_v1_TCA:
-      insn_type = "TCA  ";
+    case Bundling_kv3_v1_EXT:
+      insn_type = "EXT  ";
       break;
     case Bundling_kv3_v1_FULL:
     case Bundling_kv3_v1_FULL_X:
@@ -1160,6 +1159,70 @@ kvx_print_insn (struct kvxopc * op ATTRIBUTE_UNUSED)
 	  op->wordcount, insn_type, insn_mode);
 }
 
+static void
+kv4_print_insn (struct kvxopc * op ATTRIBUTE_UNUSED)
+{
+  char asm_str[ASM_CHARS_MAX];
+  int chars = insn_syntax (op, asm_str, ASM_CHARS_MAX);
+  const char *insn_type = "UNKNOWN";
+  const char *insn_mode = "";
+
+  for (int i = chars - 1; i < ASM_CHARS_MAX - 1; i++)
+    asm_str[i] = '-';
+
+  /* This works because the Bundling is the same for the KV3 v1 and v2.  */
+  switch ((int) op->bundling)
+    {
+    case Bundling_kv4_v1_ALL:
+      insn_type = "ALL  ";
+      break;
+    case Bundling_kv4_v1_BCU:
+      insn_type = "BCU  ";
+      break;
+    case Bundling_kv4_v1_FULL:
+    case Bundling_kv4_v1_FULL_X:
+    case Bundling_kv4_v1_FULL_Y:
+      insn_type = "FULL ";
+      break;
+    case Bundling_kv4_v1_LITE:
+    case Bundling_kv4_v1_LITE_X:
+    case Bundling_kv4_v1_LITE_Y:
+      insn_type = "LITE ";
+      break;
+    case Bundling_kv4_v1_TINY:
+    case Bundling_kv4_v1_TINY_X:
+    case Bundling_kv4_v1_TINY_Y:
+      insn_type = "TINY ";
+      break;
+    case Bundling_kv4_v1_LSU:
+    case Bundling_kv4_v1_LSU_X:
+    case Bundling_kv4_v1_LSU_Y:
+      insn_type = "LSU  ";
+      break;
+    case Bundling_kv4_v1_EXT:
+      insn_type = "EXT  ";
+      break;
+    case Bundling_kv4_v1_NOP:
+      insn_type = "NOP  ";
+      break;
+    default:
+      as_fatal ("Unhandled Bundling class %d", op->bundling);
+    }
+
+  if (op->codewords[0].flags & kvxOPCODE_FLAG_MODE64
+      && op->codewords[0].flags & kvxOPCODE_FLAG_MODE32)
+    insn_mode = "32 and 64";
+  else if (op->codewords[0].flags & kvxOPCODE_FLAG_MODE64)
+    insn_mode = "64";
+  else if (op->codewords[0].flags & kvxOPCODE_FLAG_MODE32)
+    insn_mode = "32";
+  else
+    as_fatal ("Unknown instruction mode.");
+
+  printf ("%s | syllables: %d | type: %s | mode: %s bits\n", asm_str,
+	  op->wordcount, insn_type, insn_mode);
+}
+
 /* Comparison function compatible with qsort.  This is used to sort the issues
    into the right order.  */
 static int
@@ -1180,7 +1243,7 @@ static void
 kv3_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 {
   enum
-  { EXU_BCU, EXU_TCA, EXU_ALU0, EXU_ALU1, EXU_MAU, EXU_LSU, EXU__ };
+  { EXU_BCU, EXU_EXT, EXU_ALU0, EXU_ALU1, EXU_MAU, EXU_LSU, EXU__ };
   struct kvxinsn *issued[EXU__];
   int tag, exu;
   int stcall = 0;
@@ -1208,11 +1271,11 @@ kv3_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 	  else
 	    as_fatal ("More than one BCU instruction in bundle");
 	  break;
-	case Bundling_kv3_v1_TCA:
-	  if (!issued[EXU_TCA])
-	    issued[EXU_TCA] = kvxinsn;
+	case Bundling_kv3_v1_EXT:
+	  if (!issued[EXU_EXT])
+	    issued[EXU_EXT] = kvxinsn;
 	  else
-	    as_fatal ("More than one TCA instruction in bundle");
+	    as_fatal ("More than one EXT instruction in bundle");
 	  break;
 	case Bundling_kv3_v1_FULL:
 	case Bundling_kv3_v1_FULL_X:
@@ -1329,7 +1392,7 @@ kv4_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 {
   enum
   { EXU_BCU0, EXU_BCU1, EXU_ALU0, EXU_ALU1,
-    EXU_MAU0, EXU_MAU1, EXU_LSU0, EXU_LSU1, EXU__ };
+    EXU_EXT0, EXU_EXT1, EXU_LSU0, EXU_LSU1, EXU__ };
   struct kvxinsn *issued[EXU__];
   int tag, exu;
 
@@ -1352,12 +1415,6 @@ kv4_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 	    issued[EXU_BCU1] = kvxinsn;
 	  else
 	    as_fatal ("More than two BCU instructions in bundle");
-	  break;
-	case Bundling_kv4_v1_TCA:
-	  if (!issued[EXU_BCU1])
-	    issued[EXU_BCU1] = kvxinsn;
-	  else
-	    as_fatal ("More than one TCA instruction in bundle");
 	  break;
 	case Bundling_kv4_v1_FULL:
 	case Bundling_kv4_v1_FULL_X:
@@ -1389,21 +1446,17 @@ kv4_reorder_bundle (struct kvxinsn *bundle_insn[], int bundle_insncnt)
 	  else
 	    as_fatal ("Too many ALU FULL or LITE instructions in bundle");
 	  break;
-	case Bundling_kv4_v1_MAU:
-	  if (!issued[EXU_MAU0])
+	case Bundling_kv4_v1_EXT:
+	  if (!issued[EXU_EXT0])
 	    {
-	      issued[EXU_MAU0] = kvxinsn;
+	      issued[EXU_EXT0] = kvxinsn;
 	    }
-	  else if (!issued[EXU_MAU1])
+	  else if (!issued[EXU_EXT1])
 	    {
-	      issued[EXU_MAU1] = kvxinsn;
+	      issued[EXU_EXT1] = kvxinsn;
 	    }
 	  else
-	    as_fatal ("More than one MAU instruction in bundle");
-	  break;
-	case Bundling_kv4_v1_MAU_X:
-	case Bundling_kv4_v1_MAU_Y:
-	  as_fatal ("Immediate extension of MAU instruction not allowed");
+	    as_fatal ("More than two EXT instructions in bundle");
 	  break;
 	case Bundling_kv4_v1_LSU:
 	case Bundling_kv4_v1_LSU_X:
@@ -1671,20 +1724,22 @@ kvx_set_cpu (void)
       env.params.core = kvx_core_info->elf_core;
 
   int kvx_bfd_mach;
-  print_insn = kvx_print_insn;
 
   switch (kvx_core_info->elf_core)
     {
     case ELF_KVX_CORE_KV3_1:
       kvx_bfd_mach = env.params.arch_size == 32 ? bfd_mach_kv3_1 : bfd_mach_kv3_1_64;
+      print_insn = kv3_print_insn;
       setup (ELF_KVX_CORE_KV3_1);
       break;
     case ELF_KVX_CORE_KV3_2:
       kvx_bfd_mach = env.params.arch_size == 32 ? bfd_mach_kv3_2 : bfd_mach_kv3_2_64;
+      print_insn = kv3_print_insn;
       setup (ELF_KVX_CORE_KV3_2);
       break;
     case ELF_KVX_CORE_KV4_1:
       kvx_bfd_mach = env.params.arch_size == 32 ? bfd_mach_kv4_1 : bfd_mach_kv4_1_64;
+      print_insn = kv4_print_insn;
       setup (ELF_KVX_CORE_KV4_1);
       break;
     default:
