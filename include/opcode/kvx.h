@@ -939,7 +939,7 @@ extern const char *mod_kv3_v1_splat32[];
 typedef enum {
   Bundling_kv3_v1_ALL,
   Bundling_kv3_v1_BCU,
-  Bundling_kv3_v1_TCA,
+  Bundling_kv3_v1_EXT,
   Bundling_kv3_v1_FULL,
   Bundling_kv3_v1_FULL_X,
   Bundling_kv3_v1_FULL_Y,
@@ -964,7 +964,7 @@ static const char *bundling_kv3_v1_names(Bundling_kv3_v1 bundling) {
   switch(bundling) {
   case Bundling_kv3_v1_ALL: return "Bundling_kv3_v1_ALL";
   case Bundling_kv3_v1_BCU: return "Bundling_kv3_v1_BCU";
-  case Bundling_kv3_v1_TCA: return "Bundling_kv3_v1_TCA";
+  case Bundling_kv3_v1_EXT: return "Bundling_kv3_v1_EXT";
   case Bundling_kv3_v1_FULL: return "Bundling_kv3_v1_FULL";
   case Bundling_kv3_v1_FULL_X: return "Bundling_kv3_v1_FULL_X";
   case Bundling_kv3_v1_FULL_Y: return "Bundling_kv3_v1_FULL_Y";
@@ -993,7 +993,7 @@ static const char *bundling_kv3_v1_names(Bundling_kv3_v1 bundling) {
 #define Resource_kv3_v1_LSU 4
 #define Resource_kv3_v1_MAU 5
 #define Resource_kv3_v1_BCU 6
-#define Resource_kv3_v1_TCA 7
+#define Resource_kv3_v1_EXT 7
 #define Resource_kv3_v1_XFER 8
 #define Resource_kv3_v1_AUXR 9
 #define Resource_kv3_v1_AUXW 10
@@ -1031,7 +1031,7 @@ static const char *bundling_kv3_v1_names(Bundling_kv3_v1 bundling) {
 #define Reservation_kv3_v1_BCU_CRRP_CRWL_CRWH 22
 #define Reservation_kv3_v1_BCU_TINY_AUXW_CRRP 23
 #define Reservation_kv3_v1_BCU_TINY_TINY_MAU_XNOP 24
-#define Reservation_kv3_v1_TCA 25
+#define Reservation_kv3_v1_EXT 25
 #define Reservation_kv3_v1_LSU 26
 #define Reservation_kv3_v1_LSU_X 27
 #define Reservation_kv3_v1_LSU_Y 28
@@ -1982,7 +1982,7 @@ extern const char *mod_kv3_v2_splat32[];
 typedef enum {
   Bundling_kv3_v2_ALL,
   Bundling_kv3_v2_BCU,
-  Bundling_kv3_v2_TCA,
+  Bundling_kv3_v2_EXT,
   Bundling_kv3_v2_FULL,
   Bundling_kv3_v2_FULL_X,
   Bundling_kv3_v2_FULL_Y,
@@ -2007,7 +2007,7 @@ static const char *bundling_kv3_v2_names(Bundling_kv3_v2 bundling) {
   switch(bundling) {
   case Bundling_kv3_v2_ALL: return "Bundling_kv3_v2_ALL";
   case Bundling_kv3_v2_BCU: return "Bundling_kv3_v2_BCU";
-  case Bundling_kv3_v2_TCA: return "Bundling_kv3_v2_TCA";
+  case Bundling_kv3_v2_EXT: return "Bundling_kv3_v2_EXT";
   case Bundling_kv3_v2_FULL: return "Bundling_kv3_v2_FULL";
   case Bundling_kv3_v2_FULL_X: return "Bundling_kv3_v2_FULL_X";
   case Bundling_kv3_v2_FULL_Y: return "Bundling_kv3_v2_FULL_Y";
@@ -2036,7 +2036,7 @@ static const char *bundling_kv3_v2_names(Bundling_kv3_v2 bundling) {
 #define Resource_kv3_v2_LSU 4
 #define Resource_kv3_v2_MAU 5
 #define Resource_kv3_v2_BCU 6
-#define Resource_kv3_v2_TCA 7
+#define Resource_kv3_v2_EXT 7
 #define Resource_kv3_v2_XFER 8
 #define Resource_kv3_v2_AUXR 9
 #define Resource_kv3_v2_AUXW 10
@@ -2074,7 +2074,7 @@ static const char *bundling_kv3_v2_names(Bundling_kv3_v2 bundling) {
 #define Reservation_kv3_v2_BCU_CRRP_CRWL_CRWH 22
 #define Reservation_kv3_v2_BCU_TINY_AUXW_CRRP 23
 #define Reservation_kv3_v2_BCU_TINY_TINY_MAU_XNOP 24
-#define Reservation_kv3_v2_TCA 25
+#define Reservation_kv3_v2_EXT 25
 #define Reservation_kv3_v2_LSU 26
 #define Reservation_kv3_v2_LSU_X 27
 #define Reservation_kv3_v2_LSU_Y 28
@@ -2915,22 +2915,19 @@ extern const char *mod_kv4_v1_splat32[];
 typedef enum {
   Bundling_kv4_v1_ALL,
   Bundling_kv4_v1_BCU,
-  Bundling_kv4_v1_TCA,
   Bundling_kv4_v1_FULL,
   Bundling_kv4_v1_FULL_X,
   Bundling_kv4_v1_FULL_Y,
   Bundling_kv4_v1_LITE,
   Bundling_kv4_v1_LITE_X,
   Bundling_kv4_v1_LITE_Y,
-  Bundling_kv4_v1_MAU,
-  Bundling_kv4_v1_MAU_X,
-  Bundling_kv4_v1_MAU_Y,
-  Bundling_kv4_v1_LSU,
-  Bundling_kv4_v1_LSU_X,
-  Bundling_kv4_v1_LSU_Y,
   Bundling_kv4_v1_TINY,
   Bundling_kv4_v1_TINY_X,
   Bundling_kv4_v1_TINY_Y,
+  Bundling_kv4_v1_LSU,
+  Bundling_kv4_v1_LSU_X,
+  Bundling_kv4_v1_LSU_Y,
+  Bundling_kv4_v1_EXT,
   Bundling_kv4_v1_NOP,
 } Bundling_kv4_v1;
 
@@ -2940,22 +2937,19 @@ static const char *bundling_kv4_v1_names(Bundling_kv4_v1 bundling) {
   switch(bundling) {
   case Bundling_kv4_v1_ALL: return "Bundling_kv4_v1_ALL";
   case Bundling_kv4_v1_BCU: return "Bundling_kv4_v1_BCU";
-  case Bundling_kv4_v1_TCA: return "Bundling_kv4_v1_TCA";
   case Bundling_kv4_v1_FULL: return "Bundling_kv4_v1_FULL";
   case Bundling_kv4_v1_FULL_X: return "Bundling_kv4_v1_FULL_X";
   case Bundling_kv4_v1_FULL_Y: return "Bundling_kv4_v1_FULL_Y";
   case Bundling_kv4_v1_LITE: return "Bundling_kv4_v1_LITE";
   case Bundling_kv4_v1_LITE_X: return "Bundling_kv4_v1_LITE_X";
   case Bundling_kv4_v1_LITE_Y: return "Bundling_kv4_v1_LITE_Y";
-  case Bundling_kv4_v1_MAU: return "Bundling_kv4_v1_MAU";
-  case Bundling_kv4_v1_MAU_X: return "Bundling_kv4_v1_MAU_X";
-  case Bundling_kv4_v1_MAU_Y: return "Bundling_kv4_v1_MAU_Y";
-  case Bundling_kv4_v1_LSU: return "Bundling_kv4_v1_LSU";
-  case Bundling_kv4_v1_LSU_X: return "Bundling_kv4_v1_LSU_X";
-  case Bundling_kv4_v1_LSU_Y: return "Bundling_kv4_v1_LSU_Y";
   case Bundling_kv4_v1_TINY: return "Bundling_kv4_v1_TINY";
   case Bundling_kv4_v1_TINY_X: return "Bundling_kv4_v1_TINY_X";
   case Bundling_kv4_v1_TINY_Y: return "Bundling_kv4_v1_TINY_Y";
+  case Bundling_kv4_v1_LSU: return "Bundling_kv4_v1_LSU";
+  case Bundling_kv4_v1_LSU_X: return "Bundling_kv4_v1_LSU_X";
+  case Bundling_kv4_v1_LSU_Y: return "Bundling_kv4_v1_LSU_Y";
+  case Bundling_kv4_v1_EXT: return "Bundling_kv4_v1_EXT";
   case Bundling_kv4_v1_NOP: return "Bundling_kv4_v1_NOP";
   };
   return "unknown bundling";
@@ -2969,7 +2963,7 @@ static const char *bundling_kv4_v1_names(Bundling_kv4_v1 bundling) {
 #define Resource_kv4_v1_LSU 4
 #define Resource_kv4_v1_MAU 5
 #define Resource_kv4_v1_BCU 6
-#define Resource_kv4_v1_TCA 7
+#define Resource_kv4_v1_EXT 7
 #define Resource_kv4_v1_XFER 8
 #define Resource_kv4_v1_AUXR 9
 #define Resource_kv4_v1_AUXW 10
@@ -3020,10 +3014,12 @@ static const char *bundling_kv4_v1_names(Bundling_kv4_v1 bundling) {
 #define Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_X 35
 #define Reservation_kv4_v1_LSU_AUXR_AUXW_MEMW_Y 36
 #define Reservation_kv4_v1_MAU 37
-#define Reservation_kv4_v1_MAU_AUXR 38
-#define Reservation_kv4_v1_MAU_AUXW 39
-#define Reservation_kv4_v1_MAU_TCA 40
-#define Reservation_kv4_v1_MAU_TCA_AUXR 41
+#define Reservation_kv4_v1_EXT 38
+#define Reservation_kv4_v1_EXT_MAU 39
+#define Reservation_kv4_v1_EXT_CRFR 40
+#define Reservation_kv4_v1_EXT_CRFW 41
+#define Reservation_kv4_v1_EXT_AUXR 42
+#define Reservation_kv4_v1_EXT_AUXW 43
 
 
 extern struct kvx_reloc kv4_v1_rel16_reloc;
