@@ -118723,7 +118723,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_CRFW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
     .format = {
       &kv4_v1_registerat_opnd,
       &kv4_v1_registerz_opnd,
@@ -118743,7 +118743,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_CRFW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
     .format = {
       &kv4_v1_registerax_opnd,
       &kv4_v1_registerz_opnd,
@@ -118763,7 +118763,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_CRFW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
     .format = {
       &kv4_v1_registeray_opnd,
       &kv4_v1_registerz_opnd,
@@ -118783,7 +118783,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_CRFW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
     .format = {
       &kv4_v1_registeraz_opnd,
       &kv4_v1_registerz_opnd,
@@ -118803,7 +118803,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_CRFW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
     .format = {
       &kv4_v1_registerae_opnd,
       &kv4_v1_registerz_opnd,
@@ -118824,7 +118824,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_CRFW,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
     .format = {
       &kv4_v1_registerao_opnd,
       &kv4_v1_registerz_opnd,
@@ -119508,142 +119508,6 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s = %s, %s",
   },
-  { /* ~_Opcode-kv4_v1-LNORD_registerW_registerZ_registerY_simple */
-    .as_op = "lnord",
-    .codewords = {
-      {
-        .opcode = 0x73026000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LITE, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_LITE,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* ~_Opcode-kv4_v1-LNORW_registerW_registerZ_registerY_simple */
-    .as_op = "lnorw",
-    .codewords = {
-      {
-        .opcode = 0x73027000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LITE, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_LITE,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* ~_Opcode-kv4_v1-LNORW_registerW_registerZ_w032_double */
-    .as_op = "lnorw",
-    .codewords = {
-      {
-        .opcode = 0xf3027000,
-        .mask = 0xff03f800,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LITE_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_LITE_X,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_upper27_lower5_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* ~_Opcode-kv4_v1-LORD_registerW_registerZ_registerY_simple */
-    .as_op = "lord",
-    .codewords = {
-      {
-        .opcode = 0x72026000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LITE, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_LITE,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* ~_Opcode-kv4_v1-LORW_registerW_registerZ_registerY_simple */
-    .as_op = "lorw",
-    .codewords = {
-      {
-        .opcode = 0x72027000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LITE, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_LITE,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_registery_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* ~_Opcode-kv4_v1-LORW_registerW_registerZ_w032_double */
-    .as_op = "lorw",
-    .codewords = {
-      {
-        .opcode = 0xf2027000,
-        .mask = 0xff03f800,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-      {
-        .opcode = 0x00000000,
-        .mask = 0x60000000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_ALU
-      },
-    },
-    .wordcount = 2,
-    .coding_size = 64,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LITE_X, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_LITE_X,
-    .format = {
-      &kv4_v1_registerw_opnd,
-      &kv4_v1_registerz_opnd,
-      &kv4_v1_upper27_lower5_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
   { /* ~_Opcode-kv4_v1-XMT44D_registerAq_registerCq_simple */
     .as_op = "xmt44d",
     .codewords = {
@@ -119664,49 +119528,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s",
   },
-  { /* ~_Opcode-kv4_v1-XNORO_registerA_registerB_registerC_simple */
-    .as_op = "xnoro",
-    .codewords = {
-      {
-        .opcode = 0x47033000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_MAU,
-    .format = {
-      &kv4_v1_registera_opnd,
-      &kv4_v1_registerb_opnd,
-      &kv4_v1_registerc_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-  { /* ~_Opcode-kv4_v1-XORNO_registerA_registerB_registerC_simple */
-    .as_op = "xorno",
-    .codewords = {
-      {
-        .opcode = 0x47037000,
-        .mask = 0x7f03f000,
-        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
-      },
-    },
-    .wordcount = 1,
-    .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_MAU,
-    .format = {
-      &kv4_v1_registera_opnd,
-      &kv4_v1_registerb_opnd,
-      &kv4_v1_registerc_opnd,
-      NULL
-    },
-    .rclass = "",
-    .fmtstring = " %s = %s, %s",
-  },
-/* Number of instructions : 1128 */
+/* Number of instructions : 1120 */
 	{"", { }, 0, 0, 0, 0, { }, "", ""}};
 
 const struct kvx_core_info *kvx_core_info_table[] =
