@@ -1277,7 +1277,6 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case Modifier_kv4_v1_scalarcond:
 		    case Modifier_kv4_v1_shuffleV:
 		    case Modifier_kv4_v1_shuffleX:
-		    case Modifier_kv4_v1_silent:
 		    case Modifier_kv4_v1_simplecond:
 		    case Modifier_kv4_v1_speculate:
 		    case Modifier_kv4_v1_splat32:
@@ -1826,7 +1825,6 @@ decode_prologue_epilogue_bundle (bfd_vma memaddr,
 		   || chk_type (kv4_v1, Modifier_kv4_v1_scalarcond)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_shuffleV)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_shuffleX)
-		   || chk_type (kv4_v1, Modifier_kv4_v1_silent)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_simplecond)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_speculate)
 		   || chk_type (kv4_v1, Modifier_kv4_v1_splat32)
