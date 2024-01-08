@@ -950,6 +950,7 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case RegClass_kv3_v1_onlygetReg:
 		    case RegClass_kv3_v1_onlysetReg:
 		    case RegClass_kv3_v1_onlyfxReg:
+		    case RegClass_kv3_v1_onlyswapReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_SFR, value)
 		      break;
 		    case RegClass_kv3_v1_coproReg0M4:
@@ -1057,6 +1058,7 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case RegClass_kv3_v2_onlygetReg:
 		    case RegClass_kv3_v2_onlysetReg:
 		    case RegClass_kv3_v2_onlyfxReg:
+		    case RegClass_kv3_v2_onlyswapReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_SFR, value)
 		      break;
 		    case RegClass_kv3_v2_coproReg:
@@ -1191,6 +1193,7 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case RegClass_kv4_v1_onlygetReg:
 		    case RegClass_kv4_v1_onlysetReg:
 		    case RegClass_kv4_v1_onlyfxReg:
+		    case RegClass_kv4_v1_onlyswapReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_SFR, value)
 		      break;
 		    case RegClass_kv4_v1_coproReg:
@@ -1198,20 +1201,25 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case RegClass_kv4_v1_coproReg1M4:
 		    case RegClass_kv4_v1_coproReg2M4:
 		    case RegClass_kv4_v1_coproReg3M4:
+		    case RegClass_kv4_v1_xworddReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XCR, value)
 		      break;
 		    case RegClass_kv4_v1_blockReg:
 		    case RegClass_kv4_v1_blockRegE:
 		    case RegClass_kv4_v1_blockRegO:
+		    case RegClass_kv4_v1_xwordqReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XBR, value)
 		      break;
 		    case RegClass_kv4_v1_vectorReg:
+		    case RegClass_kv4_v1_xwordoReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XVR, value)
 		      break;
 		    case RegClass_kv4_v1_tileReg:
+		    case RegClass_kv4_v1_xwordxReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XTR, value)
 		      break;
 		    case RegClass_kv4_v1_matrixReg:
+		    case RegClass_kv4_v1_xwordvReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XMR, value)
 		      break;
 		    case RegClass_kv4_v1_buffer2Reg:
