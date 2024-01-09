@@ -85552,6 +85552,27 @@ static struct kvx_operand kv4_v1_registeri_opnd  __attribute__((unused)) = {
   .bfield = { { 6, 0, 18 },  }
 };
 
+static int kv4_v1_registerip_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv4_v1_registerip_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registerip_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registerip_opnd",
+  .type = RegClass_kv4_v1_xwordvReg,
+  .width = 5,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 32,
+  .regs = kv4_v1_registerip_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registerip_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 5, 0, 19 },  }
+};
+
 static int kv4_v1_registerj_opnd_regs[] = {
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
@@ -111599,8 +111620,52 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-XFMMA424W.0_rounding1_registerI_registerJ_registerK_simple */
-    .as_op = "xfmma424w.0",
+  { /* Opcode-kv4_v1-XFMMA424D.0_rounding1_registerIp_registerJ_registerK_simple */
+    .as_op = "xfmma424d.0",
+    .codewords = {
+      {
+        .opcode = 0x50003000,
+        .mask = 0x7807f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_MAU,
+    .format = {
+      &kv4_v1_rounding1_opnd,
+      &kv4_v1_registerip_opnd,
+      &kv4_v1_registerj_opnd,
+      &kv4_v1_registerk_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-XFMMA424D.1_rounding1_registerIp_registerJ_registerK_simple */
+    .as_op = "xfmma424d.1",
+    .codewords = {
+      {
+        .opcode = 0x50013000,
+        .mask = 0x7807f000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_MAU,
+    .format = {
+      &kv4_v1_rounding1_opnd,
+      &kv4_v1_registerip_opnd,
+      &kv4_v1_registerj_opnd,
+      &kv4_v1_registerk_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s = %s, %s",
+  },
+  { /* Opcode-kv4_v1-XFMMA444W.0_rounding1_registerI_registerJ_registerK_simple */
+    .as_op = "xfmma444w.0",
     .codewords = {
       {
         .opcode = 0x50002000,
@@ -111621,8 +111686,8 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-XFMMA424W.1_rounding1_registerI_registerJ_registerK_simple */
-    .as_op = "xfmma424w.1",
+  { /* Opcode-kv4_v1-XFMMA444W.1_rounding1_registerI_registerJ_registerK_simple */
+    .as_op = "xfmma444w.1",
     .codewords = {
       {
         .opcode = 0x50012000,
@@ -113445,6 +113510,115 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s? %s[%s] = %s",
   },
+  { /* Opcode-kv4_v1-XSO_qindex_doscale_registerY_registerZ_registerEq_simple */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0x3703e000,
+        .mask = 0x7f03e000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW,
+    .format = {
+      &kv4_v1_qindex_opnd,
+      &kv4_v1_doscale_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registereq_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s%s %s[%s] = %s",
+  },
+  { /* Opcode-kv4_v1-XSO_qindex_lsumask_registerY_registerZ_registerEq_simple */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0x37030000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW,
+    .format = {
+      &kv4_v1_qindex_opnd,
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registereq_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s%s %s? [%s] = %s",
+  },
+  { /* Opcode-kv4_v1-XSO_qindex_lsumask_registerY_s027_registerZ_registerEq_double */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0xb7030000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_X,
+    .format = {
+      &kv4_v1_qindex_opnd,
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_offset27_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registereq_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s%s %s? %s[%s] = %s",
+  },
+  { /* Opcode-kv4_v1-XSO_qindex_lsumask_registerY_s054_registerZ_registerEq_triple */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0xb7030000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_Y,
+    .format = {
+      &kv4_v1_qindex_opnd,
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_extend27_offset27_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registereq_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s%s %s? %s[%s] = %s",
+  },
   { /* Opcode-kv4_v1-XSO_qindex_s010_registerZ_registerEq_simple */
     .as_op = "xso",
     .codewords = {
@@ -114177,7 +114351,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s",
   },
-/* Number of instructions : 1135 */
+/* Number of instructions : 1141 */
 	{"", { }, 0, 0, 0, 0, { }, "", ""}};
 
 const struct kvx_core_info *kvx_core_info_table[] =
