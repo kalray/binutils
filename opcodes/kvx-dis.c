@@ -346,7 +346,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 		    }
 		  if (debug)
 		    fprintf (stderr,
-			     "Syllable 0: Set valid on EXT for instr %d with 0x%x\n",
+			     "Syllable 0: Set valid on EXT (issue %d) with 0x%x\n",
 			     BundleIssueKV3_EXT, syllable);
 		  instr[BundleIssueKV3_EXT].valid = 1;
 		  instr[BundleIssueKV3_EXT].opcode = syllable;
@@ -357,7 +357,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 		{
 		  if (debug)
 		    fprintf (stderr,
-			     "Syllable 0: Set valid on BCU for instr %d with 0x%x\n",
+			     "Syllable 0: Set valid on BCU (issue %d) with 0x%x\n",
 			     BundleIssueKV3_BCU, syllable);
 
 		  instr[BundleIssueKV3_BCU].valid = 1;
@@ -378,7 +378,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 		    }
 		  if (debug)
 		    fprintf (stderr,
-			     "Syllable 0: Set valid on EXT for instr %d with 0x%x\n",
+			     "Syllable 0: Set valid on EXT (issue %d) with 0x%x\n",
 			     BundleIssueKV3_EXT, syllable);
 		  instr[BundleIssueKV3_EXT].valid = 1;
 		  instr[BundleIssueKV3_EXT].opcode = syllable;
@@ -402,10 +402,10 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 		  instr_p->nb_syllables++;
 		  if (debug)
 		    fprintf (stderr,
-			     "Set IMMX[%d] on instr %d for extension %d @ %d\n",
+			     "Set IMMX[%d] on Issue %d for extension %d with 0x%x\n",
 			     immx_count,
 			     ImmediateKV3_BundleIssueKV3[kvx_extension (syllable)],
-			     kvx_extension (syllable), i);
+			     kvx_extension (syllable), syllable);
 		  instr_p->immx_count = immx_count + 1;
 		}
 	    }
@@ -415,7 +415,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	  if (alu0_taken == 0)
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on ALU0 for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on ALU0 (issue %d) with 0x%x\n",
 			 BundleIssueKV3_ALU0, syllable);
 	      instr[BundleIssueKV3_ALU0].valid = 1;
 	      instr[BundleIssueKV3_ALU0].opcode = syllable;
@@ -425,7 +425,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	  else if (alu1_taken == 0)
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on ALU1 for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on ALU1 (issue %d) with 0x%x\n",
 			 BundleIssueKV3_ALU1, syllable);
 	      instr[BundleIssueKV3_ALU1].valid = 1;
 	      instr[BundleIssueKV3_ALU1].opcode = syllable;
@@ -436,7 +436,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      if (debug)
 		fprintf (stderr,
-			 "Set valid on MAU (ALU) for instr %d with 0x%x\n",
+			 "Set valid on MAU (ALU) (issue %d) with 0x%x\n",
 			 BundleIssueKV3_MAU, syllable);
 	      instr[BundleIssueKV3_MAU].valid = 1;
 	      instr[BundleIssueKV3_MAU].opcode = syllable;
@@ -447,7 +447,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      if (debug)
 		fprintf (stderr,
-			 "Set valid on LSU (ALU) for instr %d with 0x%x\n",
+			 "Set valid on LSU (ALU) (issue %d) with 0x%x\n",
 			 BundleIssueKV3_LSU, syllable);
 	      instr[BundleIssueKV3_LSU].valid = 1;
 	      instr[BundleIssueKV3_LSU].opcode = syllable;
@@ -477,7 +477,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	  else
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on MAU for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on MAU (issue %d) with 0x%x\n",
 			 BundleIssueKV3_MAU, syllable);
 	      instr[BundleIssueKV3_MAU].valid = 1;
 	      instr[BundleIssueKV3_MAU].opcode = syllable;
@@ -496,7 +496,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	  else
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on LSU for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on LSU (issue %d) with 0x%x\n",
 			 BundleIssueKV3_LSU, syllable);
 	      instr[BundleIssueKV3_LSU].valid = 1;
 	      instr[BundleIssueKV3_LSU].opcode = syllable;
@@ -510,14 +510,12 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	    fprintf (stderr, "Stop! stop bit is set 0x%x\n", syllable);
 	  break;
 	}
-      if (debug)
-	fprintf (stderr, "Continue %d < %d?\n", i, wordcount);
 
     }
   if (kvx_has_parallel_bit (bundle_words[i]))
     {
       if (debug)
-	fprintf (stderr, "bundle exceeds maximum size");
+	fprintf (stderr, "Bundle exceeds maximum size");
       return 1;
     }
 
@@ -538,7 +536,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 	      if (instr[i].immx_valid[j])
 		{
 		  if (debug)
-		    fprintf (stderr, "Instr %d valid immx[%d] is valid\n", i,
+		    fprintf (stderr, "Issue %d valid immx[%d] is valid\n", i,
 			     j);
 		  bundle_insn[instr_idx].syllables[syllable_idx++] =
 		    instr[i].immx[j];
@@ -548,7 +546,7 @@ kv3_reassemble_bundle (int wordcount, int *_insncount)
 
 	  if (debug)
 	    fprintf (stderr,
-		     "Instr %d valid, copying in bundle_insn (%d syllables <-> %d)\n",
+		     "Issue %d valid, copying in bundle_insn (%d syllables <-> %d)\n",
 		     i, bundle_insn[instr_idx].len, instr[i].nb_syllables);
 	  instr_idx++;
 	}
@@ -627,10 +625,10 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	      instr_p->nb_syllables++;
 	      if (debug)
 		fprintf (stderr,
-			 "Set IMMX[%d] on instr %d for extension %d @ %d\n",
+			 "Set IMMX[%d] on Issue %d for extension %d with 0x%x\n",
 			 immx_count,
 			 ImmediateKV4_BundleIssueKV4[kvx_extension (syllable)],
-			 kvx_extension (syllable), index);
+			 kvx_extension (syllable), syllable);
 	      instr_p->immx_count = immx_count + 1;
 	    }
 	  break;
@@ -639,7 +637,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	  if (alu_inuse == 0)
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on ALU0 for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on ALU0 (issue %d) with 0x%x\n",
 			 BundleIssueKV4_ALU0, syllable);
 	      instr[BundleIssueKV4_ALU0].valid = 1;
 	      instr[BundleIssueKV4_ALU0].opcode = syllable;
@@ -649,7 +647,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	  else if (alu_inuse == 1)
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on ALU1 for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on ALU1 (issue %d) with 0x%x\n",
 			 BundleIssueKV4_ALU1, syllable);
 	      instr[BundleIssueKV4_ALU1].valid = 1;
 	      instr[BundleIssueKV4_ALU1].opcode = syllable;
@@ -660,7 +658,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      if (debug)
 		fprintf (stderr,
-			 "Set valid on LSU0 (ALU) for instr %d with 0x%x\n",
+			 "Set valid on LSU0 (ALU) (issue %d) with 0x%x\n",
 			 BundleIssueKV4_LSU0, syllable);
 	      instr[BundleIssueKV4_LSU0].valid = 1;
 	      instr[BundleIssueKV4_LSU0].opcode = syllable;
@@ -671,7 +669,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	    {
 	      if (debug)
 		fprintf (stderr,
-			 "Set valid on LSU1 (ALU) for instr %d with 0x%x\n",
+			 "Set valid on LSU1 (ALU) (issue %d) with 0x%x\n",
 			 BundleIssueKV4_LSU1, syllable);
 	      instr[BundleIssueKV4_LSU1].valid = 1;
 	      instr[BundleIssueKV4_LSU1].opcode = syllable;
@@ -695,7 +693,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	  if (ext_inuse == 0)
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on MAU0 for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on EXT0 (issue %d) with 0x%x\n",
 			 BundleIssueKV4_EXT0, syllable);
 	      instr[BundleIssueKV4_EXT0].valid = 1;
 	      instr[BundleIssueKV4_EXT0].opcode = syllable;
@@ -705,7 +703,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	  else if (ext_inuse == 1)
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on MAU1 for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on EXT1 (issue %d) with 0x%x\n",
 			 BundleIssueKV4_EXT1, syllable);
 	      instr[BundleIssueKV4_EXT1].valid = 1;
 	      instr[BundleIssueKV4_EXT1].opcode = syllable;
@@ -724,7 +722,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	  if (lsu_inuse == 0)
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on LSU0 for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on LSU0 (issue %d) with 0x%x\n",
 			 BundleIssueKV4_LSU0, syllable);
 	      instr[BundleIssueKV4_LSU0].valid = 1;
 	      instr[BundleIssueKV4_LSU0].opcode = syllable;
@@ -734,7 +732,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	  else if (lsu_inuse == 1)
 	    {
 	      if (debug)
-		fprintf (stderr, "Set valid on LSU1 for instr %d with 0x%x\n",
+		fprintf (stderr, "Set valid on LSU1 (issue %d) with 0x%x\n",
 			 BundleIssueKV4_LSU1, syllable);
 	      instr[BundleIssueKV4_LSU1].valid = 1;
 	      instr[BundleIssueKV4_LSU1].opcode = syllable;
@@ -757,14 +755,12 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	    fprintf (stderr, "Stop! stop bit is set 0x%x\n", syllable);
 	  break;
 	}
-      if (debug)
-	fprintf (stderr, "Continue %d < %d?\n", index, wordcount);
 
     }
   if (kvx_has_parallel_bit (bundle_words[index]))
     {
       if (debug)
-	fprintf (stderr, "bundle exceeds maximum size");
+	fprintf (stderr, "Bundle exceeds maximum size");
       return 1;
     }
 
@@ -785,7 +781,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 	      if (instr[i].immx_valid[j])
 		{
 		  if (debug)
-		    fprintf (stderr, "Instr %d valid immx[%d] is valid\n", i,
+		    fprintf (stderr, "Issue %d valid immx[%d] is valid\n", i,
 			     j);
 		  bundle_insn[instr_idx].syllables[syllable_idx++] =
 		    instr[i].immx[j];
@@ -795,7 +791,7 @@ kv4_reassemble_bundle (int wordcount, int *_insncount)
 
 	  if (debug)
 	    fprintf (stderr,
-		     "Instr %d valid, copying in bundle_insn (%d syllables <-> %d)\n",
+		     "Issue %d valid, copying in bundle_insn (%d syllables <-> %d)\n",
 		     i, bundle_insn[instr_idx].len, instr[i].nb_syllables);
 	  instr_idx++;
 	}
