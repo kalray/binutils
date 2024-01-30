@@ -6241,7 +6241,7 @@ static struct kvx_reloc *kv3_v1_registera_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v1_registera_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registera_opnd",
-  .type = RegClass_kv3_v1_vectorReg,
+  .type = RegClass_kv3_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -6276,7 +6276,7 @@ static struct kvx_reloc *kv3_v1_registera0_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registera0_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registera0_opnd",
-  .type = RegClass_kv3_v1_blockReg0M4,
+  .type = RegClass_kv3_v1_xwordqRegLo0M4,
   .width = 5,
   .shift = 2,
   .bias = 0,
@@ -6311,7 +6311,7 @@ static struct kvx_reloc *kv3_v1_registera1_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registera1_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registera1_opnd",
-  .type = RegClass_kv3_v1_blockReg1M4,
+  .type = RegClass_kv3_v1_xwordqRegLo1M4,
   .width = 5,
   .shift = 2,
   .bias = 1,
@@ -6346,7 +6346,7 @@ static struct kvx_reloc *kv3_v1_registera2_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registera2_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registera2_opnd",
-  .type = RegClass_kv3_v1_blockReg2M4,
+  .type = RegClass_kv3_v1_xwordqRegLo2M4,
   .width = 5,
   .shift = 2,
   .bias = 2,
@@ -6381,7 +6381,7 @@ static struct kvx_reloc *kv3_v1_registera3_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registera3_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registera3_opnd",
-  .type = RegClass_kv3_v1_blockReg3M4,
+  .type = RegClass_kv3_v1_xwordqRegLo3M4,
   .width = 5,
   .shift = 2,
   .bias = 3,
@@ -6416,7 +6416,7 @@ static struct kvx_reloc *kv3_v1_registerae_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerae_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerae_opnd",
-  .type = RegClass_kv3_v1_blockRegE,
+  .type = RegClass_kv3_v1_xwordqRegLoE,
   .width = 6,
   .shift = 1,
   .bias = 0,
@@ -6451,7 +6451,7 @@ static struct kvx_reloc *kv3_v1_registerao_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerao_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerao_opnd",
-  .type = RegClass_kv3_v1_blockRegO,
+  .type = RegClass_kv3_v1_xwordqRegLoO,
   .width = 6,
   .shift = 1,
   .bias = 1,
@@ -6474,7 +6474,7 @@ static struct kvx_reloc *kv3_v1_registerap_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerap_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerap_opnd",
-  .type = RegClass_kv3_v1_tileReg,
+  .type = RegClass_kv3_v1_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -6495,7 +6495,7 @@ static struct kvx_reloc *kv3_v1_registeraq_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registeraq_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registeraq_opnd",
-  .type = RegClass_kv3_v1_matrixReg,
+  .type = RegClass_kv3_v1_xwordvRegLo,
   .width = 4,
   .shift = 0,
   .bias = 0,
@@ -6546,7 +6546,7 @@ static struct kvx_reloc *kv3_v1_registerat_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerat_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerat_opnd",
-  .type = RegClass_kv3_v1_coproReg3M4,
+  .type = RegClass_kv3_v1_xworddRegLo3M4,
   .width = 6,
   .shift = 2,
   .bias = 3,
@@ -6597,7 +6597,7 @@ static struct kvx_reloc *kv3_v1_registerax_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerax_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerax_opnd",
-  .type = RegClass_kv3_v1_coproReg0M4,
+  .type = RegClass_kv3_v1_xworddRegLo0M4,
   .width = 6,
   .shift = 2,
   .bias = 0,
@@ -6648,7 +6648,7 @@ static struct kvx_reloc *kv3_v1_registeray_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registeray_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registeray_opnd",
-  .type = RegClass_kv3_v1_coproReg1M4,
+  .type = RegClass_kv3_v1_xworddRegLo1M4,
   .width = 6,
   .shift = 2,
   .bias = 1,
@@ -6699,7 +6699,7 @@ static struct kvx_reloc *kv3_v1_registeraz_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registeraz_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registeraz_opnd",
-  .type = RegClass_kv3_v1_coproReg2M4,
+  .type = RegClass_kv3_v1_xworddRegLo2M4,
   .width = 6,
   .shift = 2,
   .bias = 2,
@@ -6726,7 +6726,7 @@ static struct kvx_reloc *kv3_v1_registerb_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v1_registerb_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerb_opnd",
-  .type = RegClass_kv3_v1_vectorReg,
+  .type = RegClass_kv3_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -6753,7 +6753,7 @@ static struct kvx_reloc *kv3_v1_registerbe_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerbe_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerbe_opnd",
-  .type = RegClass_kv3_v1_vectorRegE,
+  .type = RegClass_kv3_v1_xwordoRegLoE,
   .width = 5,
   .shift = 1,
   .bias = 0,
@@ -6780,7 +6780,7 @@ static struct kvx_reloc *kv3_v1_registerbo_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerbo_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerbo_opnd",
-  .type = RegClass_kv3_v1_vectorRegO,
+  .type = RegClass_kv3_v1_xwordoRegLoO,
   .width = 5,
   .shift = 1,
   .bias = 1,
@@ -6803,7 +6803,7 @@ static struct kvx_reloc *kv3_v1_registerbp_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerbp_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerbp_opnd",
-  .type = RegClass_kv3_v1_tileReg,
+  .type = RegClass_kv3_v1_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -6824,7 +6824,7 @@ static struct kvx_reloc *kv3_v1_registerbq_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerbq_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerbq_opnd",
-  .type = RegClass_kv3_v1_matrixReg,
+  .type = RegClass_kv3_v1_xwordvRegLo,
   .width = 4,
   .shift = 0,
   .bias = 0,
@@ -6851,7 +6851,7 @@ static struct kvx_reloc *kv3_v1_registerc_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v1_registerc_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerc_opnd",
-  .type = RegClass_kv3_v1_vectorReg,
+  .type = RegClass_kv3_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -6878,7 +6878,7 @@ static struct kvx_reloc *kv3_v1_registerce_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerce_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerce_opnd",
-  .type = RegClass_kv3_v1_vectorRegE,
+  .type = RegClass_kv3_v1_xwordoRegLoE,
   .width = 5,
   .shift = 1,
   .bias = 0,
@@ -6905,7 +6905,7 @@ static struct kvx_reloc *kv3_v1_registerco_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v1_registerco_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerco_opnd",
-  .type = RegClass_kv3_v1_vectorRegO,
+  .type = RegClass_kv3_v1_xwordoRegLoO,
   .width = 5,
   .shift = 1,
   .bias = 1,
@@ -6932,7 +6932,7 @@ static struct kvx_reloc *kv3_v1_registerd_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v1_registerd_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registerd_opnd",
-  .type = RegClass_kv3_v1_vectorReg,
+  .type = RegClass_kv3_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -6959,7 +6959,7 @@ static struct kvx_reloc *kv3_v1_registere_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v1_registere_opnd  __attribute__((unused)) = {
   .tname = "kv3_v1_registere_opnd",
-  .type = RegClass_kv3_v1_vectorReg,
+  .type = RegClass_kv3_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -6970,6 +6970,54 @@ static struct kvx_operand kv3_v1_registere_opnd  __attribute__((unused)) = {
   .relocs = kv3_v1_registere_opnd_relocs,
   .bitfields = 1,
   .bfield = { { 6, 0, 18 },  }
+};
+
+static int kv3_v1_registerg_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+static struct kvx_reloc *kv3_v1_registerg_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v1_registerg_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v1_registerg_opnd",
+  .type = RegClass_kv3_v1_xwordoRegLo,
+  .width = 6,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 128,
+  .regs = kv3_v1_registerg_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v1_registerg_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 6, 0, 18 },  }
+};
+
+static int kv3_v1_registergq_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+static struct kvx_reloc *kv3_v1_registergq_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v1_registergq_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v1_registergq_opnd",
+  .type = RegClass_kv3_v1_xwordvRegLo,
+  .width = 4,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 32,
+  .regs = kv3_v1_registergq_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v1_registergq_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 4, 0, 20 },  }
 };
 
 static int kv3_v1_registerm_opnd_regs[] = {
@@ -35915,7 +35963,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s, %s",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_doscale_registerA_registerY_registerZ_simple */
+  { /* Opcode-kv3_v1-XLO_speculate_doscale_registerG_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -35930,7 +35978,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .format = {
       &kv3_v1_speculate_opnd,
       &kv3_v1_doscale_opnd,
-      &kv3_v1_registera_opnd,
+      &kv3_v1_registerg_opnd,
       &kv3_v1_registery_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -35938,7 +35986,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_lsucond_qindex_registerY_registerAq_registerZ_simple */
+  { /* Opcode-kv3_v1-XLO_speculate_lsucond_qindex_registerY_registerGq_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -35955,14 +36003,14 @@ struct kvxopc kvx_kv3_v1_optab[] = {
       &kv3_v1_lsucond_opnd,
       &kv3_v1_qindex_opnd,
       &kv3_v1_registery_opnd,
-      &kv3_v1_registeraq_opnd,
+      &kv3_v1_registergq_opnd,
       &kv3_v1_registerz_opnd,
       NULL
     },
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = [%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_lsucond_qindex_registerY_registerAq_s027_registerZ_double */
+  { /* Opcode-kv3_v1-XLO_speculate_lsucond_qindex_registerY_registerGq_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -35984,7 +36032,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
       &kv3_v1_lsucond_opnd,
       &kv3_v1_qindex_opnd,
       &kv3_v1_registery_opnd,
-      &kv3_v1_registeraq_opnd,
+      &kv3_v1_registergq_opnd,
       &kv3_v1_offset27_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -35992,7 +36040,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_lsucond_qindex_registerY_registerAq_s054_registerZ_triple */
+  { /* Opcode-kv3_v1-XLO_speculate_lsucond_qindex_registerY_registerGq_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36019,7 +36067,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
       &kv3_v1_lsucond_opnd,
       &kv3_v1_qindex_opnd,
       &kv3_v1_registery_opnd,
-      &kv3_v1_registeraq_opnd,
+      &kv3_v1_registergq_opnd,
       &kv3_v1_extend27_offset27_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36027,7 +36075,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_lsucond_registerY_registerA_registerZ_simple */
+  { /* Opcode-kv3_v1-XLO_speculate_lsucond_registerY_registerG_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36043,14 +36091,14 @@ struct kvxopc kvx_kv3_v1_optab[] = {
       &kv3_v1_speculate_opnd,
       &kv3_v1_lsucond_opnd,
       &kv3_v1_registery_opnd,
-      &kv3_v1_registera_opnd,
+      &kv3_v1_registerg_opnd,
       &kv3_v1_registerz_opnd,
       NULL
     },
     .rclass = "",
     .fmtstring = "%s%s %s? %s = [%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_lsucond_registerY_registerA_s027_registerZ_double */
+  { /* Opcode-kv3_v1-XLO_speculate_lsucond_registerY_registerG_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36071,7 +36119,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
       &kv3_v1_speculate_opnd,
       &kv3_v1_lsucond_opnd,
       &kv3_v1_registery_opnd,
-      &kv3_v1_registera_opnd,
+      &kv3_v1_registerg_opnd,
       &kv3_v1_offset27_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36079,7 +36127,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_lsucond_registerY_registerA_s054_registerZ_triple */
+  { /* Opcode-kv3_v1-XLO_speculate_lsucond_registerY_registerG_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36105,7 +36153,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
       &kv3_v1_speculate_opnd,
       &kv3_v1_lsucond_opnd,
       &kv3_v1_registery_opnd,
-      &kv3_v1_registera_opnd,
+      &kv3_v1_registerg_opnd,
       &kv3_v1_extend27_offset27_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36113,7 +36161,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_qindex_doscale_registerAq_registerY_registerZ_simple */
+  { /* Opcode-kv3_v1-XLO_speculate_qindex_doscale_registerGq_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36129,7 +36177,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
       &kv3_v1_speculate_opnd,
       &kv3_v1_qindex_opnd,
       &kv3_v1_doscale_opnd,
-      &kv3_v1_registeraq_opnd,
+      &kv3_v1_registergq_opnd,
       &kv3_v1_registery_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36137,7 +36185,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_qindex_registerAq_s010_registerZ_simple */
+  { /* Opcode-kv3_v1-XLO_speculate_qindex_registerGq_s010_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36152,7 +36200,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .format = {
       &kv3_v1_speculate_opnd,
       &kv3_v1_qindex_opnd,
-      &kv3_v1_registeraq_opnd,
+      &kv3_v1_registergq_opnd,
       &kv3_v1_signed10_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36160,7 +36208,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_qindex_registerAq_s037_registerZ_double */
+  { /* Opcode-kv3_v1-XLO_speculate_qindex_registerGq_s037_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36180,7 +36228,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .format = {
       &kv3_v1_speculate_opnd,
       &kv3_v1_qindex_opnd,
-      &kv3_v1_registeraq_opnd,
+      &kv3_v1_registergq_opnd,
       &kv3_v1_upper27_lower10_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36188,7 +36236,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_qindex_registerAq_w064_registerZ_triple */
+  { /* Opcode-kv3_v1-XLO_speculate_qindex_registerGq_w064_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36213,7 +36261,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .format = {
       &kv3_v1_speculate_opnd,
       &kv3_v1_qindex_opnd,
-      &kv3_v1_registeraq_opnd,
+      &kv3_v1_registergq_opnd,
       &kv3_v1_extend27_upper27_lower10_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36221,7 +36269,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_registerA_s010_registerZ_simple */
+  { /* Opcode-kv3_v1-XLO_speculate_registerG_s010_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36235,7 +36283,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_LSU, ((int)0 << 8) | (int)Reservation_kv3_v1_LSU,
     .format = {
       &kv3_v1_speculate_opnd,
-      &kv3_v1_registera_opnd,
+      &kv3_v1_registerg_opnd,
       &kv3_v1_signed10_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36243,7 +36291,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_registerA_s037_registerZ_double */
+  { /* Opcode-kv3_v1-XLO_speculate_registerG_s037_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36262,7 +36310,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv3_v1_LSU_X,
     .format = {
       &kv3_v1_speculate_opnd,
-      &kv3_v1_registera_opnd,
+      &kv3_v1_registerg_opnd,
       &kv3_v1_upper27_lower10_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -36270,7 +36318,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v1-XLO_speculate_registerA_w064_registerZ_triple */
+  { /* Opcode-kv3_v1-XLO_speculate_registerG_w064_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -36294,7 +36342,7 @@ struct kvxopc kvx_kv3_v1_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv3_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv3_v1_LSU_Y,
     .format = {
       &kv3_v1_speculate_opnd,
-      &kv3_v1_registera_opnd,
+      &kv3_v1_registerg_opnd,
       &kv3_v1_extend27_upper27_lower10_opnd,
       &kv3_v1_registerz_opnd,
       NULL
@@ -44859,7 +44907,7 @@ static struct kvx_reloc *kv3_v2_registera_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v2_registera_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registera_opnd",
-  .type = RegClass_kv3_v2_vectorReg,
+  .type = RegClass_kv3_v2_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -44894,7 +44942,7 @@ static struct kvx_reloc *kv3_v2_registerae_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registerae_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerae_opnd",
-  .type = RegClass_kv3_v2_blockRegE,
+  .type = RegClass_kv3_v2_xwordqRegLoE,
   .width = 6,
   .shift = 1,
   .bias = 0,
@@ -44929,7 +44977,7 @@ static struct kvx_reloc *kv3_v2_registerao_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registerao_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerao_opnd",
-  .type = RegClass_kv3_v2_blockRegO,
+  .type = RegClass_kv3_v2_xwordqRegLoO,
   .width = 6,
   .shift = 1,
   .bias = 1,
@@ -44942,127 +44990,6 @@ static struct kvx_operand kv3_v2_registerao_opnd  __attribute__((unused)) = {
   .bfield = { { 6, 0, 18 },  }
 };
 
-static int kv3_v2_registerag_opnd_regs[] = {
-      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
-      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
-static struct kvx_reloc *kv3_v2_registerag_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv3_v2_registerag_opnd  __attribute__((unused)) = {
-  .tname = "kv3_v2_registerag_opnd",
-  .type = RegClass_kv3_v2_buffer2Reg,
-  .width = 5,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 32,
-  .regs = kv3_v2_registerag_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv3_v2_registerag_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 5, 0, 19 },  }
-};
-
-static int kv3_v2_registerah_opnd_regs[] = {
-      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
-static struct kvx_reloc *kv3_v2_registerah_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv3_v2_registerah_opnd  __attribute__((unused)) = {
-  .tname = "kv3_v2_registerah_opnd",
-  .type = RegClass_kv3_v2_buffer4Reg,
-  .width = 4,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 16,
-  .regs = kv3_v2_registerah_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv3_v2_registerah_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 4, 0, 20 },  }
-};
-
-static int kv3_v2_registerai_opnd_regs[] = {
-      1, 1, 1, 1, 1, 1, 1, 1, };
-static struct kvx_reloc *kv3_v2_registerai_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv3_v2_registerai_opnd  __attribute__((unused)) = {
-  .tname = "kv3_v2_registerai_opnd",
-  .type = RegClass_kv3_v2_buffer8Reg,
-  .width = 3,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 8,
-  .regs = kv3_v2_registerai_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv3_v2_registerai_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 3, 0, 21 },  }
-};
-
-static int kv3_v2_registeraj_opnd_regs[] = {
-      1, 1, 1, 1, };
-static struct kvx_reloc *kv3_v2_registeraj_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv3_v2_registeraj_opnd  __attribute__((unused)) = {
-  .tname = "kv3_v2_registeraj_opnd",
-  .type = RegClass_kv3_v2_buffer16Reg,
-  .width = 2,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 4,
-  .regs = kv3_v2_registeraj_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv3_v2_registeraj_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 2, 0, 22 },  }
-};
-
-static int kv3_v2_registerak_opnd_regs[] = {
-      1, 1, };
-static struct kvx_reloc *kv3_v2_registerak_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv3_v2_registerak_opnd  __attribute__((unused)) = {
-  .tname = "kv3_v2_registerak_opnd",
-  .type = RegClass_kv3_v2_buffer32Reg,
-  .width = 1,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 2,
-  .regs = kv3_v2_registerak_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv3_v2_registerak_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 1, 0, 23 },  }
-};
-
-static int kv3_v2_registeral_opnd_regs[] = {
-      1, };
-static struct kvx_reloc *kv3_v2_registeral_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv3_v2_registeral_opnd  __attribute__((unused)) = {
-  .tname = "kv3_v2_registeral_opnd",
-  .type = RegClass_kv3_v2_buffer64Reg,
-  .width = 1,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 1,
-  .regs = kv3_v2_registeral_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv3_v2_registeral_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 1, 0, 23 },  }
-};
-
 static int kv3_v2_registerap_opnd_regs[] = {
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
@@ -45073,7 +45000,7 @@ static struct kvx_reloc *kv3_v2_registerap_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registerap_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerap_opnd",
-  .type = RegClass_kv3_v2_tileReg,
+  .type = RegClass_kv3_v2_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -45094,7 +45021,7 @@ static struct kvx_reloc *kv3_v2_registeraq_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registeraq_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registeraq_opnd",
-  .type = RegClass_kv3_v2_matrixReg,
+  .type = RegClass_kv3_v2_xwordvRegLo,
   .width = 4,
   .shift = 0,
   .bias = 0,
@@ -45145,7 +45072,7 @@ static struct kvx_reloc *kv3_v2_registerat_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registerat_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerat_opnd",
-  .type = RegClass_kv3_v2_coproReg3M4,
+  .type = RegClass_kv3_v2_xworddRegLo3M4,
   .width = 6,
   .shift = 2,
   .bias = 3,
@@ -45196,7 +45123,7 @@ static struct kvx_reloc *kv3_v2_registerax_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registerax_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerax_opnd",
-  .type = RegClass_kv3_v2_coproReg0M4,
+  .type = RegClass_kv3_v2_xworddRegLo0M4,
   .width = 6,
   .shift = 2,
   .bias = 0,
@@ -45247,7 +45174,7 @@ static struct kvx_reloc *kv3_v2_registeray_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registeray_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registeray_opnd",
-  .type = RegClass_kv3_v2_coproReg1M4,
+  .type = RegClass_kv3_v2_xworddRegLo1M4,
   .width = 6,
   .shift = 2,
   .bias = 1,
@@ -45298,7 +45225,7 @@ static struct kvx_reloc *kv3_v2_registeraz_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registeraz_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registeraz_opnd",
-  .type = RegClass_kv3_v2_coproReg2M4,
+  .type = RegClass_kv3_v2_xworddRegLo2M4,
   .width = 6,
   .shift = 2,
   .bias = 2,
@@ -45325,7 +45252,7 @@ static struct kvx_reloc *kv3_v2_registerb_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v2_registerb_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerb_opnd",
-  .type = RegClass_kv3_v2_vectorReg,
+  .type = RegClass_kv3_v2_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -45352,7 +45279,7 @@ static struct kvx_reloc *kv3_v2_registerc_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v2_registerc_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerc_opnd",
-  .type = RegClass_kv3_v2_vectorReg,
+  .type = RegClass_kv3_v2_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -45387,7 +45314,7 @@ static struct kvx_reloc *kv3_v2_registercb_hselectc_opnd_relocs[] __attribute__(
 };
 static struct kvx_operand kv3_v2_registercb_hselectc_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registercb_hselectc_opnd",
-  .type = RegClass_kv3_v2_blockReg,
+  .type = RegClass_kv3_v2_xwordqRegLo,
   .width = 7,
   .shift = 0,
   .bias = 0,
@@ -45438,7 +45365,7 @@ static struct kvx_reloc *kv3_v2_registercc_qselectc_opnd_relocs[] __attribute__(
 };
 static struct kvx_operand kv3_v2_registercc_qselectc_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registercc_qselectc_opnd",
-  .type = RegClass_kv3_v2_coproReg,
+  .type = RegClass_kv3_v2_xworddRegLo,
   .width = 8,
   .shift = 0,
   .bias = 0,
@@ -45582,7 +45509,7 @@ static struct kvx_reloc *kv3_v2_registercp_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registercp_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registercp_opnd",
-  .type = RegClass_kv3_v2_tileReg,
+  .type = RegClass_kv3_v2_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -45603,7 +45530,7 @@ static struct kvx_reloc *kv3_v2_registercq_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registercq_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registercq_opnd",
-  .type = RegClass_kv3_v2_matrixReg,
+  .type = RegClass_kv3_v2_xwordvRegLo,
   .width = 4,
   .shift = 0,
   .bias = 0,
@@ -45630,7 +45557,7 @@ static struct kvx_reloc *kv3_v2_registerd_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v2_registerd_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerd_opnd",
-  .type = RegClass_kv3_v2_vectorReg,
+  .type = RegClass_kv3_v2_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -45653,7 +45580,7 @@ static struct kvx_reloc *kv3_v2_registerdp_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registerdp_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerdp_opnd",
-  .type = RegClass_kv3_v2_tileReg,
+  .type = RegClass_kv3_v2_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -45680,7 +45607,7 @@ static struct kvx_reloc *kv3_v2_registere_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv3_v2_registere_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registere_opnd",
-  .type = RegClass_kv3_v2_vectorReg,
+  .type = RegClass_kv3_v2_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -45824,7 +45751,7 @@ static struct kvx_reloc *kv3_v2_registerep_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registerep_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registerep_opnd",
-  .type = RegClass_kv3_v2_tileReg,
+  .type = RegClass_kv3_v2_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -45845,7 +45772,7 @@ static struct kvx_reloc *kv3_v2_registereq_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv3_v2_registereq_opnd  __attribute__((unused)) = {
   .tname = "kv3_v2_registereq_opnd",
-  .type = RegClass_kv3_v2_matrixReg,
+  .type = RegClass_kv3_v2_xwordvRegLo,
   .width = 4,
   .shift = 0,
   .bias = 0,
@@ -45854,6 +45781,198 @@ static struct kvx_operand kv3_v2_registereq_opnd  __attribute__((unused)) = {
   .regs = kv3_v2_registereq_opnd_regs,
   .reloc_nb = 0,
   .relocs = kv3_v2_registereq_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 4, 0, 20 },  }
+};
+
+static int kv3_v2_registerg_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+static struct kvx_reloc *kv3_v2_registerg_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registerg_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registerg_opnd",
+  .type = RegClass_kv3_v2_xwordoRegLo,
+  .width = 6,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 128,
+  .regs = kv3_v2_registerg_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registerg_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 6, 0, 18 },  }
+};
+
+static int kv3_v2_registergg_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv3_v2_registergg_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registergg_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registergg_opnd",
+  .type = RegClass_kv3_v2_buffer2Reg,
+  .width = 5,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 32,
+  .regs = kv3_v2_registergg_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registergg_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 5, 0, 19 },  }
+};
+
+static int kv3_v2_registergh_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv3_v2_registergh_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registergh_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registergh_opnd",
+  .type = RegClass_kv3_v2_buffer4Reg,
+  .width = 4,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 16,
+  .regs = kv3_v2_registergh_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registergh_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 4, 0, 20 },  }
+};
+
+static int kv3_v2_registergi_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv3_v2_registergi_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registergi_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registergi_opnd",
+  .type = RegClass_kv3_v2_buffer8Reg,
+  .width = 3,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 8,
+  .regs = kv3_v2_registergi_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registergi_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 3, 0, 21 },  }
+};
+
+static int kv3_v2_registergj_opnd_regs[] = {
+      1, 1, 1, 1, };
+static struct kvx_reloc *kv3_v2_registergj_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registergj_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registergj_opnd",
+  .type = RegClass_kv3_v2_buffer16Reg,
+  .width = 2,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 4,
+  .regs = kv3_v2_registergj_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registergj_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 2, 0, 22 },  }
+};
+
+static int kv3_v2_registergk_opnd_regs[] = {
+      1, 1, };
+static struct kvx_reloc *kv3_v2_registergk_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registergk_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registergk_opnd",
+  .type = RegClass_kv3_v2_buffer32Reg,
+  .width = 1,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 2,
+  .regs = kv3_v2_registergk_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registergk_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 1, 0, 23 },  }
+};
+
+static int kv3_v2_registergl_opnd_regs[] = {
+      1, };
+static struct kvx_reloc *kv3_v2_registergl_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registergl_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registergl_opnd",
+  .type = RegClass_kv3_v2_buffer64Reg,
+  .width = 1,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 1,
+  .regs = kv3_v2_registergl_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registergl_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 1, 0, 23 },  }
+};
+
+static int kv3_v2_registergp_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+static struct kvx_reloc *kv3_v2_registergp_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registergp_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registergp_opnd",
+  .type = RegClass_kv3_v2_xwordxRegLo,
+  .width = 5,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 64,
+  .regs = kv3_v2_registergp_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registergp_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 5, 0, 19 },  }
+};
+
+static int kv3_v2_registergq_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+static struct kvx_reloc *kv3_v2_registergq_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv3_v2_registergq_opnd  __attribute__((unused)) = {
+  .tname = "kv3_v2_registergq_opnd",
+  .type = RegClass_kv3_v2_xwordvRegLo,
+  .width = 4,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 32,
+  .regs = kv3_v2_registergq_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv3_v2_registergq_opnd_relocs,
   .bitfields = 1,
   .bfield = { { 4, 0, 20 },  }
 };
@@ -74340,7 +74459,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv3_v2-XLO_variant_doscale_qindex_registerAq_registerY_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_doscale_qindex_registerGq_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74356,7 +74475,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
       &kv3_v2_variant_opnd,
       &kv3_v2_doscale_opnd,
       &kv3_v2_qindex_opnd,
-      &kv3_v2_registeraq_opnd,
+      &kv3_v2_registergq_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74364,7 +74483,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_doscale_registerA_registerY_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_doscale_registerG_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74379,7 +74498,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_doscale_opnd,
-      &kv3_v2_registera_opnd,
+      &kv3_v2_registerg_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74387,7 +74506,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerGq_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74404,14 +74523,14 @@ struct kvxopc kvx_kv3_v2_optab[] = {
       &kv3_v2_lsumask_opnd,
       &kv3_v2_qindex_opnd,
       &kv3_v2_registery_opnd,
-      &kv3_v2_registeraq_opnd,
+      &kv3_v2_registergq_opnd,
       &kv3_v2_registerz_opnd,
       NULL
     },
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = [%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_s027_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerGq_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74433,7 +74552,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
       &kv3_v2_lsumask_opnd,
       &kv3_v2_qindex_opnd,
       &kv3_v2_registery_opnd,
-      &kv3_v2_registeraq_opnd,
+      &kv3_v2_registergq_opnd,
       &kv3_v2_offset27_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74441,7 +74560,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerAq_s054_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_lsumask_qindex_registerY_registerGq_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74468,7 +74587,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
       &kv3_v2_lsumask_opnd,
       &kv3_v2_qindex_opnd,
       &kv3_v2_registery_opnd,
-      &kv3_v2_registeraq_opnd,
+      &kv3_v2_registergq_opnd,
       &kv3_v2_extend27_offset27_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74476,7 +74595,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerG_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74492,14 +74611,14 @@ struct kvxopc kvx_kv3_v2_optab[] = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsumask_opnd,
       &kv3_v2_registery_opnd,
-      &kv3_v2_registera_opnd,
+      &kv3_v2_registerg_opnd,
       &kv3_v2_registerz_opnd,
       NULL
     },
     .rclass = "",
     .fmtstring = "%s%s %s? %s = [%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_s027_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerG_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74520,7 +74639,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsumask_opnd,
       &kv3_v2_registery_opnd,
-      &kv3_v2_registera_opnd,
+      &kv3_v2_registerg_opnd,
       &kv3_v2_offset27_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74528,7 +74647,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerA_s054_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_lsumask_registerY_registerG_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74554,7 +74673,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsumask_opnd,
       &kv3_v2_registery_opnd,
-      &kv3_v2_registera_opnd,
+      &kv3_v2_registerg_opnd,
       &kv3_v2_extend27_offset27_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74562,7 +74681,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGg_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74577,7 +74696,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerag_opnd,
+      &kv3_v2_registergg_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74585,7 +74704,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_s027_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGg_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74605,7 +74724,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerag_opnd,
+      &kv3_v2_registergg_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74614,7 +74733,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAg_registerY_s054_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGg_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74639,7 +74758,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerag_opnd,
+      &kv3_v2_registergg_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_extend27_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74648,7 +74767,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGh_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74663,7 +74782,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerah_opnd,
+      &kv3_v2_registergh_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74671,7 +74790,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_s027_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGh_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74691,7 +74810,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerah_opnd,
+      &kv3_v2_registergh_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74700,7 +74819,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAh_registerY_s054_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGh_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74725,7 +74844,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerah_opnd,
+      &kv3_v2_registergh_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_extend27_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74734,7 +74853,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGi_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74749,7 +74868,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerai_opnd,
+      &kv3_v2_registergi_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74757,7 +74876,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_s027_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGi_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74777,7 +74896,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerai_opnd,
+      &kv3_v2_registergi_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74786,7 +74905,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAi_registerY_s054_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGi_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74811,7 +74930,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerai_opnd,
+      &kv3_v2_registergi_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_extend27_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74820,7 +74939,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGj_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74835,7 +74954,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registeraj_opnd,
+      &kv3_v2_registergj_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74843,7 +74962,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_s027_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGj_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74863,7 +74982,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registeraj_opnd,
+      &kv3_v2_registergj_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74872,7 +74991,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAj_registerY_s054_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGj_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74897,7 +75016,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registeraj_opnd,
+      &kv3_v2_registergj_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_extend27_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74906,7 +75025,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGk_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74921,7 +75040,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerak_opnd,
+      &kv3_v2_registergk_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -74929,7 +75048,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_s027_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGk_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74949,7 +75068,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerak_opnd,
+      &kv3_v2_registergk_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74958,7 +75077,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAk_registerY_s054_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGk_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -74983,7 +75102,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registerak_opnd,
+      &kv3_v2_registergk_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_extend27_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -74992,7 +75111,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGl_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75007,7 +75126,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registeral_opnd,
+      &kv3_v2_registergl_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -75015,7 +75134,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_s027_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGl_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75035,7 +75154,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registeral_opnd,
+      &kv3_v2_registergl_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -75044,7 +75163,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerAl_registerY_s054_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_lsupack_registerGl_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75069,7 +75188,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_lsupack_opnd,
-      &kv3_v2_registeral_opnd,
+      &kv3_v2_registergl_opnd,
       &kv3_v2_registery_opnd,
       &kv3_v2_extend27_offset27_opnd,
       &kv3_v2_registerz_opnd,
@@ -75078,7 +75197,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_qindex_registerAq_s010_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_qindex_registerGq_s010_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75093,7 +75212,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_qindex_opnd,
-      &kv3_v2_registeraq_opnd,
+      &kv3_v2_registergq_opnd,
       &kv3_v2_signed10_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -75101,7 +75220,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_qindex_registerAq_s037_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_qindex_registerGq_s037_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75121,7 +75240,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_qindex_opnd,
-      &kv3_v2_registeraq_opnd,
+      &kv3_v2_registergq_opnd,
       &kv3_v2_upper27_lower10_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -75129,7 +75248,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_qindex_registerAq_w064_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_qindex_registerGq_w064_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75154,7 +75273,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .format = {
       &kv3_v2_variant_opnd,
       &kv3_v2_qindex_opnd,
-      &kv3_v2_registeraq_opnd,
+      &kv3_v2_registergq_opnd,
       &kv3_v2_extend27_upper27_lower10_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -75162,7 +75281,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_registerA_s010_registerZ_simple */
+  { /* Opcode-kv3_v2-XLO_variant_registerG_s010_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75176,7 +75295,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_LSU, ((int)0 << 8) | (int)Reservation_kv3_v2_LSU,
     .format = {
       &kv3_v2_variant_opnd,
-      &kv3_v2_registera_opnd,
+      &kv3_v2_registerg_opnd,
       &kv3_v2_signed10_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -75184,7 +75303,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_registerA_s037_registerZ_double */
+  { /* Opcode-kv3_v2-XLO_variant_registerG_s037_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75203,7 +75322,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_LSU_X, ((int)0 << 8) | (int)Reservation_kv3_v2_LSU_X,
     .format = {
       &kv3_v2_variant_opnd,
-      &kv3_v2_registera_opnd,
+      &kv3_v2_registerg_opnd,
       &kv3_v2_upper27_lower10_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -75211,7 +75330,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s = %s[%s]",
   },
-  { /* Opcode-kv3_v2-XLO_variant_registerA_w064_registerZ_triple */
+  { /* Opcode-kv3_v2-XLO_variant_registerG_w064_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -75235,7 +75354,7 @@ struct kvxopc kvx_kv3_v2_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv3_v2_LSU_Y, ((int)0 << 8) | (int)Reservation_kv3_v2_LSU_Y,
     .format = {
       &kv3_v2_variant_opnd,
-      &kv3_v2_registera_opnd,
+      &kv3_v2_registerg_opnd,
       &kv3_v2_extend27_upper27_lower10_opnd,
       &kv3_v2_registerz_opnd,
       NULL
@@ -84340,24 +84459,6 @@ static struct kvx_operand kv4_v1_floatcomp_opnd  __attribute__((unused)) = {
   .bfield = { { 3, 0, 24 },  }
 };
 
-static struct kvx_reloc *kv4_v1_hindex_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv4_v1_hindex_opnd  __attribute__((unused)) = {
-  .tname = "kv4_v1_hindex_opnd",
-  .type = Modifier_kv4_v1_hindex,
-  .width = 1,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 0,
-  .regs = 0,
-  .reloc_nb = 0,
-  .relocs = kv4_v1_hindex_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 1, 0, 18 },  }
-};
-
 static struct kvx_reloc *kv4_v1_lsomask_opnd_relocs[] __attribute__((unused)) = {
   0
 };
@@ -84536,7 +84637,7 @@ static struct kvx_reloc *kv4_v1_registera_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv4_v1_registera_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registera_opnd",
-  .type = RegClass_kv4_v1_vectorReg,
+  .type = RegClass_kv4_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -84571,7 +84672,7 @@ static struct kvx_reloc *kv4_v1_registerae_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registerae_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerae_opnd",
-  .type = RegClass_kv4_v1_blockRegE,
+  .type = RegClass_kv4_v1_xwordqRegLoE,
   .width = 6,
   .shift = 1,
   .bias = 0,
@@ -84606,7 +84707,7 @@ static struct kvx_reloc *kv4_v1_registerao_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registerao_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerao_opnd",
-  .type = RegClass_kv4_v1_blockRegO,
+  .type = RegClass_kv4_v1_xwordqRegLoO,
   .width = 6,
   .shift = 1,
   .bias = 1,
@@ -84619,127 +84720,6 @@ static struct kvx_operand kv4_v1_registerao_opnd  __attribute__((unused)) = {
   .bfield = { { 6, 0, 18 },  }
 };
 
-static int kv4_v1_registerag_opnd_regs[] = {
-      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
-      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
-static struct kvx_reloc *kv4_v1_registerag_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv4_v1_registerag_opnd  __attribute__((unused)) = {
-  .tname = "kv4_v1_registerag_opnd",
-  .type = RegClass_kv4_v1_buffer2Reg,
-  .width = 5,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 32,
-  .regs = kv4_v1_registerag_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv4_v1_registerag_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 5, 0, 19 },  }
-};
-
-static int kv4_v1_registerah_opnd_regs[] = {
-      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
-static struct kvx_reloc *kv4_v1_registerah_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv4_v1_registerah_opnd  __attribute__((unused)) = {
-  .tname = "kv4_v1_registerah_opnd",
-  .type = RegClass_kv4_v1_buffer4Reg,
-  .width = 4,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 16,
-  .regs = kv4_v1_registerah_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv4_v1_registerah_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 4, 0, 20 },  }
-};
-
-static int kv4_v1_registerai_opnd_regs[] = {
-      1, 1, 1, 1, 1, 1, 1, 1, };
-static struct kvx_reloc *kv4_v1_registerai_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv4_v1_registerai_opnd  __attribute__((unused)) = {
-  .tname = "kv4_v1_registerai_opnd",
-  .type = RegClass_kv4_v1_buffer8Reg,
-  .width = 3,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 8,
-  .regs = kv4_v1_registerai_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv4_v1_registerai_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 3, 0, 21 },  }
-};
-
-static int kv4_v1_registeraj_opnd_regs[] = {
-      1, 1, 1, 1, };
-static struct kvx_reloc *kv4_v1_registeraj_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv4_v1_registeraj_opnd  __attribute__((unused)) = {
-  .tname = "kv4_v1_registeraj_opnd",
-  .type = RegClass_kv4_v1_buffer16Reg,
-  .width = 2,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 4,
-  .regs = kv4_v1_registeraj_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv4_v1_registeraj_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 2, 0, 22 },  }
-};
-
-static int kv4_v1_registerak_opnd_regs[] = {
-      1, 1, };
-static struct kvx_reloc *kv4_v1_registerak_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv4_v1_registerak_opnd  __attribute__((unused)) = {
-  .tname = "kv4_v1_registerak_opnd",
-  .type = RegClass_kv4_v1_buffer32Reg,
-  .width = 1,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 2,
-  .regs = kv4_v1_registerak_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv4_v1_registerak_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 1, 0, 23 },  }
-};
-
-static int kv4_v1_registeral_opnd_regs[] = {
-      1, };
-static struct kvx_reloc *kv4_v1_registeral_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv4_v1_registeral_opnd  __attribute__((unused)) = {
-  .tname = "kv4_v1_registeral_opnd",
-  .type = RegClass_kv4_v1_buffer64Reg,
-  .width = 1,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 1,
-  .regs = kv4_v1_registeral_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv4_v1_registeral_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 1, 0, 23 },  }
-};
-
 static int kv4_v1_registerap_opnd_regs[] = {
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
@@ -84750,7 +84730,7 @@ static struct kvx_reloc *kv4_v1_registerap_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registerap_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerap_opnd",
-  .type = RegClass_kv4_v1_tileReg,
+  .type = RegClass_kv4_v1_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -84771,7 +84751,7 @@ static struct kvx_reloc *kv4_v1_registeraq_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registeraq_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registeraq_opnd",
-  .type = RegClass_kv4_v1_matrixReg,
+  .type = RegClass_kv4_v1_xwordvRegLo,
   .width = 4,
   .shift = 0,
   .bias = 0,
@@ -84822,7 +84802,7 @@ static struct kvx_reloc *kv4_v1_registerat_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registerat_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerat_opnd",
-  .type = RegClass_kv4_v1_coproReg3M4,
+  .type = RegClass_kv4_v1_xworddRegLo3M4,
   .width = 6,
   .shift = 2,
   .bias = 3,
@@ -84873,7 +84853,7 @@ static struct kvx_reloc *kv4_v1_registerax_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registerax_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerax_opnd",
-  .type = RegClass_kv4_v1_coproReg0M4,
+  .type = RegClass_kv4_v1_xworddRegLo0M4,
   .width = 6,
   .shift = 2,
   .bias = 0,
@@ -84924,7 +84904,7 @@ static struct kvx_reloc *kv4_v1_registeray_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registeray_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registeray_opnd",
-  .type = RegClass_kv4_v1_coproReg1M4,
+  .type = RegClass_kv4_v1_xworddRegLo1M4,
   .width = 6,
   .shift = 2,
   .bias = 1,
@@ -84975,7 +84955,7 @@ static struct kvx_reloc *kv4_v1_registeraz_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registeraz_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registeraz_opnd",
-  .type = RegClass_kv4_v1_coproReg2M4,
+  .type = RegClass_kv4_v1_xworddRegLo2M4,
   .width = 6,
   .shift = 2,
   .bias = 2,
@@ -85002,7 +84982,7 @@ static struct kvx_reloc *kv4_v1_registerb_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv4_v1_registerb_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerb_opnd",
-  .type = RegClass_kv4_v1_vectorReg,
+  .type = RegClass_kv4_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -85029,7 +85009,7 @@ static struct kvx_reloc *kv4_v1_registerc_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv4_v1_registerc_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerc_opnd",
-  .type = RegClass_kv4_v1_vectorReg,
+  .type = RegClass_kv4_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -85064,7 +85044,7 @@ static struct kvx_reloc *kv4_v1_registercb_hselectc_opnd_relocs[] __attribute__(
 };
 static struct kvx_operand kv4_v1_registercb_hselectc_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registercb_hselectc_opnd",
-  .type = RegClass_kv4_v1_blockReg,
+  .type = RegClass_kv4_v1_xwordqRegLo,
   .width = 7,
   .shift = 0,
   .bias = 0,
@@ -85115,7 +85095,7 @@ static struct kvx_reloc *kv4_v1_registercc_qselectc_opnd_relocs[] __attribute__(
 };
 static struct kvx_operand kv4_v1_registercc_qselectc_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registercc_qselectc_opnd",
-  .type = RegClass_kv4_v1_coproReg,
+  .type = RegClass_kv4_v1_xworddRegLo,
   .width = 8,
   .shift = 0,
   .bias = 0,
@@ -85259,7 +85239,7 @@ static struct kvx_reloc *kv4_v1_registercp_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registercp_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registercp_opnd",
-  .type = RegClass_kv4_v1_tileReg,
+  .type = RegClass_kv4_v1_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -85280,7 +85260,7 @@ static struct kvx_reloc *kv4_v1_registercq_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registercq_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registercq_opnd",
-  .type = RegClass_kv4_v1_matrixReg,
+  .type = RegClass_kv4_v1_xwordvRegLo,
   .width = 4,
   .shift = 0,
   .bias = 0,
@@ -85307,7 +85287,7 @@ static struct kvx_reloc *kv4_v1_registerd_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv4_v1_registerd_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerd_opnd",
-  .type = RegClass_kv4_v1_vectorReg,
+  .type = RegClass_kv4_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -85330,7 +85310,7 @@ static struct kvx_reloc *kv4_v1_registerdp_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registerdp_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registerdp_opnd",
-  .type = RegClass_kv4_v1_tileReg,
+  .type = RegClass_kv4_v1_xwordxRegLo,
   .width = 5,
   .shift = 0,
   .bias = 0,
@@ -85357,7 +85337,7 @@ static struct kvx_reloc *kv4_v1_registere_opnd_relocs[] __attribute__((unused)) 
 };
 static struct kvx_operand kv4_v1_registere_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registere_opnd",
-  .type = RegClass_kv4_v1_vectorReg,
+  .type = RegClass_kv4_v1_xwordoRegLo,
   .width = 6,
   .shift = 0,
   .bias = 0,
@@ -85491,29 +85471,6 @@ static struct kvx_operand kv4_v1_registerel_opnd  __attribute__((unused)) = {
   .bfield = { { 1, 0, 23 },  }
 };
 
-static int kv4_v1_registerep_opnd_regs[] = {
-      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
-      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
-static struct kvx_reloc *kv4_v1_registerep_opnd_relocs[] __attribute__((unused)) = {
-  0
-};
-static struct kvx_operand kv4_v1_registerep_opnd  __attribute__((unused)) = {
-  .tname = "kv4_v1_registerep_opnd",
-  .type = RegClass_kv4_v1_tileReg,
-  .width = 5,
-  .shift = 0,
-  .bias = 0,
-  .flags = 0,
-  .reg_nb = 64,
-  .regs = kv4_v1_registerep_opnd_regs,
-  .reloc_nb = 0,
-  .relocs = kv4_v1_registerep_opnd_relocs,
-  .bitfields = 1,
-  .bfield = { { 5, 0, 19 },  }
-};
-
 static int kv4_v1_registereq_opnd_regs[] = {
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
@@ -85522,7 +85479,7 @@ static struct kvx_reloc *kv4_v1_registereq_opnd_relocs[] __attribute__((unused))
 };
 static struct kvx_operand kv4_v1_registereq_opnd  __attribute__((unused)) = {
   .tname = "kv4_v1_registereq_opnd",
-  .type = RegClass_kv4_v1_matrixReg,
+  .type = RegClass_kv4_v1_xwordvRegLo,
   .width = 4,
   .shift = 0,
   .bias = 0,
@@ -85533,6 +85490,229 @@ static struct kvx_operand kv4_v1_registereq_opnd  __attribute__((unused)) = {
   .relocs = kv4_v1_registereq_opnd_relocs,
   .bitfields = 1,
   .bfield = { { 4, 0, 20 },  }
+};
+
+static int kv4_v1_registerf_opnd_regs[] = {
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv4_v1_registerf_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registerf_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registerf_opnd",
+  .type = RegClass_kv4_v1_xwordoRegHi,
+  .width = 6,
+  .shift = 0,
+  .bias = 64,
+  .flags = 0,
+  .reg_nb = 128,
+  .regs = kv4_v1_registerf_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registerf_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 6, 0, 18 },  }
+};
+
+static int kv4_v1_registerg_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+static struct kvx_reloc *kv4_v1_registerg_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registerg_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registerg_opnd",
+  .type = RegClass_kv4_v1_xwordoRegLo,
+  .width = 6,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 128,
+  .regs = kv4_v1_registerg_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registerg_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 6, 0, 18 },  }
+};
+
+static int kv4_v1_registergg_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv4_v1_registergg_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registergg_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registergg_opnd",
+  .type = RegClass_kv4_v1_buffer2Reg,
+  .width = 5,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 32,
+  .regs = kv4_v1_registergg_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registergg_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 5, 0, 19 },  }
+};
+
+static int kv4_v1_registergh_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv4_v1_registergh_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registergh_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registergh_opnd",
+  .type = RegClass_kv4_v1_buffer4Reg,
+  .width = 4,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 16,
+  .regs = kv4_v1_registergh_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registergh_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 4, 0, 20 },  }
+};
+
+static int kv4_v1_registergi_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv4_v1_registergi_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registergi_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registergi_opnd",
+  .type = RegClass_kv4_v1_buffer8Reg,
+  .width = 3,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 8,
+  .regs = kv4_v1_registergi_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registergi_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 3, 0, 21 },  }
+};
+
+static int kv4_v1_registergj_opnd_regs[] = {
+      1, 1, 1, 1, };
+static struct kvx_reloc *kv4_v1_registergj_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registergj_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registergj_opnd",
+  .type = RegClass_kv4_v1_buffer16Reg,
+  .width = 2,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 4,
+  .regs = kv4_v1_registergj_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registergj_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 2, 0, 22 },  }
+};
+
+static int kv4_v1_registergk_opnd_regs[] = {
+      1, 1, };
+static struct kvx_reloc *kv4_v1_registergk_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registergk_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registergk_opnd",
+  .type = RegClass_kv4_v1_buffer32Reg,
+  .width = 1,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 2,
+  .regs = kv4_v1_registergk_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registergk_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 1, 0, 23 },  }
+};
+
+static int kv4_v1_registergl_opnd_regs[] = {
+      1, };
+static struct kvx_reloc *kv4_v1_registergl_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registergl_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registergl_opnd",
+  .type = RegClass_kv4_v1_buffer64Reg,
+  .width = 1,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 1,
+  .regs = kv4_v1_registergl_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registergl_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 1, 0, 23 },  }
+};
+
+static int kv4_v1_registergq_opnd_regs[] = {
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+static struct kvx_reloc *kv4_v1_registergq_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registergq_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registergq_opnd",
+  .type = RegClass_kv4_v1_xwordvRegLo,
+  .width = 4,
+  .shift = 0,
+  .bias = 0,
+  .flags = 0,
+  .reg_nb = 32,
+  .regs = kv4_v1_registergq_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registergq_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 4, 0, 20 },  }
+};
+
+static int kv4_v1_registerh_opnd_regs[] = {
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
+static struct kvx_reloc *kv4_v1_registerh_opnd_relocs[] __attribute__((unused)) = {
+  0
+};
+static struct kvx_operand kv4_v1_registerh_opnd  __attribute__((unused)) = {
+  .tname = "kv4_v1_registerh_opnd",
+  .type = RegClass_kv4_v1_xwordoRegHi,
+  .width = 6,
+  .shift = 0,
+  .bias = 64,
+  .flags = 0,
+  .reg_nb = 128,
+  .regs = kv4_v1_registerh_opnd_regs,
+  .reloc_nb = 0,
+  .relocs = kv4_v1_registerh_opnd_relocs,
+  .bitfields = 1,
+  .bfield = { { 6, 0, 18 },  }
 };
 
 static int kv4_v1_registeri_opnd_regs[] = {
@@ -86827,6 +87007,25 @@ static const int Reservation_kv4_v1_ALU_TINY_Y_table[kvx_kv4_v1_RESERVATION_TABL
   0 /* cyc.0 Resource-kv4_v1-NOP */
 };
 
+static const int Reservation_kv4_v1_ALU_TINY_AUXR_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
+  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
+  1 /* cyc.0 Resource-kv4_v1-TINY */,
+  0 /* cyc.0 Resource-kv4_v1-LITE */,
+  0 /* cyc.0 Resource-kv4_v1-FULL */,
+  0 /* cyc.0 Resource-kv4_v1-LSU */,
+  0 /* cyc.0 Resource-kv4_v1-MAU */,
+  0 /* cyc.0 Resource-kv4_v1-BCU */,
+  0 /* cyc.0 Resource-kv4_v1-EXT */,
+  0 /* cyc.0 Resource-kv4_v1-XFER */,
+  1 /* cyc.0 Resource-kv4_v1-AUXR */,
+  0 /* cyc.0 Resource-kv4_v1-AUXW */,
+  0 /* cyc.0 Resource-kv4_v1-MEMW */,
+  0 /* cyc.0 Resource-kv4_v1-CRRP */,
+  0 /* cyc.0 Resource-kv4_v1-CRWL */,
+  0 /* cyc.0 Resource-kv4_v1-CRWH */,
+  0 /* cyc.0 Resource-kv4_v1-NOP */
+};
+
 static const int Reservation_kv4_v1_BCU_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
   1 /* cyc.0 Resource-kv4_v1-ISSUE */,
   0 /* cyc.0 Resource-kv4_v1-TINY */,
@@ -86876,25 +87075,6 @@ static const int Reservation_kv4_v1_EXT_table[kvx_kv4_v1_RESERVATION_TABLE_LINES
   1 /* cyc.0 Resource-kv4_v1-EXT */,
   0 /* cyc.0 Resource-kv4_v1-XFER */,
   0 /* cyc.0 Resource-kv4_v1-AUXR */,
-  0 /* cyc.0 Resource-kv4_v1-AUXW */,
-  0 /* cyc.0 Resource-kv4_v1-MEMW */,
-  0 /* cyc.0 Resource-kv4_v1-CRRP */,
-  0 /* cyc.0 Resource-kv4_v1-CRWL */,
-  0 /* cyc.0 Resource-kv4_v1-CRWH */,
-  0 /* cyc.0 Resource-kv4_v1-NOP */
-};
-
-static const int Reservation_kv4_v1_EXT_AUXR_table[kvx_kv4_v1_RESERVATION_TABLE_LINES * kvx_kv4_v1_RESOURCE_MAX] = {
-  1 /* cyc.0 Resource-kv4_v1-ISSUE */,
-  0 /* cyc.0 Resource-kv4_v1-TINY */,
-  0 /* cyc.0 Resource-kv4_v1-LITE */,
-  0 /* cyc.0 Resource-kv4_v1-FULL */,
-  0 /* cyc.0 Resource-kv4_v1-LSU */,
-  0 /* cyc.0 Resource-kv4_v1-MAU */,
-  0 /* cyc.0 Resource-kv4_v1-BCU */,
-  1 /* cyc.0 Resource-kv4_v1-EXT */,
-  0 /* cyc.0 Resource-kv4_v1-XFER */,
-  1 /* cyc.0 Resource-kv4_v1-AUXR */,
   0 /* cyc.0 Resource-kv4_v1-AUXW */,
   0 /* cyc.0 Resource-kv4_v1-MEMW */,
   0 /* cyc.0 Resource-kv4_v1-CRRP */,
@@ -87441,6 +87621,7 @@ const int *kvx_kv4_v1_reservation_table_table[] ={
   Reservation_kv4_v1_ALU_TINY_table,
   Reservation_kv4_v1_ALU_TINY_X_table,
   Reservation_kv4_v1_ALU_TINY_Y_table,
+  Reservation_kv4_v1_ALU_TINY_AUXR_table,
   Reservation_kv4_v1_ALU_LITE_table,
   Reservation_kv4_v1_ALU_LITE_X_table,
   Reservation_kv4_v1_ALU_LITE_Y_table,
@@ -87477,7 +87658,6 @@ const int *kvx_kv4_v1_reservation_table_table[] ={
   Reservation_kv4_v1_EXT_table,
   Reservation_kv4_v1_EXT_MAU_table,
   Reservation_kv4_v1_EXT_CRRP_table,
-  Reservation_kv4_v1_EXT_AUXR_table,
   Reservation_kv4_v1_EXT_AUXW_table
 };
 
@@ -111821,7 +112001,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s, %s",
   },
-  { /* Opcode-kv4_v1-XLO_variant_doscale_qindex_registerAq_registerY_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_doscale_qindex_registerGq_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -111837,7 +112017,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_variant_opnd,
       &kv4_v1_doscale_opnd,
       &kv4_v1_qindex_opnd,
-      &kv4_v1_registeraq_opnd,
+      &kv4_v1_registergq_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -111845,7 +112025,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_doscale_registerA_registerY_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_doscale_registerG_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -111860,7 +112040,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_doscale_opnd,
-      &kv4_v1_registera_opnd,
+      &kv4_v1_registerg_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -111868,7 +112048,30 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsumask_qindex_registerY_registerAq_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_doscale_registerH_registerY_registerZ_simple */
+    .as_op = "xlo",
+    .codewords = {
+      {
+        .opcode = 0x2403e000,
+        .mask = 0x7c03e000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU,
+    .format = {
+      &kv4_v1_variant_opnd,
+      &kv4_v1_doscale_opnd,
+      &kv4_v1_registerh_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s%s %s = %s[%s]",
+  },
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_qindex_registerY_registerGq_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -111885,14 +112088,14 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_lsumask_opnd,
       &kv4_v1_qindex_opnd,
       &kv4_v1_registery_opnd,
-      &kv4_v1_registeraq_opnd,
+      &kv4_v1_registergq_opnd,
       &kv4_v1_registerz_opnd,
       NULL
     },
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = [%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsumask_qindex_registerY_registerAq_s027_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_qindex_registerY_registerGq_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -111914,7 +112117,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_lsumask_opnd,
       &kv4_v1_qindex_opnd,
       &kv4_v1_registery_opnd,
-      &kv4_v1_registeraq_opnd,
+      &kv4_v1_registergq_opnd,
       &kv4_v1_offset27_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -111922,7 +112125,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsumask_qindex_registerY_registerAq_s054_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_qindex_registerY_registerGq_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -111949,7 +112152,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_lsumask_opnd,
       &kv4_v1_qindex_opnd,
       &kv4_v1_registery_opnd,
-      &kv4_v1_registeraq_opnd,
+      &kv4_v1_registergq_opnd,
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -111957,7 +112160,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerA_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerG_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -111973,14 +112176,14 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsumask_opnd,
       &kv4_v1_registery_opnd,
-      &kv4_v1_registera_opnd,
+      &kv4_v1_registerg_opnd,
       &kv4_v1_registerz_opnd,
       NULL
     },
     .rclass = "",
     .fmtstring = "%s%s %s? %s = [%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerA_s027_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerG_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112001,7 +112204,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsumask_opnd,
       &kv4_v1_registery_opnd,
-      &kv4_v1_registera_opnd,
+      &kv4_v1_registerg_opnd,
       &kv4_v1_offset27_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112009,7 +112212,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerA_s054_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerG_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112035,7 +112238,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsumask_opnd,
       &kv4_v1_registery_opnd,
-      &kv4_v1_registera_opnd,
+      &kv4_v1_registerg_opnd,
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112043,7 +112246,93 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s? %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAg_registerY_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerH_registerZ_simple */
+    .as_op = "xlo",
+    .codewords = {
+      {
+        .opcode = 0x24030000,
+        .mask = 0x7c030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU,
+    .format = {
+      &kv4_v1_variant_opnd,
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_registerh_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s%s %s? %s = [%s]",
+  },
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerH_s027_registerZ_double */
+    .as_op = "xlo",
+    .codewords = {
+      {
+        .opcode = 0xa4030000,
+        .mask = 0xfc030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_X,
+    .format = {
+      &kv4_v1_variant_opnd,
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_registerh_opnd,
+      &kv4_v1_offset27_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s%s %s? %s = %s[%s]",
+  },
+  { /* Opcode-kv4_v1-XLO_variant_lsumask_registerY_registerH_s054_registerZ_triple */
+    .as_op = "xlo",
+    .codewords = {
+      {
+        .opcode = 0xa4030000,
+        .mask = 0xfc030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_Y,
+    .format = {
+      &kv4_v1_variant_opnd,
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_registerh_opnd,
+      &kv4_v1_extend27_offset27_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s%s %s? %s = %s[%s]",
+  },
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGg_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112058,7 +112347,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerag_opnd,
+      &kv4_v1_registergg_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112066,7 +112355,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAg_registerY_s027_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGg_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112086,7 +112375,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerag_opnd,
+      &kv4_v1_registergg_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112095,7 +112384,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAg_registerY_s054_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGg_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112120,7 +112409,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerag_opnd,
+      &kv4_v1_registergg_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112129,7 +112418,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAh_registerY_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGh_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112144,7 +112433,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerah_opnd,
+      &kv4_v1_registergh_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112152,7 +112441,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAh_registerY_s027_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGh_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112172,7 +112461,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerah_opnd,
+      &kv4_v1_registergh_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112181,7 +112470,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAh_registerY_s054_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGh_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112206,7 +112495,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerah_opnd,
+      &kv4_v1_registergh_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112215,7 +112504,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAi_registerY_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGi_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112230,7 +112519,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerai_opnd,
+      &kv4_v1_registergi_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112238,7 +112527,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAi_registerY_s027_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGi_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112258,7 +112547,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerai_opnd,
+      &kv4_v1_registergi_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112267,7 +112556,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAi_registerY_s054_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGi_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112292,7 +112581,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerai_opnd,
+      &kv4_v1_registergi_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112301,7 +112590,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAj_registerY_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGj_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112316,7 +112605,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registeraj_opnd,
+      &kv4_v1_registergj_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112324,7 +112613,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAj_registerY_s027_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGj_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112344,7 +112633,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registeraj_opnd,
+      &kv4_v1_registergj_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112353,7 +112642,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAj_registerY_s054_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGj_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112378,7 +112667,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registeraj_opnd,
+      &kv4_v1_registergj_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112387,7 +112676,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAk_registerY_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGk_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112402,7 +112691,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerak_opnd,
+      &kv4_v1_registergk_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112410,7 +112699,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAk_registerY_s027_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGk_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112430,7 +112719,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerak_opnd,
+      &kv4_v1_registergk_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112439,7 +112728,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAk_registerY_s054_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGk_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112464,7 +112753,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registerak_opnd,
+      &kv4_v1_registergk_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112473,7 +112762,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAl_registerY_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGl_registerY_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112488,7 +112777,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registeral_opnd,
+      &kv4_v1_registergl_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112496,7 +112785,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = [%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAl_registerY_s027_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGl_registerY_s027_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112516,7 +112805,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registeral_opnd,
+      &kv4_v1_registergl_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112525,7 +112814,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerAl_registerY_s054_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_lsupack_registerGl_registerY_s054_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112550,7 +112839,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_lsupack_opnd,
-      &kv4_v1_registeral_opnd,
+      &kv4_v1_registergl_opnd,
       &kv4_v1_registery_opnd,
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
@@ -112559,7 +112848,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s, %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_qindex_registerAq_s010_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_qindex_registerGq_s010_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112574,7 +112863,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_qindex_opnd,
-      &kv4_v1_registeraq_opnd,
+      &kv4_v1_registergq_opnd,
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112582,7 +112871,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_qindex_registerAq_s037_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_qindex_registerGq_s037_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112602,7 +112891,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_qindex_opnd,
-      &kv4_v1_registeraq_opnd,
+      &kv4_v1_registergq_opnd,
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112610,7 +112899,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_qindex_registerAq_w064_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_qindex_registerGq_w064_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112635,7 +112924,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .format = {
       &kv4_v1_variant_opnd,
       &kv4_v1_qindex_opnd,
-      &kv4_v1_registeraq_opnd,
+      &kv4_v1_registergq_opnd,
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112643,7 +112932,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s%s %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_registerA_s010_registerZ_simple */
+  { /* Opcode-kv4_v1-XLO_variant_registerG_s010_registerZ_simple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112657,7 +112946,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU,
     .format = {
       &kv4_v1_variant_opnd,
-      &kv4_v1_registera_opnd,
+      &kv4_v1_registerg_opnd,
       &kv4_v1_signed10_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112665,7 +112954,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_registerA_s037_registerZ_double */
+  { /* Opcode-kv4_v1-XLO_variant_registerG_s037_registerZ_double */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112684,7 +112973,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_X,
     .format = {
       &kv4_v1_variant_opnd,
-      &kv4_v1_registera_opnd,
+      &kv4_v1_registerg_opnd,
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -112692,7 +112981,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s = %s[%s]",
   },
-  { /* Opcode-kv4_v1-XLO_variant_registerA_w064_registerZ_triple */
+  { /* Opcode-kv4_v1-XLO_variant_registerG_w064_registerZ_triple */
     .as_op = "xlo",
     .codewords = {
       {
@@ -112716,7 +113005,88 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_Y,
     .format = {
       &kv4_v1_variant_opnd,
-      &kv4_v1_registera_opnd,
+      &kv4_v1_registerg_opnd,
+      &kv4_v1_extend27_upper27_lower10_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s = %s[%s]",
+  },
+  { /* Opcode-kv4_v1-XLO_variant_registerH_s010_registerZ_simple */
+    .as_op = "xlo",
+    .codewords = {
+      {
+        .opcode = 0x24010000,
+        .mask = 0x7c030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU,
+    .format = {
+      &kv4_v1_variant_opnd,
+      &kv4_v1_registerh_opnd,
+      &kv4_v1_signed10_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s = %s[%s]",
+  },
+  { /* Opcode-kv4_v1-XLO_variant_registerH_s037_registerZ_double */
+    .as_op = "xlo",
+    .codewords = {
+      {
+        .opcode = 0xa4010000,
+        .mask = 0xfc030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_X,
+    .format = {
+      &kv4_v1_variant_opnd,
+      &kv4_v1_registerh_opnd,
+      &kv4_v1_upper27_lower10_opnd,
+      &kv4_v1_registerz_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s = %s[%s]",
+  },
+  { /* Opcode-kv4_v1-XLO_variant_registerH_w064_registerZ_triple */
+    .as_op = "xlo",
+    .codewords = {
+      {
+        .opcode = 0xa4010000,
+        .mask = 0xfc030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_Y,
+    .format = {
+      &kv4_v1_variant_opnd,
+      &kv4_v1_registerh_opnd,
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
       NULL
@@ -113111,7 +113481,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_AUXR,
     .format = {
       &kv4_v1_registerat_opnd,
       &kv4_v1_registerz_opnd,
@@ -113131,7 +113501,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_AUXR,
     .format = {
       &kv4_v1_registerax_opnd,
       &kv4_v1_registerz_opnd,
@@ -113151,7 +113521,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_AUXR,
     .format = {
       &kv4_v1_registeray_opnd,
       &kv4_v1_registerz_opnd,
@@ -113171,7 +113541,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_AUXR,
     .format = {
       &kv4_v1_registeraz_opnd,
       &kv4_v1_registerz_opnd,
@@ -113191,7 +113561,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_AUXR,
     .format = {
       &kv4_v1_registerae_opnd,
       &kv4_v1_registerz_opnd,
@@ -113212,7 +113582,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     },
     .wordcount = 1,
     .coding_size = 32,
-    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_EXT, ((int)0 << 8) | (int)Reservation_kv4_v1_EXT_AUXR,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_TINY, ((int)0 << 8) | (int)Reservation_kv4_v1_ALU_TINY_AUXR,
     .format = {
       &kv4_v1_registerao_opnd,
       &kv4_v1_registerz_opnd,
@@ -113433,6 +113803,28 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s[%s] = %s",
   },
+  { /* Opcode-kv4_v1-XSO_doscale_registerY_registerZ_registerF_simple */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0x3603e000,
+        .mask = 0x7f03e000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW,
+    .format = {
+      &kv4_v1_doscale_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registerf_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s[%s] = %s",
+  },
   { /* Opcode-kv4_v1-XSO_lsumask_registerY_registerZ_registerE_simple */
     .as_op = "xso",
     .codewords = {
@@ -113450,6 +113842,28 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_registery_opnd,
       &kv4_v1_registerz_opnd,
       &kv4_v1_registere_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s? [%s] = %s",
+  },
+  { /* Opcode-kv4_v1-XSO_lsumask_registerY_registerZ_registerF_simple */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0x36030000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW,
+    .format = {
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registerf_opnd,
       NULL
     },
     .rclass = "",
@@ -113483,6 +113897,34 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = "%s %s? %s[%s] = %s",
   },
+  { /* Opcode-kv4_v1-XSO_lsumask_registerY_s027_registerZ_registerF_double */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0xb6030000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_X,
+    .format = {
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_offset27_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registerf_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s? %s[%s] = %s",
+  },
   { /* Opcode-kv4_v1-XSO_lsumask_registerY_s054_registerZ_registerE_triple */
     .as_op = "xso",
     .codewords = {
@@ -113511,6 +113953,39 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_extend27_offset27_opnd,
       &kv4_v1_registerz_opnd,
       &kv4_v1_registere_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = "%s %s? %s[%s] = %s",
+  },
+  { /* Opcode-kv4_v1-XSO_lsumask_registerY_s054_registerZ_registerF_triple */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0xb6030000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_Y,
+    .format = {
+      &kv4_v1_lsumask_opnd,
+      &kv4_v1_registery_opnd,
+      &kv4_v1_extend27_offset27_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registerf_opnd,
       NULL
     },
     .rclass = "",
@@ -113727,6 +114202,27 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s[%s] = %s",
   },
+  { /* Opcode-kv4_v1-XSO_s010_registerZ_registerF_simple */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0x36010000,
+        .mask = 0x7f030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+    },
+    .wordcount = 1,
+    .coding_size = 32,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW,
+    .format = {
+      &kv4_v1_signed10_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registerf_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s[%s] = %s",
+  },
   { /* Opcode-kv4_v1-XSO_s037_registerZ_registerE_double */
     .as_op = "xso",
     .codewords = {
@@ -113748,6 +114244,32 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
       &kv4_v1_registere_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s[%s] = %s",
+  },
+  { /* Opcode-kv4_v1-XSO_s037_registerZ_registerF_double */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0xb6010000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 2,
+    .coding_size = 64,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_X, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_X,
+    .format = {
+      &kv4_v1_upper27_lower10_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registerf_opnd,
       NULL
     },
     .rclass = "",
@@ -113779,6 +114301,37 @@ struct kvxopc kvx_kv4_v1_optab[] = {
       &kv4_v1_extend27_upper27_lower10_opnd,
       &kv4_v1_registerz_opnd,
       &kv4_v1_registere_opnd,
+      NULL
+    },
+    .rclass = "",
+    .fmtstring = " %s[%s] = %s",
+  },
+  { /* Opcode-kv4_v1-XSO_w064_registerZ_registerF_triple */
+    .as_op = "xso",
+    .codewords = {
+      {
+        .opcode = 0xb6010000,
+        .mask = 0xff030000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32
+      },
+      {
+        .opcode = 0x80000000,
+        .mask = 0xe0000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX0|kvxOPCODE_FLAG_LSU
+      },
+      {
+        .opcode = 0x00000000,
+        .mask = 0x60000000,
+        .flags = kvxOPCODE_FLAG_MODE64|kvxOPCODE_FLAG_MODE32|kvxOPCODE_FLAG_IMMX1|kvxOPCODE_FLAG_LSU
+      },
+    },
+    .wordcount = 3,
+    .coding_size = 96,
+    .bundling = ((int)0 << 8) | (int)Bundling_kv4_v1_LSU_Y, ((int)0 << 8) | (int)Reservation_kv4_v1_LSU_MEMW_Y,
+    .format = {
+      &kv4_v1_extend27_upper27_lower10_opnd,
+      &kv4_v1_registerz_opnd,
+      &kv4_v1_registerf_opnd,
       NULL
     },
     .rclass = "",
@@ -114357,7 +114910,7 @@ struct kvxopc kvx_kv4_v1_optab[] = {
     .rclass = "",
     .fmtstring = " %s = %s",
   },
-/* Number of instructions : 1141 */
+/* Number of instructions : 1155 */
 	{"", { }, 0, 0, 0, 0, { }, "", ""}};
 
 const struct kvx_core_info *kvx_core_info_table[] =
