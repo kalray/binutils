@@ -949,29 +949,29 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case RegClass_kv3_v1_onlyswapReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_SFR, value)
 		      break;
-		    case RegClass_kv3_v1_coproReg0M4:
-		    case RegClass_kv3_v1_coproReg1M4:
-		    case RegClass_kv3_v1_coproReg2M4:
-		    case RegClass_kv3_v1_coproReg3M4:
+		    case RegClass_kv3_v1_xworddRegLo0M4:
+		    case RegClass_kv3_v1_xworddRegLo1M4:
+		    case RegClass_kv3_v1_xworddRegLo2M4:
+		    case RegClass_kv3_v1_xworddRegLo3M4:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XCR, value)
 		      break;
-		    case RegClass_kv3_v1_blockRegE:
-		    case RegClass_kv3_v1_blockRegO:
-		    case RegClass_kv3_v1_blockReg0M4:
-		    case RegClass_kv3_v1_blockReg1M4:
-		    case RegClass_kv3_v1_blockReg2M4:
-		    case RegClass_kv3_v1_blockReg3M4:
+		    case RegClass_kv3_v1_xwordqRegLoE:
+		    case RegClass_kv3_v1_xwordqRegLoO:
+		    case RegClass_kv3_v1_xwordqRegLo0M4:
+		    case RegClass_kv3_v1_xwordqRegLo1M4:
+		    case RegClass_kv3_v1_xwordqRegLo2M4:
+		    case RegClass_kv3_v1_xwordqRegLo3M4:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XBR, value)
 		      break;
-		    case RegClass_kv3_v1_vectorReg:
-		    case RegClass_kv3_v1_vectorRegE:
-		    case RegClass_kv3_v1_vectorRegO:
+		    case RegClass_kv3_v1_xwordoRegLo:
+		    case RegClass_kv3_v1_xwordoRegLoE:
+		    case RegClass_kv3_v1_xwordoRegLoO:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XVR, value)
 		      break;
-		    case RegClass_kv3_v1_tileReg:
+		    case RegClass_kv3_v1_xwordxRegLo:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XTR, value)
 		      break;
-		    case RegClass_kv3_v1_matrixReg:
+		    case RegClass_kv3_v1_xwordvRegLo:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XMR, value)
 		      break;
 		    case Immediate_kv3_v1_sysnumber:
@@ -1057,25 +1057,25 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case RegClass_kv3_v2_onlyswapReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_SFR, value)
 		      break;
-		    case RegClass_kv3_v2_coproReg:
-		    case RegClass_kv3_v2_coproReg0M4:
-		    case RegClass_kv3_v2_coproReg1M4:
-		    case RegClass_kv3_v2_coproReg2M4:
-		    case RegClass_kv3_v2_coproReg3M4:
+		    case RegClass_kv3_v2_xworddRegLo:
+		    case RegClass_kv3_v2_xworddRegLo0M4:
+		    case RegClass_kv3_v2_xworddRegLo1M4:
+		    case RegClass_kv3_v2_xworddRegLo2M4:
+		    case RegClass_kv3_v2_xworddRegLo3M4:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XCR, value)
 		      break;
-		    case RegClass_kv3_v2_blockReg:
-		    case RegClass_kv3_v2_blockRegE:
-		    case RegClass_kv3_v2_blockRegO:
+		    case RegClass_kv3_v2_xwordqRegLo:
+		    case RegClass_kv3_v2_xwordqRegLoE:
+		    case RegClass_kv3_v2_xwordqRegLoO:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XBR, value)
 		      break;
-		    case RegClass_kv3_v2_vectorReg:
+		    case RegClass_kv3_v2_xwordoRegLo:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XVR, value)
 		      break;
-		    case RegClass_kv3_v2_tileReg:
+		    case RegClass_kv3_v2_xwordxRegLo:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XTR, value)
 		      break;
-		    case RegClass_kv3_v2_matrixReg:
+		    case RegClass_kv3_v2_xwordvRegLo:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XMR, value)
 		      break;
 		    case RegClass_kv3_v2_buffer2Reg:
@@ -1173,7 +1173,6 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		{
 		  switch (type)
 		    {
-
 		    case RegClass_kv4_v1_singleReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_GPR, value)
 		      break;
@@ -1192,30 +1191,35 @@ decode_insn (bfd_vma memaddr, insn_t * insn, struct decoded_insn *res)
 		    case RegClass_kv4_v1_onlyswapReg:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_SFR, value)
 		      break;
-		    case RegClass_kv4_v1_coproReg:
-		    case RegClass_kv4_v1_coproReg0M4:
-		    case RegClass_kv4_v1_coproReg1M4:
-		    case RegClass_kv4_v1_coproReg2M4:
-		    case RegClass_kv4_v1_coproReg3M4:
+		    case RegClass_kv4_v1_xworddRegLo:
+		    case RegClass_kv4_v1_xworddRegLo0M4:
+		    case RegClass_kv4_v1_xworddRegLo1M4:
+		    case RegClass_kv4_v1_xworddRegLo2M4:
+		    case RegClass_kv4_v1_xworddRegLo3M4:
 		    case RegClass_kv4_v1_xworddReg:
+		    case RegClass_kv4_v1_xworddRegHi:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XCR, value)
 		      break;
-		    case RegClass_kv4_v1_blockReg:
-		    case RegClass_kv4_v1_blockRegE:
-		    case RegClass_kv4_v1_blockRegO:
+		    case RegClass_kv4_v1_xwordqRegLo:
+		    case RegClass_kv4_v1_xwordqRegLoE:
+		    case RegClass_kv4_v1_xwordqRegLoO:
 		    case RegClass_kv4_v1_xwordqReg:
+		    case RegClass_kv4_v1_xwordqRegHi:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XBR, value)
 		      break;
-		    case RegClass_kv4_v1_vectorReg:
+		    case RegClass_kv4_v1_xwordoRegLo:
 		    case RegClass_kv4_v1_xwordoReg:
+		    case RegClass_kv4_v1_xwordoRegHi:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XVR, value)
 		      break;
-		    case RegClass_kv4_v1_tileReg:
+		    case RegClass_kv4_v1_xwordxRegLo:
 		    case RegClass_kv4_v1_xwordxReg:
+		    case RegClass_kv4_v1_xwordxRegHi:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XTR, value)
 		      break;
-		    case RegClass_kv4_v1_matrixReg:
+		    case RegClass_kv4_v1_xwordvRegLo:
 		    case RegClass_kv4_v1_xwordvReg:
+		    case RegClass_kv4_v1_xwordvRegHi:
 		      KVX_PRINT_REG (KVX_REGFILE_DEC_XMR, value)
 		      break;
 		    case RegClass_kv4_v1_buffer2Reg:
@@ -1754,21 +1758,21 @@ decode_prologue_epilogue_bundle (bfd_vma memaddr,
 		  is_a_peb_insn = 1;
 		}
 	    }
-	  else if (chk_type (kv3_v1, RegClass_kv3_v1_coproReg)
-		   || chk_type (kv3_v2, RegClass_kv3_v2_coproReg)
-		   || chk_type (kv4_v1, RegClass_kv4_v1_coproReg)
-		   || chk_type (kv3_v1, RegClass_kv3_v1_blockReg)
-		   || chk_type (kv3_v2, RegClass_kv3_v2_blockReg)
-		   || chk_type (kv4_v1, RegClass_kv4_v1_blockReg)
-		   || chk_type (kv3_v1, RegClass_kv3_v1_vectorReg)
-		   || chk_type (kv3_v2, RegClass_kv3_v2_vectorReg)
-		   || chk_type (kv4_v1, RegClass_kv4_v1_vectorReg)
-		   || chk_type (kv3_v1, RegClass_kv3_v1_tileReg)
-		   || chk_type (kv3_v2, RegClass_kv3_v2_tileReg)
-		   || chk_type (kv4_v1, RegClass_kv4_v1_tileReg)
-		   || chk_type (kv3_v1, RegClass_kv3_v1_matrixReg)
-		   || chk_type (kv3_v2, RegClass_kv3_v2_matrixReg)
-		   || chk_type (kv4_v1, RegClass_kv4_v1_matrixReg)
+	  else if (chk_type (kv3_v1, RegClass_kv3_v1_xworddRegLo)
+		   || chk_type (kv3_v2, RegClass_kv3_v2_xworddRegLo)
+		   || chk_type (kv4_v1, RegClass_kv4_v1_xworddRegLo)
+		   || chk_type (kv3_v1, RegClass_kv3_v1_xwordqRegLo)
+		   || chk_type (kv3_v2, RegClass_kv3_v2_xwordqRegLo)
+		   || chk_type (kv4_v1, RegClass_kv4_v1_xwordqRegLo)
+		   || chk_type (kv3_v1, RegClass_kv3_v1_xwordoRegLo)
+		   || chk_type (kv3_v2, RegClass_kv3_v2_xwordoRegLo)
+		   || chk_type (kv4_v1, RegClass_kv4_v1_xwordoRegLo)
+		   || chk_type (kv3_v1, RegClass_kv3_v1_xwordxRegLo)
+		   || chk_type (kv3_v2, RegClass_kv3_v2_xwordxRegLo)
+		   || chk_type (kv4_v1, RegClass_kv4_v1_xwordxRegLo)
+		   || chk_type (kv3_v1, RegClass_kv3_v1_xwordvRegLo)
+		   || chk_type (kv3_v2, RegClass_kv3_v2_xwordvRegLo)
+		   || chk_type (kv4_v1, RegClass_kv4_v1_xwordvRegLo)
 		   || chk_type (kv3_v1, Modifier_kv3_v1_scalarcond)
 		   || chk_type (kv3_v1, Modifier_kv3_v1_column)
 		   || chk_type (kv3_v1, Modifier_kv3_v1_comparison)
