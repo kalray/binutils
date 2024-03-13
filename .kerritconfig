@@ -1,0 +1,9 @@
+{
+  "disable_code_review": [
+    "bfd/elfxx-kvx-relocs.h",
+    "gas/config/kvx-parse.h",
+    "include/elf/kvx_elfids.h",
+    "include/opcode/kvx.h",
+    "opcodes/kvx-opc.c"
+  ]
+}
